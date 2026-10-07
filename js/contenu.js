@@ -7,7 +7,7 @@
 const SITE_FR = {
   prenom: "Thibault", nom: "Merle",
   titre: "Associate Producer",
-  devise: "Organised · Curious · Collaborative · Reliable",
+  devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
     "Bonjour, je suis Thibault, ==Associate Producer== dans le jeu vidéo. J'organise le travail des équipes pour transformer une idée en ==un jeu livré dans les délais==.",

@@ -41,7 +41,7 @@ function chrome(active){
 function home(){
   return `<section class="hero-band">
     <div class="txt"><h1 class="name"><span class="b1">${esc(SITE.prenom)}</span> <span class="b2">${esc(SITE.nom.toUpperCase())}</span></h1>
-      <p class="eyebrow">${esc(SITE.titre)}</p><p class="devise">${esc(SITE.devise)}</p>
+      <p class="eyebrow">${esc(SITE.titre)}</p>${SITE.devise?`<p class="devise">${esc(SITE.devise)}</p>`:""}
       <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a></p></div>
     <div class="portrait" role="img" aria-label="${t("portrait")} ${esc(SITE.prenom)} ${esc(SITE.nom)}">${img(SITE.photo,"",SITE.prenom[0]+SITE.nom[0])}</div>
   </section>

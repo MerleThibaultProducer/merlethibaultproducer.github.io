@@ -4,8 +4,8 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS,{label:t("infos"),route:"#/infos"}];
 /* ---------- Langue (FR / EN) ---------- */
 const UI = {
-  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
-  en:{home:"Home",infos:"Info",seeProjects:"See my projects",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
+  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
+  en:{home:"Home",infos:"Info",seeProjects:"See my projects",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
 };
 let lang = "fr";
 const t = k => UI[lang][k];
@@ -23,7 +23,8 @@ try{ setLang(localStorage.getItem("lang")); }catch(e){ setLang("fr"); }
 function img(src, alt, fallback){ return src ? `<img src="${esc(src)}" alt="${esc(alt)}">` : esc(fallback); }
 
 const MAIL_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>`;
-const LINKEDIN_ICON = `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>`;
+const CV_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9.5 12h5M9.5 15.5h5"/></svg>`;
+const LINKEDIN_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5v6M8 7.5v.01M11.5 16.5v-6M11.5 13.2c0-1.6.9-2.7 2.3-2.7s2.2 1 2.2 2.7v3.3"/></svg>`;
 function chrome(active){
   $("#brand").innerHTML = `<span class="b1">${esc(SITE.prenom)}</span> <span class="b2">${esc(SITE.nom.toUpperCase())}</span>`;
   $("#nav").innerHTML = NAV().map(n => `<li><a data-go="${n.route}" role="link" tabindex="0" ${n.route===active?'aria-current="page"':''}>${n.label}</a></li>`).join("")
@@ -31,26 +32,35 @@ function chrome(active){
   document.querySelector("header nav").setAttribute("aria-label", t("mainNav"));
   $("#h-legal").textContent = t("legal"); $("#h-contact").textContent = t("contact");
   $("#lb").setAttribute("aria-label", t("enlarged")); $("#lb button").setAttribute("aria-label", t("close"));
-  $("#legal").innerHTML = SITE.legal.map(l => `<p>${esc(l)}</p>`).join("") + `<p><a data-go="#/mentions" role="link" tabindex="0">${t("legalPage")}</a></p>`;
-  $("#contact").innerHTML = `<p><a class="social" href="mailto:${esc(SITE.email)}">${MAIL_ICON}<span>${esc(SITE.email)}</span></a></p>${SITE.ville?`<p>${esc(SITE.ville)}</p>`:""}<p><a class="social" href="${esc(SITE.linkedin)}" target="_blank" rel="noopener" aria-label="${t("linkedin")}">${LINKEDIN_ICON}<span>LinkedIn</span></a></p>`;
+  $("#legal").innerHTML = `<p>${SITE.legal.map(l=>`<span>${esc(l)}</span>`).join("")}<a data-go="#/mentions" role="link" tabindex="0">${t("legalPage")}</a></p>`;
+  $("#contact").innerHTML = `<a class="social" href="mailto:${esc(SITE.email)}">${MAIL_ICON}<span>${esc(SITE.email)}</span></a>`
+    + `<a class="social" href="${esc(SITE.linkedin)}" target="_blank" rel="noopener" aria-label="${t("linkedin")}">${LINKEDIN_ICON}<span>LinkedIn</span></a>`
+    + `<a class="social" data-go="#/infos" role="link" tabindex="0">${CV_ICON}<span>${t("cvShort")}</span></a>`;
 }
 
 function home(){
-  return `<div class="hero">
-    <div class="txt"><h1 class="name">${esc(SITE.prenom)} ${esc(SITE.nom.toUpperCase())}</h1>
+  return `<section class="hero-band">
+    <div class="txt"><h1 class="name"><span class="b1">${esc(SITE.prenom)}</span> <span class="b2">${esc(SITE.nom.toUpperCase())}</span></h1>
       <p class="eyebrow">${esc(SITE.titre)}</p><p class="devise">${esc(SITE.devise)}</p>
-      <div class="divider" aria-hidden="true"><i></i></div>
-      ${SITE.intro.map(p=>`<p>${esc(p)}</p>`).join("")}
-      <p style="margin-top:1.6rem"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a></p></div>
+      <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a></p></div>
     <div class="portrait" role="img" aria-label="${t("portrait")} ${esc(SITE.prenom)} ${esc(SITE.nom)}">${img(SITE.photo,"",SITE.prenom[0]+SITE.nom[0])}</div>
-  </div>`;
+  </section>
+  <div class="intro">${SITE.intro.map(p=>`<p>${rich(p)}</p>`).join("")}</div>`;
 }
 
+/* Titre de vignette façon CV : « Exercice 2 » ou la date en doré, puis le titre */
+function cardTitle(title){
+  let m = title.match(/^((?:Exercice|Exercise)\s+\d+)\s+–\s+(.+)$/);
+  if(m) return `<small>${esc(m[1])}</small>${esc(m[2])}`;
+  m = title.match(/^(.+?)\s+–\s+([^–]*\d{4})$/);
+  if(m) return `<small>${esc(m[2])}</small>${esc(m[1])}`;
+  return esc(title);
+}
 function listing(sec){
   const items = PROJECTS[sec.key];
   const cards = items.map(p => `<article class="card${p.wip?" is-wip":""}">
     <div class="thumb${p.fit==="contain"?" contain":""}${p.img?" has-img":""}"${p.bg?` style="--pbg:${esc(p.bg)}"`:""}${p.wip?"":` data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}"`}>${img(p.img,p.title,p.title[0])}${p.wip?'<span class="wip-blur" aria-hidden="true"></span><span class="wip-band"><i aria-hidden="true"></i><b>WIP</b><i aria-hidden="true"></i></span>':""}</div>
-    <h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p>
+    <h3>${cardTitle(p.title)}</h3><p>${esc(p.desc)}</p>
     ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="btn" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${t("details")}</a>`}</article>`).join("");
   return `<h1>${sec.label}</h1><p class="lead">${sec.intro}</p>
   ${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="exo"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}`;
@@ -125,12 +135,19 @@ bilan(){
   return o+`</svg>`;
 }
 };
+/* Numéro de bande : chiffres romains (I, II…) affichés en 01, 02… comme le style du CV */
+function bandNum(n){
+  const v={I:1,V:5,X:10,L:50}; const r=String(n).toUpperCase();
+  if(!/^[IVXL]+$/.test(r)) return n;
+  let t=0; for(let i=0;i<r.length;i++){ const a=v[r[i]], b=v[r[i+1]]||0; t += a<b ? -a : a; }
+  return String(t).padStart(2,"0");
+}
 function blocks(list){
   return (list||[]).map(b=>{
     switch(b.k){
       case "t": return String(b.text).split(/\n\s*\n/).map(x=>`<p>${rich(x)}</p>`).join("");
       case "h": return `<h2>${rich(b.text)}</h2>`;
-      case "band": return `<section class="band"><div class="band-head"><span class="band-num">${esc(b.num)}</span><h2>${esc(b.titre)}</h2></div>${b.lignes.map(l=>`<div class="brow${l.m&&l.m.length?"":" solo"}${l.pos==="dessous"?" under":""}"><div class="bt">${blocks(l.t)}</div>${l.m&&l.m.length?`<div class="bm">${blocks(l.m)}</div>`:""}</div>`).join("")}</section>`;
+      case "band": return `<section class="band"><div class="band-head"><span class="band-num">${esc(bandNum(b.num))}</span><h2>${esc(b.titre)}</h2></div>${b.lignes.map(l=>`<div class="brow${l.m&&l.m.length?"":" solo"}${l.pos==="dessous"?" under":""}"><div class="bt">${blocks(l.t)}</div>${l.m&&l.m.length?`<div class="bm">${blocks(l.m)}</div>`:""}</div>`).join("")}</section>`;
       case "etapes": return `<ol class="etapes"><h3>${esc(b.titre)}</h3>${b.items.map(i=>`<li${i[2]?` class="${i[2]}"`:""}><b>${rich(i[0])}</b>${i[1]?`<span>${rich(i[1])}</span>`:""}</li>`).join("")}</ol>`;
       case "schema": return `<figure class="schema" role="img" aria-label="${esc(b.cap)}">${SCHEMAS[b.nom]()}${b.cap?`<div class="cap">${esc(b.cap)}</div>`:""}</figure>`;
       case "stats": return `<div class="stats">${b.items.map(i=>`<div class="stat"><b>${esc(i[0])}</b><span>${esc(i[1])}</span></div>`).join("")}</div>`;

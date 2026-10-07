@@ -10,8 +10,8 @@ const SITE_FR = {
   devise: "Organised · Curious · Collaborative · Reliable",
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
-    "Bonjour, je suis Thibault, Associate Producer dans le jeu vidéo. J'organise le travail des équipes pour transformer une idée en un jeu livré dans les délais.",
-    "Formé à la conception et au game design à Game Sup, j'ai mené depuis 2025 quatre productions, workshops et projets de fin d'année, avec des équipes de 12 à 15 personnes : planification agile, outils de suivi sur Excel et Miro, coordination entre Game Artists et Game Designers, et communication entre les équipes et l'encadrement.",
+    "Bonjour, je suis Thibault, ==Associate Producer== dans le jeu vidéo. J'organise le travail des équipes pour transformer une idée en ==un jeu livré dans les délais==.",
+    "Formé à la conception et au game design à ==Game Sup==, j'ai mené depuis 2025 ==quatre productions==, workshops et projets de fin d'année, avec des équipes de 12 à 15 personnes : ==planification agile==, ==outils de suivi== sur Excel et Miro, coordination entre Game Artists et Game Designers, et ==communication== entre les équipes et l'encadrement.",
     "Ce portfolio rassemble mes projets professionnels, mes projets personnels et mes exercices de production."
   ],
   email: "merle.thibault@orange.fr", ville: "",
@@ -23,8 +23,8 @@ const SITE_FR = {
 };
 const SITE_EN = {...SITE_FR,
   intro: [
-    "Hello, I'm Thibault, an Associate Producer in video games. I organise teams' work to turn an idea into a game shipped on schedule.",
-    "Trained in design and game design at Game Sup, I have led four productions since 2025, workshops and end-of-year projects, with teams of 12 to 15 people: agile planning, tracking tools in Excel and Miro, coordination between Game Artists and Game Designers, and communication between the teams and the supervisors.",
+    "Hello, I'm Thibault, an ==Associate Producer== in video games. I organise teams' work to turn an idea into ==a game shipped on schedule==.",
+    "Trained in design and game design at ==Game Sup==, I have led ==four productions== since 2025, workshops and end-of-year projects, with teams of 12 to 15 people: ==agile planning==, ==tracking tools== in Excel and Miro, coordination between Game Artists and Game Designers, and ==communication== between the teams and the supervisors.",
     "This portfolio gathers my professional projects, my personal projects and my production exercises."
   ],
   legal: [

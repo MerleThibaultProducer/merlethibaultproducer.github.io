@@ -616,3 +616,7 @@ body.is-home main{padding-top:clamp(2.5rem,5vw,4.5rem)}
   body.is-home header.top nav ul{column-gap:1.3rem}
   body.is-home header.top nav a,body.is-home nav .lang button{letter-spacing:.12em}
 }
+/* Accueil : texte à gauche, photo à droite (photo au-dessus sur téléphone) */
+.home-intro{grid-template-columns:minmax(0,1fr) auto}
+.home-intro .portrait{order:2}
+@media(max-width:860px){.home-intro{grid-template-columns:minmax(0,1fr)}.home-intro .portrait{order:-1}}

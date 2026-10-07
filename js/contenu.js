@@ -12,7 +12,7 @@ const SITE_FR = {
   intro: [
     "Bonjour, je suis Thibault, ==Associate Producer== dans le jeu vidéo. J'organise le travail des équipes pour transformer une idée en ==un jeu livré dans les délais==.",
     "Formé à la conception et au game design à ==Game Sup==, j'ai mené depuis 2025 ==quatre productions==, workshops et projets de fin d'année, avec des équipes de 12 à 15 personnes : ==planification agile==, ==outils de suivi== sur Excel et Miro, coordination entre Game Artists et Game Designers, et ==communication== entre les équipes et l'encadrement.",
-    "Ce portfolio rassemble mes projets professionnels, mes projets personnels et mes exercices de production."
+    "Ce portfolio rassemble mes productions, mes projets personnels et mes exercices."
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",
@@ -25,7 +25,7 @@ const SITE_EN = {...SITE_FR,
   intro: [
     "Hello, I'm Thibault, an ==Associate Producer== in video games. I organise teams' work to turn an idea into ==a game shipped on schedule==.",
     "Trained in design and game design at ==Game Sup==, I have led ==four productions== since 2025, workshops and end-of-year projects, with teams of 12 to 15 people: ==agile planning==, ==tracking tools== in Excel and Miro, coordination between Game Artists and Game Designers, and ==communication== between the teams and the supervisors.",
-    "This portfolio gathers my professional projects, my personal projects and my production exercises."
+    "This portfolio gathers my productions, my personal projects and my exercises."
   ],
   legal: [
     "© 2026 Thibault Merle – All rights reserved.",
@@ -81,11 +81,11 @@ const EX1 = { nav:"images/wyrdfall-nav.jpg", market:"images/wyrdfall-market.jpg"
 const PROJECTS_FR = {
   pro: [
     P({ title:"Projets de fin d'année – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
-        desc:"Production de 4 jeux aux genres variés, par équipes de 12 à 15 personnes : une méthode agile intégrée à un processus en cascade.", carte:"Quatre jeux produits en parallèle par une promotion entière, avec une méthode agile intégrée aux jalons en cascade de l'école.",
+        desc:"Quatre jeux aux genres variés produits en parallèle, de la mise en place de la production à la gestion d'une crise à mi-parcours.", carte:"Quatre jeux produits en parallèle par une promotion entière, avec une méthode agile intégrée aux jalons en cascade de l'école.",
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 12 à 15 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint Share · Discord" },
-        resume:{ contexte:"Projet de fin d'année à Game Sup : 4 jeux aux genres variés, 4 équipes d'environ 15 personnes, 4 semaines (27 mai – 24 juin 2026).",
-                 role:"Producer de la promotion entière, en lien avec les intervenants dans le rôle d'éditeurs.",
+        resume:{ contexte:"Projet de fin d'année à Game Sup, réalisé par toute la promotion en 4 semaines.",
+                 role:"Producer des 4 équipes, en lien avec les intervenants dans le rôle d'éditeurs.",
                  resultat:"4 jeux livrés au jury ; 1 387 tâches suivies, dont 93 % terminées, malgré une crise de direction artistique surmontée en deuxième semaine." },
         decisions:[ "**Méthode agile à l'échelle** : adaptée à 4 projets menés en parallèle, dans le cadre des milestones en cascade de l'école.",
                     "**Outils de suivi** : un macro-planning et un micro-planning Excel par groupe, soit 1 387 tâches suivies.",
@@ -93,10 +93,10 @@ const PROJECTS_FR = {
                     "**Date de playtest commune** aux 4 équipes, calée sur le planning des autres promotions.",
                     "**Priorités redéfinies** avec chaque équipe après les retours de playtest." ],
         contenu:[
-          BANDE("I","Contrainte et périmètre de l'exercice",[
+          BANDE("I","Le cadre du projet",[
             LIGNE([
               T("Comme chaque fin d'année à Game Sup, les promotions travaillent en équipe sur un projet d'environ **3 à 4 semaines**. Cette édition se distinguait par plusieurs phases de conception et de sélection des propositions en amont, qui ont abouti à ==4 sujets aux genres variés==."),
-              T("Au total, **4 groupes** d'environ 15 personnes et 4 propositions à réaliser entre fin mai et fin juin 2026.")
+              T("La contrainte : produire ces ==4 jeux en parallèle== dans le cadre des **jalons en cascade** de l'école (Proof of Concept, Alpha, Bêta), tout en laissant à chaque équipe une **organisation agile** adaptée à son projet.")
             ],[ FICHE("Les quatre projets",["**Le Castor et l'Écureuil** : un jeu de plateforme narratif","**Project GLOW** : un jeu d'action-aventure basé sur une mécanique de shoot et de portail","**Insight** : un jeu d'énigmes et d'horreur lovecraftien","**The Flowering Dead** : une proposition de boss rush post-apocalyptique"]) ])
           ]),
           BANDE("II","Mise en place de la production",[
@@ -200,15 +200,15 @@ const PROJECTS_FR = {
         img:"images/wyrdfall-vignette.jpg",
         cimg:"images/wyrdfall-couverture.jpg", cbg:"#7dad9c",
         infos:{ "Rôle":"Producer", "Projet":"AA · 30 à 50 personnes", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
-        resume:{ contexte:"Exercice de production à Game Sup : le dossier de gestion de production d'un jeu AA fictif, réalisé en 20 h sur une épreuve de 90 h.",
-                 role:"Producer : équipe, plannings, budget et estimation des ventes.",
+        resume:{ contexte:"Exercice de production à Game Sup autour d'un jeu AA fictif. Seule la partie gestion de production est présentée ici.",
+                 role:"Producer du projet : de la composition de l'équipe au seuil de rentabilité.",
                  resultat:"Un budget de 9 M€ sur 48 mois, un seuil de rentabilité à environ 451 000 ventes et trois scénarios de ROI, dans un fichier Excel modulable en un clic." },
         contenu:[
           BANDE("I","Contraintes de l'exercice",[
             LIGNE([
-              T("Dans le cadre de cet exercice, nous devions fournir, en plus d'un ==High Concept document== et d'un ==prototype== de notre concept de jeu, un **document de gestion de production** couvrant plusieurs volets : une définition crédible de **l'équipe** à constituer, un **macro-planning** et un **micro-planning** de la production sur ==Coda== et ==ClickUp==, un **budget** de développement sur ==Excel== et une estimation des ventes (**Market Analysis**)."),
+              T("Dans le cadre de cet exercice, nous devions fournir un **document de gestion de production** couvrant plusieurs volets : une définition crédible de **l'équipe** à constituer, un **macro-planning** et un **micro-planning** de la production sur ==Coda== et ==ClickUp==, un **budget** de développement sur ==Excel== et une estimation des ventes (**Market Analysis**)."),
               T("J'ai choisi un ==projet d'envergure AA== comparable à **Greedfall** : **Wyrdfall**, porté par une équipe de **30 à 50 personnes** au pic de la production."),
-              T("Cette page présente uniquement la ==partie gestion de production==, réalisée en **20 heures**. Le High Concept document et le prototype ont été produits pendant les **70 heures restantes** de l'épreuve.")
+              T("Ce dossier représente **20 heures** de travail. Le ==High Concept document== et le ==prototype==, également demandés, ont été produits pendant les **70 heures restantes** de l'épreuve et ne sont pas présentés ici.")
             ],[ FICHE("Gestion de production · présentée ici · 20 h",["Équipe à constituer","Macro-planning et micro-planning (Coda, ClickUp)","Budget de développement (Excel)","Estimation des ventes (Market Analysis)"]), FICHE("Autres livrables · 70 h",["High Concept document","Prototype"]) ])
           ]),
           BANDE("II","Synthèse chiffrée et seuil de rentabilité",[
@@ -252,9 +252,9 @@ const PROJECTS_FR = {
           ]),
           BANDE("VII","Pour aller plus loin",[
             LIGNE([
-              T("Ce travail a été extrêmement formateur et m'a permis de porter un regard neuf sur mon métier de **gestionnaire de production**. Avec du recul, j'y vois plusieurs pistes d'amélioration. D'abord, j'ai sous-estimé la charge de l'==équipe QA== : il faudrait prévoir un effectif plus important pour éviter un éventuel **crunch**. C'est aussi le cas de l'équipe ==Sound Design==, elle aussi sous-dimensionnée."),
+              T("Ce travail a été extrêmement formateur et m'a permis de porter un regard neuf sur le métier de **producer**. Avec du recul, j'y vois plusieurs pistes d'amélioration. D'abord, j'ai sous-estimé la charge de l'==équipe QA== : il faudrait prévoir un effectif plus important pour éviter un éventuel **crunch**. C'est aussi le cas de l'équipe ==Sound Design==, elle aussi sous-dimensionnée."),
               T("Il serait également utile d'étudier les **financements** accessibles à un studio de cette taille pour étoffer le dossier : aides régionales, nationales et européennes, solutions bancaires, Kickstarter."),
-              T("Je reste néanmoins fier de ce travail, qui m'a permis d'élargir ma vision du périmètre du métier de producer.")
+              T("Je reste néanmoins fier de ce travail, qui a élargi ma vision du périmètre de ce rôle.")
             ],[ FICHE("Pistes d'amélioration",["Renforcer l'équipe QA pour éviter un crunch","Réévaluer l'équipe de Sound Design","Étudier les financements : aides régionales, nationales, européennes, solutions bancaires, Kickstarter"]) ])
           ])
         ] }),
@@ -263,12 +263,12 @@ const PROJECTS_FR = {
         img:CT.thumb,
         infos:{ "Rôle":"Auteur du GDD", "Cadre":"Game Design 1 (GD1)", "Date":"Avril 2025", "Temps de travail":"90 h", "Livrable":"Game Design Document · 67 pages" },
         resume:{ contexte:"Exercice de Game Design 1 à Game Sup (avril 2025) : concevoir un jeu à partir d'une créature mythique d'un pays imposé, la Grèce.",
-                 role:"Auteur du Game Design Document (67 pages), réalisé en 90 h.",
-                 resultat:"Un RPG au tour par tour où chaque mécanique trouve son incarnation dans le récit, de la boucle de jeu jusqu'à un niveau complet." },
+                 role:"Auteur du Game Design Document : concept, systèmes, univers, personnage et niveau.",
+                 resultat:"Un RPG au tour par tour où chaque mécanique trouve son incarnation dans le récit, et une connaissance concrète du travail de design, utile pour dialoguer avec les équipes en production." },
         contenu:[
           BANDE("I","Introduction",[
             LIGNE([
-              T("**Castalie's Tears** est un projet que j'ai mené pour répondre à une contrainte claire : ==concevoir un jeu à partir d'une créature mythique issue d'un pays imposé==. La Grèce m'a été attribuée. Je me suis tourné vers les **naïades**, divinités des eaux, pour incarner l'héroïne du projet."),
+              T("La contrainte de l'exercice m'a attribué la **Grèce**. Parmi ses créatures mythiques, je me suis tourné vers les **naïades**, divinités des eaux, pour incarner l'héroïne du projet : ==Castalie, gardienne de la fontaine de Delphes==."),
               T("De là est née une idée simple : ==une naïade parcourt la Grèce pour recruter et sauver des divinités== afin de combattre les armées de Typhon. Le joueur incarne Castalie et rencontre, au fil du jeu, d'autres héros et divinités qui deviennent ses compagnons. C'est son histoire qui m'a permis de bâtir un **gameplay de RPG**."),
               T("Ce dossier montre comment j'ai pensé ==l'histoire et les mécaniques ensemble==, en suivant l'ordre du travail. Je présente d'abord le **Game Design** : le concept, les intentions, la boucle de jeu, le joueur visé et l'interface. J'en montre ensuite l'**incarnation en Narrative Design** : l'univers, le personnage de Castalie et un niveau qui fait vivre les deux.")
             ],[ IMG(CT.pitch,"L'énoncé central : Castalie face à Typhon") ])
@@ -342,7 +342,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Castalie's Tears cherche à tenir ensemble ==un système et une émotion==. Côté Game Design, une boucle de gestion, d'exploration et de combat où chaque étape nourrit la suivante. Côté Narrative Design, un univers en deuil où chacune de ces étapes devient un geste : protéger une fontaine, recueillir la Grâce d'un dieu déchu, sauver des réfugiés."),
               T("Le joueur incarne Castalie : sa progression est la sienne. À mesure que sa Source et ses pouvoirs grandissent, et qu'elle rencontre d'autres héros, elle reprend confiance. Le niveau du Temple d'Apollon est le premier moment où gameplay et émotion se rejoignent : le joueur franchit un seuil de gameplay, et Castalie, qu'il incarne, un seuil émotionnel."),
-              T("Ce que je retiens : un GDD ne se limite pas à lister des features. Il doit relier les ==intentions== aux ==mécaniques==, et les mécaniques à ce que le joueur ressent. C'est cette chaîne que j'ai cherché à rendre lisible, du pilier jusqu'au niveau.")
+              T("Ce que je retiens : un GDD ne se limite pas à lister des features. Il doit relier les ==intentions== aux ==mécaniques==, et les mécaniques à ce que le joueur ressent. C'est cette chaîne que j'ai cherché à rendre lisible, du pilier jusqu'au niveau. Comme producer, c'est aussi ce qui me permet de comprendre ce que l'on demande aux équipes de design, et d'en estimer la portée.")
             ],[ FICHE("Ce que je retiens",["Une boucle de jeu où chaque étape nourrit la suivante","Une mécanique, une incarnation narrative","Une héroïne incarnée par le joueur, dont l'évolution suit la progression","Un niveau qui sert à la fois le gameplay et l'émotion"]) ])
           ]),
           BANDE("XII","Références",[
@@ -356,7 +356,7 @@ const PROJECTS_FR = {
         img:NG.thumb,
         infos:{ "Rôle":"Auteur de l'étude", "Cadre":"Culture vidéoludique · Game Sup", "Date":"Janvier 2025", "Livrable":"Présentation PowerPoint · 30 diapositives" },
         resume:{ contexte:"Exercice de culture vidéoludique à Game Sup (janvier 2025) : analyser le marché du jeu vidéo en Afrique.",
-                 role:"Auteur de l'étude : recherche documentaire, recoupement des sources, présentation de 30 diapositives.",
+                 role:"Auteur de l'étude : recherche documentaire, recoupement et critique des sources.",
                  resultat:"Un modèle africain mobile et local, porté par une population jeune mais freiné par les infrastructures, et une leçon de production : budget, calendrier, plateforme et paiement se décident ensemble." },
         contenu:[
           BANDE("I","Problématique et périmètre",[
@@ -443,11 +443,11 @@ const PROJECTS_FR = {
 const PROJECTS_EN = {
   pro: [
     P({ title:"End-of-Year Projects – May–June 2026", large:true, nocover:true,
-        desc:"Production of 4 games of varied genres, in teams of 12 to 15 people: an agile method embedded in a waterfall process.", carte:"Four games produced in parallel by an entire class, with an agile method embedded in the school's waterfall milestones.",
+        desc:"Four games of varied genres produced in parallel, from setting up production to handling a mid-course crisis.", carte:"Four games produced in parallel by an entire class, with an agile method embedded in the school's waterfall milestones.",
         img:PRO1.thumb,
         infos:{ "Role":"Producer", "Team":"4 teams · 12 to 15 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint Share · Discord" },
-        resume:{ contexte:"Game Sup end-of-year project: 4 games of varied genres, 4 teams of about 15 people, 4 weeks (27 May – 24 June 2026).",
-                 role:"Producer for the whole class, working with the instructors acting as publishers.",
+        resume:{ contexte:"Game Sup end-of-year project, carried out by the whole class in 4 weeks.",
+                 role:"Producer for the 4 teams, working with the instructors acting as publishers.",
                  resultat:"4 games delivered to the jury; 1,387 tasks tracked, 93% completed, despite an art-direction crisis overcome in the second week." },
         decisions:[ "**Agile at scale**: adapted to 4 projects run in parallel, within the school's Waterfall milestones.",
                     "**Tracking tools**: a macro-planning and a micro-planning in Excel for each group, 1,387 tasks tracked.",
@@ -455,10 +455,10 @@ const PROJECTS_EN = {
                     "**A shared playtest deadline** for the 4 teams, fitted to the other classes' schedules.",
                     "**Priorities reset** with each team after playtest feedback." ],
         contenu:[
-          BANDE("I","Constraints and scope of the exercise",[
+          BANDE("I","The project framework",[
             LIGNE([
               T("As at the end of every school year at Game Sup, the classes work in teams on a project lasting about **3 to 4 weeks**. This edition stood out for several upstream phases of design and proposal selection, which led to ==4 subjects of varied genres==."),
-              T("In total, **4 groups** of about 15 people and 4 proposals to produce between late May and late June 2026.")
+              T("The constraint: produce these ==4 games in parallel== within the school's **waterfall milestones** (Proof of Concept, Alpha, Beta), while giving each team an **agile organisation** suited to its project.")
             ],[ FICHE("The four projects",["**Le Castor et l'Écureuil**: a narrative platformer","**Project GLOW**: an action-adventure game built on a shooting and portal mechanic","**Insight**: a Lovecraftian puzzle and horror game","**The Flowering Dead**: a post-apocalyptic boss rush proposal"]) ])
           ]),
           BANDE("II","Setting up production",[
@@ -561,15 +561,15 @@ const PROJECTS_EN = {
     P({ title:"Exercise 1 – Wyrdfall", desc:"Production dossier for a 48-month AA game: team, budget, planning, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
         img:PROJECTS_FR.exo[0].img, cimg:PROJECTS_FR.exo[0].cimg, cbg:"#7dad9c",
         infos:{ "Role":"Producer", "Project":"AA · 30 to 50 people", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
-        resume:{ contexte:"Game Sup production exercise: the production management file for a fictional AA game, done in 20 h of a 90 h assignment.",
-                 role:"Producer: team, schedules, budget and sales estimate.",
+        resume:{ contexte:"Game Sup production exercise around a fictional AA game. Only the production management part is shown here.",
+                 role:"Producer of the project: from team composition to break-even point.",
                  resultat:"A €9M budget over 48 months, a break-even point at about 451,000 sales and three ROI scenarios, in an Excel file that updates in one click." },
         contenu:[
           BANDE("I","Constraints of the exercise",[
             LIGNE([
-              T("For this exercise, we had to provide, in addition to a ==High Concept document== and a ==prototype== of our game concept, a **production management document** covering several areas: a credible definition of the **team** to assemble, a **macro-planning** and a **micro-planning** of the production in ==Coda== and ==ClickUp==, a development **budget** in ==Excel== and a sales estimate (**Market Analysis**)."),
+              T("For this exercise, we had to provide a **production management document** covering several areas: a credible definition of the **team** to assemble, a **macro-planning** and a **micro-planning** of the production in ==Coda== and ==ClickUp==, a development **budget** in ==Excel== and a sales estimate (**Market Analysis**)."),
               T("I chose an ==AA-scale project== comparable to **Greedfall**: **Wyrdfall**, carried by a team of **30 to 50 people** at peak production."),
-              T("This page only presents the ==production management part==, completed in **20 hours**. The High Concept document and the prototype were produced during the **remaining 70 hours** of the assignment.")
+              T("This file represents **20 hours** of work. The ==High Concept document== and the ==prototype==, also required, were produced during the **remaining 70 hours** of the assignment and are not shown here.")
             ],[ FICHE("Production management · shown here · 20 h",["Team to assemble","Macro-planning and micro-planning (Coda, ClickUp)","Development budget (Excel)","Sales estimate (Market Analysis)"]), FICHE("Other deliverables · 70 h",["High Concept document","Prototype"]) ])
           ]),
           BANDE("II","Key figures and break-even point",[
@@ -613,9 +613,9 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","Going further",[
             LIGNE([
-              T("This work was extremely formative and gave me a fresh perspective on my job as a **production manager**. In hindsight, I see several ways to improve it. First, I underestimated the workload of the ==QA team==: a larger headcount would be needed to avoid a possible **crunch**. The same goes for the ==Sound Design== team, which is also understaffed."),
+              T("This work was extremely formative and gave me a fresh perspective on the **producer** role. In hindsight, I see several ways to improve it. First, I underestimated the workload of the ==QA team==: a larger headcount would be needed to avoid a possible **crunch**. The same goes for the ==Sound Design== team, which is also understaffed."),
               T("It would also be useful to study the **funding** available to a studio of this size to flesh out the dossier: regional, national and European grants, bank financing, Kickstarter."),
-              T("I nonetheless remain proud of this work, which broadened my view of the scope of a producer's job.")
+              T("I nonetheless remain proud of this work, which broadened my view of the scope of this role.")
             ],[ FICHE("Areas for improvement",["Strengthen the QA team to avoid a crunch","Re-evaluate the Sound Design team","Study funding: regional, national and European grants, bank solutions, Kickstarter"]) ])
           ])
         ] }),
@@ -624,12 +624,12 @@ const PROJECTS_EN = {
         img:CT.thumb,
         infos:{ "Role":"Author of the GDD", "Context":"Game Design 1 (GD1)", "Date":"April 2025", "Workload":"90 hours", "Deliverable":"Game Design Document · 67 pages" },
         resume:{ contexte:"Game Design 1 exercise at Game Sup (April 2025): design a game from a mythical creature of an assigned country, Greece.",
-                 role:"Author of the Game Design Document (67 pages), produced in 90 h.",
-                 resultat:"A turn-based RPG where every mechanic is embodied in the story, from the core loop to a complete level." },
+                 role:"Author of the Game Design Document: concept, systems, world, character and level.",
+                 resultat:"A turn-based RPG where every mechanic is embodied in the story, and hands-on knowledge of design work, useful for working with design teams in production." },
         contenu:[
           BANDE("I","Introduction",[
             LIGNE([
-              T("**Castalie's Tears** is a project I led to meet a clear constraint: ==design a game starting from a mythical creature from an assigned country==. I was given Greece. I turned to the **Naiads**, goddesses of the waters, to embody the project's heroine."),
+              T("The exercise constraint assigned me **Greece**. Among its mythical creatures, I turned to the **Naiads**, goddesses of the waters, to embody the project's heroine: ==Castalie, guardian of the Delphi spring==."),
               T("From there came a simple idea: ==a Naiad travels through Greece recruiting and saving divinities== to fight Typhon's armies. The player embodies Castalie and meets, as the game goes on, other heroes and deities who become her companions. Her story is what allowed me to build **RPG gameplay**."),
               T("This document shows how I designed ==the story and the mechanics together==, following the order of the work. I first present the **Game Design**: the concept, the intentions, the core loop, the target player and the interface. I then show its **embodiment in Narrative Design**: the universe, the character of Castalie and a level that brings both to life.")
             ],[ IMG(CT.pitch,"The core statement: Castalie facing Typhon") ])
@@ -703,7 +703,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("Castalie's Tears tries to hold ==a system and an emotion== together. On the Game Design side, a loop of management, exploration and combat where each step feeds the next. On the Narrative Design side, a universe in mourning where each of these steps becomes a gesture: protecting a fountain, gathering the Grace of a fallen god, saving refugees."),
               T("The player embodies Castalie: her progression is theirs. As her Source and powers grow, and as she meets other heroes, she regains confidence. The Temple of Apollo level is the first moment where gameplay and emotion meet: the player crosses a gameplay threshold, and Castalie, whom they embody, an emotional one."),
-              T("What I take away: a GDD is not just a list of features. It must link ==intentions== to ==mechanics==, and mechanics to what the player feels. That chain is what I tried to make readable, from pillar to level.")
+              T("What I take away: a GDD is not just a list of features. It must link ==intentions== to ==mechanics==, and mechanics to what the player feels. That chain is what I tried to make readable, from pillar to level. As a producer, it also helps me understand what is being asked of design teams, and estimate its scope.")
             ],[ FICHE("What I take away",["A core loop where each step feeds the next","One mechanic, one narrative embodiment","A heroine embodied by the player, whose evolution follows the progression","A level that serves both gameplay and emotion"]) ])
           ]),
           BANDE("XII","References",[
@@ -717,7 +717,7 @@ const PROJECTS_EN = {
         img:NG.thumb,
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025", "Deliverable":"PowerPoint presentation · 30 slides" },
         resume:{ contexte:"Video game culture exercise at Game Sup (January 2025): analyse the video game market in Africa.",
-                 role:"Author of the study: desk research, cross-checking sources, a 30-slide presentation.",
+                 role:"Author of the study: desk research, cross-checking and critical review of sources.",
                  resultat:"An African model that is mobile and local, driven by a young population but held back by infrastructure, and a production lesson: budget, schedule, platform and payment are decided together." },
         contenu:[
           BANDE("I","Research question and scope",[
@@ -809,14 +809,14 @@ Object.entries(PROJECTS_EN).forEach(([key,list])=>list.forEach((p,i)=>{p.id=PROJ
 let PROJECTS = PROJECTS_FR;
 
 const SECTIONS_FR = [
-  {key:"pro",  label:"Projets Professionnels", route:"#/pro",  intro:"Les productions que j'ai menées comme producer : workshops et projets de fin d'année."},
+  {key:"pro",  label:"Projets Professionnels", route:"#/pro",  intro:"Les productions que j'ai menées comme producer à Game Sup : workshops et projets de fin d'année."},
   {key:"perso",label:"Projets Personnels",     route:"#/perso",intro:"Les projets menés en dehors du cadre professionnel."},
-  {key:"exo",  label:"Exercices",              route:"#/exo",  intro:"Mes exercices de conception, de narration et d'analyse de marché."}
+  {key:"exo",  label:"Exercices",              route:"#/exo",  intro:"Mes exercices de production, de game design et d'analyse de marché."}
 ];
 const SECTIONS_EN = [
-  {key:"pro",  label:"Professional Projects", route:"#/pro",  intro:"The productions I led as a producer: workshops and end-of-year projects."},
+  {key:"pro",  label:"Professional Projects", route:"#/pro",  intro:"The productions I led as a producer at Game Sup: workshops and end-of-year projects."},
   {key:"perso",label:"Personal Projects",     route:"#/perso",intro:"Projects carried out outside a professional setting."},
-  {key:"exo",  label:"Exercises",             route:"#/exo",  intro:"My design, narrative and market-analysis exercises."}
+  {key:"exo",  label:"Exercises",             route:"#/exo",  intro:"My production, game design and market-analysis exercises."}
 ];
 let SECTIONS = SECTIONS_FR;
 

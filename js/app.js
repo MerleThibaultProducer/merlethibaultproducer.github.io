@@ -56,11 +56,16 @@ function cardTitle(title){
   if(m) return `<small>${esc(m[2])}</small>${esc(m[1])}`;
   return esc(title);
 }
+/* Ligne d'infos sous le titre, façon CV : « Producer · 4 équipes · 12 à 15 personnes » */
+function cardMeta(p){
+  const v=Object.values(p.infos||{}).slice(0,2);
+  return v.length ? `<p class="cmeta"><b>${esc(v[0])}</b>${v[1]?` · ${esc(v[1])}`:""}</p>` : "";
+}
 function listing(sec){
   const items = PROJECTS[sec.key];
   const cards = items.map(p => `<article class="card${p.wip?" is-wip":""}">
     <div class="thumb${p.fit==="contain"?" contain":""}${p.img?" has-img":""}"${p.bg?` style="--pbg:${esc(p.bg)}"`:""}${p.wip?"":` data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}"`}>${img(p.img,p.title,p.title[0])}${p.wip?'<span class="wip-blur" aria-hidden="true"></span><span class="wip-band"><i aria-hidden="true"></i><b>WIP</b><i aria-hidden="true"></i></span>':""}</div>
-    <h3>${cardTitle(p.title)}</h3><p>${esc(p.desc)}</p>
+    <h3>${cardTitle(p.title)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
     ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="btn" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${t("details")}</a>`}</article>`).join("");
   return `<h1>${sec.label}</h1><p class="lead">${sec.intro}</p>
   ${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="exo"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}`;

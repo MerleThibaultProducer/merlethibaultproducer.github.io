@@ -569,3 +569,20 @@ footer .contact-row a.social svg{color:var(--gold)}
 footer .legal-row p{margin:1rem 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem 1.6rem;font-size:.8rem;opacity:1;color:#AEB6C4}
 footer .legal-row a{color:#E7EAF0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
 @media(max-width:600px){footer .contact-row{flex-direction:column;align-items:center}}
+
+/* Vignettes : infos sous l'image (titre, ligne d'infos, texte justifié, bouton aligné) */
+.card h3{margin:1.15rem 0 .35rem;line-height:1.3}
+.card .cmeta{flex:none;margin:0 0 .75rem;font-size:.84rem;line-height:1.45;color:var(--muted)}
+.card .cmeta b{font-weight:600;color:var(--ink)}
+.card .cdesc{flex:1 1 auto;margin:0 0 1.3rem;padding-top:.75rem;border-top:1px solid var(--line);font-size:.92rem;line-height:1.65;color:var(--muted);text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+/* Vignettes alignées sur toute la rangée : image, titre, infos, texte et bouton à la même hauteur */
+@media(min-width:601px){
+  .grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(13rem,16.5rem));justify-content:space-evenly;column-gap:clamp(1.2rem,2.5vw,3rem);row-gap:3rem}
+  .grid .card{display:grid;grid-template-rows:subgrid;grid-row:span 5;row-gap:0;width:auto;max-width:none}
+  .grid .card .btn{align-self:end;justify-self:start;width:auto}
+}
+@media(min-width:601px) and (max-width:1180px){.grid[data-n="4"]{grid-template-columns:repeat(2,minmax(13rem,16.5rem))}}
+@media(min-width:601px) and (max-width:1023px){
+  .grid{grid-template-columns:repeat(2,minmax(13rem,16.5rem))}
+  .grid .card:last-child:nth-child(odd){grid-column:1 / -1;justify-self:center;width:min(100%,16.5rem)}
+}

@@ -47,6 +47,8 @@ let SITE = SITE_FR;
    MISE EN FORME DU TEXTE (dans T, LISTE, etc.) :
    **mot**  → en gras          ==mot==  → en couleur (doré)
 
+   VIGNETTE : carte:"texte court" s'affiche sous la vignette (sinon desc). La ligne d'infos reprend les 2 premières infos.
+
    PROJET EN BANDES (page large, comme l'Exercice 1) : ajoutez  large:true  au projet, puis
    BANDE("I", "Titre de la partie", [ LIGNE([blocs de texte], [blocs à droite]), ... ])
      – LIGNE(gauche, droite) : le texte à gauche, les images/tableaux à droite (une LIGNE par paragraphe illustré)
@@ -79,7 +81,7 @@ const EX1 = { nav:"images/wyrdfall-nav.jpg", market:"images/wyrdfall-market.jpg"
 const PROJECTS_FR = {
   pro: [
     P({ title:"Projets de fin d'année – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
-        desc:"Production de 4 jeux aux genres variés, par équipes de 12 à 15 personnes : une méthode agile intégrée à un processus en cascade.",
+        desc:"Production de 4 jeux aux genres variés, par équipes de 12 à 15 personnes : une méthode agile intégrée à un processus en cascade.", carte:"Quatre jeux produits en parallèle par une promotion entière, avec une méthode agile intégrée aux jalons en cascade de l'école.",
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 12 à 15 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint Share · Discord" },
         resume:{ contexte:"Projet de fin d'année à Game Sup : 4 jeux aux genres variés, 4 équipes d'environ 15 personnes, 4 semaines (27 mai – 24 juin 2026).",
@@ -145,7 +147,7 @@ const PROJECTS_FR = {
           ])
         ] }),
     P({ title:"Workshop Rogue-lite – Février 2026", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
-        desc:"Planification à deux niveaux pour deux équipes sur trois semaines : feuille de route du workshop et tâches quotidiennes.",
+        desc:"Planification à deux niveaux pour deux équipes sur trois semaines : feuille de route du workshop et tâches quotidiennes.", carte:"Deux équipes sur trois semaines, avec une feuille de route pour le workshop et des tâches quotidiennes pour chaque équipe.",
         img:"",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes · 12 à 13 personnes", "Durée":"3 semaines", "Genre":"Rogue-lite" },
         resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes développent chacune un rogue-lite.",
@@ -159,7 +161,7 @@ const PROJECTS_FR = {
           IMG("", "Planning de production")
         ] }),
     P({ title:"Workshop Fusion – Novembre 2025", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
-        desc:"Plan de production agile sur Excel, revues hebdomadaires et premiers dailies pour deux équipes.",
+        desc:"Plan de production agile sur Excel, revues hebdomadaires et premiers dailies pour deux équipes.", carte:"Un plan de production agile sur Excel, des revues hebdomadaires et les premiers dailies, confiés aux référents des équipes.",
         img:"",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes · 12 à 13 personnes", "Durée":"3 semaines", "Outils":"Excel" },
         resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes.",
@@ -172,7 +174,7 @@ const PROJECTS_FR = {
           IMG("", "Plan de production")
         ] }),
     P({ title:"Projets de fin d'année – Juin 2025", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
-        desc:"Ma première gestion de deux projets en parallèle, suivis sur Excel et Miro.",
+        desc:"Ma première gestion de deux projets en parallèle, suivis sur Excel et Miro.", carte:"Mes deux premiers projets menés en parallèle, suivis sur Excel et Miro, avec des sprint reviews pour chaque équipe.",
         img:"",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes · 12 à 13 personnes", "Durée":"4 semaines", "Outils":"Excel · Miro" },
         resume:{ contexte:"Projet de fin d'année à Game Sup : deux équipes de 12 à 13 personnes, quatre semaines de développement.",
@@ -194,7 +196,7 @@ const PROJECTS_FR = {
         contenu:[ T("Décrivez ici le projet.") ] })
   ],
   exo: [
-        P({ title:"Exercice 1 – Wyrdfall", desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes ; bg/fit : image affichée en entier sur fond uni
+        P({ title:"Exercice 1 – Wyrdfall", desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes ; bg/fit : image affichée en entier sur fond uni
         img:"images/wyrdfall-vignette.jpg",
         cimg:"images/wyrdfall-couverture.jpg", cbg:"#7dad9c",
         infos:{ "Rôle":"Producer", "Projet":"AA · 30 à 50 personnes", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
@@ -257,7 +259,7 @@ const PROJECTS_FR = {
           ])
         ] }),
     P({ title:"Exercice 2 – Castalie's Tears – Game Design et Narrative Design", large:true, nocover:true,
-        desc:"Game Design Document d'un RPG au tour par tour d'inspiration mythologique : la boucle de jeu et ses systèmes, puis leur incarnation dans l'univers, le personnage et un niveau de Narrative Design.",
+        desc:"Game Design Document d'un RPG au tour par tour d'inspiration mythologique : la boucle de jeu et ses systèmes, puis leur incarnation dans l'univers, le personnage et un niveau de Narrative Design.", carte:"Le Game Design Document d'un RPG mythologique au tour par tour : boucle de jeu, systèmes et leur incarnation dans le récit.",
         img:CT.thumb,
         infos:{ "Rôle":"Auteur du GDD", "Cadre":"Game Design 1 (GD1)", "Date":"Avril 2025", "Temps de travail":"90 h", "Livrable":"Game Design Document · 67 pages" },
         resume:{ contexte:"Exercice de Game Design 1 à Game Sup (avril 2025) : concevoir un jeu à partir d'une créature mythique d'un pays imposé, la Grèce.",
@@ -350,7 +352,7 @@ const PROJECTS_FR = {
           ])
         ] }),
     P({ title:"Exercice 3 – The Nigerian Video Game Market", large:true, nocover:true,
-        desc:"Étude du marché du jeu vidéo en Afrique à travers le cas du Nigéria : un modèle mobile, local et affranchi du AAA occidental, ses moteurs et ses limites.",
+        desc:"Étude du marché du jeu vidéo en Afrique à travers le cas du Nigéria : un modèle mobile, local et affranchi du AAA occidental, ses moteurs et ses limites.", carte:"Le marché africain du jeu vidéo à travers le cas du Nigéria : un modèle mobile et local, ses moteurs et ses limites.",
         img:NG.thumb,
         infos:{ "Rôle":"Auteur de l'étude", "Cadre":"Culture vidéoludique · Game Sup", "Date":"Janvier 2025", "Livrable":"Présentation PowerPoint · 30 diapositives" },
         resume:{ contexte:"Exercice de culture vidéoludique à Game Sup (janvier 2025) : analyser le marché du jeu vidéo en Afrique.",
@@ -441,7 +443,7 @@ const PROJECTS_FR = {
 const PROJECTS_EN = {
   pro: [
     P({ title:"End-of-Year Projects – May–June 2026", large:true, nocover:true,
-        desc:"Production of 4 games of varied genres, in teams of 12 to 15 people: an agile method embedded in a waterfall process.",
+        desc:"Production of 4 games of varied genres, in teams of 12 to 15 people: an agile method embedded in a waterfall process.", carte:"Four games produced in parallel by an entire class, with an agile method embedded in the school's waterfall milestones.",
         img:PRO1.thumb,
         infos:{ "Role":"Producer", "Team":"4 teams · 12 to 15 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint Share · Discord" },
         resume:{ contexte:"Game Sup end-of-year project: 4 games of varied genres, 4 teams of about 15 people, 4 weeks (27 May – 24 June 2026).",
@@ -507,7 +509,7 @@ const PROJECTS_EN = {
           ])
         ] }),
     P({ title:"Rogue-lite Workshop – February 2026", wip:true,
-        desc:"Two-level planning for two teams over three weeks: a workshop roadmap and daily tasks.",
+        desc:"Two-level planning for two teams over three weeks: a workshop roadmap and daily tasks.", carte:"Two teams over three weeks, with a roadmap for the workshop and daily tasks for each team.",
         img:"",
         infos:{ "Role":"Producer", "Team":"2 teams · 12 to 13 people", "Duration":"3 weeks", "Genre":"Rogue-lite" },
         resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people, each developing a rogue-lite.",
@@ -521,7 +523,7 @@ const PROJECTS_EN = {
           IMG("", "Production schedule")
         ] }),
     P({ title:"Fusion Workshop – November 2025", wip:true,
-        desc:"An agile production plan in Excel, weekly reviews and first dailies for two teams.",
+        desc:"An agile production plan in Excel, weekly reviews and first dailies for two teams.", carte:"An agile production plan in Excel, weekly reviews and the first dailies, entrusted to the team leads.",
         img:"",
         infos:{ "Role":"Producer", "Team":"2 teams · 12 to 13 people", "Duration":"3 weeks", "Tools":"Excel" },
         resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people.",
@@ -534,7 +536,7 @@ const PROJECTS_EN = {
           IMG("", "Production plan")
         ] }),
     P({ title:"End-of-Year Projects – June 2025", wip:true,
-        desc:"My first time managing two projects in parallel, tracked in Excel and Miro.",
+        desc:"My first time managing two projects in parallel, tracked in Excel and Miro.", carte:"My first two projects run in parallel, tracked in Excel and Miro, with sprint reviews for each team.",
         img:"",
         infos:{ "Role":"Producer", "Team":"2 teams · 12 to 13 people", "Duration":"4 weeks", "Tools":"Excel · Miro" },
         resume:{ contexte:"Game Sup end-of-year project: two teams of 12 to 13 people, four weeks of development.",
@@ -556,7 +558,7 @@ const PROJECTS_EN = {
         contenu:[ T("Describe the project here.") ] })
   ],
   exo: [
-    P({ title:"Exercise 1 – Wyrdfall", desc:"Production dossier for a 48-month AA game: team, budget, planning, sales estimate and break-even point.", large:true,
+    P({ title:"Exercise 1 – Wyrdfall", desc:"Production dossier for a 48-month AA game: team, budget, planning, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
         img:PROJECTS_FR.exo[0].img, cimg:PROJECTS_FR.exo[0].cimg, cbg:"#7dad9c",
         infos:{ "Role":"Producer", "Project":"AA · 30 to 50 people", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
         resume:{ contexte:"Game Sup production exercise: the production management file for a fictional AA game, done in 20 h of a 90 h assignment.",
@@ -618,7 +620,7 @@ const PROJECTS_EN = {
           ])
         ] }),
     P({ title:"Exercise 2 – Castalie's Tears – Game Design and Narrative Design", large:true, nocover:true,
-        desc:"Game Design Document for a mythology-inspired turn-based RPG: the core loop and its systems, then their embodiment in the universe, the character and a Narrative Design level.",
+        desc:"Game Design Document for a mythology-inspired turn-based RPG: the core loop and its systems, then their embodiment in the universe, the character and a Narrative Design level.", carte:"The Game Design Document for a turn-based mythological RPG: core loop, systems and their embodiment in the story.",
         img:CT.thumb,
         infos:{ "Role":"Author of the GDD", "Context":"Game Design 1 (GD1)", "Date":"April 2025", "Workload":"90 hours", "Deliverable":"Game Design Document · 67 pages" },
         resume:{ contexte:"Game Design 1 exercise at Game Sup (April 2025): design a game from a mythical creature of an assigned country, Greece.",
@@ -711,7 +713,7 @@ const PROJECTS_EN = {
           ])
         ] }),
     P({ title:"Exercise 3 – The Nigerian Video Game Market", large:true, nocover:true,
-        desc:"A study of the African video game market through the case of Nigeria: a mobile, local model that breaks away from Western AAA, its drivers and its limits.",
+        desc:"A study of the African video game market through the case of Nigeria: a mobile, local model that breaks away from Western AAA, its drivers and its limits.", carte:"The African video game market through the case of Nigeria: a mobile, local model, its drivers and its limits.",
         img:NG.thumb,
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025", "Deliverable":"PowerPoint presentation · 30 slides" },
         resume:{ contexte:"Video game culture exercise at Game Sup (January 2025): analyse the video game market in Africa.",

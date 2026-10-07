@@ -1,0 +1,16 @@
+# Fichiers système
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Éditeurs de code
+.vscode/
+.idea/
+*.swp
+
+# Fichiers de travail et sauvegardes
+*.bak
+*.tmp
+*~
+brouillons/

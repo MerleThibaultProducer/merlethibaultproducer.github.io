@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Version 2026-10-07 b : esthétique CV v22 (tableau de tâches, CV v22, titre Associate Producer) --><!-- 2026-10-07 a : page mentions légales et confidentialité --><!-- 2026-10-06 d : vignettes exercices dans le cadre dore --><!-- x : CV plus petit --><!-- w : vignettes plus petites --><!-- v : WIP exercices 2 et 3 --><!-- u : bouton Détails WIP --><!-- t : rôle Producer --><!-- s : version anglaise + vignettes cliquables --><!-- r7 : Projet de fin d'année en bandes --><!-- q3 : photo de couverture entière --><!-- q2 : Exercice 1 en bandes, images non différées -->
+<!-- Version 2026-10-07 c : textes justifiés, images centrées --><!-- 2026-10-07 b : esthétique CV v22 (tableau de tâches, CV v22, titre Associate Producer) --><!-- 2026-10-07 a : page mentions légales et confidentialité --><!-- 2026-10-06 d : vignettes exercices dans le cadre dore --><!-- x : CV plus petit --><!-- w : vignettes plus petites --><!-- v : WIP exercices 2 et 3 --><!-- u : bouton Détails WIP --><!-- t : rôle Producer --><!-- s : version anglaise + vignettes cliquables --><!-- r7 : Projet de fin d'année en bandes --><!-- q3 : photo de couverture entière --><!-- q2 : Exercice 1 en bandes, images non différées -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Thibault Merle – Associate Producer</title>
@@ -440,6 +440,25 @@ h1.name{color:var(--ink)}
 .legal-page a{color:var(--gold-text);text-underline-offset:2px}
 .legal-page .legal-date{margin-top:2.5rem;color:var(--muted);font-size:.88rem}
 footer #legal a{cursor:pointer;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+/* ===== Mise en page des projets : texte justifié, images centrées ===== */
+/* Textes justifiés (paragraphes et listes des pages projets) */
+.project .prose p,.project .prose li,.brow .bt p,.brow .bt li,.band .fiche li{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+/* Image(s) à droite : centrées verticalement et horizontalement face au texte */
+.brow{align-items:center}
+.brow .bm{justify-items:center;align-content:center}
+.brow .bm>*{width:100%}
+.brow .bm>figure.sm{width:auto}
+/* Plusieurs images à droite : une image seule sur sa ligne reste centrée */
+.brow .bm:has(> figure + figure){display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:1.4rem}
+.brow .bm:has(> figure + figure)>figure{flex:1 1 13rem;max-width:calc(50% - .7rem);width:auto}
+@media(max-width:600px){.brow .bm:has(> figure + figure)>figure{max-width:100%}}
+/* Une seule grande image ou un carrousel sous un texte : centré sur la page */
+.prose>figure,.brow.solo .bt>figure{margin-left:auto;margin-right:auto;max-width:min(100%,62rem)}
+.prose figure.car,.brow.solo .bt>figure.car{margin-left:auto;margin-right:auto;max-width:46rem}
+.prose>figure>figcaption,.brow.solo .bt>figure>figcaption,.car figcaption{text-align:center}
+.brow .bm figcaption{text-align:center}
+/* Écran étroit : l'image passe sous le texte, centrée sur la page */
+@media(max-width:900px){.brow .bm{justify-items:center;width:100%}}
 </style>
 </head>
 <body>
@@ -507,6 +526,8 @@ let SITE = SITE_FR;
      – à droite : IMG("image","légende"), CHIFFRES([["valeur","libellé"],...]), FICHE("titre",["point",...]),
        TABLEAU("titre",["col1","col2","col3"],[ "Groupe", ["ligne","a","b"], ... ])
      – toute image (IMG) s'agrandit au clic.
+     – une grande image (IMG) ou un CAROUSEL placé côté texte, dans une LIGNE sans partie droite,
+       s'affiche sous le texte, centré sur la page : LIGNE([T("texte"), IMG("image","légende")])
 
    POUR AJOUTER UN PROJET : copiez un bloc P({ ... }) entier, collez-le dans la
    bonne liste (pro, perso ou exo) et changez les textes. C'est tout : la page

@@ -442,7 +442,7 @@ h1.name{color:var(--ink)}
 footer #legal a{cursor:pointer;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
 /* ===== Mise en page des projets : texte justifié, images centrées ===== */
 /* Textes justifiés (paragraphes et listes des pages projets) */
-.project .prose p,.project .prose li,.brow .bt p,.brow .bt li,.band .fiche li{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+.project .prose p,.project .prose li,.brow .bt p,.brow .bt li{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
 /* Image(s) à droite : centrées verticalement et horizontalement face au texte */
 .brow{align-items:center}
 .brow .bm{justify-items:center;align-content:center}
@@ -499,6 +499,12 @@ footer #legal a{cursor:pointer;text-decoration:underline;text-decoration-color:v
   .tbl th,.tbl td{padding:.4rem .35rem}
   .stats{grid-template-columns:minmax(0,1fr)}
 }
+/* LIGNE(..., "dessous") : encadrés sous le texte, côte à côte, espacement égal */
+.brow.under{grid-template-columns:minmax(0,1fr);row-gap:1.6rem;align-items:stretch}
+.brow.under .bm{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.6rem;align-items:stretch;justify-items:stretch}
+.brow.under .bm>*{margin:0;width:auto;height:100%}
+.brow.under .bt>:last-child{margin-bottom:0}
+.band .fiche li,.band .etapes li{text-align:left}
 </style>
 </head>
 <body>
@@ -566,6 +572,7 @@ let SITE = SITE_FR;
      – à droite : IMG("image","légende"), CHIFFRES([["valeur","libellé"],...]), FICHE("titre",["point",...]),
        TABLEAU("titre",["col1","col2","col3"],[ "Groupe", ["ligne","a","b"], ... ])
      – toute image (IMG) s'agrandit au clic.
+     – LIGNE(gauche, droite, "dessous") : les blocs de droite passent sous le texte, côte à côte et à espacement égal
      – une grande image (IMG) ou un CAROUSEL placé côté texte, dans une LIGNE sans partie droite,
        s'affiche sous le texte, centré sur la page : LIGNE([T("texte"), IMG("image","légende")])
 
@@ -576,7 +583,7 @@ let SITE = SITE_FR;
 const T=text=>({k:"t",text}), H=text=>({k:"h",text}), IMG=(src,cap="",cls="")=>({k:"img",src,cap,cls}),
       GALERIE=(srcs,cap="")=>({k:"gal",srcs,cap}), LISTE=items=>({k:"ul",items}),
       CITATION=(text,by="")=>({k:"q",text,by}), LIEN=(label,url)=>({k:"a",label,url});
-const BANDE=(num,titre,lignes)=>({k:"band",num,titre,lignes}), LIGNE=(t,m=[])=>({t,m}),
+const BANDE=(num,titre,lignes)=>({k:"band",num,titre,lignes}), LIGNE=(t,m=[],pos="")=>({t,m,pos}),
       CHIFFRES=items=>({k:"stats",items}), FICHE=(titre,items)=>({k:"fiche",titre,items}),
       TABLEAU=(titre,cols,rows,plain=false)=>({k:"tbl",titre,cols,rows,plain}), SOURCES=items=>({k:"src",items});
 const ETAPES=(titre,items)=>({k:"etapes",titre,items}), SCHEMA=(nom,cap="")=>({k:"schema",nom,cap});
@@ -832,7 +839,7 @@ const PROJECTS_FR = {
           BANDE("XII","Références",[
             LIGNE([
               T("Ma base de références couvre jeux vidéo, rétro-gaming, jeux de plateau, livres, séries et musiques, chacune choisie pour un usage précis : l'interface, les quêtes, la gestion d'équipe, les mythes ou l'esthétique grecque.")
-            ],[ FICHE("Jeux vidéo",["Dragon Quest XI : l'interface","Baldur's Gate III : les interactions avec les PNJ","Octopath Traveler II : le combat au tour par tour","Fire Emblem : Three Houses : les relations entre compagnons","Expeditions : Rome : le design des quêtes","Dragon Age : Inquisition : la gestion de l'avant-poste","Immortals Fenyx Rising : l'esthétique grecque"]), FICHE("Rétro-gaming et plateau",["Chrono Trigger : relations entre personnages et combat","Final Fantasy VI : arcs narratifs des compagnons","Suikoden II : gestion d'équipe","Golden Sun : magie et environnement","Glory of Heracles : dieux, humains et héros","Gloomhaven et Aeon's End : tour par tour et travail d'équipe","Theomachy et Pantheon : pouvoirs divins"]), FICHE("Mythologie et autres médias",["Hésiode, La Théogonie : dieux et mythes","Ovide, Les Métamorphoses : les mythes sur Castalie","Pierre Lévêque, Le Livre des Nymphes","Bernard Sergent, Les Nymphes et les Néréides","Princesse Mononoké : désolation et restauration","Blood of Zeus : la mort des dieux et la puissance divine","Children of the Whales : survivre face à des forces supérieures"]) ])
+            ],[ FICHE("Jeux vidéo",["Dragon Quest XI : l'interface","Baldur's Gate III : les interactions avec les PNJ","Octopath Traveler II : le combat au tour par tour","Fire Emblem : Three Houses : les relations entre compagnons","Expeditions : Rome : le design des quêtes","Dragon Age : Inquisition : la gestion de l'avant-poste","Immortals Fenyx Rising : l'esthétique grecque"]), FICHE("Rétro-gaming et plateau",["Chrono Trigger : relations entre personnages et combat","Final Fantasy VI : arcs narratifs des compagnons","Suikoden II : gestion d'équipe","Golden Sun : magie et environnement","Glory of Heracles : dieux, humains et héros","Gloomhaven et Aeon's End : tour par tour et travail d'équipe","Theomachy et Pantheon : pouvoirs divins"]), FICHE("Mythologie et autres médias",["Hésiode, La Théogonie : dieux et mythes","Ovide, Les Métamorphoses : les mythes sur Castalie","Pierre Lévêque, Le Livre des Nymphes","Bernard Sergent, Les Nymphes et les Néréides","Princesse Mononoké : désolation et restauration","Blood of Zeus : la mort des dieux et la puissance divine","Children of the Whales : survivre face à des forces supérieures"]) ], "dessous")
           ])
         ] }),
     P({ title:"Exercice 3 – The Nigerian Video Game Market", large:true, nocover:true,
@@ -1164,7 +1171,7 @@ const PROJECTS_EN = {
           BANDE("XII","References",[
             LIGNE([
               T("My reference base covers video games, retro gaming, board games, books, series and music, each chosen for a precise use: interface, quests, team management, myths or Greek aesthetics.")
-            ],[ FICHE("Video games",["Dragon Quest XI: the interface","Baldur's Gate III: NPC interactions","Octopath Traveler II: turn-based combat","Fire Emblem: Three Houses: companion relationships","Expeditions: Rome: quest design","Dragon Age: Inquisition: outpost management","Immortals Fenyx Rising: Greek aesthetics"]), FICHE("Retro gaming and board games",["Chrono Trigger: character relationships and combat","Final Fantasy VI: companion narrative arcs","Suikoden II: team management","Golden Sun: magic and environment","Glory of Heracles: gods, humans and heroes","Gloomhaven and Aeon's End: turn-based and teamwork","Theomachy and Pantheon: divine powers"]), FICHE("Mythology and other media",["Hesiod, Theogony: gods and myths","Ovid, Metamorphoses: the myths about Castalie","Pierre Lévêque, Le Livre des Nymphes","Bernard Sergent, Les Nymphes et les Néréides","Princess Mononoke: desolation and restoration","Blood of Zeus: the gods' deaths and divine power","Children of the Whales: surviving against greater forces"]) ])
+            ],[ FICHE("Video games",["Dragon Quest XI: the interface","Baldur's Gate III: NPC interactions","Octopath Traveler II: turn-based combat","Fire Emblem: Three Houses: companion relationships","Expeditions: Rome: quest design","Dragon Age: Inquisition: outpost management","Immortals Fenyx Rising: Greek aesthetics"]), FICHE("Retro gaming and board games",["Chrono Trigger: character relationships and combat","Final Fantasy VI: companion narrative arcs","Suikoden II: team management","Golden Sun: magic and environment","Glory of Heracles: gods, humans and heroes","Gloomhaven and Aeon's End: turn-based and teamwork","Theomachy and Pantheon: divine powers"]), FICHE("Mythology and other media",["Hesiod, Theogony: gods and myths","Ovid, Metamorphoses: the myths about Castalie","Pierre Lévêque, Le Livre des Nymphes","Bernard Sergent, Les Nymphes et les Néréides","Princess Mononoke: desolation and restoration","Blood of Zeus: the gods' deaths and divine power","Children of the Whales: surviving against greater forces"]) ], "dessous")
           ])
         ] }),
     P({ title:"Exercise 3 – The Nigerian Video Game Market", large:true, nocover:true,
@@ -1481,7 +1488,7 @@ function blocks(list){
     switch(b.k){
       case "t": return String(b.text).split(/\n\s*\n/).map(x=>`<p>${rich(x)}</p>`).join("");
       case "h": return `<h2>${rich(b.text)}</h2>`;
-      case "band": return `<section class="band"><div class="band-head"><span class="band-num">${esc(b.num)}</span><h2>${esc(b.titre)}</h2></div>${b.lignes.map(l=>`<div class="brow${l.m&&l.m.length?"":" solo"}"><div class="bt">${blocks(l.t)}</div>${l.m&&l.m.length?`<div class="bm">${blocks(l.m)}</div>`:""}</div>`).join("")}</section>`;
+      case "band": return `<section class="band"><div class="band-head"><span class="band-num">${esc(b.num)}</span><h2>${esc(b.titre)}</h2></div>${b.lignes.map(l=>`<div class="brow${l.m&&l.m.length?"":" solo"}${l.pos==="dessous"?" under":""}"><div class="bt">${blocks(l.t)}</div>${l.m&&l.m.length?`<div class="bm">${blocks(l.m)}</div>`:""}</div>`).join("")}</section>`;
       case "etapes": return `<ol class="etapes"><h3>${esc(b.titre)}</h3>${b.items.map(i=>`<li${i[2]?` class="${i[2]}"`:""}><b>${rich(i[0])}</b>${i[1]?`<span>${rich(i[1])}</span>`:""}</li>`).join("")}</ol>`;
       case "schema": return `<figure class="schema" role="img" aria-label="${esc(b.cap)}">${SCHEMAS[b.nom]()}${b.cap?`<div class="cap">${esc(b.cap)}</div>`:""}</figure>`;
       case "stats": return `<div class="stats">${b.items.map(i=>`<div class="stat"><b>${esc(i[0])}</b><span>${esc(i[1])}</span></div>`).join("")}</div>`;

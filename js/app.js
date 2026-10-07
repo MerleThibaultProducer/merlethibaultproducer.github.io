@@ -26,7 +26,8 @@ const MAIL_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="
 const CV_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9.5 12h5M9.5 15.5h5"/></svg>`;
 const LINKEDIN_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5v6M8 7.5v.01M11.5 16.5v-6M11.5 13.2c0-1.6.9-2.7 2.3-2.7s2.2 1 2.2 2.7v3.3"/></svg>`;
 function chrome(active){
-  $("#brand").innerHTML = `<span class="b1">${esc(SITE.prenom)}</span> <span class="b2">${esc(SITE.nom.toUpperCase())}</span>`;
+  $("#brand").innerHTML = `<span class="bn"><span class="b1">${esc(SITE.prenom)}</span> <span class="b2">${esc(SITE.nom.toUpperCase())}</span></span><span class="brole">${esc(SITE.titre)}</span>`;
+  document.body.classList.toggle("is-home", active === "#/");
   $("#nav").innerHTML = NAV().map(n => `<li><a data-go="${n.route}" role="link" tabindex="0" ${n.route===active?'aria-current="page"':''}>${n.label}</a></li>`).join("")
     + `<li class="lang" role="group" aria-label="${t("langLabel")}"><button type="button" data-lang="fr" aria-pressed="${lang==="fr"}" lang="fr" aria-label="Français">FR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="${lang==="en"}" lang="en" aria-label="English">EN</button></li>`;
   document.querySelector("header nav").setAttribute("aria-label", t("mainNav"));
@@ -39,13 +40,16 @@ function chrome(active){
 }
 
 function home(){
-  return `<section class="hero-band">
-    <div class="txt"><h1 class="name"><span class="b1">${esc(SITE.prenom)}</span> <span class="b2">${esc(SITE.nom.toUpperCase())}</span></h1>
-      <p class="eyebrow">${esc(SITE.titre)}</p>${SITE.devise?`<p class="devise">${esc(SITE.devise)}</p>`:""}
-      <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a></p></div>
+  /* Le nom et le titre s'affichent en grand dans le bandeau du haut (voir chrome) ; ici : photo + présentation */
+  return `<h1 class="sr">${esc(SITE.prenom)} ${esc(SITE.nom)} – ${esc(SITE.titre)}</h1>
+  <section class="home-intro">
     <div class="portrait" role="img" aria-label="${t("portrait")} ${esc(SITE.prenom)} ${esc(SITE.nom)}">${img(SITE.photo,"",SITE.prenom[0]+SITE.nom[0])}</div>
-  </section>
-  <div class="intro">${SITE.intro.map(p=>`<p>${rich(p)}</p>`).join("")}</div>`;
+    <div class="home-txt">
+      ${SITE.devise?`<p class="devise">${esc(SITE.devise)}</p>`:""}
+      <div class="intro">${SITE.intro.map(p=>`<p>${rich(p)}</p>`).join("")}</div>
+      <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a></p>
+    </div>
+  </section>`;
 }
 
 /* Titre de vignette façon CV : « Exercice 2 » ou la date en doré, puis le titre */

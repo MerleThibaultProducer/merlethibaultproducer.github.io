@@ -620,3 +620,14 @@ body.is-home main{padding-top:clamp(2.5rem,5vw,4.5rem)}
 .home-intro{grid-template-columns:minmax(0,1fr) auto}
 .home-intro .portrait{order:2}
 @media(max-width:860px){.home-intro{grid-template-columns:minmax(0,1fr)}.home-intro .portrait{order:-1}}
+/* Accueil : texte centré verticalement sur la photo, bouton en dessous */
+.home-intro{row-gap:0}
+.home-intro .home-txt{display:contents}
+.home-intro .intro{grid-column:1;grid-row:1;align-self:center}
+.home-intro .portrait{grid-column:2;grid-row:1}
+.home-intro .cta{grid-column:1;grid-row:2;margin:2.6rem 0 0}
+@media(max-width:860px){
+  .home-intro .portrait{grid-column:1;grid-row:1;margin-bottom:2.2rem}
+  .home-intro .intro{grid-row:2}
+  .home-intro .cta{grid-row:3;margin-top:2.2rem}
+}

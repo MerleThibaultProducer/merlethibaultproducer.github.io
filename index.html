@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Version 2026-10-07 c : textes justifiés, images centrées --><!-- 2026-10-07 b : esthétique CV v22 (tableau de tâches, CV v22, titre Associate Producer) --><!-- 2026-10-07 a : page mentions légales et confidentialité --><!-- 2026-10-06 d : vignettes exercices dans le cadre dore --><!-- x : CV plus petit --><!-- w : vignettes plus petites --><!-- v : WIP exercices 2 et 3 --><!-- u : bouton Détails WIP --><!-- t : rôle Producer --><!-- s : version anglaise + vignettes cliquables --><!-- r7 : Projet de fin d'année en bandes --><!-- q3 : photo de couverture entière --><!-- q2 : Exercice 1 en bandes, images non différées -->
+<!-- Version 2026-10-07 d : responsive 1920 px → téléphone --><!-- 2026-10-07 c : textes justifiés, images centrées --><!-- 2026-10-07 b : esthétique CV v22 (tableau de tâches, CV v22, titre Associate Producer) --><!-- 2026-10-07 a : page mentions légales et confidentialité --><!-- 2026-10-06 d : vignettes exercices dans le cadre dore --><!-- x : CV plus petit --><!-- w : vignettes plus petites --><!-- v : WIP exercices 2 et 3 --><!-- u : bouton Détails WIP --><!-- t : rôle Producer --><!-- s : version anglaise + vignettes cliquables --><!-- r7 : Projet de fin d'année en bandes --><!-- q3 : photo de couverture entière --><!-- q2 : Exercice 1 en bandes, images non différées -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Thibault Merle – Associate Producer</title>
@@ -459,6 +459,46 @@ footer #legal a{cursor:pointer;text-decoration:underline;text-decoration-color:v
 .brow .bm figcaption{text-align:center}
 /* Écran étroit : l'image passe sous le texte, centrée sur la page */
 @media(max-width:900px){.brow .bm{justify-items:center;width:100%}}
+/* ===== Responsive : du 1920 px au téléphone ===== */
+.brow .bt,.brow .bm,.prose,.band,.legal-page{min-width:0}
+.prose,.band,.legal-page,.cv-bar,footer{overflow-wrap:break-word}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:900px){.brow{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){
+  h1{letter-spacing:.08em;overflow-wrap:anywhere}
+  h1::after{display:none}
+  .band{padding:1.25rem 1rem}
+  .band-head{gap:.8rem}
+  .band-num{min-width:auto}
+  .stat{padding:.9rem .9rem}
+  .stat b{font-size:clamp(1.05rem,5vw,1.35rem)}
+  .stat span{letter-spacing:.08em}
+  .tbl{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:.8rem}
+  .tbl th,.tbl td{padding:.45rem .55rem}
+  .tbl caption{display:block;padding:.7rem .6rem}
+  .tbl.plain td:first-child{white-space:normal}
+  .meta li{flex-wrap:wrap;gap:.2rem 1rem}
+}
+/* En-tête sur tablette et téléphone : motif retiré, FR/EN sur la ligne du nom */
+@media(max-width:1180px){header.top::before{display:none}}
+@media(max-width:900px){header.top .wrap{position:relative}nav ul li.lang{position:absolute;top:1.3rem;right:0;border-left:0;padding-left:0;margin-left:0}}
+@media(max-width:700px){
+  header.top .wrap{position:relative;padding-block:1rem .9rem;row-gap:.6rem}
+  nav ul li.lang{position:absolute;top:1.15rem;right:0}
+  nav ul{gap:.15rem 1.1rem}
+  nav a{font-size:.68rem;letter-spacing:.12em}
+}
+/* Téléphone : texte aligné à gauche (la justification crée des trous sur une colonne étroite) */
+@media(max-width:480px){
+  .project .prose p,.project .prose li,.brow .bt p,.brow .bt li,.band .fiche li{text-align:left}
+}
+@media(max-width:380px){
+  h1{font-size:1.35rem}
+  .tbl{font-size:.74rem}
+  .tbl th{letter-spacing:.04em}
+  .tbl th,.tbl td{padding:.4rem .35rem}
+  .stats{grid-template-columns:minmax(0,1fr)}
+}
 </style>
 </head>
 <body>

@@ -155,7 +155,10 @@ function bandNum(n){
 function teamsCarousel(groupes){
   const person = m => { const role = lang==="en" && m.roleEn ? m.roleEn : m.role;
     return `<li class="${m.role==="Producer"?"me":""}"><a href="${esc(m.url)}" target="_blank" rel="noopener" aria-label="${esc(m.nom)} – LinkedIn (${t("newTab")})">${LINKEDIN_ICON}<span class="tm-n">${esc(m.nom)}</span></a><span class="tm-r">${esc(role)}</span></li>`; };
-  const col = (titre, list) => `<div class="tm-col"><h4>${titre}<small>${list.length}</small></h4><ul>${list.map(person).join("")}</ul></div>`;
+  /* Tri alphabétique par nom de famille (tout ce qui suit le prénom) ; le producer reste en tête */
+  const surname = m => m.nom.split(" ").slice(1).join(" ") || m.nom;
+  const sorted = list => [...list].sort((x,y)=> (y.role==="Producer")-(x.role==="Producer") || surname(x).localeCompare(surname(y),"fr",{sensitivity:"base"}) || x.nom.localeCompare(y.nom,"fr"));
+  const col = (titre, list) => `<div class="tm-col"><h4>${titre}<small>${list.length}</small></h4><ul>${sorted(list).map(person).join("")}</ul></div>`;
   return `<figure class="car teams" aria-roledescription="carrousel"><div class="car-track">${groupes.map((g,i)=>`<section class="car-s team" aria-label="${esc(g.nom)}">
       <header><span class="tm-k">${t("group")} ${i+1}</span><h3>${esc(g.nom)}</h3><p>${esc(lang==="en"?g.genreEn:g.genre)} · ${g.design.length+g.art.length} ${t("members")}</p></header>
       <div class="tm-cols">${col("Game Design",g.design)}${col("Game Art",g.art)}</div></section>`).join("")}</div>

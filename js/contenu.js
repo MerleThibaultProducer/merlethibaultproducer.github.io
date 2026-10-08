@@ -81,7 +81,8 @@ const CT = {thumb:"images/castalie-thumb.jpg",pitch:"images/castalie-pitch.jpg",
 const EX1 = { nav:"images/wyrdfall-nav.jpg", market:"images/wyrdfall-market.jpg", scen:"images/wyrdfall-scen.jpg", budget:"images/wyrdfall-budget.jpg", epic:"images/wyrdfall-epic.jpg", sprint:"images/wyrdfall-sprint.jpg" };
 
 /* Équipes des projets de fin d'année (mai-juin 2026) : une diapositive du carrousel par groupe.
-   M("Prénom Nom", "lien LinkedIn", "rôle", "rôle en anglais si différent")  –  "Producer" est mis en avant. */
+   M("Prénom Nom", "lien LinkedIn", "rôle", "rôle en anglais si différent")  –  "Producer" est mis en avant, en tête de liste.
+   L'ordre d'écriture n'a pas d'importance : chaque colonne est triée automatiquement par ordre alphabétique des noms de famille. */
 const M=(nom,url,role,roleEn)=>({nom,url,role,roleEn});
 const EQUIPES_FDA = [
   { nom:"Le Castor et l'Écureuil", genre:"jeu de plateforme narratif", genreEn:"narrative platformer",
@@ -120,6 +121,7 @@ const EQUIPES_FDA = [
         M("Essoham Talle","https://www.linkedin.com/in/essoham-talle-290128360/","Level Art / Technical Art") ] },
   { nom:"Insight", genre:"énigmes et horreur lovecraftienne", genreEn:"Lovecraftian puzzle horror",
     design:[
+        M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
         M("Thibault Chanut","https://www.linkedin.com/in/thibault-chanut-77035238a/","Creative Direction / Technical Design"),
         M("Pierre Royer","https://www.linkedin.com/in/pierre-royer-0b0727357/","System Design"),
         M("Baptiste Feron","https://www.linkedin.com/in/baptiste-feron-51232b264/","Narrative Design"),
@@ -137,6 +139,7 @@ const EQUIPES_FDA = [
         M("Oscar Lokteff","https://www.linkedin.com/in/oscar-lokteff-bbb623333/","Character Art") ] },
   { nom:"The Flowering Dead", genre:"boss rush post-apocalyptique", genreEn:"post-apocalyptic boss rush",
     design:[
+        M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
         M("Malo Fougères","https://www.linkedin.com/in/malo-foug%C3%A8res-65476938b/","Creative Direction / Technical Design"),
         M("Nicola Vischi","https://www.linkedin.com/in/nicola-vischi-27b385314/","Level Design"),
         M("Victor Cardineau","https://www.linkedin.com/in/victor-cardineau-234735437/","System Design"),

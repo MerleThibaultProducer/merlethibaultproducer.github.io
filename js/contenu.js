@@ -181,7 +181,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Les productions ont été lancées le lendemain de la sélection. Nous avons choisi de le faire en ==promotion entière==, et non, comme d'habitude, chaque groupe dans sa salle. En tant que producer, je pouvais ainsi être présent auprès de tous les groupes lors de la lecture des consignes de développement."),
               T("Second avantage : nous avons pu aborder collectivement l'**organisation générale**, les **outils** et la **méthode de production** à appliquer, avant d'affiner l'organisation propre à chaque groupe.")
-            ],[ SCHEMA("orga","Organisation mise en place : quatre groupes, deux référents par groupe, les intervenants et le producteur") ]),
+            ],[ SCHEMA("orga","Organisation mise en place : quatre groupes de 13 à 14 personnes, deux référents par groupe, les intervenants et le producer") ]),
             LIGNE([
               T("Pour faciliter la communication avec les groupes, les intervenants, qui jouaient le rôle d'éditeurs, et moi-même avons désigné ==deux référents par groupe== : un pour les **Game Designers**, un pour les **Game Artists**."),
               T("Nous avons également décidé collectivement de mettre en place des ==dailies== pour suivre l'avancée des projets au quotidien, y compris lorsque j'étais retenu en réunion avec un autre groupe."),
@@ -549,7 +549,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("Production was launched the day after the selection. We chose to do it with the ==whole class== together rather than, as usual, each group in its own room. As the producer, I could thus be present with every group during the reading of the development briefs."),
               T("A second advantage: we could address the **overall organisation**, the **tools** and the **production method** together, before refining each group's own organisation.")
-            ],[ SCHEMA("orga","Organisation put in place: four groups, two leads per group, the instructors and the producer") ]),
+            ],[ SCHEMA("orga","Organisation put in place: four groups of 13 to 14 people, two leads per group, the instructors and the producer") ]),
             LIGNE([
               T("To ease communication with the groups, the instructors, who acted as publishers, and I appointed ==two leads per group==: one for the **Game Designers**, one for the **Game Artists**."),
               T("We also decided collectively to hold ==dailies== to follow each project's progress day to day, including when I was tied up in a meeting with another group."),

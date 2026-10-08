@@ -11,7 +11,7 @@ const SITE_FR = {
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
     "Bonjour, je suis Thibault, ==Associate Producer== dans le jeu vidéo. J'organise le travail des équipes pour transformer une idée en ==un jeu livré dans les délais==.",
-    "Formé à la conception et au game design à ==Game Sup==, j'ai mené depuis 2025 ==quatre productions==, workshops et projets de fin d'année, avec des équipes de 12 à 15 personnes : ==planification agile==, ==outils de suivi== sur Excel et Miro, coordination entre Game Artists et Game Designers, et ==communication== entre les équipes et l'encadrement.",
+    "Formé à la conception et au game design à ==Game Sup==, j'ai mené depuis 2025 ==quatre productions==, workshops et projets de fin d'année, avec des équipes de 12 à 14 personnes : ==planification agile==, ==outils de suivi== sur Excel et Miro, coordination entre Game Artists et Game Designers, et ==communication== entre les équipes et l'encadrement.",
     "Ce portfolio rassemble mes productions, mes projets personnels et mes exercices."
   ],
   email: "merle.thibault@orange.fr", ville: "",
@@ -24,7 +24,7 @@ const SITE_FR = {
 const SITE_EN = {...SITE_FR,
   intro: [
     "Hello, I'm Thibault, an ==Associate Producer== in video games. I organise teams' work to turn an idea into ==a game shipped on schedule==.",
-    "Trained in design and game design at ==Game Sup==, I have led ==four productions== since 2025, workshops and end-of-year projects, with teams of 12 to 15 people: ==agile planning==, ==tracking tools== in Excel and Miro, coordination between Game Artists and Game Designers, and ==communication== between the teams and the supervisors.",
+    "Trained in design and game design at ==Game Sup==, I have led ==four productions== since 2025, workshops and end-of-year projects, with teams of 12 to 14 people: ==agile planning==, ==tracking tools== in Excel and Miro, coordination between Game Artists and Game Designers, and ==communication== between the teams and the supervisors.",
     "This portfolio gathers my productions, my personal projects and my exercises."
   ],
   legal: [
@@ -161,7 +161,7 @@ const PROJECTS_FR = {
     P({ title:"Projets de fin d'année – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"Quatre jeux aux genres variés produits en parallèle, de la mise en place de la production à la gestion d'une crise à mi-parcours.", carte:"Quatre jeux produits en parallèle par une promotion entière, avec une méthode agile intégrée aux jalons en cascade de l'école.",
         img:PRO1.thumb,
-        infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 12 à 15 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint Share · Discord" },
+        infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 13 à 14 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint Share · Discord" },
         resume:{ contexte:"Projet de fin d'année à Game Sup, réalisé par toute la promotion en 4 semaines.",
                  role:"Producer des 4 équipes, en lien avec les intervenants dans le rôle d'éditeurs.",
                  resultat:"4 jeux livrés au jury ; 1 387 tâches suivies, dont 93 % terminées, malgré une crise de direction artistique surmontée en deuxième semaine." },
@@ -529,7 +529,7 @@ const PROJECTS_EN = {
     P({ title:"End-of-Year Projects – May–June 2026", large:true, nocover:true,
         desc:"Four games of varied genres produced in parallel, from setting up production to handling a mid-course crisis.", carte:"Four games produced in parallel by an entire class, with an agile method embedded in the school's waterfall milestones.",
         img:PRO1.thumb,
-        infos:{ "Role":"Producer", "Team":"4 teams · 12 to 15 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint Share · Discord" },
+        infos:{ "Role":"Producer", "Team":"4 teams · 13 to 14 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint Share · Discord" },
         resume:{ contexte:"Game Sup end-of-year project, carried out by the whole class in 4 weeks.",
                  role:"Producer for the 4 teams, working with the instructors acting as publishers.",
                  resultat:"4 games delivered to the jury; 1,387 tasks tracked, 93% completed, despite an art-direction crisis overcome in the second week." },

@@ -56,6 +56,7 @@ let SITE = SITE_FR;
        TABLEAU("titre",["col1","col2","col3"],[ "Groupe", ["ligne","a","b"], ... ])
      – toute image (IMG) s'agrandit au clic.
      – LIGNE(gauche, droite, "dessous") : les blocs de droite passent sous le texte, côte à côte et à espacement égal
+     – EQUIPES(liste) : carrousel des équipes (une diapositive par groupe, voir EQUIPES_FDA).
      – une grande image (IMG) ou un CAROUSEL placé côté texte, dans une LIGNE sans partie droite,
        s'affiche sous le texte, centré sur la page : LIGNE([T("texte"), IMG("image","légende")])
 
@@ -71,12 +72,86 @@ const BANDE=(num,titre,lignes)=>({k:"band",num,titre,lignes}), LIGNE=(t,m=[],pos
       TABLEAU=(titre,cols,rows,plain=false)=>({k:"tbl",titre,cols,rows,plain}), SOURCES=items=>({k:"src",items});
 const ETAPES=(titre,items)=>({k:"etapes",titre,items}), SCHEMA=(nom,cap="")=>({k:"schema",nom,cap});
 const CAROUSEL=items=>({k:"car",items});
+const EQUIPES=groupes=>({k:"teams",groupes});
 const P = o => o;
 
 const PRO1 = { thumb:"images/fin-annee-2026-thumb.jpg", macro:"images/fin-annee-2026-macro.jpg", micro:"images/fin-annee-2026-micro.jpg", kill:"images/fin-annee-2026-kill.jpg" };
 const NG = {thumb:"images/nigeria-thumb.jpg", okada:"images/nigeria-okada.jpg", jagun:"images/nigeria-jagun.jpg", chicken:"images/nigeria-chicken.jpg", iwaju:"images/nigeria-iwaju.jpg", kidnapped:"images/nigeria-kidnapped.jpg", aurion:"images/nigeria-aurion.jpg", academy:"images/nigeria-academy.jpg", mobo:"images/nigeria-mobo.jpg", abena:"images/nigeria-abena.jpg", gamrx:"images/nigeria-gamrx.jpg", enav:"images/nigeria-enav.jpg", hp:"images/nigeria-hp.jpg"};
 const CT = {thumb:"images/castalie-thumb.jpg",pitch:"images/castalie-pitch.jpg",info:"images/castalie-info.jpg",one:"images/castalie-one.jpg",pillars:"images/castalie-pillars.jpg",notdo:"images/castalie-notdo.jpg",loop:"images/castalie-loop.jpg",manage:"images/castalie-manage.jpg",explore:"images/castalie-explore.jpg",res:"images/castalie-res.jpg",acq:"images/castalie-acq.jpg",fight:"images/castalie-fight.jpg",craft:"images/castalie-craft.jpg",lvl:"images/castalie-lvl.jpg",trade:"images/castalie-trade.jpg",gui:"images/castalie-gui.jpg",keys:"images/castalie-keys.jpg",pad:"images/castalie-pad.jpg",realm:"images/castalie-realm.jpg",typhon:"images/castalie-typhon.jpg",sealed:"images/castalie-sealed.jpg",castalie:"images/castalie-castalie.jpg",moodboard:"images/castalie-moodboard.jpg",ld:"images/castalie-ld.jpg",mol:"images/castalie-mol.jpg",pacing:"images/castalie-pacing.jpg"};
 const EX1 = { nav:"images/wyrdfall-nav.jpg", market:"images/wyrdfall-market.jpg", scen:"images/wyrdfall-scen.jpg", budget:"images/wyrdfall-budget.jpg", epic:"images/wyrdfall-epic.jpg", sprint:"images/wyrdfall-sprint.jpg" };
+
+/* Équipes des projets de fin d'année (mai-juin 2026) : une diapositive du carrousel par groupe.
+   M("Prénom Nom", "lien LinkedIn", "rôle", "rôle en anglais si différent")  –  "Producer" est mis en avant. */
+const M=(nom,url,role,roleEn)=>({nom,url,role,roleEn});
+const EQUIPES_FDA = [
+  { nom:"Le Castor et l'Écureuil", genre:"jeu de plateforme narratif", genreEn:"narrative platformer",
+    design:[
+        M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
+        M("Guillaume Soyez-Martin","https://www.linkedin.com/in/guillaume-soyez-martin-71a863253/","Creative Direction / System Design / Narrative Design"),
+        M("Tao Rimet","https://www.linkedin.com/in/tao-rimet-256a21330/","Level Design"),
+        M("Yaël Deschemaker","https://www.linkedin.com/in/ya%C3%ABl-deschemaker/","Level Design"),
+        M("Nicolas Rigaudie","https://www.linkedin.com/in/nicolas-rigaudie-9bba28291/","Technical Design") ],
+    art:[
+        M("Manon Lebert","https://www.linkedin.com/in/manon-lebert-4a0602385/","Level Art"),
+        M("Mylène Ha Poidevin","https://www.linkedin.com/in/myl%C3%A8ne-ha-poidevin/","Character Art"),
+        M("Maëlys Monfort","https://www.linkedin.com/in/ma%C3%ABlysmonfort/","Concept Art"),
+        M("Anaïs Lacoste","https://www.linkedin.com/in/ana%C3%AFs-lacoste-891315225/","VFX / Technical Art"),
+        M("Thomas Meynaud","https://www.linkedin.com/in/thomas-meynaud-b1004730a/","Environment Art / Props Art"),
+        M("Allan Goniak","https://www.linkedin.com/in/allan-goniak-267044307/","Environment Art / Props Art"),
+        M("Tess Bornard","https://www.linkedin.com/in/tess-bornard-1251bb3b3/","Environment Art / Props Art"),
+        M("Chloé Stagnitto","https://www.linkedin.com/in/chlo%C3%A9-stagnitto-0aa837345/","Environment Art / Props Art"),
+        M("Clémentine Guillaume","https://www.linkedin.com/in/clementine-guillaume-545ab522a/","Concept Art / Character Art") ] },
+  { nom:"Project GLOW", genre:"action-aventure, shoot et portails", genreEn:"action-adventure, shooting and portals",
+    design:[
+        M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
+        M("Lylian Armant","https://www.linkedin.com/in/lylian-armant/","Creative Direction / Level Design / Technical Animation"),
+        M("Kylian Chapon","https://www.linkedin.com/in/kylian-chapon-903924251/","Technical Design / Programming"),
+        M("Nolan Pottier","https://www.linkedin.com/in/nolan-pottier-116756410/","Level Design / Sound Design"),
+        M("Tom Rossignol","https://www.linkedin.com/in/tom-rossignol-63148a3b8/","System Design / Narrative Design") ],
+    art:[
+        M("Alexandre Berger","https://www.linkedin.com/in/alexandre-berger-662355358/","Concept Art / Character Art"),
+        M("Hugo Ballet","https://www.linkedin.com/in/hugo-ballet-038899370/","Concept Art / UI Art"),
+        M("Camille Chautard","https://www.linkedin.com/in/camille-chautard-81225a268/","Character Art / Rigging"),
+        M("Méline Billot-Biota","https://www.linkedin.com/in/m%C3%A9line-billot-biota-85a3b02b6/","Technical Art / VFX"),
+        M("Bartholomé Girelli","https://www.linkedin.com/in/bartholome-girelli-071076333/","Technical Art / VFX"),
+        M("Clotilde Maugy","https://www.linkedin.com/in/clotilde-maugy-5351a6333/","Environment Art / Props Art"),
+        M("Lou Azzi","https://www.linkedin.com/in/lou-azzi-6a3076333/","Environment Art / Level Art"),
+        M("Enzo Rouminieras","https://www.linkedin.com/in/enzo-rouminieras-b2a167333/","Environment Art / Props Art"),
+        M("Essoham Talle","https://www.linkedin.com/in/essoham-talle-290128360/","Level Art / Technical Art") ] },
+  { nom:"Insight", genre:"énigmes et horreur lovecraftienne", genreEn:"Lovecraftian puzzle horror",
+    design:[
+        M("Thibault Chanut","https://www.linkedin.com/in/thibault-chanut-77035238a/","Creative Direction / Technical Design"),
+        M("Pierre Royer","https://www.linkedin.com/in/pierre-royer-0b0727357/","System Design"),
+        M("Baptiste Feron","https://www.linkedin.com/in/baptiste-feron-51232b264/","Narrative Design"),
+        M("Pablo Griffiths","https://www.linkedin.com/in/pablo-griffiths/","System Design / Level Design"),
+        M("Matthias Gimenez","https://www.linkedin.com/in/matthias-gimenez-583615375/","Level Design") ],
+    art:[
+        M("Léa Millier","https://www.linkedin.com/in/l%C3%A9a-millier-713388283/","Référent Game Art · Lighting Art / Level Art","Game Art Lead · Lighting Art / Level Art"),
+        M("Pedro Garcia dos Santos","https://www.linkedin.com/in/pedro-garcia-dos-santos-776582268/","Concept Art"),
+        M("Alexis Tassan-Toffola","https://www.linkedin.com/in/alexis-tassan-toffola-861035366/","Environment Art / Props Art"),
+        M("Thomas Vauché","https://www.linkedin.com/in/thomas-vauch%C3%A9-8181a3333/","Level Art"),
+        M("Nicolas Abram","https://www.linkedin.com/in/nicolas-abram-38b1433a9/","Technical Art"),
+        M("Milo Carrara","https://www.linkedin.com/in/milo-carrara-03782541a/","Environment Art / Props Art"),
+        M("Valentin Brun","https://www.linkedin.com/in/valentin-brun-495426393/","Concept Art"),
+        M("Naëlle Bigouraux","https://www.linkedin.com/in/na%C3%ABlle-bigouraux-4237363a3/","Character Art"),
+        M("Oscar Lokteff","https://www.linkedin.com/in/oscar-lokteff-bbb623333/","Character Art") ] },
+  { nom:"The Flowering Dead", genre:"boss rush post-apocalyptique", genreEn:"post-apocalyptic boss rush",
+    design:[
+        M("Malo Fougères","https://www.linkedin.com/in/malo-foug%C3%A8res-65476938b/","Creative Direction / Technical Design"),
+        M("Nicola Vischi","https://www.linkedin.com/in/nicola-vischi-27b385314/","Level Design"),
+        M("Victor Cardineau","https://www.linkedin.com/in/victor-cardineau-234735437/","System Design"),
+        M("Flavie Hugonnard-Cotton","https://www.linkedin.com/in/flavie-hugonnard-cotton-b57bb6430/","Narrative Design"),
+        M("Romain Nicoghossian","https://www.linkedin.com/in/romain-nicoghossian-a39151290/","QA Design / Level Design") ],
+    art:[
+        M("Sarah Ounali","https://www.linkedin.com/in/sarah-ounali-6a1a47271/","Référent Game Art · Concept Art","Game Art Lead · Concept Art"),
+        M("Vincent Sanchez","https://www.linkedin.com/in/vincent-sanchez-50844b375/","Environment Art / Level Art"),
+        M("Lenny Beauquis","https://www.linkedin.com/in/lenny-beauquis-05340a3aa/","Level Art / Technical Art"),
+        M("Erwan Rezkallah","https://www.linkedin.com/in/erwan-rezkallah-8a17073a1/","Props Art / Environment Art"),
+        M("Léa Libert","https://www.linkedin.com/in/l%C3%A9a-libert/","Concept Art"),
+        M("Fanny Bernhard","https://www.linkedin.com/in/fanny-bernhard-4a81a6333/","Character Art"),
+        M("Lisa Canovas","https://www.linkedin.com/in/lisa-canovas-21915522b/","Technical Art"),
+        M("Théo David","https://www.linkedin.com/in/th%C3%A9o-david-94080a3b6/","Technical Art") ] }
+];
 
 const PROJECTS_FR = {
   pro: [
@@ -144,6 +219,12 @@ const PROJECTS_FR = {
               T("Ce projet a été extrêmement enrichissant, sur le plan personnel comme professionnel. C'était la première fois que l'on me confiait la ==supervision de la production d'une promotion entière==, et travailler avec des profils aussi variés, sur des projets aussi différents, a été une expérience marquante."),
               T("Mais ce sont surtout les difficultés qui m'ont fait grandir. La crise de mi-parcours m'a poussé à repenser l'organisation des groupes et à mettre de côté ce que je pensais savoir pour ==écouter davantage les besoins spécifiques== des équipes. Ce fut aussi une précieuse leçon sur l'importance de **déléguer** et d'établir des ==canaux de communication== clairs, pour que le développement reste transparent et qu'aucune équipe ne se sente perdue ou livrée à elle-même.")
             ],[ ETAPES("Ce que nous mettrions en place dès le départ",[["Des dailies en équipe entière","Pour que tout le monde comprenne vraiment l'avancée du projet"],["Des milestones d'équipe avant les sprint reviews","Pour présenter l'avancée aux moments clés, par exemple lors d'une réunion dédiée à la direction artistique où chacun exprime sa vision, afin de vérifier qu'elle est bien partagée"],["Une petite scène de référence dans le moteur","Mise en place rapidement, avec un prop à la qualité visée, les textures souhaitées et les intentions de lumière et de caméra"],["Des livrables plus détaillés et plus précis par spécialité à la fin de chaque sprint","Pour que chaque spécialité sache exactement ce qui est attendu d'elle et que l'avancée puisse être vérifiée concrètement"]]) ])
+          ]),
+          BANDE("VII","Les équipes",[
+            LIGNE([
+              T("Ces quatre jeux sont avant tout le travail de leurs équipes. Voici chaque membre, son rôle et son profil LinkedIn, groupe par groupe."),
+              EQUIPES(EQUIPES_FDA)
+            ])
           ])
         ] }),
     P({ title:"Workshop Rogue-lite – Février 2026", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
@@ -506,6 +587,12 @@ const PROJECTS_EN = {
               T("This project was extremely rewarding, both personally and professionally. It was the first time I was entrusted with ==overseeing the production of an entire class==, and working with such varied profiles on such different projects was a memorable experience."),
               T("But above all, it was the difficulties that made me grow. The mid-course crisis pushed me to rethink how the groups were organised and to set aside what I thought I knew in order to ==listen more closely to each team's specific needs==. It was also a valuable lesson in the importance of **delegating** and of establishing clear ==communication channels==, so that development stays transparent and no team ever feels lost or left on its own.")
             ],[ ETAPES("What we would put in place from the start",[["Dailies with the whole team","So that everyone truly understands the project's progress"],["Team milestones before sprint reviews","To present progress at key moments, for example in a meeting dedicated to art direction where everyone shares their vision, to check that it is truly shared"],["A small reference scene in the engine","Set up early, with a prop at the target quality, the intended textures and the lighting and camera intentions"],["More detailed and more precise deliverables per discipline at the end of each sprint","So that each discipline knows exactly what is expected of it and progress can be checked concretely"]]) ])
+          ]),
+          BANDE("VII","The teams",[
+            LIGNE([
+              T("These four games are first and foremost the work of their teams. Here is each member, their role and their LinkedIn profile, group by group."),
+              EQUIPES(EQUIPES_FDA)
+            ])
           ])
         ] }),
     P({ title:"Rogue-lite Workshop – February 2026", wip:true,
@@ -833,7 +920,7 @@ const CV_VISUAL = {
    À METTRE À JOUR si vous changez d'hébergeur, d'adresse e-mail, ou si vous ajoutez
    un formulaire, des statistiques de visite ou un service externe.
    Chaque section : [titre, [paragraphes]]. Les liens s'écrivent [libellé](https://...). */
-const LEGAL_UPDATED = { fr: "7 octobre 2026", en: "7 October 2026" };
+const LEGAL_UPDATED = { fr: "8 octobre 2026", en: "8 October 2026" };
 const LEGAL_FR = [
   ["Éditeur du site", [
     "Ce site est le portfolio personnel de **Thibault Merle**, édité à titre non professionnel et sans activité commerciale.",
@@ -848,7 +935,8 @@ const LEGAL_FR = [
   ["Propriété intellectuelle", [
     "Les textes, la mise en page et les visuels créés pour ce site sont la propriété de Thibault Merle. Toute reproduction sans autorisation est interdite.",
     "Les visuels issus de projets d'équipe, de studios ou d'écoles (dont Game Sup) restent la propriété de leurs ayants droit respectifs et sont présentés à titre de démonstration professionnelle. Les marques et jeux cités appartiennent à leurs propriétaires.",
-    "Si vous êtes titulaire de droits sur un contenu et souhaitez son retrait, écrivez-moi : il sera retiré rapidement."
+    "Si vous êtes titulaire de droits sur un contenu et souhaitez son retrait, écrivez-moi : il sera retiré rapidement.",
+    "Les noms, rôles et liens LinkedIn des membres des équipes sont publiés pour créditer leur travail. Toute personne citée peut demander la modification ou le retrait de ses informations en m'écrivant."
   ]],
   ["Données personnelles et cookies", [
     "Ce site ne comporte ni formulaire, ni compte, ni outil de mesure d'audience, ni publicité. Il ne dépose aucun cookie.",
@@ -879,7 +967,8 @@ const LEGAL_EN = [
   ["Intellectual property", [
     "The texts, layout and visuals created for this site belong to Thibault Merle. Any reproduction without permission is prohibited.",
     "Visuals from team, studio or school projects (including Game Sup) remain the property of their respective owners and are shown for professional demonstration purposes. The brands and games mentioned belong to their owners.",
-    "If you hold rights to any content and would like it removed, please contact me and it will be taken down promptly."
+    "If you hold rights to any content and would like it removed, please contact me and it will be taken down promptly.",
+    "Team members' names, roles and LinkedIn links are published to credit their work. Anyone mentioned can ask for their information to be changed or removed by contacting me."
   ]],
   ["Personal data and cookies", [
     "This site has no forms, no accounts, no analytics and no advertising. It sets no cookies.",

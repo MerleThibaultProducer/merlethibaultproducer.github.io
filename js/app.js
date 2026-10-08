@@ -4,8 +4,8 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS,{label:t("infos"),route:"#/infos"}];
 /* ---------- Langue (FR / EN) ---------- */
 const UI = {
-  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
-  en:{home:"Home",infos:"Info",seeProjects:"See my projects",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
+  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
+  en:{home:"Home",infos:"Info",seeProjects:"See my projects",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
 };
 let lang = "fr";
 const t = k => UI[lang][k];
@@ -151,6 +151,16 @@ function bandNum(n){
   let t=0; for(let i=0;i<r.length;i++){ const a=v[r[i]], b=v[r[i+1]]||0; t += a<b ? -a : a; }
   return String(t).padStart(2,"0");
 }
+/* Carrousel des équipes : une diapositive par groupe, deux colonnes (Game Design / Game Art) */
+function teamsCarousel(groupes){
+  const person = m => { const role = lang==="en" && m.roleEn ? m.roleEn : m.role;
+    return `<li class="${m.role==="Producer"?"me":""}"><a href="${esc(m.url)}" target="_blank" rel="noopener" aria-label="${esc(m.nom)} – LinkedIn (${t("newTab")})">${LINKEDIN_ICON}<span class="tm-n">${esc(m.nom)}</span></a><span class="tm-r">${esc(role)}</span></li>`; };
+  const col = (titre, list) => `<div class="tm-col"><h4>${titre}<small>${list.length}</small></h4><ul>${list.map(person).join("")}</ul></div>`;
+  return `<figure class="car teams" aria-roledescription="carrousel"><div class="car-track">${groupes.map((g,i)=>`<section class="car-s team" aria-label="${esc(g.nom)}">
+      <header><span class="tm-k">${t("group")} ${i+1}</span><h3>${esc(g.nom)}</h3><p>${esc(lang==="en"?g.genreEn:g.genre)} · ${g.design.length+g.art.length} ${t("members")}</p></header>
+      <div class="tm-cols">${col("Game Design",g.design)}${col("Game Art",g.art)}</div></section>`).join("")}</div>
+    <div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Groupe précédent","Previous group")}">‹</button><span class="car-cnt">1 / ${groupes.length}</span><button type="button" data-car="1" aria-label="${q("Groupe suivant","Next group")}">›</button></div></figure>`;
+}
 function blocks(list){
   return (list||[]).map(b=>{
     switch(b.k){
@@ -165,6 +175,7 @@ function blocks(list){
       case "tbl": return `<table class="tbl${b.plain?" plain":""}"><caption>${esc(b.titre)}</caption><thead><tr>${b.cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${b.rows.map(r=>typeof r==="string"?`<tr class="grp"><td colspan="${b.cols.length}">${esc(r)}</td></tr>`:`<tr>${r.map((c,i)=>`<td${(!b.plain&&i===2)?` class="${/^\+/.test(c)?"pos":"neg"}"`:""}>${b.plain&&i===0?`<b>${esc(c)}</b>`:esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
       case "img": return `<figure${b.cls?` class="${b.cls}"`:""}>${b.src?`<div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img src="${esc(b.src)}" alt="${esc(b.cap)}">${LENS}</div>`:`<div class="ph">${t("imgToAdd")}</div>`}${b.cap?`<figcaption>${esc(b.cap)}</figcaption>`:""}</figure>`;
       case "gal": return `<figure><div class="gal">${b.srcs.map(x=>x?`<img src="${esc(x)}" alt="" loading="lazy">`:`<div class="ph">${t("imgToAdd")}</div>`).join("")}</div>${b.cap?`<figcaption>${esc(b.cap)}</figcaption>`:""}</figure>`;
+      case "teams": return teamsCarousel(b.groupes);
       case "car": return `<figure class="car"><div class="car-track">${b.items.map(x=>`<div class="car-s"><div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img src="${esc(x[0])}" alt="${esc(x[1])}" loading="lazy">${LENS}</div><figcaption>${esc(x[1])}</figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Précédent","Previous")}">‹</button><span class="car-cnt">1 / ${b.items.length}</span><button type="button" data-car="1" aria-label="${q("Suivant","Next")}">›</button></div></figure>`;
       case "ul": return `<ul>${b.items.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
       case "q": return `<blockquote>${esc(b.text)}${b.by?`<cite>${esc(b.by)}</cite>`:""}</blockquote>`;

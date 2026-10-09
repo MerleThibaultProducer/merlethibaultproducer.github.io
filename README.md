@@ -1,6 +1,6 @@
 # Portfolio – Thibault Merle
 
-Portfolio d'Associate Producer (jeu vidéo), publié avec GitHub Pages :
+Portfolio de Junior Associate Producer (jeu vidéo), publié avec GitHub Pages :
 https://merlethibaultproducer.github.io
 
 ## Organisation des fichiers

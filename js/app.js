@@ -143,7 +143,7 @@ bilan(){
   let o=`<svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg">`;
   D.forEach((d,i)=>{const y=34+i*52;let x=x0;
     o+=`<text x="${x0-12}" y="${y+21}" text-anchor="end" class="t" font-size="12.5">${d[0]}</text>`;
-    [[d[1],"#317AC1","#fff"],[d[2],"#E1A624","#232A35"],[d[3],"#B5524F","#fff"]].forEach(p=>{if(!p[0])return;const w=p[0]*sc;
+    [[d[1],"#317AC1","#fff"],[d[2],"#E1A624","#13294B"],[d[3],"#B5524F","#fff"]].forEach(p=>{if(!p[0])return;const w=p[0]*sc;
       o+=`<rect x="${x}" y="${y}" width="${w}" height="30" fill="${p[1]}"/>${w>26?`<text x="${x+w/2}" y="${y+20}" text-anchor="middle" font-size="11.5" font-weight="500" fill="${p[2]}">${p[0]}</text>`:""}`;x+=w;});
     o+=`<text x="${x+10}" y="${y+20}" class="m" font-size="11.5">${d[4]} ${q("tâches","tasks")}</text>`;});
   const ly=250;[[q("Terminées","Completed"),"#317AC1"],[q("Supprimées (kills)","Removed (kills)"),"#E1A624"],[q("En retard","Late"),"#B5524F"]].forEach((l,i)=>{const x=x0+i*150;o+=`<rect x="${x}" y="${ly}" width="14" height="14" fill="${l[1]}"/><text x="${x+22}" y="${ly+12}" class="t" font-size="12">${l[0]}</text>`;});

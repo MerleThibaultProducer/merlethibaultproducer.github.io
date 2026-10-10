@@ -674,3 +674,8 @@ footer{background:#0B1A33}
 .tm-prod li.me{margin-bottom:0}
 /* Accueil : deux boutons côte à côte */
 .home-intro .cta{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* Accueil : blocs « Qui je suis / Où j'en suis / Ce que je recherche » */
+.home-intro .hb+.hb{margin-top:1.4rem}
+.home-intro .home-k{margin:0 0 .4rem;font:700 .74rem/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-n)}
+.home-intro .hb p{margin:0}

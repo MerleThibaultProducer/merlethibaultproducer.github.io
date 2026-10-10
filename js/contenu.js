@@ -9,10 +9,11 @@ const SITE_FR = {
   titre: "Junior Associate Producer",
   devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
+  /* Accueil : trois blocs [titre, texte] → qui je suis, où j'en suis, ce que je recherche */
   intro: [
-    "Bonjour, je suis Thibault, ==Junior Associate Producer== dans le jeu vidéo. J'organise le travail des équipes pour transformer une idée en ==un jeu livré dans les délais==.",
-    "Formé à la conception et au game design à ==Game Sup==, j'ai mené depuis 2025 ==quatre productions==, workshops et projets de fin d'année, avec des équipes de 12 à 14 personnes : ==planification agile==, ==outils de suivi== sur Excel et Miro, coordination entre Game Artists et Game Designers, et ==communication== entre les équipes et l'encadrement.",
-    "Ce portfolio rassemble mes productions, mes projets personnels et mes exercices."
+    ["Qui je suis","Je suis Thibault, ==Junior Associate Producer== dans le jeu vidéo. Pour moi, la production est d'abord un travail d'équipe : j'écoute chaque équipe, j'adapte les méthodes **agiles** et **en cascade** à sa façon de travailler, et je fais circuler l'information pour que tout le monde avance ensemble."],
+    ["Où j'en suis","En dernière année à ==Game Sup== (2023‑2027), j'ai mené **quatre productions** comme producer, jusqu'à ==quatre équipes de 13 à 14 personnes en parallèle==. J'ai aussi présidé le bureau des étudiants de l'école. Avant le jeu vidéo, un **master d'anthropologie** et cinq ans d'**enseignement** m'ont appris à expliquer, à transmettre et à m'adapter à chacun."],
+    ["Ce que je recherche","Un ==stage de fin d'études en production== (Associate ou Junior Producer) en **2027**, partout en France ou en télétravail. Je souhaite rejoindre une équipe où progresser aux côtés de producers expérimentés, en apportant mon sens de l'organisation et de la communication."]
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",
@@ -23,9 +24,9 @@ const SITE_FR = {
 };
 const SITE_EN = {...SITE_FR,
   intro: [
-    "Hello, I'm Thibault, a ==Junior Associate Producer== in video games. I organise teams' work to turn an idea into ==a game shipped on schedule==.",
-    "Trained in design and game design at ==Game Sup==, I have led ==four productions== since 2025, workshops and end-of-year projects, with teams of 12 to 14 people: ==agile planning==, ==tracking tools== in Excel and Miro, coordination between Game Artists and Game Designers, and ==communication== between the teams and the supervisors.",
-    "This portfolio gathers my productions, my personal projects and my exercises."
+    ["Who I am","I'm Thibault, a ==Junior Associate Producer== in video games. To me, production is teamwork first: I listen to each team, adapt **Agile** and **Waterfall** methods to the way people work, and keep information flowing so everyone moves forward together."],
+    ["Where I am","In my final year at ==Game Sup== (2023‑2027), I have run **four productions** as a producer, with up to ==four teams of 13 to 14 people in parallel==. I also chaired the school's student board. Before video games, a **master's in anthropology** and five years of **teaching** taught me to explain, pass on knowledge and adapt to each person."],
+    ["What I'm looking for","An ==end-of-studies internship in production== (Associate or Junior Producer) in **2027**, anywhere in France or remote. I want to join a team where I can grow alongside experienced producers, bringing my sense of organisation and communication."]
   ],
   legal: [
     "© 2026 Thibault Merle – All rights reserved.",

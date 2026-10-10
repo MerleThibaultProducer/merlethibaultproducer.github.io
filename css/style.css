@@ -876,3 +876,21 @@ header.top::before{background-position:left clamp(17rem,24vw,24rem) center;backg
 @media(max-width:600px){.fr-ms em.lg{display:none}.fr-ms em.sh{display:inline}}
 /* Le losange remplace le petit trait doré sous les titres */
 html body .band-head h2::after{display:none}
+/* Cartes kanban du bandeau, plus grandes */
+header.top::before{background-size:auto 88%;opacity:.38}
+@media(min-width:1181px){body.is-home header.top::before{background-size:auto 96px;background-position:right clamp(1rem,3vw,3rem) top .6rem}}
+header.top::before{background-position:left 18.5rem center}
+@media(max-width:1400px){body:not(.is-home) header.top::before{display:none}}
+@media(max-width:1500px){body:not(.is-home) header.top::before{display:none}}
+@media(min-width:1501px){body:not(.is-home) header.top::before{background-position:left calc(50% - 30rem) center}}
+@media(min-width:1501px){body:not(.is-home) header.top::before{background-position:calc(50% - 21rem) center}}
+@media(min-width:1501px){body:not(.is-home) header.top::before{background-position:calc(50% - 17rem) center}}
+/* Jalons en losange retirés : retour au petit trait doré sous les titres */
+html body .band-head h2::before{display:none}
+.prose::before{display:none!important}
+html body .band-head h2::after{display:block}
+/* Pages intérieures : les cartes kanban suivent directement le nom, quelle que soit la largeur d'écran */
+body:not(.is-home) header.top::before{display:none!important}
+body:not(.is-home) .brand{position:relative}
+@media(min-width:1500px){body:not(.is-home) .brand::after{content:"";position:absolute;left:calc(100% + 3.5rem);top:50%;transform:translateY(-50%);width:240px;height:74px;background:var(--chart) left center/contain no-repeat;opacity:.38;pointer-events:none}}
+@media(min-width:1500px){body:not(.is-home) .brand::after{left:calc(100% + 2.2rem);width:210px;height:66px}}

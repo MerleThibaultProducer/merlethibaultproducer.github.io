@@ -171,7 +171,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Comme chaque fin d'année à Game Sup, les promotions travaillent en équipe sur un projet d'environ **3 à 4 semaines**. Cette édition se distinguait par plusieurs phases de conception et de sélection des propositions en amont, qui ont abouti à ==4 sujets aux genres variés==."),
               T("Ma mission : produire ces ==4 jeux en parallèle== dans le cadre des **jalons Waterfall** de l'école (Proof of Concept, Alpha, Bêta), tout en laissant à chaque équipe une **organisation Agile** adaptée à son projet. Les intervenants jouaient le rôle d'**éditeurs**."),
-              T("Mon travail s'est organisé en **quatre macro-tâches**, présentées dans les parties 02 à 05.")
+              T("Mon travail s'est organisé en **quatre macro-tâches**, que je présente dans les parties 02 à 05.")
             ],[ FICHE("Les contraintes",["**4 semaines** : du 27 mai au 24 juin 2026","**4 jeux** produits en parallèle","**Jalons imposés** : Proof of Concept, Alpha, Bêta","**4 équipes** de 13 à 14 Game Designers et Game Artists","**Un seul producer** pour les 4 équipes"]) ]),
             LIGNE([
               FICHE("Les quatre projets",["**Le Castor et l'Écureuil** : un jeu de plateforme narratif","**Project GLOW** : un jeu d'action-aventure basé sur une mécanique de shoot et de portail","**Insight** : un jeu d'énigmes et d'horreur lovecraftien","**The Flowering Dead** : une proposition de boss rush post-apocalyptique"])
@@ -179,38 +179,35 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Organiser quatre équipes en parallèle",[
             LIGNE([
-              T("**Pourquoi.** Quatre jeux, plus de cinquante personnes et ==un seul producer== : je ne pouvais pas être dans chaque salle en permanence, et les consignes des intervenants devaient arriver identiques à tous les groupes."),
-              T("**Comment.** Nous avons lancé les productions en ==promotion entière==, le lendemain de la sélection, pour poser ensemble l'organisation, les outils et la méthode avant de les affiner groupe par groupe. Avec les intervenants, j'ai désigné **deux référents par groupe**, un pour les Game Designers et un pour les Game Artists."),
-              T("**Problèmes.** Lorsque j'étais en réunion avec un groupe, les trois autres avançaient sans moi, et les points quotidiens ne réunissaient pas toute l'équipe."),
-              T("**Solutions.** Des ==dailies== pour garder le suivi en mon absence, et un lien continu entre les intervenants et les équipes, pas seulement aux milestones. La prochaine fois : des dailies en équipe entière dès le départ.")
+              T("Quatre jeux, plus de cinquante personnes et ==un seul producer== : je savais dès le départ que je ne pourrais pas être dans chaque salle en permanence. Il fallait pourtant que les consignes des intervenants arrivent de la même façon à tous les groupes. C'est pour cela que nous avons lancé les productions en ==promotion entière==, le lendemain de la sélection. Tout le monde a entendu les mêmes consignes au même moment, et nous avons pu poser ensemble l'organisation, les outils et la méthode, avant de les affiner groupe par groupe."),
+              T("Pour garder un lien direct avec chaque équipe, j'ai désigné avec les intervenants **deux référents par groupe**, un pour les Game Designers et un pour les Game Artists. Cela n'a pas tout réglé : quand j'étais en réunion avec un groupe, les trois autres avançaient sans moi. Les ==dailies== ont pris le relais pour que le suivi continue en mon absence, et je suis resté l'interlocuteur entre les intervenants et les équipes tout au long des semaines, pas seulement aux milestones."),
+              T("Avec le recul, ces points quotidiens ne réunissaient pas toute l'équipe, et tout le monde ne comprenait pas vraiment l'avancée du projet. Sur un prochain projet, je mettrais en place des dailies en équipe entière dès le premier jour.")
             ],[ SCHEMA("orga","Organisation mise en place : quatre groupes de 13 à 14 personnes, deux référents par groupe, les intervenants et le producer") ])
           ]),
           BANDE("III","Planifier et suivre la production",[
             LIGNE([
-              T("**Pourquoi.** L'école imposait des ==jalons Waterfall==, alors que chaque équipe avait besoin de **sprints** adaptés à son projet. Avec quatre groupes, il me fallait un suivi comparable pour repérer les retards tôt."),
-              T("**Comment.** Un **macro-planning** Excel par groupe pose les sprints et les milestones. Un **micro-planning** rattache chaque tâche à un sprint, une priorité, une difficulté et un statut : ==1 387 tâches== suivies au total. Les documents étaient partagés dans un PowerPoint commun sur OneDrive, et chaque groupe avait son espace Discord.")
+              T("L'école imposait ses ==jalons Waterfall== (Proof of Concept, Alpha, Bêta), mais chaque équipe avait besoin de **sprints** adaptés à son projet. Il me fallait donc relier les deux, avec un suivi assez homogène pour comparer les quatre groupes et repérer les retards tôt."),
+              T("J'ai construit ce suivi sur Excel, à deux niveaux. Pour chaque groupe, un **macro-planning** pose les sprints et les milestones de l'école. Un **micro-planning** rattache ensuite chaque tâche à un sprint, une priorité, une difficulté et un statut : au total, ==1 387 tâches== ont été suivies. Les documents de travail étaient partagés dans un PowerPoint commun sur OneDrive, et chaque groupe avait son propre espace Discord.")
             ],[ IMG(PRO1.macro,"Macro-planning propre à l'Excel de chaque groupe : sprints et milestones (Proof of Concept, Alpha, Bêta)") ]),
             LIGNE([
-              T("**Problèmes.** Tenir près de 1 400 statuts à jour demandait une attention constante, et les livrables de fin de sprint n'étaient pas assez précis par spécialité : l'avancée était parfois difficile à vérifier."),
-              T("**Solutions.** Le statut de chaque tâche rendait visibles les retards et les kills, sprint par sprint. La prochaine fois : des **livrables détaillés par spécialité** à la fin de chaque sprint.")
+              T("Tenir près de 1 400 statuts à jour demandait une attention de tous les instants, mais c'est ce qui rendait les retards et les kills visibles, sprint par sprint. Ce qui m'a manqué, ce sont des livrables de fin de sprint plus précis pour chaque spécialité : l'avancée était parfois difficile à vérifier concrètement. C'est la première chose que je changerais.")
             ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ])
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
-              T("**Pourquoi.** En deuxième semaine, la ==direction artistique== était confuse dans les quatre groupes : les membres peinaient à se représenter les références. Résultat : **deux à trois jours de retard** et un risque de crunch."),
-              T("**Comment.** Avec chaque groupe, nous avons organisé des ==réunions d'urgence== et **suspendu la production pendant une journée et demie** pour rétablir une vision claire.")
+              T("En deuxième semaine, un même problème est apparu dans les quatre groupes : la ==direction artistique== était confuse, et les membres peinaient à se représenter les références. Les retards ont vite atteint **deux à trois jours**, et je sentais venir le risque de crunch."),
+              T("Plutôt que de laisser chaque équipe s'enliser, nous avons organisé des ==réunions d'urgence== avec chaque groupe et **suspendu la production pendant une journée et demie**. Ce temps de réflexion nous a permis de comprendre d'où venait le problème : des références trop vastes et peu précises, et une passe de recherche trop courte au démarrage, parce que nous pensions que celle de la sélection suffirait.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
-              T("**Problèmes.** Deux causes : des références trop vastes et peu précises, et une passe de recherche trop courte au démarrage, car nous pensions que celle de la sélection suffirait."),
-              T("**Solutions.** Pour un groupe, j'ai tranché, ==en accord avec les référents des disciplines==, sur le **kill** de plusieurs assets hors cadre ou non prioritaires. Pour un autre, nous avons modifié le Level Art et le shader atmosphérique. La prochaine fois : une petite **scène de référence dans le moteur** dès le départ.")
+              T("Chaque groupe vivait la crise à sa manière, il n'y avait donc pas de réponse unique. Pour l'un, j'ai tranché, ==en accord avec les référents des disciplines==, sur le **kill** de plusieurs assets qui sortaient du cadre ou n'étaient plus prioritaires. Pour un autre, nous avons revu le Level Art et le shader atmosphérique."),
+              T("Si c'était à refaire, je ferais créer dès le départ une petite **scène de référence dans le moteur**, avec un prop à la qualité visée, les textures souhaitées et les intentions de lumière et de caméra.")
             ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ])
           ]),
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
-              T("**Pourquoi.** Après la crise, il restait deux semaines : il fallait savoir où concentrer l'effort, et ce qui pouvait être abandonné, sans surcharger les équipes."),
-              T("**Comment.** J'ai fixé une ==date de playtest commune== aux quatre équipes, calée sur le planning des autres promotions pour disposer de joueurs extérieurs. Avec chaque équipe, nous avons ensuite trié les retours."),
-              T("**Problèmes.** Les retours ont apporté de nombreuses critiques, à un moment où le moral était déjà entamé par la crise."),
-              T("**Solutions.** J'ai ==redéfini les priorités avec chaque équipe== et réorganisé les plannings autour des points les plus saillants. Voir des inconnus jouer aux projets a aussi redonné du moral : malgré les critiques, les jeux plaisaient.")
+              T("Après la crise, il ne restait que deux semaines. Il fallait décider où mettre l'effort, et accepter d'abandonner certaines choses, sans faire peser la fin du projet sur les équipes. J'ai donc fixé une ==date de playtest commune== aux quatre groupes, calée sur le planning des autres promotions pour que des joueurs extérieurs puissent venir."),
+              T("Les retours ont été nombreux, et souvent critiques, à un moment où le moral était déjà entamé. Avec chaque équipe, nous les avons triés pour garder les points les plus importants, puis j'ai ==redéfini les priorités== et réorganisé les plannings en conséquence."),
+              T("Ces sessions ont aussi eu un effet que je n'attendais pas autant : voir des inconnus jouer aux projets a redonné de l'énergie aux équipes. Malgré les critiques, les jeux plaisaient, et c'est avec cet élan que nous sommes allés jusqu'à la livraison.")
             ],[ ETAPES("La boucle d'adaptation",[["Playtest","Des inconnus jouent aux projets"],["Retours","Les points les plus saillants ressortent"],["Priorisation","Ce qui n'est pas prioritaire est identifié"],["Plannings réorganisés","Le travail se concentre sur l'essentiel"],["Moral des équipes","Le travail plaît : regain d'enthousiasme"]]) ])
           ]),
           BANDE("VI","Résultat",[
@@ -518,38 +515,35 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Organising four teams in parallel",[
             LIGNE([
-              T("**Why.** Four games, more than fifty people and ==a single producer==: I could not be in every room all the time, and the instructors' guidelines had to reach every group in the same way."),
-              T("**How.** We launched the productions with the ==whole class together==, the day after the selection, to set the organisation, tools and method together before refining them group by group. With the instructors, I appointed **two leads per group**, one for the Game Designers and one for the Game Artists."),
-              T("**Problems.** When I was in a meeting with one group, the other three moved on without me, and the daily check-ins did not bring the whole team together."),
-              T("**Solutions.** ==Dailies== to keep tracking going in my absence, and an ongoing link between the instructors and the teams, not only at milestones. Next time: whole-team dailies from the start.")
+              T("Four games, more than fifty people and ==a single producer==: I knew from the start that I could not be in every room all the time. Yet the instructors' guidelines had to reach every group in the same way. That is why we launched the productions with the ==whole class together==, the day after the selection. Everyone heard the same guidelines at the same time, and we could set the organisation, tools and method together before refining them group by group."),
+              T("To keep a direct link with each team, I appointed **two leads per group** with the instructors, one for the Game Designers and one for the Game Artists. That did not solve everything: when I was in a meeting with one group, the other three moved on without me. ==Dailies== took over so that tracking continued in my absence, and I remained the link between the instructors and the teams throughout the weeks, not only at milestones."),
+              T("Looking back, those daily check-ins did not bring the whole team together, and not everyone truly understood the project's progress. On a future project, I would set up whole-team dailies from day one.")
             ],[ SCHEMA("orga","The organisation set up: four groups of 13 to 14 people, two leads per group, the instructors and the producer") ])
           ]),
           BANDE("III","Planning and tracking production",[
             LIGNE([
-              T("**Why.** The school set ==Waterfall milestones==, while each team needed **sprints** suited to its project. With four groups, I needed comparable tracking to spot delays early."),
-              T("**How.** An Excel **macro-planning** for each group sets out the sprints and milestones. A **micro-planning** links each task to a sprint, a priority, a difficulty and a status: ==1,387 tasks== tracked in total. Documents were shared in a common PowerPoint on OneDrive, and each group had its own Discord space.")
+              T("The school set its ==Waterfall milestones== (Proof of Concept, Alpha, Beta), but each team needed **sprints** suited to its project. I had to connect the two, with tracking consistent enough to compare the four groups and spot delays early."),
+              T("I built this tracking in Excel, on two levels. For each group, a **macro-planning** sets out the sprints and the school's milestones. A **micro-planning** then links each task to a sprint, a priority, a difficulty and a status: in total, ==1,387 tasks== were tracked. Working documents were shared in a common PowerPoint on OneDrive, and each group had its own Discord space.")
             ],[ IMG(PRO1.macro,"Each group's own Excel macro-planning: sprints and milestones (Proof of Concept, Alpha, Beta)") ]),
             LIGNE([
-              T("**Problems.** Keeping nearly 1,400 statuses up to date required constant attention, and end-of-sprint deliverables were not precise enough per discipline: progress was sometimes hard to check."),
-              T("**Solutions.** Each task's status made delays and kills visible, sprint by sprint. Next time: **detailed deliverables per discipline** at the end of each sprint.")
+              T("Keeping nearly 1,400 statuses up to date took constant attention, but it is what made delays and kills visible, sprint by sprint. What I lacked were more precise end-of-sprint deliverables for each discipline: progress was sometimes hard to check concretely. That is the first thing I would change.")
             ],[ IMG(PRO1.micro,"Excerpt from one group's micro-planning: tasks, sprints, priorities, difficulties and statuses") ])
           ]),
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
-              T("**Why.** In the second week, ==art direction== was unclear in all four groups: team members struggled to picture the references. The result: **two to three days of delay** and a risk of crunch."),
-              T("**How.** With each group, we held ==emergency meetings== and **paused production for a day and a half** to restore a clear vision.")
+              T("In the second week, the same problem appeared in all four groups: ==art direction== was unclear, and team members struggled to picture the references. Delays quickly reached **two to three days**, and I could feel the risk of crunch coming."),
+              T("Rather than let each team get bogged down, we held ==emergency meetings== with each group and **paused production for a day and a half**. That time to step back helped us understand where the problem came from: references that were too broad and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
-              T("**Problems.** Two causes: references that were too broad and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough."),
-              T("**Solutions.** For one group, I decided, ==in agreement with the discipline leads==, to **kill** several assets that were off-brief or not a priority. For another, we changed the Level Art and the atmospheric shader. Next time: a small **reference scene in the engine** from the start.")
+              T("Each group experienced the crisis in its own way, so there was no single answer. For one, I decided, ==in agreement with the discipline leads==, to **kill** several assets that were off-brief or no longer a priority. For another, we reworked the Level Art and the atmospheric shader."),
+              T("If I had to do it again, I would have a small **reference scene built in the engine** from the start, with a prop at the target quality, the desired textures and the lighting and camera intentions.")
             ],[ IMG(PRO1.kill,"Removed tasks (kills) in one group's tracking") ])
           ]),
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
-              T("**Why.** After the crisis, two weeks remained: we needed to know where to focus the effort and what could be dropped, without overloading the teams."),
-              T("**How.** I set a ==shared playtest date== for all four teams, aligned with the other classes' schedules so that outside players were available. With each team, we then sorted the feedback."),
-              T("**Problems.** The feedback brought many criticisms, at a time when morale had already been hit by the crisis."),
-              T("**Solutions.** I ==redefined priorities with each team== and reorganised the schedules around the most salient points. Seeing strangers play the projects also lifted morale: despite the criticism, the games appealed.")
+              T("After the crisis, only two weeks remained. We had to decide where to put the effort, and accept dropping some things, without letting the end of the project weigh on the teams. So I set a ==shared playtest date== for all four groups, aligned with the other classes' schedules so that outside players could come."),
+              T("The feedback was plentiful, and often critical, at a time when morale was already low. With each team, we sorted it to keep the most important points, then I ==redefined priorities== and reorganised the schedules accordingly."),
+              T("These sessions also had an effect I had not expected to be so strong: seeing strangers play the projects gave the teams new energy. Despite the criticism, the games appealed, and that momentum carried us through to delivery.")
             ],[ ETAPES("The adaptation loop",[["Playtest","Strangers play the projects"],["Feedback","The most salient points stand out"],["Prioritisation","What is not a priority is identified"],["Schedules reorganised","Work focuses on the essentials"],["Team morale","The work is well received: renewed enthusiasm"]]) ])
           ]),
           BANDE("VI","Outcome",[

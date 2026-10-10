@@ -366,9 +366,9 @@ const PROJECTS_FR = {
           ]),
           BANDE("III","Game Design · Intentions et piliers",[
             LIGNE([
-              T("Je pars de **valeurs** (courage, coopération, résilience) et d'**intentions** (exploration, solitude, don de soi, travail d'équipe, mystère). Les **thèmes** : la culpabilité du survivant, la confiance en l'autre comme en soi, et la question « qu'est-ce qu'un héros ? ». Côté design, cela donne de la ==personnalisation==, du **crafting**, de la **gestion** et du **leadership**, ainsi que la conquête du pouvoir."),
+              T("Je pars de **valeurs** (courage, coopération, résilience) et d'**intentions** (exploration, solitude, don de soi, travail d'équipe, mystère). Les **thèmes** : la culpabilité du survivant, la confiance en l'autre comme en soi, et la question « qu'est-ce qu'un héros ? ». Côté design, cela donne de la ==personnalisation==, du **crafting**, de la **gestion** et du **leadership**, ainsi que la conquête du pouvoir."),
               T("Ces intentions se traduisent en ==trois piliers== de gameplay : **combattre les marées de Typhon**, **explorer un monde désolé** et **prendre soin de sa Source et la faire grandir**. J'ai aussi listé ce que le jeu ne sera pas : multijoueur coopératif, combat tactique sur grille à la manière d'un Tactical RPG, arbre de compétences, mini-jeux, infiltration et fins multiples. Cela garde le périmètre sous contrôle.")
-            ],[ IMG(CT.pillars,"Les trois piliers de gameplay"), IMG(CT.notdo,"Ce que le jeu n'est pas") ])
+            ],[ CAROUSEL([[CT.pillars,"Les trois piliers de gameplay"],[CT.notdo,"Ce que le jeu n'est pas"]]) ])
           ]),
           BANDE("IV","Game Design · La boucle de gameplay",[
             LIGNE([
@@ -700,7 +700,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("I start from **values** (courage, cooperation, resilience) and **intentions** (exploration, loneliness, selflessness, teamwork, mystery). The **themes**: survivor guilt, trust in others as in oneself, and the question “what is a hero?”. On the design side, this means ==customisation==, **crafting**, **management** and **leadership**, and power claiming."),
               T("These intentions become ==three gameplay pillars==: **fight Typhon's tides**, **explore a desolate world** and **take care of your Source and make it grow**. I also listed what the game will not be: cooperative multiplayer, grid-based tactical combat in the style of a Tactical RPG, a skill tree, mini-games, stealth and multiple endings. This keeps the scope under control.")
-            ],[ IMG(CT.pillars,"The three gameplay pillars"), IMG(CT.notdo,"What the game is not") ])
+            ],[ CAROUSEL([[CT.pillars,"The three gameplay pillars"],[CT.notdo,"What the game is not"]]) ])
           ]),
           BANDE("IV","Game Design · The core loop",[
             LIGNE([

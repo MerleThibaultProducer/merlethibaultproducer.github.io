@@ -211,12 +211,6 @@ const PROJECTS_FR = {
               T("Ces sessions ont aussi eu un effet que je n'attendais pas autant : voir des inconnus jouer aux projets a redonné de l'énergie aux équipes. Malgré les critiques, les jeux plaisaient, et c'est avec cet élan que nous sommes allés jusqu'à la livraison.")
             ],[ ETAPES("La boucle d'adaptation",[["Playtest","Des inconnus jouent aux projets"],["Retours","Les points les plus saillants ressortent"],["Priorisation","Ce qui n'est pas prioritaire est identifié"],["Plannings réorganisés","Le travail se concentre sur l'essentiel"],["Moral des équipes","Le travail plaît : regain d'enthousiasme"]]) ])
           ]),
-          BANDE("VI","Résultat",[
-            LIGNE([
-              T("Au final, les ==4 jeux ont été livrés== et présentés au **jury** dans les délais."),
-              T("Côté suivi, **1 387 tâches** ont été planifiées sur l'ensemble des groupes, dont **1 289 terminées (93 %)**. 57 ont été supprimées (4 %) : des kills assumés pour préserver la cohérence de chaque projet. Seules 36 sont restées en retard.")
-            ],[ CHIFFRES([["4 / 4","jeux livrés au jury"],["1 387","tâches suivies"],["93 %","tâches terminées"],["57","tâches supprimées (kills)"]]), SCHEMA("bilan","Statut des tâches par sprint, tous groupes confondus (hors 3 tâches sans sprint ; 2 tâches du sprint 4 étaient encore en cours)") ])
-          ]),
           BANDE("VII","Les enseignements",[
             LIGNE([
               T("Ce projet a été extrêmement enrichissant, sur le plan personnel comme professionnel. C'était la première fois que l'on me confiait la ==supervision de la production d'une promotion entière==, et travailler avec des profils aussi variés, sur des projets aussi différents, a été une expérience marquante."),
@@ -550,12 +544,6 @@ const PROJECTS_EN = {
               T("The feedback was plentiful, and often critical, at a time when morale was already low. With each team, we sorted it to keep the most important points, then I ==redefined priorities== and reorganised the schedules accordingly."),
               T("These sessions also had an effect I had not expected to be so strong: seeing strangers play the projects gave the teams new energy. Despite the criticism, the games appealed, and that momentum carried us through to delivery.")
             ],[ ETAPES("The adaptation loop",[["Playtest","Strangers play the projects"],["Feedback","The most salient points stand out"],["Prioritisation","What is not a priority is identified"],["Schedules reorganised","Work focuses on the essentials"],["Team morale","The work is well received: renewed enthusiasm"]]) ])
-          ]),
-          BANDE("VI","Outcome",[
-            LIGNE([
-              T("In the end, the ==4 games were delivered== and presented to the **jury** on schedule."),
-              T("On the tracking side, **1,387 tasks** were planned across all the groups, of which **1,289 were completed (93%)**. 57 were removed (4%): deliberate kills to preserve the consistency of each project. Only 36 remained late.")
-            ],[ CHIFFRES([["4 / 4","games delivered to the jury"],["1,387","tasks tracked"],["93%","tasks completed"],["57","tasks removed (kills)"]]), SCHEMA("bilan","Task status by sprint, all groups combined (excluding 3 tasks without a sprint; 2 sprint 4 tasks were still in progress)") ])
           ]),
           BANDE("VII","Lessons learned",[
             LIGNE([

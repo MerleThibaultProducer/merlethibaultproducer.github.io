@@ -773,3 +773,5 @@ html body .brief section{background:#EEF3FA;border-top:0;border-radius:4px;paddi
 .recap-txt p:last-child{margin-bottom:0}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .recap{background:#172A47}:root:not([data-theme="light"]) .recap .facts{border-color:#28406A}}
 :root[data-theme="dark"] .recap{background:#172A47}:root[data-theme="dark"] .recap .facts{border-color:#28406A}
+.recap-txt p{max-width:none;text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+@media(max-width:480px){.recap-txt p{text-align:left}}

@@ -775,3 +775,4 @@ html body .brief section{background:#EEF3FA;border-top:0;border-radius:4px;paddi
 :root[data-theme="dark"] .recap{background:#172A47}:root[data-theme="dark"] .recap .facts{border-color:#28406A}
 .recap-txt p{max-width:none;text-align:justify;-webkit-hyphens:auto;hyphens:auto}
 @media(max-width:480px){.recap-txt p{text-align:left}}
+html body .tbl tr.grp td{letter-spacing:0;text-transform:none;font-weight:600}

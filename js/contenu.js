@@ -362,7 +362,10 @@ const PROJECTS_FR = {
               T("**Castalie's Tears** est un ==RPG au tour par tour== en solo, en vue à la troisième personne, pensé pour **PC et Nintendo Switch**, avec un modèle premium et des DLC. Il s'adresse aux fans de RPG et aux passionnés de mythologie."),
               T("Pour le situer, Dragon Quest XI rencontre Dragon Age : Inquisition dans un univers proche d'Immortals Fenyx Rising."),
               T("Côté exigence, c'est un jeu ==posé et riche en systèmes== : il récompense la réflexion, l'organisation et la patience plus que les réflexes.")
-            ],[ IMG(CT.one,"Le one-liner et ses trois références"), IMG(CT.info,"La fiche d'information du projet") ])
+            ]),
+            LIGNE([
+              CAROUSEL([[CT.one,"Le one-liner et ses trois références"],[CT.info,"La fiche d'information du projet"]])
+            ])
           ]),
           BANDE("III","Game Design · Intentions et piliers",[
             LIGNE([
@@ -694,7 +697,10 @@ const PROJECTS_EN = {
               T("**Castalie's Tears** is a single-player, third-person ==turn-based RPG== designed for **PC and Nintendo Switch**, with a premium model and DLC. It targets RPG fans and mythology enthusiasts."),
               T("To place it, Dragon Quest XI meets Dragon Age: Inquisition in a universe similar to Immortals Fenyx Rising."),
               T("In terms of demands on the player, it is a ==measured, system-rich game==: it rewards thinking, organisation and patience more than reflexes.")
-            ],[ IMG(CT.one,"The one-liner and its three references"), IMG(CT.info,"The project information sheet") ])
+            ]),
+            LIGNE([
+              CAROUSEL([[CT.one,"The one-liner and its three references"],[CT.info,"The project information sheet"]])
+            ])
           ]),
           BANDE("III","Game Design · Intentions and pillars",[
             LIGNE([

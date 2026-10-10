@@ -862,15 +862,15 @@ const INFOS_FR = {
   competencesTitre: "Compétences",
   competences: [
     { icone:"planning", titre:"Production", items:["Production Agile et Scrum","Planification des milestones et des sprints","Coordination de plusieurs équipes","Suivi de production et listes de tâches","Budget et prévisions"] },
-    { icone:"design", titre:"Game Design", items:["Game Design Document","Théories du joueur et personas","Worldbuilding","Narrative Design et Quest Design"] },
+    { icone:"design", titre:"Game Design", items:["Game Design Document","Boucle de gameplay et systèmes","Théories du joueur et personas"] },
+    { icone:"narration", titre:"Narrative Design", items:["Worldbuilding","Écriture de personnages","Quest Design","Lien entre mécaniques et récit"] },
     { icone:"analyse", titre:"Analyse", items:["Market Analysis et estimation des ventes","Seuil de rentabilité et ROI","Recherche documentaire et critique des sources"] },
-    { icone:"equipe", titre:"Communication et encadrement", items:["Président du bureau des étudiants de Game Sup (2025-2026)","Organisation de 2 game jams, de LAN et de soirées jeu de rôle","Cinq ans d'enseignement, de l'école primaire à l'université"] },
-    { icone:"outils", titre:"Outils", items:["Excel","Atlassian (Jira, Confluence)","Coda","ClickUp","Miro"] }
+    { icone:"equipe", titre:"Communication et encadrement", items:["Président du bureau des étudiants de Game Sup (2025‑2026)","Organisation de 2 game jams, de LAN et de soirées jeu de rôle","Cinq ans d'enseignement, de l'école primaire à l'université"] }
   ],
   autresTitre: "Langues, diplômes et loisirs",
   autres: [
     { icone:"langues", titre:"Langues", items:["Français : langue maternelle","Anglais : courant","Espagnol : notions","Grec moderne : en apprentissage"] },
-    { icone:"diplome", titre:"Diplômes", items:["Certification Conception et Game Design, Game Sup (2023-2027)","Master d'anthropologie religieuse de la Méditerranée antique, École Pratique des Hautes Études (2018-2020)"] },
+    { icone:"diplome", titre:"Diplômes", items:["Certification Conception et Game Design, Game Sup (2023‑2027)","Master d'anthropologie religieuse de la Méditerranée antique, École Pratique des Hautes Études (2018‑2020)"] },
     { icone:"loisirs", titre:"Loisirs", items:["Jeu de rôle sur table : maître du jeu depuis 5 ans (D&D 5e, MythCraft)","Jeux de stratégie : 4X, RTS, wargames","Lecture : Tolkien, fantasy épique, LitRPG"] }
   ]
 };
@@ -879,15 +879,15 @@ const INFOS_EN = {
   competencesTitre: "Skills",
   competences: [
     { icone:"planning", titre:"Production", items:["Agile and Scrum production","Milestone and sprint planning","Multi-team coordination","Production tracking and task lists","Budget planning and forecasting"] },
-    { icone:"design", titre:"Game Design", items:["Game Design Documentation","Player theories and personas","Worldbuilding","Narrative and Quest Design"] },
+    { icone:"design", titre:"Game Design", items:["Game Design Documentation","Gameplay loop and systems","Player theories and personas"] },
+    { icone:"narration", titre:"Narrative Design", items:["Worldbuilding","Character writing","Quest Design","Linking mechanics and story"] },
     { icone:"analyse", titre:"Analysis", items:["Market analysis and sales forecasting","Break-even point and ROI","Desk research and source criticism"] },
-    { icone:"equipe", titre:"Communication and leadership", items:["President of the Game Sup student board (2025-2026)","Organised 2 game jams, LAN parties and tabletop RPG nights","Five years of teaching, from primary school to university"] },
-    { icone:"outils", titre:"Tools", items:["Excel","Atlassian (Jira, Confluence)","Coda","ClickUp","Miro"] }
+    { icone:"equipe", titre:"Communication and leadership", items:["President of the Game Sup student board (2025‑2026)","Organised 2 game jams, LAN parties and tabletop RPG nights","Five years of teaching, from primary school to university"] }
   ],
   autresTitre: "Languages, degrees and hobbies",
   autres: [
     { icone:"langues", titre:"Languages", items:["French: native","English: fluent","Spanish: basic","Modern Greek: learning"] },
-    { icone:"diplome", titre:"Degrees", items:["Certification in Conception and Game Design, Game Sup (2023-2027)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018-2020)"] },
+    { icone:"diplome", titre:"Degrees", items:["Certification in Conception and Game Design, Game Sup (2023‑2027)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018‑2020)"] },
     { icone:"loisirs", titre:"Hobbies", items:["Tabletop RPGs: game master for 5 years (D&D 5e, MythCraft)","Strategy games: 4X, RTS, wargames","Reading: Tolkien, epic fantasy, LitRPG"] }
   ]
 };

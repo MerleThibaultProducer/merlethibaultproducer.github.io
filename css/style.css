@@ -792,3 +792,14 @@ html body .tbl tr.grp td{letter-spacing:0;text-transform:none;font-weight:600}
 #lb.doc{overflow-y:auto;place-items:start center;padding:3.5rem 1rem 3rem}
 #lb.doc img{max-height:none;width:min(100%,920px);border-radius:3px}
 #lb.doc button,#lb.doc p{position:fixed}
+/* Page Infos centrée */
+.infos-page{text-align:center}
+.infos-page h1,.infos-page .lead{margin-left:auto;margin-right:auto}
+.infos-page .lead{max-width:44rem}
+.infos-page .cv-actions{justify-content:center}
+.infos-page .skills{display:flex;flex-wrap:wrap;justify-content:center;gap:2.4rem clamp(1.5rem,3vw,3rem)}
+.infos-page .skill{flex:0 1 16rem}
+.infos-page .skill li{padding:0}
+.infos-page .skill li::before{display:none}
+.infos-page .skills{max-width:62rem;margin-left:auto;margin-right:auto}
+.infos-page .skill{flex:0 1 17rem}

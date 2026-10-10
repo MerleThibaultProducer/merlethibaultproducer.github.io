@@ -680,13 +680,77 @@ footer{background:#0B1A33}
 .home-intro .home-k{margin:0 0 .4rem;font:700 .74rem/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-n)}
 .home-intro .hb p{margin:0}
 
-/* Macro-tâches : cartes cliquables sur la page du projet */
-.mt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.2rem;margin-top:1.6rem}
-.mt-card{display:flex;flex-direction:column;gap:.55rem;padding:1.4rem 1.3rem 1.2rem;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;text-decoration:none;color:var(--ink);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
-.mt-card:hover,.mt-card:focus-visible{transform:translateY(-3px);box-shadow:0 10px 24px rgba(19,41,75,.12)}
-.mt-card .mt-n{font:800 1.9rem/1 var(--sans);color:var(--gold)}
-.mt-card h3{margin:0;font:700 1.05rem/1.35 var(--sans);color:var(--ink)}
-.mt-card p{margin:0;font-size:.92rem;line-height:1.55;color:var(--muted);text-align:left!important;flex:1}
-.mt-card .mt-go{margin-top:.4rem;font:700 .72rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--hl)}
-/* Sous-page d'une macro-tâche */
-.tache .mt-kicker{margin:0 0 .5rem;font:700 .76rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-n)}
+/* ===================================================================
+   Rendu plus naturel (octobre 2026) : fond blanc, pas de cartouches,
+   pas d'ombres ni d'animations, titres en casse normale.
+   =================================================================== */
+:root{--bg:#FFFFFF;--surface:#FFFFFF;--line:#E3E6EC;--rule:#E3E6EC;--muted:#5C6675}
+header.top::before{display:none!important}
+html body nav a{text-transform:none;letter-spacing:.01em;font:500 .95rem/1.4 var(--sans)}
+
+/* Titres */
+html body main h1{display:block;text-transform:none;letter-spacing:-.015em;font:700 clamp(1.8rem,3.4vw,2.7rem)/1.15 var(--sans);color:var(--head);overflow-wrap:normal}
+html body main h1::after{display:none}
+.lead{color:var(--muted)}
+html body .back{text-transform:none;letter-spacing:0;font:500 .92rem var(--sans)}
+html body .pn a small{text-transform:none;letter-spacing:0;font-size:.85rem}
+html body .pn a b{text-transform:none;letter-spacing:0}
+
+/* Boutons */
+html body .btn{text-transform:none;letter-spacing:.01em;font:600 .95rem/1.4 var(--sans);border-radius:4px;padding:.7rem 1.4rem;box-shadow:none}
+
+/* Infos du projet */
+html body .meta span{text-transform:none;letter-spacing:0;font:500 .92rem var(--sans);color:var(--muted)}
+html body .meta span::before{display:none}
+
+/* En bref / Mon rôle et mes décisions : deux colonnes simples */
+html body .brief section{background:none;border:0;border-top:2px solid var(--gold);border-radius:0;box-shadow:none;padding:1rem 0 0}
+html body .brief h2{text-transform:none;letter-spacing:0;font:700 1.05rem/1.3 var(--sans);color:var(--head)}
+html body .brief dt{text-transform:none;letter-spacing:0;font:600 .9rem var(--sans);color:var(--muted)}
+
+/* Parties : plus de cartouches, une simple ligne de séparation */
+html body .band{background:none;border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none;padding:2.8rem 0 0;margin:0 0 3rem;opacity:1;transform:none;transition:none}
+html body .band:nth-of-type(even){background:none}
+html body .band-head{border-bottom:0;padding-bottom:0;margin-bottom:1.4rem;gap:.9rem}
+html body .band-num{font:700 1.05rem/1 var(--sans);color:var(--gold-n);min-width:auto}
+html body .band-head h2{font:700 clamp(1.35rem,2.2vw,1.75rem)/1.25 var(--sans);color:var(--head)}
+
+/* Encadrés : listes simples, sans fond */
+html body .fiche,html body .etapes,html body .band:nth-of-type(even) .fiche,html body .band:nth-of-type(even) .etapes{background:none;border:0;border-radius:0;box-shadow:none;padding:0}
+html body .fiche h3,html body .etapes h3{text-transform:none;letter-spacing:0;font:700 1rem/1.4 var(--sans);color:var(--head);margin:0 0 .6rem}
+html body .band .etapes li::before{background:#fff;color:var(--gold-n);border:1px solid var(--gold)}
+html body .etapes li.warn::before{background:#fff;color:#9A3B3B;border-color:#9A3B3B}
+
+/* Chiffres clés : de simples nombres */
+html body .stat{background:none;color:var(--ink);border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none;padding:.8rem 0 0}
+html body .stat b{color:var(--head)}
+html body .stat span{text-transform:none;letter-spacing:0;color:var(--muted);font-size:.88rem}
+
+/* Tableaux */
+html body .tbl,html body .band:nth-of-type(even) .tbl{background:none;border-radius:0;box-shadow:none}
+html body .tbl caption{text-transform:none;letter-spacing:0;font:700 1rem/1.4 var(--sans);color:var(--head);background:none;padding:0 0 .6rem;text-align:left}
+html body .tbl th{text-transform:none;letter-spacing:0;font-weight:600;background:none}
+
+/* Images : sans cadre doré ni ombre */
+html body .zf::after,html body .card .thumb::after,html body .project .cover::after{display:none}
+html body .zf,html body .prose figure img,html body .card .thumb,html body .project .cover{box-shadow:none;border-radius:3px}
+html body .zf{border:1px solid var(--line)}
+html body .cv-visual{box-shadow:none;border:1px solid var(--line);border-radius:3px}
+html body .prose blockquote cite,html body .band blockquote cite{text-transform:none;letter-spacing:0}
+
+/* Vignettes des listes */
+html body .card{background:none;border:0;box-shadow:none;border-radius:0}
+html body .card h3 small{text-transform:none;letter-spacing:0;font-size:.9rem}
+
+/* Carrousel des équipes */
+html body .team{background:none;border:0;border-radius:0;box-shadow:none;padding:0}
+html body .team .tm-k{background:none;border:0;padding:0;color:var(--gold-n);text-transform:none;letter-spacing:0;font:600 .95rem var(--sans)}
+html body .tm-col h4{text-transform:none;letter-spacing:0;font:700 .95rem/1.4 var(--sans);color:var(--head)}
+html body .tm-col li.me{background:none;border-left:2px solid var(--gold);border-radius:0}
+html body .tm-col li.me .tm-r{text-transform:none;letter-spacing:0;font-size:.84rem}
+
+/* Accueil */
+html body .home-intro .portrait,html body .portrait{box-shadow:none;border:3px solid var(--gold)}
+html body .home-intro .intro{border-left:0;padding-left:0}
+/* Puces : petits points ronds plutôt que des losanges */
+html body .prose ul:not(.src) li::before,html body .fiche li::before,html body .brief li::before{border-radius:50%;transform:none;background:var(--gold);width:.36rem;height:.36rem}

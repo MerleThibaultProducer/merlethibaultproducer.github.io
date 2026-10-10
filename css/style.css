@@ -894,3 +894,18 @@ body:not(.is-home) header.top::before{display:none!important}
 body:not(.is-home) .brand{position:relative}
 @media(min-width:1500px){body:not(.is-home) .brand::after{content:"";position:absolute;left:calc(100% + 3.5rem);top:50%;transform:translateY(-50%);width:240px;height:74px;background:var(--chart) left center/contain no-repeat;opacity:.38;pointer-events:none}}
 @media(min-width:1500px){body:not(.is-home) .brand::after{left:calc(100% + 2.2rem);width:210px;height:66px}}
+
+/* Survol de la vignette du projet pro : moteur et repères clés */
+.thumb .survol{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;padding:1.2rem;background:rgba(11,26,51,.86);color:#fff;text-align:center;opacity:0;transition:opacity .25s ease;pointer-events:none}
+.thumb .survol .sv-eng{display:flex;flex-direction:column;align-items:center;gap:.45rem;font:600 .95rem/1.2 var(--sans);letter-spacing:.02em}
+.thumb .survol .sv-eng svg{color:var(--gold)}
+.thumb .survol>i{width:2.2rem;height:2px;background:var(--gold)}
+.thumb .survol ul{margin:0;padding:0;list-style:none;display:grid;gap:.4rem}
+.thumb .survol li{font:500 1rem/1.3 var(--sans);color:#E6ECF5}
+.thumb .survol li::before{display:none}
+.thumb .survol~.status{transition:opacity .25s ease}
+@media(hover:hover){
+  .card .thumb:hover .survol,.card .thumb:focus-visible .survol{opacity:1}
+  .card .thumb:hover .status,.card .thumb:focus-visible .status{opacity:0}
+}
+@media (prefers-reduced-motion:reduce){.thumb .survol,.thumb .survol~.status{transition:none}}

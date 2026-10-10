@@ -812,3 +812,10 @@ html body .tbl tr.grp td{letter-spacing:0;text-transform:none;font-weight:600}
 .schema svg .ln2{stroke:#B8C4D6;stroke-width:1.2;fill:none}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .schema svg .sb{fill:#172A47}:root:not([data-theme="light"]) .schema svg .ln2{stroke:#3A5378}}
 :root[data-theme="dark"] .schema svg .sb{fill:#172A47}:root[data-theme="dark"] .schema svg .ln2{stroke:#3A5378}
+
+/* Une partie sur deux sur une bande bleu clair, sur toute la largeur de l'écran */
+html body .prose>.band:nth-of-type(even){background:#F1F5FA;box-shadow:0 0 0 100vmax #F1F5FA;clip-path:inset(0 -100vmax);border-top-color:transparent;padding-bottom:2.8rem}
+html body .prose>.band:nth-of-type(even)+.band{border-top-color:transparent}
+html body .prose>.band:nth-of-type(even) .team,html body .prose>.band:nth-of-type(even) .schema svg .sb{background:#fff;fill:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .prose>.band:nth-of-type(even){background:#12223A;box-shadow:0 0 0 100vmax #12223A}}
+:root[data-theme="dark"] body .prose>.band:nth-of-type(even){background:#12223A;box-shadow:0 0 0 100vmax #12223A}

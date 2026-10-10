@@ -183,7 +183,7 @@ const PROJECTS_FR = {
               T("Quatre jeux, plus de cinquante personnes et ==un seul producer== : je savais dès le départ que je ne pourrais pas être dans chaque salle en permanence. Il fallait pourtant que les consignes des intervenants arrivent de la même façon à tous les groupes. C'est pour cela que nous avons lancé les productions en ==promotion entière==, le lendemain de la sélection. Tout le monde a entendu les mêmes consignes au même moment, et nous avons pu poser ensemble l'organisation, les outils et la méthode, avant de les affiner groupe par groupe."),
               T("Pour garder un lien direct avec chaque équipe, j'ai désigné avec les intervenants **deux référents par groupe**, un pour les Game Designers et un pour les Game Artists. Cela n'a pas tout réglé : quand j'étais en réunion avec un groupe, les trois autres avançaient sans moi. Les ==dailies== ont pris le relais pour que le suivi continue en mon absence, et je suis resté l'interlocuteur entre les intervenants et les équipes tout au long des semaines, pas seulement aux milestones."),
               T("Avec le recul, ces points quotidiens ne réunissaient pas toute l'équipe, et tout le monde ne comprenait pas vraiment l'avancée du projet. Sur un prochain projet, je mettrais en place des dailies en équipe entière dès le premier jour.")
-            ],[ SCHEMA("orga","L'organisation mise en place") ])
+            ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planifier et suivre la production",[
             LIGNE([
@@ -523,7 +523,7 @@ const PROJECTS_EN = {
               T("Four games, more than fifty people and ==a single producer==: I knew from the start that I could not be in every room all the time. Yet the instructors' guidelines had to reach every group in the same way. That is why we launched the productions with the ==whole class together==, the day after the selection. Everyone heard the same guidelines at the same time, and we could set the organisation, tools and method together before refining them group by group."),
               T("To keep a direct link with each team, I appointed **two leads per group** with the instructors, one for the Game Designers and one for the Game Artists. That did not solve everything: when I was in a meeting with one group, the other three moved on without me. ==Dailies== took over so that tracking continued in my absence, and I remained the link between the instructors and the teams throughout the weeks, not only at milestones."),
               T("Looking back, those daily check-ins did not bring the whole team together, and not everyone truly understood the project's progress. On a future project, I would set up whole-team dailies from day one.")
-            ],[ SCHEMA("orga","The organisation set up") ])
+            ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planning and tracking production",[
             LIGNE([

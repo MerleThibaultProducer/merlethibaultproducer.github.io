@@ -754,3 +754,9 @@ html body .home-intro .portrait,html body .portrait{box-shadow:none;border:3px s
 html body .home-intro .intro{border-left:0;padding-left:0}
 /* Puces : petits points ronds plutôt que des losanges */
 html body .prose ul:not(.src) li::before,html body .fiche li::before,html body .brief li::before{border-radius:50%;transform:none;background:var(--gold);width:.36rem;height:.36rem}
+/* Encart des équipes (profils LinkedIn) : fond bleu clair pour le distinguer de la page */
+html body .team{background:#EEF3FA;padding:clamp(1.2rem,2.5vw,2rem);border-radius:4px}
+html body .tm-col li{border-bottom-color:#D3DDEB}
+html body .tm-col h4 small{background:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .team{background:#172A47}}
+:root[data-theme="dark"] body .team{background:#172A47}

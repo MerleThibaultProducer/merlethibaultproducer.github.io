@@ -204,6 +204,12 @@ function brief(p){
   const d = p.decisions && p.decisions.length ? `<section class="decide"><h2>${t("decisions")}</h2><ul>${p.decisions.map(x=>`<li>${rich(x)}</li>`).join("")}</ul></section>` : "";
   return a||d ? `<div class="brief${a&&d?" two":""}">${a}${d}</div>` : "";
 }
+/* Encart d'ouverture : les infos du projet et un court texte de présentation, sur un même fond */
+function recap(p){
+  const facts = Object.entries(p.infos||{}).map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+  const txt = [].concat(p.apercu).map(x=>`<p>${rich(x)}</p>`).join("");
+  return `<section class="recap">${facts?`<dl class="facts">${facts}</dl>`:""}<div class="recap-txt">${txt}</div></section>`;
+}
 function detail(sec, p, prev, next){
   const infos = Object.entries(p.infos||{}).map(([k,v])=>`<li><span>${esc(k)}</span>${esc(v)}</li>`).join("");
   const link = (q,cls,lab,arrow) => q ? `<a class="${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${esc(q.title)}</b></a>` : "";
@@ -211,8 +217,7 @@ function detail(sec, p, prev, next){
   return `<a class="back" data-go="${sec.route}" role="link" tabindex="0">‹ ${sec.label}</a>
   <article class="project${p.large?" large":""}"><h1>${esc(p.title)}</h1><p class="lead">${esc(p.desc)}</p>
     ${p.large&&(!p.img||p.nocover)?"":`<div class="cover${p.fit==="contain"||p.cimg?" contain":""}"${p.bg||p.cbg?` style="--pbg:${esc(p.bg||p.cbg)}"`:""}>${img(p.cimg||p.img,p.title,p.title[0])}</div>`}
-    ${infos?`<ul class="meta">${infos}</ul>`:""}
-    ${brief(p)}
+    ${p.apercu ? recap(p) : `${infos?`<ul class="meta">${infos}</ul>`:""}${brief(p)}`}
     <div class="prose">${blocks(p.contenu)}</div></article>
   <nav class="pn" aria-label="${t("others")}">${link(prev,"prev","‹ "+t("prev"))}${link(next,"next",t("next")+" ›")}</nav>
   <div class="foot-actions noprint">

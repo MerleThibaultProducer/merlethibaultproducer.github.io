@@ -764,3 +764,12 @@ html body .tm-col h4 small{background:#fff}
 html body .brief section{background:#EEF3FA;border-top:0;border-radius:4px;padding:1.4rem 1.6rem}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .brief section{background:#172A47}}
 :root[data-theme="dark"] body .brief section{background:#172A47}
+/* Encart d'ouverture des projets : infos + présentation, sur un fond uni */
+.recap{background:#EEF3FA;border-radius:4px;padding:clamp(1.3rem,2.6vw,2rem) clamp(1.3rem,3vw,2.4rem);margin:2rem 0 3rem}
+.recap .facts{display:flex;flex-wrap:wrap;gap:1rem 3rem;margin:0 0 1.3rem;padding:0 0 1.3rem;border-bottom:1px solid #D3DDEB}
+.recap .facts dt{margin:0;font:500 .82rem/1.4 var(--sans);color:var(--muted)}
+.recap .facts dd{margin:.15rem 0 0;font:600 .95rem/1.4 var(--sans);color:var(--head)}
+.recap-txt p{margin:0 0 .9rem;max-width:82ch;font-size:1.02rem;line-height:1.75;color:var(--ink);text-align:left}
+.recap-txt p:last-child{margin-bottom:0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .recap{background:#172A47}:root:not([data-theme="light"]) .recap .facts{border-color:#28406A}}
+:root[data-theme="dark"] .recap{background:#172A47}:root[data-theme="dark"] .recap .facts{border-color:#28406A}

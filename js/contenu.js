@@ -367,7 +367,7 @@ const PROJECTS_FR = {
           BANDE("III","Game Design · Intentions et piliers",[
             LIGNE([
               T("Je pars de **valeurs** (courage, coopération, résilience) et d'**intentions** (exploration, solitude, don de soi, travail d'équipe, mystère). Les **thèmes** : la culpabilité du survivant, la confiance, la confiance en soi, et la question « qu'est-ce qu'un héros ? ». Côté design, cela donne de la ==personnalisation==, du **crafting**, de la **gestion** et du **leadership**, ainsi que la conquête du pouvoir."),
-              T("Ces intentions se traduisent en ==trois piliers== de gameplay : **combattre les marées de Typhon**, **explorer un monde désolé** et **prendre soin de sa Source et la faire grandir**. J'ai aussi listé ce que le jeu ne sera pas : multijoueur coopératif, combat tactique, arbre de compétences, mini-jeux, infiltration et fins multiples. Cela garde le périmètre sous contrôle.")
+              T("Ces intentions se traduisent en ==trois piliers== de gameplay : **combattre les marées de Typhon**, **explorer un monde désolé** et **prendre soin de sa Source et la faire grandir**. J'ai aussi listé ce que le jeu ne sera pas : multijoueur coopératif, combat tactique sur grille à la manière d'un Tactical RPG, arbre de compétences, mini-jeux, infiltration et fins multiples. Cela garde le périmètre sous contrôle.")
             ],[ IMG(CT.pillars,"Les trois piliers de gameplay"), IMG(CT.notdo,"Ce que le jeu n'est pas") ])
           ]),
           BANDE("IV","Game Design · La boucle de gameplay",[
@@ -381,9 +381,9 @@ const PROJECTS_FR = {
           ]),
           BANDE("V","Game Design · Le joueur cible",[
             LIGNE([
-              T("Le jeu s'adresse à un **public adulte et actif**, qui joue sur **PC et sur Switch** par **sessions courtes**. Selon la typologie de Bartle, ce joueur est d'abord ==Killer==, puis ==Explorer== : il cherche du défi, de la détente, de l'accomplissement et des émotions, porté par une histoire profonde, des mécaniques de RPG et une dimension de gestion."),
+              T("Le jeu s'adresse à un **public adulte et actif**, qui joue sur **PC et sur Switch** par **sessions courtes**. Selon la typologie de Bartle, ce joueur est d'abord ==Achiever==, puis ==Explorer== : il cherche du défi, de la détente, de l'accomplissement et des émotions, porté par une histoire profonde, des mécaniques de RPG et une dimension de gestion."),
               T("Ses attentes guident mes choix. Il rejette le manque de profondeur et de narration, la condescendance, les énigmes trop complexes et l'absence de choix. C'est pourquoi le jeu mise sur ==l'histoire et la gestion== plutôt que sur l'énigme.")
-            ],[ CHIFFRES([["1 h","sessions sur PC"],["25-35 min","sessions sur Switch"],["Killer","profil principal"],["Explorer","profil secondaire"]]) ])
+            ],[ CHIFFRES([["1 h","sessions sur PC"],["25-35 min","sessions sur Switch"],["Achiever","profil principal"],["Explorer","profil secondaire"]]) ])
           ]),
           BANDE("VI","Narrative Design · De la mécanique au récit",[
             LIGNE([
@@ -729,7 +729,7 @@ const PROJECTS_EN = {
           BANDE("III","Game Design · Intentions and pillars",[
             LIGNE([
               T("I start from **values** (courage, cooperation, resilience) and **intentions** (exploration, loneliness, selflessness, teamwork, mystery). The **themes**: survivor guilt, trust, self-confidence, and the question “what is a hero?”. On the design side, this means ==customisation==, **crafting**, **management** and **leadership**, and power claiming."),
-              T("These intentions become ==three gameplay pillars==: **fight Typhon's tides**, **explore a desolate world** and **take care of your Source and make it grow**. I also listed what the game will not be: cooperative multiplayer, tactical combat, a skill tree, mini-games, stealth and multiple endings. This keeps the scope under control.")
+              T("These intentions become ==three gameplay pillars==: **fight Typhon's tides**, **explore a desolate world** and **take care of your Source and make it grow**. I also listed what the game will not be: cooperative multiplayer, grid-based tactical combat in the style of a Tactical RPG, a skill tree, mini-games, stealth and multiple endings. This keeps the scope under control.")
             ],[ IMG(CT.pillars,"The three gameplay pillars"), IMG(CT.notdo,"What the game is not") ])
           ]),
           BANDE("IV","Game Design · The core loop",[
@@ -743,9 +743,9 @@ const PROJECTS_EN = {
           ]),
           BANDE("V","Game Design · The target player",[
             LIGNE([
-              T("The game targets an **active adult audience** who plays on **PC and Switch** in **short sessions**. In Bartle's taxonomy, this player is first a ==Killer==, then an ==Explorer==: they look for challenge, relaxation, achievement and emotions, carried by a deep story, RPG mechanics and a management dimension."),
+              T("The game targets an **active adult audience** who plays on **PC and Switch** in **short sessions**. In Bartle's taxonomy, this player is first an ==Achiever==, then an ==Explorer==: they look for challenge, relaxation, achievement and emotions, carried by a deep story, RPG mechanics and a management dimension."),
               T("Their expectations guide my choices. They reject shallowness and a lack of narrative, condescension, over-complicated puzzles and a lack of choice. That is why the game bets on ==story and management== rather than on puzzles.")
-            ],[ CHIFFRES([["1 h","sessions on PC"],["25-35 min","sessions on Switch"],["Killer","main profile"],["Explorer","secondary profile"]]) ])
+            ],[ CHIFFRES([["1 h","sessions on PC"],["25-35 min","sessions on Switch"],["Achiever","main profile"],["Explorer","secondary profile"]]) ])
           ]),
           BANDE("VI","Narrative Design · From mechanics to story",[
             LIGNE([

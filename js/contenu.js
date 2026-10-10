@@ -74,7 +74,7 @@ const P = o => o;
 const PRO1 = { thumb:"images/fin-annee-2026-thumb.jpg", macro:"images/fin-annee-2026-macro.jpg", micro:"images/fin-annee-2026-micro.jpg", kill:"images/fin-annee-2026-kill.jpg" };
 const NG = {thumb:"images/nigeria-thumb.jpg", okada:"images/nigeria-okada.jpg", jagun:"images/nigeria-jagun.jpg", chicken:"images/nigeria-chicken.jpg", iwaju:"images/nigeria-iwaju.jpg", kidnapped:"images/nigeria-kidnapped.jpg", aurion:"images/nigeria-aurion.jpg", academy:"images/nigeria-academy.jpg", mobo:"images/nigeria-mobo.jpg", abena:"images/nigeria-abena.jpg", gamrx:"images/nigeria-gamrx.jpg", enav:"images/nigeria-enav.jpg", hp:"images/nigeria-hp.jpg"};
 const CT = {thumb:"images/castalie-thumb.jpg",pitch:"images/castalie-pitch.jpg",info:"images/castalie-info.jpg",one:"images/castalie-one.jpg",pillars:"images/castalie-pillars.jpg",notdo:"images/castalie-notdo.jpg",loop:"images/castalie-loop.jpg",manage:"images/castalie-manage.jpg",explore:"images/castalie-explore.jpg",res:"images/castalie-res.jpg",acq:"images/castalie-acq.jpg",fight:"images/castalie-fight.jpg",craft:"images/castalie-craft.jpg",lvl:"images/castalie-lvl.jpg",trade:"images/castalie-trade.jpg",realm:"images/castalie-realm.jpg",typhon:"images/castalie-typhon.jpg",sealed:"images/castalie-sealed.jpg",castalie:"images/castalie-castalie.jpg",moodboard:"images/castalie-moodboard.jpg",ld:"images/castalie-ld.jpg",mol:"images/castalie-mol.jpg",pacing:"images/castalie-pacing.jpg"};
-const EX1 = { nav:"images/wyrdfall-nav.jpg", market:"images/wyrdfall-market.jpg", scen:"images/wyrdfall-scen.jpg", budget:"images/wyrdfall-budget.jpg", epic:"images/wyrdfall-epic.jpg", sprint:"images/wyrdfall-sprint.jpg" };
+const EX1 = { nav:"images/wyrdfall-nav.jpg", market:"images/wyrdfall-market.jpg", roiCons:"images/wyrdfall-roi-conservateur.jpg", roiOpti:"images/wyrdfall-roi-optimiste.jpg", budget:"images/wyrdfall-budget.jpg", epic:"images/wyrdfall-epic.jpg", sprint:"images/wyrdfall-sprint.jpg" };
 
 /* Équipes des projets de fin d'année (mai-juin 2026) : une diapositive du carrousel par groupe.
    M("Prénom Nom", "lien LinkedIn", "rôle", "rôle en anglais si différent")  –  "Producer" est mis en avant, en tête de liste.
@@ -310,7 +310,7 @@ const PROJECTS_FR = {
             ],[ IMG(EX1.market,"Analyse des concurrents : ventes, revenus estimés et moyennes") ]),
             LIGNE([
               T("Les données extraites m'ont permis de proposer deux scénarios, un optimiste et un plus conservateur, chacun décliné en trois niveaux de risque (haut, moyen, bas), afin d'envisager l'économie de la production avec le plus de lucidité possible.")
-            ],[ IMG(EX1.scen,"Estimation du ROI : scénario conservateur et scénario optimiste, en cas haut, moyen et bas") ])
+            ],[ CAROUSEL([[EX1.roiCons,"Estimation du ROI, scénario conservateur : 250 000 followers, en cas haut, moyen et bas"],[EX1.roiOpti,"Estimation du ROI, scénario optimiste : moyenne des ventes du Market Analysis, en cas haut, moyen et bas"]]) ])
           ]),
           BANDE("V","Un budget clair et facilement modulable",[
             LIGNE([
@@ -641,7 +641,7 @@ const PROJECTS_EN = {
             ],[ IMG(EX1.market,"Competitor analysis: sales, estimated revenue and averages") ]),
             LIGNE([
               T("The extracted data allowed me to propose two scenarios, an optimistic one and a more conservative one, each broken down into three risk levels (high, average, low), so that the production's economics could be considered as clearly as possible.")
-            ],[ IMG(EX1.scen,"ROI estimate: conservative and optimistic scenarios, in high, average and low cases") ])
+            ],[ CAROUSEL([[EX1.roiCons,"ROI estimate, conservative scenario: 250,000 followers, in high, average and low cases"],[EX1.roiOpti,"ROI estimate, optimistic scenario: average sales from the Market Analysis, in high, average and low cases"]]) ])
           ]),
           BANDE("V","A clear, easily adjustable budget",[
             LIGNE([

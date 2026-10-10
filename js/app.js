@@ -93,27 +93,23 @@ marche(){
   return o;
 },
 orga(){
-  const G=[["Le Castor et l'Écureuil",q("narratif · platformer","narrative · platformer")],["Project GLOW",q("action-aventure · portails","action-adventure · portals")],["Insight",q("énigmes · horreur lovecraftienne","puzzle · Lovecraftian horror")],["The Flowering Dead",q("boss rush post-apocalyptique","post-apocalyptic boss rush")]];
-  /* Effectifs réels tirés de la liste des équipes (EQUIPES_FDA), producer non compté */
+  /* Schéma sobre : intervenants et producer, reliés aux 4 groupes (effectifs tirés d'EQUIPES_FDA, producer non compté) */
+  const G=["Le Castor et l'Écureuil","Project GLOW","Insight","The Flowering Dead"];
   const E = typeof EQUIPES_FDA!=="undefined" ? EQUIPES_FDA : [];
-  const n = (i,k) => E[i] ? E[i][k].filter(m=>m.role!=="Producer").length : 0;
-  const tot = E.reduce((a,_,i)=>a+n(i,"design")+n(i,"art"),0);
-  const pl = (k,one,many) => k>1 ? many : one;
-  let o=`<svg viewBox="0 0 720 410" xmlns="http://www.w3.org/2000/svg">`;
-  o+=`<rect x="100" y="14" width="210" height="62" class="navy"/><text x="205" y="40" text-anchor="middle" class="ond" font-size="13" font-weight="500" letter-spacing="1.5">${q("INTERVENANTS","INSTRUCTORS")}</text><text x="205" y="60" text-anchor="middle" class="gold" font-size="11.5">${q("rôle des éditeurs","publisher role")}</text>`;
-  o+=`<rect x="410" y="14" width="210" height="62" class="navy"/><text x="515" y="40" text-anchor="middle" class="ond" font-size="13" font-weight="500" letter-spacing="1.5">${"PRODUCER"}</text><text x="515" y="60" text-anchor="middle" class="gold" font-size="11.5">${q("suivi et communication","tracking and communication")}</text>`;
-  o+=`<path d="M310 45H410" class="ln"/><path d="M318 41l-8 4 8 4M402 41l8 4-8 4" class="ln"/>`;
-  o+=`<path d="M205 76V108M515 76V108M90 108H630" class="ln"/>`;
-  G.forEach((g,i)=>{const x=10+i*180,c=x+80;
-    o+=`<path d="M${c} 108V140" class="ln"/><rect x="${x}" y="140" width="160" height="214" class="card"/>`;
-    o+=`<rect x="${x}" y="140" width="160" height="48" class="navy"/><text x="${c}" y="161" text-anchor="middle" class="ond" font-size="12.5" font-weight="500">${g[0]}</text><text x="${c}" y="178" text-anchor="middle" class="gold" font-size="9.5">${g[1]}</text>`;
-    const d=n(i,"design"), a=n(i,"art");
-    o+=`<rect x="${x+14}" y="198" width="132" height="42" fill="none" stroke="#E1A624"/><text x="${c}" y="215" text-anchor="middle" class="t" font-size="11.5" font-weight="600">${d} ${pl(d,"Game Designer","Game Designers")}</text><text x="${c}" y="231" text-anchor="middle" class="m" font-size="9.5">${q("dont 1 référent","incl. 1 lead")}</text>`;
-    o+=`<rect x="${x+14}" y="248" width="132" height="42" fill="none" stroke="#E1A624"/><text x="${c}" y="265" text-anchor="middle" class="t" font-size="11.5" font-weight="600">${a} ${pl(a,"Game Artist","Game Artists")}</text><text x="${c}" y="281" text-anchor="middle" class="m" font-size="9.5">${q("dont 1 référent","incl. 1 lead")}</text>`;
-    o+=`<path d="M${c} 240V248M${c} 290V302" class="ln"/>`;
-    o+=`<rect x="${x+14}" y="302" width="132" height="42" rx="21" class="gold" fill-opacity=".22" stroke="#E1A624"/><text x="${c}" y="320" text-anchor="middle" class="t" font-size="11.5" font-weight="500">Dailies</text><text x="${c}" y="335" text-anchor="middle" class="m" font-size="9.5">${d+a} ${q("personnes","people")}</text>`;
+  const n = i => E[i] ? ["design","art"].reduce((s,k)=>s+E[i][k].filter(m=>m.role!=="Producer").length,0) : 0;
+  const tot = G.reduce((s,_,i)=>s+n(i),0);
+  let o=`<svg viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg">`;
+  const top=(x,t,s)=>`<rect x="${x}" y="8" width="200" height="58" rx="4" class="ob"/><text x="${x+100}" y="33" text-anchor="middle" class="t" font-size="15" font-weight="700">${t}</text><text x="${x+100}" y="53" text-anchor="middle" class="m" font-size="12.5">${s}</text>`;
+  o+=top(20,q("Intervenants","Instructors"),q("rôle des éditeurs","acting as publishers"));
+  o+=top(300,"Producer",q("suivi et communication","tracking and communication"));
+  o+=`<path d="M220 37H300M260 37V96" class="ln2"/>`;
+  o+=`<rect x="10" y="96" width="500" height="200" rx="6" class="ln2"/>`;
+  G.forEach((g,i)=>{const x=26+(i%2)*240,y=112+Math.floor(i/2)*92,c=x+114;
+    o+=`<rect x="${x}" y="${y}" width="228" height="76" rx="4" class="sb"/>`;
+    o+=`<text x="${c}" y="${y+30}" text-anchor="middle" class="t" font-size="14.5" font-weight="700">${g}</text>`;
+    o+=`<text x="${c}" y="${y+54}" text-anchor="middle" class="m" font-size="13">${n(i)} ${q("personnes · 2 référents","people · 2 leads")}</text>`;
   });
-  o+=`<path d="M10 372H710" class="ln"/><text x="360" y="396" text-anchor="middle" class="g" font-size="12" font-weight="500" letter-spacing="1.4">${q("LANCEMENT EN PROMOTION ENTIÈRE · 4 GROUPES","LAUNCH WITH THE WHOLE CLASS · 4 GROUPS")}${tot?` · ${tot} ${q("PERSONNES","PEOPLE")}`:""}</text></svg>`;
+  o+=`<text x="260" y="324" text-anchor="middle" class="m" font-size="13">${tot?`${tot} ${q("personnes au total, des dailies dans chaque groupe","people in total, with dailies in each group")}`:q("Des dailies dans chaque groupe","Dailies in each group")}</text></svg>`;
   return o;
 },
 planning(){

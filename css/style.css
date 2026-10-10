@@ -806,3 +806,9 @@ html body .tbl tr.grp td{letter-spacing:0;text-transform:none;font-weight:600}
 .infos-page .sk-wide .skills{max-width:76rem}
 .infos-page .sk-wide .skill{flex-basis:15rem}
 @media(max-width:1200px){.infos-page .sk-wide .skills{max-width:38rem}}
+/* Schéma d'organisation sobre */
+.schema svg .ob{fill:none;stroke:var(--head);stroke-width:1.2}
+.schema svg .sb{fill:#EEF3FA}
+.schema svg .ln2{stroke:#B8C4D6;stroke-width:1.2;fill:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .schema svg .sb{fill:#172A47}:root:not([data-theme="light"]) .schema svg .ln2{stroke:#3A5378}}
+:root[data-theme="dark"] .schema svg .sb{fill:#172A47}:root[data-theme="dark"] .schema svg .ln2{stroke:#3A5378}

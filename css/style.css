@@ -776,3 +776,19 @@ html body .brief section{background:#EEF3FA;border-top:0;border-radius:4px;paddi
 .recap-txt p{max-width:none;text-align:justify;-webkit-hyphens:auto;hyphens:auto}
 @media(max-width:480px){.recap-txt p{text-align:left}}
 html body .tbl tr.grp td{letter-spacing:0;text-transform:none;font-weight:600}
+
+/* Page Infos : boutons du CV, puis blocs icône / catégorie / liste */
+.cv-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.6rem 0 0}
+.sk-group{margin-top:3.2rem;padding-top:2.4rem;border-top:1px solid var(--line)}
+.sk-group h2{margin:0 0 1.8rem;font:700 clamp(1.35rem,2.2vw,1.75rem)/1.25 var(--sans);color:var(--head)}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:2.2rem clamp(1.5rem,3vw,3rem)}
+.skill .sk-ic{color:var(--gold-n);margin-bottom:.6rem}
+.skill h3{margin:0 0 .6rem;font:700 1.05rem/1.35 var(--sans);color:var(--head)}
+.skill ul{margin:0;padding:0;list-style:none}
+.skill li{position:relative;padding:0 0 0 1rem;margin:0 0 .35rem;color:var(--ink);line-height:1.55}
+.skill li::before{content:"";position:absolute;left:0;top:.62em;width:.32rem;height:.32rem;border-radius:50%;background:var(--gold)}
+/* Visionneuse : les images tiennent dans l'écran ; le CV (document) se lit en défilant */
+#lb img{max-height:calc(100vh - 5rem);width:auto;height:auto;object-fit:contain}
+#lb.doc{overflow-y:auto;place-items:start center;padding:3.5rem 1rem 3rem}
+#lb.doc img{max-height:none;width:min(100%,920px);border-radius:3px}
+#lb.doc button,#lb.doc p{position:fixed}

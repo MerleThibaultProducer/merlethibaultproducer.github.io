@@ -4,8 +4,8 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS,{label:t("infos"),route:"#/infos"}];
 /* ---------- Langue (FR / EN) ---------- */
 const UI = {
-  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
-  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
+  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",cvView:"Aperçu du CV",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
+  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",cvView:"Preview CV",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
 };
 let lang = "fr";
 const t = k => UI[lang][k];
@@ -237,14 +237,27 @@ function mentions(){
     ${L.map(([h,ps])=>`<section><h2>${esc(h)}</h2>${ps.map(p=>`<p>${legalText(p)}</p>`).join("")}</section>`).join("")}
     <p class="legal-date">${t("updated")} ${esc(LEGAL_UPDATED[lang])}</p></article>`;
 }
+/* Icônes de la page Infos (trait simple, couleur du texte courant) */
+const ICONES = {
+  planning:'<path d="M4 6h16M4 12h10M4 18h6"/><path d="M17 15l2 2 3-4"/>',
+  design:'<path d="M12 3l7 7-7 11-7-11z"/><circle cx="12" cy="10" r="2"/>',
+  analyse:'<path d="M4 20V4M4 20h16"/><path d="M8 16l4-5 3 3 5-7"/>',
+  equipe:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 5.5 2 5.5 5"/>',
+  outils:'<path d="M14.5 5.5a4 4 0 0 0 4.9 5L21 12l-9 9-3-3 9-9-1.5-1.6a4 4 0 0 1-1-1.9z"/><path d="M3 21l6-6"/>',
+  langues:'<path d="M4 5h11v8H9l-4 3v-3H4z"/><path d="M15 9h5v8h-1v3l-3-3h-5v-4"/>',
+  diplome:'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/>',
+  loisirs:'<path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 2v20M3 7l9 5 9-5M3 17l9-5 9 5"/>'
+};
+const icone = k => `<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONES[k]||""}</svg>`;
 function infos(){
-  const dl = CV_VISUAL.pdf
-    ? `<a class="btn noprint" href="${esc(CV_VISUAL.pdf)}" download="${esc(CV_VISUAL.filename||"MERLE_Thibault_CV_PROD.pdf")}">${t("cvDl")}</a>`
-    : `<button class="btn noprint" id="dl">${t("cvDl")}</button>`;
-  const visual = CV_VISUAL.image
-    ? `<div class="cv-visual"><img src="${esc(CV_VISUAL.image)}" alt="${t("cvAlt")} ${esc(SITE.prenom)} ${esc(SITE.nom)}"></div>`
-    : `<div class="empty">Ajoutez votre CV : renseignez <b>CV_VISUAL.image</b> dans la zone à modifier.</div>`;
-  return `<div class="cv-bar"><div><h1>${t("infos")}</h1><p class="lead" style="margin:0">${t("cvLead")}</p></div>${dl}</div>${visual}`;
+  const I = lang==="en" ? INFOS_EN : INFOS_FR;
+  const dl = CV_VISUAL.pdf ? `<a class="btn" href="${esc(CV_VISUAL.pdf)}" download="${esc(CV_VISUAL.filename||"MERLE_Thibault_CV_PROD.pdf")}">${t("cvDl")}</a>` : "";
+  const view = CV_VISUAL.image ? `<button type="button" class="btn ghost" data-zoom data-doc><img src="${esc(CV_VISUAL.image)}" alt="${t("cvAlt")} ${esc(SITE.prenom)} ${esc(SITE.nom)}" hidden>${t("cvView")}</button>` : "";
+  const blocs = list => `<div class="skills">${list.map(b=>`<section class="skill"><div class="sk-ic">${icone(b.icone)}</div><h3>${esc(b.titre)}</h3><ul>${b.items.map(x=>`<li>${rich(x)}</li>`).join("")}</ul></section>`).join("")}</div>`;
+  return `<h1>${t("infos")}</h1><p class="lead">${esc(I.intro)}</p>
+  <p class="cv-actions noprint">${view}${dl}</p>
+  <section class="sk-group"><h2>${esc(I.competencesTitre)}</h2>${blocs(I.competences)}</section>
+  <section class="sk-group"><h2>${esc(I.autresTitre)}</h2>${blocs(I.autres)}</section>`;
 }
 
 
@@ -256,7 +269,7 @@ function reveal(){
   bands.forEach(b=>io.observe(b));
 }
 const LB=$("#lb");
-function openLB(f){const im=f.querySelector("img");LB.querySelector("img").src=im.src;LB.querySelector("p").textContent=im.alt||"";LB.classList.add("on");LB.querySelector("button").focus();}
+function openLB(f){const im=f.querySelector("img");LB.querySelector("img").src=im.src;LB.querySelector("p").textContent=im.alt||"";LB.classList.toggle("doc",f.hasAttribute("data-doc"));LB.scrollTop=0;LB.classList.add("on");LB.querySelector("button").focus();}
 function closeLB(){LB.classList.remove("on");}
 document.addEventListener("click",e=>{const f=e.target.closest("[data-zoom]");if(f){openLB(f);return;}if(LB.classList.contains("on"))closeLB();});
 document.addEventListener("click",e=>{const b=e.target.closest("[data-car]");if(!b)return;const tr=b.closest(".car").querySelector(".car-track"),n=tr.children.length,st=n>1?tr.children[1].offsetLeft-tr.children[0].offsetLeft:1;let i=(Math.round(tr.scrollLeft/st)+ +b.dataset.car+n)%n;tr.scrollTo({left:i*st,behavior:"smooth"});});

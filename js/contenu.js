@@ -867,11 +867,16 @@ const INFOS_FR = {
     { icone:"analyse", titre:"Analyse", items:["Market Analysis et estimation des ventes","Seuil de rentabilité et ROI","Recherche documentaire et critique des sources"] },
     { icone:"equipe", titre:"Communication et encadrement", items:["Président du bureau des étudiants de Game Sup (2025‑2026)","Organisation de 2 game jams, de LAN et de soirées jeu de rôle","Cinq ans d'enseignement, de l'école primaire à l'université"] }
   ],
-  autresTitre: "Langues, diplômes et loisirs",
+  autresTitre: "Langues et diplômes",
   autres: [
     { icone:"langues", titre:"Langues", items:["Français : langue maternelle","Anglais : courant","Espagnol : notions","Grec moderne : en apprentissage"] },
-    { icone:"diplome", titre:"Diplômes", items:["Certification Conception et Game Design, Game Sup (2023‑2027)","Master d'anthropologie religieuse de la Méditerranée antique, École Pratique des Hautes Études (2018‑2020)"] },
-    { icone:"loisirs", titre:"Loisirs", items:["Jeu de rôle sur table : maître du jeu depuis 5 ans (D&D 5e, MythCraft)","Jeux de stratégie : 4X, RTS, wargames","Lecture : Tolkien, fantasy épique, LitRPG"] }
+    { icone:"diplome", titre:"Diplômes", items:["Certification Conception et Game Design, Game Sup (2023‑2027)","Master d'anthropologie religieuse de la Méditerranée antique, École Pratique des Hautes Études (2018‑2020)"] }
+  ],
+  loisirsTitre: "Loisirs",
+  loisirs: [
+    { icone:"loisirs", titre:"Jeu de rôle sur table", items:["Maître du jeu depuis 5 ans","Campagnes et univers homebrew","D&D 5e, MythCraft"] },
+    { icone:"strategie", titre:"Jeux de stratégie", items:["4X","RTS","Wargames"] },
+    { icone:"lecture", titre:"Lecture", items:["Tolkien","Fantasy épique","LitRPG"] }
   ]
 };
 const INFOS_EN = {
@@ -884,11 +889,16 @@ const INFOS_EN = {
     { icone:"analyse", titre:"Analysis", items:["Market analysis and sales forecasting","Break-even point and ROI","Desk research and source criticism"] },
     { icone:"equipe", titre:"Communication and leadership", items:["President of the Game Sup student board (2025‑2026)","Organised 2 game jams, LAN parties and tabletop RPG nights","Five years of teaching, from primary school to university"] }
   ],
-  autresTitre: "Languages, degrees and hobbies",
+  autresTitre: "Languages and degrees",
   autres: [
     { icone:"langues", titre:"Languages", items:["French: native","English: fluent","Spanish: basic","Modern Greek: learning"] },
-    { icone:"diplome", titre:"Degrees", items:["Certification in Conception and Game Design, Game Sup (2023‑2027)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018‑2020)"] },
-    { icone:"loisirs", titre:"Hobbies", items:["Tabletop RPGs: game master for 5 years (D&D 5e, MythCraft)","Strategy games: 4X, RTS, wargames","Reading: Tolkien, epic fantasy, LitRPG"] }
+    { icone:"diplome", titre:"Degrees", items:["Certification in Conception and Game Design, Game Sup (2023‑2027)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018‑2020)"] }
+  ],
+  loisirsTitre: "Hobbies",
+  loisirs: [
+    { icone:"loisirs", titre:"Tabletop RPGs", items:["Game master for 5 years","Homebrew campaigns and worlds","D&D 5e, MythCraft"] },
+    { icone:"strategie", titre:"Strategy games", items:["4X","RTS","Wargames"] },
+    { icone:"lecture", titre:"Reading", items:["Tolkien","Epic fantasy","LitRPG"] }
   ]
 };
 

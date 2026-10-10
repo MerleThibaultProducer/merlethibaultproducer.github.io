@@ -247,6 +247,8 @@ const ICONES = {
   langues:'<path d="M4 5h11v8H9l-4 3v-3H4z"/><path d="M15 9h5v8h-1v3l-3-3h-5v-4"/>',
   diplome:'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/>',
   narration:'<path d="M4 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-4a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h4z"/>',
+  strategie:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
+  lecture:'<path d="M6 3h11a1 1 0 0 1 1 1v17l-6-3-6 3V4a1 1 0 0 1 1-1z"/>',
   loisirs:'<path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 2v20M3 7l9 5 9-5M3 17l9-5 9 5"/>'
 };
 const icone = k => `<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONES[k]||""}</svg>`;
@@ -258,7 +260,8 @@ function infos(){
   return `<div class="infos-page"><h1>${t("infos")}</h1><p class="lead">${esc(I.intro)}</p>
   <p class="cv-actions noprint">${view}${dl}</p>
   <section class="sk-group"><h2>${esc(I.competencesTitre)}</h2>${blocs(I.competences)}</section>
-  <section class="sk-group"><h2>${esc(I.autresTitre)}</h2>${blocs(I.autres)}</section></div>`;
+  <section class="sk-group"><h2>${esc(I.autresTitre)}</h2>${blocs(I.autres)}</section>
+  ${I.loisirs?`<section class="sk-group"><h2>${esc(I.loisirsTitre)}</h2>${blocs(I.loisirs)}</section>`:""}</div>`;
 }
 
 

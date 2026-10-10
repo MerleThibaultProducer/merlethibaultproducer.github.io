@@ -685,7 +685,6 @@ footer{background:#0B1A33}
    pas d'ombres ni d'animations, titres en casse normale.
    =================================================================== */
 :root{--bg:#FFFFFF;--surface:#FFFFFF;--line:#E3E6EC;--rule:#E3E6EC;--muted:#5C6675}
-header.top::before{display:none!important}
 html body nav a{text-transform:none;letter-spacing:.01em;font:500 .95rem/1.4 var(--sans)}
 
 /* Titres */
@@ -837,3 +836,43 @@ html body .band-head h2::after{content:"";display:block;width:3rem;height:3px;ma
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .btn:not(.ghost){color:#fff}}
 /* Concepts clés : en gras et en bleu (lisible en mode clair comme en mode nuit) */
 html body .band strong,html body .prose strong{color:var(--hl);font-weight:650}
+
+/* ===== Esthétique de production ===== */
+/* Cartes kanban du CV, en décor discret dans le bandeau */
+header.top::before{opacity:.35}
+/* Statuts de tâches sur les vignettes */
+.status{position:absolute;right:10px;bottom:10px;z-index:3;display:inline-flex;align-items:center;gap:.45rem;padding:.32rem .7rem;border-radius:3px;background:#fff;color:var(--head);font:600 .78rem/1 var(--sans);box-shadow:0 1px 0 rgba(19,41,75,.12)}
+.status i{width:.5rem;height:.5rem;border-radius:50%;background:#3E8E6A;flex:none}
+.status.wip i{background:var(--gold)}
+html body .wip-band{display:none}
+/* Jalons : un losange devant chaque titre de partie, reliés par une ligne de temps sur grand écran */
+html body .band-head h2{position:relative}
+html body .band-head h2::before{content:"";display:inline-block;width:.62rem;height:.62rem;margin:0 .85rem .32rem 0;background:var(--gold);transform:rotate(45deg);vertical-align:middle}
+@media(min-width:1100px){
+  .prose{position:relative}
+  .prose::before{content:"";position:absolute;left:-2.1rem;top:3.9rem;bottom:3rem;width:1px;background:var(--gold);opacity:.45}
+  html body .band-head h2::before{position:absolute;left:-2.43rem;top:.55em;margin:0}
+}
+/* Frise de projet façon Gantt */
+.frise{margin:0 0 1.4rem;padding:0 0 1.3rem;border-bottom:1px solid #D3DDEB}
+.fr-bar{position:relative;height:30px}
+.fr-bar span{position:absolute;top:0;bottom:0;display:flex;align-items:center;justify-content:center;background:var(--head);color:#fff;font:600 .78rem/1 var(--sans);border-radius:2px;white-space:nowrap;overflow:hidden}
+.fr-bar span.alt{background:#2C63B0}
+.fr-ms{position:relative;height:3.4rem;margin-top:.9rem;border-top:1px solid var(--gold)}
+.fr-ms span{position:absolute;top:-.36rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;font:500 .78rem/1.2 var(--sans);color:var(--ink);text-align:center;white-space:nowrap}
+.fr-ms span i{width:.62rem;height:.62rem;background:var(--gold);transform:rotate(45deg)}
+.fr-ms span.end{transform:translateX(-100%);align-items:flex-end;text-align:right}
+.fr-ms span.end i{margin-right:-.31rem}
+.fr-ms span.start{transform:none;align-items:flex-start;text-align:left}
+.fr-ends{display:flex;justify-content:space-between;font:500 .78rem/1 var(--sans);color:var(--muted)}
+@media(max-width:600px){.fr-bar span{font-size:.68rem}.fr-ms span{font-size:.68rem}}
+:root[data-theme="dark"] .frise{border-color:#28406A}:root[data-theme="dark"] .fr-bar span{background:#2C63B0}:root[data-theme="dark"] .fr-bar span.alt{background:#4A7FC8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .frise{border-color:#28406A}:root:not([data-theme="light"]) .fr-bar span{background:#2C63B0}:root:not([data-theme="light"]) .fr-bar span.alt{background:#4A7FC8}}
+:root[data-theme="dark"] .status{background:#0B1A33;color:#EEF2F8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .status{background:#0B1A33;color:#EEF2F8}}
+header.top::before{background-position:left clamp(17rem,24vw,24rem) center;background-size:auto 64%;-webkit-mask-image:none;mask-image:none;opacity:.3}
+@media(max-width:1180px){header.top::before{display:none}}
+.fr-ms em{font-style:normal}.fr-ms em.sh{display:none}
+@media(max-width:600px){.fr-ms em.lg{display:none}.fr-ms em.sh{display:inline}}
+/* Le losange remplace le petit trait doré sous les titres */
+html body .band-head h2::after{display:none}

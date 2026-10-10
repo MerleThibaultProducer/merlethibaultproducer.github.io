@@ -876,7 +876,8 @@ const INFOS_FR = {
   loisirs: [
     { icone:"loisirs", titre:"Jeu de rôle sur table", items:["Maître du jeu depuis 5 ans","Campagnes et univers homebrew","D&D 5e, MythCraft"] },
     { icone:"strategie", titre:"Jeux de stratégie", items:["4X","RTS","Wargames"] },
-    { icone:"lecture", titre:"Lecture", items:["Tolkien","Fantasy épique","LitRPG"] }
+    { icone:"lecture", titre:"Lecture", items:["Tolkien","Fantasy épique","LitRPG"] },
+    { icone:"ecriture", titre:"Écriture créative", items:["Romans","Poésie"] }
   ]
 };
 const INFOS_EN = {
@@ -898,7 +899,8 @@ const INFOS_EN = {
   loisirs: [
     { icone:"loisirs", titre:"Tabletop RPGs", items:["Game master for 5 years","Homebrew campaigns and worlds","D&D 5e, MythCraft"] },
     { icone:"strategie", titre:"Strategy games", items:["4X","RTS","Wargames"] },
-    { icone:"lecture", titre:"Reading", items:["Tolkien","Epic fantasy","LitRPG"] }
+    { icone:"lecture", titre:"Reading", items:["Tolkien","Epic fantasy","LitRPG"] },
+    { icone:"ecriture", titre:"Creative writing", items:["Novels","Poetry"] }
   ]
 };
 

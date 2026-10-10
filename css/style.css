@@ -803,3 +803,6 @@ html body .tbl tr.grp td{letter-spacing:0;text-transform:none;font-weight:600}
 .infos-page .skill li::before{display:none}
 .infos-page .skills{max-width:62rem;margin-left:auto;margin-right:auto}
 .infos-page .skill{flex:0 1 17rem}
+.infos-page .sk-wide .skills{max-width:76rem}
+.infos-page .sk-wide .skill{flex-basis:15rem}
+@media(max-width:1200px){.infos-page .sk-wide .skills{max-width:38rem}}

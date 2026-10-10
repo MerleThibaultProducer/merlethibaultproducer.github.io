@@ -249,6 +249,7 @@ const ICONES = {
   narration:'<path d="M4 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-4a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h4z"/>',
   strategie:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
   lecture:'<path d="M6 3h11a1 1 0 0 1 1 1v17l-6-3-6 3V4a1 1 0 0 1 1-1z"/>',
+  ecriture:'<path d="M4 20l4-1L19 8a2.1 2.1 0 0 0-3-3L5 16z"/><path d="M14 7l3 3M4 20h16"/>',
   loisirs:'<path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 2v20M3 7l9 5 9-5M3 17l9-5 9 5"/>'
 };
 const icone = k => `<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONES[k]||""}</svg>`;
@@ -261,7 +262,7 @@ function infos(){
   <p class="cv-actions noprint">${view}${dl}</p>
   <section class="sk-group"><h2>${esc(I.competencesTitre)}</h2>${blocs(I.competences)}</section>
   <section class="sk-group"><h2>${esc(I.autresTitre)}</h2>${blocs(I.autres)}</section>
-  ${I.loisirs?`<section class="sk-group"><h2>${esc(I.loisirsTitre)}</h2>${blocs(I.loisirs)}</section>`:""}</div>`;
+  ${I.loisirs?`<section class="sk-group sk-wide"><h2>${esc(I.loisirsTitre)}</h2>${blocs(I.loisirs)}</section>`:""}</div>`;
 }
 
 

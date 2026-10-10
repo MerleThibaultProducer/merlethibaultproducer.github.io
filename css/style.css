@@ -911,3 +911,10 @@ body:not(.is-home) .brand{position:relative}
 @media (prefers-reduced-motion:reduce){.thumb .survol,.thumb .survol~.status{transition:none}}
 .thumb .survol .sv-eng img{width:40px;height:40px;display:block}
 .thumb .survol li:first-child{font-weight:700;color:#fff;margin-bottom:.15rem}
+
+/* Flèches précédent / suivant : seulement quand la marge est assez large pour ne pas mordre sur le contenu */
+@media(max-width:1500px){.side{display:none!important}}
+/* Vignettes des exercices : l'image remplit la vignette, comme pour les projets */
+html body .grid.exo .thumb.has-img img{inset:0;width:100%;height:100%;border-radius:0}
+/* Projets en cours sur téléphone : vignettes moins hautes */
+@media(max-width:600px){.card.is-wip .thumb{aspect-ratio:3/1}}

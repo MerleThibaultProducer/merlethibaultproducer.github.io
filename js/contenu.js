@@ -900,7 +900,7 @@ const CV_VISUAL = {
    À METTRE À JOUR si vous changez d'hébergeur, d'adresse e-mail, ou si vous ajoutez
    un formulaire, des statistiques de visite ou un service externe.
    Chaque section : [titre, [paragraphes]]. Les liens s'écrivent [libellé](https://...). */
-const LEGAL_UPDATED = { fr: "8 octobre 2026", en: "8 October 2026" };
+const LEGAL_UPDATED = { fr: "10 octobre 2026", en: "10 October 2026" };
 const LEGAL_FR = [
   ["Éditeur du site", [
     "Ce site est le portfolio personnel de **Thibault Merle**, édité à titre non professionnel et sans activité commerciale.",
@@ -920,7 +920,7 @@ const LEGAL_FR = [
   ]],
   ["Données personnelles et cookies", [
     "Ce site ne comporte ni formulaire, ni compte, ni outil de mesure d'audience, ni publicité. Il ne dépose aucun cookie.",
-    "Votre choix de langue (FR / EN) est seulement enregistré dans votre navigateur, sur votre appareil. Il n'est transmis à personne.",
+    "Vos choix de langue (FR / EN) et d'affichage (mode clair ou mode nuit) sont seulement enregistrés dans votre navigateur, sur votre appareil. Ils ne sont transmis à personne.",
     "**Hébergement :** comme tout hébergeur, GitHub enregistre des données techniques de connexion (dont l'adresse IP) pour la sécurité du service. Voir la [déclaration de confidentialité de GitHub](https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement).",
     "**Polices de caractères :** les polices sont chargées depuis Google Fonts, ce qui transmet votre adresse IP à Google. Voir les [règles de confidentialité de Google](https://policies.google.com/privacy).",
     "**Contact par e-mail :** si vous m'écrivez, votre message sert uniquement à vous répondre et n'est pas partagé.",
@@ -952,7 +952,7 @@ const LEGAL_EN = [
   ]],
   ["Personal data and cookies", [
     "This site has no forms, no accounts, no analytics and no advertising. It sets no cookies.",
-    "Your language choice (FR / EN) is only stored in your browser, on your device. It is not sent to anyone.",
+    "Your language (FR / EN) and display (light or dark mode) choices are only stored in your browser, on your device. They are not sent to anyone.",
     "**Hosting:** like any host, GitHub records technical connection data (including IP addresses) for security purposes. See [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).",
     "**Fonts:** fonts are loaded from Google Fonts, which sends your IP address to Google. See [Google's privacy policy](https://policies.google.com/privacy).",
     "**Email contact:** if you write to me, your message is only used to reply and is not shared.",

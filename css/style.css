@@ -909,3 +909,5 @@ body:not(.is-home) .brand{position:relative}
   .card .thumb:hover .status,.card .thumb:focus-visible .status{opacity:0}
 }
 @media (prefers-reduced-motion:reduce){.thumb .survol,.thumb .survol~.status{transition:none}}
+.thumb .survol .sv-eng img{width:40px;height:40px;display:block}
+.thumb .survol li:first-child{font-weight:700;color:#fff;margin-bottom:.15rem}

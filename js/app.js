@@ -4,8 +4,8 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS,{label:t("infos"),route:"#/infos"}];
 /* ---------- Langue (FR / EN) ---------- */
 const UI = {
-  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
-  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
+  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",seeTask:"Voir la macro-tâche",task:"Macro-tâche",prevTask:"Macro-tâche précédente",nextTask:"Macro-tâche suivante",otherTasks:"Autres macro-tâches",backProject:"Retour au projet",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
+  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",seeTask:"See the macro-task",task:"Macro-task",prevTask:"Previous macro-task",nextTask:"Next macro-task",otherTasks:"Other macro-tasks",backProject:"Back to the project",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
 };
 let lang = "fr";
 const t = k => UI[lang][k];
@@ -188,6 +188,7 @@ function blocks(list){
       case "img": return `<figure${b.cls?` class="${b.cls}"`:""}>${b.src?`<div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img src="${esc(b.src)}" alt="${esc(b.cap)}">${LENS}</div>`:`<div class="ph">${t("imgToAdd")}</div>`}${b.cap?`<figcaption>${esc(b.cap)}</figcaption>`:""}</figure>`;
       case "gal": return `<figure><div class="gal">${b.srcs.map(x=>x?`<img src="${esc(x)}" alt="" loading="lazy">`:`<div class="ph">${t("imgToAdd")}</div>`).join("")}</div>${b.cap?`<figcaption>${esc(b.cap)}</figcaption>`:""}</figure>`;
       case "teams": return teamsCarousel(b.groupes);
+      case "taches": return tachesCards(CURP);
       case "car": return `<figure class="car"><div class="car-track">${b.items.map(x=>`<div class="car-s"><div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img src="${esc(x[0])}" alt="${esc(x[1])}" loading="lazy">${LENS}</div><figcaption>${esc(x[1])}</figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Précédent","Previous")}">‹</button><span class="car-cnt">1 / ${b.items.length}</span><button type="button" data-car="1" aria-label="${q("Suivant","Next")}">›</button></div></figure>`;
       case "ul": return `<ul>${b.items.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
       case "q": return `<blockquote>${esc(b.text)}${b.by?`<cite>${esc(b.by)}</cite>`:""}</blockquote>`;
@@ -204,7 +205,31 @@ function brief(p){
   const d = p.decisions && p.decisions.length ? `<section class="decide"><h2>${t("decisions")}</h2><ul>${p.decisions.map(x=>`<li>${rich(x)}</li>`).join("")}</ul></section>` : "";
   return a||d ? `<div class="brief${a&&d?" two":""}">${a}${d}</div>` : "";
 }
+/* Macro-tâches : cartes sur la page du projet, puis une sous-page par macro-tâche */
+let CURP = null;
+const num2 = i => String(i+1).padStart(2,"0");
+function tachesCards(p){
+  if(!p || !p.taches) return "";
+  return `<div class="mt-grid">${p.taches.map((tk,i)=>`<a class="mt-card" data-go="#/${p.key}/${p.id}/${tk.id}" role="link" tabindex="0">
+    <span class="mt-n">${num2(i)}</span><h3>${esc(tk.titre)}</h3><p>${rich(tk.resume||"")}</p><span class="mt-go">${t("seeTask")} ›</span></a>`).join("")}</div>`;
+}
+function tachePage(sec, p, tk, i, prev, next){
+  CURP = p;
+  const base = `#/${sec.key}/${p.id}`;
+  const link = (q,j,cls,lab) => q ? `<a class="${cls}" data-go="${base}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${num2(j)} · ${esc(q.titre)}</b></a>` : "";
+  const side = (q,cls,ch,lab) => q ? `<a class="side ${cls}" data-go="${base}/${q.id}" role="link" tabindex="0" aria-label="${lab} : ${esc(q.titre)}" title="${esc(q.titre)}">${ch}</a>` : "";
+  return `<a class="back" data-go="${base}" role="link" tabindex="0">‹ ${esc(p.title)}</a>
+  <article class="project large tache"><p class="mt-kicker">${t("task")} ${num2(i)} / ${String(p.taches.length).padStart(2,"0")}</p><h1>${esc(tk.titre)}</h1><p class="lead">${rich(tk.resume||"")}</p>
+    <div class="prose">${blocks(tk.contenu)}</div></article>
+  <nav class="pn" aria-label="${t("otherTasks")}">${link(prev,i-1,"prev","‹ "+t("prevTask"))}${link(next,i+1,"next",t("nextTask")+" ›")}</nav>
+  <div class="foot-actions noprint">
+    <a class="btn ghost" data-go="${base}" role="link" tabindex="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>${t("backProject")}</a>
+    <button type="button" class="btn" data-top="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>${t("toTop")}</button>
+  </div>
+  ${side(prev,"prev","‹",t("prevTask"))}${side(next,"next","›",t("nextTask"))}`;
+}
 function detail(sec, p, prev, next){
+  CURP = p;
   const infos = Object.entries(p.infos||{}).map(([k,v])=>`<li><span>${esc(k)}</span>${esc(v)}</li>`).join("");
   const link = (q,cls,lab,arrow) => q ? `<a class="${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${esc(q.title)}</b></a>` : "";
   const side = (q,cls,ch,lab) => q ? `<a class="side ${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0" aria-label="${lab} : ${esc(q.title)}" title="${esc(q.title)}">${ch}</a>` : "";
@@ -265,10 +290,19 @@ let curNav = null, navDir = 0;
 let cur = location.hash || "#/";   /* page courante, gardée en mémoire : marche même dans un aperçu isolé */
 
 function render(){
-  const h = cur, [ , key, id] = h.split("/");
+  const h = cur, [ , key, id, tid] = h.split("/");
   let html, active = h; curNav = null;
   const sec = SECTIONS.find(s => s.key === key);
-  if(sec && id){
+  if(sec && id && tid){
+    const p = PROJECTS[key].find(x => !x.wip && x.id === id), list = (p && p.taches) || [], i = list.findIndex(x => x.id === tid);
+    if(i > -1){
+      const tk = list[i], prev = list[i-1], next = list[i+1];
+      html = tachePage(sec, p, tk, i, prev, next); active = sec.route;
+      curNav = {prev: prev && `#/${key}/${id}/${prev.id}`, next: next && `#/${key}/${id}/${next.id}`};
+      document.title = `${tk.titre} – ${p.title} – ${SITE.prenom} ${SITE.nom}`;
+    }
+  }
+  else if(sec && id){
     const list = PROJECTS[key].filter(x => !x.wip), i = list.findIndex(x => x.id === id);
     if(i > -1){
       const p = list[i], prev = list[i-1], next = list[i+1];

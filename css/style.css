@@ -835,3 +835,5 @@ html body .band-head h2::after{content:"";display:block;width:3rem;height:3px;ma
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .prose>.band:nth-of-type(even) .schema svg .sb{fill:#1B3150}:root:not([data-theme="light"]) body .prose>.band:nth-of-type(even) .team{background:#1B3150}}
 :root[data-theme="dark"] body .btn:not(.ghost){color:#fff}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .btn:not(.ghost){color:#fff}}
+/* Concepts clés : en gras et en bleu (lisible en mode clair comme en mode nuit) */
+html body .band strong,html body .prose strong{color:var(--hl);font-weight:650}

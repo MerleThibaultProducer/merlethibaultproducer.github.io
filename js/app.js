@@ -4,8 +4,8 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS,{label:t("infos"),route:"#/infos"}];
 /* ---------- Langue (FR / EN) ---------- */
 const UI = {
-  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
-  en:{home:"Home",infos:"Info",seeProjects:"See my projects",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
+  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
+  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
 };
 let lang = "fr";
 const t = k => UI[lang][k];
@@ -47,7 +47,7 @@ function home(){
     <div class="home-txt">
       ${SITE.devise?`<p class="devise">${esc(SITE.devise)}</p>`:""}
       <div class="intro">${SITE.intro.map(p=>`<p>${rich(p)}</p>`).join("")}</div>
-      <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a></p>
+      <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a>${SITE.email?`<a class="btn ghost" href="mailto:${esc(SITE.email)}">${t("contactMe")}</a>`:""}</p>
     </div>
   </section>`;
 }
@@ -164,10 +164,13 @@ function teamsCarousel(groupes){
   /* Tri alphabétique par nom de famille (tout ce qui suit le prénom) ; le producer reste en tête */
   const surname = m => m.nom.split(" ").slice(1).join(" ") || m.nom;
   const sorted = list => [...list].sort((x,y)=> (y.role==="Producer")-(x.role==="Producer") || surname(x).localeCompare(surname(y),"fr",{sensitivity:"base"}) || x.nom.localeCompare(y.nom,"fr"));
+  /* Le producer est affiché à part, au-dessus des deux colonnes, et n'est pas compté dans l'équipe */
+  const prod = list => list.filter(m=>m.role==="Producer"), team = list => list.filter(m=>m.role!=="Producer");
   const col = (titre, list) => `<div class="tm-col"><h4>${titre}<small>${list.length}</small></h4><ul>${sorted(list).map(person).join("")}</ul></div>`;
   return `<figure class="car teams" aria-roledescription="carrousel"><div class="car-track">${groupes.map((g,i)=>`<section class="car-s team" aria-label="${esc(g.nom)}">
-      <header><span class="tm-k">${t("group")} ${i+1}</span><h3>${esc(g.nom)}</h3><p>${esc(lang==="en"?g.genreEn:g.genre)} · ${g.design.length+g.art.length} ${t("members")}</p></header>
-      <div class="tm-cols">${col("Game Design",g.design)}${col("Game Art",g.art)}</div></section>`).join("")}</div>
+      <header><span class="tm-k">${t("group")} ${i+1}</span><h3>${esc(g.nom)}</h3><p>${esc(lang==="en"?g.genreEn:g.genre)} · ${team(g.design).length+g.art.length} ${t("members")}</p></header>
+      ${prod(g.design).length?`<div class="tm-col tm-prod"><ul>${prod(g.design).map(person).join("")}</ul></div>`:""}
+      <div class="tm-cols">${col("Game Design",team(g.design))}${col("Game Art",team(g.art))}</div></section>`).join("")}</div>
     <div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Groupe précédent","Previous group")}">‹</button><span class="car-cnt">1 / ${groupes.length}</span><button type="button" data-car="1" aria-label="${q("Groupe suivant","Next group")}">›</button></div></figure>`;
 }
 function blocks(list){

@@ -161,7 +161,7 @@ const PROJECTS_FR = {
     P({ title:"Projets de fin d'année – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"Quatre jeux aux genres variés produits en parallèle, de la mise en place de la production à la gestion d'une crise à mi-parcours.", carte:"Quatre jeux produits en parallèle par une promotion entière, avec une méthode agile intégrée aux jalons en cascade de l'école.",
         img:PRO1.thumb,
-        infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 13 à 14 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint Share · Discord" },
+        infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 13 à 14 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         resume:{ contexte:"Projet de fin d'année à Game Sup, réalisé par toute la promotion en 4 semaines.",
                  role:"Producer des 4 équipes, en lien avec les intervenants dans le rôle d'éditeurs.",
                  resultat:"4 jeux livrés au jury ; 1 387 tâches suivies, dont 93 % terminées, malgré une crise de direction artistique surmontée en deuxième semaine." },
@@ -189,19 +189,19 @@ const PROJECTS_FR = {
             ],[ IMG(PRO1.macro,"Macro-planning propre à l'Excel de chaque groupe : sprints et milestones (Proof of Concept, Alpha, Bêta)") ]),
             LIGNE([
               T("Le suivi de production reposait sur ==Excel== : un **macro-planning** propre à chaque groupe, posant les sprints et les milestones, puis un **micro-planning** où chaque tâche est rattachée à un sprint, une priorité, une difficulté et un statut. Au total, ==1 387 tâches== ont été suivies sur l'ensemble des groupes."),
-              T("Les documents de travail étaient partagés sur ==PowerPoint Share==, et chaque groupe disposait de son propre espace ==Discord==.")
+              T("Les documents de travail étaient partagés dans un ==PowerPoint commun sur OneDrive==, et chaque groupe disposait de son propre espace ==Discord==.")
             ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ])
           ]),
           BANDE("III","Une crise à mi-parcours",[
             LIGNE([
-              T("Malgré nos efforts pour anticiper les problèmes, une ==difficulté commune à tous les groupes== est apparue lors de la **deuxième semaine** de production : les informations sur la **direction artistique** de chaque projet étaient confuses, et les membres peinaient à se représenter les références. Cela a entraîné des **retards de production**.")
+              T("Malgré nos efforts pour anticiper les problèmes, une ==difficulté commune à tous les groupes== est apparue lors de la **deuxième semaine** de production : les informations sur la **direction artistique** de chaque projet étaient confuses, et les membres peinaient à se représenter les références. Cela a entraîné **deux à trois jours de retard** selon les groupes.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
               T("Avec le recul, nous avons identifié deux causes : des ==références trop vastes== et pas assez précises, et un ==temps trop court== consacré à une nouvelle phase de recherche en début de développement, car nous pensions que les recherches menées pendant la sélection suffiraient.")
-            ],[ ETAPES("Comment la crise s'est installée",[["Références trop vastes et peu précises"],["Passe de recherche trop courte au démarrage","Les recherches de la sélection étaient jugées suffisantes"],["Direction artistique confuse selon les groupes"],["Retards de production","Deuxième semaine, pour l'ensemble des groupes","warn"]]) ]),
+            ],[ ETAPES("Comment la crise s'est installée",[["Références trop vastes et peu précises"],["Passe de recherche trop courte au démarrage","Les recherches de la sélection étaient jugées suffisantes"],["Direction artistique confuse selon les groupes"],["Deux à trois jours de retard","Deuxième semaine, pour l'ensemble des groupes","warn"]]) ]),
             LIGNE([
-              T("Avec chaque groupe, et selon ses spécificités, nous avons organisé des ==réunions d'urgence== et **suspendu temporairement la production** afin de rétablir une vision d'ensemble claire."),
-              T("Pour un groupe, cela s'est traduit par le **kill** de plusieurs assets prévus qui, après réflexion, sortaient du cadre de la direction artistique ou, faute de temps, n'étaient pas assez prioritaires pour être conservés. Pour un autre, par des changements dans le **Level Art** et des modifications du **shader atmosphérique**.")
+              T("Avec chaque groupe, et selon ses spécificités, nous avons organisé des ==réunions d'urgence== et **suspendu la production pendant une journée et demie** : un temps de réflexion pour rétablir une vision d'ensemble claire."),
+              T("Pour un groupe, j'ai tranché, en accord avec les référents des disciplines, sur le **kill** de plusieurs assets prévus qui sortaient du cadre de la direction artistique ou, faute de temps, n'étaient pas assez prioritaires pour être conservés. Pour un autre, par des changements dans le **Level Art** et des modifications du **shader atmosphérique**.")
             ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ])
           ]),
           BANDE("IV","S'adapter rapidement",[
@@ -213,7 +213,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("V","Résultat",[
             LIGNE([
-              T("Au final, les ==4 jeux ont été livrés== et ont **convaincu le jury**."),
+              T("Au final, les ==4 jeux ont été livrés== et présentés au **jury** dans les délais."),
               T("Côté suivi, **1 387 tâches** ont été planifiées sur l'ensemble des groupes, dont **1 289 terminées (93 %)**. 57 ont été supprimées (4 %) : des kills assumés pour préserver la cohérence de chaque projet. Seules 36 sont restées en retard.")
             ],[ CHIFFRES([["4 / 4","jeux livrés au jury"],["1 387","tâches suivies"],["93 %","tâches terminées"],["57","tâches supprimées (kills)"]]), SCHEMA("bilan","Statut des tâches par sprint, tous groupes confondus (hors 3 tâches sans sprint ; 2 tâches du sprint 4 étaient encore en cours)") ])
           ]),
@@ -345,8 +345,8 @@ const PROJECTS_FR = {
     P({ title:"Exercice 2 – Castalie's Tears – Game Design et Narrative Design", large:true, nocover:true,
         desc:"Game Design Document d'un RPG au tour par tour d'inspiration mythologique : la boucle de jeu et ses systèmes, puis leur incarnation dans l'univers, le personnage et un niveau de Narrative Design.", carte:"Le Game Design Document d'un RPG mythologique au tour par tour : boucle de jeu, systèmes et leur incarnation dans le récit.",
         img:CT.thumb,
-        infos:{ "Rôle":"Auteur du GDD", "Cadre":"Game Design 1 (GD1)", "Date":"Avril 2025", "Temps de travail":"90 h", "Livrable":"Game Design Document · 67 pages" },
-        resume:{ contexte:"Exercice de Game Design 1 à Game Sup (avril 2025) : concevoir un jeu à partir d'une créature mythique d'un pays imposé, la Grèce.",
+        infos:{ "Rôle":"Auteur du GDD", "Cadre":"Game Design · Game Sup", "Date":"Avril 2025", "Temps de travail":"90 h", "Livrable":"Game Design Document · 67 pages" },
+        resume:{ contexte:"Exercice de Game Design à Game Sup (avril 2025) : concevoir un jeu à partir d'une créature mythique d'un pays imposé, la Grèce.",
                  role:"Auteur du Game Design Document : concept, systèmes, univers, personnage et niveau.",
                  resultat:"Un RPG au tour par tour où chaque mécanique trouve son incarnation dans le récit, et une connaissance concrète du travail de design, utile pour dialoguer avec les équipes en production." },
         contenu:[
@@ -359,14 +359,14 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Game Design · Le concept",[
             LIGNE([
-              T("**Castalie's Tears** est un ==RPG au tour par tour== en solo, en vue à la troisième personne, pensé pour **PC et consoles nouvelle génération**, avec un modèle premium et des DLC. Il s'adresse aux fans de RPG et aux passionnés de mythologie."),
+              T("**Castalie's Tears** est un ==RPG au tour par tour== en solo, en vue à la troisième personne, pensé pour **PC et Nintendo Switch**, avec un modèle premium et des DLC. Il s'adresse aux fans de RPG et aux passionnés de mythologie."),
               T("Pour le situer, Dragon Quest XI rencontre Dragon Age : Inquisition dans un univers proche d'Immortals Fenyx Rising."),
-              T("Reste l'effort demandé au joueur. C'est un jeu ==posé et riche en systèmes== : il récompense la réflexion, l'organisation et la patience plus que les réflexes.")
+              T("Côté exigence, c'est un jeu ==posé et riche en systèmes== : il récompense la réflexion, l'organisation et la patience plus que les réflexes.")
             ],[ IMG(CT.one,"Le one-liner et ses trois références"), IMG(CT.info,"La fiche d'information du projet") ])
           ]),
           BANDE("III","Game Design · Intentions et piliers",[
             LIGNE([
-              T("Je pars de **valeurs** (courage, coopération, résilience) et d'**intentions** (exploration, solitude, don de soi, travail d'équipe, mystère). Les **thèmes** : la culpabilité du survivant, la confiance, la confiance en soi, et la question « qu'est-ce qu'un héros ? ». Côté design, cela donne de la ==personnalisation==, du **crafting**, de la **gestion** et du **leadership**, ainsi que la conquête du pouvoir."),
+              T("Je pars de **valeurs** (courage, coopération, résilience) et d'**intentions** (exploration, solitude, don de soi, travail d'équipe, mystère). Les **thèmes** : la culpabilité du survivant, la confiance en l'autre comme en soi, et la question « qu'est-ce qu'un héros ? ». Côté design, cela donne de la ==personnalisation==, du **crafting**, de la **gestion** et du **leadership**, ainsi que la conquête du pouvoir."),
               T("Ces intentions se traduisent en ==trois piliers== de gameplay : **combattre les marées de Typhon**, **explorer un monde désolé** et **prendre soin de sa Source et la faire grandir**. J'ai aussi listé ce que le jeu ne sera pas : multijoueur coopératif, combat tactique sur grille à la manière d'un Tactical RPG, arbre de compétences, mini-jeux, infiltration et fins multiples. Cela garde le périmètre sous contrôle.")
             ],[ IMG(CT.pillars,"Les trois piliers de gameplay"), IMG(CT.notdo,"Ce que le jeu n'est pas") ])
           ]),
@@ -404,7 +404,7 @@ const PROJECTS_FR = {
           BANDE("VIII","Narrative Design · Castalie, un personnage qui évolue",[
             LIGNE([
               T("Castalie est une ==naïade crénienne==, fille du dieu-fleuve Achéloos, élève d'Apollon à Delphes où elle veille sur la fontaine sacrée. À la Chute, Apollon lui demande de rester protéger Delphes. Elle pleure chaque mort qu'elle ressent : ses larmes lui laissent des cicatrices sur les joues et, disent les témoins, capturent les souvenirs de cette guerre. Blessé, Apollon la cache avant de fuir et lui fait promettre de survivre."),
-              T("Je l'ai construite sur un ==défaut et une évolution== : elle manque de confiance, se méfie de ses pouvoirs comme des inconnus et craint le changement. Au fil de l'aventure, elle trouve sa force, comme déesse, comme cheffe et comme amie, devient une combattante, une héroïne, et sa voix s'affirme. Elle parle d'abord le moins possible, d'une voix grave, calme et méfiante. C'est par elle que passent les thèmes du jeu : la culpabilité du survivant, la confiance, et ce qu'est un héros.")
+              T("Je l'ai construite sur un ==défaut et une évolution== : elle manque de confiance, se méfie de ses pouvoirs comme des inconnus et craint le changement. Au fil de l'aventure, elle trouve sa force comme déesse, comme cheffe et comme amie : elle devient une combattante, une héroïne, et sa voix s'affirme. Elle parle d'abord le moins possible, d'une voix grave, calme et méfiante. C'est par elle que passent les thèmes du jeu : la culpabilité du survivant, la confiance, et ce qu'est un héros.")
             ],[ IMG(CT.castalie,"Castalie, la naïade de la fontaine de Delphes","sm"), FICHE("Castalie en bref",["Naïade crénienne de la fontaine de Delphes","Voix grave, calme, méfiante, peu de mots","Défauts : manque de confiance, peur du changement","Évolution : de la solitude au leadership"]) ])
           ]),
           BANDE("IX","Narrative Design · Le niveau du Temple d'Apollon",[
@@ -414,7 +414,7 @@ const PROJECTS_FR = {
             ],[ IMG(CT.moodboard,"Moodboard du niveau"), IMG(CT.ld,"Plan du niveau (layout)") ]),
             LIGNE([
               T("Le décor s'inspire d'un temple grec avec quelques libertés : plus vaste, plusieurs salles, mais avec les trois pièces principales, le pronaos, le naos et l'opisthodome qui abritait le trésor. Les colonnes sont plus ou moins détruites. L'ambiance sonore reste sobre : une musique grave et mystérieuse, des pas qui résonnent dans les couloirs."),
-              T("Côté gameplay : des **petits ennemis** que l'on peut fuir, un **mini-boss** qui garde la clé du naos, un **boss** à vaincre pour obtenir la Grâce d'Apollon, deux **portes secrètes** qui raccourcissent le trajet, et des **coffres** de souvenirs d'avant la Chute. Une seule énigme : trouver la clé. L'==intensité monte par paliers== entre les salles, avec des respirations dans les antichambres, jusqu'au point culminant dans le naos.")
+              T("Côté gameplay : de **petits ennemis** que l'on peut fuir, un **mini-boss** qui garde la clé du naos, un **boss** à vaincre pour obtenir la Grâce d'Apollon, deux **portes secrètes** qui raccourcissent le trajet, et des **coffres** de souvenirs d'avant la Chute. Une seule énigme : trouver la clé. L'==intensité monte par paliers== entre les salles, avec des respirations dans les antichambres, jusqu'au point culminant dans le naos.")
             ],[ IMG(CT.mol,"Diagramme moléculaire : les salles et leurs liens"), IMG(CT.pacing,"Courbe d'intensité du niveau") ])
           ]),
           BANDE("X","Conclusion",[
@@ -426,11 +426,11 @@ const PROJECTS_FR = {
           ]),
           BANDE("XI","Références",[
             LIGNE([
-              T("Ma base de références couvre jeux vidéo, rétro-gaming, jeux de plateau, livres, séries et musiques, chacune choisie pour un usage précis : l'interface, les quêtes, la gestion d'équipe, les mythes ou l'esthétique grecque.")
+              T("Ma base de références couvre jeux vidéo, rétro-gaming, jeux de plateau, livres, films et séries, chacune choisie pour un usage précis : l'interface, les quêtes, la gestion d'équipe, les mythes ou l'esthétique grecque.")
             ],[ FICHE("Jeux vidéo",["Dragon Quest XI : l'interface","Baldur's Gate III : les interactions avec les PNJ","Octopath Traveler II : le combat au tour par tour","Fire Emblem : Three Houses : les relations entre compagnons","Expeditions : Rome : le design des quêtes","Dragon Age : Inquisition : la gestion de l'avant-poste","Immortals Fenyx Rising : l'esthétique grecque"]), FICHE("Rétro-gaming et plateau",["Chrono Trigger : relations entre personnages et combat","Final Fantasy VI : arcs narratifs des compagnons","Suikoden II : gestion d'équipe","Golden Sun : magie et environnement","Glory of Heracles : dieux, humains et héros","Gloomhaven et Aeon's End : tour par tour et travail d'équipe","Theomachy et Pantheon : pouvoirs divins"]), FICHE("Mythologie et autres médias",["Hésiode, La Théogonie : dieux et mythes","Ovide, Les Métamorphoses : les mythes sur Castalie","Pierre Lévêque, Le Livre des Nymphes","Bernard Sergent, Les Nymphes et les Néréides","Princesse Mononoké : désolation et restauration","Blood of Zeus : la mort des dieux et la puissance divine","Children of the Whales : survivre face à des forces supérieures"]) ], "dessous")
           ])
         ] }),
-    P({ title:"Exercice 3 – The Nigerian Video Game Market", large:true, nocover:true,
+    P({ title:"Exercice 3 – Le marché africain du jeu vidéo à travers le cas du Nigéria", large:true, nocover:true,
         desc:"Étude du marché du jeu vidéo en Afrique à travers le cas du Nigéria : un modèle mobile, local et affranchi du AAA occidental, ses moteurs et ses limites.", carte:"Le marché africain du jeu vidéo à travers le cas du Nigéria : un modèle mobile et local, ses moteurs et ses limites.",
         img:NG.thumb,
         infos:{ "Rôle":"Auteur de l'étude", "Cadre":"Culture vidéoludique · Game Sup", "Date":"Janvier 2025 · mise à jour 2025", "Livrable":"Présentation PowerPoint · 30 diapositives" },
@@ -494,7 +494,7 @@ const PROJECTS_EN = {
     P({ title:"End-of-Year Projects – May–June 2026", large:true, nocover:true,
         desc:"Four games of varied genres produced in parallel, from setting up production to handling a mid-course crisis.", carte:"Four games produced in parallel by an entire class, with an agile method embedded in the school's waterfall milestones.",
         img:PRO1.thumb,
-        infos:{ "Role":"Producer", "Team":"4 teams · 13 to 14 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint Share · Discord" },
+        infos:{ "Role":"Producer", "Team":"4 teams · 13 to 14 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         resume:{ contexte:"Game Sup end-of-year project, carried out by the whole class in 4 weeks.",
                  role:"Producer for the 4 teams, working with the instructors acting as publishers.",
                  resultat:"4 games delivered to the jury; 1,387 tasks tracked, 93% completed, despite an art-direction crisis overcome in the second week." },
@@ -522,19 +522,19 @@ const PROJECTS_EN = {
             ],[ IMG(PRO1.macro,"Macro-planning in each group's Excel: sprints and milestones (Proof of Concept, Alpha, Beta)") ]),
             LIGNE([
               T("Production tracking relied on ==Excel==: a **macro-planning** for each group, laying out the sprints and milestones, then a **micro-planning** in which each task is tied to a sprint, a priority, a difficulty and a status. In total, ==1,387 tasks== were tracked across all the groups."),
-              T("Working documents were shared on ==PowerPoint Share== and each group had its own ==Discord== space.")
+              T("Working documents were shared in a ==common PowerPoint on OneDrive== and each group had its own ==Discord== space.")
             ],[ IMG(PRO1.micro,"Excerpt of one group's micro-planning: tasks, sprints, priorities, difficulties and statuses") ])
           ]),
           BANDE("III","A mid-course crisis",[
             LIGNE([
-              T("Despite our efforts to anticipate problems, ==a difficulty shared by every group== emerged in the **second week** of production: the information about each project's **art direction** was unclear, and team members struggled to picture the references. This led to **production delays**.")
+              T("Despite our efforts to anticipate problems, ==a difficulty shared by every group== emerged in the **second week** of production: the information about each project's **art direction** was unclear, and team members struggled to picture the references. This led to **two to three days of delay**, depending on the group.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
               T("Looking back, we identified two causes: ==references that were too broad== and not precise enough, and ==too little time== given to a new research pass at the start of development, because we thought the research done during selection would be enough.")
-            ],[ ETAPES("How the crisis set in",[["References too broad and imprecise"],["Research pass too short at the start","The selection-phase research was deemed sufficient"],["Confusing art direction across the groups"],["Production delays","Second week, across all the groups","warn"]]) ]),
+            ],[ ETAPES("How the crisis set in",[["References too broad and imprecise"],["Research pass too short at the start","The selection-phase research was deemed sufficient"],["Confusing art direction across the groups"],["Two to three days of delay","Second week, across all the groups","warn"]]) ]),
             LIGNE([
-              T("With each group, and according to its specific needs, we held ==emergency meetings== and **temporarily paused production** to restore a clear overall vision."),
-              T("For one group, this meant **killing** several planned assets which, on reflection, fell outside the art direction or, given the time available, were not a high enough priority to keep. For another, it meant changes to the **Level Art** and adjustments to the **atmospheric shader**.")
+              T("With each group, and according to its specific needs, we held ==emergency meetings== and **paused production for a day and a half**: time to reflect and restore a clear overall vision."),
+              T("For one group, I decided, in agreement with the discipline leads, to **kill** several planned assets which fell outside the art direction or, given the time available, were not a high enough priority to keep. For another, it meant changes to the **Level Art** and adjustments to the **atmospheric shader**.")
             ],[ IMG(PRO1.kill,"Tasks removed (kills) in one of the groups' tracking") ])
           ]),
           BANDE("IV","Adapting quickly",[
@@ -546,7 +546,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("V","Result",[
             LIGNE([
-              T("In the end, the ==4 games were delivered== and **won over the jury**."),
+              T("In the end, the ==4 games were delivered== and presented to the **jury** on schedule."),
               T("On the tracking side, **1,387 tasks** were planned across all the groups, of which **1,289 were completed (93%)**. 57 were removed (4%): deliberate kills to preserve the consistency of each project. Only 36 remained late.")
             ],[ CHIFFRES([["4 / 4","games delivered to the jury"],["1,387","tasks tracked"],["93%","tasks completed"],["57","tasks removed (kills)"]]), SCHEMA("bilan","Task status by sprint, all groups combined (excluding 3 tasks without a sprint; 2 sprint 4 tasks were still in progress)") ])
           ]),
@@ -677,8 +677,8 @@ const PROJECTS_EN = {
     P({ title:"Exercise 2 – Castalie's Tears – Game Design and Narrative Design", large:true, nocover:true,
         desc:"Game Design Document for a mythology-inspired turn-based RPG: the core loop and its systems, then their embodiment in the universe, the character and a Narrative Design level.", carte:"The Game Design Document for a turn-based mythological RPG: core loop, systems and their embodiment in the story.",
         img:CT.thumb,
-        infos:{ "Role":"Author of the GDD", "Context":"Game Design 1 (GD1)", "Date":"April 2025", "Workload":"90 hours", "Deliverable":"Game Design Document · 67 pages" },
-        resume:{ contexte:"Game Design 1 exercise at Game Sup (April 2025): design a game from a mythical creature of an assigned country, Greece.",
+        infos:{ "Role":"Author of the GDD", "Context":"Game Design · Game Sup", "Date":"April 2025", "Workload":"90 hours", "Deliverable":"Game Design Document · 67 pages" },
+        resume:{ contexte:"Game Design exercise at Game Sup (April 2025): design a game from a mythical creature of an assigned country, Greece.",
                  role:"Author of the Game Design Document: concept, systems, world, character and level.",
                  resultat:"A turn-based RPG where every mechanic is embodied in the story, and hands-on knowledge of design work, useful for working with design teams in production." },
         contenu:[
@@ -691,14 +691,14 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Game Design · The concept",[
             LIGNE([
-              T("**Castalie's Tears** is a single-player, third-person ==turn-based RPG== designed for **PC and next-gen consoles**, with a premium model and DLC. It targets RPG fans and mythology enthusiasts."),
+              T("**Castalie's Tears** is a single-player, third-person ==turn-based RPG== designed for **PC and Nintendo Switch**, with a premium model and DLC. It targets RPG fans and mythology enthusiasts."),
               T("To place it, Dragon Quest XI meets Dragon Age: Inquisition in a universe similar to Immortals Fenyx Rising."),
-              T("What remains is the effort asked of the player. It is a ==measured, system-rich game==: it rewards thinking, organisation and patience more than reflexes.")
+              T("In terms of demands on the player, it is a ==measured, system-rich game==: it rewards thinking, organisation and patience more than reflexes.")
             ],[ IMG(CT.one,"The one-liner and its three references"), IMG(CT.info,"The project information sheet") ])
           ]),
           BANDE("III","Game Design · Intentions and pillars",[
             LIGNE([
-              T("I start from **values** (courage, cooperation, resilience) and **intentions** (exploration, loneliness, selflessness, teamwork, mystery). The **themes**: survivor guilt, trust, self-confidence, and the question “what is a hero?”. On the design side, this means ==customisation==, **crafting**, **management** and **leadership**, and power claiming."),
+              T("I start from **values** (courage, cooperation, resilience) and **intentions** (exploration, loneliness, selflessness, teamwork, mystery). The **themes**: survivor guilt, trust in others as in oneself, and the question “what is a hero?”. On the design side, this means ==customisation==, **crafting**, **management** and **leadership**, and power claiming."),
               T("These intentions become ==three gameplay pillars==: **fight Typhon's tides**, **explore a desolate world** and **take care of your Source and make it grow**. I also listed what the game will not be: cooperative multiplayer, grid-based tactical combat in the style of a Tactical RPG, a skill tree, mini-games, stealth and multiple endings. This keeps the scope under control.")
             ],[ IMG(CT.pillars,"The three gameplay pillars"), IMG(CT.notdo,"What the game is not") ])
           ]),
@@ -736,7 +736,7 @@ const PROJECTS_EN = {
           BANDE("VIII","Narrative Design · Castalie, a character who evolves",[
             LIGNE([
               T("Castalie is a ==Crenian Naiad==, daughter of the river god Achelous, a student of Apollo at Delphi where she watches over the sacred fountain. At the Fall, Apollo tells her to stay and protect Delphi. She weeps for every death she feels: her tears leave scars on her cheeks and, witnesses say, capture the memories of that war. Wounded, Apollo hides her before fleeing and makes her promise to survive."),
-              T("I built her on a ==flaw and an evolution==: she lacks confidence, distrusts her own powers as much as strangers, and fears change. Over the adventure, she finds her strength, as a goddess, as a leader and as a friend, becomes a fighter, a hero, and her voice grows more assured. At first she speaks as little as possible, in a low, calm, suspicious voice. The game's themes run through her: survivor guilt, trust, and what a hero is.")
+              T("I built her on a ==flaw and an evolution==: she lacks confidence, distrusts her own powers as much as strangers, and fears change. Over the adventure, she finds her strength as a goddess, a leader and a friend: she becomes a fighter, a hero, and her voice grows more assured. At first she speaks as little as possible, in a low, calm, suspicious voice. The game's themes run through her: survivor guilt, trust, and what a hero is.")
             ],[ IMG(CT.castalie,"Castalie, the Naiad of the fountain of Delphi","sm"), FICHE("Castalie at a glance",["Crenian Naiad of the fountain of Delphi","Low, calm, suspicious voice, few words","Flaws: lack of confidence, fear of change","Evolution: from solitude to leadership"]) ])
           ]),
           BANDE("IX","Narrative Design · The Temple of Apollo level",[
@@ -758,11 +758,11 @@ const PROJECTS_EN = {
           ]),
           BANDE("XI","References",[
             LIGNE([
-              T("My reference base covers video games, retro gaming, board games, books, series and music, each chosen for a precise use: interface, quests, team management, myths or Greek aesthetics.")
+              T("My reference base covers video games, retro gaming, board games, books, films and series, each chosen for a precise use: interface, quests, team management, myths or Greek aesthetics.")
             ],[ FICHE("Video games",["Dragon Quest XI: the interface","Baldur's Gate III: NPC interactions","Octopath Traveler II: turn-based combat","Fire Emblem: Three Houses: companion relationships","Expeditions: Rome: quest design","Dragon Age: Inquisition: outpost management","Immortals Fenyx Rising: Greek aesthetics"]), FICHE("Retro gaming and board games",["Chrono Trigger: character relationships and combat","Final Fantasy VI: companion narrative arcs","Suikoden II: team management","Golden Sun: magic and environment","Glory of Heracles: gods, humans and heroes","Gloomhaven and Aeon's End: turn-based and teamwork","Theomachy and Pantheon: divine powers"]), FICHE("Mythology and other media",["Hesiod, Theogony: gods and myths","Ovid, Metamorphoses: the myths about Castalie","Pierre Lévêque, Le Livre des Nymphes","Bernard Sergent, Les Nymphes et les Néréides","Princess Mononoke: desolation and restoration","Blood of Zeus: the gods' deaths and divine power","Children of the Whales: surviving against greater forces"]) ], "dessous")
           ])
         ] }),
-    P({ title:"Exercise 3 – The Nigerian Video Game Market", large:true, nocover:true,
+    P({ title:"Exercise 3 – The African Video Game Market through the Case of Nigeria", large:true, nocover:true,
         desc:"A study of the African video game market through the case of Nigeria: a mobile, local model that breaks away from Western AAA, its drivers and its limits.", carte:"The African video game market through the case of Nigeria: a mobile, local model, its drivers and its limits.",
         img:NG.thumb,
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025 · updated 2025", "Deliverable":"PowerPoint presentation · 30 slides" },

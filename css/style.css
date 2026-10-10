@@ -668,3 +668,9 @@ footer{background:#0B1A33}
 /* Nom en blanc, comme sur le CV */
 .brand,.brand .b1,.brand .b2,.brand:hover{color:#FFFFFF}
 .brand .b1{font-weight:800}
+
+/* Carrousel des équipes : le producer à part, au-dessus des colonnes */
+.tm-prod{max-width:30rem;margin:0 auto 1.4rem}
+.tm-prod li.me{margin-bottom:0}
+/* Accueil : deux boutons côte à côte */
+.home-intro .cta{display:flex;flex-wrap:wrap;gap:.8rem}

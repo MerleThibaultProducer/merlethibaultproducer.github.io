@@ -10,7 +10,7 @@ const SITE_FR = {
   devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
-    "Je suis Thibault, ==Junior Associate Producer== dans le jeu vidéo, en dernière année à ==Game Sup==. Depuis 2025, j'ai mené **quatre productions**, jusqu'à quatre équipes de 13 à 14 personnes en parallèle. Pour moi, la production est d'abord un travail d'équipe : écouter chacun, adapter les méthodes **agiles** et **en cascade** à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un ==stage de fin d'études en production== pour 2027, partout en France ou en télétravail."
+    "Je suis Thibault, ==Junior Associate Producer== dans le jeu vidéo, en dernière année à ==Game Sup==. J'ai eu l'occasion de mener des **productions multi-projets**, avec jusqu'à ==quatre équipes en simultané==. Pour moi, la production est d'abord un travail d'équipe : écouter chacun, adapter les méthodes **agiles** et **en cascade** à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un ==stage de fin d'études en production== pour 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",
@@ -21,7 +21,7 @@ const SITE_FR = {
 };
 const SITE_EN = {...SITE_FR,
   intro: [
-    "I'm Thibault, a ==Junior Associate Producer== in video games, in my final year at ==Game Sup==. Since 2025, I have run **four productions**, with up to four teams of 13 to 14 people in parallel. To me, production is teamwork first: listening to everyone, adapting **Agile** and **Waterfall** methods to the way people work, and keeping information flowing so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an ==end-of-studies internship in production== for 2027, anywhere in France or remote."
+    "I'm Thibault, a ==Junior Associate Producer== in video games, in my final year at ==Game Sup==. I have had the opportunity to run **multi-project productions**, with up to ==four teams at once==. To me, production is teamwork first: listening to everyone, adapting **Agile** and **Waterfall** methods to the way people work, and keeping information flowing so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an ==end-of-studies internship in production== for 2027, anywhere in France or remote."
   ],
   legal: [
     "© 2026 Thibault Merle – All rights reserved.",

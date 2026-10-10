@@ -9,11 +9,8 @@ const SITE_FR = {
   titre: "Junior Associate Producer",
   devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
-  /* Accueil : trois blocs [titre, texte] → qui je suis, où j'en suis, ce que je recherche */
   intro: [
-    ["Qui je suis","Je suis Thibault, ==Junior Associate Producer== dans le jeu vidéo. Pour moi, la production est d'abord un travail d'équipe : j'écoute chaque équipe, j'adapte les méthodes **agiles** et **en cascade** à sa façon de travailler, et je fais circuler l'information pour que tout le monde avance ensemble."],
-    ["Où j'en suis","En dernière année à ==Game Sup== (2023‑2027), j'ai mené **quatre productions** comme producer, jusqu'à ==quatre équipes de 13 à 14 personnes en parallèle==. J'ai aussi présidé le bureau des étudiants de l'école. Avant le jeu vidéo, un **master d'anthropologie** et cinq ans d'**enseignement** m'ont appris à expliquer, à transmettre et à m'adapter à chacun."],
-    ["Ce que je recherche","Un ==stage de fin d'études en production== (Associate ou Junior Producer) en **2027**, partout en France ou en télétravail. Je souhaite rejoindre une équipe où progresser aux côtés de producers expérimentés, en apportant mon sens de l'organisation et de la communication."]
+    "Je suis Thibault, ==Junior Associate Producer== dans le jeu vidéo, en dernière année à ==Game Sup==. Depuis 2025, j'ai mené **quatre productions**, jusqu'à quatre équipes de 13 à 14 personnes en parallèle. Pour moi, la production est d'abord un travail d'équipe : écouter chacun, adapter les méthodes **agiles** et **en cascade** à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un ==stage de fin d'études en production== pour 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",
@@ -24,9 +21,7 @@ const SITE_FR = {
 };
 const SITE_EN = {...SITE_FR,
   intro: [
-    ["Who I am","I'm Thibault, a ==Junior Associate Producer== in video games. To me, production is teamwork first: I listen to each team, adapt **Agile** and **Waterfall** methods to the way people work, and keep information flowing so everyone moves forward together."],
-    ["Where I am","In my final year at ==Game Sup== (2023‑2027), I have run **four productions** as a producer, with up to ==four teams of 13 to 14 people in parallel==. I also chaired the school's student board. Before video games, a **master's in anthropology** and five years of **teaching** taught me to explain, pass on knowledge and adapt to each person."],
-    ["What I'm looking for","An ==end-of-studies internship in production== (Associate or Junior Producer) in **2027**, anywhere in France or remote. I want to join a team where I can grow alongside experienced producers, bringing my sense of organisation and communication."]
+    "I'm Thibault, a ==Junior Associate Producer== in video games, in my final year at ==Game Sup==. Since 2025, I have run **four productions**, with up to four teams of 13 to 14 people in parallel. To me, production is teamwork first: listening to everyone, adapting **Agile** and **Waterfall** methods to the way people work, and keeping information flowing so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an ==end-of-studies internship in production== for 2027, anywhere in France or remote."
   ],
   legal: [
     "© 2026 Thibault Merle – All rights reserved.",

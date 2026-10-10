@@ -10,7 +10,7 @@ const SITE_FR = {
   devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
-    "Je suis Thibault, ==Junior Associate Producer== dans le jeu vidéo, en dernière année à ==Game Sup==. J'ai eu l'occasion de mener des **productions multi-projets**, avec jusqu'à ==quatre équipes en simultané==. Pour moi, la production est d'abord un travail d'équipe : écouter chacun, adapter les méthodes **agiles** et **en cascade** à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un ==stage de fin d'études en production== pour 2027, partout en France ou en télétravail."
+    "Je suis Thibault, ==Junior Associate Producer== dans le jeu vidéo, en dernière année à ==Game Sup==. J'ai eu l'occasion de mener des **productions multi-projets**, avec jusqu'à ==quatre équipes en simultané==. Pour moi, la production est d'abord un travail d'équipe : écouter chacun, adapter les méthodes **Agile** et **Waterfall** à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un ==stage de fin d'études en production== pour 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",

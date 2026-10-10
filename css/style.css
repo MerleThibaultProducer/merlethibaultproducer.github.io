@@ -760,3 +760,7 @@ html body .tm-col li{border-bottom-color:#D3DDEB}
 html body .tm-col h4 small{background:#fff}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .team{background:#172A47}}
 :root[data-theme="dark"] body .team{background:#172A47}
+/* Encarts de résumé (En bref, Mon rôle et mes décisions) : même fond bleu clair que l'encart des équipes */
+html body .brief section{background:#EEF3FA;border-top:0;border-radius:4px;padding:1.4rem 1.6rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .brief section{background:#172A47}}
+:root[data-theme="dark"] body .brief section{background:#172A47}

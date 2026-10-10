@@ -373,7 +373,7 @@ const PROJECTS_FR = {
               CAROUSEL([[CT.manage,"Gérer"],[CT.explore,"Explorer"],[CT.res,"Résoudre"],[CT.acq,"Acquérir"],[CT.fight,"Combattre"],[CT.craft,"Fabriquer"],[CT.lvl,"Progresser"],[CT.trade,"Échanger"]])
             ])
           ]),
-          BANDE("V","Le joueur cible",[
+          BANDE("V","Dresser un profil cible",[
             LIGNE([
               T("Le jeu s'adresse à un public adulte et actif, qui joue sur PC et sur Switch par sessions courtes. Selon la typologie de Bartle, ce joueur est d'abord Achiever, puis Explorer : il cherche du défi, de la détente, de l'accomplissement et des émotions, porté par une histoire profonde, des mécaniques de RPG et une dimension de gestion."),
               T("Ses attentes guident mes choix. Il rejette le manque de profondeur et de narration, la condescendance, les énigmes trop complexes et l'absence de choix. C'est pourquoi le jeu mise sur l'histoire et la gestion plutôt que sur l'énigme.")
@@ -704,7 +704,7 @@ const PROJECTS_EN = {
               CAROUSEL([[CT.manage,"Manage"],[CT.explore,"Explore"],[CT.res,"Resolve"],[CT.acq,"Acquire"],[CT.fight,"Fight"],[CT.craft,"Craft"],[CT.lvl,"Level up"],[CT.trade,"Trade"]])
             ])
           ]),
-          BANDE("V","The target player",[
+          BANDE("V","Building a target profile",[
             LIGNE([
               T("The game targets an active adult audience who plays on PC and Switch in short sessions. In Bartle's taxonomy, this player is first an Achiever, then an Explorer: they look for challenge, relaxation, achievement and emotions, carried by a deep story, RPG mechanics and a management dimension."),
               T("Their expectations guide my choices. They reject shallowness and a lack of narrative, condescension, over-complicated puzzles and a lack of choice. That is why the game bets on story and management rather than on puzzles.")

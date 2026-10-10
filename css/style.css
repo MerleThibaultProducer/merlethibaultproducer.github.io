@@ -819,3 +819,19 @@ html body .prose>.band:nth-of-type(even)+.band{border-top-color:transparent}
 html body .prose>.band:nth-of-type(even) .team,html body .prose>.band:nth-of-type(even) .schema svg .sb{background:#fff;fill:#fff}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .prose>.band:nth-of-type(even){background:#12223A;box-shadow:0 0 0 100vmax #12223A}}
 :root[data-theme="dark"] body .prose>.band:nth-of-type(even){background:#12223A;box-shadow:0 0 0 100vmax #12223A}
+
+/* Bouton mode nuit, à côté de FR / EN */
+nav .lang .theme-btn{display:inline-flex;align-items:center;justify-content:center;margin-left:.9rem;padding:.25rem;border:0;border-radius:50%;background:none;color:#D5DBE5;cursor:pointer}
+nav .lang .theme-btn:hover,nav .lang .theme-btn:focus-visible{color:#fff}
+
+/* Titres des parties : sans numéro, mis en avant */
+html body .band-num{display:none}
+html body .band-head{display:block;margin-bottom:1.6rem}
+html body .band-head h2{font:800 clamp(1.6rem,2.8vw,2.25rem)/1.2 var(--sans);letter-spacing:-.015em;color:var(--head)}
+html body .band-head h2::after{content:"";display:block;width:3rem;height:3px;margin-top:.75rem;background:var(--gold)}
+/* Mode nuit : encarts posés sur une bande bleue */
+:root[data-theme="dark"] body .prose>.band:nth-of-type(even) .schema svg .sb{fill:#1B3150}
+:root[data-theme="dark"] body .prose>.band:nth-of-type(even) .team{background:#1B3150}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .prose>.band:nth-of-type(even) .schema svg .sb{fill:#1B3150}:root:not([data-theme="light"]) body .prose>.band:nth-of-type(even) .team{background:#1B3150}}
+:root[data-theme="dark"] body .btn:not(.ghost){color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body .btn:not(.ghost){color:#fff}}

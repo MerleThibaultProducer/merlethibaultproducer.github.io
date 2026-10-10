@@ -172,7 +172,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Comme chaque fin d'année à Game Sup, les promotions travaillent en équipe sur un projet d'environ **3 à 4 semaines**. Cette édition se distinguait par plusieurs phases de conception et de sélection des propositions en amont, qui ont abouti à ==4 sujets aux genres variés==."),
               T("Ma mission : produire ces ==4 jeux en parallèle== dans le cadre des **jalons Waterfall** de l'école (Proof of Concept, Alpha, Bêta), tout en laissant à chaque équipe une **organisation Agile** adaptée à son projet. Les intervenants jouaient le rôle d'**éditeurs**."),
-              T("Mon travail s'est organisé en **quatre macro-tâches**, que je présente dans les parties 02 à 05.")
+              T("Mon travail s'est organisé en **quatre macro-tâches**, que je présente ci-dessous.")
             ],[ FICHE("Les contraintes",["**4 semaines** : du 27 mai au 24 juin 2026","**4 jeux** produits en parallèle","**Jalons imposés** : Proof of Concept, Alpha, Bêta","**4 équipes** de 13 à 14 Game Designers et Game Artists","**Un seul producer** pour les 4 équipes"]) ]),
             LIGNE([
               FICHE("Les quatre projets",["**Le Castor et l'Écureuil** : un jeu de plateforme narratif","**Project GLOW** : un jeu d'action-aventure basé sur une mécanique de shoot et de portail","**Insight** : un jeu d'énigmes et d'horreur lovecraftien","**The Flowering Dead** : une proposition de boss rush post-apocalyptique"])
@@ -512,7 +512,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("As every year at Game Sup, classes work in teams on a project lasting about **3 to 4 weeks**. This edition stood out for several upstream design and selection phases, which led to ==4 topics of varied genres==."),
               T("My mission: produce these ==4 games in parallel== within the school's **Waterfall milestones** (Proof of Concept, Alpha, Beta), while giving each team an **Agile organisation** suited to its project. The instructors acted as **publishers**."),
-              T("My work was organised into **four macro-tasks**, presented in parts 02 to 05.")
+              T("My work was organised into **four macro-tasks**, presented below.")
             ],[ FICHE("The constraints",["**4 weeks**: from 27 May to 24 June 2026","**4 games** produced in parallel","**Set milestones**: Proof of Concept, Alpha, Beta","**4 teams** of 13 to 14 Game Designers and Game Artists","**A single producer** for the 4 teams"]) ]),
             LIGNE([
               FICHE("The four projects",["**Le Castor et l'Écureuil**: a narrative platformer","**Project GLOW**: an action-adventure game built on a shooting and portal mechanic","**Insight**: a Lovecraftian puzzle-horror game","**The Flowering Dead**: a post-apocalyptic boss rush"])

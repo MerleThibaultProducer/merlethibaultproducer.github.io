@@ -4,8 +4,8 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS,{label:t("infos"),route:"#/infos"}];
 /* ---------- Langue (FR / EN) ---------- */
 const UI = {
-  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",cvView:"Aperçu du CV",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
-  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",cvView:"Preview CV",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
+  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",cvView:"Aperçu du CV",nightMode:"Passer en mode nuit",dayMode:"Passer en mode jour",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
+  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",cvView:"Preview CV",nightMode:"Switch to dark mode",dayMode:"Switch to light mode",toTop:"Back to top",backCat:"Back:",cvLead:"My CV, to view here or download.",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",legalShort:"Legal notice",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
 };
 let lang = "fr";
 const t = k => UI[lang][k];
@@ -19,6 +19,11 @@ function setLang(l){
   try{ localStorage.setItem("lang", lang); }catch(e){}
 }
 try{ setLang(localStorage.getItem("lang")); }catch(e){ setLang("fr"); }
+/* Mode nuit : choix mémorisé, sinon réglage du système */
+try{ const th = localStorage.getItem("theme"); if(th==="dark"||th==="light") document.documentElement.dataset.theme = th; }catch(e){}
+const isDark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+const MOON = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>`;
+const SUN = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>`;
 
 function img(src, alt, fallback){ return src ? `<img src="${esc(src)}" alt="${esc(alt)}">` : esc(fallback); }
 
@@ -29,7 +34,7 @@ function chrome(active){
   $("#brand").innerHTML = `<span class="bn"><span class="b1">${esc(SITE.prenom)}</span> <span class="b2">${esc(SITE.nom.toUpperCase())}</span></span><span class="brole">${esc(SITE.titre)}</span>`;
   document.body.classList.toggle("is-home", active === "#/");
   $("#nav").innerHTML = NAV().map(n => `<li><a data-go="${n.route}" role="link" tabindex="0" ${n.route===active?'aria-current="page"':''}>${n.label}</a></li>`).join("")
-    + `<li class="lang" role="group" aria-label="${t("langLabel")}"><button type="button" data-lang="fr" aria-pressed="${lang==="fr"}" lang="fr" aria-label="Français">FR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="${lang==="en"}" lang="en" aria-label="English">EN</button></li>`;
+    + `<li class="lang" role="group" aria-label="${t("langLabel")}"><button type="button" data-lang="fr" aria-pressed="${lang==="fr"}" lang="fr" aria-label="Français">FR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="${lang==="en"}" lang="en" aria-label="English">EN</button><button type="button" class="theme-btn" data-theme-toggle aria-label="${isDark()?t("dayMode"):t("nightMode")}" title="${isDark()?t("dayMode"):t("nightMode")}">${isDark()?SUN:MOON}</button></li>`;
   document.querySelector("header nav").setAttribute("aria-label", t("mainNav"));
   $("#h-legal").textContent = t("legal"); $("#h-contact").textContent = t("contact");
   $("#lb").setAttribute("aria-label", t("enlarged")); $("#lb button").setAttribute("aria-label", t("close"));
@@ -353,6 +358,15 @@ document.addEventListener("click", e => {
   const b = e.target.closest && e.target.closest("[data-lang]");
   if(!b) return;
   e.stopPropagation(); setLang(b.getAttribute("data-lang")); render();
+});
+document.addEventListener("click", e => {
+  const b = e.target.closest && e.target.closest("[data-theme-toggle]");
+  if(!b) return;
+  e.stopPropagation();
+  const th = isDark() ? "light" : "dark";
+  document.documentElement.dataset.theme = th;
+  try{ localStorage.setItem("theme", th); }catch(err){}
+  const y = scrollY; render(); scrollTo(0, y);
 });
 addEventListener("popstate", () => { cur = location.hash || "#/"; render(); scrollTo(0,0); });
 addEventListener("hashchange", () => { const h = location.hash || "#/"; if(h !== cur){ cur = h; render(); scrollTo(0,0); } });

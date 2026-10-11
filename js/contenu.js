@@ -10,7 +10,7 @@ const SITE_FR = {
   devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
-    "Je suis Thibault, Junior Associate Producer dans le jeu vidéo, en dernière année à Game Sup. Sur quatre productions d'école, j'ai eu l'occasion de planifier et de suivre des projets avec jusqu'à quatre équipes en simultané, des premiers jalons jusqu'aux playtests. J'écoute chacun, j'adapte Agile et Waterfall à sa façon de travailler, et je fais circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un stage de fin d'études en production à partir de janvier 2027, partout en France ou en télétravail."
+    "Je suis Thibault, Junior Associate Producer dans le jeu vidéo, en dernière année à Game Sup. Sur quatre productions d'école, j'ai eu l'occasion de planifier et de suivre des projets avec jusqu'à quatre équipes en simultané, des premiers jalons jusqu'aux playtests. J'écoute chacun, j'adapte les méthodes de production à chaque équipe et je m'assure que la communication soit claire pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un stage de fin d'études en production à partir de janvier 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",
@@ -21,7 +21,7 @@ const SITE_FR = {
 };
 const SITE_EN = {...SITE_FR,
   intro: [
-    "I'm Thibault, a Junior Associate Producer in video games, in my final year at Game Sup. Across four school productions, I have planned and followed projects with up to four teams in parallel, from the first milestones to the playtests. I listen to everyone, adapt Agile and Waterfall to the way each person works, and keep information flowing so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an end-of-studies production internship starting in January 2027, anywhere in France or remote."
+    "I'm Thibault, a Junior Associate Producer in video games, in my final year at Game Sup. Across four school productions, I have planned and followed projects with up to four teams in parallel, from the first milestones to the playtests. I listen to everyone, adapt production methods to each team, and make sure communication stays clear so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an end-of-studies production internship starting in January 2027, anywhere in France or remote."
   ],
   legal: [
     "© 2026 Thibault Merle – All rights reserved.",

@@ -960,3 +960,16 @@ html body .car.keyart .zf{position:relative}
 html body .car.keyart .zf img{position:absolute;inset:0;width:100%;height:100%}
 html body .prose .car.keyart .zf.portrait{background:#0B1A33!important}
 html body .prose .car.keyart .zf img{background:transparent!important;border:0!important;box-shadow:none!important}
+
+/* ===== Cohérence d'ensemble ===== */
+/* Tous les titres de page portent le même trait doré */
+html body .project>h1::after,html body .infos-page>h1::after,html body .legal-page>h1::after{content:"";display:block;width:3rem;height:3px;margin-top:.8rem;background:var(--gold)}
+html body .infos-page>h1::after{margin-left:auto;margin-right:auto}
+/* Page Infos : même alternance blanc / bande bleu clair que les projets */
+.infos-page .sk-group:nth-of-type(2){background:#F1F5FA;box-shadow:0 0 0 100vmax #F1F5FA;clip-path:inset(0 -100vmax);border-top-color:transparent;padding-bottom:3rem}
+.infos-page .sk-group:nth-of-type(2)+.sk-group{border-top-color:transparent}
+.infos-page .sk-group h2::after{content:"";display:block;width:3rem;height:3px;margin:.75rem auto 0;background:var(--gold)}
+:root[data-theme="dark"] .infos-page .sk-group:nth-of-type(2){background:#12223A;box-shadow:0 0 0 100vmax #12223A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .infos-page .sk-group:nth-of-type(2){background:#12223A;box-shadow:0 0 0 100vmax #12223A}}
+/* Mentions légales : titres de section dans le même style que les parties */
+html body .legal-page h2{font:700 1.2rem/1.3 var(--sans);color:var(--head)}

@@ -925,3 +925,17 @@ html body .grid.exo .thumb.has-img img{inset:0;width:100%;height:100%;border-rad
 @media(max-width:1000px){.side{display:grid}}
 /* Sur téléphone, la marge est trop étroite : les flèches se posent en bas de l'écran */
 @media(max-width:760px){.side{--sd:2.7rem;top:auto;bottom:max(1rem,env(safe-area-inset-bottom,0px));transform:none;font-size:1.3rem}.side.prev{left:.8rem}.side.next{right:.8rem}}
+
+/* Pages de rubrique : un en-tête simple, puis les vignettes posées sur une bande bleu clair */
+.list-head h1::after{content:"";display:block;width:3rem;height:3px;margin-top:.8rem;background:var(--gold)}
+.list-head .lead{max-width:46rem;margin-bottom:0}
+.stage{margin-top:2.8rem;padding:3.4rem 0 4.2rem;background:#F1F5FA;box-shadow:0 0 0 100vmax #F1F5FA;clip-path:inset(0 -100vmax)}
+.stage .grid{margin-top:0}
+main:has(.stage){padding-bottom:0}
+html body .card .thumb{border-radius:4px;box-shadow:0 14px 30px -18px rgba(19,41,75,.55)}
+.card .thumb>img{transition:transform .45s ease}
+@media(hover:hover){.card .thumb:hover>img{transform:scale(1.03)}}
+@media (prefers-reduced-motion:reduce){.card .thumb>img{transition:none}}
+html body .card .cmeta+.cdesc,html body .card h3{color:var(--head)}
+:root[data-theme="dark"] .stage{background:#12223A;box-shadow:0 0 0 100vmax #12223A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stage{background:#12223A;box-shadow:0 0 0 100vmax #12223A}}

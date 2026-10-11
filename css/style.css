@@ -1007,3 +1007,13 @@ html body .prose p,html body .prose li,html body .brow .bt p,html body .brow .bt
 .home-intro .accroche{margin:0 0 1.2rem;font:700 clamp(1.6rem,2.6vw,2.2rem)/1.2 var(--sans);letter-spacing:-.015em;color:var(--head)}
 @media(max-width:480px){body.is-home .brand .bn{font-size:clamp(1.6rem,7.4vw,2.1rem)}}
 @media(max-width:480px){html body.is-home .brand .bn,html body.is-home .brand .b1,html body.is-home .brand .b2{font-size:1.55rem}}
+
+/* Police des titres : Bricolage Grotesque (OFL, hébergée dans fonts/), texte courant en Inter */
+@font-face{font-family:"Bricolage Grotesque";src:url("../fonts/BricolageGrotesque.woff") format("woff");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+:root{--display:"Bricolage Grotesque",var(--sans)}
+html body .brand,html body .brand .bn,html body .brand .b1,
+html body main h1,html body .band-head h2,html body .sk-group h2,html body .legal-page h2,
+html body .home-intro .accroche,html body .card h3,html body .car.keyart figcaption b,html body .team h3{font-family:var(--display);font-variation-settings:"opsz" 96;font-stretch:92%;letter-spacing:-.01em}
+html body main h1{font-weight:750}
+html body .band-head h2{font-weight:700}
+html body .brand,html body .brand .bn,html body .brand .b1,html body main h1,html body .band-head h2,html body .sk-group h2,html body .legal-page h2,html body .home-intro .accroche,html body .card h3,html body .car.keyart figcaption b,html body .team h3{font-stretch:97%;letter-spacing:0}

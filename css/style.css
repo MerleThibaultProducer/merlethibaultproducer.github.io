@@ -939,3 +939,11 @@ html body .card .thumb{border-radius:4px;box-shadow:0 14px 30px -18px rgba(19,41
 html body .card .cmeta+.cdesc,html body .card h3{color:var(--head)}
 :root[data-theme="dark"] .stage{background:#12223A;box-shadow:0 0 0 100vmax #12223A}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stage{background:#12223A;box-shadow:0 0 0 100vmax #12223A}}
+
+/* Key arts des jeux : grand carrousel en ouverture du projet */
+.car.keyart{max-width:none;margin:1.8rem 0 2rem}
+.car.keyart .zf{aspect-ratio:16/9;border-radius:4px;overflow:hidden;border:0}
+.car.keyart .zf img{width:100%;height:100%;object-fit:cover}
+.car.keyart figcaption{display:flex;flex-direction:column;gap:.35rem;max-width:52rem;margin:1rem auto 0;text-align:center}
+.car.keyart figcaption b{font:700 1.15rem/1.3 var(--sans);color:var(--head)}
+.car.keyart figcaption span{font:400 1rem/1.6 var(--sans)!important;color:var(--ink)!important}

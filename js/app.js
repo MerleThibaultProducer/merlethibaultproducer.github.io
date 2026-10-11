@@ -223,6 +223,10 @@ function frise(f){
   const ms = f.jalons.map(j=>{const v=j[0]/f.total;return `<span class="${v>.93?"end":v<.07?"start":""}" style="left:${pc(j[0])}"><i aria-hidden="true"></i><em class="lg">${esc(j[1])}</em><em class="sh" aria-hidden="true">${esc(j[2]||j[1])}</em></span>`;}).join("");
   return `<div class="frise" role="img" aria-label="${esc(f.label||"")}"><div class="fr-bar">${seg}</div><div class="fr-ms">${ms}</div><div class="fr-ends"><span>${esc(f.debut)}</span><span>${esc(f.fin)}</span></div></div>`;
 }
+/* Key arts des jeux en carrousel, avec le one-liner de chaque jeu sous l'image */
+function keyart(list){
+  return `<figure class="car keyart"><div class="car-track">${list.map(k=>`<div class="car-s"><div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img src="${esc(k[0])}" alt="${esc(k[1])} – key art">${LENS}</div><figcaption><b>${esc(k[1])}</b><span>${esc(k[2])}</span></figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Jeu précédent","Previous game")}">‹</button><span class="car-cnt">1 / ${list.length}</span><button type="button" data-car="1" aria-label="${q("Jeu suivant","Next game")}">›</button></div></figure>`;
+}
 function detail(sec, p, prev, next){
   const infos = Object.entries(p.infos||{}).map(([k,v])=>`<li><span>${esc(k)}</span>${esc(v)}</li>`).join("");
   const link = (q,cls,lab,arrow) => q ? `<a class="${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${esc(q.title)}</b></a>` : "";
@@ -230,6 +234,7 @@ function detail(sec, p, prev, next){
   return `<a class="back" data-go="${sec.route}" role="link" tabindex="0">‹ ${sec.label}</a>
   <article class="project${p.large?" large":""}"><h1>${esc(p.title)}</h1><p class="lead">${esc(p.desc)}</p>
     ${p.large&&(!p.img||p.nocover)?"":`<div class="cover${p.fit==="contain"||p.cimg?" contain":""}"${p.bg||p.cbg?` style="--pbg:${esc(p.bg||p.cbg)}"`:""}>${img(p.cimg||p.img,p.title,p.title[0])}</div>`}
+    ${p.keyart ? keyart(p.keyart) : ""}
     ${p.apercu ? recap(p) : `${infos?`<ul class="meta">${infos}</ul>`:""}${brief(p)}`}
     <div class="prose">${blocks(p.contenu)}</div></article>
   <nav class="pn" aria-label="${t("others")}">${link(prev,"prev","‹ "+t("prev"))}${link(next,"next",t("next")+" ›")}</nav>

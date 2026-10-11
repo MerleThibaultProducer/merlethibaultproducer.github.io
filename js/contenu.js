@@ -350,83 +350,50 @@ const PROJECTS_FR = {
                  role:"Auteur du Game Design Document : concept, systèmes, univers, personnage et niveau.",
                  resultat:"Un RPG au tour par tour où chaque mécanique trouve son incarnation dans le récit, et une connaissance concrète du travail de design, utile pour dialoguer avec les équipes en production." },
         contenu:[
-          BANDE("I","L'idée de départ",[
+          BANDE("I","L'idée et le concept",[
             LIGNE([
-              T("Parmi les créatures mythiques grecques, je me suis tourné vers les **naïades**, divinités des eaux, pour incarner l'héroïne du projet : Castalie, gardienne de la fontaine de Delphes. De là est née une idée simple : **une naïade parcourt la Grèce pour recruter et sauver des divinités** afin de combattre les armées de Typhon. Le joueur l'incarne et rencontre, au fil du jeu, d'autres héros et divinités qui deviennent ses compagnons."),
-              T("C'est son histoire qui m'a permis de **bâtir le gameplay**. J'ai donc travaillé dans cet ordre : d'abord le concept, les intentions, la boucle de jeu et le joueur visé, puis l'univers, le personnage et un niveau qui fait vivre les deux.")
-            ],[ IMG(CT.pitch,"L'énoncé central : Castalie face à Typhon") ])
+              T("Parmi les créatures mythiques grecques, j'ai choisi les naïades, divinités des eaux. De là est née une idée simple : **une naïade parcourt la Grèce pour sauver des divinités** et combattre les armées de Typhon. Le joueur incarne Castalie, gardienne de la fontaine de Delphes, et rencontre au fil du jeu des héros et des dieux qui deviennent ses compagnons."),
+              T("Castalie's Tears est un **RPG au tour par tour** en solo, pensé pour PC et Nintendo Switch, avec un modèle premium. Pour le situer : Dragon Quest XI rencontre Dragon Age : Inquisition dans un univers proche d'Immortals Fenyx Rising. C'est un jeu posé, qui récompense la réflexion et l'organisation plus que les réflexes.")
+            ],[ CAROUSEL([[CT.pitch,"L'énoncé central : Castalie face à Typhon"],[CT.one,"Le one-liner et ses trois références"],[CT.info,"La fiche d'information du projet"]]) ])
           ]),
-          BANDE("II","Le concept",[
+          BANDE("II","Intentions et piliers",[
             LIGNE([
-              T("Castalie's Tears est un **RPG au tour par tour** en solo, en vue à la troisième personne, pensé pour PC et Nintendo Switch, avec un modèle premium et des DLC. Il s'adresse aux fans de RPG et aux passionnés de mythologie."),
-              T("Pour le situer, **Dragon Quest XI rencontre Dragon Age : Inquisition dans un univers proche d'Immortals Fenyx Rising**."),
-              T("Côté exigence, c'est un jeu **posé et riche en systèmes** : il récompense la réflexion, l'organisation et la patience plus que les réflexes.")
-            ],[ CAROUSEL([[CT.one,"Le one-liner et ses trois références"],[CT.info,"La fiche d'information du projet"]]) ])
-          ]),
-          BANDE("III","Intentions et piliers",[
-            LIGNE([
-              T("Je pars de **valeurs** (courage, coopération, résilience) et d'**intentions** (exploration, solitude, don de soi, travail d'équipe, mystère). Les thèmes : la culpabilité du survivant, la confiance en l'autre comme en soi, et la question « qu'est-ce qu'un héros ? ». Côté design, cela donne de la personnalisation, du crafting, de la gestion et du leadership, ainsi que la conquête du pouvoir."),
-              T("Ces intentions se traduisent en **trois piliers de gameplay** : combattre les marées de Typhon, explorer un monde désolé et prendre soin de sa Source et la faire grandir. J'ai aussi listé **ce que le jeu ne sera pas** : multijoueur coopératif, combat tactique sur grille à la manière d'un Tactical RPG, arbre de compétences, mini-jeux, infiltration et fins multiples. Cela garde le périmètre sous contrôle.")
+              T("Je suis parti de valeurs (courage, coopération, résilience) et de thèmes : la culpabilité du survivant, la confiance, et la question « qu'est-ce qu'un héros ? ». Ces intentions se traduisent en **trois piliers de gameplay** : combattre les marées de Typhon, explorer un monde désolé, et prendre soin de sa Source pour la faire grandir."),
+              T("J'ai aussi listé **ce que le jeu ne sera pas** : multijoueur, combat tactique sur grille, arbre de compétences, mini-jeux, infiltration, fins multiples. C'est ce qui garde le périmètre sous contrôle.")
             ],[ CAROUSEL([[CT.pillars,"Les trois piliers de gameplay"],[CT.notdo,"Ce que le jeu n'est pas"]]) ])
           ]),
-          BANDE("IV","La boucle de gameplay",[
+          BANDE("III","La boucle de gameplay et le joueur visé",[
             LIGNE([
-              T("Le joueur gère sa base, explore, puis résout des énigmes ou combat, acquiert des ressources et progresse, avant de fabriquer ou d'échanger et de revenir à sa base."),
-              T("J'ai qualifié chaque étape selon son **rôle dans l'économie du jeu** : source (explorer, acquérir, progresser), convertisseur (gérer, résoudre), drain (combattre) et marchand (fabriquer, échanger). Cela permet de vérifier que **la boucle se nourrit autant qu'elle consomme**.")
+              T("Le joueur gère sa base, explore, résout des énigmes ou combat, acquiert des ressources et progresse, puis fabrique ou échange avant de revenir à sa base. J'ai qualifié chaque étape selon son rôle dans l'économie du jeu (source, convertisseur, drain, marchand) pour vérifier que **la boucle se nourrit autant qu'elle consomme**."),
+              T("Le jeu vise un **public adulte et actif**, qui joue par sessions courtes : d'abord Achiever, puis Explorer selon la typologie de Bartle. Il cherche de la profondeur et des choix, d'où un jeu qui mise sur l'histoire et la gestion plutôt que sur l'énigme.")
             ],[ IMG(CT.loop,"La boucle de gameplay de Castalie's Tears") ]),
             LIGNE([
               CAROUSEL([[CT.manage,"Gérer"],[CT.explore,"Explorer"],[CT.res,"Résoudre"],[CT.acq,"Acquérir"],[CT.fight,"Combattre"],[CT.craft,"Fabriquer"],[CT.lvl,"Progresser"],[CT.trade,"Échanger"]])
             ])
           ]),
-          BANDE("V","Dresser un profil cible",[
+          BANDE("IV","De la mécanique au récit",[
             LIGNE([
-              T("Le jeu s'adresse à un **public adulte et actif**, qui joue sur PC et sur Switch par sessions courtes. Selon la **typologie de Bartle**, ce joueur est d'abord Achiever, puis Explorer : il cherche du défi, de la détente, de l'accomplissement et des émotions, porté par une histoire profonde, des mécaniques de RPG et une dimension de gestion."),
-              T("Ses attentes guident mes choix. Il rejette le manque de profondeur et de narration, la condescendance, les énigmes trop complexes et l'absence de choix. C'est pourquoi le jeu mise sur **l'histoire et la gestion** plutôt que sur l'énigme.")
-            ],[ CHIFFRES([["1 h","sessions sur PC"],["25-35 min","sessions sur Switch"],["Achiever","profil principal"],["Explorer","profil secondaire"]]) ])
-          ]),
-          BANDE("VI","De la mécanique au récit",[
+              T("Typhon a vaincu les dieux et dispersé leurs pouvoirs, les Grâces divines. Il ne reste qu'une terre aride, des ruines et quelques sanctuaires. Dans cet univers, **chaque mécanique a son incarnation dans le récit** : on ne gère pas un menu, on protège une fontaine sacrée ; on ne débloque pas une compétence, on hérite du pouvoir d'un dieu déchu."),
+              T("Même le butin raconte quelque chose : les bêtes de Typhon dévorent les fragments de Grâce pour gagner en puissance, si bien que **ce que le joueur ramasse est aussi ce que l'ennemi convoite**.")
+            ],[ CAROUSEL([[CT.realm,"Le Royaume de Lumière avant la Chute"],[CT.typhon,"Typhon"],[CT.sealed,"Un Temple scellé"]]) ]),
             LIGNE([
-              T("Le Narrative Design commence là où les systèmes cherchent leur sens. Dans Castalie's Tears, **chaque mécanique a son incarnation dans le récit** : on ne gère pas un menu, on protège une fontaine sacrée ; on ne débloque pas une compétence, on hérite du pouvoir d'un dieu déchu."),
-              TABLEAU("Une mécanique, une incarnation",["Mécanique","Incarnation narrative"],[["La Source (gestion de la base)","La fontaine sacrée de Delphes, sanctuaire de Castalie, qui accueille les réfugiés"],["La Grâce divine (compétences, craft)","Les pouvoirs des dieux déchus, fragmentés et dispersés par Typhon"],["Les compagnons (recrutement)","Divinités mineures, héros et réfugiés à sauver"],["Les Temples scellés (donjons, boss)","Les ruines où Typhon et ses Baros retiennent les grands dieux"],["Les ressources (butin, craft)","Les dépouilles des bêtes de Typhon : peaux, griffes, organes"],["La progression","Castalie qui reprend confiance, de naïade fragile à cheffe"]],true)
+              TABLEAU("Une mécanique, une incarnation",["Mécanique","Incarnation narrative"],[["La Source (gestion de la base)","La fontaine sacrée de Delphes, qui accueille les réfugiés"],["La Grâce divine (compétences, craft)","Les pouvoirs des dieux déchus, dispersés par Typhon"],["Les compagnons (recrutement)","Divinités mineures, héros et réfugiés à sauver"],["Les Temples scellés (donjons, boss)","Les ruines où sont retenus les grands dieux"],["La progression","Castalie qui reprend confiance, de naïade fragile à cheffe"]],true)
             ])
           ]),
-          BANDE("VII","Un univers en deuil",[
+          BANDE("V","Castalie et le niveau du Temple d'Apollon",[
             LIGNE([
-              T("L'histoire se déroule à l'Âge des Légendes, en Grèce, le Royaume de Lumière : un havre doré où les humains vivent en harmonie avec les dieux. Puis vient **la Chute**. Typhon, fils de Gaïa et du Tartare, brise ses chaînes, détruit l'Olympe et vainc les dieux, tués ou scellés, leurs **Grâces divines** dispersées. Il ne reste qu'une terre aride, des ruines et quelques sanctuaires, dont la fontaine de Castalie à Delphes."),
-              T("Typhon et Échidna ont engendré des armées de harpies, de chimères et de manticores, et cinq calamités, **les Baros**. Les bêtes sont attirées par les fragments de Grâce, qu'elles dévorent pour gagner en puissance : **le butin du joueur est donc aussi ce que l'ennemi convoite**.")
-            ],[ IMG(CT.realm,"Le Royaume de Lumière avant la Chute"), IMG(CT.typhon,"Typhon"), FICHE("Les cinq Baros, du plus faible au plus fort",["Nosos, le Cheval pestilentiel","Aétès, le Vent des ombres","La Gorgone, la sorcière serpentine","Le Colchien, le Dragon doré","Charybde, le Dévoreur des mers"]) ]),
+              T("J'ai construit Castalie sur **un défaut et une évolution** : elle manque de confiance, se méfie de ses pouvoirs et des inconnus. Au fil de l'aventure, elle devient une combattante et une cheffe, et sa voix s'affirme. C'est par elle que passent les thèmes du jeu."),
+              T("Le premier niveau, les ruines du temple d'Apollon, son mentor, est pensé comme **un chemin dans la mémoire** : des mosaïques racontent le passé, et Castalie commente ce dont elle se souvient. L'intensité monte par paliers entre les salles, avec des respirations, jusqu'au boss qui l'attend là où elle conversait avec Apollon.")
+            ],[ IMG(CT.castalie,"Castalie, la naïade de la fontaine de Delphes","sm") ]),
             LIGNE([
-              T("**La Grâce divine est le cœur de l'univers comme du gameplay** : la source du pouvoir des dieux, nourrie par la vénération. Un dieu peut en offrir un fragment à un humain ou à un autre dieu, au risque de le consumer. Dispersée, elle attise la convoitise de tous."),
-              T("Les humains survivent dans des sanctuaires cachés. Certains, les héros, ont fusionné avec des fragments de Grâce pour combattre. La technologie a régressé, mais de petits éclats de Grâce permettent d'enchanter outils et armes. Les **Temples scellés**, enfin, sont les ruines où les grands dieux sont retenus prisonniers : des lieux de pouvoir, gardés par les Baros.")
-            ],[ IMG(CT.sealed,"Un Temple scellé") ])
+              CAROUSEL([[CT.moodboard,"Moodboard du niveau"],[CT.ld,"Plan du niveau (layout)"],[CT.mol,"Diagramme moléculaire : les salles et leurs liens"],[CT.pacing,"Courbe d'intensité du niveau"]])
+            ])
           ]),
-          BANDE("VIII","Castalie, un personnage qui évolue",[
+          BANDE("VI","Ce que j'en retiens",[
             LIGNE([
-              T("Castalie est une naïade crénienne, fille du dieu-fleuve Achéloos, élève d'Apollon à Delphes où elle veille sur la fontaine sacrée. À la Chute, Apollon lui demande de rester protéger Delphes. Elle pleure chaque mort qu'elle ressent : ses larmes lui laissent des cicatrices sur les joues et, disent les témoins, **capturent les souvenirs de cette guerre**. Blessé, Apollon la cache avant de fuir et lui fait promettre de survivre."),
-              T("Je l'ai construite sur **un défaut et une évolution** : elle manque de confiance, se méfie de ses pouvoirs comme des inconnus et craint le changement. Au fil de l'aventure, elle trouve sa force comme déesse, comme cheffe et comme amie : elle devient une combattante, une héroïne, et sa voix s'affirme. Elle parle d'abord le moins possible, d'une voix grave, calme et méfiante. C'est par elle que passent les thèmes du jeu : la culpabilité du survivant, la confiance, et ce qu'est un héros.")
-            ],[ IMG(CT.castalie,"Castalie, la naïade de la fontaine de Delphes","sm"), FICHE("Castalie en bref",["Naïade crénienne de la fontaine de Delphes","Voix grave, calme, méfiante, peu de mots","Défauts : manque de confiance, peur du changement","Évolution : de la solitude au leadership"]) ])
-          ]),
-          BANDE("IX","Le niveau du Temple d'Apollon",[
-            LIGNE([
-              T("J'ai décliné ces intentions dans un niveau : **le premier Temple scellé**, les ruines du temple principal d'Apollon à Delphes. Castalie y cherche un fragment de Grâce divine et sent le pouvoir endormi de son mentor. Il lui faut trouver le passage vers la partie profonde du temple, se battre contre la marée de bêtes, puis affronter une créature enragée qui s'est gorgée de ce pouvoir."),
-              T("Le niveau est pensé comme **un chemin dans la mémoire**. Des mosaïques racontent le passé et le lore au fil du parcours, et Castalie commente ce dont elle se souvient. Le boss attend dans le naos, là où elle conversait avec Apollon : une cinématique où elle laisse enfin éclater sa colère et sa détermination. Le niveau allume la flamme de Castalie.")
-            ],[ IMG(CT.moodboard,"Moodboard du niveau"), IMG(CT.ld,"Plan du niveau (layout)") ]),
-            LIGNE([
-              T("Le décor s'inspire d'un temple grec avec quelques libertés : plus vaste, plusieurs salles, mais avec les **trois pièces principales**, le pronaos, le naos et l'opisthodome qui abritait le trésor. Les colonnes sont plus ou moins détruites. L'ambiance sonore reste sobre : une musique grave et mystérieuse, des pas qui résonnent dans les couloirs."),
-              T("Côté gameplay : de petits ennemis que l'on peut fuir, un mini-boss qui garde la clé du naos, un boss à vaincre pour obtenir la Grâce d'Apollon, deux portes secrètes qui raccourcissent le trajet, et des coffres de souvenirs d'avant la Chute. Une seule énigme : trouver la clé. **L'intensité monte par paliers** entre les salles, avec des respirations dans les antichambres, jusqu'au point culminant dans le naos.")
-            ],[ IMG(CT.mol,"Diagramme moléculaire : les salles et leurs liens"), IMG(CT.pacing,"Courbe d'intensité du niveau") ])
-          ]),
-          BANDE("X","Conclusion",[
-            LIGNE([
-              T("Castalie's Tears cherche à tenir ensemble **un système et une émotion**. Côté Game Design, une boucle de gestion, d'exploration et de combat où chaque étape nourrit la suivante. Côté Narrative Design, un univers en deuil où chacune de ces étapes devient un geste : protéger une fontaine, recueillir la Grâce d'un dieu déchu, sauver des réfugiés."),
-              T("Le joueur incarne Castalie : sa progression est la sienne. À mesure que sa Source et ses pouvoirs grandissent, et qu'elle rencontre d'autres héros, elle reprend confiance. Le niveau du Temple d'Apollon est le premier moment où **gameplay et émotion se rejoignent** : le joueur franchit un seuil de gameplay, et Castalie, qu'il incarne, un seuil émotionnel."),
-              T("Ce que je retiens : un GDD ne se limite pas à lister des features. Il doit **relier les intentions aux mécaniques, et les mécaniques à ce que le joueur ressent**. C'est cette chaîne que j'ai cherché à rendre lisible, du pilier jusqu'au niveau. Comme producer, c'est aussi ce qui me permet de comprendre ce que l'on demande aux équipes de design, et d'en estimer la portée.")
-            ],[ FICHE("Ce que je retiens",["Une boucle de jeu où chaque étape nourrit la suivante","Une mécanique, une incarnation narrative","Une héroïne incarnée par le joueur, dont l'évolution suit la progression","Un niveau qui sert à la fois le gameplay et l'émotion"]) ])
-          ]),
-          BANDE("XI","Références",[
-            LIGNE([
-              T("Ma base de références couvre jeux vidéo, rétro-gaming, jeux de plateau, livres, films et séries, chacune choisie pour un **usage précis** : l'interface, les quêtes, la gestion d'équipe, les mythes ou l'esthétique grecque.")
-            ],[ FICHE("Jeux vidéo",["Dragon Quest XI : l'interface","Baldur's Gate III : les interactions avec les PNJ","Octopath Traveler II : le combat au tour par tour","Fire Emblem : Three Houses : les relations entre compagnons","Expeditions : Rome : le design des quêtes","Dragon Age : Inquisition : la gestion de l'avant-poste","Immortals Fenyx Rising : l'esthétique grecque"]), FICHE("Rétro-gaming et plateau",["Chrono Trigger : relations entre personnages et combat","Final Fantasy VI : arcs narratifs des compagnons","Suikoden II : gestion d'équipe","Golden Sun : magie et environnement","Glory of Heracles : dieux, humains et héros","Gloomhaven et Aeon's End : tour par tour et travail d'équipe","Theomachy et Pantheon : pouvoirs divins"]), FICHE("Mythologie et autres médias",["Hésiode, La Théogonie : dieux et mythes","Ovide, Les Métamorphoses : les mythes sur Castalie","Pierre Lévêque, Le Livre des Nymphes","Bernard Sergent, Les Nymphes et les Néréides","Princesse Mononoké : désolation et restauration","Blood of Zeus : la mort des dieux et la puissance divine","Children of the Whales : survivre face à des forces supérieures"]) ], "dessous")
+              T("Un GDD ne se limite pas à lister des features : il doit **relier les intentions aux mécaniques**, et les mécaniques à ce que le joueur ressent. C'est cette chaîne que j'ai cherché à rendre lisible, du pilier jusqu'au niveau."),
+              T("Comme producer, c'est ce qui me permet aujourd'hui de **comprendre ce que l'on demande aux équipes de design**, d'en estimer la portée et de savoir où se trouve le cœur d'un projet quand il faut arbitrer.")
+            ])
           ])
         ] }),
     P({ title:"Exercice 3 – Le marché africain du jeu vidéo à travers le cas du Nigéria", large:true, nocover:true,
@@ -685,83 +652,50 @@ const PROJECTS_EN = {
                  role:"Author of the Game Design Document: concept, systems, world, character and level.",
                  resultat:"A turn-based RPG where every mechanic is embodied in the story, and hands-on knowledge of design work, useful for working with design teams in production." },
         contenu:[
-          BANDE("I","The starting idea",[
+          BANDE("I","The idea and the concept",[
             LIGNE([
-              T("Among the Greek mythical creatures, I turned to the **Naiads**, goddesses of the waters, to embody the project's heroine: Castalie, guardian of the Delphi spring. From there came a simple idea: **a Naiad travels through Greece recruiting and saving divinities** to fight Typhon's armies. The player embodies her and meets, as the game goes on, other heroes and deities who become her companions."),
-              T("Her story is what allowed me to **build the gameplay**. So I worked in this order: first the concept, the intentions, the core loop and the target player, then the world, the character and a level that brings both to life.")
-            ],[ IMG(CT.pitch,"The core statement: Castalie facing Typhon") ])
+              T("Among the Greek mythical creatures, I chose the Naiads, goddesses of the waters. From there came a simple idea: **a Naiad travels through Greece to save divinities** and fight Typhon's armies. The player embodies Castalie, guardian of the Delphi spring, and meets heroes and gods along the way who become her companions."),
+              T("Castalie's Tears is a single-player **turn-based RPG** designed for PC and Nintendo Switch, with a premium model. To place it: Dragon Quest XI meets Dragon Age: Inquisition in a universe close to Immortals Fenyx Rising. It is a measured game that rewards thinking and organisation more than reflexes.")
+            ],[ CAROUSEL([[CT.pitch,"The core statement: Castalie against Typhon"],[CT.one,"The one-liner and its three references"],[CT.info,"The project information sheet"]]) ])
           ]),
-          BANDE("II","The concept",[
+          BANDE("II","Intentions and pillars",[
             LIGNE([
-              T("Castalie's Tears is a single-player, third-person **turn-based RPG** designed for PC and Nintendo Switch, with a premium model and DLC. It targets RPG fans and mythology enthusiasts."),
-              T("To place it, **Dragon Quest XI meets Dragon Age: Inquisition in a universe similar to Immortals Fenyx Rising**."),
-              T("In terms of demands on the player, it is a **measured, system-rich** game: it rewards thinking, organisation and patience more than reflexes.")
-            ],[ CAROUSEL([[CT.one,"The one-liner and its three references"],[CT.info,"The project information sheet"]]) ])
-          ]),
-          BANDE("III","Intentions and pillars",[
-            LIGNE([
-              T("I start from **values** (courage, cooperation, resilience) and **intentions** (exploration, loneliness, selflessness, teamwork, mystery). The themes: survivor guilt, trust in others as in oneself, and the question “what is a hero?”. On the design side, this means customisation, crafting, management and leadership, and power claiming."),
-              T("These intentions become **three gameplay pillars**: fight Typhon's tides, explore a desolate world and take care of your Source and make it grow. I also listed **what the game will not be**: cooperative multiplayer, grid-based tactical combat in the style of a Tactical RPG, a skill tree, mini-games, stealth and multiple endings. This keeps the scope under control.")
+              T("I started from values (courage, cooperation, resilience) and themes: survivor guilt, trust, and the question “what is a hero?”. These intentions become **three gameplay pillars**: fight Typhon's tides, explore a desolate world, and take care of your Source to make it grow."),
+              T("I also listed **what the game will not be**: multiplayer, grid-based tactical combat, a skill tree, mini-games, stealth, multiple endings. That is what keeps the scope under control.")
             ],[ CAROUSEL([[CT.pillars,"The three gameplay pillars"],[CT.notdo,"What the game is not"]]) ])
           ]),
-          BANDE("IV","The core loop",[
+          BANDE("III","The core loop and the target player",[
             LIGNE([
-              T("The player manages their base, explores, then resolves puzzles or fights, acquires resources and levels up, before crafting or trading and returning to the base."),
-              T("I qualified each step by its **role in the game economy**: source (explore, acquire, level up), converter (manage, resolve), drain (fight) and trader (craft, trade). This lets me check that **the loop feeds itself as much as it consumes**.")
+              T("The player manages their base, explores, solves puzzles or fights, gathers resources and levels up, then crafts or trades before returning to base. I qualified each step by its role in the game economy (source, converter, drain, trader) to check that **the loop feeds itself as much as it consumes**."),
+              T("The game targets an **active adult audience** who plays in short sessions: Achiever first, then Explorer in Bartle's taxonomy. They want depth and choices, hence a game that bets on story and management rather than puzzles.")
             ],[ IMG(CT.loop,"The core loop of Castalie's Tears") ]),
             LIGNE([
               CAROUSEL([[CT.manage,"Manage"],[CT.explore,"Explore"],[CT.res,"Resolve"],[CT.acq,"Acquire"],[CT.fight,"Fight"],[CT.craft,"Craft"],[CT.lvl,"Level up"],[CT.trade,"Trade"]])
             ])
           ]),
-          BANDE("V","Building a target profile",[
+          BANDE("IV","From mechanics to story",[
             LIGNE([
-              T("The game targets an **active adult audience** who plays on PC and Switch in short sessions. In **Bartle's taxonomy**, this player is first an Achiever, then an Explorer: they look for challenge, relaxation, achievement and emotions, carried by a deep story, RPG mechanics and a management dimension."),
-              T("Their expectations guide my choices. They reject shallowness and a lack of narrative, condescension, over-complicated puzzles and a lack of choice. That is why the game bets on **story and management** rather than on puzzles.")
-            ],[ CHIFFRES([["1 h","sessions on PC"],["25-35 min","sessions on Switch"],["Achiever","main profile"],["Explorer","secondary profile"]]) ])
-          ]),
-          BANDE("VI","From mechanics to story",[
+              T("Typhon has defeated the gods and scattered their powers, the Divine Graces. What remains is a barren land, ruins and a few sanctuaries. In this world, **every mechanic is embodied in the story**: you don't manage a menu, you protect a sacred fountain; you don't unlock a skill, you inherit the power of a fallen god."),
+              T("Even the loot tells a story: Typhon's beasts devour fragments of Grace to grow stronger, so **what the player collects is also what the enemy craves**.")
+            ],[ CAROUSEL([[CT.realm,"The Realm of Light before the Fall"],[CT.typhon,"Typhon"],[CT.sealed,"A Sealed Temple"]]) ]),
             LIGNE([
-              T("Narrative Design begins where systems look for meaning. In Castalie's Tears, **every mechanic has its embodiment in the story**: you don't manage a menu, you protect a sacred fountain; you don't unlock a skill, you inherit the power of a fallen god."),
-              TABLEAU("One mechanic, one embodiment",["Mechanic","Narrative embodiment"],[["The Source (base management)","The sacred fountain of Delphi, Castalie's sanctuary, which shelters refugees"],["Divine Grace (skills, crafting)","The powers of the fallen gods, fragmented and scattered by Typhon"],["Companions (recruitment)","Minor deities, heroes and refugees to save"],["Sealed Temples (dungeons, bosses)","The ruins where Typhon and his Bares hold the great gods"],["Resources (loot, crafting)","The remains of Typhon's beasts: hides, claws, organs"],["Progression","Castalie regaining confidence, from fragile Naiad to leader"]],true)
+              TABLEAU("One mechanic, one embodiment",["Mechanic","Narrative embodiment"],[["The Source (base management)","The sacred fountain of Delphi, which shelters refugees"],["Divine Grace (skills, crafting)","The powers of the fallen gods, scattered by Typhon"],["Companions (recruitment)","Minor deities, heroes and refugees to rescue"],["Sealed Temples (dungeons, bosses)","The ruins where the great gods are held"],["Progression","Castalie regaining confidence, from fragile Naiad to leader"]],true)
             ])
           ]),
-          BANDE("VII","A universe in mourning",[
+          BANDE("V","Castalie and the Temple of Apollo level",[
             LIGNE([
-              T("The story takes place in the Age of Legend, in Greece, the Realm of Light: a golden haven where humans live in harmony with the gods. Then comes **the Fall**. Typhon, son of Gaia and Tartarus, breaks his chains, destroys Olympus and defeats the gods, killed or sealed away, their **Divine Graces** scattered. What remains is a barren land, ruins and a few sanctuaries, including Castalie's fountain at Delphi."),
-              T("Typhon and Echidna bred armies of harpies, chimeras and manticores, and five calamities, **the Bares**. The beasts are drawn to fragments of Grace, which they devour to grow stronger: **the player's loot is also what the enemy craves**.")
-            ],[ IMG(CT.realm,"The Realm of Light before the Fall"), IMG(CT.typhon,"Typhon"), FICHE("The five Bares, from weakest to strongest",["Nosos, the Pestilential Horse","Aetès, the Wind of Shadows","Gorgon, the Serpentine Witch","Colchian, the Golden Dragon","Charybdis, the Sea Devourer"]) ]),
+              T("I built Castalie on **a flaw and an evolution**: she lacks confidence and distrusts her powers and strangers. Over the adventure, she becomes a fighter and a leader, and her voice grows more assured. The game's themes run through her."),
+              T("The first level, the ruins of the temple of Apollo, her mentor, is designed as **a walk through memory**: mosaics tell the past, and Castalie comments on what she remembers. Intensity rises in steps between rooms, with breathers, up to the boss waiting where she used to talk with Apollo.")
+            ],[ IMG(CT.castalie,"Castalie, the Naiad of the Delphi spring","sm") ]),
             LIGNE([
-              T("**Divine Grace is the heart of the universe as well as of the gameplay**: the source of the gods' power, fed by veneration. A god can gift a fragment to a human or another god, at the risk of consuming them. Scattered, it stirs everyone's greed."),
-              T("Humans survive in hidden sanctuaries. Some, the heroes, have fused with fragments of Grace to fight. Technology has regressed, but small splinters of Grace can enchant tools and weapons. The **Sealed Temples**, finally, are the ruins where the great gods are held prisoner: places of power, guarded by the Bares.")
-            ],[ IMG(CT.sealed,"A Sealed Temple") ])
+              CAROUSEL([[CT.moodboard,"Level moodboard"],[CT.ld,"Level layout"],[CT.mol,"Molecular diagram: rooms and their links"],[CT.pacing,"Level intensity curve"]])
+            ])
           ]),
-          BANDE("VIII","Castalie, a character who evolves",[
+          BANDE("VI","What I take away",[
             LIGNE([
-              T("Castalie is a Crenian Naiad, daughter of the river god Achelous, a student of Apollo at Delphi where she watches over the sacred fountain. At the Fall, Apollo tells her to stay and protect Delphi. She weeps for every death she feels: her tears leave scars on her cheeks and, witnesses say, **capture the memories of that war**. Wounded, Apollo hides her before fleeing and makes her promise to survive."),
-              T("I built her on **a flaw and an evolution**: she lacks confidence, distrusts her own powers as much as strangers, and fears change. Over the adventure, she finds her strength as a goddess, a leader and a friend: she becomes a fighter, a hero, and her voice grows more assured. At first she speaks as little as possible, in a low, calm, suspicious voice. The game's themes run through her: survivor guilt, trust, and what a hero is.")
-            ],[ IMG(CT.castalie,"Castalie, the Naiad of the fountain of Delphi","sm"), FICHE("Castalie at a glance",["Crenian Naiad of the fountain of Delphi","Low, calm, suspicious voice, few words","Flaws: lack of confidence, fear of change","Evolution: from solitude to leadership"]) ])
-          ]),
-          BANDE("IX","The Temple of Apollo level",[
-            LIGNE([
-              T("I applied these intentions to a level: **the first Sealed Temple**, the ruins of Apollo's main temple at Delphi. Castalie looks for a fragment of Divine Grace there and feels the dormant power of her mentor. She must find the way to the deeper part of the temple, fight through the tide of beasts, then face an enraged creature that has gorged itself on that power."),
-              T("The level is designed as **a walk through memory**. Mosaics tell the past and the lore along the way, and Castalie comments on what she remembers. The boss waits in the naos, where she used to talk with Apollo: a cinematic where she finally lets her anger and determination burst out. The level kindles Castalie's flame.")
-            ],[ IMG(CT.moodboard,"Level moodboard"), IMG(CT.ld,"Level layout") ]),
-            LIGNE([
-              T("The setting is inspired by a Greek temple with a few liberties: larger, with several rooms, but keeping the **three main chambers**, the pronaos, the naos and the opisthodomos that housed the treasury. Columns are more or less destroyed. The sound stays restrained: a low, mysterious music and footsteps echoing in the corridors."),
-              T("On the gameplay side: minor enemies you can run from, a mini-boss guarding the key to the naos, a boss to defeat to obtain Apollo's Grace, two secret doors that shorten the way, and chests of memorabilia from before the Fall. One puzzle only: finding the key. **The intensity rises in steps** between rooms, with breathers in the antechambers, up to the peak in the naos.")
-            ],[ IMG(CT.mol,"Molecular diagram: the rooms and their links"), IMG(CT.pacing,"The level's intensity curve") ])
-          ]),
-          BANDE("X","Conclusion",[
-            LIGNE([
-              T("Castalie's Tears tries to hold **a system and an emotion** together. On the Game Design side, a loop of management, exploration and combat where each step feeds the next. On the Narrative Design side, a universe in mourning where each of these steps becomes a gesture: protecting a fountain, gathering the Grace of a fallen god, saving refugees."),
-              T("The player embodies Castalie: her progression is theirs. As her Source and powers grow, and as she meets other heroes, she regains confidence. The Temple of Apollo level is the first moment where **gameplay and emotion meet**: the player crosses a gameplay threshold, and Castalie, whom they embody, an emotional one."),
-              T("What I take away: a GDD is not just a list of features. It must **link intentions to mechanics, and mechanics to what the player feels**. That chain is what I tried to make readable, from pillar to level. As a producer, it also helps me understand what is being asked of design teams, and estimate its scope.")
-            ],[ FICHE("What I take away",["A core loop where each step feeds the next","One mechanic, one narrative embodiment","A heroine embodied by the player, whose evolution follows the progression","A level that serves both gameplay and emotion"]) ])
-          ]),
-          BANDE("XI","References",[
-            LIGNE([
-              T("My reference base covers video games, retro gaming, board games, books, films and series, each chosen for a **precise use**: interface, quests, team management, myths or Greek aesthetics.")
-            ],[ FICHE("Video games",["Dragon Quest XI: the interface","Baldur's Gate III: NPC interactions","Octopath Traveler II: turn-based combat","Fire Emblem: Three Houses: companion relationships","Expeditions: Rome: quest design","Dragon Age: Inquisition: outpost management","Immortals Fenyx Rising: Greek aesthetics"]), FICHE("Retro gaming and board games",["Chrono Trigger: character relationships and combat","Final Fantasy VI: companion narrative arcs","Suikoden II: team management","Golden Sun: magic and environment","Glory of Heracles: gods, humans and heroes","Gloomhaven and Aeon's End: turn-based and teamwork","Theomachy and Pantheon: divine powers"]), FICHE("Mythology and other media",["Hesiod, Theogony: gods and myths","Ovid, Metamorphoses: the myths about Castalie","Pierre Lévêque, Le Livre des Nymphes","Bernard Sergent, Les Nymphes et les Néréides","Princess Mononoke: desolation and restoration","Blood of Zeus: the gods' deaths and divine power","Children of the Whales: surviving against greater forces"]) ], "dessous")
+              T("A GDD is not just a list of features: it must **link intentions to mechanics**, and mechanics to what the player feels. That chain is what I tried to make readable, from pillar to level."),
+              T("As a producer, this is what now helps me **understand what is being asked of design teams**, estimate its scope, and know where the heart of a project lies when choices have to be made.")
+            ])
           ])
         ] }),
     P({ title:"Exercise 3 – The African Video Game Market through the Case of Nigeria", large:true, nocover:true,

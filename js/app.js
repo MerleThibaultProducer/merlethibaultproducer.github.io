@@ -214,14 +214,7 @@ function brief(p){
 function recap(p){
   const facts = Object.entries(p.infos||{}).map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
   const txt = [].concat(p.apercu).map(x=>`<p>${rich(x)}</p>`).join("");
-  return `<section class="recap">${facts?`<dl class="facts">${facts}</dl>`:""}${p.frise?frise(p.frise):""}<div class="recap-txt">${txt}</div></section>`;
-}
-/* Frise de projet : segments (début, fin, libellé) et jalons (position, libellé) sur une même échelle */
-function frise(f){
-  const pc = v => (v/f.total*100).toFixed(2)+"%";
-  const seg = f.segments.map((s,i)=>`<span class="${s[3]?"alt":""}" style="left:${pc(s[0])};width:calc(${pc(s[1]-s[0])} - 3px)" title="${esc(s[2])}">${esc(s[2])}</span>`).join("");
-  const ms = f.jalons.map(j=>{const v=j[0]/f.total;return `<span class="${v>.93?"end":v<.07?"start":""}" style="left:${pc(j[0])}"><i aria-hidden="true"></i><em class="lg">${esc(j[1])}</em><em class="sh" aria-hidden="true">${esc(j[2]||j[1])}</em></span>`;}).join("");
-  return `<div class="frise" role="img" aria-label="${esc(f.label||"")}"><div class="fr-bar">${seg}</div><div class="fr-ms">${ms}</div><div class="fr-ends"><span>${esc(f.debut)}</span><span>${esc(f.fin)}</span></div></div>`;
+  return `<section class="recap">${facts?`<dl class="facts">${facts}</dl>`:""}<div class="recap-txt">${txt}</div></section>`;
 }
 /* Key arts des jeux en carrousel, avec le one-liner de chaque jeu sous l'image */
 function keyart(list){

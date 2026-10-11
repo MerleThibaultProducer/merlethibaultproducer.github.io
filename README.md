@@ -8,7 +8,8 @@ https://merlethibaultproducer.github.io
 ```
 index.html                     la page (structure, aperçu de partage, polices)
 favicon.svg                    icône de l'onglet
-css/style.css                  mise en forme
+css/style.css                  mise en forme (couleurs et polices en variables dans :root)
+fonts/                         police des titres (Bricolage Grotesque, licence OFL)
 js/contenu.js                  ✏️ TOUT LE CONTENU : textes FR/EN, projets, CV, mentions légales
 js/app.js                      fonctionnement (navigation, langues, affichage) – rien à modifier
 images/                        photos, vignettes et illustrations des projets

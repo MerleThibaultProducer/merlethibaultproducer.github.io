@@ -947,3 +947,16 @@ html body .card .cmeta+.cdesc,html body .card h3{color:var(--head)}
 .car.keyart figcaption{display:flex;flex-direction:column;gap:.35rem;max-width:52rem;margin:1rem auto 0;text-align:center}
 .car.keyart figcaption b{font:700 1.15rem/1.3 var(--sans);color:var(--head)}
 .car.keyart figcaption span{font:400 1rem/1.6 var(--sans)!important;color:var(--ink)!important}
+.car.keyart{margin:.5rem 0 0}
+.car.keyart .zf.portrait{background:#0B1A33}
+.car.keyart .zf.portrait img{object-fit:contain}
+html body .prose figure.car.keyart{max-width:none;width:100%;margin:.5rem 0 0}
+html body .car.keyart .car-track{align-items:flex-start}
+html body .car.keyart .zf{aspect-ratio:16/9;width:100%}
+html body .car.keyart .zf img{width:100%;height:100%;max-height:none;object-fit:cover}
+html body .car.keyart .zf.portrait{background:#0B1A33}
+html body .car.keyart .zf.portrait img{object-fit:contain}
+html body .car.keyart .zf{position:relative}
+html body .car.keyart .zf img{position:absolute;inset:0;width:100%;height:100%}
+html body .prose .car.keyart .zf.portrait{background:#0B1A33!important}
+html body .prose .car.keyart .zf img{background:transparent!important;border:0!important;box-shadow:none!important}

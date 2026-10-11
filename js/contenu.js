@@ -69,6 +69,7 @@ const BANDE=(num,titre,lignes)=>({k:"band",num,titre,lignes}), LIGNE=(t,m=[],pos
 const ETAPES=(titre,items)=>({k:"etapes",titre,items}), SCHEMA=(nom,cap="")=>({k:"schema",nom,cap});
 const CAROUSEL=items=>({k:"car",items});
 const EQUIPES=groupes=>({k:"teams",groupes});
+const KEYART=items=>({k:"keyart",items});
 const P = o => o;
 
 const PRO1 = { thumb:"images/fin-annee-2026-thumb.jpg", macro:"images/fin-annee-2026-macro.jpg", micro:"images/fin-annee-2026-micro.jpg", kill:"images/fin-annee-2026-kill.jpg" };
@@ -158,12 +159,6 @@ const PROJECTS_FR = {
         desc:"Quatre jeux aux genres variés produits en parallèle, de la mise en place de la production à la gestion d'une crise à mi-parcours.", carte:"Quatre jeux produits en parallèle par une promotion entière, avec une méthode Agile intégrée aux jalons Waterfall de l'école.",
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 13 à 14 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
-        keyart:[
-          ["images/fda-castor.jpg","Le Castor et l'Écureuil","Un puzzle platformer où des animaux tentent de sauver leur environnement menacé en neutralisant les infrastructures humaines qui détruisent la nature de l'Anjou."],
-          ["images/fda-glow.jpg","Project GLOW","Un jeu d'action-aventure à la troisième personne, dans l'esprit d'inFAMOUS Second Son, où un adolescent rebelle doté de pouvoirs de portail doit renverser la corporation qui corrompt les gangs et pollue la ville."],
-          ["images/fda-insight.jpg","Insight","Un couple marié résout des énigmes et relève des épreuves grâce à de nouveaux pouvoirs, les yeux qu'ils découvrent, pour atteindre chacun son objectif dans un manoir des années 1930 au nord du Massachusetts."],
-          ["images/fda-flowering.jpg","The Flowering Dead","Un boss rush où des survivants luttent pour leur vie dans un monde post-apocalyptique envahi de plantes et d'animaux mutants."]
-        ],
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes","Genres variés","4 semaines"] },
         apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines, et j'en étais le producer, en lien avec les intervenants qui jouaient le rôle d'éditeurs. J'ai adapté une méthode Agile aux jalons Waterfall de l'école, mis en place un suivi Excel pour chaque groupe et fait le lien entre l'encadrement et les équipes au quotidien. Après une crise de direction artistique en deuxième semaine, j'ai fixé une date de playtest commune aux quatre équipes, puis redéfini les priorités avec chacune. Les quatre jeux ont été livrés au jury, avec 93 % des 1 387 tâches terminées.",
         resume:{ contexte:"Projet de fin d'année à Game Sup, réalisé par toute la promotion en 4 semaines.",
@@ -179,7 +174,13 @@ const PROJECTS_FR = {
             LIGNE([
               T("Comme chaque fin d'année à Game Sup, les promotions travaillent en équipe sur un projet d'environ **3 à 4 semaines**. Cette édition se distinguait par plusieurs phases de conception et de sélection des propositions en amont, qui ont abouti à **4 sujets aux genres variés**."),
               T("Ma mission : produire ces **4 jeux en parallèle** dans le cadre des jalons Waterfall de l'école (Proof of Concept, Alpha, Bêta), tout en laissant à chaque équipe une **organisation Agile** adaptée à son projet. Mon travail s'est organisé en **quatre macro-tâches**, que je présente ci-dessous.")
-            ],[ FICHE("Les contraintes",["Quatre jeux à produire en même temps","Des jalons imposés par l'école : Proof of Concept, Alpha, Bêta","Un seul producer pour plus de cinquante personnes","Quatre semaines, sans marge pour rattraper un retard"]) ])
+            ],[ FICHE("Les contraintes",["Quatre jeux à produire en même temps","Des jalons imposés par l'école : Proof of Concept, Alpha, Bêta","Un seul producer pour plus de cinquante personnes","Quatre semaines, sans marge pour rattraper un retard"]) ]),
+            LIGNE([ KEYART([
+                      ["images/fda-castor.jpg","Le Castor et l'Écureuil","Un puzzle platformer où des animaux tentent de sauver leur environnement menacé en neutralisant les infrastructures humaines qui détruisent la nature de l'Anjou."],
+                      ["images/fda-glow.jpg","Project GLOW","Un jeu d'action-aventure à la troisième personne, dans l'esprit d'inFAMOUS Second Son, où un adolescent rebelle doté de pouvoirs de portail doit renverser la corporation qui corrompt les gangs et pollue la ville.",1],
+                      ["images/fda-insight.jpg","Insight","Un couple marié résout des énigmes et relève des épreuves grâce à de nouveaux pouvoirs, les yeux qu'ils découvrent, pour atteindre chacun son objectif dans un manoir des années 1930 au nord du Massachusetts."],
+                      ["images/fda-flowering.jpg","The Flowering Dead","Un boss rush où des survivants luttent pour leur vie dans un monde post-apocalyptique envahi de plantes et d'animaux mutants."]
+                    ]) ])
           ]),
           BANDE("II","Organiser quatre équipes en parallèle",[
             LIGNE([
@@ -494,12 +495,6 @@ const PROJECTS_EN = {
         desc:"Four games of varied genres produced in parallel, from setting up production to handling a mid-course crisis.", carte:"Four games produced in parallel by an entire class, with an Agile method embedded in the school's Waterfall milestones.",
         img:PRO1.thumb,
         infos:{ "Role":"Producer", "Team":"4 teams · 13 to 14 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
-        keyart:[
-          ["images/fda-castor.jpg","Le Castor et l'Écureuil","A puzzle platformer where animals try to save their endangered environment by neutralising the human infrastructure destroying Anjou's nature."],
-          ["images/fda-glow.jpg","Project GLOW","A third-person action-adventure game in the vein of inFAMOUS Second Son, where a rebel teenager with portal powers must overthrow the corporation that corrupts the gangs and pollutes the city."],
-          ["images/fda-insight.jpg","Insight","A married couple solves puzzles and completes trials using newfound powers, the eyes they find, to reach their respective goals in a 1930s manor in Northern Massachusetts."],
-          ["images/fda-flowering.jpg","The Flowering Dead","A boss rush where survivors fight for their lives in a post-apocalyptic world overrun by mutant plants and animals."]
-        ],
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 Teams","Varied Game Genres","4 Weeks"] },
         apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks, and I was their producer, working with the instructors who acted as publishers. I adapted an Agile method to the school's Waterfall milestones, set up Excel tracking for each group and kept the supervisors and teams connected day to day. After an art direction crisis in the second week, I set a shared playtest date for all four teams, then reset priorities with each of them. All four games were delivered to the jury, with 93% of the 1,387 tasks completed.",
         resume:{ contexte:"Game Sup end-of-year project, carried out by the whole class in 4 weeks.",
@@ -515,7 +510,13 @@ const PROJECTS_EN = {
             LIGNE([
               T("As every year at Game Sup, classes work in teams on a project lasting about **3 to 4 weeks**. This edition stood out for several upstream design and selection phases, which led to **4 topics of varied genres**."),
               T("My mission: produce these **4 games in parallel** within the school's Waterfall milestones (Proof of Concept, Alpha, Beta), while giving each team an **Agile organisation** suited to its project. My work was organised into **four macro-tasks**, presented below.")
-            ],[ FICHE("The constraints",["Four games to produce at the same time","Milestones set by the school: Proof of Concept, Alpha, Beta","A single producer for more than fifty people","Four weeks, with no margin to catch up on delays"]) ])
+            ],[ FICHE("The constraints",["Four games to produce at the same time","Milestones set by the school: Proof of Concept, Alpha, Beta","A single producer for more than fifty people","Four weeks, with no margin to catch up on delays"]) ]),
+            LIGNE([ KEYART([
+                      ["images/fda-castor.jpg","Le Castor et l'Écureuil","A puzzle platformer where animals try to save their endangered environment by neutralising the human infrastructure destroying Anjou's nature."],
+                      ["images/fda-glow.jpg","Project GLOW","A third-person action-adventure game in the vein of inFAMOUS Second Son, where a rebel teenager with portal powers must overthrow the corporation that corrupts the gangs and pollutes the city.",1],
+                      ["images/fda-insight.jpg","Insight","A married couple solves puzzles and completes trials using newfound powers, the eyes they find, to reach their respective goals in a 1930s manor in Northern Massachusetts."],
+                      ["images/fda-flowering.jpg","The Flowering Dead","A boss rush where survivors fight for their lives in a post-apocalyptic world overrun by mutant plants and animals."]
+                    ]) ])
           ]),
           BANDE("II","Organising four teams in parallel",[
             LIGNE([

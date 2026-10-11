@@ -194,6 +194,7 @@ function blocks(list){
       case "img": return `<figure${b.cls?` class="${b.cls}"`:""}>${b.src?`<div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img src="${esc(b.src)}" alt="${esc(b.cap)}">${LENS}</div>`:`<div class="ph">${t("imgToAdd")}</div>`}${b.cap?`<figcaption>${esc(b.cap)}</figcaption>`:""}</figure>`;
       case "gal": return `<figure><div class="gal">${b.srcs.map(x=>x?`<img src="${esc(x)}" alt="" loading="lazy">`:`<div class="ph">${t("imgToAdd")}</div>`).join("")}</div>${b.cap?`<figcaption>${esc(b.cap)}</figcaption>`:""}</figure>`;
       case "teams": return teamsCarousel(b.groupes);
+      case "keyart": return keyart(b.items);
       case "car": return `<figure class="car"><div class="car-track">${b.items.map(x=>`<div class="car-s"><div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img src="${esc(x[0])}" alt="${esc(x[1])}" loading="lazy">${LENS}</div><figcaption>${esc(x[1])}</figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Précédent","Previous")}">‹</button><span class="car-cnt">1 / ${b.items.length}</span><button type="button" data-car="1" aria-label="${q("Suivant","Next")}">›</button></div></figure>`;
       case "ul": return `<ul>${b.items.map(x=>`<li>${rich(x)}</li>`).join("")}</ul>`;
       case "q": return `<blockquote>${esc(b.text)}${b.by?`<cite>${esc(b.by)}</cite>`:""}</blockquote>`;
@@ -225,7 +226,7 @@ function frise(f){
 }
 /* Key arts des jeux en carrousel, avec le one-liner de chaque jeu sous l'image */
 function keyart(list){
-  return `<figure class="car keyart"><div class="car-track">${list.map(k=>`<div class="car-s"><div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img src="${esc(k[0])}" alt="${esc(k[1])} – key art">${LENS}</div><figcaption><b>${esc(k[1])}</b><span>${esc(k[2])}</span></figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Jeu précédent","Previous game")}">‹</button><span class="car-cnt">1 / ${list.length}</span><button type="button" data-car="1" aria-label="${q("Jeu suivant","Next game")}">›</button></div></figure>`;
+  return `<figure class="car keyart"><div class="car-track">${list.map(k=>`<div class="car-s"><div class="zf${k[3]?" portrait":""}" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img src="${esc(k[0])}" alt="${esc(k[1])} – key art">${LENS}</div><figcaption><b>${esc(k[1])}</b><span>${esc(k[2])}</span></figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Jeu précédent","Previous game")}">‹</button><span class="car-cnt">1 / ${list.length}</span><button type="button" data-car="1" aria-label="${q("Jeu suivant","Next game")}">›</button></div></figure>`;
 }
 function detail(sec, p, prev, next){
   const infos = Object.entries(p.infos||{}).map(([k,v])=>`<li><span>${esc(k)}</span>${esc(v)}</li>`).join("");
@@ -234,7 +235,6 @@ function detail(sec, p, prev, next){
   return `<a class="back" data-go="${sec.route}" role="link" tabindex="0">‹ ${sec.label}</a>
   <article class="project${p.large?" large":""}"><h1>${esc(p.title)}</h1><p class="lead">${esc(p.desc)}</p>
     ${p.large&&(!p.img||p.nocover)?"":`<div class="cover${p.fit==="contain"||p.cimg?" contain":""}"${p.bg||p.cbg?` style="--pbg:${esc(p.bg||p.cbg)}"`:""}>${img(p.cimg||p.img,p.title,p.title[0])}</div>`}
-    ${p.keyart ? keyart(p.keyart) : ""}
     ${p.apercu ? recap(p) : `${infos?`<ul class="meta">${infos}</ul>`:""}${brief(p)}`}
     <div class="prose">${blocks(p.contenu)}</div></article>
   <nav class="pn" aria-label="${t("others")}">${link(prev,"prev","‹ "+t("prev"))}${link(next,"next",t("next")+" ›")}</nav>

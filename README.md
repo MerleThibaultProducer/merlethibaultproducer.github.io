@@ -14,8 +14,8 @@ js/contenu.js                  ✏️ TOUT LE CONTENU : textes FR/EN, projets, C
 js/app.js                      fonctionnement (navigation, langues, affichage) – rien à modifier
 images/                        photos, vignettes et illustrations des projets
 images/apercu-partage.jpg      image affichée quand le lien est partagé (LinkedIn, Discord…)
-cv/MERLE_Thibault_CV_PROD.pdf  CV proposé au téléchargement
-cv/cv-apercu.jpg               aperçu du CV affiché sur la page Infos
+cv/MERLE_Thibault_CV_PROD_v5.pdf  CV proposé au téléchargement
+cv/cv-apercu-v5.jpg               aperçu du CV affiché sur la page Infos
 ```
 
 ## Modifier le site
@@ -23,7 +23,7 @@ cv/cv-apercu.jpg               aperçu du CV affiché sur la page Infos
 - **Un texte** : ouvrez `js/contenu.js`, cherchez la phrase et modifiez-la (en français puis en anglais).
 - **Une image** : déposez le nouveau fichier dans `images/` et indiquez son chemin dans `js/contenu.js`,
   ou remplacez un fichier existant en gardant le même nom.
-- **Le CV** : remplacez `cv/MERLE_Thibault_CV_PROD.pdf` (et `cv/cv-apercu.jpg` pour l'aperçu) en gardant les mêmes noms.
+- **Le CV** : ajoutez le nouveau PDF et son aperçu sous un **nouveau nom** (ex. `_v6`), puis mettez à jour `image` et `pdf` dans `CV_VISUAL` (js/contenu.js). Un nouveau nom évite que les navigateurs gardent l'ancienne version en cache. Le fichier téléchargé garde le nom défini dans `filename`.
 - **Un projet en cours** : retirez `wip:true` pour le rendre visible.
 
 Chaque projet peut avoir un résumé (`resume`) et un encadré « Mon rôle et mes décisions » (`decisions`).

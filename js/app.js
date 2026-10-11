@@ -50,8 +50,7 @@ function home(){
   <section class="home-intro">
     <div class="portrait" role="img" aria-label="${t("portrait")} ${esc(SITE.prenom)} ${esc(SITE.nom)}">${img(SITE.photo,"",SITE.prenom[0]+SITE.nom[0])}</div>
     <div class="home-txt">
-      ${SITE.devise?`<p class="devise">${esc(SITE.devise)}</p>`:""}
-      <div class="intro">${SITE.intro.map(p=>Array.isArray(p)?`<section class="hb"><h2 class="home-k">${esc(p[0])}</h2><p>${rich(p[1])}</p></section>`:`<p>${rich(p)}</p>`).join("")}</div>
+      <div class="intro">${SITE.accroche?`<p class="accroche">${esc(SITE.accroche)}</p>`:""}${SITE.intro.map(p=>Array.isArray(p)?`<section class="hb"><h2 class="home-k">${esc(p[0])}</h2><p>${rich(p[1])}</p></section>`:`<p>${rich(p)}</p>`).join("")}</div>
       <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a>${SITE.email?`<a class="btn ghost" href="mailto:${esc(SITE.email)}">${t("contactMe")}</a>`:""}</p>
     </div>
   </section>`;

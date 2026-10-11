@@ -9,8 +9,9 @@ const SITE_FR = {
   titre: "Junior Associate Producer",
   devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
+  accroche: "La production, c'est d'abord un travail d'équipe.",
   intro: [
-    "Je suis Thibault, ==Junior Associate Producer== dans le jeu vidéo, en dernière année à ==Game Sup==. J'ai eu l'occasion de mener des **productions multi-projets**, avec jusqu'à ==quatre équipes en simultané==. Pour moi, la production est d'abord un travail d'équipe : écouter chacun, adapter les méthodes **Agile** et **Waterfall** à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un ==stage de fin d'études en production== pour 2027, partout en France ou en télétravail."
+    "Je suis Thibault, Junior Associate Producer dans le jeu vidéo, en dernière année à Game Sup. J'ai eu l'occasion de mener des productions multi-projets, avec jusqu'à quatre équipes en simultané. Concrètement, cela veut dire écouter chacun, adapter les méthodes Agile et Waterfall à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un stage de fin d'études en production pour 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",
@@ -20,8 +21,9 @@ const SITE_FR = {
   ]
 };
 const SITE_EN = {...SITE_FR,
+  accroche: "Production is teamwork first.",
   intro: [
-    "I'm Thibault, a ==Junior Associate Producer== in video games, in my final year at ==Game Sup==. I have had the opportunity to run **multi-project productions**, with up to ==four teams at once==. To me, production is teamwork first: listening to everyone, adapting **Agile** and **Waterfall** methods to the way people work, and keeping information flowing so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an ==end-of-studies internship in production== for 2027, anywhere in France or remote."
+    "I'm Thibault, a Junior Associate Producer in video games, in my final year at Game Sup. I have had the opportunity to run multi-project productions, with up to four teams at once. In practice, that means listening to everyone, adapting Agile and Waterfall methods to the way people work, and keeping information flowing so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an end-of-studies internship in production for 2027, anywhere in France or remote."
   ],
   legal: [
     "© 2026 Thibault Merle – All rights reserved.",
@@ -172,8 +174,8 @@ const PROJECTS_FR = {
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("Comme chaque fin d'année à Game Sup, les promotions travaillent en équipe sur un projet d'environ **3 à 4 semaines**. Cette édition se distinguait par plusieurs phases de conception et de sélection des propositions en amont, qui ont abouti à **4 sujets aux genres variés**."),
-              T("Pour tenir ce cadre, j'ai organisé mon travail en **quatre macro-tâches**, que je présente ci-dessous.")
+              T("Comme chaque fin d'année à Game Sup, les promotions travaillent en équipe sur un projet d'environ 3 à 4 semaines. Cette édition se distinguait par plusieurs phases de conception et de sélection des propositions en amont, qui ont abouti à 4 sujets aux genres variés."),
+              T("Pour tenir ce cadre, j'ai organisé mon travail en quatre macro-tâches, que je présente ci-dessous.")
             ],[ FICHE("Les contraintes",["Quatre jeux à produire en même temps","Des jalons imposés par l'école : Proof of Concept, Alpha, Bêta","Un seul producer pour plus de cinquante personnes","Quatre semaines, sans marge pour rattraper un retard"]) ]),
             LIGNE([ KEYART([
                       ["images/fda-castor.jpg","Le Castor et l'Écureuil","Un puzzle platformer où des animaux tentent de sauver leur environnement menacé en neutralisant les infrastructures humaines qui détruisent la nature de l'Anjou."],
@@ -184,40 +186,40 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Organiser quatre équipes en parallèle",[
             LIGNE([
-              T("Quatre jeux, plus de cinquante personnes et **un seul producer** : je savais dès le départ que je ne pourrais pas être dans chaque salle en permanence. Il fallait pourtant que les consignes des intervenants arrivent de la même façon à tous les groupes. C'est pour cela que nous avons lancé les productions en **promotion entière**, le lendemain de la sélection. Tout le monde a entendu les mêmes consignes au même moment, et nous avons pu poser ensemble l'organisation, les outils et la méthode, avant de les affiner groupe par groupe."),
-              T("Pour garder un lien direct avec chaque équipe, j'ai désigné avec les intervenants **deux référents par groupe**, un pour les Game Designers et un pour les Game Artists. Cela n'a pas tout réglé : quand j'étais en réunion avec un groupe, les trois autres avançaient sans moi. Les **dailies** ont pris le relais pour que le suivi continue en mon absence, et je suis resté l'interlocuteur entre les intervenants et les équipes tout au long des semaines, pas seulement aux milestones."),
-              T("Avec le recul, ces points quotidiens ne réunissaient pas toute l'équipe, et tout le monde ne comprenait pas vraiment l'avancée du projet. Sur un prochain projet, je mettrais en place des **dailies en équipe entière** dès le premier jour.")
+              T("Quatre jeux, plus de cinquante personnes et un seul producer : je savais dès le départ que je ne pourrais pas être dans chaque salle en permanence. Il fallait pourtant que les consignes des intervenants arrivent de la même façon à tous les groupes. C'est pour cela que nous avons lancé les productions en promotion entière, le lendemain de la sélection. Tout le monde a entendu les mêmes consignes au même moment, et nous avons pu poser ensemble l'organisation, les outils et la méthode, avant de les affiner groupe par groupe."),
+              T("Pour garder un lien direct avec chaque équipe, j'ai désigné avec les intervenants deux référents par groupe, un pour les Game Designers et un pour les Game Artists. Cela n'a pas tout réglé : quand j'étais en réunion avec un groupe, les trois autres avançaient sans moi. Les dailies ont pris le relais pour que le suivi continue en mon absence, et je suis resté l'interlocuteur entre les intervenants et les équipes tout au long des semaines, pas seulement aux milestones."),
+              T("Avec le recul, ces points quotidiens ne réunissaient pas toute l'équipe, et tout le monde ne comprenait pas vraiment l'avancée du projet. Sur un prochain projet, je mettrais en place des dailies en équipe entière dès le premier jour.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planifier et suivre la production",[
             LIGNE([
-              T("L'école imposait ses **jalons Waterfall** (Proof of Concept, Alpha, Bêta), mais chaque équipe avait besoin de sprints adaptés à son projet. Il me fallait donc relier les deux, avec un suivi assez homogène pour comparer les quatre groupes et **repérer les retards tôt**."),
-              T("J'ai construit ce suivi sur Excel, à deux niveaux. Pour chaque groupe, un **macro-planning** pose les sprints et les milestones de l'école. Un **micro-planning** rattache ensuite chaque tâche à un sprint, une priorité, une difficulté et un statut : au total, 1 387 tâches ont été suivies. Les documents de travail étaient partagés dans un PowerPoint commun sur OneDrive, et chaque groupe avait son propre espace Discord.")
+              T("L'école imposait ses jalons Waterfall (Proof of Concept, Alpha, Bêta), mais chaque équipe avait besoin de sprints adaptés à son projet. Il me fallait donc relier les deux, avec un suivi assez homogène pour comparer les quatre groupes et repérer les retards tôt."),
+              T("J'ai construit ce suivi sur Excel, à deux niveaux. Pour chaque groupe, un macro-planning pose les sprints et les milestones de l'école. Un micro-planning rattache ensuite chaque tâche à un sprint, une priorité, une difficulté et un statut : au total, **1 387 tâches** ont été suivies. Les documents de travail étaient partagés dans un PowerPoint commun sur OneDrive, et chaque groupe avait son propre espace Discord.")
             ],[ IMG(PRO1.macro,"Macro-planning propre à l'Excel de chaque groupe : sprints et milestones (Proof of Concept, Alpha, Bêta)") ]),
             LIGNE([
-              T("Tenir près de 1 400 statuts à jour demandait une attention de tous les instants, mais c'est ce qui rendait les retards et les kills visibles, sprint par sprint. Ce qui m'a manqué, ce sont des **livrables de fin de sprint plus précis pour chaque spécialité** : l'avancée était parfois difficile à vérifier concrètement. C'est la première chose que je changerais.")
+              T("Tenir près de 1 400 statuts à jour demandait une attention de tous les instants, mais c'est ce qui rendait les retards et les kills visibles, sprint par sprint. Ce qui m'a manqué, ce sont des livrables de fin de sprint plus précis pour chaque spécialité : l'avancée était parfois difficile à vérifier concrètement. C'est la première chose que je changerais.")
             ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ])
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
-              T("En deuxième semaine, un même problème est apparu dans les quatre groupes : la **direction artistique** était confuse, et les membres peinaient à se représenter les références. Les retards ont vite atteint **deux à trois jours**, et je sentais venir le risque de crunch."),
-              T("Plutôt que de laisser chaque équipe s'enliser, nous avons organisé des réunions d'urgence avec chaque groupe et **suspendu la production pendant une journée et demie**. Ce temps de réflexion nous a permis de comprendre d'où venait le problème : des **références trop vastes** et peu précises, et une passe de recherche trop courte au démarrage, parce que nous pensions que celle de la sélection suffirait.")
+              T("En deuxième semaine, un même problème est apparu dans les quatre groupes : la direction artistique était confuse, et les membres peinaient à se représenter les références. Les retards ont vite atteint deux à trois jours, et je sentais venir le risque de crunch."),
+              T("Plutôt que de laisser chaque équipe s'enliser, nous avons organisé des réunions d'urgence avec chaque groupe et suspendu la production pendant une journée et demie. Ce temps de réflexion nous a permis de comprendre d'où venait le problème : des références trop vastes et peu précises, et une passe de recherche trop courte au démarrage, parce que nous pensions que celle de la sélection suffirait.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
-              T("Chaque groupe vivait la crise à sa manière, il n'y avait donc pas de réponse unique. Pour l'un, **j'ai tranché, en accord avec les référents des disciplines**, sur le **kill** de plusieurs assets qui sortaient du cadre ou n'étaient plus prioritaires. Pour un autre, nous avons revu le Level Art et le shader atmosphérique."),
-              T("Si c'était à refaire, je ferais créer dès le départ une petite **scène de référence dans le moteur**, avec un prop à la qualité visée, les textures souhaitées et les intentions de lumière et de caméra.")
+              T("Chaque groupe vivait la crise à sa manière, il n'y avait donc pas de réponse unique. Pour l'un, j'ai tranché, en accord avec les référents des disciplines, sur le kill de plusieurs assets qui sortaient du cadre ou n'étaient plus prioritaires. Pour un autre, nous avons revu le Level Art et le shader atmosphérique."),
+              T("Si c'était à refaire, je ferais créer dès le départ une petite scène de référence dans le moteur, avec un prop à la qualité visée, les textures souhaitées et les intentions de lumière et de caméra.")
             ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ])
           ]),
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
-              T("Après la crise, il ne restait que deux semaines. Il fallait décider où mettre l'effort, et accepter d'abandonner certaines choses, sans faire peser la fin du projet sur les équipes. J'ai donc fixé une **date de playtest commune** aux quatre groupes, calée sur le planning des autres promotions pour que des joueurs extérieurs puissent venir."),
-              T("Pour que les retours soient exploitables, chaque équipe a préparé un questionnaire structuré. Celui de Le Castor et l'Écureuil, par exemple, couvrait les personnages, la cohérence du design et la prise en main, avec des réponses notées de 1 à 7, et a recueilli **22 réponses**."),
-              T("Les retours ont été nombreux, et souvent critiques, à un moment où le moral était déjà entamé. Avec chaque équipe, nous les avons triés pour garder les points les plus importants, puis j'ai **redéfini les priorités** et réorganisé les plannings. Voir des inconnus jouer aux projets a aussi redonné de l'énergie aux équipes : malgré les critiques, les jeux plaisaient.")
+              T("Après la crise, il ne restait que deux semaines. Il fallait décider où mettre l'effort, et accepter d'abandonner certaines choses, sans faire peser la fin du projet sur les équipes. J'ai donc fixé une date de playtest commune aux quatre groupes, calée sur le planning des autres promotions pour que des joueurs extérieurs puissent venir."),
+              T("Pour que les retours soient exploitables, chaque équipe a préparé un questionnaire structuré. Celui de Le Castor et l'Écureuil, par exemple, couvrait les personnages, la cohérence du design et la prise en main, avec des réponses notées de 1 à 7, et a recueilli 22 réponses."),
+              T("Les retours ont été nombreux, et souvent critiques, à un moment où le moral était déjà entamé. Avec chaque équipe, nous les avons triés pour garder les points les plus importants, puis j'ai redéfini les priorités et réorganisé les plannings. Voir des inconnus jouer aux projets a aussi redonné de l'énergie aux équipes : malgré les critiques, les jeux plaisaient.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest de Le Castor et l'Écureuil : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
           ]),
           BANDE("VII","Les enseignements",[
             LIGNE([
-              T("C'était la première fois que l'on me confiait la **production d'une promotion entière**, et c'est surtout la crise de mi-parcours qui m'a fait grandir. Elle m'a appris à mettre de côté ce que je croyais savoir pour écouter les besoins propres à chaque équipe, à **déléguer**, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même.")
+              T("C'était la première fois que l'on me confiait la production d'une promotion entière, et c'est surtout la crise de mi-parcours qui m'a fait grandir. Elle m'a appris à mettre de côté ce que je croyais savoir pour écouter les besoins propres à chaque équipe, à déléguer, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même.")
             ])
           ]),
           BANDE("VIII","Les équipes",[
@@ -285,54 +287,54 @@ const PROJECTS_FR = {
         contenu:[
           BANDE("I","Contraintes de l'exercice",[
             LIGNE([
-              T("Dans le cadre de cet exercice, nous devions fournir un **document de gestion de production** couvrant plusieurs volets : une définition crédible de l'équipe à constituer, un macro-planning et un micro-planning de la production sur Coda et ClickUp, un budget de développement sur Excel et une **estimation des ventes (Market Analysis)**."),
-              T("J'ai choisi un **projet d'envergure AA** comparable à Greedfall : Wyrdfall, porté par une équipe de **30 à 50 personnes** au pic de la production."),
+              T("Dans le cadre de cet exercice, nous devions fournir un document de gestion de production couvrant plusieurs volets : une définition crédible de l'équipe à constituer, un macro-planning et un micro-planning de la production sur Coda et ClickUp, un budget de développement sur Excel et une estimation des ventes (Market Analysis)."),
+              T("J'ai choisi un projet d'envergure AA comparable à Greedfall : Wyrdfall, porté par une équipe de 30 à 50 personnes au pic de la production."),
               T("Le High Concept document et le prototype, également demandés, ont été produits pendant le reste de l'épreuve et ne sont pas présentés ici.")
             ],[ FICHE("Gestion de production · présentée ici · 20 h",["Équipe à constituer","Macro-planning et micro-planning (Coda, ClickUp)","Budget de développement (Excel)","Estimation des ventes (Market Analysis)"]), FICHE("Autres livrables · 70 h",["High Concept document","Prototype"]) ])
           ]),
           BANDE("II","Synthèse chiffrée et seuil de rentabilité",[
             LIGNE([
-              T("Wyrdfall est un **projet AA de 48 mois**, comprenant 36 mois de production et 12 mois de live service, pour une équipe de 42 personnes dont 25 restent mobilisées sur la phase de live. Le budget total du projet s'élève à **9 033 682 €**, dont 7 070 677 € de salaires (78 %), le reste se répartissant entre les logiciels, la localisation, les frais de fonctionnement et l'outsourcing.")
+              T("Wyrdfall est un projet AA de 48 mois, comprenant 36 mois de production et 12 mois de live service, pour une équipe de 42 personnes dont 25 restent mobilisées sur la phase de live. Le budget total du projet s'élève à **9 033 682 €**, dont 7 070 677 € de salaires (78 %), le reste se répartissant entre les logiciels, la localisation, les frais de fonctionnement et l'outsourcing.")
             ],[ CHIFFRES([["9 033 682 €","Budget total"],["42","Personnes dans l'équipe"],["48 mois","36 production · 12 live"],["78 %","Part des salaires"]]) ]),
             LIGNE([
-              T("Pour savoir à partir de quand le projet devient rentable, j'ai calculé son **seuil de rentabilité**. Sur un prix de 49,99 €, j'ai retiré en une seule fois la part de Steam, les taxes et la royalty d'Unreal Engine (55 %), puis les remboursements. C'est un choix de prudence : une vente ne rapporte ainsi qu'environ 20 €, un peu moins que dans la réalité. Le budget est couvert à partir d'environ **451 000 ventes**. Si le projet tient avec cette hypothèse, il tiendra avec un calcul plus favorable."),
-              T("Dans le scénario conservateur moyen, j'estime les ventes à 482 000, juste au-dessus du seuil, pour un bénéfice de 616 438 €, soit un ROI d'environ **+ 6,8 %**. Le tableau montre les autres cas : tout se joue sur le **taux de conversion des wishlists**. Ces estimations ne comptent que les ventes sur Steam, sans le DLC."),
+              T("Pour savoir à partir de quand le projet devient rentable, j'ai calculé son seuil de rentabilité. Sur un prix de 49,99 €, j'ai retiré en une seule fois la part de Steam, les taxes et la royalty d'Unreal Engine (55 %), puis les remboursements. C'est un choix de prudence : une vente ne rapporte ainsi qu'environ 20 €, un peu moins que dans la réalité. Le budget est couvert à partir d'environ **451 000 ventes**. Si le projet tient avec cette hypothèse, il tiendra avec un calcul plus favorable."),
+              T("Dans le scénario conservateur moyen, j'estime les ventes à 482 000, juste au-dessus du seuil, pour un bénéfice de 616 438 €, soit un ROI d'environ + 6,8 %. Le tableau montre les autres cas : tout se joue sur le taux de conversion des wishlists. Ces estimations ne comptent que les ventes sur Steam, sans le DLC."),
             ],[ TABLEAU("Bénéfice net et ROI selon les scénarios · Budget total : 9 033 682 €",["Scénario","Ventes estimées","Bénéfice net (ROI)"],["Conservateur : 250 000 followers", ["Haut", "626 600", "+ 4 639 128 € (+ 51,4 %)"], ["Moyen", "482 000", "+ 616 438 € (+ 6,8 %)"], ["Bas", "115 680", "− 6 873 790 € (− 76,1 %)"], "Optimiste : moyenne des ventes du Market Analysis", ["Haut", "959 400", "+ 11 901 031 € (+ 131,7 %)"], ["Moyen", "738 000", "+ 5 741 809 € (+ 63,6 %)"], ["Bas", "177 120", "− 5 726 628 € (− 63,4 %)"]]) ])
           ]),
           BANDE("III","Un fichier de production pensé pour la clarté",[
             LIGNE([
-              T("En construisant mon fichier Excel général, ma priorité a été **la clarté** : chaque information devait pouvoir être trouvée rapidement, sans se perdre dans les onglets. J'ai donc travaillé la cohérence des couleurs pour regrouper les pages liées entre elles, et mis au point des boutons ainsi qu'une **barre de navigation simple**."),
+              T("En construisant mon fichier Excel général, ma priorité a été la clarté : chaque information devait pouvoir être trouvée rapidement, sans se perdre dans les onglets. J'ai donc travaillé la cohérence des couleurs pour regrouper les pages liées entre elles, et mis au point des boutons ainsi qu'une barre de navigation simple."),
               T("L'organisation des pages et la hiérarchisation des informations au sein de chacune ont également fait l'objet d'une attention particulière.")
             ],[ IMG(EX1.nav,"Page d'accueil du fichier de production : boutons et navigation par onglets colorés") ])
           ]),
           BANDE("IV","L'approche du Market Analysis",[
             LIGNE([
-              T("Pour estimer les ventes potentielles sur Steam, j'ai commencé par l'**analyse des concurrents** du jeu, dont j'ai extrait des moyennes exploitables pour mes scénarios de projection. Pour disposer d'un large panel, j'ai retenu des jeux sortis sur 11 ans, de 2014 à 2025 : une période un peu large, qui gagnerait à être ramenée à **5 ans**.")
+              T("Pour estimer les ventes potentielles sur Steam, j'ai commencé par l'analyse des concurrents du jeu, dont j'ai extrait des moyennes exploitables pour mes scénarios de projection. Pour disposer d'un large panel, j'ai retenu des jeux sortis sur 11 ans, de 2014 à 2025 : une période un peu large, qui gagnerait à être ramenée à 5 ans.")
             ],[ IMG(EX1.market,"Analyse des concurrents : ventes, revenus estimés et moyennes") ]),
             LIGNE([
-              T("Les données extraites m'ont permis de proposer **deux scénarios**, un optimiste et un plus conservateur, chacun décliné en **trois niveaux de risque** (haut, moyen, bas), afin d'envisager l'économie de la production avec le plus de lucidité possible.")
+              T("Les données extraites m'ont permis de proposer deux scénarios, un optimiste et un plus conservateur, chacun décliné en trois niveaux de risque (haut, moyen, bas), afin d'envisager l'économie de la production avec le plus de lucidité possible.")
             ],[ CAROUSEL([[EX1.roiCons,"Estimation du ROI, scénario conservateur : 250 000 followers, en cas haut, moyen et bas"],[EX1.roiOpti,"Estimation du ROI, scénario optimiste : moyenne des ventes du Market Analysis, en cas haut, moyen et bas"]]) ])
           ]),
           BANDE("V","Un budget clair et facilement modulable",[
             LIGNE([
-              T("Un objectif important de ce travail était l'adaptabilité du fichier : le budget doit **se mettre à jour en un clic** lors de l'arrivée d'un nouveau membre dans le studio ou d'un changement d'ancienneté."),
+              T("Un objectif important de ce travail était l'adaptabilité du fichier : le budget doit se mettre à jour en un clic lors de l'arrivée d'un nouveau membre dans le studio ou d'un changement d'ancienneté."),
               T("Je voulais également que cette souplesse s'étende aux logiciels attribués aux employés, pour que le budget s'ajuste aussitôt (cf. image).")
             ],[ IMG(EX1.budget,"Vue d'ensemble du budget : équipe, durée et budget par département") ])
           ]),
           BANDE("VI","Planifier l'ensemble du projet",[
             LIGNE([
-              T("Enfin, cet exercice a mis à l'épreuve ma capacité à **anticiper et à planifier** : il ne s'agissait plus d'un projet de trois semaines, mais d'une **production de 4 ans**, de la production principale jusqu'à la sortie du DLC prévu."),
-              T("Planifier des **Epics et des Stories** sur l'ensemble d'une production est un véritable défi, qui m'a poussé à prendre en compte tous les aspects du projet : les éléments essentiels, les niveaux, l'intégration de la QA, etc.")
+              T("Enfin, cet exercice a mis à l'épreuve ma capacité à anticiper et à planifier : il ne s'agissait plus d'un projet de trois semaines, mais d'une production de 4 ans, de la production principale jusqu'à la sortie du DLC prévu."),
+              T("Planifier des Epics et des Stories sur l'ensemble d'une production est un véritable défi, qui m'a poussé à prendre en compte tous les aspects du projet : les éléments essentiels, les niveaux, l'intégration de la QA, etc.")
             ],[ IMG(EX1.epic,"Macro-planning : les Epics de la production") ]),
             LIGNE([
-              T("J'ai complété ce travail par un sprint détaillé avec ses tâches : un **sprint de préproduction** destiné à préparer la Vertical Slice."),
+              T("J'ai complété ce travail par un sprint détaillé avec ses tâches : un sprint de préproduction destiné à préparer la Vertical Slice."),
               T("Cette partie a été exigeante : elle m'a obligé à sortir de la logique des sprints de nos workshops de 3 semaines, très contraints, pour raisonner pas à pas sur les besoins qui font passer d'un sprint à l'autre.")
             ],[ IMG(EX1.sprint,"Sprint de préproduction : tâches, priorités et points de sprint") ])
           ]),
           BANDE("VII","Pour aller plus loin",[
             LIGNE([
-              T("Ce travail a été extrêmement formateur et m'a permis de porter un regard neuf sur le métier de producer. Avec du recul, j'y vois plusieurs pistes d'amélioration. D'abord, j'ai sous-estimé la **charge de l'équipe QA** : il faudrait prévoir un effectif plus important pour éviter un éventuel crunch. C'est aussi le cas de l'équipe Sound Design, elle aussi sous-dimensionnée."),
-              T("Il serait également utile d'étudier les **financements** accessibles à un studio de cette taille pour étoffer le dossier : aides régionales, nationales et européennes, solutions bancaires, Kickstarter."),
+              T("Ce travail a été extrêmement formateur et m'a permis de porter un regard neuf sur le métier de producer. Avec du recul, j'y vois plusieurs pistes d'amélioration. D'abord, j'ai sous-estimé la charge de l'équipe QA : il faudrait prévoir un effectif plus important pour éviter un éventuel crunch. C'est aussi le cas de l'équipe Sound Design, elle aussi sous-dimensionnée."),
+              T("Il serait également utile d'étudier les financements accessibles à un studio de cette taille pour étoffer le dossier : aides régionales, nationales et européennes, solutions bancaires, Kickstarter."),
               T("Je reste néanmoins fier de ce travail, qui a élargi ma vision du périmètre de ce rôle.")
             ],[ FICHE("Pistes d'amélioration",["Renforcer l'équipe QA pour éviter un crunch","Réévaluer l'équipe de Sound Design","Étudier les financements : aides régionales, nationales, européennes, solutions bancaires, Kickstarter"]) ])
           ])
@@ -348,20 +350,20 @@ const PROJECTS_FR = {
         contenu:[
           BANDE("I","L'idée et le concept",[
             LIGNE([
-              T("Parmi les créatures mythiques grecques, j'ai choisi les naïades, divinités des eaux. De là est née une idée simple : **une naïade parcourt la Grèce pour sauver des divinités** et combattre les armées de Typhon. Le joueur incarne Castalie, gardienne de la fontaine de Delphes, et rencontre au fil du jeu des héros et des dieux qui deviennent ses compagnons."),
-              T("Castalie's Tears est un **RPG au tour par tour** en solo, pensé pour PC et Nintendo Switch, avec un modèle premium. Pour le situer : Dragon Quest XI rencontre Dragon Age : Inquisition dans un univers proche d'Immortals Fenyx Rising. C'est un jeu posé, qui récompense la réflexion et l'organisation plus que les réflexes.")
+              T("Parmi les créatures mythiques grecques, j'ai choisi les naïades, divinités des eaux. De là est née une idée simple : une naïade parcourt la Grèce pour sauver des divinités et combattre les armées de Typhon. Le joueur incarne Castalie, gardienne de la fontaine de Delphes, et rencontre au fil du jeu des héros et des dieux qui deviennent ses compagnons."),
+              T("Castalie's Tears est un RPG au tour par tour en solo, pensé pour PC et Nintendo Switch, avec un modèle premium. Pour le situer : Dragon Quest XI rencontre Dragon Age : Inquisition dans un univers proche d'Immortals Fenyx Rising. C'est un jeu posé, qui récompense la réflexion et l'organisation plus que les réflexes.")
             ],[ CAROUSEL([[CT.pitch,"L'énoncé central : Castalie face à Typhon"],[CT.one,"Le one-liner et ses trois références"],[CT.info,"La fiche d'information du projet"]]) ])
           ]),
           BANDE("II","Intentions et piliers",[
             LIGNE([
-              T("Je suis parti de valeurs (courage, coopération, résilience) et de thèmes : la culpabilité du survivant, la confiance, et la question « qu'est-ce qu'un héros ? ». Ces intentions se traduisent en **trois piliers de gameplay** : combattre les marées de Typhon, explorer un monde désolé, et prendre soin de sa Source pour la faire grandir."),
-              T("J'ai aussi listé **ce que le jeu ne sera pas** : multijoueur, combat tactique sur grille, arbre de compétences, mini-jeux, infiltration, fins multiples. C'est ce qui garde le périmètre sous contrôle.")
+              T("Je suis parti de valeurs (courage, coopération, résilience) et de thèmes : la culpabilité du survivant, la confiance, et la question « qu'est-ce qu'un héros ? ». Ces intentions se traduisent en trois piliers de gameplay : combattre les marées de Typhon, explorer un monde désolé, et prendre soin de sa Source pour la faire grandir."),
+              T("J'ai aussi listé ce que le jeu ne sera pas : multijoueur, combat tactique sur grille, arbre de compétences, mini-jeux, infiltration, fins multiples. C'est ce qui garde le périmètre sous contrôle.")
             ],[ CAROUSEL([[CT.pillars,"Les trois piliers de gameplay"],[CT.notdo,"Ce que le jeu n'est pas"]]) ])
           ]),
           BANDE("III","La boucle de gameplay et le joueur visé",[
             LIGNE([
-              T("Le joueur gère sa base, explore, résout des énigmes ou combat, acquiert des ressources et progresse, puis fabrique ou échange avant de revenir à sa base. J'ai qualifié chaque étape selon son rôle dans l'économie du jeu (source, convertisseur, drain, marchand) pour vérifier que **la boucle se nourrit autant qu'elle consomme**."),
-              T("Le jeu vise un **public adulte et actif**, qui joue par sessions courtes : d'abord Achiever, puis Explorer selon la typologie de Bartle. Il cherche de la profondeur et des choix, d'où un jeu qui mise sur l'histoire et la gestion plutôt que sur l'énigme.")
+              T("Le joueur gère sa base, explore, résout des énigmes ou combat, acquiert des ressources et progresse, puis fabrique ou échange avant de revenir à sa base. J'ai qualifié chaque étape selon son rôle dans l'économie du jeu (source, convertisseur, drain, marchand) pour vérifier que la boucle se nourrit autant qu'elle consomme."),
+              T("Le jeu vise un public adulte et actif, qui joue par sessions courtes : d'abord Achiever, puis Explorer selon la typologie de Bartle. Il cherche de la profondeur et des choix, d'où un jeu qui mise sur l'histoire et la gestion plutôt que sur l'énigme.")
             ],[ IMG(CT.loop,"La boucle de gameplay de Castalie's Tears") ]),
             LIGNE([
               CAROUSEL([[CT.manage,"Gérer"],[CT.explore,"Explorer"],[CT.res,"Résoudre"],[CT.acq,"Acquérir"],[CT.fight,"Combattre"],[CT.craft,"Fabriquer"],[CT.lvl,"Progresser"],[CT.trade,"Échanger"]])
@@ -369,8 +371,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("IV","De la mécanique au récit",[
             LIGNE([
-              T("Typhon a vaincu les dieux et dispersé leurs pouvoirs, les Grâces divines. Il ne reste qu'une terre aride, des ruines et quelques sanctuaires. Dans cet univers, **chaque mécanique a son incarnation dans le récit** : on ne gère pas un menu, on protège une fontaine sacrée ; on ne débloque pas une compétence, on hérite du pouvoir d'un dieu déchu."),
-              T("Même le butin raconte quelque chose : les bêtes de Typhon dévorent les fragments de Grâce pour gagner en puissance, si bien que **ce que le joueur ramasse est aussi ce que l'ennemi convoite**.")
+              T("Typhon a vaincu les dieux et dispersé leurs pouvoirs, les Grâces divines. Il ne reste qu'une terre aride, des ruines et quelques sanctuaires. Dans cet univers, chaque mécanique a son incarnation dans le récit : on ne gère pas un menu, on protège une fontaine sacrée ; on ne débloque pas une compétence, on hérite du pouvoir d'un dieu déchu."),
+              T("Même le butin raconte quelque chose : les bêtes de Typhon dévorent les fragments de Grâce pour gagner en puissance, si bien que ce que le joueur ramasse est aussi ce que l'ennemi convoite.")
             ],[ CAROUSEL([[CT.realm,"Le Royaume de Lumière avant la Chute"],[CT.typhon,"Typhon"],[CT.sealed,"Un Temple scellé"]]) ]),
             LIGNE([
               TABLEAU("Une mécanique, une incarnation",["Mécanique","Incarnation narrative"],[["La Source (gestion de la base)","La fontaine sacrée de Delphes, qui accueille les réfugiés"],["La Grâce divine (compétences, craft)","Les pouvoirs des dieux déchus, dispersés par Typhon"],["Les compagnons (recrutement)","Divinités mineures, héros et réfugiés à sauver"],["Les Temples scellés (donjons, boss)","Les ruines où sont retenus les grands dieux"],["La progression","Castalie qui reprend confiance, de naïade fragile à cheffe"]],true)
@@ -378,8 +380,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("V","Castalie et le niveau du Temple d'Apollon",[
             LIGNE([
-              T("J'ai construit Castalie sur **un défaut et une évolution** : elle manque de confiance, se méfie de ses pouvoirs et des inconnus. Au fil de l'aventure, elle devient une combattante et une cheffe, et sa voix s'affirme. C'est par elle que passent les thèmes du jeu."),
-              T("Le premier niveau, les ruines du temple d'Apollon, son mentor, est pensé comme **un chemin dans la mémoire** : des mosaïques racontent le passé, et Castalie commente ce dont elle se souvient. L'intensité monte par paliers entre les salles, avec des respirations, jusqu'au boss qui l'attend là où elle conversait avec Apollon.")
+              T("J'ai construit Castalie sur un défaut et une évolution : elle manque de confiance, se méfie de ses pouvoirs et des inconnus. Au fil de l'aventure, elle devient une combattante et une cheffe, et sa voix s'affirme. C'est par elle que passent les thèmes du jeu."),
+              T("Le premier niveau, les ruines du temple d'Apollon, son mentor, est pensé comme un chemin dans la mémoire : des mosaïques racontent le passé, et Castalie commente ce dont elle se souvient. L'intensité monte par paliers entre les salles, avec des respirations, jusqu'au boss qui l'attend là où elle conversait avec Apollon.")
             ],[ IMG(CT.castalie,"Castalie, la naïade de la fontaine de Delphes","sm") ]),
             LIGNE([
               CAROUSEL([[CT.moodboard,"Moodboard du niveau"],[CT.ld,"Plan du niveau (layout)"],[CT.mol,"Diagramme moléculaire : les salles et leurs liens"],[CT.pacing,"Courbe d'intensité du niveau"]])
@@ -387,8 +389,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("VI","Ce que j'en retiens",[
             LIGNE([
-              T("Un GDD ne se limite pas à lister des features : il doit **relier les intentions aux mécaniques**, et les mécaniques à ce que le joueur ressent. C'est cette chaîne que j'ai cherché à rendre lisible, du pilier jusqu'au niveau."),
-              T("Comme producer, c'est ce qui me permet aujourd'hui de **comprendre ce que l'on demande aux équipes de design**, d'en estimer la portée et de savoir où se trouve le cœur d'un projet quand il faut arbitrer.")
+              T("Un GDD ne se limite pas à lister des features : il doit relier les intentions aux mécaniques, et les mécaniques à ce que le joueur ressent. C'est cette chaîne que j'ai cherché à rendre lisible, du pilier jusqu'au niveau."),
+              T("Comme producer, c'est ce qui me permet aujourd'hui de comprendre ce que l'on demande aux équipes de design, d'en estimer la portée et de savoir où se trouve le cœur d'un projet quand il faut arbitrer.")
             ])
           ])
         ] }),
@@ -403,49 +405,49 @@ const PROJECTS_FR = {
         contenu:[
           BANDE("I","Problématique et angle d'étude",[
             LIGNE([
-              T("Le marché du jeu vidéo reste dominé par les centres occidentaux et japonais, avec la montée du marché chinois, alors que l'Afrique connaît un essor récent. Ma problématique : **peut-on constater le développement d'un modèle africain**, et en quoi s'affranchit-il du modèle occidental ? J'y réponds à travers le **cas du Nigéria**."),
-              T("En tant que producer, j'ai lu ce marché **à travers ses contraintes** : réseau, électricité, pouvoir d'achat, accès au paiement. Ce sont elles qui expliquent les choix des studios, de la plateforme au modèle économique, jusqu'au rythme de production.")
+              T("Le marché du jeu vidéo reste dominé par les centres occidentaux et japonais, avec la montée du marché chinois, alors que l'Afrique connaît un essor récent. Ma problématique : peut-on constater le développement d'un modèle africain, et en quoi s'affranchit-il du modèle occidental ? J'y réponds à travers le cas du Nigéria."),
+              T("En tant que producer, j'ai lu ce marché à travers ses contraintes : réseau, électricité, pouvoir d'achat, accès au paiement. Ce sont elles qui expliquent les choix des studios, de la plateforme au modèle économique, jusqu'au rythme de production.")
             ],[ CITATION("« L'essor de l'industrie du jeu vidéo en Afrique attire l'attention des investisseurs avec une croissance annuelle significative. »","Nathan Bonnet, Afrikactus, 15 mai 2024"), FICHE("Le plan de l'étude",["Un marché jeune, mobile et porté par la démographie","Le Nigéria : des studios mobiles et locaux","L'e-sport, les freins et les investisseurs","Ce que j'en retiens"]) ])
           ]),
           BANDE("II","Un marché jeune, mobile et porté par la démographie",[
             LIGNE([
-              T("L'industrie est encore jeune : en 1994, l'Afrique ne comptait qu'un seul studio, Celestial Games, en Afrique du Sud. Selon Mordor Intelligence (édition 2024), le marché africain passerait de 2,14 Md$ en 2024 à 3,72 Md$ en 2029, soit environ **11,6 %** par an, contre environ 9,3 % pour le marché mondial d'après mon calcul (272,86 → 426,02 Md$). L'Afrique pèse pourtant **moins de 1 %** du marché mondial.")
+              T("L'industrie est encore jeune : en 1994, l'Afrique ne comptait qu'un seul studio, Celestial Games, en Afrique du Sud. Selon Mordor Intelligence (édition 2024), le marché africain passerait de 2,14 Md$ en 2024 à 3,72 Md$ en 2029, soit environ 11,6 % par an, contre environ 9,3 % pour le marché mondial d'après mon calcul (272,86 → 426,02 Md$). L'Afrique pèse pourtant **moins de 1 %** du marché mondial.")
             ],[ SCHEMA("marche","Le marché africain du jeu vidéo, 2024-2029 (Mordor Intelligence), comparé au marché mondial"), FICHE("Quelques studios pionniers",["Afrique du Sud : Celestial Games (1994)","Cameroun : Kiro'o Games (2003)","Ghana : Leti Arts (2009)","Nigéria : Kuluya, Gamsole et Maliyo (vers 2012)"]) ]),
             LIGNE([
-              T("Ce marché **repose sur le mobile** : en 2022, **200 millions d'Africains** jouaient sur leur téléphone, et environ 90 % des revenus passaient par le smartphone (Afrik.com). Le nombre de joueurs tous supports varie fortement selon les sources (de 349 à plus de 600 millions) : ces chiffres ne mesurent pas la même chose, et je ne les compare pas entre eux."),
-              T("Le moteur de cette croissance est **démographique** : 1,4 milliard d'habitants, 2,5 milliards attendus en 2050, et plus de **60 %** de moins de 25 ans (Forum économique mondial).")
+              T("Ce marché repose sur le mobile : en 2022, 200 millions d'Africains jouaient sur leur téléphone, et environ 90 % des revenus passaient par le smartphone (Afrik.com). Le nombre de joueurs tous supports varie fortement selon les sources (de 349 à plus de 600 millions) : ces chiffres ne mesurent pas la même chose, et je ne les compare pas entre eux."),
+              T("Le moteur de cette croissance est démographique : 1,4 milliard d'habitants, 2,5 milliards attendus en 2050, et plus de 60 % de moins de 25 ans (Forum économique mondial).")
             ],[ CHIFFRES([["200 M","joueurs sur mobile (2022)"],["90 %","des revenus via smartphone"],["> 60 %","de moins de 25 ans"],["2,5 Md","d'habitants prévus en 2050"]]) ])
           ]),
           BANDE("III","Le Nigéria : des studios mobiles et locaux",[
             LIGNE([
-              T("Au Nigéria, l'industrie tourne autour de **quatre studios majeurs** créés vers 2012 : Maliyo Games, ChopUp, Gamsole et Kuluya. Tous sont tournés vers le mobile, dans un pays qui compte **150 millions d'abonnés** à la téléphonie mobile."),
-              T("En 2011, Bayo Puddicombe adapte en jeu le danfo, le bus jaune emblématique de Lagos : Danfo dépasse le million de téléchargements. Il fonde ensuite **ChopUp** avec Zubair Abubakar. En 2016, le studio compte 4 employés et sort **un nouveau jeu toutes les 6 semaines**.")
+              T("Au Nigéria, l'industrie tourne autour de quatre studios majeurs créés vers 2012 : Maliyo Games, ChopUp, Gamsole et Kuluya. Tous sont tournés vers le mobile, dans un pays qui compte 150 millions d'abonnés à la téléphonie mobile."),
+              T("En 2011, Bayo Puddicombe adapte en jeu le danfo, le bus jaune emblématique de Lagos : Danfo dépasse le million de téléchargements. Il fonde ensuite ChopUp avec Zubair Abubakar. En 2016, le studio compte 4 employés et sort un nouveau jeu toutes les 6 semaines.")
             ],[ ETAPES("ChopUp en quelques dates",[["2011 · Danfo","Bayo Puddicombe crée le jeu Danfo : plus d'un million de téléchargements"],["2012 · Création de ChopUp","Fondation à Lagos avec Zubair Abubakar, dans la foulée du succès de Danfo"],["2016 · Rythme de production","4 employés et un nouveau jeu toutes les 6 semaines"]]) ]),
             LIGNE([
-              T("Son modèle économique contourne la **faible bancarisation** : au Nigéria, plus de la moitié des adultes n'ont pas de compte bancaire (Global Findex 2021). ChopUp s'associe donc aux **opérateurs mobiles** et donne accès à son catalogue contre un petit abonnement hebdomadaire, prélevé directement sur la facture de téléphone. Chicken Escape et Jagun : Clash of Kingdoms ont ainsi été téléchargés 100 000 fois en quelques mois.")
+              T("Son modèle économique contourne la faible bancarisation : au Nigéria, plus de la moitié des adultes n'ont pas de compte bancaire (Global Findex 2021). ChopUp s'associe donc aux opérateurs mobiles et donne accès à son catalogue contre un petit abonnement hebdomadaire, prélevé directement sur la facture de téléphone. Chicken Escape et Jagun : Clash of Kingdoms ont ainsi été téléchargés 100 000 fois en quelques mois.")
             ],[ IMG(NG.jagun,"Jagun : Clash of Kingdoms, ChopUp, 2017"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
             LIGNE([
-              T("Ces studios se détournent du triple A occidental pour **parler au local**. Pour Matteo Maillard (Jeune Afrique, 2024), ils ont créé une **exception africaine** face à des AAA dont les scénarios tournent souvent autour « du nombril américain ou de codes culturels européens ». Le quotidien devient matière de jeu, comme les embouteillages de Lagos dans Okada Ride (Maliyo, 2012), tout comme l'histoire et les mythes : Iwaju : Rising Chef (Maliyo, 2024), Aurion : L'héritage des Kori-Odan (Kiro'o Games, Cameroun)."),
-              T("Faute d'universités adaptées, les studios **assurent aussi la formation** : Maliyo Games propose un cursus **gratuit, en ligne et de 3 mois** (Game Art Academy).")
+              T("Ces studios se détournent du triple A occidental pour parler au local. Pour Matteo Maillard (Jeune Afrique, 2024), ils ont créé une exception africaine face à des AAA dont les scénarios tournent souvent autour « du nombril américain ou de codes culturels européens ». Le quotidien devient matière de jeu, comme les embouteillages de Lagos dans Okada Ride (Maliyo, 2012), tout comme l'histoire et les mythes : Iwaju : Rising Chef (Maliyo, 2024), Aurion : L'héritage des Kori-Odan (Kiro'o Games, Cameroun)."),
+              T("Faute d'universités adaptées, les studios assurent aussi la formation : Maliyo Games propose un cursus gratuit, en ligne et de 3 mois (Game Art Academy).")
             ],[ IMG(NG.okada,"Okada Ride, Maliyo Games, 2012"), IMG(NG.iwaju,"Iwaju : Rising Chef, Maliyo Games, 2024"), IMG(NG.aurion,"Aurion : L'héritage des Kori-Odan, Kiro'o Games, 2016") ])
           ]),
           BANDE("IV","L'e-sport, les freins et les investisseurs",[
             LIGNE([
-              T("La jeunesse (70 % des Nigérians ont moins de 30 ans) porte aussi l'**e-sport**. Selon PwC (via Agence Ecofin, novembre 2023), les revenus publicitaires des jeux vidéo et de l'e-sport au Nigéria passeraient de 111 M$ en 2022 à **472 M$ en 2027**. Les initiatives se multiplient : la confédération africaine CASE (fondée à Dakar en 2023), les tournois AfriGamers ou ABENA Tournaments, qui met en avant les joueuses."),
-              T("En recoupant les sources, j'ai relevé une **incohérence** : le même article annonce 7,1 % de croissance par an, ce qui mènerait à environ 156 M$ en 2027, et non 472 M$. Les éditions plus récentes de PwC donnent d'ailleurs des chiffres plus bas. Je retiens donc une **tendance**, une croissance à deux chiffres portée par le smartphone, plutôt qu'un montant.")
+              T("La jeunesse (70 % des Nigérians ont moins de 30 ans) porte aussi l'e-sport. Selon PwC (via Agence Ecofin, novembre 2023), les revenus publicitaires des jeux vidéo et de l'e-sport au Nigéria passeraient de 111 M$ en 2022 à 472 M$ en 2027. Les initiatives se multiplient : la confédération africaine CASE (fondée à Dakar en 2023), les tournois AfriGamers ou ABENA Tournaments, qui met en avant les joueuses."),
+              T("En recoupant les sources, j'ai relevé une incohérence : le même article annonce 7,1 % de croissance par an, ce qui mènerait à environ 156 M$ en 2027, et non 472 M$. Les éditions plus récentes de PwC donnent d'ailleurs des chiffres plus bas. Je retiens donc une tendance, une croissance à deux chiffres portée par le smartphone, plutôt qu'un montant.")
             ],[ TABLEAU("Jeux vidéo et e-sport au Nigéria selon PwC, selon l'édition",["Source","Période","Revenus"],[["Agence Ecofin, nov. 2023","2022 → 2027","111 → 472 M$ (publicité)"],["Nairametrics, fév. 2025","2023 → 2024","192 → 217 M$"],["Nairametrics, fév. 2025","2024 → 2028","217 → 322 M$ (+ 10,9 % par an)"]],true) ]),
             LIGNE([
-              T("Le modèle reste pourtant **fortement limité**. J'ai relevé **cinq freins**, du plus matériel au plus structurel."),
+              T("Le modèle reste pourtant fortement limité. J'ai relevé cinq freins, du plus matériel au plus structurel."),
               TABLEAU("Les freins au développement du secteur",["Frein","Constat"],[["Internet","Réseau fragile, dépendant d'un nombre limité de câbles sous-marins (BBC News)."],["Électricité","12 effondrements du réseau national en 2024. 82 % des développeurs africains jugent l'électrification primordiale (rapport d'Hugo Obi)."],["Pouvoir d'achat","Peu d'ordinateurs et de smartphones puissants : des jeux gratuits, pensés pour des joueurs occasionnels."],["Formation","Peu, voire pas, de formations longues au jeu vidéo."],["Financement","Des revenus souvent liés à des bailleurs de fonds étrangers. Des observateurs cités par Courrier International jugent ces jeux « bien-pensants » : un ressenti, pas un constat chiffré."]],true)
             ]),
             LIGNE([
-              T("Des **investisseurs** commencent malgré tout à se manifester : HP avec le Gaming Garage (académie d'e-sport et de développement de jeux, partenaire de la CASE depuis mai 2025), l'UNESCO, Smart Africa, Orange Middle East, ou encore Union Bank of Nigeria, à l'origine de la Mobo Game Jam pour les 8-18 ans.")
+              T("Des investisseurs commencent malgré tout à se manifester : HP avec le Gaming Garage (académie d'e-sport et de développement de jeux, partenaire de la CASE depuis mai 2025), l'UNESCO, Smart Africa, Orange Middle East, ou encore Union Bank of Nigeria, à l'origine de la Mobo Game Jam pour les 8-18 ans.")
             ],[ IMG(NG.abena,"ABENA Tournaments, Gamers Assembly de Poitiers, 2024"), IMG(NG.hp,"GameOn with HP Gaming Garage : esports management et game development academy") ])
           ]),
           BANDE("V","Conclusion et ce que j'en retiens",[
             LIGNE([
-              T("L'Afrique s'inscrit dans un marché en progression grâce à une **population jeune**, un marché mobile en très forte croissance et un e-sport en plein essor. Son modèle, proche du marché asiatique par la place du mobile, **se détourne des AAA** au profit de jeux du quotidien et de l'histoire nationale, mais il reste fortement limité par les infrastructures, le pouvoir d'achat et le financement."),
-              T("Ce que j'en retiens côté production. **Un marché se lit d'abord par ses contraintes**. ChopUp n'a pas seulement choisi le mobile : le studio a construit son modèle économique autour de la faible bancarisation et calé son rythme de production sur ses ressources. Pour un producer, la leçon est que le budget, le calendrier, la plateforme et le mode de paiement se décident ensemble, dès la conception. Cette étude m'a aussi appris à **distinguer un chiffre établi d'une projection** avant de bâtir un plan dessus.")
+              T("L'Afrique s'inscrit dans un marché en progression grâce à une population jeune, un marché mobile en très forte croissance et un e-sport en plein essor. Son modèle, proche du marché asiatique par la place du mobile, se détourne des AAA au profit de jeux du quotidien et de l'histoire nationale, mais il reste fortement limité par les infrastructures, le pouvoir d'achat et le financement."),
+              T("Ce que j'en retiens côté production. Un marché se lit d'abord par ses contraintes. ChopUp n'a pas seulement choisi le mobile : le studio a construit son modèle économique autour de la faible bancarisation et calé son rythme de production sur ses ressources. Pour un producer, la leçon est que le budget, le calendrier, la plateforme et le mode de paiement se décident ensemble, dès la conception. Cette étude m'a aussi appris à distinguer un chiffre établi d'une projection avant de bâtir un plan dessus.")
             ],[ FICHE("Ce que je retiens",["Lire un marché par ses contraintes","Construire le modèle économique autour de l'accès au paiement","Caler le rythme de production sur les ressources","Distinguer un chiffre établi d'une projection"]) ])
           ]),
           BANDE("VI","Sources",[ LIGNE([ SOURCES([["Agence Ecofin · Nigéria en 2027, les jeux vidéo généreront plus de revenus publicitaires que le streaming (PwC)", "https://www.agenceecofin.com/communication/1311-113619-nigeria-en-2027-les-jeux-video-genereront-plus-de-revenus-publicitaires-que-le-streaming-l-affichage-exterieur-et-la-presse-ecrite-pwc"], ["Afrik.com · Le gaming en Afrique, une révolution silencieuse", "https://www.afrik.com/le-gaming-en-afrique-une-revolution-silencieuse"], ["Jeune Afrique · L'Afrique, nouvel eldorado des jeux vidéo", "https://www.jeuneafrique.com/1526043/culture/lafrique-nouvel-eldorado-des-jeux-video/"], ["Sigma · Gaming in Nigeria is on the rise", "https://sigma.world/fr/news/gaming-in-nigeria-is-on-the-rise/"], ["Agence Ecofin · Le marché africain des jeux vidéo devrait croître de 11,62 % par an d'ici 2029", "https://www.agenceecofin.com/innovation/0810-122265-le-marche-africain-des-jeux-video-devrait-croitre-de-11-62-par-an-d-ici-2029-rapport"], ["Jeune Afrique · Le Nigeria part à la conquête du marché africain des jeux vidéo", "https://www.jeuneafrique.com/depeches/20777/politique/le-nigeria-part-a-la-conquete-du-marche-africain-des-jeux-video/"], ["Jeune Afrique · Les recettes du succès de ChopUp", "https://www.jeuneafrique.com/315910/economie-entreprises/reussite-les-recettes-du-succes-de-chopup-le-studio-de-jeux-videos-100-nigerian/"], ["Toonmed (blog) · Reportage : les recettes du succès de ChopUp", "https://toonmed.blogspot.com/2016/04/reportage-les-recettes-du-succes-de.html"], ["Agence Ecofin · Le Nigeria et l'Égypte, pays où la moitié des adultes sont non bancarisés", "https://www.agenceecofin.com/finance/0407-99376-le-nigeria-et-l-egypte-font-partie-des-7-pays-au-monde-dans-lesquels-la-moitie-des-adultes-sont-non-bancarises-rapport"], ["Banque de France · Afrique subsaharienne, la fracture financière entre hommes et femmes", "https://www.banque-france.fr/fr/publications-et-statistiques/publications/afrique-subsaharienne-la-fracture-financiere-entre-hommes-et-femmes"], ["Sport News Africa · Vers la naissance de la Confédération africaine du sport en ligne", "https://sportnewsafrica.com/articles/e-sport-vers-la-naissance-de-la-confederation-africaine-du-sport-en-ligne"], ["Mordor Intelligence · Marché mondial du jeu vidéo", "https://www.mordorintelligence.com/fr/industry-reports/global-gaming-market"], ["Courrier International · Comment le jeu vidéo se développe en Afrique", "https://www.courrierinternational.com/article/tendance-comment-le-jeu-video-se-developpe-en-afrique"], ["Africavox · L'Afrique, nouveau berceau de l'e-sport", "https://africavox.easybroadcast.fr/articles/l-afrique-nouveau-berceau-du-e-sports"], ["Afrikactus · L'essor du gaming africain sur la scène mondiale", "https://afrikactus.com/essor-du-gaming-africain-sur-la-scene-mondiale/"], ["ADF Magazine · Des start-ups nigérianes pénètrent le marché des jeux vidéo", "https://adf-magazine.com/fr/2014/10/des-start-ups-nigerianes-penetrent-le-marche-des-jeux-video/"], ["Smart Africa", "https://smartafrica.org/fr/page-daccueil/"], ["AfriGamers", "https://afrigamers.com/a-propos-afrigamers/"], ["Tribune Online · 12 times national grid collapsed in 2024", "https://tribuneonlineng.com/updated-12-times-national-grid-collapsed-in-2024/"], ["Nairametrics · PwC lists 10 fastest-growing entertainment and media sectors in Nigeria 2024-2028", "https://nairametrics.com/2025/02/09/pwc-lists-10-fastest-growing-entertainment-and-media-sectors-in-nigeria-2024-2028/"],["World Economic Forum · How will Africa's youth population drive global growth?", "https://www.weforum.org/stories/youth/africa-youth-global-growth-digital-economy/"],["ONU · Youth population trends (fact sheet)", "https://www.un.org/esa/socdev/documents/youth/fact-sheets/YouthPOP.pdf"],["Afrik.com · L'Afrique, avenir du gaming mondial ?", "https://www.afrik.com/l-afrique-avenir-du-gaming-mondial"],["Le360 · À Kigali, l'Afrique se cherche un modèle économique pour l'e-sport", "https://afrique.le360.ma/sports/des-millions-de-gamers-a-la-manette-a-kigali-lafrique-se-cherche-un-modele-economique-pour-le-sport_OLMQPD7RONHW3MNIOV3TPTZBWI/"],["AFJV · Abena Tournaments", "https://afjv.com/news/11374_abena-tournaments-tournoi-feminin-afrocaribeen-tekken8.htm"],["Linda Ikeji · Mobo Game Jam (Edu360 et Kucheza Gaming)", "https://www.lindaikejisblog.com/2020/12/mobo-game-jam-edu360-kucheza-drive-social-impact-through-gaming.html"],["Maliyo Games · Programmes de formation", "https://www.maliyo.com/programme/"],["Stuff South Africa · GameOn with HP, hackathon", "https://stuff.co.za/2024/10/11/get-your-gameon-with-hps-new-hackathon/"],["HP Gaming Garage", "https://www.hpgaminggarage.com/"],["Game Camp Cities · La CASE signe avec HP", "https://www.gamecampcities.pro/post/la-conf%C3%A9d%C3%A9ration-esport-africaine-signe-son-premier-partenaire-strat%C3%A9gique-continental-le-groupe-h?lang=fr"],["Pulse Nigeria · TCN restores power in Kaduna, Kano, Bauchi and Gombe", "https://www.pulse.ng/articles/news/local/tcn-restores-power-in-kaduna-kano-bauchi-and-gombe-after-prolonged-blackout-2024111910462282759"]]) ]) ])
@@ -471,8 +473,8 @@ const PROJECTS_EN = {
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("As every year at Game Sup, classes work in teams on a project lasting about **3 to 4 weeks**. This edition stood out for several upstream design and selection phases, which led to **4 topics of varied genres**."),
-              T("To work within this framework, I organised my work into **four macro-tasks**, presented below.")
+              T("As every year at Game Sup, classes work in teams on a project lasting about 3 to 4 weeks. This edition stood out for several upstream design and selection phases, which led to 4 topics of varied genres."),
+              T("To work within this framework, I organised my work into four macro-tasks, presented below.")
             ],[ FICHE("The constraints",["Four games to produce at the same time","Milestones set by the school: Proof of Concept, Alpha, Beta","A single producer for more than fifty people","Four weeks, with no margin to catch up on delays"]) ]),
             LIGNE([ KEYART([
                       ["images/fda-castor.jpg","Le Castor et l'Écureuil","A puzzle platformer where animals try to save their endangered environment by neutralising the human infrastructure destroying Anjou's nature."],
@@ -483,40 +485,40 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Organising four teams in parallel",[
             LIGNE([
-              T("Four games, more than fifty people and **a single producer**: I knew from the start that I could not be in every room all the time. Yet the instructors' guidelines had to reach every group in the same way. That is why we launched the productions with the **whole class together**, the day after the selection. Everyone heard the same guidelines at the same time, and we could set the organisation, tools and method together before refining them group by group."),
-              T("To keep a direct link with each team, I appointed **two leads per group** with the instructors, one for the Game Designers and one for the Game Artists. That did not solve everything: when I was in a meeting with one group, the other three moved on without me. **Dailies** took over so that tracking continued in my absence, and I remained the link between the instructors and the teams throughout the weeks, not only at milestones."),
-              T("Looking back, those daily check-ins did not bring the whole team together, and not everyone truly understood the project's progress. On a future project, I would set up **whole-team dailies** from day one.")
+              T("Four games, more than fifty people and a single producer: I knew from the start that I could not be in every room all the time. Yet the instructors' guidelines had to reach every group in the same way. That is why we launched the productions with the whole class together, the day after the selection. Everyone heard the same guidelines at the same time, and we could set the organisation, tools and method together before refining them group by group."),
+              T("To keep a direct link with each team, I appointed two leads per group with the instructors, one for the Game Designers and one for the Game Artists. That did not solve everything: when I was in a meeting with one group, the other three moved on without me. Dailies took over so that tracking continued in my absence, and I remained the link between the instructors and the teams throughout the weeks, not only at milestones."),
+              T("Looking back, those daily check-ins did not bring the whole team together, and not everyone truly understood the project's progress. On a future project, I would set up whole-team dailies from day one.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planning and tracking production",[
             LIGNE([
-              T("The school set its **Waterfall milestones** (Proof of Concept, Alpha, Beta), but each team needed sprints suited to its project. I had to connect the two, with tracking consistent enough to compare the four groups and **spot delays early**."),
-              T("I built this tracking in Excel, on two levels. For each group, a **macro-planning** sets out the sprints and the school's milestones. A **micro-planning** then links each task to a sprint, a priority, a difficulty and a status: in total, 1,387 tasks were tracked. Working documents were shared in a common PowerPoint on OneDrive, and each group had its own Discord space.")
+              T("The school set its Waterfall milestones (Proof of Concept, Alpha, Beta), but each team needed sprints suited to its project. I had to connect the two, with tracking consistent enough to compare the four groups and spot delays early."),
+              T("I built this tracking in Excel, on two levels. For each group, a macro-planning sets out the sprints and the school's milestones. A micro-planning then links each task to a sprint, a priority, a difficulty and a status: in total, **1,387 tasks** were tracked. Working documents were shared in a common PowerPoint on OneDrive, and each group had its own Discord space.")
             ],[ IMG(PRO1.macro,"Each group's own Excel macro-planning: sprints and milestones (Proof of Concept, Alpha, Beta)") ]),
             LIGNE([
-              T("Keeping nearly 1,400 statuses up to date took constant attention, but it is what made delays and kills visible, sprint by sprint. What I lacked were **more precise end-of-sprint deliverables for each discipline**: progress was sometimes hard to check concretely. That is the first thing I would change.")
+              T("Keeping nearly 1,400 statuses up to date took constant attention, but it is what made delays and kills visible, sprint by sprint. What I lacked were more precise end-of-sprint deliverables for each discipline: progress was sometimes hard to check concretely. That is the first thing I would change.")
             ],[ IMG(PRO1.micro,"Excerpt from one group's micro-planning: tasks, sprints, priorities, difficulties and statuses") ])
           ]),
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
-              T("In the second week, the same problem appeared in all four groups: **art direction** was unclear, and team members struggled to picture the references. Delays quickly reached **two to three days**, and I could feel the risk of crunch coming."),
-              T("Rather than let each team get bogged down, we held emergency meetings with each group and **paused production for a day and a half**. That time to step back helped us understand where the problem came from: **references that were too broad** and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough.")
+              T("In the second week, the same problem appeared in all four groups: art direction was unclear, and team members struggled to picture the references. Delays quickly reached two to three days, and I could feel the risk of crunch coming."),
+              T("Rather than let each team get bogged down, we held emergency meetings with each group and paused production for a day and a half. That time to step back helped us understand where the problem came from: references that were too broad and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
-              T("Each group experienced the crisis in its own way, so there was no single answer. For one, **I decided, in agreement with the discipline leads**, to **kill** several assets that were off-brief or no longer a priority. For another, we reworked the Level Art and the atmospheric shader."),
-              T("If I had to do it again, I would have a small **reference scene built in the engine** from the start, with a prop at the target quality, the desired textures and the lighting and camera intentions.")
+              T("Each group experienced the crisis in its own way, so there was no single answer. For one, I decided, in agreement with the discipline leads, to kill several assets that were off-brief or no longer a priority. For another, we reworked the Level Art and the atmospheric shader."),
+              T("If I had to do it again, I would have a small reference scene built in the engine from the start, with a prop at the target quality, the desired textures and the lighting and camera intentions.")
             ],[ IMG(PRO1.kill,"Removed tasks (kills) in one group's tracking") ])
           ]),
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
-              T("After the crisis, only two weeks remained. We had to decide where to put the effort, and accept dropping some things, without letting the end of the project weigh on the teams. So I set a **shared playtest date** for all four groups, aligned with the other classes' schedules so that outside players could come."),
-              T("To make the feedback usable, each team prepared a structured questionnaire. The one for Le Castor et l'Écureuil, for example, covered the characters, design consistency and controls, with answers rated from 1 to 7, and collected **22 responses**."),
-              T("The feedback was plentiful, and often critical, at a time when morale was already low. With each team, we sorted it to keep the most important points, then I **redefined priorities** and reorganised the schedules. Seeing strangers play the projects also gave the teams new energy: despite the criticism, the games appealed.")
+              T("After the crisis, only two weeks remained. We had to decide where to put the effort, and accept dropping some things, without letting the end of the project weigh on the teams. So I set a shared playtest date for all four groups, aligned with the other classes' schedules so that outside players could come."),
+              T("To make the feedback usable, each team prepared a structured questionnaire. The one for Le Castor et l'Écureuil, for example, covered the characters, design consistency and controls, with answers rated from 1 to 7, and collected 22 responses."),
+              T("The feedback was plentiful, and often critical, at a time when morale was already low. With each team, we sorted it to keep the most important points, then I redefined priorities and reorganised the schedules. Seeing strangers play the projects also gave the teams new energy: despite the criticism, the games appealed.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","The playtest feedback form for Le Castor et l'Écureuil: 22 responses"],["images/fda-playtest-perso.jpg","A section of the questionnaire: how players rated the characters"],["images/fda-playtest-coherence.jpg","A section of the questionnaire: design consistency, rated from 1 to 7"]]) ])
           ]),
           BANDE("VII","Lessons learned",[
             LIGNE([
-              T("It was the first time I had been entrusted with **producing for an entire class**, and it was above all the mid-course crisis that made me grow. It taught me to set aside what I thought I knew and listen to each team's own needs, to **delegate**, and to set up clear communication channels from the start, so that no team feels left to fend for itself.")
+              T("It was the first time I had been entrusted with producing for an entire class, and it was above all the mid-course crisis that made me grow. It taught me to set aside what I thought I knew and listen to each team's own needs, to delegate, and to set up clear communication channels from the start, so that no team feels left to fend for itself.")
             ])
           ]),
           BANDE("VIII","The teams",[
@@ -583,54 +585,54 @@ const PROJECTS_EN = {
         contenu:[
           BANDE("I","Constraints of the exercise",[
             LIGNE([
-              T("For this exercise, we had to provide a **production management document** covering several areas: a credible definition of the team to assemble, a macro-planning and a micro-planning of the production in Coda and ClickUp, a development budget in Excel and a **sales estimate (Market Analysis)**."),
-              T("I chose an **AA-scale project** comparable to Greedfall: Wyrdfall, carried by a team of **30 to 50 people** at peak production."),
+              T("For this exercise, we had to provide a production management document covering several areas: a credible definition of the team to assemble, a macro-planning and a micro-planning of the production in Coda and ClickUp, a development budget in Excel and a sales estimate (Market Analysis)."),
+              T("I chose an AA-scale project comparable to Greedfall: Wyrdfall, carried by a team of 30 to 50 people at peak production."),
               T("The High Concept document and the prototype, also required, were produced during the rest of the assignment and are not shown here.")
             ],[ FICHE("Production management · shown here · 20 h",["Team to assemble","Macro-planning and micro-planning (Coda, ClickUp)","Development budget (Excel)","Sales estimate (Market Analysis)"]), FICHE("Other deliverables · 70 h",["High Concept document","Prototype"]) ])
           ]),
           BANDE("II","Key figures and break-even point",[
             LIGNE([
-              T("Wyrdfall is a **48-month AA project**, comprising 36 months of production and 12 months of live service, for a team of 42 people, 25 of whom remain on the live phase. The total project budget comes to **€9,033,682**, of which €7,070,677 is salaries (78%), the rest being split between Software, Localization, Utilities and Outsourcing.")
+              T("Wyrdfall is a 48-month AA project, comprising 36 months of production and 12 months of live service, for a team of 42 people, 25 of whom remain on the live phase. The total project budget comes to **€9,033,682**, of which €7,070,677 is salaries (78%), the rest being split between Software, Localization, Utilities and Outsourcing.")
             ],[ CHIFFRES([["€9,033,682","Total Budget"],["42","People on the team"],["48 months","36 production · 12 live"],["78%","Share of salaries"]]) ]),
             LIGNE([
-              T("To know when the project becomes profitable, I calculated its **break-even point**. From a price of €49.99, I removed Steam's share, taxes and the Unreal Engine royalty in one go (55%), then refunds. It is a cautious choice: each sale only brings in about €20, a little less than in reality. The budget is covered from about **451,000 sales**. If the project holds up under this assumption, it will hold up under a more favourable one."),
-              T("In the average conservative scenario, I estimate sales at 482,000, just above the threshold, for a profit of €616,438, an ROI of about **+6.8%**. The table shows the other cases: everything depends on the **wishlist conversion rate**. These estimates only count Steam sales, without the DLC."),
+              T("To know when the project becomes profitable, I calculated its break-even point. From a price of €49.99, I removed Steam's share, taxes and the Unreal Engine royalty in one go (55%), then refunds. It is a cautious choice: each sale only brings in about €20, a little less than in reality. The budget is covered from about **451,000 sales**. If the project holds up under this assumption, it will hold up under a more favourable one."),
+              T("In the average conservative scenario, I estimate sales at 482,000, just above the threshold, for a profit of €616,438, an ROI of about +6.8%. The table shows the other cases: everything depends on the wishlist conversion rate. These estimates only count Steam sales, without the DLC."),
             ],[ TABLEAU("Net profit and ROI by scenario · Total budget: €9,033,682",["Scenario","Estimated sales","Net profit (ROI)"],["Conservative: 250,000 followers", ["High", "626,600", "+ €4,639,128 (+ 51.4%)"], ["Average", "482,000", "+ €616,438 (+ 6.8%)"], ["Low", "115,680", "− €6,873,790 (− 76.1%)"], "Optimistic: average sales from the Market Analysis", ["High", "959,400", "+ €11,901,031 (+ 131.7%)"], ["Average", "738,000", "+ €5,741,809 (+ 63.6%)"], ["Low", "177,120", "− €5,726,628 (− 63.4%)"]]) ])
           ]),
           BANDE("III","A production file built for clarity",[
             LIGNE([
-              T("When building my general Excel file, my priority was **clarity**: every piece of information had to be found quickly, without getting lost among the tabs. So I worked on colour consistency to group related pages, and built buttons and a **simple navigation bar**."),
+              T("When building my general Excel file, my priority was clarity: every piece of information had to be found quickly, without getting lost among the tabs. So I worked on colour consistency to group related pages, and built buttons and a simple navigation bar."),
               T("The organisation of the pages and the hierarchy of information within each one were also given particular attention.")
             ],[ IMG(EX1.nav,"Home page of the production file: buttons and navigation through colour-coded tabs") ])
           ]),
           BANDE("IV","The Market Analysis approach",[
             LIGNE([
-              T("To estimate potential sales on Steam, I started by **analysing the game's competitors**, extracting usable averages for my projection scenarios. To build a wide panel, I selected games released over 11 years, from 2014 to 2025: a rather wide period that would benefit from being narrowed to **5 years**.")
+              T("To estimate potential sales on Steam, I started by analysing the game's competitors, extracting usable averages for my projection scenarios. To build a wide panel, I selected games released over 11 years, from 2014 to 2025: a rather wide period that would benefit from being narrowed to 5 years.")
             ],[ IMG(EX1.market,"Competitor analysis: sales, estimated revenue and averages") ]),
             LIGNE([
-              T("The extracted data allowed me to propose **two scenarios**, an optimistic one and a more conservative one, each broken down into **three risk levels** (high, average, low), so that the production's economics could be considered as clearly as possible.")
+              T("The extracted data allowed me to propose two scenarios, an optimistic one and a more conservative one, each broken down into three risk levels (high, average, low), so that the production's economics could be considered as clearly as possible.")
             ],[ CAROUSEL([[EX1.roiCons,"ROI estimate, conservative scenario: 250,000 followers, in high, average and low cases"],[EX1.roiOpti,"ROI estimate, optimistic scenario: average sales from the Market Analysis, in high, average and low cases"]]) ])
           ]),
           BANDE("V","A clear, easily adjustable budget",[
             LIGNE([
-              T("A key goal of this work was the adaptability of the file: the budget must **update in one click** when a new member joins the studio or when seniority changes."),
+              T("A key goal of this work was the adaptability of the file: the budget must update in one click when a new member joins the studio or when seniority changes."),
               T("I also wanted this flexibility to extend to the software assigned to employees, so that the budget adjusts immediately (see image).")
             ],[ IMG(EX1.budget,"Budget overview: team, duration and budget by department") ])
           ]),
           BANDE("VI","Planning the whole project",[
             LIGNE([
-              T("Finally, this exercise tested my ability to **anticipate and plan**: it was no longer a three-week project but a **4-year production**, from the main production through to the release of the planned DLC."),
-              T("Planning **Epics and Stories** across an entire production is a real challenge, which pushed me to take every aspect of the project into account: the essential elements, the levels, QA integration, and so on.")
+              T("Finally, this exercise tested my ability to anticipate and plan: it was no longer a three-week project but a 4-year production, from the main production through to the release of the planned DLC."),
+              T("Planning Epics and Stories across an entire production is a real challenge, which pushed me to take every aspect of the project into account: the essential elements, the levels, QA integration, and so on.")
             ],[ IMG(EX1.epic,"Macro-planning: the production's Epics") ]),
             LIGNE([
-              T("I completed this work with a detailed sprint and its tasks: a **pre-production sprint** aimed at preparing the Vertical Slice."),
+              T("I completed this work with a detailed sprint and its tasks: a pre-production sprint aimed at preparing the Vertical Slice."),
               T("This part was demanding: it forced me out of the logic of the sprints in our very constrained 3-week workshops, to reason step by step about the needs that lead from one sprint to the next.")
             ],[ IMG(EX1.sprint,"Pre-production sprint: tasks, priorities and sprint points") ])
           ]),
           BANDE("VII","Going further",[
             LIGNE([
-              T("This work was extremely formative and gave me a fresh perspective on the producer role. In hindsight, I see several ways to improve it. First, I underestimated the **workload of the QA team**: a larger headcount would be needed to avoid a possible crunch. The same goes for the Sound Design team, which is also understaffed."),
-              T("It would also be useful to study the **funding** available to a studio of this size to flesh out the dossier: regional, national and European grants, bank financing, Kickstarter."),
+              T("This work was extremely formative and gave me a fresh perspective on the producer role. In hindsight, I see several ways to improve it. First, I underestimated the workload of the QA team: a larger headcount would be needed to avoid a possible crunch. The same goes for the Sound Design team, which is also understaffed."),
+              T("It would also be useful to study the funding available to a studio of this size to flesh out the dossier: regional, national and European grants, bank financing, Kickstarter."),
               T("I nonetheless remain proud of this work, which broadened my view of the scope of this role.")
             ],[ FICHE("Areas for improvement",["Strengthen the QA team to avoid a crunch","Re-evaluate the Sound Design team","Study funding: regional, national and European grants, bank solutions, Kickstarter"]) ])
           ])
@@ -646,20 +648,20 @@ const PROJECTS_EN = {
         contenu:[
           BANDE("I","The idea and the concept",[
             LIGNE([
-              T("Among the Greek mythical creatures, I chose the Naiads, goddesses of the waters. From there came a simple idea: **a Naiad travels through Greece to save divinities** and fight Typhon's armies. The player embodies Castalie, guardian of the Delphi spring, and meets heroes and gods along the way who become her companions."),
-              T("Castalie's Tears is a single-player **turn-based RPG** designed for PC and Nintendo Switch, with a premium model. To place it: Dragon Quest XI meets Dragon Age: Inquisition in a universe close to Immortals Fenyx Rising. It is a measured game that rewards thinking and organisation more than reflexes.")
+              T("Among the Greek mythical creatures, I chose the Naiads, goddesses of the waters. From there came a simple idea: a Naiad travels through Greece to save divinities and fight Typhon's armies. The player embodies Castalie, guardian of the Delphi spring, and meets heroes and gods along the way who become her companions."),
+              T("Castalie's Tears is a single-player turn-based RPG designed for PC and Nintendo Switch, with a premium model. To place it: Dragon Quest XI meets Dragon Age: Inquisition in a universe close to Immortals Fenyx Rising. It is a measured game that rewards thinking and organisation more than reflexes.")
             ],[ CAROUSEL([[CT.pitch,"The core statement: Castalie against Typhon"],[CT.one,"The one-liner and its three references"],[CT.info,"The project information sheet"]]) ])
           ]),
           BANDE("II","Intentions and pillars",[
             LIGNE([
-              T("I started from values (courage, cooperation, resilience) and themes: survivor guilt, trust, and the question “what is a hero?”. These intentions become **three gameplay pillars**: fight Typhon's tides, explore a desolate world, and take care of your Source to make it grow."),
-              T("I also listed **what the game will not be**: multiplayer, grid-based tactical combat, a skill tree, mini-games, stealth, multiple endings. That is what keeps the scope under control.")
+              T("I started from values (courage, cooperation, resilience) and themes: survivor guilt, trust, and the question “what is a hero?”. These intentions become three gameplay pillars: fight Typhon's tides, explore a desolate world, and take care of your Source to make it grow."),
+              T("I also listed what the game will not be: multiplayer, grid-based tactical combat, a skill tree, mini-games, stealth, multiple endings. That is what keeps the scope under control.")
             ],[ CAROUSEL([[CT.pillars,"The three gameplay pillars"],[CT.notdo,"What the game is not"]]) ])
           ]),
           BANDE("III","The core loop and the target player",[
             LIGNE([
-              T("The player manages their base, explores, solves puzzles or fights, gathers resources and levels up, then crafts or trades before returning to base. I qualified each step by its role in the game economy (source, converter, drain, trader) to check that **the loop feeds itself as much as it consumes**."),
-              T("The game targets an **active adult audience** who plays in short sessions: Achiever first, then Explorer in Bartle's taxonomy. They want depth and choices, hence a game that bets on story and management rather than puzzles.")
+              T("The player manages their base, explores, solves puzzles or fights, gathers resources and levels up, then crafts or trades before returning to base. I qualified each step by its role in the game economy (source, converter, drain, trader) to check that the loop feeds itself as much as it consumes."),
+              T("The game targets an active adult audience who plays in short sessions: Achiever first, then Explorer in Bartle's taxonomy. They want depth and choices, hence a game that bets on story and management rather than puzzles.")
             ],[ IMG(CT.loop,"The core loop of Castalie's Tears") ]),
             LIGNE([
               CAROUSEL([[CT.manage,"Manage"],[CT.explore,"Explore"],[CT.res,"Resolve"],[CT.acq,"Acquire"],[CT.fight,"Fight"],[CT.craft,"Craft"],[CT.lvl,"Level up"],[CT.trade,"Trade"]])
@@ -667,8 +669,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("IV","From mechanics to story",[
             LIGNE([
-              T("Typhon has defeated the gods and scattered their powers, the Divine Graces. What remains is a barren land, ruins and a few sanctuaries. In this world, **every mechanic is embodied in the story**: you don't manage a menu, you protect a sacred fountain; you don't unlock a skill, you inherit the power of a fallen god."),
-              T("Even the loot tells a story: Typhon's beasts devour fragments of Grace to grow stronger, so **what the player collects is also what the enemy craves**.")
+              T("Typhon has defeated the gods and scattered their powers, the Divine Graces. What remains is a barren land, ruins and a few sanctuaries. In this world, every mechanic is embodied in the story: you don't manage a menu, you protect a sacred fountain; you don't unlock a skill, you inherit the power of a fallen god."),
+              T("Even the loot tells a story: Typhon's beasts devour fragments of Grace to grow stronger, so what the player collects is also what the enemy craves.")
             ],[ CAROUSEL([[CT.realm,"The Realm of Light before the Fall"],[CT.typhon,"Typhon"],[CT.sealed,"A Sealed Temple"]]) ]),
             LIGNE([
               TABLEAU("One mechanic, one embodiment",["Mechanic","Narrative embodiment"],[["The Source (base management)","The sacred fountain of Delphi, which shelters refugees"],["Divine Grace (skills, crafting)","The powers of the fallen gods, scattered by Typhon"],["Companions (recruitment)","Minor deities, heroes and refugees to rescue"],["Sealed Temples (dungeons, bosses)","The ruins where the great gods are held"],["Progression","Castalie regaining confidence, from fragile Naiad to leader"]],true)
@@ -676,8 +678,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("V","Castalie and the Temple of Apollo level",[
             LIGNE([
-              T("I built Castalie on **a flaw and an evolution**: she lacks confidence and distrusts her powers and strangers. Over the adventure, she becomes a fighter and a leader, and her voice grows more assured. The game's themes run through her."),
-              T("The first level, the ruins of the temple of Apollo, her mentor, is designed as **a walk through memory**: mosaics tell the past, and Castalie comments on what she remembers. Intensity rises in steps between rooms, with breathers, up to the boss waiting where she used to talk with Apollo.")
+              T("I built Castalie on a flaw and an evolution: she lacks confidence and distrusts her powers and strangers. Over the adventure, she becomes a fighter and a leader, and her voice grows more assured. The game's themes run through her."),
+              T("The first level, the ruins of the temple of Apollo, her mentor, is designed as a walk through memory: mosaics tell the past, and Castalie comments on what she remembers. Intensity rises in steps between rooms, with breathers, up to the boss waiting where she used to talk with Apollo.")
             ],[ IMG(CT.castalie,"Castalie, the Naiad of the Delphi spring","sm") ]),
             LIGNE([
               CAROUSEL([[CT.moodboard,"Level moodboard"],[CT.ld,"Level layout"],[CT.mol,"Molecular diagram: rooms and their links"],[CT.pacing,"Level intensity curve"]])
@@ -685,8 +687,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("VI","What I take away",[
             LIGNE([
-              T("A GDD is not just a list of features: it must **link intentions to mechanics**, and mechanics to what the player feels. That chain is what I tried to make readable, from pillar to level."),
-              T("As a producer, this is what now helps me **understand what is being asked of design teams**, estimate its scope, and know where the heart of a project lies when choices have to be made.")
+              T("A GDD is not just a list of features: it must link intentions to mechanics, and mechanics to what the player feels. That chain is what I tried to make readable, from pillar to level."),
+              T("As a producer, this is what now helps me understand what is being asked of design teams, estimate its scope, and know where the heart of a project lies when choices have to be made.")
             ])
           ])
         ] }),
@@ -701,49 +703,49 @@ const PROJECTS_EN = {
         contenu:[
           BANDE("I","Research question and approach",[
             LIGNE([
-              T("The video game market is still dominated by Western and Japanese centres, with the rise of the Chinese market, while Africa is going through a recent boom. My research question: **can we see an African model emerging**, and how does it break away from the Western one? I answer it through the **case of Nigeria**."),
-              T("As a producer, I read this market **through its constraints**: network, electricity, purchasing power, access to payment. They are what explain the studios' choices, from platform to business model and even production pace.")
+              T("The video game market is still dominated by Western and Japanese centres, with the rise of the Chinese market, while Africa is going through a recent boom. My research question: can we see an African model emerging, and how does it break away from the Western one? I answer it through the case of Nigeria."),
+              T("As a producer, I read this market through its constraints: network, electricity, purchasing power, access to payment. They are what explain the studios' choices, from platform to business model and even production pace.")
             ],[ CITATION("“The rise of the video game industry in Africa is attracting investors' attention, with significant annual growth.”","Nathan Bonnet, Afrikactus, 15 May 2024"), FICHE("Outline of the study",["A young, mobile market driven by demographics","Nigeria: mobile, local studios","Esports, obstacles and investors","What I take away"]) ])
           ]),
           BANDE("II","A young, mobile market driven by demographics",[
             LIGNE([
-              T("The industry is still young: in 1994, Africa had only one studio, Celestial Games, in South Africa. According to Mordor Intelligence (2024 edition), the African market would grow from $2.14 bn in 2024 to $3.72 bn in 2029, about **11.6 %** a year, against about 9.3 % for the world market by my calculation ($272.86 bn → $426.02 bn). Yet Africa accounts for **less than 1 %** of the world market.")
+              T("The industry is still young: in 1994, Africa had only one studio, Celestial Games, in South Africa. According to Mordor Intelligence (2024 edition), the African market would grow from $2.14 bn in 2024 to $3.72 bn in 2029, about 11.6 % a year, against about 9.3 % for the world market by my calculation ($272.86 bn → $426.02 bn). Yet Africa accounts for **less than 1 %** of the world market.")
             ],[ SCHEMA("marche","The African video game market, 2024-2029 (Mordor Intelligence), compared with the world market"), FICHE("A few pioneering studios",["South Africa: Celestial Games (1994)","Cameroon: Kiro'o Games (2003)","Ghana: Leti Arts (2009)","Nigeria: Kuluya, Gamsole and Maliyo (around 2012)"]) ]),
             LIGNE([
-              T("This market **relies on mobile**: in 2022, **200 million Africans** played on their phones, and about 90 % of revenue came through smartphones (Afrik.com). The number of players across all platforms varies widely between sources (from 349 to over 600 million): these figures do not measure the same thing, so I do not compare them."),
-              T("The driver of this growth is **demographic**: 1.4 billion inhabitants, 2.5 billion expected by 2050, and over **60 %** under 25 (World Economic Forum).")
+              T("This market relies on mobile: in 2022, 200 million Africans played on their phones, and about 90 % of revenue came through smartphones (Afrik.com). The number of players across all platforms varies widely between sources (from 349 to over 600 million): these figures do not measure the same thing, so I do not compare them."),
+              T("The driver of this growth is demographic: 1.4 billion inhabitants, 2.5 billion expected by 2050, and over 60 % under 25 (World Economic Forum).")
             ],[ CHIFFRES([["200 M","mobile players (2022)"],["90 %","of revenue from smartphones"],["> 60 %","under 25"],["2.5 bn","inhabitants expected in 2050"]]) ])
           ]),
           BANDE("III","Nigeria: mobile, local studios",[
             LIGNE([
-              T("In Nigeria, the industry revolves around **four major studios** founded around 2012: Maliyo Games, ChopUp, Gamsole and Kuluya. All of them focus on mobile, in a country with **150 million** mobile subscribers."),
-              T("In 2011, Bayo Puddicombe turns the danfo, Lagos' iconic yellow bus, into a game: Danfo passes one million downloads. He then founds **ChopUp** with Zubair Abubakar. In 2016, the studio has 4 employees and releases **a new game every 6 weeks**.")
+              T("In Nigeria, the industry revolves around four major studios founded around 2012: Maliyo Games, ChopUp, Gamsole and Kuluya. All of them focus on mobile, in a country with 150 million mobile subscribers."),
+              T("In 2011, Bayo Puddicombe turns the danfo, Lagos' iconic yellow bus, into a game: Danfo passes one million downloads. He then founds ChopUp with Zubair Abubakar. In 2016, the studio has 4 employees and releases a new game every 6 weeks.")
             ],[ ETAPES("ChopUp in a few dates",[["2011 · Danfo","Bayo Puddicombe creates the game Danfo: over one million downloads"],["2012 · ChopUp founded","Founded in Lagos with Zubair Abubakar, on the back of Danfo's success"],["2016 · Production pace","4 employees and a new game every 6 weeks"]]) ]),
             LIGNE([
-              T("Its business model gets around **low banking penetration**: in Nigeria, more than half of adults have no bank account (Global Findex 2021). ChopUp therefore partners with **mobile operators** and gives access to its catalogue for a small weekly subscription, charged directly to the phone bill. Chicken Escape and Jagun: Clash of Kingdoms were downloaded 100,000 times within a few months.")
+              T("Its business model gets around low banking penetration: in Nigeria, more than half of adults have no bank account (Global Findex 2021). ChopUp therefore partners with mobile operators and gives access to its catalogue for a small weekly subscription, charged directly to the phone bill. Chicken Escape and Jagun: Clash of Kingdoms were downloaded 100,000 times within a few months.")
             ],[ IMG(NG.jagun,"Jagun: Clash of Kingdoms, ChopUp, 2017"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
             LIGNE([
-              T("These studios turn away from Western triple-A to **speak to the local**. For Matteo Maillard (Jeune Afrique, 2024), they have created an **African exception** against AAA games whose stories often revolve around “the American navel or European cultural codes”. Daily life becomes game material, like Lagos traffic jams in Okada Ride (Maliyo, 2012), and so do history and myths: Iwaju: Rising Chef (Maliyo, 2024), Aurion: Legacy of the Kori-Odan (Kiro'o Games, Cameroon)."),
-              T("For lack of suitable universities, studios **also provide training**: Maliyo Games offers a **free, 3-month online course** (Game Art Academy).")
+              T("These studios turn away from Western triple-A to speak to the local. For Matteo Maillard (Jeune Afrique, 2024), they have created an African exception against AAA games whose stories often revolve around “the American navel or European cultural codes”. Daily life becomes game material, like Lagos traffic jams in Okada Ride (Maliyo, 2012), and so do history and myths: Iwaju: Rising Chef (Maliyo, 2024), Aurion: Legacy of the Kori-Odan (Kiro'o Games, Cameroon)."),
+              T("For lack of suitable universities, studios also provide training: Maliyo Games offers a free, 3-month online course (Game Art Academy).")
             ],[ IMG(NG.okada,"Okada Ride, Maliyo Games, 2012"), IMG(NG.iwaju,"Iwaju: Rising Chef, Maliyo Games, 2024"), IMG(NG.aurion,"Aurion: Legacy of the Kori-Odan, Kiro'o Games, 2016") ])
           ]),
           BANDE("IV","Esports, obstacles and investors",[
             LIGNE([
-              T("Young people (70 % of Nigerians are under 30) also drive **esports**. According to PwC (via Agence Ecofin, November 2023), advertising revenue from video games and esports in Nigeria would rise from $111 m in 2022 to **$472 m in 2027**. Initiatives are multiplying: the African confederation CASE (founded in Dakar in 2023), AfriGamers tournaments and ABENA Tournaments, which highlights women players."),
-              T("Cross-checking sources, I noticed an **inconsistency**: the same article announces 7.1 % growth a year, which would lead to about $156 m in 2027, not $472 m. More recent PwC editions also give lower figures. I therefore retain a **trend**, double-digit growth driven by the smartphone, rather than an amount.")
+              T("Young people (70 % of Nigerians are under 30) also drive esports. According to PwC (via Agence Ecofin, November 2023), advertising revenue from video games and esports in Nigeria would rise from $111 m in 2022 to $472 m in 2027. Initiatives are multiplying: the African confederation CASE (founded in Dakar in 2023), AfriGamers tournaments and ABENA Tournaments, which highlights women players."),
+              T("Cross-checking sources, I noticed an inconsistency: the same article announces 7.1 % growth a year, which would lead to about $156 m in 2027, not $472 m. More recent PwC editions also give lower figures. I therefore retain a trend, double-digit growth driven by the smartphone, rather than an amount.")
             ],[ TABLEAU("Video games and esports in Nigeria according to PwC, by edition",["Source","Period","Revenue"],[["Agence Ecofin, Nov. 2023","2022 → 2027","$111 → 472 m (advertising)"],["Nairametrics, Feb. 2025","2023 → 2024","$192 → 217 m"],["Nairametrics, Feb. 2025","2024 → 2028","$217 → 322 m (+10.9 % a year)"]],true) ]),
             LIGNE([
-              T("Yet the model remains **strongly limited**. I identified **five obstacles**, from the most material to the most structural."),
+              T("Yet the model remains strongly limited. I identified five obstacles, from the most material to the most structural."),
               TABLEAU("Obstacles to the sector's development",["Obstacle","Finding"],[["Internet","Fragile network, dependent on a limited number of submarine cables (BBC News)."],["Electricity","12 national grid collapses in 2024. 82 % of African developers see electrification as essential (Hugo Obi's report)."],["Purchasing power","Few computers and powerful smartphones: free games, designed for casual players."],["Training","Few, if any, long training courses in video games."],["Funding","Revenue often tied to foreign donors. Observers quoted by Courrier International find these games “well-meaning”: a perception, not a measured finding."]],true)
             ]),
             LIGNE([
-              T("**Investors** are nonetheless starting to step in: HP with the Gaming Garage (esports and game development academy, a CASE partner since May 2025), UNESCO, Smart Africa, Orange Middle East, and Union Bank of Nigeria, behind the Mobo Game Jam for 8 to 18-year-olds.")
+              T("Investors are nonetheless starting to step in: HP with the Gaming Garage (esports and game development academy, a CASE partner since May 2025), UNESCO, Smart Africa, Orange Middle East, and Union Bank of Nigeria, behind the Mobo Game Jam for 8 to 18-year-olds.")
             ],[ IMG(NG.abena,"ABENA Tournaments, Gamers Assembly Poitiers, 2024"), IMG(NG.hp,"GameOn with HP Gaming Garage: esports management and game development academy") ])
           ]),
           BANDE("V","Conclusion and what I take away",[
             LIGNE([
-              T("Africa is part of a growing market thanks to a **young population**, a fast-growing mobile market and booming esports. Its model, close to the Asian market in the place it gives to mobile, **turns away from AAA** in favour of everyday games and national history, but it remains strongly limited by infrastructure, purchasing power and funding."),
-              T("What I take away for production. **A market is first read through its constraints**. ChopUp did not just choose mobile: it built its business model around low banking penetration and set its production pace according to its resources. For a producer, the lesson is that budget, schedule, platform and payment method are decided together, from the start. This study also taught me to **tell an established figure from a projection** before building a plan on it.")
+              T("Africa is part of a growing market thanks to a young population, a fast-growing mobile market and booming esports. Its model, close to the Asian market in the place it gives to mobile, turns away from AAA in favour of everyday games and national history, but it remains strongly limited by infrastructure, purchasing power and funding."),
+              T("What I take away for production. A market is first read through its constraints. ChopUp did not just choose mobile: it built its business model around low banking penetration and set its production pace according to its resources. For a producer, the lesson is that budget, schedule, platform and payment method are decided together, from the start. This study also taught me to tell an established figure from a projection before building a plan on it.")
             ],[ FICHE("What I take away",["Read a market through its constraints","Build the business model around access to payment","Set the production pace according to resources","Tell an established figure from a projection"]) ])
           ]),
           BANDE("VI","Sources",[ LIGNE([ SOURCES([["Agence Ecofin · Nigéria en 2027, les jeux vidéo généreront plus de revenus publicitaires que le streaming (PwC)", "https://www.agenceecofin.com/communication/1311-113619-nigeria-en-2027-les-jeux-video-genereront-plus-de-revenus-publicitaires-que-le-streaming-l-affichage-exterieur-et-la-presse-ecrite-pwc"], ["Afrik.com · Le gaming en Afrique, une révolution silencieuse", "https://www.afrik.com/le-gaming-en-afrique-une-revolution-silencieuse"], ["Jeune Afrique · L'Afrique, nouvel eldorado des jeux vidéo", "https://www.jeuneafrique.com/1526043/culture/lafrique-nouvel-eldorado-des-jeux-video/"], ["Sigma · Gaming in Nigeria is on the rise", "https://sigma.world/fr/news/gaming-in-nigeria-is-on-the-rise/"], ["Agence Ecofin · Le marché africain des jeux vidéo devrait croître de 11,62 % par an d'ici 2029", "https://www.agenceecofin.com/innovation/0810-122265-le-marche-africain-des-jeux-video-devrait-croitre-de-11-62-par-an-d-ici-2029-rapport"], ["Jeune Afrique · Le Nigeria part à la conquête du marché africain des jeux vidéo", "https://www.jeuneafrique.com/depeches/20777/politique/le-nigeria-part-a-la-conquete-du-marche-africain-des-jeux-video/"], ["Jeune Afrique · Les recettes du succès de ChopUp", "https://www.jeuneafrique.com/315910/economie-entreprises/reussite-les-recettes-du-succes-de-chopup-le-studio-de-jeux-videos-100-nigerian/"], ["Toonmed (blog) · Reportage : les recettes du succès de ChopUp", "https://toonmed.blogspot.com/2016/04/reportage-les-recettes-du-succes-de.html"], ["Agence Ecofin · Le Nigeria et l'Égypte, pays où la moitié des adultes sont non bancarisés", "https://www.agenceecofin.com/finance/0407-99376-le-nigeria-et-l-egypte-font-partie-des-7-pays-au-monde-dans-lesquels-la-moitie-des-adultes-sont-non-bancarises-rapport"], ["Banque de France · Afrique subsaharienne, la fracture financière entre hommes et femmes", "https://www.banque-france.fr/fr/publications-et-statistiques/publications/afrique-subsaharienne-la-fracture-financiere-entre-hommes-et-femmes"], ["Sport News Africa · Vers la naissance de la Confédération africaine du sport en ligne", "https://sportnewsafrica.com/articles/e-sport-vers-la-naissance-de-la-confederation-africaine-du-sport-en-ligne"], ["Mordor Intelligence · Marché mondial du jeu vidéo", "https://www.mordorintelligence.com/fr/industry-reports/global-gaming-market"], ["Courrier International · Comment le jeu vidéo se développe en Afrique", "https://www.courrierinternational.com/article/tendance-comment-le-jeu-video-se-developpe-en-afrique"], ["Africavox · L'Afrique, nouveau berceau de l'e-sport", "https://africavox.easybroadcast.fr/articles/l-afrique-nouveau-berceau-du-e-sports"], ["Afrikactus · L'essor du gaming africain sur la scène mondiale", "https://afrikactus.com/essor-du-gaming-africain-sur-la-scene-mondiale/"], ["ADF Magazine · Des start-ups nigérianes pénètrent le marché des jeux vidéo", "https://adf-magazine.com/fr/2014/10/des-start-ups-nigerianes-penetrent-le-marche-des-jeux-video/"], ["Smart Africa", "https://smartafrica.org/fr/page-daccueil/"], ["AfriGamers", "https://afrigamers.com/a-propos-afrigamers/"], ["Tribune Online · 12 times national grid collapsed in 2024", "https://tribuneonlineng.com/updated-12-times-national-grid-collapsed-in-2024/"], ["Nairametrics · PwC lists 10 fastest-growing entertainment and media sectors in Nigeria 2024-2028", "https://nairametrics.com/2025/02/09/pwc-lists-10-fastest-growing-entertainment-and-media-sectors-in-nigeria-2024-2028/"],["World Economic Forum · How will Africa's youth population drive global growth?", "https://www.weforum.org/stories/youth/africa-youth-global-growth-digital-economy/"],["ONU · Youth population trends (fact sheet)", "https://www.un.org/esa/socdev/documents/youth/fact-sheets/YouthPOP.pdf"],["Afrik.com · L'Afrique, avenir du gaming mondial ?", "https://www.afrik.com/l-afrique-avenir-du-gaming-mondial"],["Le360 · À Kigali, l'Afrique se cherche un modèle économique pour l'e-sport", "https://afrique.le360.ma/sports/des-millions-de-gamers-a-la-manette-a-kigali-lafrique-se-cherche-un-modele-economique-pour-le-sport_OLMQPD7RONHW3MNIOV3TPTZBWI/"],["AFJV · Abena Tournaments", "https://afjv.com/news/11374_abena-tournaments-tournoi-feminin-afrocaribeen-tekken8.htm"],["Linda Ikeji · Mobo Game Jam (Edu360 et Kucheza Gaming)", "https://www.lindaikejisblog.com/2020/12/mobo-game-jam-edu360-kucheza-drive-social-impact-through-gaming.html"],["Maliyo Games · Programmes de formation", "https://www.maliyo.com/programme/"],["Stuff South Africa · GameOn with HP, hackathon", "https://stuff.co.za/2024/10/11/get-your-gameon-with-hps-new-hackathon/"],["HP Gaming Garage", "https://www.hpgaminggarage.com/"],["Game Camp Cities · La CASE signe avec HP", "https://www.gamecampcities.pro/post/la-conf%C3%A9d%C3%A9ration-esport-africaine-signe-son-premier-partenaire-strat%C3%A9gique-continental-le-groupe-h?lang=fr"],["Pulse Nigeria · TCN restores power in Kaduna, Kano, Bauchi and Gombe", "https://www.pulse.ng/articles/news/local/tcn-restores-power-in-kaduna-kano-bauchi-and-gombe-after-prolonged-blackout-2024111910462282759"]]) ]) ])

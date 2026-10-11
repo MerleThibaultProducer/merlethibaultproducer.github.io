@@ -984,3 +984,26 @@ html body .car:not(.keyart):not(.teams) .car-track{align-items:flex-start}
 .grid.exo .card .cmeta{display:none}
 .thumb .survol ul:first-child li:first-child{font-size:1.1rem}
 .thumb .survol ul:first-child li:first-child::after{content:"";display:block;width:2.2rem;height:2px;margin:.75rem auto .35rem;background:var(--gold)}
+
+/* ===================================================================
+   Moins de réflexes de modèle (analyse d'octobre 2026)
+   =================================================================== */
+/* Mises en avant : simple gras, sans couleur */
+html body .band strong,html body .prose strong,html body .intro strong,html body .home-intro strong{color:inherit;font-weight:650}
+html body .intro mark,html body .prose mark,html body .band mark{color:inherit;font-weight:inherit}
+/* Plus de trait doré sous les titres */
+html body .band-head h2::after,html body .list-head h1::after,html body .project>h1::after,html body .infos-page>h1::after,html body .legal-page>h1::after,html body .infos-page .sk-group h2::after{display:none!important}
+/* Plus de cartes kanban décoratives dans le bandeau */
+html body header.top::before,html body .brand::after{display:none!important}
+/* Listes : un tiret typographique discret à la place des puces */
+html body .prose ul:not(.src) li::before,html body .fiche li::before,html body .brief li::before{content:"–";background:none;width:auto;height:auto;border-radius:0;transform:none;top:0;color:var(--muted)}
+html body .skill li::before{display:none}
+/* Plus de bordure gauche colorée */
+html body .prose blockquote,html body .band blockquote{border-left:0;padding-left:0}
+html body .tm-col li.me{border-left:0;padding-left:.2rem}
+/* Texte aligné à gauche partout */
+html body .prose p,html body .prose li,html body .brow .bt p,html body .brow .bt li,html body .recap-txt p,html body .home-intro .intro p,html body .card .cdesc,html body .band .fiche li{text-align:left!important;-webkit-hyphens:manual;hyphens:manual}
+/* Accroche de l'accueil */
+.home-intro .accroche{margin:0 0 1.2rem;font:700 clamp(1.6rem,2.6vw,2.2rem)/1.2 var(--sans);letter-spacing:-.015em;color:var(--head)}
+@media(max-width:480px){body.is-home .brand .bn{font-size:clamp(1.6rem,7.4vw,2.1rem)}}
+@media(max-width:480px){html body.is-home .brand .bn,html body.is-home .brand .b1,html body.is-home .brand .b2{font-size:1.55rem}}

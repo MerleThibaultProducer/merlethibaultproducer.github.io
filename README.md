@@ -23,8 +23,7 @@ cv/cv-apercu.jpg               aperçu du CV affiché sur la page Infos
 - **Une image** : déposez le nouveau fichier dans `images/` et indiquez son chemin dans `js/contenu.js`,
   ou remplacez un fichier existant en gardant le même nom.
 - **Le CV** : remplacez `cv/MERLE_Thibault_CV_PROD.pdf` (et `cv/cv-apercu.jpg` pour l'aperçu) en gardant les mêmes noms.
-- **Un projet en cours** : retirez `wip:true` pour le rendre visible. Une rubrique dont tous les projets sont en cours
-  (comme « Projets personnels » aujourd'hui) est masquée du menu ; elle réapparaît dès qu'un de ses projets est activé.
+- **Un projet en cours** : retirez `wip:true` pour le rendre visible.
 
 Chaque projet peut avoir un résumé (`resume`) et un encadré « Mon rôle et mes décisions » (`decisions`).
 L'aide-mémoire des blocs de contenu (texte, image, bandes, tableaux…) se trouve en tête de `js/contenu.js`.

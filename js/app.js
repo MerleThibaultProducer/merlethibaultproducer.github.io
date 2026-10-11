@@ -1,9 +1,7 @@
 /* Portfolio – Thibault Merle : fonctionnement du site (navigation, langues, affichage). Rien à modifier ici pour changer le contenu. */
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-/* Une rubrique dont tous les projets sont encore en cours (wip) reste masquée : elle apparaît dès qu'un projet est activé */
-const visible = s => (PROJECTS[s.key]||[]).some(p => !p.wip);
-const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS.filter(visible),{label:t("infos"),route:"#/infos"}];
+const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS,{label:t("infos"),route:"#/infos"}];
 /* ---------- Langue (FR / EN) ---------- */
 const UI = {
   fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",cvView:"Aperçu du CV",stWip:"En cours",stDone:"Terminé",nightMode:"Passer en mode nuit",dayMode:"Passer en mode jour",toTop:"Haut de la page",backCat:"Retour :",cvLead:"Mon CV (version anglaise), à consulter ici ou à télécharger.",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",legalShort:"Mentions légales",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
@@ -305,7 +303,7 @@ let cur = location.hash || "#/";   /* page courante, gardée en mémoire : march
 function render(){
   const h = cur, [ , key, id] = h.split("/");
   let html, active = h; curNav = null;
-  const sec = SECTIONS.find(s => s.key === key && visible(s));
+  const sec = SECTIONS.find(s => s.key === key);
   if(sec && id){
     const list = PROJECTS[key].filter(x => !x.wip), i = list.findIndex(x => x.id === id);
     if(i > -1){

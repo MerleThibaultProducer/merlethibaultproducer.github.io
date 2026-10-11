@@ -72,12 +72,12 @@ function cardMeta(p){
 /* Texte qui apparaît au survol d'une vignette : moteur, puis quelques repères */
 const ENGINE_ICON = `<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><path d="M12 12l8-4.6M12 12L4 7.4M12 12v9.2"/></svg>`;
 function survol(s){
-  return `<div class="survol" aria-hidden="true">${s.moteur?`<div class="sv-eng">${s.logo?`<img src="${esc(s.logo)}" alt="" width="40" height="40">`:ENGINE_ICON}<span>${esc(s.moteur)}</span></div><i></i>`:""}<ul>${s.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
+  return `<div class="survol" aria-hidden="true">${s.moteur?`<div class="sv-eng">${s.logos?`<span class="sv-logos">${s.logos.map(l=>`<img src="${esc(l)}" alt="" width="36" height="36">`).join("")}</span>`:s.logo?`<img src="${esc(s.logo)}" alt="" width="40" height="40">`:ENGINE_ICON}<span>${esc(s.moteur)}</span></div><i></i>`:""}<ul>${s.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
 }
 function listing(sec){
   const items = PROJECTS[sec.key];
   const cards = items.map(p => `<article class="card${p.wip?" is-wip":""}">
-    <div class="thumb${p.fit==="contain"?" contain":""}${p.img?" has-img":""}"${p.bg?` style="--pbg:${esc(p.bg)}"`:""}${p.wip?"":` data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}"`}>${img(p.img,p.title,p.title[0])}${p.wip?'<span class="wip-blur" aria-hidden="true"></span>':""}${p.survol&&!p.wip?survol(p.survol):""}<span class="status${p.wip?" wip":""}"><i aria-hidden="true"></i>${p.wip?t("stWip"):t("stDone")}</span></div>
+    <div class="thumb${p.fit==="contain"?" contain":""}${p.img?" has-img":""}"${p.bg?` style="--pbg:${esc(p.bg)}"`:""}${p.wip?"":` data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}"`}>${img(p.img,p.title,p.title[0])}${p.wip?'<span class="wip-blur" aria-hidden="true"></span>':""}${p.survol?survol(p.survol):""}<span class="status${p.wip?" wip":""}"><i aria-hidden="true"></i>${p.wip?t("stWip"):t("stDone")}</span></div>
     <h3>${cardTitle(p.title)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
     ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="btn" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${t("details")}</a>`}</article>`).join("");
   return `<div class="list-head"><h1>${sec.label}</h1><p class="lead">${sec.intro}</p></div>

@@ -3586,3 +3586,51 @@ html body .team h3 {
   font-stretch: 97%;
   letter-spacing: 0;
 }
+
+/* Projets en cours : vraie vignette visible (sans flou), infos au survol */
+.wip-blur {
+  display: none;
+}
+.thumb .survol .sv-logos {
+  display: flex;
+  gap: .9rem;
+}
+.thumb .survol .sv-logos img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Espacement des polices rééquilibré */
+html body .brand,
+html body .brand .bn,
+html body .brand .b1,
+html body main h1,
+html body .band-head h2,
+html body .sk-group h2,
+html body .legal-page h2,
+html body .home-intro .accroche,
+html body .card h3,
+html body .car.keyart figcaption b,
+html body .team h3 {
+  font-stretch: 100%;
+  letter-spacing: .01em;
+  font-variation-settings: "opsz" 48;
+}
+html body main h1,
+html body .home-intro .accroche {
+  font-weight: 700;
+}
+html body .band-head h2 {
+  font-weight: 650;
+}
+html body .brand .bn,
+html body .brand .b1 {
+  font-weight: 700;
+}
+/* Sous-titre du bandeau en casse normale */
+html body .brand .brole,
+html body.is-home .brand .brole {
+  text-transform: none;
+  letter-spacing: .02em;
+  font-weight: 500;
+}

@@ -9,9 +9,9 @@ const SITE_FR = {
   titre: "Junior Associate Producer",
   devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
-  accroche: "La production, c'est d'abord un travail d'équipe.",
+  accroche: "Quatre jeux, 53 personnes, un seul producer.",
   intro: [
-    "Je suis Thibault, Junior Associate Producer dans le jeu vidéo, en dernière année à Game Sup. J'ai eu l'occasion de mener des productions multi-projets, avec jusqu'à quatre équipes en simultané. Concrètement, cela veut dire écouter chacun, adapter les méthodes Agile et Waterfall à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un stage de fin d'études en production pour 2027, partout en France ou en télétravail."
+    "Je suis Thibault, Junior Associate Producer dans le jeu vidéo, en dernière année à Game Sup. J'ai eu l'occasion de mener des productions multi-projets, avec jusqu'à quatre équipes en simultané. Pour moi, la production est d'abord un travail d'équipe : écouter chacun, adapter les méthodes Agile et Waterfall à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un stage de fin d'études en production pour 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",
@@ -21,9 +21,9 @@ const SITE_FR = {
   ]
 };
 const SITE_EN = {...SITE_FR,
-  accroche: "Production is teamwork first.",
+  accroche: "Four games, 53 people, one producer.",
   intro: [
-    "I'm Thibault, a Junior Associate Producer in video games, in my final year at Game Sup. I have had the opportunity to run multi-project productions, with up to four teams at once. In practice, that means listening to everyone, adapting Agile and Waterfall methods to the way people work, and keeping information flowing so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an end-of-studies internship in production for 2027, anywhere in France or remote."
+    "I'm Thibault, a Junior Associate Producer in video games, in my final year at Game Sup. I have had the opportunity to run multi-project productions, with up to four teams at once. To me, production is teamwork first: listening to everyone, adapting Agile and Waterfall methods to the way people work, and keeping information flowing so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an end-of-studies internship in production for 2027, anywhere in France or remote."
   ],
   legal: [
     "© 2026 Thibault Merle – All rights reserved.",
@@ -231,7 +231,7 @@ const PROJECTS_FR = {
         ] }),
     P({ title:"Workshop Rogue-lite – Février 2026", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
         desc:"Planification à deux niveaux pour deux équipes sur trois semaines : feuille de route du workshop et tâches quotidiennes.", carte:"Deux équipes sur trois semaines, avec une feuille de route pour le workshop et des tâches quotidiennes pour chaque équipe.",
-        img:"",
+        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","12 à 13 personnes","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes · 12 à 13 personnes", "Durée":"3 semaines", "Genre":"Rogue-lite" },
         resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes développent chacune un rogue-lite.",
                  role:"Producer des deux équipes : planification, sprints et arbitrages.",
@@ -245,7 +245,7 @@ const PROJECTS_FR = {
         ] }),
     P({ title:"Workshop Fusion – Novembre 2025", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
         desc:"Plan de production agile sur Excel, revues hebdomadaires et premiers dailies pour deux équipes.", carte:"Un plan de production agile sur Excel, des revues hebdomadaires et les premiers dailies, confiés aux référents des équipes.",
-        img:"",
+        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","12 à 13 personnes","Racing · Fusion"] }, img:"images/fusion-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes · 12 à 13 personnes", "Durée":"3 semaines", "Outils":"Excel" },
         resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes.",
                  role:"Producer des deux équipes : plan de production, suivi et répartition des tâches.",
@@ -258,7 +258,7 @@ const PROJECTS_FR = {
         ] }),
     P({ title:"Projets de fin d'année : mes deux premières productions – Juin 2025", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
         desc:"Ma première gestion de deux projets en parallèle, suivis sur Excel et Miro.", carte:"Deux équipes suivies en parallèle sur Excel et Miro, avec des sprint reviews pour chacune.",
-        img:"",
+        survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","12 à 13 personnes","Genres variés"] }, img:"images/fin-annee-2025-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes · 12 à 13 personnes", "Durée":"4 semaines", "Outils":"Excel · Miro" },
         resume:{ contexte:"Projet de fin d'année à Game Sup : deux équipes de 12 à 13 personnes, quatre semaines de développement.",
                  role:"Producer des deux projets, menés en parallèle.",
@@ -530,7 +530,7 @@ const PROJECTS_EN = {
         ] }),
     P({ title:"Rogue-lite Workshop – February 2026", wip:true,
         desc:"Two-level planning for two teams over three weeks: a workshop roadmap and daily tasks.", carte:"Two teams over three weeks, with a roadmap for the workshop and daily tasks for each team.",
-        img:"",
+        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","12 to 13 people","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams · 12 to 13 people", "Duration":"3 weeks", "Genre":"Rogue-lite" },
         resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people, each developing a rogue-lite.",
                  role:"Producer for both teams: planning, sprints and decisions.",
@@ -544,7 +544,7 @@ const PROJECTS_EN = {
         ] }),
     P({ title:"Fusion Workshop – November 2025", wip:true,
         desc:"An agile production plan in Excel, weekly reviews and first dailies for two teams.", carte:"An agile production plan in Excel, weekly reviews and the first dailies, entrusted to the team leads.",
-        img:"",
+        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","12 to 13 people","Racing · Fusion"] }, img:"images/fusion-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams · 12 to 13 people", "Duration":"3 weeks", "Tools":"Excel" },
         resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people.",
                  role:"Producer for both teams: production plan, tracking and task distribution.",
@@ -557,7 +557,7 @@ const PROJECTS_EN = {
         ] }),
     P({ title:"End-of-Year Projects: My First Two Productions – June 2025", wip:true,
         desc:"My first time managing two projects in parallel, tracked in Excel and Miro.", carte:"Two teams tracked in parallel in Excel and Miro, with sprint reviews for each.",
-        img:"",
+        survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","12 to 13 people","Varied genres"] }, img:"images/fin-annee-2025-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams · 12 to 13 people", "Duration":"4 weeks", "Tools":"Excel · Miro" },
         resume:{ contexte:"Game Sup end-of-year project: two teams of 12 to 13 people, four weeks of development.",
                  role:"Producer for both projects, run in parallel.",

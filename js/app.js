@@ -32,7 +32,7 @@ const CV_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="tr
 const LINKEDIN_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5v6M8 7.5v.01M11.5 16.5v-6M11.5 13.2c0-1.6.9-2.7 2.3-2.7s2.2 1 2.2 2.7v3.3"/></svg>`;
 function chrome(active){
   $("#brand").innerHTML = `<span class="bn"><span class="b1">${esc(SITE.prenom)}</span> <span class="b2">${esc(SITE.nom.toUpperCase())}</span></span><span class="brole">${esc(SITE.titre)}</span>`;
-  document.body.classList.toggle("is-home", active === "#/");
+  document.body.classList.toggle("page-home", active === "#/");
   $("#nav").innerHTML = NAV().map(n => `<li><a data-go="${n.route}" role="link" tabindex="0" ${n.route===active?'aria-current="page"':''}>${n.label}</a></li>`).join("")
     + `<li class="lang" role="group" aria-label="${t("langLabel")}"><button type="button" data-lang="fr" aria-pressed="${lang==="fr"}" lang="fr" aria-label="Français">FR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="${lang==="en"}" lang="en" aria-label="English">EN</button><button type="button" class="theme-btn" data-theme-toggle aria-label="${isDark()?t("dayMode"):t("nightMode")}" title="${isDark()?t("dayMode"):t("nightMode")}">${isDark()?SUN:MOON}</button></li>`;
   document.querySelector("header nav").setAttribute("aria-label", t("mainNav"));

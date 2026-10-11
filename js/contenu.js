@@ -270,12 +270,9 @@ const PROJECTS_FR = {
         ] })
   ],
   perso: [
-    P({ title:"Projet personnel 1", wip:true, desc:"Court descriptif du projet.", img:"",
-        infos:{ "Rôle":"Chef de projet", "Équipe":"5 personnes", "Durée":"3 mois" },
-        contenu:[ T("Décrivez ici le projet.") ] }),
-    P({ title:"Projet personnel 2", wip:true, desc:"Court descriptif du projet.", img:"",
-        infos:{ "Rôle":"Producer", "Équipe":"Solo", "Durée":"2 mois" },
-        contenu:[ T("Décrivez ici le projet.") ] })
+    P({ title:"Projet Jira et Agile", wip:true, desc:"Un projet personnel pour approfondir Jira et la gestion de projet Agile.", img:"",
+        infos:{ "Rôle":"Producer", "Outils":"Jira · Agile" },
+        contenu:[ T("Projet en cours.") ] })
   ],
   exo: [
         P({ title:"Exercice 1 – Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes ; bg/fit : image affichée en entier sur fond uni
@@ -573,12 +570,9 @@ const PROJECTS_EN = {
         ] })
   ],
   perso: [
-    P({ title:"Personal Project 1", wip:true, desc:"Short description of the project.", img:"",
-        infos:{ "Role":"Project lead", "Team":"5 people", "Duration":"3 months" },
-        contenu:[ T("Describe the project here.") ] }),
-    P({ title:"Personal Project 2", wip:true, desc:"Short description of the project.", img:"",
-        infos:{ "Role":"Producer", "Team":"Solo", "Duration":"2 months" },
-        contenu:[ T("Describe the project here.") ] })
+    P({ title:"Jira and Agile Project", wip:true, desc:"A personal project to deepen my use of Jira and Agile project management.", img:"",
+        infos:{ "Role":"Producer", "Tools":"Jira · Agile" },
+        contenu:[ T("Project in progress.") ] })
   ],
   exo: [
     P({ title:"Exercise 1 – Wyrdfall", nocover:true, desc:"Production dossier for a 48-month AA game: team, budget, planning, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,

@@ -980,3 +980,7 @@ html body .car:not(.keyart):not(.teams) .zf img{position:absolute;inset:0;width:
 html body .car:not(.keyart):not(.teams) .car-track{align-items:flex-start}
 :root[data-theme="dark"] .car:not(.keyart):not(.teams) .zf{background:#172A47}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .car:not(.keyart):not(.teams) .zf{background:#172A47}}
+/* Exercices : rôle et repères au survol, plus de ligne d'infos sous le titre */
+.grid.exo .card .cmeta{display:none}
+.thumb .survol ul:first-child li:first-child{font-size:1.1rem}
+.thumb .survol ul:first-child li:first-child::after{content:"";display:block;width:2.2rem;height:2px;margin:.75rem auto .35rem;background:var(--gold)}

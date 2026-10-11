@@ -73,7 +73,7 @@ function cardMeta(p){
 /* Texte qui apparaît au survol d'une vignette : moteur, puis quelques repères */
 const ENGINE_ICON = `<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><path d="M12 12l8-4.6M12 12L4 7.4M12 12v9.2"/></svg>`;
 function survol(s){
-  return `<div class="survol" aria-hidden="true"><div class="sv-eng">${s.logo?`<img src="${esc(s.logo)}" alt="" width="40" height="40">`:ENGINE_ICON}<span>${esc(s.moteur)}</span></div><i></i><ul>${s.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
+  return `<div class="survol" aria-hidden="true">${s.moteur?`<div class="sv-eng">${s.logo?`<img src="${esc(s.logo)}" alt="" width="40" height="40">`:ENGINE_ICON}<span>${esc(s.moteur)}</span></div><i></i>`:""}<ul>${s.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
 }
 function listing(sec){
   const items = PROJECTS[sec.key];

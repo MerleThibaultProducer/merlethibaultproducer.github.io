@@ -274,7 +274,7 @@ const PROJECTS_FR = {
         contenu:[ T("Projet en cours.") ] })
   ],
   exo: [
-        P({ title:"Exercice 1 – Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes ; bg/fit : image affichée en entier sur fond uni
+        P({ survol:{ items:["Producer","Jeu AA · 30 à 50 personnes","48 mois de production","Excel · Coda · ClickUp"] }, title:"Exercice 1 – Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes ; bg/fit : image affichée en entier sur fond uni
         img:"images/wyrdfall-vignette.jpg",
         cimg:"images/wyrdfall-couverture.jpg", cbg:"#7dad9c",
         infos:{ "Rôle":"Producer", "Projet":"AA · 30 à 50 personnes", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
@@ -337,7 +337,7 @@ const PROJECTS_FR = {
             ],[ FICHE("Pistes d'amélioration",["Renforcer l'équipe QA pour éviter un crunch","Réévaluer l'équipe de Sound Design","Étudier les financements : aides régionales, nationales, européennes, solutions bancaires, Kickstarter"]) ])
           ])
         ] }),
-    P({ title:"Exercice 2 – Castalie's Tears – Game Design et Narrative Design", large:true, nocover:true,
+    P({ survol:{ items:["Auteur du GDD","RPG au tour par tour","90 heures","67 pages"] }, title:"Exercice 2 – Castalie's Tears – Game Design et Narrative Design", large:true, nocover:true,
         desc:"Game Design Document d'un RPG au tour par tour d'inspiration mythologique : la boucle de jeu et ses systèmes, puis leur incarnation dans l'univers, le personnage et un niveau de Narrative Design.", carte:"Le Game Design Document d'un RPG mythologique au tour par tour : boucle de jeu, systèmes et leur incarnation dans le récit.",
         img:CT.thumb,
         infos:{ "Rôle":"Auteur du GDD", "Cadre":"Game Design · Game Sup", "Date":"Avril 2025", "Temps de travail":"90 h", "Livrable":"Game Design Document · 67 pages" },
@@ -392,7 +392,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ title:"Exercice 3 – Le marché africain du jeu vidéo à travers le cas du Nigéria", large:true, nocover:true,
+    P({ survol:{ items:["Auteur de l'étude","Analyse de marché","Recoupement des sources","30 diapositives"] }, title:"Exercice 3 – Le marché africain du jeu vidéo : le cas du Nigéria", large:true, nocover:true,
         desc:"Étude du marché du jeu vidéo en Afrique à travers le cas du Nigéria : un modèle mobile, local et affranchi du AAA occidental, ses moteurs et ses limites.", carte:"Un marché porté par le mobile et une population jeune, des studios qui parlent au local, et des infrastructures qui freinent encore son essor.",
         img:NG.thumb,
         infos:{ "Rôle":"Auteur de l'étude", "Cadre":"Culture vidéoludique · Game Sup", "Date":"Janvier 2025 · mise à jour 2025", "Livrable":"Présentation PowerPoint · 30 diapositives" },
@@ -573,7 +573,7 @@ const PROJECTS_EN = {
         contenu:[ T("Project in progress.") ] })
   ],
   exo: [
-    P({ title:"Exercise 1 – Wyrdfall", nocover:true, desc:"Production dossier for a 48-month AA game: team, budget, planning, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
+    P({ survol:{ items:["Producer","AA game · 30 to 50 people","48-month production","Excel · Coda · ClickUp"] }, title:"Exercise 1 – Wyrdfall", nocover:true, desc:"Production dossier for a 48-month AA game: team, budget, planning, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
         img:PROJECTS_FR.exo[0].img, cimg:PROJECTS_FR.exo[0].cimg, cbg:"#7dad9c",
         infos:{ "Role":"Producer", "Project":"AA · 30 to 50 people", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
         apercu:"This production exercise was about Wyrdfall, a fictional AA game. I only show the production management part here, where I acted as producer, from building the team to the break-even point. The result: a €9M budget over 48 months, a break-even point at around 451,000 sales and three ROI scenarios, all in an Excel file that updates in one click.",
@@ -635,7 +635,7 @@ const PROJECTS_EN = {
             ],[ FICHE("Areas for improvement",["Strengthen the QA team to avoid a crunch","Re-evaluate the Sound Design team","Study funding: regional, national and European grants, bank solutions, Kickstarter"]) ])
           ])
         ] }),
-    P({ title:"Exercise 2 – Castalie's Tears – Game Design and Narrative Design", large:true, nocover:true,
+    P({ survol:{ items:["Author of the GDD","Turn-based RPG","90 hours","67 pages"] }, title:"Exercise 2 – Castalie's Tears – Game Design and Narrative Design", large:true, nocover:true,
         desc:"Game Design Document for a mythology-inspired turn-based RPG: the core loop and its systems, then their embodiment in the universe, the character and a Narrative Design level.", carte:"The Game Design Document for a turn-based mythological RPG: core loop, systems and their embodiment in the story.",
         img:CT.thumb,
         infos:{ "Role":"Author of the GDD", "Context":"Game Design · Game Sup", "Date":"April 2025", "Workload":"90 hours", "Deliverable":"Game Design Document · 67 pages" },
@@ -690,7 +690,7 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ title:"Exercise 3 – The African Video Game Market through the Case of Nigeria", large:true, nocover:true,
+    P({ survol:{ items:["Author of the study","Market analysis","Source cross-checking","30 slides"] }, title:"Exercise 3 – The African Video Game Market: The Case of Nigeria", large:true, nocover:true,
         desc:"A study of the African video game market through the case of Nigeria: a mobile, local model that breaks away from Western AAA, its drivers and its limits.", carte:"A market driven by mobile and a young population, studios that speak to local audiences, and infrastructure that still holds it back.",
         img:NG.thumb,
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025 · updated 2025", "Deliverable":"PowerPoint presentation · 30 slides" },

@@ -211,15 +211,14 @@ const PROJECTS_FR = {
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
               T("Après la crise, il ne restait que deux semaines. Il fallait décider où mettre l'effort, et accepter d'abandonner certaines choses, sans faire peser la fin du projet sur les équipes. J'ai donc fixé une **date de playtest commune** aux quatre groupes, calée sur le planning des autres promotions pour que des joueurs extérieurs puissent venir."),
-              T("Les retours ont été nombreux, et souvent critiques, à un moment où le moral était déjà entamé. Avec chaque équipe, nous les avons triés pour garder les points les plus importants, puis j'ai **redéfini les priorités** et réorganisé les plannings en conséquence."),
-              T("Ces sessions ont aussi eu un effet que je n'attendais pas autant : voir des inconnus jouer aux projets a **redonné de l'énergie** aux équipes. Malgré les critiques, les jeux plaisaient, et c'est avec cet élan que nous sommes allés jusqu'à la livraison.")
-                        ])
+              T("Pour que les retours soient exploitables, chaque équipe a préparé un questionnaire structuré. Celui de Le Castor et l'Écureuil, par exemple, couvrait les personnages, la cohérence du design et la prise en main, avec des réponses notées de 1 à 7, et a recueilli **22 réponses**."),
+              T("Les retours ont été nombreux, et souvent critiques, à un moment où le moral était déjà entamé. Avec chaque équipe, nous les avons triés pour garder les points les plus importants, puis j'ai **redéfini les priorités** et réorganisé les plannings. Voir des inconnus jouer aux projets a aussi redonné de l'énergie aux équipes : malgré les critiques, les jeux plaisaient.")
+            ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest de Le Castor et l'Écureuil : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
           ]),
           BANDE("VII","Les enseignements",[
             LIGNE([
-              T("Ce projet a été extrêmement enrichissant, sur le plan personnel comme professionnel. C'était la première fois que l'on me confiait la **supervision de la production d'une promotion entière**, et travailler avec des profils aussi variés, sur des projets aussi différents, a été une expérience marquante."),
-              T("Mais ce sont surtout les difficultés qui m'ont fait grandir. La crise de mi-parcours m'a poussé à repenser l'organisation des groupes et à mettre de côté ce que je pensais savoir pour **écouter davantage les besoins spécifiques** des équipes. Ce fut aussi une précieuse leçon sur l'importance de **déléguer** et d'établir des canaux de communication clairs, pour que le développement reste transparent et qu'aucune équipe ne se sente perdue ou livrée à elle-même.")
-                        ])
+              T("C'était la première fois que l'on me confiait la **production d'une promotion entière**, et c'est surtout la crise de mi-parcours qui m'a fait grandir. Elle m'a appris à mettre de côté ce que je croyais savoir pour écouter les besoins propres à chaque équipe, à **déléguer**, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même.")
+            ])
           ]),
           BANDE("VIII","Les équipes",[
             LIGNE([
@@ -511,15 +510,14 @@ const PROJECTS_EN = {
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
               T("After the crisis, only two weeks remained. We had to decide where to put the effort, and accept dropping some things, without letting the end of the project weigh on the teams. So I set a **shared playtest date** for all four groups, aligned with the other classes' schedules so that outside players could come."),
-              T("The feedback was plentiful, and often critical, at a time when morale was already low. With each team, we sorted it to keep the most important points, then I **redefined priorities** and reorganised the schedules accordingly."),
-              T("These sessions also had an effect I had not expected to be so strong: seeing strangers play the projects gave the teams **new energy**. Despite the criticism, the games appealed, and that momentum carried us through to delivery.")
-                        ])
+              T("To make the feedback usable, each team prepared a structured questionnaire. The one for Le Castor et l'Écureuil, for example, covered the characters, design consistency and controls, with answers rated from 1 to 7, and collected **22 responses**."),
+              T("The feedback was plentiful, and often critical, at a time when morale was already low. With each team, we sorted it to keep the most important points, then I **redefined priorities** and reorganised the schedules. Seeing strangers play the projects also gave the teams new energy: despite the criticism, the games appealed.")
+            ],[ CAROUSEL([["images/fda-playtest-form.jpg","The playtest feedback form for Le Castor et l'Écureuil: 22 responses"],["images/fda-playtest-perso.jpg","A section of the questionnaire: how players rated the characters"],["images/fda-playtest-coherence.jpg","A section of the questionnaire: design consistency, rated from 1 to 7"]]) ])
           ]),
           BANDE("VII","Lessons learned",[
             LIGNE([
-              T("This project was extremely rewarding, both personally and professionally. It was the first time I had been entrusted with **overseeing the production of an entire class**, and working with such varied profiles, on such different projects, was a memorable experience."),
-              T("But it was above all the difficulties that made me grow. The mid-course crisis pushed me to rethink how the groups were organised and to set aside what I thought I knew in order to **listen more closely to each team's specific needs**. It was also a valuable lesson in the importance of **delegating** and establishing clear communication channels, so that development stays transparent and no team feels lost or left to fend for itself.")
-                        ])
+              T("It was the first time I had been entrusted with **producing for an entire class**, and it was above all the mid-course crisis that made me grow. It taught me to set aside what I thought I knew and listen to each team's own needs, to **delegate**, and to set up clear communication channels from the start, so that no team feels left to fend for itself.")
+            ])
           ]),
           BANDE("VIII","The teams",[
             LIGNE([

@@ -9,7 +9,6 @@ const SITE_FR = {
   titre: "Junior Associate Producer",
   devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
-  accroche: "Quatre jeux, 53 personnes, un seul producer.",
   intro: [
     "Je suis Thibault, Junior Associate Producer dans le jeu vidéo, en dernière année à Game Sup. J'ai eu l'occasion de mener des productions multi-projets, avec jusqu'à quatre équipes en simultané. Pour moi, la production est d'abord un travail d'équipe : écouter chacun, adapter les méthodes Agile et Waterfall à sa façon de travailler, et faire circuler l'information pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un stage de fin d'études en production pour 2027, partout en France ou en télétravail."
   ],
@@ -21,7 +20,6 @@ const SITE_FR = {
   ]
 };
 const SITE_EN = {...SITE_FR,
-  accroche: "Four games, 53 people, one producer.",
   intro: [
     "I'm Thibault, a Junior Associate Producer in video games, in my final year at Game Sup. I have had the opportunity to run multi-project productions, with up to four teams at once. To me, production is teamwork first: listening to everyone, adapting Agile and Waterfall methods to the way people work, and keeping information flowing so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an end-of-studies internship in production for 2027, anywhere in France or remote."
   ],
@@ -162,14 +160,14 @@ const PROJECTS_FR = {
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 13 à 14 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes","Genres variés","4 semaines"] },
-        apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines, et j'en étais le producer, en lien avec les intervenants qui jouaient le rôle d'éditeurs. J'ai adapté une méthode Agile aux jalons Waterfall de l'école, mis en place un suivi Excel pour chaque groupe et fait le lien entre l'encadrement et les équipes au quotidien. Après une crise de direction artistique en deuxième semaine, j'ai fixé une date de playtest commune aux quatre équipes, puis redéfini les priorités avec chacune. Les quatre jeux ont été livrés au jury, avec 93 % des 1 387 tâches terminées.",
+        apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines, et j'en étais le producer, en lien avec les intervenants qui jouaient le rôle d'éditeurs. J'ai adapté une méthode Agile aux jalons Waterfall de l'école, mis en place un suivi Excel pour chaque groupe et fait le lien entre l'encadrement et les équipes au quotidien. Après une crise de direction artistique en deuxième semaine, j'ai organisé deux sessions de playtest communes aux quatre équipes, puis redéfini les priorités avec chacune. Les quatre jeux ont été livrés au jury, avec 93 % des 1 387 tâches terminées.",
         resume:{ contexte:"Projet de fin d'année à Game Sup, réalisé par toute la promotion en 4 semaines.",
                  role:"Producer des 4 équipes, en lien avec les intervenants dans le rôle d'éditeurs.",
                  resultat:"4 jeux livrés au jury ; 1 387 tâches suivies, dont 93 % terminées, malgré une crise de direction artistique surmontée en deuxième semaine." },
         decisions:[ "**Méthode Agile à l'échelle** : adaptée à 4 projets menés en parallèle, dans le cadre des milestones Waterfall de l'école.",
                     "**Outils de suivi** : un macro-planning et un micro-planning Excel par groupe, soit 1 387 tâches suivies.",
                     "**Alignement** entre l'encadrement et les équipes, des milestones aux difficultés du quotidien.",
-                    "**Date de playtest commune** aux 4 équipes, calée sur le planning des autres promotions.",
+                    "**Deux sessions de playtest** communes aux 4 équipes, calées sur le planning des autres promotions.",
                     "**Priorités redéfinies** avec chaque équipe après les retours de playtest." ],
         contenu:[
           BANDE("I","Le cadre du projet",[
@@ -212,7 +210,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
-              T("Après la crise, il ne restait que deux semaines. Il fallait décider où mettre l'effort, et accepter d'abandonner certaines choses, sans faire peser la fin du projet sur les équipes. J'ai donc fixé une date de playtest commune aux quatre groupes, calée sur le planning des autres promotions pour que des joueurs extérieurs puissent venir."),
+              T("Après la crise, il ne restait que deux semaines. Il fallait décider où mettre l'effort, et accepter d'abandonner certaines choses, sans faire peser la fin du projet sur les équipes. J'ai donc organisé deux sessions de playtest communes aux quatre groupes, calées sur le planning des autres promotions pour que des joueurs extérieurs puissent venir."),
               T("Pour que les retours soient exploitables, chaque équipe a préparé un questionnaire structuré. Celui de Le Castor et l'Écureuil, par exemple, couvrait les personnages, la cohérence du design et la prise en main, avec des réponses notées de 1 à 7, et a recueilli 22 réponses."),
               T("Les retours ont été nombreux, et souvent critiques, à un moment où le moral était déjà entamé. Avec chaque équipe, nous les avons triés pour garder les points les plus importants, puis j'ai redéfini les priorités et réorganisé les plannings. Voir des inconnus jouer aux projets a aussi redonné de l'énergie aux équipes : malgré les critiques, les jeux plaisaient.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest de Le Castor et l'Écureuil : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
@@ -461,14 +459,14 @@ const PROJECTS_EN = {
         img:PRO1.thumb,
         infos:{ "Role":"Producer", "Team":"4 teams · 13 to 14 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 Teams","Varied Game Genres","4 Weeks"] },
-        apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks, and I was their producer, working with the instructors who acted as publishers. I adapted an Agile method to the school's Waterfall milestones, set up Excel tracking for each group and kept the supervisors and teams connected day to day. After an art direction crisis in the second week, I set a shared playtest date for all four teams, then reset priorities with each of them. All four games were delivered to the jury, with 93% of the 1,387 tasks completed.",
+        apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks, and I was their producer, working with the instructors who acted as publishers. I adapted an Agile method to the school's Waterfall milestones, set up Excel tracking for each group and kept the supervisors and teams connected day to day. After an art direction crisis in the second week, I organised two playtest sessions for all four teams, then reset priorities with each of them. All four games were delivered to the jury, with 93% of the 1,387 tasks completed.",
         resume:{ contexte:"Game Sup end-of-year project, carried out by the whole class in 4 weeks.",
                  role:"Producer for the 4 teams, working with the instructors acting as publishers.",
                  resultat:"4 games delivered to the jury; 1,387 tasks tracked, 93% completed, despite an art-direction crisis overcome in the second week." },
         decisions:[ "**Agile at scale**: adapted to 4 projects run in parallel, within the school's Waterfall milestones.",
                     "**Tracking tools**: a macro-planning and a micro-planning in Excel for each group, 1,387 tasks tracked.",
                     "**Alignment** between the supervisors and the teams, from milestones to day-to-day issues.",
-                    "**A shared playtest deadline** for the 4 teams, fitted to the other classes' schedules.",
+                    "**Two playtest sessions** shared by the 4 teams, fitted to the other classes' schedules.",
                     "**Priorities reset** with each team after playtest feedback." ],
         contenu:[
           BANDE("I","The project framework",[
@@ -511,7 +509,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
-              T("After the crisis, only two weeks remained. We had to decide where to put the effort, and accept dropping some things, without letting the end of the project weigh on the teams. So I set a shared playtest date for all four groups, aligned with the other classes' schedules so that outside players could come."),
+              T("After the crisis, only two weeks remained. We had to decide where to put the effort, and accept dropping some things, without letting the end of the project weigh on the teams. So I organised two playtest sessions for all four groups, aligned with the other classes' schedules so that outside players could come."),
               T("To make the feedback usable, each team prepared a structured questionnaire. The one for Le Castor et l'Écureuil, for example, covered the characters, design consistency and controls, with answers rated from 1 to 7, and collected 22 responses."),
               T("The feedback was plentiful, and often critical, at a time when morale was already low. With each team, we sorted it to keep the most important points, then I redefined priorities and reorganised the schedules. Seeing strangers play the projects also gave the teams new energy: despite the criticism, the games appealed.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","The playtest feedback form for Le Castor et l'Écureuil: 22 responses"],["images/fda-playtest-perso.jpg","A section of the questionnaire: how players rated the characters"],["images/fda-playtest-coherence.jpg","A section of the questionnaire: design consistency, rated from 1 to 7"]]) ])

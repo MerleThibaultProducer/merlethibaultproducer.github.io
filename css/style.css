@@ -3634,3 +3634,13 @@ html body.is-home .brand .brole {
   letter-spacing: .02em;
   font-weight: 500;
 }
+/* Fond suggéré de la page d'accueil */
+body.is-home main { position: relative; isolation: isolate; }
+body.is-home main::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: url("../images/accueil-fond.jpg") center / cover no-repeat;
+  opacity: .07; filter: grayscale(.35) blur(.5px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+          mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+}
+html[data-theme="dark"] body.is-home main::before { opacity: .06; }

@@ -786,7 +786,7 @@ const INFOS_FR = {
     { icone:"design", titre:"Game Design", items:["Game Design Document","Boucle de gameplay et systèmes","Théories du joueur et personas"] },
     { icone:"narration", titre:"Narrative Design", items:["Worldbuilding","Écriture de personnages","Quest Design","Lien entre mécaniques et récit"] },
     { icone:"analyse", titre:"Analyse", items:["Market Analysis et estimation des ventes","Seuil de rentabilité et ROI","Recherche documentaire et critique des sources"] },
-    { icone:"equipe", titre:"Communication et encadrement", items:["Représentation et partenariats","Organisation d'événements","Pédagogie et transmission","Adaptation à chaque interlocuteur"] }
+    { icone:"equipe", titre:"Communication et encadrement", items:["Communication au sein des équipes et entre elles","Organisation d'événements","Pédagogie et transmission","Adaptation à chaque interlocuteur"] }
   ],
   autresTitre: "Langues et diplômes",
   autres: [
@@ -809,7 +809,7 @@ const INFOS_EN = {
     { icone:"design", titre:"Game Design", items:["Game Design Documentation","Gameplay loop and systems","Player theories and personas"] },
     { icone:"narration", titre:"Narrative Design", items:["Worldbuilding","Character writing","Quest Design","Linking mechanics and story"] },
     { icone:"analyse", titre:"Analysis", items:["Market analysis and sales forecasting","Break-even point and ROI","Desk research and source criticism"] },
-    { icone:"equipe", titre:"Communication and leadership", items:["Representation and partnerships","Event organisation","Teaching and knowledge transfer","Adapting to each audience"] }
+    { icone:"equipe", titre:"Communication and leadership", items:["Communication within and across teams","Event organisation","Teaching and knowledge transfer","Adapting to each audience"] }
   ],
   autresTitre: "Languages and degrees",
   autres: [

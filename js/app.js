@@ -57,7 +57,8 @@ function home(){
 }
 
 /* Titre de vignette façon CV : « Exercice 2 » ou la date en doré, puis le titre */
-function cardTitle(title){
+function cardTitle(title,cat){
+  if(cat) return `<small>${esc(cat)}</small>${esc(title)}`;
   let m = title.match(/^((?:Exercice|Exercise)\s+\d+)\s+–\s+(.+)$/);
   if(m) return `<small>${esc(m[1])}</small>${esc(m[2])}`;
   m = title.match(/^(.+?)\s+–\s+([^–]*\d{4})$/);
@@ -78,7 +79,7 @@ function listing(sec){
   const items = PROJECTS[sec.key];
   const cards = items.map(p => `<article class="card${p.wip?" is-wip":""}">
     <div class="thumb${p.fit==="contain"?" contain":""}${p.img?" has-img":""}"${p.bg?` style="--pbg:${esc(p.bg)}"`:""}${p.wip?"":` data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}"`}>${img(p.img,p.title,p.title[0])}${p.wip?'<span class="wip-blur" aria-hidden="true"></span>':""}${p.survol?survol(p.survol):""}<span class="status${p.wip?" wip":""}"><i aria-hidden="true"></i>${p.wip?t("stWip"):t("stDone")}</span></div>
-    <h3>${cardTitle(p.title)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
+    <h3>${cardTitle(p.title,p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
     ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="btn" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${t("details")}</a>`}</article>`).join("");
   return `<div class="list-head"><h1>${sec.label}</h1><p class="lead">${sec.intro}</p></div>
   <div class="stage">${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="exo"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;
@@ -225,7 +226,7 @@ function detail(sec, p, prev, next){
   const link = (q,cls,lab,arrow) => q ? `<a class="${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${esc(q.title)}</b></a>` : "";
   const side = (q,cls,ch,lab) => q ? `<a class="side ${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0" aria-label="${lab} : ${esc(q.title)}" title="${esc(q.title)}">${ch}</a>` : "";
   return `<a class="back" data-go="${sec.route}" role="link" tabindex="0">‹ ${sec.label}</a>
-  <article class="project${p.large?" large":""}"><h1>${esc(p.title)}</h1><p class="lead">${esc(p.desc)}</p>
+  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title)}</h1><p class="lead">${esc(p.desc)}</p>
     ${p.large&&(!p.img||p.nocover)?"":`<div class="cover${p.fit==="contain"||p.cimg?" contain":""}"${p.bg||p.cbg?` style="--pbg:${esc(p.bg||p.cbg)}"`:""}>${img(p.cimg||p.img,p.title,p.title[0])}</div>`}
     ${p.apercu ? recap(p) : `${infos?`<ul class="meta">${infos}</ul>`:""}${brief(p)}`}
     <div class="prose">${blocks(p.contenu)}</div></article>
@@ -307,7 +308,7 @@ function render(){
       const p = list[i], prev = list[i-1], next = list[i+1];
       html = detail(sec, p, prev, next); active = sec.route;
       curNav = {prev: prev && `#/${key}/${prev.id}`, next: next && `#/${key}/${next.id}`};
-      document.title = `${p.title} – ${SITE.prenom} ${SITE.nom}`;
+      document.title = `${p.cat?p.cat+" : ":""}${p.title} – ${SITE.prenom} ${SITE.nom}`;
     }
   }
   if(!html){

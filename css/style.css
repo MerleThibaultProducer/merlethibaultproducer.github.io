@@ -3651,3 +3651,5 @@ html[data-theme="dark"] body.page-home main::before { opacity: .07; }
 }
 /* Bandeau identique sur toutes les pages : nom + rôle, même hauteur */
 html body .brand .brole { display: block; margin-top: .3rem; font: 500 .82rem/1.2 var(--sans); letter-spacing: .02em; color: #E8ECF2; }
+/* Catégorie des exercices au-dessus du titre de la page */
+html body .project h1 .h-cat { display: block; margin-bottom: .5rem; font: 600 clamp(.85rem,1.1vw,1rem)/1.3 var(--sans); letter-spacing: .02em; color: var(--gold-d); }

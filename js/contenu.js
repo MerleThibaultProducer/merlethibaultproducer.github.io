@@ -298,7 +298,10 @@ const PROJECTS_FR = {
             LIGNE([
               T("Dans Jira, **un board n'est qu'une vue posée sur un filtre JQL**. J'ai donc écrit un filtre par équipe, puis créé cinq boards à partir de ces filtres : deux boards Scrum pour les squads Gameplay et World, deux boards Kanban pour la QA et pour les livraisons des prestataires, qui arrivent par lots et ne suivent pas le rythme des sprints, et un board Production qui voit tout le projet mais sur lequel on ne lance jamais de sprint."),
               T("J'ai ensuite dessiné deux **workflows** : un pour les Stories et les Tasks, avec une étape de revue et une étape de vérification QA, et un pour les bugs, avec un tri, une résolution obligatoire à la fermeture et une transition de réouverture, pour mesurer les correctifs qui ne tiennent pas. Toutes mes requêtes suivent une même convention de nommage, pour rester lisibles quand elles se multiplient.")
-            ],[ IMG("images/jira-boards.png","Les cinq boards du space","sm") ]),
+            ],[ CAROUSEL([["images/jira-board-production.png","Production : la vue d'ensemble, sur laquelle on ne lance jamais de sprint"],["images/jira-board-gameplay.png","Gameplay : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-world.png","World : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-qa.png","QA-Bugs : le flux des bugs, avec une ligne réservée aux bloquants"],["images/jira-board-vendors.png","Vendors : les livraisons attendues de chaque prestataire"]]) ]),
+            LIGNE([
+              T("Au-delà des boards, j'ai constitué une **bibliothèque de filtres** : des contrôles qualité (tickets sans squad, terminés sans résolution), le suivi du sprint (tickets bloqués ou reportés) et le périmètre de la Vertical Slice. Ce sont eux qui alimentent le dashboard du producer.")
+            ],[ IMG("images/jira-filtres.png","Le filtre du périmètre de la Vertical Slice, et la liste des filtres enregistrés") ],"dessous"),
             LIGNE([
               T("Sur le board QA, chaque statut du workflow des bugs a sa colonne, avec une **limite de travail en cours** : pas plus de dix bugs en tri, cinq en correction et huit en attente de vérification. Quand une colonne déborde, c'est le signal qu'il faut arrêter d'ouvrir des bugs pour finir ceux qui sont commencés.")
             ],[ IMG("images/jira-colonnes-qa.png","Les colonnes du board QA-Bugs, avec leurs limites de travail en cours") ],"dessous"),
@@ -639,7 +642,10 @@ const PROJECTS_EN = {
             LIGNE([
               T("In Jira, **a board is just a view on top of a JQL filter**. So I wrote one filter per team, then created five boards from these filters: two Scrum boards for the Gameplay and World squads, two Kanban boards for QA and for vendor deliveries, which arrive in batches and do not follow the sprint rhythm, and a Production board that sees the whole project but on which no sprint is ever started."),
               T("I then designed two **workflows**: one for Stories and Tasks, with a review step and a QA check, and one for bugs, with triage, a resolution required on closing and a reopen transition, to measure fixes that do not hold. All my queries follow the same naming convention, so they stay readable as they multiply.")
-            ],[ IMG("images/jira-boards.png","The space's five boards","sm") ]),
+            ],[ CAROUSEL([["images/jira-board-production.png","Production: the overview, on which no sprint is ever started"],["images/jira-board-gameplay.png","Gameplay: the squad's current sprint, grouped by Epic"],["images/jira-board-world.png","World: the squad's current sprint, grouped by Epic"],["images/jira-board-qa.png","QA-Bugs: the bug flow, with a lane reserved for blockers"],["images/jira-board-vendors.png","Vendors: the deliveries expected from each vendor"]]) ]),
+            LIGNE([
+              T("Beyond the boards, I built a **library of filters**: quality checks (work items without a squad, done without a resolution), sprint tracking (blocked or carried-over items) and the Vertical Slice scope. They are what feed the producer's dashboard.")
+            ],[ IMG("images/jira-filtres.png","The Vertical Slice scope filter, and the list of saved filters") ],"dessous"),
             LIGNE([
               T("On the QA board, each status of the bug workflow has its own column, with a **work-in-progress limit**: no more than ten bugs in triage, five being fixed and eight awaiting verification. When a column overflows, it is the signal to stop opening bugs and finish the ones already started.")
             ],[ IMG("images/jira-colonnes-qa.png","The QA-Bugs board columns, with their work-in-progress limits") ],"dessous"),

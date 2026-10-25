@@ -3770,3 +3770,5 @@ html body .project > .lead { font-size: 1.25rem; }
 html body main .back { font-size: .86rem; }
 html body .project .prose figure figcaption,
 html body .project .prose .schema .cap { font-size: .86rem !important; }
+html body .brow > .bt, html body .brow > .bm { min-width: 0; }
+html body .brow > .bm { grid-template-columns: minmax(0, 1fr); }

@@ -3790,3 +3790,6 @@ html body .infos-page .sk-group:nth-of-type(3) { border-top-color: transparent; 
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .infos-page .sk-group:nth-of-type(4) { background: #12223A; box-shadow: 0 0 0 100vmax #12223A; } }
 :root[data-theme="dark"] .infos-page .tool-grp { background: rgba(255,255,255,.03); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .infos-page .tool-grp { background: rgba(255,255,255,.03); } }
+/* Carrousels dans une bande : la colonne d'images ne déborde pas sur mobile */
+html body .brow > .bt, html body .brow > .bm { min-width: 0; }
+html body .brow > .bm { grid-template-columns: minmax(0, 1fr); }

@@ -272,9 +272,80 @@ const PROJECTS_FR = {
         ] })
   ],
   perso: [
-    P({ title:"Projet Jira et Agile", wip:true, desc:"Un projet personnel pour approfondir Jira et la gestion de projet Agile.", img:"",
-        infos:{ "Rôle":"Producer", "Outils":"Jira · Agile" },
-        contenu:[ T("Projet en cours.") ] })
+    P({ title:"Projet Jira et Agile : un studio en mise en situation – Octobre 2026", large:true, nocover:true,
+        desc:"Une mise en situation menée seul : la production d'un action-RPG AA fictif, structurée dans Jira, de l'organisation du studio jusqu'au premier sprint.",
+        carte:"La production d'un action-RPG AA fictif structurée dans Jira, avec ses deux goulots et un chemin critique qui passe par les prestataires.",
+        img:"",
+        infos:{ "Rôle":"Producer (mise en situation, mené seul)", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL · Coda", "Période":"Octobre 2026", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
+        apercu:"Pour apprendre Jira sur un cas réaliste, j'ai organisé seul la production d'un action-RPG AA fictif : 15 personnes en interne et quatre prestataires, sur le modèle d'Ember Lab pour Kena: Bridge of Spirits. En préparant la Vertical Slice, j'ai surtout constaté que le rythme ne serait pas fixé par les deux squads, mais par deux personnes : l'animateur gameplay et le sound designer. J'ai aussi vu que le chemin critique passait par les prestataires. J'ai construit le space pour rendre ces risques visibles : des dépendances liées aux tickets, une capacité calculée par squad, un board par public et un dashboard pour le producer. C'est une mise en situation : je joue tous les rôles, et le sprint simulé sert à éprouver l'outil, pas à prouver la conduite d'une équipe.",
+        contenu:[
+          BANDE("I","Le cadre du projet",[
+            LIGNE([
+              T("Je connaissais les bases de Jira, mais je voulais comprendre comment un studio s'y organise réellement, avec plusieurs équipes, des prestataires et des jalons sur plusieurs années. J'ai donc construit une **mise en situation complète** plutôt qu'un simple tableau de tâches."),
+              T("Pour partir d'une structure crédible, je me suis appuyé sur ce qu'Ember Lab a rendu public de la production de **Kena: Bridge of Spirits** : une petite équipe interne et une partie du travail confiée à des studios partenaires. Mon jeu fictif reprend ce modèle : un action-RPG AA à la troisième personne, produit en trois ans par **15 personnes**, avec l'externalisation de la QA, d'une partie de l'animation et de l'art, et de la musique."),
+              T("J'ai mené ce projet en parallèle de la formation **Agile with Atlassian Jira**, proposée par Atlassian sur Coursera, pour mettre en pratique chaque notion sur un cas concret. J'en ai obtenu le certificat le 14 octobre 2026."),
+              LIEN("Vérifier le certificat","https://coursera.org/verify/EQE4DN5JX2XG")
+            ],[ FICHE("Les contraintes",["Une équipe de 15 personnes, pour une offre gratuite limitée à 10 utilisateurs","Jira ne permet pas d'antidater un ticket : la simulation se fait en temps réel","Un sprint de démonstration compressé à une semaine au lieu de deux","Un travail mené seul, en jouant tous les rôles de l'équipe"]),
+                FICHE("Ce que ce projet montre, et ce qu'il ne montre pas",["Il montre : structurer un outil pour une organisation réaliste, planifier sous contraintes et rendre les risques visibles","Il ne montre pas : la conduite d'une vraie équipe. Les données du sprint sont simulées"]) ])
+          ]),
+          BANDE("II","Organiser le studio et ses prestataires",[
+            LIGNE([
+              T("J'ai découpé l'équipe en deux **squads** pluridisciplinaires de six personnes, Gameplay et World, avec un groupe Transverse (direction créative, production, tech art). Les prestataires ont leur propre valeur, External, et leur propre suivi, parce que leur travail ne fait pas partie du sprint d'une squad. Chacun a un **référent interne** qui valide ses livraisons : le producer pour la QA, l'animateur gameplay pour le studio d'animation, le lead environment artist pour le studio d'art."),
+              T("Dans le space, chaque ticket répond à quatre questions : où se situe le travail dans le jeu (le composant), qui le fait (la squad), pour quelle phase du projet (la version) et à quelle catégorie transverse il appartient (le label). Ce rangement a un but simple : chaque vue dont l'équipe a besoin devient alors une requête.")
+            ],[ CAROUSEL([["images/jira-versions.png","Les versions du projet, de la conception à la sortie, avec leurs critères de sortie"],["images/jira-composants.png","Une partie des 29 composants : systèmes, disciplines et niveaux"],["images/jira-squad.png","Le champ Squad et ses quatre valeurs : Gameplay, World, Transverse et External"]]) ]),
+            LIGNE([
+              T("Avec le recul, c'est cette séparation qui m'a demandé le plus de réflexion. Une tâche faite par le tech artist, par exemple, appartient à la squad qui s'engage à la livrer dans son sprint, et non au groupe Transverse : sinon, elle n'apparaîtrait sur aucun board, et personne ne s'engagerait à la livrer.")
+            ],[ IMG("images/jira-ticket.png","Une Story de la Vertical Slice : critères d'acceptation, sous-tâches, squad, composant, version et Epic parent") ])
+          ]),
+          BANDE("III","Les goulots et le chemin critique",[
+            LIGNE([
+              T("J'ai découpé le jeu en Epics (combat, compagnons, bestiaire, actes), puis rédigé le backlog de la **Vertical Slice** sous forme de Stories à valeur joueur, chacune découpée en sous-tâches nominatives. « Enemy AI framework » devient ainsi « Enemies perceive, chase and attack the player »."),
+              T("Ce découpage a fait apparaître le premier risque du projet. L'**animateur gameplay** intervient dans 13 Stories sur 23, et le **sound designer** dans 15. Ce sont eux qui fixent le rythme, bien plus que la taille des squads. Le deuxième sprint de la squad Gameplay le montre bien : trois de ses Stories demandent de l'animation, et l'animateur y serait saturé. Il y avait deux options : sortir une Story du sprint, ou la garder en signalant le risque dès le planning."),
+              T("[À compléter : l'arbitrage que tu as retenu pour Gameplay S02, et pourquoi.]")
+            ],[ CHIFFRES([["23","Stories dans la Vertical Slice"],["126","Points estimés"],["13 et 15","Stories pour l'animateur et le sound designer"],["3","Livraisons externes qui bloquent des Stories"]]) ]),
+            LIGNE([
+              T("Le second risque vient de l'extérieur. Trois Stories de la squad World (l'entrée de la forêt, le PNJ guide et l'ambiance sonore) attendent des **livraisons de prestataires** : un lot de props, un lot d'animations et le thème principal. Dans Jira, chaque livraison est un ticket relié à la Story qu'il bloque, et une Story n'entre en sprint que si ses dépendances sont levées : c'est une condition de ma **Definition of Ready**."),
+              T("La conséquence est directe : quelle que soit sa vitesse, la squad World ne peut pas finir la Vertical Slice avant ces livraisons. **Le chemin critique passe par l'externe.** J'ai donc engagé volontairement la squad World sur un premier sprint léger, et réservé le reste de sa capacité à la préproduction : bible artistique, concepts et cahiers des charges des prestataires. Sur un vrai projet, c'est la date de ces livraisons que je suivrais en premier.")
+            ],[ IMG("images/jira-backlog-vs.png","Le premier sprint de la squad Gameplay : chaque Story découpée en sous-tâches") ],"dessous")
+          ]),
+          BANDE("IV","Estimer ce que chaque squad peut tenir",[
+            LIGNE([
+              T("Avant d'engager un sprint, j'ai calculé la **capacité** de chaque squad : les jours du sprint multipliés par la part du temps réellement consacrée à son travail. J'ai retiré environ 20 % pour les réunions et les imprévus, et compté les leads à mi-temps, parce qu'une partie de leur temps va au management et aux revues."),
+              T("Sans historique, on s'engage prudemment. La squad Gameplay part donc sur **21 points**, avec un objectif de sprint clair : le joueur peut se battre, esquiver et subir des dégâts, face à des ennemis qui le poursuivent. La squad World s'engage sur **13 points**, pour les raisons de dépendance vues plus haut. Ensuite, c'est la vélocité moyenne des trois derniers sprints qui sert de référence, et une Story non terminée n'est jamais comptée à moitié : elle passe entière au sprint suivant."),
+              T("Les deux squads suivent la même cadence, pour faciliter les revues communes et les dépendances. À l'intérieur d'une Story, une règle simple évite les signaux contradictoires : **une sous-tâche ne dépasse jamais la priorité de sa Story**. Une requête qui classe les sous-tâches par personne et par priorité donne enfin la vue à présenter au premier daily.")
+            ],[ IMG("images/jira-sprints.png","Le sprint en cours de la squad Gameplay, et le suivant déjà préparé") ])
+          ]),
+          BANDE("V","Donner à chacun la bonne visibilité",[
+            LIGNE([
+              T("Dans Jira, **un board n'est qu'une vue posée sur un filtre**. J'ai donc pensé les boards par public : un board Scrum pour chaque squad, un board Kanban pour la QA, un board Kanban pour les livraisons des prestataires, qui arrivent par lots et ne suivent pas le rythme des sprints, et un board Production qui voit tout le projet mais sur lequel on ne lance jamais de sprint.")
+            ],[ CAROUSEL([["images/jira-board-production.png","Production : la vue d'ensemble, sur laquelle on ne lance jamais de sprint"],["images/jira-board-gameplay.png","Gameplay : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-world.png","World : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-qa.png","QA-Bugs : le flux des bugs, avec une ligne réservée aux bloquants"],["images/jira-board-vendors.png","Vendors : les livraisons attendues de chaque prestataire"]]) ]),
+            LIGNE([
+              T("Sur le board QA, chaque colonne a une **limite de travail en cours** : pas plus de dix bugs en tri, cinq en correction et huit en attente de vérification. Quand une colonne déborde, c'est le signal qu'il faut arrêter d'ouvrir des bugs pour finir ceux qui sont commencés.")
+            ],[ IMG("images/jira-colonnes-qa.png","Les colonnes du board QA-Bugs, avec leurs limites de travail en cours") ],"dessous"),
+            LIGNE([
+              T("Pour le producer, j'ai constitué une **bibliothèque de filtres** qui répond aux questions du lundi matin. Où en est le sprint ? Quels tickets sont bloqués ou reportés ? Le périmètre de la Vertical Slice a-t-il bougé ? Et les données sont-elles fiables, sans ticket sans squad ni ticket terminé sans résolution ? Ce sont eux qui alimentent le dashboard du producer.")
+            ],[ IMG("images/jira-filtres.png","Le filtre du périmètre de la Vertical Slice, et la liste des filtres enregistrés") ],"dessous"),
+            LIGNE([
+              T("Enfin, les deux **workflows** traduisent des choix de qualité. Une Story passe par une revue puis une vérification QA avant d'être terminée. Un bug passe par un tri, doit recevoir une résolution pour être fermé, et peut être rouvert : c'est ce qui permet de compter les correctifs qui ne tiennent pas.")
+            ],[ CAROUSEL([["images/jira-workflow-bugs.png","Le workflow des bugs : tri, correction, vérification et réouverture"],["images/jira-workflow-dev.png","Le workflow des Stories et des Tasks : revue, puis vérification QA"]]) ])
+          ]),
+          BANDE("VI","Éprouver l'outil avec un sprint simulé",[
+            LIGNE([
+              T("Pour obtenir de vraies données, je fais vivre un premier sprint du 24 au 31 octobre, compressé à une semaine au lieu de deux, car Jira construit ses graphiques à partir des dates réelles. Côté QA, j'ai écrit un **scénario de onze bugs** pour mettre les workflows à l'épreuve : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint."),
+              T("[À compléter après le 31 octobre : ce qui a été terminé, ce qui a été reporté et pourquoi, et ce que le dashboard a permis de voir.]")
+            ],[ IMG("","Capture à ajouter : le dashboard en fin de sprint") ]),
+            LIGNE([
+              T("[À compléter : un blocage marqué par un drapeau, la façon dont il a été levé, et ce qu'il a changé au sprint.]")
+            ],[ IMG("","Capture à ajouter : le burndown ou le sprint report") ])
+          ]),
+          BANDE("VII","Ce que j'en retiens",[
+            LIGNE([
+              T("Ce projet m'a surtout appris à penser Jira comme une base de données plutôt que comme un tableau de tâches : une fois les tickets bien rangés, chaque équipe, chaque jalon et chaque contrôle qualité n'est qu'une requête. Il m'a aussi montré que l'outil ne sert qu'à rendre visibles les vraies décisions du producer : qui est saturé, ce qui dépend de l'extérieur et ce qu'on accepte de reporter."),
+              T("Pour comparer, j'ai transposé cette organisation dans **Coda**. Certains calculs y sont plus simples, mais Coda ne garde pas l'historique des statuts, qu'il faut donc enregistrer soi-même. Le bon outil dépend de ce que l'équipe a besoin de suivre."),
+              T("[À compléter après le sprint : ce que je changerais sur un vrai projet.]")
+            ])
+          ])
+        ] })
   ],
   exo: [
         P({ survol:{ items:["Producer","Jeu AA · 30 à 50 personnes","48 mois de production","Excel · Coda · ClickUp"] }, cat:"Gestion de production", title:"Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes ; bg/fit : image affichée en entier sur fond uni
@@ -557,9 +628,80 @@ const PROJECTS_EN = {
         ] })
   ],
   perso: [
-    P({ title:"Jira and Agile Project", wip:true, desc:"A personal project to deepen my use of Jira and Agile project management.", img:"",
-        infos:{ "Role":"Producer", "Tools":"Jira · Agile" },
-        contenu:[ T("Project in progress.") ] })
+    P({ title:"Jira and Agile Project: A Studio Simulation – October 2026", large:true, nocover:true,
+        desc:"A simulation run on my own: the production of a fictional AA action-RPG, structured in Jira, from organising the studio to the first sprint.",
+        carte:"The production of a fictional AA action-RPG structured in Jira, with its two bottlenecks and a critical path that runs through the vendors.",
+        img:"",
+        infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL · Coda", "Period":"October 2026", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
+        apercu:"To learn Jira on a realistic case, I organised on my own the production of a fictional AA action-RPG: 15 people in-house and four vendors, modelled on Ember Lab's setup for Kena: Bridge of Spirits. While preparing the Vertical Slice, my main finding was that the pace would not be set by the two squads, but by two people: the gameplay animator and the sound designer. I also saw that the critical path ran through the vendors. I built the space to make these risks visible: dependencies linked to work items, a capacity calculated per squad, one board per audience and a dashboard for the producer. It is a simulation: I play every role, and the simulated sprint tests the tool, it does not prove I can lead a team.",
+        contenu:[
+          BANDE("I","The project framework",[
+            LIGNE([
+              T("I knew the basics of Jira, but I wanted to understand how a studio really organises itself in it, with several teams, vendors and milestones spread over years. So I built a **complete simulation** rather than a simple task board."),
+              T("To start from a credible structure, I relied on what Ember Lab has made public about the production of **Kena: Bridge of Spirits**: a small in-house team, with part of the work handed to partner studios. My fictional game follows this model: a third-person AA action-RPG, produced over three years by **15 people**, with QA, part of the animation and art, and the music outsourced."),
+              T("I ran this project alongside the **Agile with Atlassian Jira** course, offered by Atlassian on Coursera, to put each concept into practice on a concrete case. I earned its certificate on 14 October 2026."),
+              LIEN("Verify the certificate","https://coursera.org/verify/EQE4DN5JX2XG")
+            ],[ FICHE("The constraints",["A 15-person team, on a free plan limited to 10 users","Jira cannot backdate a work item: the simulation runs in real time","A demo sprint compressed to one week instead of two","Work done alone, playing every role on the team"]),
+                FICHE("What this project shows, and what it does not",["It shows: structuring a tool for a realistic organisation, planning under constraints and making risks visible","It does not show: leading a real team. The sprint data is simulated"]) ])
+          ]),
+          BANDE("II","Organising the studio and its vendors",[
+            LIGNE([
+              T("I split the team into two cross-disciplinary **squads** of six, Gameplay and World, with a Transverse group (creative direction, production, tech art). Vendors have their own value, External, and their own tracking, because their work is not part of a squad's sprint. Each one has an **internal referent** who approves its deliveries: the producer for QA, the gameplay animator for the animation studio, the lead environment artist for the art studio."),
+              T("In the space, each work item answers four questions: where the work sits in the game (the component), who does it (the squad), for which phase of the project (the version) and which cross-cutting category it belongs to (the label). This sorting has a simple goal: every view the team needs then becomes a query.")
+            ],[ CAROUSEL([["images/jira-versions.png","The project's versions, from concept to release, with their exit criteria"],["images/jira-composants.png","Some of the 29 components: systems, disciplines and levels"],["images/jira-squad.png","The Squad field and its four values: Gameplay, World, Transverse and External"]]) ]),
+            LIGNE([
+              T("Looking back, this separation is what took the most thought. A task done by the tech artist, for instance, belongs to the squad that commits to delivering it in its sprint, not to the Transverse group: otherwise it would appear on no board, and nobody would commit to delivering it.")
+            ],[ IMG("images/jira-ticket.png","A Vertical Slice Story: acceptance criteria, sub-tasks, squad, component, version and parent Epic") ])
+          ]),
+          BANDE("III","The bottlenecks and the critical path",[
+            LIGNE([
+              T("I broke the game down into Epics (combat, companions, bestiary, acts), then wrote the **Vertical Slice** backlog as player-value Stories, each split into sub-tasks assigned to a person. “Enemy AI framework” thus becomes “Enemies perceive, chase and attack the player”."),
+              T("This breakdown revealed the project's first risk. The **gameplay animator** works on 13 Stories out of 23, and the **sound designer** on 15. They set the pace, far more than the size of the squads. The Gameplay squad's second sprint shows it well: three of its Stories need animation, and the animator would be overloaded. There were two options: take one Story out of the sprint, or keep it and flag the risk from sprint planning onwards."),
+              T("[To complete: the call you made for Gameplay S02, and why.]")
+            ],[ CHIFFRES([["23","Stories in the Vertical Slice"],["126","Estimated points"],["13 and 15","Stories for the animator and the sound designer"],["3","Vendor deliveries blocking Stories"]]) ]),
+            LIGNE([
+              T("The second risk comes from outside. Three World Stories (the forest entrance, the guide NPC and the forest soundscape) are waiting on **vendor deliveries**: a batch of props, a batch of animations and the main theme. In Jira, each delivery is a work item linked to the Story it blocks, and a Story only enters a sprint once its dependencies are cleared: it is a condition of my **Definition of Ready**."),
+              T("The consequence is direct: however fast it goes, the World squad cannot finish the Vertical Slice before these deliveries. **The critical path runs through outsourcing.** So I deliberately gave the World squad a light first sprint, and kept the rest of its capacity for preproduction: art bible, concepts and vendor briefs. On a real project, the dates of these deliveries are what I would track first.")
+            ],[ IMG("images/jira-backlog-vs.png","The Gameplay squad's first sprint: each Story broken down into sub-tasks") ],"dessous")
+          ]),
+          BANDE("IV","Estimating what each squad can hold",[
+            LIGNE([
+              T("Before committing to a sprint, I calculated each squad's **capacity**: the days in the sprint multiplied by the share of time really spent on its work. I took off about 20% for meetings and the unexpected, and counted leads at half time, because part of their time goes to management and reviews."),
+              T("Without history, you commit cautiously. The Gameplay squad therefore starts with **21 points**, with a clear sprint goal: the player can fight, dodge and take damage, against enemies that chase them. The World squad commits to **13 points**, for the dependency reasons above. After that, the average velocity of the last three sprints becomes the reference, and an unfinished Story is never half-counted: it moves whole to the next sprint."),
+              T("Both squads follow the same cadence, to make joint reviews and dependencies easier. Within a Story, one simple rule avoids mixed signals: **a sub-task never has a higher priority than its Story**. Finally, a query that sorts sub-tasks by person and priority gives the view to show at the first daily.")
+            ],[ IMG("images/jira-sprints.png","The Gameplay squad's current sprint, with the next one already prepared") ])
+          ]),
+          BANDE("V","Giving everyone the right visibility",[
+            LIGNE([
+              T("In Jira, **a board is just a view on top of a filter**. So I designed the boards by audience: a Scrum board for each squad, a Kanban board for QA, a Kanban board for vendor deliveries, which arrive in batches and do not follow the sprint rhythm, and a Production board that sees the whole project but on which no sprint is ever started.")
+            ],[ CAROUSEL([["images/jira-board-production.png","Production: the overview, on which no sprint is ever started"],["images/jira-board-gameplay.png","Gameplay: the squad's current sprint, grouped by Epic"],["images/jira-board-world.png","World: the squad's current sprint, grouped by Epic"],["images/jira-board-qa.png","QA-Bugs: the bug flow, with a lane reserved for blockers"],["images/jira-board-vendors.png","Vendors: the deliveries expected from each vendor"]]) ]),
+            LIGNE([
+              T("On the QA board, each column has a **work-in-progress limit**: no more than ten bugs in triage, five being fixed and eight awaiting verification. When a column overflows, it is the signal to stop opening bugs and finish the ones already started.")
+            ],[ IMG("images/jira-colonnes-qa.png","The QA-Bugs board columns, with their work-in-progress limits") ],"dessous"),
+            LIGNE([
+              T("For the producer, I built a **library of filters** that answers the Monday-morning questions. Where is the sprint at? Which work items are blocked or carried over? Has the Vertical Slice scope moved? And is the data reliable, with no item missing a squad and none done without a resolution? They are what feed the producer's dashboard.")
+            ],[ IMG("images/jira-filtres.png","The Vertical Slice scope filter, and the list of saved filters") ],"dessous"),
+            LIGNE([
+              T("Finally, the two **workflows** reflect quality choices. A Story goes through a review and then a QA check before it is done. A bug goes through triage, needs a resolution to be closed, and can be reopened: this is what makes it possible to count fixes that do not hold.")
+            ],[ CAROUSEL([["images/jira-workflow-bugs.png","The bug workflow: triage, fix, verification and reopening"],["images/jira-workflow-dev.png","The Story and Task workflow: review, then QA check"]]) ])
+          ]),
+          BANDE("VI","Testing the tool with a simulated sprint",[
+            LIGNE([
+              T("To get real data, I am running a first sprint from 24 to 31 October, compressed to one week instead of two, because Jira builds its charts from real dates. On the QA side, I wrote a **scenario of eleven bugs** to put the workflows to the test: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint."),
+              T("[To complete after 31 October: what was finished, what was carried over and why, and what the dashboard made visible.]")
+            ],[ IMG("","Screenshot to add: the dashboard at the end of the sprint") ]),
+            LIGNE([
+              T("[To complete: a blocker marked with a flag, how it was lifted, and what it changed in the sprint.]")
+            ],[ IMG("","Screenshot to add: the burndown or sprint report") ])
+          ]),
+          BANDE("VII","What I take away",[
+            LIGNE([
+              T("Above all, this project taught me to think of Jira as a database rather than a task board: once the work items are well sorted, every team, milestone and quality check is just a query. It also showed me that the tool is only there to make the producer's real decisions visible: who is overloaded, what depends on outside partners and what we agree to postpone."),
+              T("To compare, I transposed this organisation into **Coda**. Some calculations are simpler there, but Coda does not keep the status history, which you have to record yourself. The right tool depends on what the team needs to track."),
+              T("[To complete after the sprint: what I would change on a real project.]")
+            ])
+          ])
+        ] })
   ],
   exo: [
     P({ survol:{ items:["Producer","AA game · 30 to 50 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", nocover:true, desc:"Production dossier for a 48-month AA game: team, budget, planning, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
@@ -769,10 +911,10 @@ const INFOS_FR = {
     { icone:"equipe", titre:"Documentation et communication", items:["PowerPoint","OneDrive","Discord"] },
     { icone:"outils", titre:"Moteurs utilisés par mes équipes", items:["Unreal Engine|images/unreal-engine.png","Unity|images/unity.svg"] }
   ],
-  autresTitre: "Langues et diplômes",
+  autresTitre: "Langues, diplômes et certifications",
   autres: [
     { icone:"langues", titre:"Langues", items:["Français : langue maternelle","Anglais : courant","Espagnol : notions","Grec moderne : en apprentissage"] },
-    { icone:"diplome", titre:"Diplômes", items:["Certification Conception et Game Design, Game Sup (2023‑2027)","Master d'anthropologie religieuse de la Méditerranée antique, École Pratique des Hautes Études (2018‑2020)"] }
+    { icone:"diplome", titre:"Diplômes et certifications", items:["Certification Conception et Game Design, Game Sup (2023‑2027)","Certificat Agile with Atlassian Jira, Atlassian via Coursera (2026)","Master d'anthropologie religieuse de la Méditerranée antique, École Pratique des Hautes Études (2018‑2020)"] }
   ],
   loisirsTitre: "Loisirs",
   loisirs: [
@@ -799,10 +941,10 @@ const INFOS_EN = {
     { icone:"equipe", titre:"Documentation and communication", items:["PowerPoint","OneDrive","Discord"] },
     { icone:"outils", titre:"Engines used by my teams", items:["Unreal Engine|images/unreal-engine.png","Unity|images/unity.svg"] }
   ],
-  autresTitre: "Languages and degrees",
+  autresTitre: "Languages, degrees and certificates",
   autres: [
     { icone:"langues", titre:"Languages", items:["French: native","English: fluent","Spanish: basic","Modern Greek: learning"] },
-    { icone:"diplome", titre:"Degrees", items:["Certification in Conception and Game Design, Game Sup (2023‑2027)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018‑2020)"] }
+    { icone:"diplome", titre:"Degrees and certificates", items:["Certification in Conception and Game Design, Game Sup (2023‑2027)","Agile with Atlassian Jira certificate, Atlassian via Coursera (2026)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018‑2020)"] }
   ],
   loisirsTitre: "Hobbies",
   loisirs: [

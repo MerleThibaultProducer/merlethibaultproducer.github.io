@@ -748,7 +748,8 @@ let SECTIONS = SECTIONS_FR;
    image : visuel du CV affiché sur la page (fichier PNG ou JPG, ex. cv/cv-apercu.jpg)
    pdf   : fichier proposé au téléchargement (ex. cv/MERLE_Thibault_CV_PROD.pdf : remplacez ce fichier pour mettre le CV à jour). Vide = le bouton imprime le visuel, ce qui permet de l'enregistrer en PDF. */
 /* ===================================================================
-   PAGE INFOS : compétences, puis langues, diplômes et loisirs.
+   PAGE INFOS : compétences, outils, puis langues, diplômes et loisirs.
+   Outils : écrivez "Nom" ou "Nom|images/logo.png" pour afficher un logo.
    Chaque bloc : icône (voir ICONES dans app.js), catégorie, liste.
    =================================================================== */
 const INFOS_FR = {
@@ -760,6 +761,13 @@ const INFOS_FR = {
     { icone:"narration", titre:"Narrative Design", items:["Worldbuilding","Écriture de personnages","Quest Design","Lien entre mécaniques et récit"] },
     { icone:"analyse", titre:"Analyse", items:["Market Analysis et estimation des ventes","Seuil de rentabilité et ROI","Recherche documentaire et critique des sources"] },
     { icone:"equipe", titre:"Communication et encadrement", items:["Communication intra et inter-équipes","Gestion d\'événements","Transmission des savoirs et accompagnement","Adaptation du discours aux interlocuteurs"] }
+  ],
+  outilsTitre: "Outils",
+  outilsIntro: "Les outils que j'utilise pour planifier, suivre et faire circuler l'information.",
+  outils: [
+    { icone:"planning", titre:"Planification et suivi", items:["Jira","Excel","Coda","ClickUp","Miro"] },
+    { icone:"equipe", titre:"Documentation et communication", items:["PowerPoint","OneDrive","Discord"] },
+    { icone:"outils", titre:"Moteurs utilisés par mes équipes", items:["Unreal Engine|images/unreal-engine.png","Unity|images/unity.svg"] }
   ],
   autresTitre: "Langues et diplômes",
   autres: [
@@ -783,6 +791,13 @@ const INFOS_EN = {
     { icone:"narration", titre:"Narrative Design", items:["Worldbuilding","Character writing","Quest Design","Linking mechanics and story"] },
     { icone:"analyse", titre:"Analysis", items:["Market analysis and sales forecasting","Break-even point and ROI","Desk research and source criticism"] },
     { icone:"equipe", titre:"Communication and leadership", items:["Intra- and cross-team communication","Event management","Knowledge transfer and coaching","Tailoring communication to stakeholders"] }
+  ],
+  outilsTitre: "Tools",
+  outilsIntro: "The tools I use to plan, track and keep information flowing.",
+  outils: [
+    { icone:"planning", titre:"Planning and tracking", items:["Jira","Excel","Coda","ClickUp","Miro"] },
+    { icone:"equipe", titre:"Documentation and communication", items:["PowerPoint","OneDrive","Discord"] },
+    { icone:"outils", titre:"Engines used by my teams", items:["Unreal Engine|images/unreal-engine.png","Unity|images/unity.svg"] }
   ],
   autresTitre: "Languages and degrees",
   autres: [

@@ -271,6 +271,7 @@ function infos(){
   return `<div class="infos-page"><h1>${t("infos")}</h1><p class="lead">${esc(I.intro)}</p>
   <p class="cv-actions noprint">${view}${dl}</p>
   <section class="sk-group"><h2>${esc(I.competencesTitre)}</h2>${blocs(I.competences)}</section>
+  ${I.outils?`<section class="sk-group sk-tools"><h2>${esc(I.outilsTitre)}</h2>${I.outilsIntro?`<p class="sk-intro">${esc(I.outilsIntro)}</p>`:""}<div class="tools">${I.outils.map(g=>`<section class="tool-grp"><h3><span class="sk-ic">${icone(g.icone)}</span>${esc(g.titre)}</h3><ul class="chips">${g.items.map(x=>{const [n,l]=x.split("|");return `<li>${l?`<img src="${esc(l)}" alt="" width="18" height="18">`:""}${esc(n)}</li>`}).join("")}</ul></section>`).join("")}</div></section>`:""}
   <section class="sk-group"><h2>${esc(I.autresTitre)}</h2>${blocs(I.autres)}</section>
   ${I.loisirs?`<section class="sk-group sk-wide"><h2>${esc(I.loisirsTitre)}</h2>${blocs(I.loisirs)}</section>`:""}</div>`;
 }

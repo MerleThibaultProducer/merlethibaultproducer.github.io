@@ -3770,3 +3770,23 @@ html body .project > .lead { font-size: 1.25rem; }
 html body main .back { font-size: .86rem; }
 html body .project .prose figure figcaption,
 html body .project .prose .schema .cap { font-size: .86rem !important; }
+
+/* ---------- Page Infos : bloc Outils ---------- */
+html body .infos-page .sk-tools .sk-intro { max-width: 40rem; margin: -.6rem auto 2rem; color: var(--muted); line-height: 1.6; }
+html body .infos-page .tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; max-width: 62rem; margin: 0 auto; text-align: left; }
+html body .infos-page .tool-grp { background: var(--surface, #fff); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.25rem 1.4rem; }
+html body .infos-page .tool-grp h3 { display: flex; align-items: center; gap: .6rem; margin: 0 0 1rem; font: 700 1rem/1.3 var(--sans); color: var(--head); }
+html body .infos-page .tool-grp .sk-ic { color: var(--gold-n); display: inline-flex; margin: 0; }
+html body .infos-page .tool-grp .sk-ic svg { width: 22px; height: 22px; }
+html body .infos-page .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+html body .infos-page .chips li { display: inline-flex; align-items: center; gap: .45rem; margin: 0; padding: .38rem .8rem; border: 1px solid var(--line); border-radius: 999px; font: 500 .92rem/1.2 var(--sans); color: var(--head); background: transparent; }
+html body .infos-page .chips li::before { display: none; }
+html body .infos-page .chips img { width: 18px; height: 18px; object-fit: contain; }
+@media (max-width: 860px) { html body .infos-page .tools { grid-template-columns: minmax(0, 1fr); max-width: 30rem; } }
+/* Bandes alternées : Compétences (blanc), Outils (teinté), Langues (blanc), Loisirs (teinté) */
+html body .infos-page .sk-group:nth-of-type(4) { background: #F1F5FA; box-shadow: 0 0 0 100vmax #F1F5FA; clip-path: inset(0 -100vmax); border-top-color: transparent; padding-bottom: 3rem; }
+html body .infos-page .sk-group:nth-of-type(3) { border-top-color: transparent; }
+:root[data-theme="dark"] .infos-page .sk-group:nth-of-type(4) { background: #12223A; box-shadow: 0 0 0 100vmax #12223A; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .infos-page .sk-group:nth-of-type(4) { background: #12223A; box-shadow: 0 0 0 100vmax #12223A; } }
+:root[data-theme="dark"] .infos-page .tool-grp { background: rgba(255,255,255,.03); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .infos-page .tool-grp { background: rgba(255,255,255,.03); } }

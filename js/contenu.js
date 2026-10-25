@@ -276,12 +276,14 @@ const PROJECTS_FR = {
         desc:"Mettre en place dans Jira la production d'un action-RPG AA sur trois ans, du découpage du studio jusqu'au premier sprint.",
         carte:"La production d'un action-RPG AA fictif, structurée dans Jira : squads, boards, workflows et un premier sprint simulé.",
         img:"",
-        infos:{ "Rôle":"Producer", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL · Coda", "Période":"Octobre 2026" },
+        infos:{ "Rôle":"Producer", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL · Coda", "Période":"Octobre 2026", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
         apercu:"Pour approfondir Jira, j'ai monté de A à Z l'organisation d'un studio fictif qui produit un action-RPG AA sur trois ans, en m'inspirant de la structure d'Ember Lab sur Kena: Bridge of Spirits : un noyau de 15 personnes et des studios partenaires. J'ai structuré le projet dans un space company-managed, créé un board par équipe à partir de filtres JQL, dessiné les workflows du studio et préparé le backlog de la Vertical Slice. Je fais ensuite vivre un premier sprint, du 24 au 31 octobre, pour obtenir de vraies données et un dashboard.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
               T("Je connaissais les bases de Jira, mais je voulais comprendre comment un studio s'y organise réellement, avec plusieurs équipes, des prestataires et des jalons sur plusieurs années. J'ai donc construit une **mise en situation complète** plutôt qu'un simple tableau de tâches."),
+              T("J'ai mené ce projet en parallèle de la formation **Agile with Atlassian Jira**, proposée par Atlassian sur Coursera, pour mettre en pratique chaque notion sur un cas concret. J'en ai obtenu le certificat le 14 octobre 2026."),
+              LIEN("Vérifier le certificat","https://coursera.org/verify/EQE4DN5JX2XG"),
               T("Avant de commencer, j'ai étudié **Kena: Bridge of Spirits** et son studio, Ember Lab, pour m'appuyer sur une structure crédible : une petite équipe interne et une partie de la production confiée à des studios partenaires. Mon jeu fictif reprend ce modèle : un action-RPG AA à la troisième personne, produit en trois ans par **15 personnes**, avec l'externalisation de la QA, d'une partie de l'animation, de l'art et de la musique.")
             ],[ FICHE("Les contraintes",["Une équipe de 15 personnes, pour une offre gratuite limitée à 10 utilisateurs","Jira ne permet pas d'antidater un ticket : la simulation se fait en temps réel","Un sprint de démonstration compressé à une semaine au lieu de deux","Un travail mené seul, en jouant tous les rôles de l'équipe"]) ])
           ]),
@@ -620,12 +622,14 @@ const PROJECTS_EN = {
         desc:"Setting up in Jira the production of a three-year AA action-RPG, from structuring the studio to the first sprint.",
         carte:"The production of a fictional AA action-RPG, structured in Jira: squads, boards, workflows and a first simulated sprint.",
         img:"",
-        infos:{ "Role":"Producer", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL · Coda", "Period":"October 2026" },
+        infos:{ "Role":"Producer", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL · Coda", "Period":"October 2026", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
         apercu:"To deepen my use of Jira, I built from scratch the organisation of a fictional studio producing an AA action-RPG over three years, based on Ember Lab's structure on Kena: Bridge of Spirits: a core team of 15 people and partner studios. I structured the project in a company-managed space, created one board per team from JQL filters, designed the studio's workflows and prepared the Vertical Slice backlog. I then run a first sprint, from 24 to 31 October, to get real data and a dashboard.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
               T("I knew the basics of Jira, but I wanted to understand how a studio really organises itself in it, with several teams, vendors and milestones spread over years. So I built a **complete simulation** rather than a simple task board."),
+              T("I ran this project alongside the **Agile with Atlassian Jira** course, offered by Atlassian on Coursera, to put each concept into practice on a concrete case. I earned its certificate on 14 October 2026."),
+              LIEN("Verify the certificate","https://coursera.org/verify/EQE4DN5JX2XG"),
               T("Before starting, I studied **Kena: Bridge of Spirits** and its studio, Ember Lab, to rely on a credible structure: a small in-house team, with part of the production handed to partner studios. My fictional game follows this model: a third-person AA action-RPG, produced over three years by **15 people**, with QA, part of the animation, art and music outsourced.")
             ],[ FICHE("The constraints",["A 15-person team, on a free plan limited to 10 users","Jira cannot backdate a work item: the simulation runs in real time","A demo sprint compressed to one week instead of two","Work done alone, playing every role on the team"]) ])
           ]),
@@ -879,10 +883,10 @@ const INFOS_FR = {
     { icone:"analyse", titre:"Analyse", items:["Market Analysis et estimation des ventes","Seuil de rentabilité et ROI","Recherche documentaire et critique des sources"] },
     { icone:"equipe", titre:"Communication et encadrement", items:["Communication intra et inter-équipes","Gestion d\'événements","Transmission des savoirs et accompagnement","Adaptation du discours aux interlocuteurs"] }
   ],
-  autresTitre: "Langues et diplômes",
+  autresTitre: "Langues, diplômes et certifications",
   autres: [
     { icone:"langues", titre:"Langues", items:["Français : langue maternelle","Anglais : courant","Espagnol : notions","Grec moderne : en apprentissage"] },
-    { icone:"diplome", titre:"Diplômes", items:["Certification Conception et Game Design, Game Sup (2023‑2027)","Master d'anthropologie religieuse de la Méditerranée antique, École Pratique des Hautes Études (2018‑2020)"] }
+    { icone:"diplome", titre:"Diplômes et certifications", items:["Certification Conception et Game Design, Game Sup (2023‑2027)","Certificat Agile with Atlassian Jira, Atlassian via Coursera (2026)","Master d'anthropologie religieuse de la Méditerranée antique, École Pratique des Hautes Études (2018‑2020)"] }
   ],
   loisirsTitre: "Loisirs",
   loisirs: [
@@ -902,10 +906,10 @@ const INFOS_EN = {
     { icone:"analyse", titre:"Analysis", items:["Market analysis and sales forecasting","Break-even point and ROI","Desk research and source criticism"] },
     { icone:"equipe", titre:"Communication and leadership", items:["Intra- and cross-team communication","Event management","Knowledge transfer and coaching","Tailoring communication to stakeholders"] }
   ],
-  autresTitre: "Languages and degrees",
+  autresTitre: "Languages, degrees and certificates",
   autres: [
     { icone:"langues", titre:"Languages", items:["French: native","English: fluent","Spanish: basic","Modern Greek: learning"] },
-    { icone:"diplome", titre:"Degrees", items:["Certification in Conception and Game Design, Game Sup (2023‑2027)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018‑2020)"] }
+    { icone:"diplome", titre:"Degrees and certificates", items:["Certification in Conception and Game Design, Game Sup (2023‑2027)","Agile with Atlassian Jira certificate, Atlassian via Coursera (2026)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018‑2020)"] }
   ],
   loisirsTitre: "Hobbies",
   loisirs: [

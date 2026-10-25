@@ -3690,49 +3690,6 @@ html body.page-home .home-intro .cta { margin-top: 2.2rem; }
 @media (min-width: 861px) {
   html body.page-home main::before { bottom: auto; height: clamp(600px, 58vw, 860px); }
 }
-.home-work {
-  margin: clamp(4.5rem, 8vw, 7.5rem) calc(50% - 50vw) 0;
-  padding: clamp(3.5rem, 6vw, 5.5rem) calc(50vw - 50%) clamp(4rem, 7vw, 6.5rem);
-  background: #F1F5FA;
-}
-html[data-theme="dark"] .home-work { background: #12223A; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .home-work { background: #12223A; } }
-.home-work h2 {
-  margin: 0 0 clamp(1.8rem, 3vw, 2.6rem);
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(1.9rem, 3.3vw, 3rem);
-  line-height: 1.08;
-  letter-spacing: -.02em;
-  color: var(--head);
-}
-.hw-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1.25rem, 2.4vw, 2.4rem);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-@media (max-width: 1000px) { .hw-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 420px) { .hw-grid { gap: 1.4rem 1rem; } }
-.hw a { display: block; color: inherit; text-decoration: none; cursor: pointer; }
-.hw a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
-.hw-img { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--band); }
-.hw-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
-.hw a:hover .hw-img img, .hw a:focus-visible .hw-img img { transform: scale(1.045); }
-.hw-img .status { box-shadow: none; }
-.hw-date { margin: 1rem 0 .3rem; font-size: .86rem; font-weight: 600; color: var(--gold-d); }
-.hw h3 {
-  margin: 0;
-  font-family: var(--display);
-  font-weight: 650;
-  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
-  line-height: 1.22;
-  color: var(--head);
-}
-.hw a:hover h3 { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
-@media (prefers-reduced-motion: reduce) { .hw-img img { transition: none; } }
 
 /* ---------- Pages projet : échelle typographique ---------- */
 html body .project > h1 {
@@ -3813,4 +3770,3 @@ html body .project > .lead { font-size: 1.25rem; }
 html body main .back { font-size: .86rem; }
 html body .project .prose figure figcaption,
 html body .project .prose .schema .cap { font-size: .86rem !important; }
-html body.page-home main { padding-bottom: 0; }

@@ -3793,3 +3793,22 @@ html body .infos-page .sk-group:nth-of-type(3) { border-top-color: transparent; 
 /* Carrousels dans une bande : la colonne d'images ne déborde pas sur mobile */
 html body .brow > .bt, html body .brow > .bm { min-width: 0; }
 html body .brow > .bm { grid-template-columns: minmax(0, 1fr); }
+
+/* ---------- Bulles d'explication [[mot|clé]] ---------- */
+html body .tip { position: relative; display: inline; }
+html body .tip-btn { all: unset; cursor: help; font-weight: 600; color: var(--head); border-bottom: 1.5px dotted var(--gold-n); }
+html body .tip-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+html body .tip-pop { position: absolute; z-index: 40; left: -1rem; top: 100%; margin-top: .6rem; width: min(27rem, calc(100vw - 2rem)); display: flex; flex-direction: column; gap: .7rem; padding: 1rem 1.15rem 1.1rem; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 12px 32px rgba(10, 25, 50, .18); font: 400 .9rem/1.55 var(--sans); text-align: left; visibility: hidden; opacity: 0; transform: translateY(4px); transition: opacity .15s, transform .15s, visibility 0s .15s; }
+html body .tip-pop::before { content: ""; position: absolute; left: 0; right: 0; top: -.7rem; height: .7rem; }
+html body .tip:hover .tip-pop, html body .tip:focus-within .tip-pop, html body .tip.open .tip-pop { visibility: visible; opacity: 1; transform: none; transition: opacity .15s, transform .15s; }
+html body .tip-t { font: 700 .98rem/1.3 var(--sans); color: var(--head); }
+html body .tip-calc { display: flex; flex-direction: column; gap: .2rem; padding: .65rem .8rem; border-radius: 6px; background: var(--tint, rgba(21, 47, 92, .06)); font-variant-numeric: tabular-nums; }
+html body .tip-calc span:last-child { font-weight: 700; color: var(--head); padding-top: .25rem; margin-top: .15rem; border-top: 1px solid var(--line); }
+html body .tip-src { display: flex; flex-direction: column; gap: .25rem; font-size: .84rem; }
+html body .tip-src a { color: var(--head); text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 640px) {
+  html body .tip-pop { position: fixed; left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); top: auto; width: auto; margin: 0; max-height: 70vh; overflow-y: auto; }
+  html body .tip:hover .tip-pop { visibility: hidden; opacity: 0; }
+  html body .tip.open .tip-pop, html body .tip:focus-within .tip-pop { visibility: visible; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { html body .tip-pop { transition: none; } }

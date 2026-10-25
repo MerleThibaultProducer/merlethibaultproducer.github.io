@@ -84,7 +84,24 @@ function listing(sec){
   <div class="stage">${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="exo"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;
 }
 
-const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/==(.+?)==/g,"<mark>$1</mark>");
+const tipNote = (label, key) => {
+  const N = (typeof NOTES_FR==="undefined") ? null : (lang==="en" ? NOTES_EN : NOTES_FR)[key];
+  if(!N) return label;
+  const id = "tip-" + key;
+  return `<span class="tip"><button type="button" class="tip-btn" aria-expanded="false" aria-controls="${id}">${label}</button>`
+    + `<span class="tip-pop" id="${id}" role="tooltip"><span class="tip-t">${esc(N.titre)}</span><span class="tip-p">${esc(N.texte)}</span>`
+    + (N.calcul ? `<span class="tip-calc">${N.calcul.map(x=>`<span>${esc(x)}</span>`).join("")}</span>` : "")
+    + (N.sources ? `<span class="tip-src">${N.sources.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener">${esc(x[0])}</a>`).join("")}</span>` : "")
+    + `</span></span>`;
+};
+const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/==(.+?)==/g,"<mark>$1</mark>").replace(/\[\[(.+?)\|([\w-]+)\]\]/g,(m,l,k)=>tipNote(l,k));
+/* Bulles : survol sur ordinateur, toucher sur mobile, Échap pour fermer */
+document.addEventListener("click", e => {
+  const btn = e.target.closest(".tip-btn");
+  document.querySelectorAll(".tip.open").forEach(t => { if(!btn || t !== btn.parentNode){ t.classList.remove("open"); t.querySelector(".tip-btn").setAttribute("aria-expanded","false"); } });
+  if(btn){ const t = btn.parentNode, o = t.classList.toggle("open"); btn.setAttribute("aria-expanded", String(o)); }
+});
+document.addEventListener("keydown", e => { if(e.key==="Escape") document.querySelectorAll(".tip.open").forEach(t => { t.classList.remove("open"); t.querySelector(".tip-btn").setAttribute("aria-expanded","false"); }); });
 const LENS = '<span class="lens" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 8v5M8 10.5h5"/></svg></span>';
 
 const SCHEMAS = {

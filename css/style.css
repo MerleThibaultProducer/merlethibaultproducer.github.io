@@ -3656,3 +3656,161 @@ html body .project h1 .h-cat { display: block; margin-bottom: .5rem; font: 600 c
 /* Inter hébergée sur le site (plus de connexion à Google Fonts) · licence : fonts/OFL-Inter.txt */
 @font-face { font-family: "Inter"; src: url("../fonts/Inter.woff") format("woff"); font-weight: 400 800; font-style: normal; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("../fonts/Inter-Italic.woff") format("woff"); font-weight: 400; font-style: italic; font-display: swap; }
+
+/* ===================================================================
+   Refonte d'octobre 2026 : accueil, typographie des pages projet, finitions
+   Échelle des pages projet (5 tailles) : titre 64 · parties 48 · 22 · texte 18 · notes 15
+   =================================================================== */
+
+/* Bandeau en couleur unie (plus de dégradé) */
+html body header.top { background: #16305C; }
+
+/* ---------- Accueil ---------- */
+html body .home-h1 {
+  margin: 0 0 1.6rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 3.35rem);
+  line-height: 1.03;
+  letter-spacing: -.025em;
+  color: var(--head);
+  text-wrap: balance;
+}
+html body.page-home .home-intro .intro { max-width: 44rem; }
+html body.page-home .home-intro .intro p {
+  margin: 0 0 1.05rem;
+  font-size: clamp(1rem, 1.1vw, 1.08rem);
+  line-height: 1.62;
+  color: var(--ink);
+  text-align: left;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+html body.page-home .home-intro .cta { margin-top: 2.2rem; }
+@media (min-width: 861px) {
+  html body.page-home main::before { bottom: auto; height: clamp(600px, 58vw, 860px); }
+}
+.home-work {
+  margin: clamp(4.5rem, 8vw, 7.5rem) calc(50% - 50vw) 0;
+  padding: clamp(3.5rem, 6vw, 5.5rem) calc(50vw - 50%) clamp(4rem, 7vw, 6.5rem);
+  background: #F1F5FA;
+}
+html[data-theme="dark"] .home-work { background: #12223A; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .home-work { background: #12223A; } }
+.home-work h2 {
+  margin: 0 0 clamp(1.8rem, 3vw, 2.6rem);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 3.3vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color: var(--head);
+}
+.hw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.4vw, 2.4rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 1000px) { .hw-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .hw-grid { gap: 1.4rem 1rem; } }
+.hw a { display: block; color: inherit; text-decoration: none; cursor: pointer; }
+.hw a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.hw-img { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--band); }
+.hw-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
+.hw a:hover .hw-img img, .hw a:focus-visible .hw-img img { transform: scale(1.045); }
+.hw-img .status { box-shadow: none; }
+.hw-date { margin: 1rem 0 .3rem; font-size: .86rem; font-weight: 600; color: var(--gold-d); }
+.hw h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 650;
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  line-height: 1.22;
+  color: var(--head);
+}
+.hw a:hover h3 { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .hw-img img { transition: none; } }
+
+/* ---------- Pages projet : échelle typographique ---------- */
+html body .project > h1 {
+  font-size: clamp(2.2rem, 4.4vw, 4rem);
+  line-height: 1.04;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+html body .project > h1 .h-cat { font-size: .86rem; letter-spacing: 0; }
+html body .project > .lead {
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 48ch;
+}
+html body .project .recap dt { font-size: .86rem; }
+html body .project .recap dd,
+html body .project .recap p { font-size: 1rem; line-height: 1.65; color: var(--ink); }
+html body .project .band-head h2 {
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+}
+html body .project .brow .bt p,
+html body .project .brow .bt li,
+html body .project .fiche li,
+html body .project .prose > p {
+  line-height: 1.68;
+  color: var(--ink);
+  text-align: left;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+html body .project .fiche h3,
+html body .project .team header h3,
+html body .project .etapes h3,
+html body .project .keyart figcaption b,
+html body .project .stat b { font-size: 1.25rem; }
+html body .project figcaption,
+html body .project figcaption span,
+html body .project .cap,
+html body .project .car-cnt,
+html body .project .tm-r,
+html body .project .tm-k,
+html body .project .team header p,
+html body .project .tm-col h4,
+html body .project .tm-col h4 small,
+html body .project .stat span,
+html body .project .tbl caption,
+html body .project .tbl th { font-size: .86rem; }
+html body .project .tm-n { font-size: 1rem; }
+
+/* ---------- Pages projet : des espaces et des tons au lieu des filets ---------- */
+html body .project .band { border-top: 0; }
+html body .project .brow + .brow { margin-top: clamp(3rem, 5vw, 4.5rem); padding-top: 0; border-top: 0; }
+html body .project .recap .facts { border-bottom: 0; padding-bottom: .4rem; }
+html body .project .team header { border-bottom: 0; }
+html body .project .team li { border-bottom: 0; padding-top: .4rem; padding-bottom: .4rem; }
+html body .project .zf { border: 0; }
+html body .project .car-nav button {
+  border: 0;
+  background: var(--tint);
+  color: var(--head);
+  font-size: 1.25rem;
+}
+html body .project .car-nav button:hover { background: var(--gold); color: #13294B; }
+
+/* Captures de documents en pleine largeur, sous le texte */
+html body .project .brow.under { grid-template-columns: minmax(0, 1fr); align-items: start; gap: 1.6rem; }
+html body .project .brow.under .bt p { max-width: 72ch; }
+html body .project .brow.under .bm { justify-items: stretch; }
+html body .project .brow.under .bm figure { width: 100%; max-width: none; }
+html body .project .brow.under .bm img { width: 100%; height: auto; }
+html body .project .prose figcaption,
+html body .project .prose .cap,
+html body .project .prose .car figcaption { font-size: .86rem; }
+html body .project > .lead { font-size: 1.25rem; }
+html body main .back { font-size: .86rem; }
+html body .project .prose figure figcaption,
+html body .project .prose .schema .cap { font-size: .86rem !important; }
+html body.page-home main { padding-bottom: 0; }

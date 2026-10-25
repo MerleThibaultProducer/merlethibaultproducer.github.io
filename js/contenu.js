@@ -7,10 +7,11 @@
 const SITE_FR = {
   prenom: "Thibault", nom: "Merle",
   titre: "Junior Associate Producer",
-  devise: "",   // phrase courte sous le titre de l'accueil (vide = masquée)
+  accueilTitre: "Junior Associate Producer, formé à Game Sup",   // grand titre de la page d'accueil
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
-    "Je suis Thibault, Junior Associate Producer dans le jeu vidéo, en dernière année à Game Sup. Sur quatre productions d'école, j'ai eu l'occasion de planifier et de suivre des projets avec jusqu'à quatre équipes en simultané, des premiers jalons jusqu'aux playtests. J'écoute chacun, j'adapte les méthodes de production à chaque équipe et je m'assure que la communication est claire pour que tout le monde avance ensemble. Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un stage de fin d'études en production à partir de janvier 2027, partout en France ou en télétravail."
+    "Je m'appelle Thibault et je suis en dernière année à Game Sup. Sur quatre productions d'école, j'ai eu l'occasion de planifier et de suivre des projets avec jusqu'à quatre équipes en simultané, des premiers jalons jusqu'aux playtests. J'écoute chacun, j'adapte les méthodes de production à chaque équipe et je m'assure que la communication est claire pour que tout le monde avance ensemble.",
+    "Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un stage de fin d'études en production à partir de janvier 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",
@@ -20,8 +21,10 @@ const SITE_FR = {
   ]
 };
 const SITE_EN = {...SITE_FR,
+  accueilTitre: "Junior Associate Producer, trained at Game Sup",
   intro: [
-    "I'm Thibault, a Junior Associate Producer in video games, in my final year at Game Sup. Across four school productions, I have planned and followed projects with up to four teams in parallel, from the first milestones to the playtests. I listen to everyone, adapt production methods to each team, and make sure communication stays clear so everyone moves forward together. A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an end-of-studies production internship starting in January 2027, anywhere in France or remote."
+    "My name is Thibault and I'm in my final year at Game Sup. Across four school productions, I have planned and followed projects with up to four teams in parallel, from the first milestones to the playtests. I listen to everyone, adapt production methods to each team, and make sure communication stays clear so everyone moves forward together.",
+    "A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an end-of-studies production internship starting in January 2027, anywhere in France or remote."
   ],
   legal: [
     "© 2026 Thibault Merle – All rights reserved.",
@@ -193,10 +196,10 @@ const PROJECTS_FR = {
             LIGNE([
               T("L'école imposait ses jalons Waterfall (Proof of Concept, Alpha, Bêta), mais chaque équipe avait besoin de sprints adaptés à son projet. Il me fallait donc relier les deux, avec un suivi assez homogène pour comparer les quatre groupes et repérer les retards tôt."),
               T("J'ai construit ce suivi sur Excel, à deux niveaux. Pour chaque groupe, un macro-planning pose les sprints et les milestones de l'école. Un micro-planning rattache ensuite chaque tâche à un sprint, une priorité, une difficulté et un statut : au total, **1 387 tâches** ont été suivies. Les documents de travail étaient partagés dans un PowerPoint commun sur OneDrive, et chaque groupe avait son propre espace Discord.")
-            ],[ IMG(PRO1.macro,"Macro-planning propre à l'Excel de chaque groupe : sprints et milestones (Proof of Concept, Alpha, Bêta)") ]),
+            ],[ IMG(PRO1.macro,"Macro-planning propre à l'Excel de chaque groupe : sprints et milestones (Proof of Concept, Alpha, Bêta)") ],"dessous"),
             LIGNE([
               T("Tenir près de 1 400 statuts à jour demandait une attention de tous les instants, mais c'est ce qui rendait les retards et les kills visibles, sprint par sprint. Ce qui m'a manqué, ce sont des livrables de fin de sprint plus précis pour chaque spécialité : l'avancée était parfois difficile à vérifier concrètement. C'est la première chose que je changerais.")
-            ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ])
+            ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ],"dessous")
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
@@ -206,7 +209,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Chaque groupe vivait la crise à sa manière, il n'y avait donc pas de réponse unique. Pour l'un, j'ai tranché, en accord avec les référents des disciplines, sur le kill de plusieurs assets qui sortaient du cadre ou n'étaient plus prioritaires. Pour un autre, nous avons revu le Level Art et le shader atmosphérique."),
               T("Si c'était à refaire, je ferais créer dès le départ une petite scène de référence dans le moteur, avec un prop à la qualité visée, les textures souhaitées et les intentions de lumière et de caméra.")
-            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ])
+            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ],"dessous")
           ]),
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
@@ -304,7 +307,7 @@ const PROJECTS_FR = {
           BANDE("III","Le Market Analysis et le seuil de rentabilité",[
             LIGNE([
               T("Pour estimer les ventes potentielles sur Steam, j'ai commencé par l'analyse des concurrents du jeu, dont j'ai extrait des moyennes exploitables pour mes scénarios de projection. Pour disposer d'un large panel, j'ai retenu des jeux sortis sur 11 ans, de 2014 à 2025 : une période un peu large, qui gagnerait à être ramenée à 5 ans.")
-            ],[ IMG(EX1.market,"Analyse des concurrents : ventes, revenus estimés et moyennes") ]),
+            ],[ IMG(EX1.market,"Analyse des concurrents : ventes, revenus estimés et moyennes") ],"dessous"),
             LIGNE([
               T("Les données extraites m'ont permis de proposer deux scénarios, un optimiste et un plus conservateur, chacun décliné en trois niveaux de risque (haut, moyen, bas), afin d'envisager l'économie de la production avec le plus de lucidité possible.")
             ],[ CAROUSEL([[EX1.roiCons,"Estimation du ROI, scénario conservateur : 250 000 followers, en cas haut, moyen et bas"],[EX1.roiOpti,"Estimation du ROI, scénario optimiste : moyenne des ventes du Market Analysis, en cas haut, moyen et bas"]]) ]),
@@ -317,11 +320,11 @@ const PROJECTS_FR = {
             LIGNE([
               T("Enfin, cet exercice a mis à l'épreuve ma capacité à anticiper et à planifier : il ne s'agissait plus d'un projet de trois semaines, mais d'une production de 4 ans, de la production principale jusqu'à la sortie du DLC prévu."),
               T("Planifier des Epics et des Stories sur l'ensemble d'une production est un véritable défi, qui m'a poussé à prendre en compte tous les aspects du projet : les éléments essentiels, les niveaux, l'intégration de la QA, etc.")
-            ],[ IMG(EX1.epic,"Macro-planning : les Epics de la production") ]),
+            ],[ IMG(EX1.epic,"Macro-planning : les Epics de la production") ],"dessous"),
             LIGNE([
               T("J'ai complété ce travail par un sprint détaillé avec ses tâches : un sprint de préproduction destiné à préparer la Vertical Slice."),
               T("Cette partie a été exigeante : elle m'a obligé à sortir de la logique des sprints de nos workshops de 3 semaines, très contraints, pour raisonner pas à pas sur les besoins qui font passer d'un sprint à l'autre.")
-            ],[ IMG(EX1.sprint,"Sprint de préproduction : tâches, priorités et points de sprint") ])
+            ],[ IMG(EX1.sprint,"Sprint de préproduction : tâches, priorités et points de sprint") ],"dessous")
           ]),
           BANDE("V","Ce que j'en retiens",[
             LIGNE([
@@ -478,10 +481,10 @@ const PROJECTS_EN = {
             LIGNE([
               T("The school set its Waterfall milestones (Proof of Concept, Alpha, Beta), but each team needed sprints suited to its project. I had to connect the two, with tracking consistent enough to compare the four groups and spot delays early."),
               T("I built this tracking in Excel, on two levels. For each group, a macro-planning sets out the sprints and the school's milestones. A micro-planning then links each task to a sprint, a priority, a difficulty and a status: in total, **1,387 tasks** were tracked. Working documents were shared in a common PowerPoint on OneDrive, and each group had its own Discord space.")
-            ],[ IMG(PRO1.macro,"Each group's own Excel macro-planning: sprints and milestones (Proof of Concept, Alpha, Beta)") ]),
+            ],[ IMG(PRO1.macro,"Each group's own Excel macro-planning: sprints and milestones (Proof of Concept, Alpha, Beta)") ],"dessous"),
             LIGNE([
               T("Keeping nearly 1,400 statuses up to date took constant attention, but it is what made delays and kills visible, sprint by sprint. What I lacked were more precise end-of-sprint deliverables for each discipline: progress was sometimes hard to check concretely. That is the first thing I would change.")
-            ],[ IMG(PRO1.micro,"Excerpt from one group's micro-planning: tasks, sprints, priorities, difficulties and statuses") ])
+            ],[ IMG(PRO1.micro,"Excerpt from one group's micro-planning: tasks, sprints, priorities, difficulties and statuses") ],"dessous")
           ]),
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
@@ -491,7 +494,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("Each group experienced the crisis in its own way, so there was no single answer. For one, I decided, in agreement with the discipline leads, to kill several assets that were off-brief or no longer a priority. For another, we reworked the Level Art and the atmospheric shader."),
               T("If I had to do it again, I would have a small reference scene built in the engine from the start, with a prop at the target quality, the desired textures and the lighting and camera intentions.")
-            ],[ IMG(PRO1.kill,"Removed tasks (kills) in one group's tracking") ])
+            ],[ IMG(PRO1.kill,"Removed tasks (kills) in one group's tracking") ],"dessous")
           ]),
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
@@ -588,7 +591,7 @@ const PROJECTS_EN = {
           BANDE("III","The Market Analysis and the break-even point",[
             LIGNE([
               T("To estimate potential sales on Steam, I started by analysing the game's competitors, extracting usable averages for my projection scenarios. To build a wide panel, I selected games released over 11 years, from 2014 to 2025: a rather wide period that would benefit from being narrowed to 5 years.")
-            ],[ IMG(EX1.market,"Competitor analysis: sales, estimated revenue and averages") ]),
+            ],[ IMG(EX1.market,"Competitor analysis: sales, estimated revenue and averages") ],"dessous"),
             LIGNE([
               T("The extracted data allowed me to propose two scenarios, an optimistic one and a more conservative one, each broken down into three risk levels (high, average, low), so that the production's economics could be considered as clearly as possible.")
             ],[ CAROUSEL([[EX1.roiCons,"ROI estimate, conservative scenario: 250,000 followers, in high, average and low cases"],[EX1.roiOpti,"ROI estimate, optimistic scenario: average sales from the Market Analysis, in high, average and low cases"]]) ]),
@@ -601,11 +604,11 @@ const PROJECTS_EN = {
             LIGNE([
               T("Finally, this exercise tested my ability to anticipate and plan: it was no longer a three-week project but a 4-year production, from the main production through to the release of the planned DLC."),
               T("Planning Epics and Stories across an entire production is a real challenge, which pushed me to take every aspect of the project into account: the essential elements, the levels, QA integration, and so on.")
-            ],[ IMG(EX1.epic,"Macro-planning: the production's Epics") ]),
+            ],[ IMG(EX1.epic,"Macro-planning: the production's Epics") ],"dessous"),
             LIGNE([
               T("I completed this work with a detailed sprint and its tasks: a pre-production sprint aimed at preparing the Vertical Slice."),
               T("This part was demanding: it forced me out of the logic of the sprints in our very constrained 3-week workshops, to reason step by step about the needs that lead from one sprint to the next.")
-            ],[ IMG(EX1.sprint,"Pre-production sprint: tasks, priorities and sprint points") ])
+            ],[ IMG(EX1.sprint,"Pre-production sprint: tasks, priorities and sprint points") ],"dessous")
           ]),
           BANDE("V","What I take away",[
             LIGNE([

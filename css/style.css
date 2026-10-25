@@ -3653,3 +3653,6 @@ html[data-theme="dark"] body.page-home main::before { opacity: .07; }
 html body .brand .brole { display: block; margin-top: .3rem; font: 500 .82rem/1.2 var(--sans); letter-spacing: .02em; color: #E8ECF2; }
 /* Catégorie des exercices au-dessus du titre de la page */
 html body .project h1 .h-cat { display: block; margin-bottom: .5rem; font: 600 clamp(.85rem,1.1vw,1rem)/1.3 var(--sans); letter-spacing: .02em; color: var(--gold-d); }
+/* Inter hébergée sur le site (plus de connexion à Google Fonts) · licence : fonts/OFL-Inter.txt */
+@font-face { font-family: "Inter"; src: url("../fonts/Inter.woff") format("woff"); font-weight: 400 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/Inter-Italic.woff") format("woff"); font-weight: 400; font-style: italic; font-display: swap; }

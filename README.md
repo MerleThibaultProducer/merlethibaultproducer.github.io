@@ -41,3 +41,9 @@ ou si vous ajoutez un formulaire ou des statistiques de visite.
 
 Le code et le contenu de ce dépôt ne sont pas placés sous licence libre. Les visuels issus
 de projets d'équipe, de studios ou d'écoles restent la propriété de leurs ayants droit respectifs.
+
+## Sécurité
+
+- `index.html` déclare une politique de sécurité du contenu (balise `Content-Security-Policy`) : le site n'exécute que ses propres scripts et ne charge que ses propres polices et images.
+- Toutes les polices sont hébergées dans `fonts/` (Inter et Bricolage Grotesque, licence OFL) : aucune connexion à un service extérieur.
+- Si un jour vous ajoutez une ressource externe (vidéo intégrée, police, script), il faudra l'autoriser dans cette balise, sinon le navigateur la bloquera.

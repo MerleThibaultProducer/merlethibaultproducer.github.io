@@ -35,15 +35,12 @@ let SITE = SITE_FR;
 
 /* ---------- AIDE-MÉMOIRE : les blocs de contenu d'un projet ----------
    T("texte")                      paragraphe (séparez plusieurs paragraphes par une ligne vide)
-   H("sous-titre")                 intertitre
    IMG("image", "légende")         image pleine largeur (légende facultative)
-   GALERIE(["img1","img2"], "lg")  images en vignettes, deux par ligne
-   LISTE(["point 1","point 2"])    liste à puces
    CITATION("texte", "auteur")     citation
    LIEN("libellé", "https://...")  bouton-lien
    Les blocs s'affichent dans l'ordre où vous les écrivez.
 
-   MISE EN FORME DU TEXTE (dans T, LISTE, etc.) :
+   MISE EN FORME DU TEXTE (dans T, FICHE, etc.) :
    **mot**  → en gras          ==mot==  → en couleur (doré)
 
    VIGNETTE : carte:"texte court" s'affiche sous la vignette (sinon desc). La ligne d'infos reprend les 2 premières infos.
@@ -63,8 +60,7 @@ let SITE = SITE_FR;
    bonne liste (pro, perso ou exo) et changez les textes. C'est tout : la page
    de détails, le bouton et la navigation gauche/droite se créent tout seuls.
    L'ordre dans la liste = l'ordre sur le site.                              */
-const T=text=>({k:"t",text}), H=text=>({k:"h",text}), IMG=(src,cap="",cls="")=>({k:"img",src,cap,cls}),
-      GALERIE=(srcs,cap="")=>({k:"gal",srcs,cap}), LISTE=items=>({k:"ul",items}),
+const T=text=>({k:"t",text}), IMG=(src,cap="",cls="")=>({k:"img",src,cap,cls}),
       CITATION=(text,by="")=>({k:"q",text,by}), LIEN=(label,url)=>({k:"a",label,url});
 const BANDE=(num,titre,lignes)=>({k:"band",num,titre,lignes}), LIGNE=(t,m=[],pos="")=>({t,m,pos}),
       CHIFFRES=items=>({k:"stats",items}), FICHE=(titre,items)=>({k:"fiche",titre,items}),
@@ -360,9 +356,8 @@ const PROJECTS_FR = {
         ] })
   ],
   exo: [
-        P({ survol:{ items:["Producer","Jeu AA · 30 à 50 personnes","48 mois de production","Excel · Coda · ClickUp"] }, cat:"Gestion de production", title:"Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes ; bg/fit : image affichée en entier sur fond uni
+        P({ survol:{ items:["Producer","Jeu AA · 30 à 50 personnes","48 mois de production","Excel · Coda · ClickUp"] }, cat:"Gestion de production", title:"Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes
         img:"images/wyrdfall-vignette.jpg",
-        cimg:"images/wyrdfall-couverture.jpg", cbg:"#7dad9c",
         infos:{ "Rôle":"Producer", "Projet":"AA · 30 à 50 personnes", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
         apercu:"Cet exercice de production portait sur Wyrdfall, un jeu AA fictif. Je ne présente ici que la partie gestion de production, où j'ai tenu le rôle de producer, de la composition de l'équipe jusqu'au seuil de rentabilité. Le résultat : un budget de 9 M€ sur 48 mois, un seuil atteint vers 451 000 ventes et trois scénarios de ROI, le tout dans un fichier Excel qui se met à jour en un clic.",
         contenu:[
@@ -704,7 +699,7 @@ const PROJECTS_EN = {
   ],
   exo: [
     P({ survol:{ items:["Producer","AA game · 30 to 50 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", nocover:true, desc:"Production dossier for a 48-month AA game: team, budget, planning, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
-        img:PROJECTS_FR.exo[0].img, cimg:PROJECTS_FR.exo[0].cimg, cbg:"#7dad9c",
+        img:PROJECTS_FR.exo[0].img,
         infos:{ "Role":"Producer", "Project":"AA · 30 to 50 people", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
         apercu:"This production exercise was about Wyrdfall, a fictional AA game. I only show the production management part here, where I acted as producer, from building the team to the break-even point. The result: a €9M budget over 48 months, a break-even point at around 451,000 sales and three ROI scenarios, all in an Excel file that updates in one click.",
         contenu:[

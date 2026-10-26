@@ -76,8 +76,8 @@ const KEYART=items=>({k:"keyart",items});
 const P = o => o;
 
 const PRO1 = { thumb:"images/fin-annee-2026-thumb.jpg", macro:"images/fin-annee-2026-macro.jpg", micro:"images/fin-annee-2026-micro.jpg", kill:"images/fin-annee-2026-kill.jpg" };
-const NG = {thumb:"images/nigeria-thumb.jpg", okada:"images/nigeria-okada.jpg", jagun:"images/nigeria-jagun.jpg", chicken:"images/nigeria-chicken.jpg", iwaju:"images/nigeria-iwaju.jpg", aurion:"images/nigeria-aurion.jpg", abena:"images/nigeria-abena.jpg", hp:"images/nigeria-hp.jpg"};
-const CT = {thumb:"images/castalie-thumb.jpg",pitch:"images/castalie-pitch.jpg",info:"images/castalie-info.jpg",one:"images/castalie-one.jpg",pillars:"images/castalie-pillars.jpg",notdo:"images/castalie-notdo.jpg",loop:"images/castalie-loop.jpg",manage:"images/castalie-manage.jpg",explore:"images/castalie-explore.jpg",res:"images/castalie-res.jpg",acq:"images/castalie-acq.jpg",fight:"images/castalie-fight.jpg",craft:"images/castalie-craft.jpg",lvl:"images/castalie-lvl.jpg",trade:"images/castalie-trade.jpg",realm:"images/castalie-realm.jpg",typhon:"images/castalie-typhon.jpg",sealed:"images/castalie-sealed.jpg",castalie:"images/castalie-castalie.jpg",moodboard:"images/castalie-moodboard.jpg",ld:"images/castalie-ld.jpg",mol:"images/castalie-mol.jpg",pacing:"images/castalie-pacing.jpg"};
+const NG = {thumb:"images/nigeria-thumb.jpg", okada:"images/nigeria-okada.jpg", jagun:"images/nigeria-jagun.jpg", chicken:"images/nigeria-chicken.jpg", iwaju:"images/nigeria-iwaju.jpg", aurion:"images/nigeria-aurion.jpg"};
+const CT = {thumb:"images/castalie-thumb.jpg",pitch:"images/castalie-pitch.jpg",info:"images/castalie-info.jpg",one:"images/castalie-one.jpg",pillars:"images/castalie-pillars.jpg",notdo:"images/castalie-notdo.jpg",loop:"images/castalie-loop.jpg",realm:"images/castalie-realm.jpg",typhon:"images/castalie-typhon.jpg",sealed:"images/castalie-sealed.jpg",castalie:"images/castalie-castalie.jpg",moodboard:"images/castalie-moodboard.jpg",ld:"images/castalie-ld.jpg",mol:"images/castalie-mol.jpg",pacing:"images/castalie-pacing.jpg"};
 const EX1 = { nav:"images/wyrdfall-nav.jpg", market:"images/wyrdfall-market.jpg", roiCons:"images/wyrdfall-roi-conservateur.jpg", roiOpti:"images/wyrdfall-roi-optimiste.jpg", budget:"images/wyrdfall-budget.jpg", epic:"images/wyrdfall-epic.jpg", sprint:"images/wyrdfall-sprint.jpg" };
 
 /* Équipes des projets de fin d'année (mai-juin 2026) : une diapositive du carrousel par groupe.
@@ -164,14 +164,6 @@ const PROJECTS_FR = {
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 13 à 14 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes","Genres variés","4 semaines"] },
         apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines, et j'en étais le producer, en lien avec les intervenants qui jouaient le rôle d'éditeurs. J'ai adapté une méthode Agile aux jalons Waterfall de l'école, mis en place un suivi Excel pour chaque groupe et fait le lien entre l'encadrement et les équipes au quotidien. Après une crise de direction artistique en deuxième semaine, j'ai organisé deux sessions de playtest communes aux quatre équipes, puis redéfini les priorités avec chacune. Les quatre jeux ont été livrés au jury, avec 93 % des 1 387 tâches terminées.",
-        resume:{ contexte:"Projet de fin d'année à Game Sup, réalisé par toute la promotion en 4 semaines.",
-                 role:"Producer des 4 équipes, en lien avec les intervenants dans le rôle d'éditeurs.",
-                 resultat:"4 jeux livrés au jury ; 1 387 tâches suivies, dont 93 % terminées, malgré une crise de direction artistique surmontée en deuxième semaine." },
-        decisions:[ "Une méthode Agile adaptée à 4 projets menés en parallèle, dans le cadre des milestones Waterfall de l'école.",
-                    "Un macro-planning et un micro-planning Excel par groupe, soit 1 387 tâches suivies.",
-                    "Le lien entre l'encadrement et les équipes, des milestones aux difficultés du quotidien.",
-                    "Deux sessions de playtest communes aux 4 équipes, calées sur le planning des autres promotions.",
-                    "De nouvelles priorités fixées avec chaque équipe après les retours de playtest." ],
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
@@ -281,9 +273,6 @@ const PROJECTS_FR = {
         cimg:"images/wyrdfall-couverture.jpg", cbg:"#7dad9c",
         infos:{ "Rôle":"Producer", "Projet":"AA · 30 à 50 personnes", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
         apercu:"Cet exercice de production portait sur Wyrdfall, un jeu AA fictif. Je ne présente ici que la partie gestion de production, où j'ai tenu le rôle de producer, de la composition de l'équipe jusqu'au seuil de rentabilité. Le résultat : un budget de 9 M€ sur 48 mois, un seuil atteint vers 451 000 ventes et trois scénarios de ROI, le tout dans un fichier Excel qui se met à jour en un clic.",
-        resume:{ contexte:"Exercice de production à Game Sup autour d'un jeu AA fictif. Seule la partie gestion de production est présentée ici.",
-                 role:"Producer du projet : de la composition de l'équipe au seuil de rentabilité.",
-                 resultat:"Un budget de 9 M€ sur 48 mois, un seuil de rentabilité à environ 451 000 ventes et trois scénarios de ROI, dans un fichier Excel modulable en un clic." },
         contenu:[
           BANDE("I","Le sujet et mon rôle",[
             LIGNE([
@@ -338,9 +327,6 @@ const PROJECTS_FR = {
         img:CT.thumb,
         infos:{ "Rôle":"Auteur du GDD", "Cadre":"Game Design · Game Sup", "Date":"Avril 2025", "Temps de travail":"90 h", "Livrable":"Game Design Document · 67 pages" },
         apercu:"Pour cet exercice de Game Design, il fallait concevoir un jeu à partir d'une créature mythique d'un pays imposé, et la Grèce m'a été attribuée. J'ai écrit le Game Design Document de Castalie's Tears, un RPG au tour par tour, du concept jusqu'à un niveau complet, en veillant à ce que chaque mécanique ait un sens dans le récit. Ce travail me sert aujourd'hui en production : je comprends mieux ce que l'on demande aux équipes de design.",
-        resume:{ contexte:"Exercice de Game Design à Game Sup (avril 2025) : concevoir un jeu à partir d'une créature mythique d'un pays imposé, la Grèce.",
-                 role:"Auteur du Game Design Document : concept, systèmes, univers, personnage et niveau.",
-                 resultat:"Un RPG au tour par tour où chaque mécanique trouve son incarnation dans le récit, et une connaissance concrète du travail de design, utile pour dialoguer avec les équipes en production." },
         contenu:[
           BANDE("I","L'idée et le concept",[
             LIGNE([
@@ -388,9 +374,6 @@ const PROJECTS_FR = {
         img:NG.thumb,
         infos:{ "Rôle":"Auteur de l'étude", "Cadre":"Culture vidéoludique · Game Sup", "Date":"Janvier 2025 · mise à jour 2025", "Livrable":"Présentation PowerPoint · 30 diapositives" },
         apercu:"Pour cet exercice de culture vidéoludique, j'ai étudié le marché du jeu vidéo en Afrique à travers le cas du Nigéria, en recoupant et en critiquant mes sources. J'y ai trouvé un modèle mobile et local, porté par une population jeune mais freiné par les infrastructures. J'en retiens une leçon de production : le budget, le calendrier, la plateforme et le mode de paiement se décident ensemble.",
-        resume:{ contexte:"Exercice de culture vidéoludique à Game Sup (janvier 2025) : analyser le marché du jeu vidéo en Afrique.",
-                 role:"Auteur de l'étude : recherche documentaire, recoupement et critique des sources.",
-                 resultat:"Un modèle africain mobile et local, porté par une population jeune mais freiné par les infrastructures, et une leçon de production : budget, calendrier, plateforme et paiement se décident ensemble." },
         contenu:[
           BANDE("I","Problématique et angle d'étude",[
             LIGNE([
@@ -448,14 +431,6 @@ const PROJECTS_EN = {
         infos:{ "Role":"Producer", "Team":"4 teams · 13 to 14 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 Teams","Varied Game Genres","4 Weeks"] },
         apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks, and I was their producer, working with the instructors who acted as publishers. I adapted an Agile method to the school's Waterfall milestones, set up Excel tracking for each group and kept the supervisors and teams connected day to day. After an art direction crisis in the second week, I organised two playtest sessions for all four teams, then reset priorities with each of them. All four games were delivered to the jury, with 93% of the 1,387 tasks completed.",
-        resume:{ contexte:"Game Sup end-of-year project, carried out by the whole class in 4 weeks.",
-                 role:"Producer for the 4 teams, working with the instructors acting as publishers.",
-                 resultat:"4 games delivered to the jury; 1,387 tasks tracked, 93% completed, despite an art-direction crisis overcome in the second week." },
-        decisions:[ "An Agile method adapted to 4 projects run in parallel, within the school's Waterfall milestones.",
-                    "A macro-planning and a micro-planning in Excel for each group, 1,387 tasks tracked.",
-                    "The link between the supervisors and the teams, from milestones to day-to-day issues.",
-                    "Two playtest sessions shared by the 4 teams, fitted to the other classes' schedules.",
-                    "New priorities set with each team after playtest feedback." ],
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
@@ -564,9 +539,6 @@ const PROJECTS_EN = {
         img:PROJECTS_FR.exo[0].img, cimg:PROJECTS_FR.exo[0].cimg, cbg:"#7dad9c",
         infos:{ "Role":"Producer", "Project":"AA · 30 to 50 people", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
         apercu:"This production exercise was about Wyrdfall, a fictional AA game. I only show the production management part here, where I acted as producer, from building the team to the break-even point. The result: a €9M budget over 48 months, a break-even point at around 451,000 sales and three ROI scenarios, all in an Excel file that updates in one click.",
-        resume:{ contexte:"Game Sup production exercise around a fictional AA game. Only the production management part is shown here.",
-                 role:"Producer of the project: from team composition to break-even point.",
-                 resultat:"A €9M budget over 48 months, a break-even point at about 451,000 sales and three ROI scenarios, in an Excel file that updates in one click." },
         contenu:[
           BANDE("I","The brief and my role",[
             LIGNE([
@@ -621,9 +593,6 @@ const PROJECTS_EN = {
         img:CT.thumb,
         infos:{ "Role":"Author of the GDD", "Context":"Game Design · Game Sup", "Date":"April 2025", "Workload":"90 hours", "Deliverable":"Game Design Document · 67 pages" },
         apercu:"For this Game Design exercise, we had to design a game based on a mythical creature from an assigned country, and I was given Greece. I wrote the Game Design Document for Castalie's Tears, a turn-based RPG, from the concept to a complete level, making sure every mechanic meant something in the story. This work helps me in production today: I better understand what is being asked of design teams.",
-        resume:{ contexte:"Game Design exercise at Game Sup (April 2025): design a game from a mythical creature of an assigned country, Greece.",
-                 role:"Author of the Game Design Document: concept, systems, world, character and level.",
-                 resultat:"A turn-based RPG where every mechanic is embodied in the story, and hands-on knowledge of design work, useful for working with design teams in production." },
         contenu:[
           BANDE("I","The idea and the concept",[
             LIGNE([
@@ -671,9 +640,6 @@ const PROJECTS_EN = {
         img:NG.thumb,
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025 · updated 2025", "Deliverable":"PowerPoint presentation · 30 slides" },
         apercu:"For this video game culture exercise, I studied the African video game market through the case of Nigeria, cross-checking and critically reviewing my sources. I found a mobile, local model, driven by a young population but held back by infrastructure. My production takeaway: budget, schedule, platform and payment method are decided together.",
-        resume:{ contexte:"Video game culture exercise at Game Sup (January 2025): analyse the video game market in Africa.",
-                 role:"Author of the study: desk research, cross-checking and critical review of sources.",
-                 resultat:"An African model that is mobile and local, driven by a young population but held back by infrastructure, and a production lesson: budget, schedule, platform and payment are decided together." },
         contenu:[
           BANDE("I","Research question and approach",[
             LIGNE([

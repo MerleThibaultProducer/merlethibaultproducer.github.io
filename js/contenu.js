@@ -334,7 +334,7 @@ const PROJECTS_FR = {
           BANDE("V","Donner à chacun la bonne visibilité",[
             LIGNE([
               T("Dans Jira, **un board n'est qu'une vue posée sur un filtre**. J'ai donc pensé les boards par public : un board Scrum pour chaque squad, un board Kanban pour la QA, un board Kanban pour les livraisons des prestataires, qui arrivent par lots et ne suivent pas le rythme des sprints, et un board Production qui voit tout le projet mais sur lequel on ne lance jamais de sprint.")
-            ],[ CAROUSEL([["images/jira-board-production.png","Production : la vue d'ensemble, sur laquelle on ne lance jamais de sprint"],["images/jira-board-gameplay.png","Gameplay : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-world.png","World : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-qa.png","QA-Bugs : le flux des bugs, avec une ligne réservée aux bloquants"],["images/jira-board-vendors.png","Vendors : les livraisons attendues de chaque prestataire"]]) ]),
+            ],[ CAROUSEL([["images/jira-board-production.png","Production : la vue d'ensemble, sur laquelle on ne lance jamais de sprint"],["images/jira-board-gameplay.png","Gameplay : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-world.png","World : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-qa.png","QA-Bugs : les bugs rangés par sévérité, une ligne par niveau"],["images/jira-board-vendors.png","Vendors : les livraisons attendues de chaque prestataire"]]) ]),
             LIGNE([
               T("Sur le board QA, chaque colonne a une **limite de travail en cours** : pas plus de dix bugs en tri, cinq en correction et huit en attente de vérification. Quand une colonne déborde, c'est le signal qu'il faut arrêter d'ouvrir des bugs pour finir ceux qui sont commencés.")
             ],[ IMG("images/jira-colonnes-qa.png","Les colonnes du board QA-Bugs, avec leurs limites de travail en cours") ],"dessous"),
@@ -343,7 +343,12 @@ const PROJECTS_FR = {
             ],[ IMG("images/jira-filtres.png","Le filtre du périmètre de la Vertical Slice, et la liste des filtres enregistrés") ],"dessous"),
             LIGNE([
               T("Enfin, les deux **workflows** traduisent des choix de qualité. Une Story passe par une revue puis une vérification QA avant d'être terminée. Un bug passe par un tri, doit recevoir une résolution pour être fermé, et peut être rouvert : c'est ce qui permet de compter les correctifs qui ne tiennent pas.")
-            ],[ CAROUSEL([["images/jira-workflow-bugs.png","Le workflow des bugs : tri, correction, vérification et réouverture"],["images/jira-workflow-dev.png","Le workflow des Stories et des Tasks : revue, puis vérification QA"]]) ])
+            ],[ CAROUSEL([["images/jira-workflow-bugs.png","Le workflow des bugs : tri, correction, vérification et réouverture"],["images/jira-workflow-dev.png","Le workflow des Stories et des Tasks : revue, puis vérification QA"]]) ]),
+            LIGNE([
+              T("J'ai ensuite repensé le **ticket de bug** lui-même. Mon premier modèle tenait dans la description ; je l'ai remplacé par des champs dédiés : le build concerné, les étapes de reproduction, le résultat attendu et le résultat obtenu. Surtout, j'ai séparé ce qui se **mesure** de ce qui se **juge**. Le nombre d'essais et d'occurrences donne un taux de reproduction, la **sévérité** dit à quel point le jeu est cassé, et la **priorité** dit dans quel ordre on corrige. Un bug peut être grave mais rare, ou bénin mais permanent : ces informations ne doivent pas se confondre."),
+              T("C'est en testant ce modèle sur un vrai cas que j'ai trouvé ses défauts. Sur un bloquant du sprint Gameplay, la probabilité indiquait « Always » alors que le bug ne se reproduisait que 8 fois sur 10. Le taux de reproduction est donc devenu la référence, et la probabilité se déduit de lui. J'ai aussi distingué la version où le bug a été vu de celle où il doit être corrigé, et rattaché chaque bug à l'Epic du système qu'il touche, pour qu'il compte dans son avancement."),
+              T("Sur le board QA, les **swimlanes** rangent désormais les bugs par sévérité, et chaque ligne est une requête JQL : les bloquants en haut, puis les bugs modérés et les bugs mineurs. La carte affiche la priorité, puisque la ligne donne déjà la sévérité. En un coup d'œil, on voit ce qui casse le jeu et où en est sa correction.")
+            ],[ IMG("images/jira-ticket-bug.png","Un bug bloquant après ces itérations : taux de reproduction, sévérité, priorité, versions et Story bloquée") ])
           ]),
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
@@ -357,7 +362,7 @@ const PROJECTS_FR = {
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
               T("Ce projet m'a surtout appris à penser Jira comme une base de données plutôt que comme un tableau de tâches : une fois les tickets bien rangés, chaque équipe, chaque jalon et chaque contrôle qualité n'est qu'une requête. Il m'a aussi montré que l'outil ne sert qu'à rendre visibles les vraies décisions du producer : qui est saturé, ce qui dépend de l'extérieur et ce qu'on accepte de reporter."),
-              T("Pour comparer, j'ai transposé cette organisation dans **Coda**. Certains calculs y sont plus simples, mais Coda ne garde pas l'historique des statuts, qu'il faut donc enregistrer soi-même. Le bon outil dépend de ce que l'équipe a besoin de suivre."),
+              T("Pour comparer, j'ai transposé cette organisation dans **Coda**. Certains calculs y sont plus simples, mais ses formules ne peuvent pas lire l'historique des statuts : il faut donc enregistrer soi-même les dates utiles. Le bon outil dépend de ce que l'équipe a besoin de suivre."),
               T("[À compléter après le sprint : ce que je changerais sur un vrai projet.]")
             ])
           ])
@@ -690,7 +695,7 @@ const PROJECTS_EN = {
           BANDE("V","Giving everyone the right visibility",[
             LIGNE([
               T("In Jira, **a board is just a view on top of a filter**. So I designed the boards by audience: a Scrum board for each squad, a Kanban board for QA, a Kanban board for vendor deliveries, which arrive in batches and do not follow the sprint rhythm, and a Production board that sees the whole project but on which no sprint is ever started.")
-            ],[ CAROUSEL([["images/jira-board-production.png","Production: the overview, on which no sprint is ever started"],["images/jira-board-gameplay.png","Gameplay: the squad's current sprint, grouped by Epic"],["images/jira-board-world.png","World: the squad's current sprint, grouped by Epic"],["images/jira-board-qa.png","QA-Bugs: the bug flow, with a lane reserved for blockers"],["images/jira-board-vendors.png","Vendors: the deliveries expected from each vendor"]]) ]),
+            ],[ CAROUSEL([["images/jira-board-production.png","Production: the overview, on which no sprint is ever started"],["images/jira-board-gameplay.png","Gameplay: the squad's current sprint, grouped by Epic"],["images/jira-board-world.png","World: the squad's current sprint, grouped by Epic"],["images/jira-board-qa.png","QA-Bugs: bugs sorted by severity, one lane per level"],["images/jira-board-vendors.png","Vendors: the deliveries expected from each vendor"]]) ]),
             LIGNE([
               T("On the QA board, each column has a **work-in-progress limit**: no more than ten bugs in triage, five being fixed and eight awaiting verification. When a column overflows, it is the signal to stop opening bugs and finish the ones already started.")
             ],[ IMG("images/jira-colonnes-qa.png","The QA-Bugs board columns, with their work-in-progress limits") ],"dessous"),
@@ -699,7 +704,12 @@ const PROJECTS_EN = {
             ],[ IMG("images/jira-filtres.png","The Vertical Slice scope filter, and the list of saved filters") ],"dessous"),
             LIGNE([
               T("Finally, the two **workflows** reflect quality choices. A Story goes through a review and then a QA check before it is done. A bug goes through triage, needs a resolution to be closed, and can be reopened: this is what makes it possible to count fixes that do not hold.")
-            ],[ CAROUSEL([["images/jira-workflow-bugs.png","The bug workflow: triage, fix, verification and reopening"],["images/jira-workflow-dev.png","The Story and Task workflow: review, then QA check"]]) ])
+            ],[ CAROUSEL([["images/jira-workflow-bugs.png","The bug workflow: triage, fix, verification and reopening"],["images/jira-workflow-dev.png","The Story and Task workflow: review, then QA check"]]) ]),
+            LIGNE([
+              T("I then redesigned the **bug ticket** itself. My first template lived in the description; I replaced it with dedicated fields: the build, the steps to reproduce, the expected result and the actual result. Above all, I separated what is **measured** from what is **judged**. The number of attempts and occurrences gives a repro rate, the **severity** says how broken the game is, and the **priority** says in which order we fix. A bug can be severe but rare, or minor but permanent: these pieces of information must not be mixed up."),
+              T("Testing this template on a real case is what revealed its flaws. On a blocker in the Gameplay sprint, the likelihood said \"Always\" while the bug only reproduced 8 times out of 10. The repro rate therefore became the reference, and the likelihood is derived from it. I also distinguished the version where the bug was found from the one where it must be fixed, and linked each bug to the Epic of the system it affects, so it counts in that Epic's progress."),
+              T("On the QA board, **swimlanes** now sort bugs by severity, each lane being a JQL query: blockers at the top, then moderate and trivial bugs. The card shows the priority, since the lane already gives the severity. At a glance, you can see what breaks the game and how far its fix has gone.")
+            ],[ IMG("images/jira-ticket-bug.png","A blocker after these iterations: repro rate, severity, priority, versions and the blocked Story") ])
           ]),
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
@@ -713,7 +723,7 @@ const PROJECTS_EN = {
           BANDE("VII","What I take away",[
             LIGNE([
               T("Above all, this project taught me to think of Jira as a database rather than a task board: once the work items are well sorted, every team, milestone and quality check is just a query. It also showed me that the tool is only there to make the producer's real decisions visible: who is overloaded, what depends on outside partners and what we agree to postpone."),
-              T("To compare, I transposed this organisation into **Coda**. Some calculations are simpler there, but Coda does not keep the status history, which you have to record yourself. The right tool depends on what the team needs to track."),
+              T("To compare, I transposed this organisation into **Coda**. Some calculations are simpler there, but its formulas cannot read the status history, so you have to record the useful dates yourself. The right tool depends on what the team needs to track."),
               T("[To complete after the sprint: what I would change on a real project.]")
             ])
           ])

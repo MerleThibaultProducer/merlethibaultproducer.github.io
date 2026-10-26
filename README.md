@@ -26,7 +26,7 @@ cv/cv-apercu-v5.jpg               aperçu du CV affiché sur la page Infos
 - **Le CV** : ajoutez le nouveau PDF et son aperçu sous un **nouveau nom** (ex. `_v6`), puis mettez à jour `image` et `pdf` dans `CV_VISUAL` (js/contenu.js). Un nouveau nom évite que les navigateurs gardent l'ancienne version en cache. Le fichier téléchargé garde le nom défini dans `filename`.
 - **Un projet en cours** : retirez `wip:true` pour le rendre visible.
 
-Chaque projet peut avoir un résumé (`resume`) et un encadré « Mon rôle et mes décisions » (`decisions`).
+Un projet sans présentation (`apercu`) peut avoir un résumé (`resume`) et un encadré « Mon rôle et mes décisions » (`decisions`) : ils ne s'affichent pas quand `apercu` est rempli.
 L'aide-mémoire des blocs de contenu (texte, image, bandes, tableaux…) se trouve en tête de `js/contenu.js`.
 
 ## Mentions légales

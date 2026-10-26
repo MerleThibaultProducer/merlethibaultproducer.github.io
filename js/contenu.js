@@ -10,7 +10,7 @@ const SITE_FR = {
   accueilTitre: "Junior Associate Producer, formé à Game Sup",   // grand titre de la page d'accueil
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
-    "Je m'appelle Thibault et je suis en dernière année à Game Sup. Sur quatre productions d'école, j'ai eu l'occasion de planifier et de suivre des projets avec jusqu'à quatre équipes en simultané, des premiers jalons jusqu'aux playtests. J'écoute chacun, j'adapte les méthodes de production à chaque équipe et je m'assure que la communication est claire pour que tout le monde avance ensemble.",
+    "Je m'appelle Thibault et je suis en dernière année à Game Sup. Sur quatre productions d'école, j'ai planifié et suivi des projets avec jusqu'à quatre équipes en même temps, des premiers jalons jusqu'aux playtests. J'adapte la méthode de production à chaque équipe après l'avoir écoutée, et je veille à ce que chacun sache où en est le projet.",
     "Un master d'anthropologie et cinq ans d'enseignement m'ont appris à expliquer et à transmettre. Je recherche aujourd'hui un stage de fin d'études en production à partir de janvier 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
@@ -23,7 +23,7 @@ const SITE_FR = {
 const SITE_EN = {...SITE_FR,
   accueilTitre: "Junior Associate Producer, trained at Game Sup",
   intro: [
-    "My name is Thibault and I'm in my final year at Game Sup. Across four school productions, I have planned and followed projects with up to four teams in parallel, from the first milestones to the playtests. I listen to everyone, adapt production methods to each team, and make sure communication stays clear so everyone moves forward together.",
+    "My name is Thibault and I'm in my final year at Game Sup. Across four school productions, I have planned and tracked projects with up to four teams at once, from the first milestones to the playtests. I adapt the production method to each team after listening to it, and I make sure everyone knows where the project stands.",
     "A master's in anthropology and five years of teaching taught me to explain and pass on knowledge. I am now looking for an end-of-studies production internship starting in January 2027, anywhere in France or remote."
   ],
   legal: [
@@ -167,16 +167,15 @@ const PROJECTS_FR = {
         resume:{ contexte:"Projet de fin d'année à Game Sup, réalisé par toute la promotion en 4 semaines.",
                  role:"Producer des 4 équipes, en lien avec les intervenants dans le rôle d'éditeurs.",
                  resultat:"4 jeux livrés au jury ; 1 387 tâches suivies, dont 93 % terminées, malgré une crise de direction artistique surmontée en deuxième semaine." },
-        decisions:[ "**Méthode Agile à l'échelle** : adaptée à 4 projets menés en parallèle, dans le cadre des milestones Waterfall de l'école.",
-                    "**Outils de suivi** : un macro-planning et un micro-planning Excel par groupe, soit 1 387 tâches suivies.",
-                    "**Alignement** entre l'encadrement et les équipes, des milestones aux difficultés du quotidien.",
-                    "**Deux sessions de playtest** communes aux 4 équipes, calées sur le planning des autres promotions.",
-                    "**Priorités redéfinies** avec chaque équipe après les retours de playtest." ],
+        decisions:[ "Une méthode Agile adaptée à 4 projets menés en parallèle, dans le cadre des milestones Waterfall de l'école.",
+                    "Un macro-planning et un micro-planning Excel par groupe, soit 1 387 tâches suivies.",
+                    "Le lien entre l'encadrement et les équipes, des milestones aux difficultés du quotidien.",
+                    "Deux sessions de playtest communes aux 4 équipes, calées sur le planning des autres promotions.",
+                    "De nouvelles priorités fixées avec chaque équipe après les retours de playtest." ],
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("Comme chaque fin d'année à Game Sup, les promotions travaillent en équipe sur un projet d'environ 3 à 4 semaines. Cette édition se distinguait par plusieurs phases de conception et de sélection des propositions en amont, qui ont abouti à 4 sujets aux genres variés."),
-              T("Pour tenir ce cadre, j'ai organisé mon travail en quatre macro-tâches, que je présente ci-dessous.")
+              T("Comme chaque fin d'année à Game Sup, les promotions travaillent en équipe sur un projet d'environ 3 à 4 semaines. Cette édition commençait par plusieurs phases de conception et de sélection des propositions, qui ont abouti à 4 sujets aux genres variés.")
             ],[ FICHE("Les contraintes",["Quatre jeux à produire en même temps","Des jalons imposés par l'école : Proof of Concept, Alpha, Bêta","Un seul producer pour plus de cinquante personnes","Quatre semaines, sans marge pour rattraper un retard"]) ]),
             LIGNE([ KEYART([
                       ["images/fda-castor.jpg","Le Castor et l'Écureuil","Un puzzle platformer où des animaux tentent de sauver leur environnement menacé en neutralisant les infrastructures humaines qui détruisent la nature de l'Anjou."],
@@ -187,8 +186,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Organiser quatre équipes en parallèle",[
             LIGNE([
-              T("Quatre jeux, plus de cinquante personnes et un seul producer : je savais dès le départ que je ne pourrais pas être dans chaque salle en permanence. Il fallait pourtant que les consignes des intervenants arrivent de la même façon à tous les groupes. C'est pour cela que nous avons lancé les productions en promotion entière, le lendemain de la sélection. Tout le monde a entendu les mêmes consignes au même moment, et nous avons pu poser ensemble l'organisation, les outils et la méthode, avant de les affiner groupe par groupe."),
-              T("Pour garder un lien direct avec chaque équipe, j'ai désigné avec les intervenants deux référents par groupe, un pour les Game Designers et un pour les Game Artists. Cela n'a pas tout réglé : quand j'étais en réunion avec un groupe, les trois autres avançaient sans moi. Les dailies ont pris le relais pour que le suivi continue en mon absence, et je suis resté l'interlocuteur entre les intervenants et les équipes tout au long des semaines, pas seulement aux milestones."),
+              T("Avec quatre jeux et plus de cinquante personnes, je savais dès le départ que je ne pourrais pas être dans chaque salle en permanence. Il fallait pourtant que les consignes des intervenants arrivent de la même façon à tous les groupes. Nous avons donc lancé les productions en promotion entière, le lendemain de la sélection. Tout le monde a entendu les mêmes consignes au même moment, et nous avons pu poser ensemble l'organisation, les outils et la méthode, avant de les affiner groupe par groupe."),
+              T("Pour garder un lien direct avec chaque équipe, j'ai désigné avec les intervenants deux référents par groupe, un pour les Game Designers et un pour les Game Artists. Cela n'a pas tout réglé : quand j'étais en réunion avec un groupe, les trois autres avançaient sans moi. Les dailies ont pris le relais pour que le suivi continue en mon absence, et je suis resté l'interlocuteur entre les intervenants et les équipes au quotidien, y compris entre les milestones."),
               T("Avec le recul, ces points quotidiens ne réunissaient pas toute l'équipe, et tout le monde ne comprenait pas vraiment l'avancée du projet. Sur un prochain projet, je mettrais en place des dailies en équipe entière dès le premier jour.")
             ],[ SCHEMA("orga") ])
           ]),
@@ -204,7 +203,7 @@ const PROJECTS_FR = {
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
               T("En deuxième semaine, un même problème est apparu dans les quatre groupes : la direction artistique était confuse, et les membres peinaient à se représenter les références. Les retards ont vite atteint deux à trois jours, et je sentais venir le risque de crunch."),
-              T("Plutôt que de laisser chaque équipe s'enliser, nous avons organisé des réunions d'urgence avec chaque groupe et suspendu la production pendant une journée et demie. Ce temps de réflexion nous a permis de comprendre d'où venait le problème : des références trop vastes et peu précises, et une passe de recherche trop courte au démarrage, parce que nous pensions que celle de la sélection suffirait.")
+              T("Nous avons organisé des réunions d'urgence avec chaque groupe et suspendu la production pendant une journée et demie. Cette pause nous a permis de comprendre d'où venait le problème : des références trop vastes et peu précises, et une passe de recherche trop courte au démarrage, parce que nous pensions que celle de la sélection suffirait.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
               T("Chaque groupe vivait la crise à sa manière, il n'y avait donc pas de réponse unique. Pour l'un, j'ai tranché, en accord avec les référents des disciplines, sur le kill de plusieurs assets qui sortaient du cadre ou n'étaient plus prioritaires. Pour un autre, nous avons revu le Level Art et le shader atmosphérique."),
@@ -220,12 +219,12 @@ const PROJECTS_FR = {
           ]),
           BANDE("VII","Les enseignements",[
             LIGNE([
-              T("C'était la première fois que l'on me confiait la production d'une promotion entière, et c'est surtout la crise de mi-parcours qui m'a fait grandir. Elle m'a appris à mettre de côté ce que je croyais savoir pour écouter les besoins propres à chaque équipe, à déléguer, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même.")
+              T("C'était la première fois que l'on me confiait la production d'une promotion entière. La crise de mi-parcours m'a appris à mettre de côté ce que je croyais savoir pour écouter les besoins propres à chaque équipe. J'ai aussi appris à déléguer, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même.")
             ])
           ]),
           BANDE("VIII","Les équipes",[
             LIGNE([
-              T("Ces quatre jeux sont avant tout le travail de leurs équipes. Voici chaque membre, son rôle et son profil LinkedIn, groupe par groupe."),
+              T("Ces quatre jeux sont avant tout le travail de leurs équipes."),
               EQUIPES(EQUIPES_FDA)
             ])
           ])
@@ -237,10 +236,10 @@ const PROJECTS_FR = {
         resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes développent chacune un rogue-lite.",
                  role:"Producer des deux équipes : planification, sprints et arbitrages.",
                  resultat:"" },
-        decisions:[ "**Planification à deux niveaux** : une feuille de route pour le workshop et des tâches quotidiennes pour chaque équipe.",
-                    "**Sprints adaptés** à chaque équipe, construits après avoir écouté leurs besoins.",
-                    "**Arbitrage** des points bloquants remontés par les équipes.",
-                    "**Retours constructifs** sur les documents de design, pour garder un périmètre réaliste et faisable." ],
+        decisions:[ "Une planification à deux niveaux : une feuille de route pour le workshop et des tâches quotidiennes pour chaque équipe.",
+                    "Des sprints construits pour chaque équipe, après avoir écouté ses besoins.",
+                    "L'arbitrage des points bloquants remontés par les équipes.",
+                    "Des retours sur les documents de design, pour garder un périmètre réaliste." ],
         contenu:[
           IMG("", "Planning de production")
         ] }),
@@ -251,9 +250,9 @@ const PROJECTS_FR = {
         resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes.",
                  role:"Producer des deux équipes : plan de production, suivi et répartition des tâches.",
                  resultat:"" },
-        decisions:[ "**Plan de production agile** construit sur Excel, avec des **revues hebdomadaires**.",
-                    "**Premiers dailies** mis en place, confiés aux référents Art et Design.",
-                    "**Répartition des tâches** entre Game Artists et Game Designers, en équilibrant la charge de travail." ],
+        decisions:[ "Un plan de production agile construit sur Excel, avec des revues hebdomadaires.",
+                    "Les premiers dailies, confiés aux référents Art et Design.",
+                    "La répartition des tâches entre Game Artists et Game Designers, en équilibrant la charge de travail." ],
         contenu:[
           IMG("", "Plan de production")
         ] }),
@@ -264,9 +263,9 @@ const PROJECTS_FR = {
         resume:{ contexte:"Projet de fin d'année à Game Sup : deux équipes de 12 à 13 personnes, quatre semaines de développement.",
                  role:"Producer des deux projets, menés en parallèle.",
                  resultat:"" },
-        decisions:[ "**Deux projets menés en parallèle** pour la première fois, suivis sur Excel et Miro.",
-                    "**Sprint reviews** organisées pour chaque équipe.",
-                    "**Listes de tâches** construites avec les référents Art et Design." ],
+        decisions:[ "Deux projets menés en parallèle pour la première fois, suivis sur Excel et Miro.",
+                    "Des sprint reviews organisées pour chaque équipe.",
+                    "Des listes de tâches construites avec les référents Art et Design." ],
         contenu:[
           IMG("", "Tableau Miro")
         ] })
@@ -296,9 +295,9 @@ const PROJECTS_FR = {
           BANDE("II","Un fichier de production clair et modulable",[
             LIGNE([
               T("En construisant mon fichier Excel général, ma priorité a été la clarté : chaque information devait pouvoir être trouvée rapidement, sans se perdre dans les onglets. J'ai donc travaillé la cohérence des couleurs pour regrouper les pages liées entre elles, et mis au point des boutons ainsi qu'une barre de navigation simple."),
-              T("L'organisation des pages et la hiérarchisation des informations au sein de chacune ont également fait l'objet d'une attention particulière."),
-              T("Un objectif important de ce travail était l'adaptabilité du fichier : le budget doit se mettre à jour en un clic lors de l'arrivée d'un nouveau membre dans le studio ou d'un changement d'ancienneté."),
-              T("Je voulais également que cette souplesse s'étende aux logiciels attribués aux employés, pour que le budget s'ajuste aussitôt (cf. image).")
+              T("J'ai aussi soigné l'ordre des pages et la hiérarchie des informations dans chacune d'elles."),
+              T("Je voulais aussi un fichier adaptable : le budget se met à jour en un clic quand un nouveau membre arrive dans le studio ou qu'une ancienneté change."),
+              T("Il s'ajuste de la même façon aux logiciels attribués à chaque employé (voir l'image).")
             ],[ CAROUSEL([[EX1.nav,"Page d'accueil du fichier de production : boutons et navigation par onglets colorés"],[EX1.budget,"Vue d'ensemble du budget : équipe, durée et budget par département"]]) ]),
             LIGNE([
               T("Wyrdfall est un projet AA de 48 mois, comprenant 36 mois de production et 12 mois de live service, pour une équipe de 42 personnes dont 25 restent mobilisées sur la phase de live. Le budget total du projet s'élève à **9 033 682 €**, dont 7 070 677 € de salaires (78 %), le reste se répartissant entre les logiciels, la localisation, les frais de fonctionnement et l'outsourcing.")
@@ -309,7 +308,7 @@ const PROJECTS_FR = {
               T("Pour estimer les ventes potentielles sur Steam, j'ai commencé par l'analyse des concurrents du jeu, dont j'ai extrait des moyennes exploitables pour mes scénarios de projection. Pour disposer d'un large panel, j'ai retenu des jeux sortis sur 11 ans, de 2014 à 2025 : une période un peu large, qui gagnerait à être ramenée à 5 ans.")
             ],[ IMG(EX1.market,"Analyse des concurrents : ventes, revenus estimés et moyennes") ],"dessous"),
             LIGNE([
-              T("Les données extraites m'ont permis de proposer deux scénarios, un optimiste et un plus conservateur, chacun décliné en trois niveaux de risque (haut, moyen, bas), afin d'envisager l'économie de la production avec le plus de lucidité possible.")
+              T("Les données extraites m'ont permis de proposer deux scénarios, un optimiste et un plus conservateur, chacun décliné en trois niveaux de risque (haut, moyen, bas), pour couvrir l'éventail des issues possibles.")
             ],[ CAROUSEL([[EX1.roiCons,"Estimation du ROI, scénario conservateur : 250 000 followers, en cas haut, moyen et bas"],[EX1.roiOpti,"Estimation du ROI, scénario optimiste : moyenne des ventes du Market Analysis, en cas haut, moyen et bas"]]) ]),
             LIGNE([
               T("Pour savoir à partir de quand le projet devient rentable, j'ai calculé son seuil de rentabilité. Sur un prix de 49,99 €, j'ai retiré en une seule fois la part de Steam, les taxes et la royalty d'Unreal Engine (55 %), puis les remboursements. C'est un choix de prudence : une vente ne rapporte ainsi qu'environ 20 €, un peu moins que dans la réalité. Le budget est couvert à partir d'environ **451 000 ventes**. Si le projet tient avec cette hypothèse, il tiendra avec un calcul plus favorable."),
@@ -318,19 +317,19 @@ const PROJECTS_FR = {
           ]),
           BANDE("IV","Planifier quatre ans de production",[
             LIGNE([
-              T("Enfin, cet exercice a mis à l'épreuve ma capacité à anticiper et à planifier : il ne s'agissait plus d'un projet de trois semaines, mais d'une production de 4 ans, de la production principale jusqu'à la sortie du DLC prévu."),
-              T("Planifier des Epics et des Stories sur l'ensemble d'une production est un véritable défi, qui m'a poussé à prendre en compte tous les aspects du projet : les éléments essentiels, les niveaux, l'intégration de la QA, etc.")
+              T("Enfin, il fallait planifier une production de 4 ans, de la production principale jusqu'à la sortie du DLC prévu, alors que nos workshops durent trois semaines."),
+              T("Pour placer les Epics et les Stories sur toute la production, j'ai dû prendre en compte chaque partie du projet : les éléments essentiels, les niveaux, l'intégration de la QA.")
             ],[ IMG(EX1.epic,"Macro-planning : les Epics de la production") ],"dessous"),
             LIGNE([
               T("J'ai complété ce travail par un sprint détaillé avec ses tâches : un sprint de préproduction destiné à préparer la Vertical Slice."),
-              T("Cette partie a été exigeante : elle m'a obligé à sortir de la logique des sprints de nos workshops de 3 semaines, très contraints, pour raisonner pas à pas sur les besoins qui font passer d'un sprint à l'autre.")
+              T("Cette partie m'a obligé à quitter la logique des sprints de nos workshops de 3 semaines, très contraints, pour raisonner pas à pas sur les besoins qui font passer d'un sprint à l'autre.")
             ],[ IMG(EX1.sprint,"Sprint de préproduction : tâches, priorités et points de sprint") ],"dessous")
           ]),
           BANDE("V","Ce que j'en retiens",[
             LIGNE([
-              T("Ce travail a été extrêmement formateur et m'a permis de porter un regard neuf sur le métier de producer. Avec du recul, j'y vois plusieurs pistes d'amélioration. D'abord, j'ai sous-estimé la charge de l'équipe QA : il faudrait prévoir un effectif plus important pour éviter un éventuel crunch. C'est aussi le cas de l'équipe Sound Design, elle aussi sous-dimensionnée."),
+              T("Avec le recul, je vois plusieurs points à améliorer. D'abord, j'ai sous-estimé la charge de l'équipe QA : il faudrait prévoir un effectif plus important pour éviter un éventuel crunch. C'est aussi le cas de l'équipe Sound Design, elle aussi sous-dimensionnée."),
               T("Il serait également utile d'étudier les financements accessibles à un studio de cette taille pour étoffer le dossier : aides régionales, nationales et européennes, solutions bancaires, Kickstarter."),
-              T("Je reste néanmoins fier de ce travail, qui a élargi ma vision du périmètre de ce rôle.")
+              T("Je reste fier de ce travail, qui m'a montré tout ce que recouvre le rôle de producer.")
             ],[ FICHE("Pistes d'amélioration",["Renforcer l'équipe QA pour éviter un crunch","Réévaluer l'équipe de Sound Design","Étudier les financements : aides régionales, nationales, européennes, solutions bancaires, Kickstarter"]) ])
           ])
         ] }),
@@ -352,7 +351,7 @@ const PROJECTS_FR = {
           BANDE("II","Intentions, piliers et boucle de gameplay",[
             LIGNE([
               T("Je suis parti de valeurs (courage, coopération, résilience) et de thèmes : la culpabilité du survivant, la confiance, et la question « qu'est-ce qu'un héros ? ». Ces intentions se traduisent en trois piliers de gameplay : combattre les marées de Typhon, explorer un monde désolé, et prendre soin de sa Source pour la faire grandir."),
-              T("J'ai aussi listé ce que le jeu ne sera pas : multijoueur, combat tactique sur grille, arbre de compétences, mini-jeux, infiltration, fins multiples. C'est ce qui garde le périmètre sous contrôle.")
+              T("J'ai aussi listé ce que le jeu ne contiendra pas, pour garder le périmètre sous contrôle : multijoueur, combat tactique sur grille, arbre de compétences, mini-jeux, infiltration, fins multiples.")
             ],[ CAROUSEL([[CT.pillars,"Les trois piliers de gameplay"],[CT.notdo,"Ce que le jeu n'est pas"]]) ]),
             LIGNE([
               T("Le joueur gère sa base, explore, résout des énigmes ou combat, acquiert des ressources et progresse, puis fabrique ou échange avant de revenir à sa base. J'ai qualifié chaque étape selon son rôle dans l'économie du jeu (source, convertisseur, drain, marchand) pour vérifier que la boucle se nourrit autant qu'elle consomme."),
@@ -361,7 +360,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("III","De la mécanique au récit",[
             LIGNE([
-              T("Typhon a vaincu les dieux et dispersé leurs pouvoirs, les Grâces divines. Il ne reste qu'une terre aride, des ruines et quelques sanctuaires. Dans cet univers, chaque mécanique a son incarnation dans le récit : on ne gère pas un menu, on protège une fontaine sacrée ; on ne débloque pas une compétence, on hérite du pouvoir d'un dieu déchu."),
+              T("Typhon a vaincu les dieux et dispersé leurs pouvoirs, les Grâces divines. Il ne reste qu'une terre aride, des ruines et quelques sanctuaires. Dans cet univers, chaque mécanique a son incarnation dans le récit : gérer sa base, c'est protéger une fontaine sacrée, et chaque nouvelle compétence est le pouvoir hérité d'un dieu déchu."),
               T("Même le butin raconte quelque chose : les bêtes de Typhon dévorent les fragments de Grâce pour gagner en puissance, si bien que ce que le joueur ramasse est aussi ce que l'ennemi convoite.")
             ],[ CAROUSEL([[CT.realm,"Le Royaume de Lumière avant la Chute"],[CT.typhon,"Typhon"],[CT.sealed,"Un Temple scellé"]]) ]),
             LIGNE([
@@ -379,7 +378,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("V","Ce que j'en retiens",[
             LIGNE([
-              T("Un GDD ne se limite pas à lister des features : il doit relier les intentions aux mécaniques, et les mécaniques à ce que le joueur ressent. C'est cette chaîne que j'ai cherché à rendre lisible, du pilier jusqu'au niveau."),
+              T("Un GDD doit relier les intentions aux mécaniques, et les mécaniques à ce que le joueur ressent. J'ai cherché à rendre ce lien lisible, du pilier jusqu'au niveau."),
               T("Comme producer, c'est ce qui me permet aujourd'hui de comprendre ce que l'on demande aux équipes de design, d'en estimer la portée et de savoir où se trouve le cœur d'un projet quand il faut arbitrer.")
             ])
           ])
@@ -401,8 +400,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Un marché jeune, mobile et porté par la démographie",[
             LIGNE([
-              T("L'industrie est encore jeune : en 1994, l'Afrique ne comptait qu'un seul studio, Celestial Games, en Afrique du Sud. Selon Mordor Intelligence (édition 2024), le marché africain passerait de 2,14 Md$ en 2024 à 3,72 Md$ en 2029, soit environ 11,6 % par an, contre environ 9,3 % pour le marché mondial d'après mon calcul (272,86 → 426,02 Md$). L'Afrique pèse pourtant **moins de 1 %** du marché mondial.")
-            ],[ SCHEMA("marche","Le marché africain du jeu vidéo, 2024-2029 (Mordor Intelligence), comparé au marché mondial"), FICHE("Quelques studios pionniers",["Afrique du Sud : Celestial Games (1994)","Cameroun : Kiro'o Games (2003)","Ghana : Leti Arts (2009)","Nigéria : Kuluya, Gamsole et Maliyo (vers 2012)"]) ]),
+              T("L'industrie est encore jeune : le premier studio connu, Celestial Games, a été fondé en 1994 en Afrique du Sud. Selon Mordor Intelligence (édition 2024), le marché africain passerait de 2,14 Md$ en 2024 à 3,72 Md$ en 2029, soit environ 11,6 % par an, contre environ 9,3 % pour le marché mondial d'après mon calcul (272,86 → 426,02 Md$). Newzoo et Carry1st estiment pour leur part ce marché à 1,8 Md$ en 2024 : les périmètres diffèrent, et je ne mélange pas les deux séries. L'Afrique pèse pourtant **moins de 1 %** du marché mondial.")
+            ],[ SCHEMA("marche","Le marché africain du jeu vidéo, 2024-2029 (Mordor Intelligence), comparé au marché mondial"), FICHE("Quelques studios pionniers",["Afrique du Sud : Celestial Games (1994)","Cameroun : Kiro'o Games (projet lancé en 2003, studio fondé en 2012)","Ghana : Leti Arts (2009)","Nigéria : Kuluya, Gamsole et Maliyo (vers 2012)"]) ]),
             LIGNE([
               T("Ce marché repose sur le mobile : en 2022, 200 millions d'Africains jouaient sur leur téléphone, et environ 90 % des revenus passaient par le smartphone (Afrik.com). Le nombre de joueurs tous supports varie fortement selon les sources (de 349 à plus de 600 millions) : ces chiffres ne mesurent pas la même chose, et je ne les compare pas entre eux."),
               T("Le moteur de cette croissance est démographique : 1,4 milliard d'habitants, 2,5 milliards attendus en 2050, et plus de 60 % de moins de 25 ans (Forum économique mondial).")
@@ -410,12 +409,12 @@ const PROJECTS_FR = {
           ]),
           BANDE("III","Le Nigéria : des studios mobiles et locaux",[
             LIGNE([
-              T("Au Nigéria, l'industrie tourne autour de quatre studios majeurs créés vers 2012 : Maliyo Games, ChopUp, Gamsole et Kuluya. Tous sont tournés vers le mobile, dans un pays qui compte 150 millions d'abonnés à la téléphonie mobile."),
-              T("En 2011, Bayo Puddicombe adapte en jeu le danfo, le bus jaune emblématique de Lagos : Danfo dépasse le million de téléchargements. Il fonde ensuite ChopUp avec Zubair Abubakar. En 2016, le studio compte 4 employés et sort un nouveau jeu toutes les 6 semaines.")
-            ],[ ETAPES("ChopUp en quelques dates",[["2011 · Danfo","Bayo Puddicombe crée le jeu Danfo : plus d'un million de téléchargements"],["2012 · Création de ChopUp","Fondation à Lagos avec Zubair Abubakar, dans la foulée du succès de Danfo"],["2016 · Rythme de production","4 employés et un nouveau jeu toutes les 6 semaines"]]) ]),
+              T("Au Nigéria, l'industrie tourne autour de quatre studios majeurs créés vers 2012 : Maliyo Games, ChopUp, Gamsole et Kuluya. Tous sont tournés vers le mobile, dans un pays qui comptait 210 millions d'abonnés actifs à la téléphonie mobile en 2022 (NCC)."),
+              T("En 2011, Bayo Puddicombe adapte en jeu le danfo, le bus jaune emblématique de Lagos : Danfo dépasse le million de téléchargements. Il fonde ensuite avec Zubair Abubakar la société Pledge 51, qui lance ChopUp. En 2016, le studio compte 4 employés et sort un nouveau jeu toutes les 6 semaines.")
+            ],[ ETAPES("ChopUp en quelques dates",[["2011 · Danfo","Bayo Puddicombe crée le jeu Danfo : plus d'un million de téléchargements"],["2012 · Pledge 51, puis ChopUp","Bayo Puddicombe et Zubair Abubakar fondent Pledge 51, la société qui lancera ChopUp, dans la foulée du succès de Danfo"],["2016 · Rythme de production","4 employés et un nouveau jeu toutes les 6 semaines"]]) ]),
             LIGNE([
               T("Son modèle économique contourne la faible bancarisation : au Nigéria, plus de la moitié des adultes n'ont pas de compte bancaire (Global Findex 2021). ChopUp s'associe donc aux opérateurs mobiles et donne accès à son catalogue contre un petit abonnement hebdomadaire, prélevé directement sur la facture de téléphone. Chicken Escape et Jagun : Clash of Kingdoms ont ainsi été téléchargés 100 000 fois en quelques mois.")
-            ],[ IMG(NG.jagun,"Jagun : Clash of Kingdoms, ChopUp, 2017"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
+            ],[ IMG(NG.jagun,"Jagun : Clash of Kingdoms, ChopUp, 2015"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
             LIGNE([
               T("Ces studios se détournent du triple A occidental pour parler au local. Pour Matteo Maillard (Jeune Afrique, 2024), ils ont créé une exception africaine face à des AAA dont les scénarios tournent souvent autour « du nombril américain ou de codes culturels européens ». Le quotidien devient matière de jeu, comme les embouteillages de Lagos dans Okada Ride (Maliyo, 2012), tout comme l'histoire et les mythes : Iwaju : Rising Chef (Maliyo, 2024), Aurion : L'héritage des Kori-Odan (Kiro'o Games, Cameroun)."),
               T("Faute d'universités adaptées, les studios assurent aussi la formation : Maliyo Games propose un cursus gratuit, en ligne et de 3 mois (Game Art Academy).")
@@ -425,19 +424,19 @@ const PROJECTS_FR = {
             LIGNE([
               T("La jeunesse (70 % des Nigérians ont moins de 30 ans) porte aussi l'e-sport. Selon PwC (via Agence Ecofin, novembre 2023), les revenus publicitaires des jeux vidéo et de l'e-sport au Nigéria passeraient de 111 M$ en 2022 à 472 M$ en 2027. Les initiatives se multiplient : la confédération africaine CASE (fondée à Dakar en 2023), les tournois AfriGamers ou ABENA Tournaments, qui met en avant les joueuses."),
               T("En recoupant les sources, j'ai relevé une incohérence : le même article annonce 7,1 % de croissance par an, ce qui mènerait à environ 156 M$ en 2027, et non 472 M$. Les éditions plus récentes de PwC donnent d'ailleurs des chiffres plus bas. Je retiens donc une tendance, une croissance à deux chiffres portée par le smartphone, plutôt qu'un montant.")
-            ],[ TABLEAU("Jeux vidéo et e-sport au Nigéria selon PwC, selon l'édition",["Source","Période","Revenus"],[["Agence Ecofin, nov. 2023","2022 → 2027","111 → 472 M$ (publicité)"],["Nairametrics, fév. 2025","2023 → 2024","192 → 217 M$"],["Nairametrics, fév. 2025","2024 → 2028","217 → 322 M$ (+ 10,9 % par an)"]],true) ]),
+            ],[ TABLEAU("Jeux vidéo et e-sport au Nigéria selon PwC, selon l'édition",["Source","Période","Revenus"],[["Agence Ecofin, nov. 2023","2022 → 2027","111 → 472 M$ (publicité)"],["Nairametrics, fév. 2025","2023 → 2024","192 → 217 M$"],["Nairametrics, fév. 2025","2023 → 2028","192 → 322 M$ (+ 10,9 % par an)"]],true) ]),
             LIGNE([
               T("Le modèle reste pourtant fortement limité. J'ai relevé cinq freins, du plus matériel au plus structurel."),
-              TABLEAU("Les freins au développement du secteur",["Frein","Constat"],[["Internet","Réseau fragile, dépendant d'un nombre limité de câbles sous-marins (BBC News)."],["Électricité","12 effondrements du réseau national en 2024. 82 % des développeurs africains jugent l'électrification primordiale (rapport d'Hugo Obi)."],["Pouvoir d'achat","Peu d'ordinateurs et de smartphones puissants : des jeux gratuits, pensés pour des joueurs occasionnels."],["Formation","Peu, voire pas, de formations longues au jeu vidéo."],["Financement","Des revenus souvent liés à des bailleurs de fonds étrangers. Des observateurs cités par Courrier International jugent ces jeux « bien-pensants » : un ressenti, pas un constat chiffré."]],true)
+              TABLEAU("Les freins au développement du secteur",["Frein","Constat"],[["Internet","Réseau fragile, dépendant d'un nombre limité de câbles sous-marins (BBC News)."],["Électricité","12 effondrements du réseau national en 2024. 82 % des développeurs africains jugent critique une alimentation électrique sans coupure (rapport de Maliyo Games, le studio d'Hugo Obi)."],["Pouvoir d'achat","Peu d'ordinateurs et de smartphones puissants : des jeux gratuits, pensés pour des joueurs occasionnels."],["Formation","Peu, voire pas, de formations longues au jeu vidéo."],["Financement","Des revenus souvent liés à des bailleurs de fonds étrangers. Des observateurs cités par Courrier International jugent ces jeux « bien-pensants » : un ressenti, pas un constat chiffré."]],true)
             ])
           ]),
           BANDE("V","Conclusion et ce que j'en retiens",[
             LIGNE([
-              T("L'Afrique s'inscrit dans un marché en progression grâce à une population jeune, un marché mobile en très forte croissance et un e-sport en plein essor. Son modèle, proche du marché asiatique par la place du mobile, se détourne des AAA au profit de jeux du quotidien et de l'histoire nationale, mais il reste fortement limité par les infrastructures, le pouvoir d'achat et le financement."),
-              T("Ce que j'en retiens côté production. Un marché se lit d'abord par ses contraintes. ChopUp n'a pas seulement choisi le mobile : le studio a construit son modèle économique autour de la faible bancarisation et calé son rythme de production sur ses ressources. Pour un producer, la leçon est que le budget, le calendrier, la plateforme et le mode de paiement se décident ensemble, dès la conception. Cette étude m'a aussi appris à distinguer un chiffre établi d'une projection avant de bâtir un plan dessus.")
+              T("Le marché africain progresse, porté par une population jeune, le jeu sur mobile et l'e-sport. Son modèle, proche du marché asiatique par la place du mobile, se détourne des AAA au profit de jeux du quotidien et de l'histoire nationale, mais il reste fortement limité par les infrastructures, le pouvoir d'achat et le financement."),
+              T("Côté production, j'en retiens qu'un marché se lit d'abord par ses contraintes. ChopUp a choisi le mobile, construit son modèle économique autour de la faible bancarisation et calé son rythme de production sur ses ressources. Pour un producer, la leçon est que le budget, le calendrier, la plateforme et le mode de paiement se décident ensemble, dès la conception. Cette étude m'a aussi appris à distinguer un chiffre établi d'une projection avant de bâtir un plan dessus.")
             ],[ FICHE("Ce que je retiens",["Lire un marché par ses contraintes","Construire le modèle économique autour de l'accès au paiement","Caler le rythme de production sur les ressources","Distinguer un chiffre établi d'une projection"]) ])
           ]),
-          BANDE("VI","Sources",[ LIGNE([ SOURCES([["Agence Ecofin · Nigéria en 2027, les jeux vidéo généreront plus de revenus publicitaires que le streaming (PwC)", "https://www.agenceecofin.com/communication/1311-113619-nigeria-en-2027-les-jeux-video-genereront-plus-de-revenus-publicitaires-que-le-streaming-l-affichage-exterieur-et-la-presse-ecrite-pwc"], ["Afrik.com · Le gaming en Afrique, une révolution silencieuse", "https://www.afrik.com/le-gaming-en-afrique-une-revolution-silencieuse"], ["Jeune Afrique · L'Afrique, nouvel eldorado des jeux vidéo", "https://www.jeuneafrique.com/1526043/culture/lafrique-nouvel-eldorado-des-jeux-video/"], ["Sigma · Gaming in Nigeria is on the rise", "https://sigma.world/fr/news/gaming-in-nigeria-is-on-the-rise/"], ["Agence Ecofin · Le marché africain des jeux vidéo devrait croître de 11,62 % par an d'ici 2029", "https://www.agenceecofin.com/innovation/0810-122265-le-marche-africain-des-jeux-video-devrait-croitre-de-11-62-par-an-d-ici-2029-rapport"], ["Jeune Afrique · Le Nigeria part à la conquête du marché africain des jeux vidéo", "https://www.jeuneafrique.com/depeches/20777/politique/le-nigeria-part-a-la-conquete-du-marche-africain-des-jeux-video/"], ["Jeune Afrique · Les recettes du succès de ChopUp", "https://www.jeuneafrique.com/315910/economie-entreprises/reussite-les-recettes-du-succes-de-chopup-le-studio-de-jeux-videos-100-nigerian/"], ["Toonmed (blog) · Reportage : les recettes du succès de ChopUp", "https://toonmed.blogspot.com/2016/04/reportage-les-recettes-du-succes-de.html"], ["Agence Ecofin · Le Nigeria et l'Égypte, pays où la moitié des adultes sont non bancarisés", "https://www.agenceecofin.com/finance/0407-99376-le-nigeria-et-l-egypte-font-partie-des-7-pays-au-monde-dans-lesquels-la-moitie-des-adultes-sont-non-bancarises-rapport"], ["Banque de France · Afrique subsaharienne, la fracture financière entre hommes et femmes", "https://www.banque-france.fr/fr/publications-et-statistiques/publications/afrique-subsaharienne-la-fracture-financiere-entre-hommes-et-femmes"], ["Sport News Africa · Vers la naissance de la Confédération africaine du sport en ligne", "https://sportnewsafrica.com/articles/e-sport-vers-la-naissance-de-la-confederation-africaine-du-sport-en-ligne"], ["Mordor Intelligence · Marché mondial du jeu vidéo", "https://www.mordorintelligence.com/fr/industry-reports/global-gaming-market"], ["Courrier International · Comment le jeu vidéo se développe en Afrique", "https://www.courrierinternational.com/article/tendance-comment-le-jeu-video-se-developpe-en-afrique"], ["Africavox · L'Afrique, nouveau berceau de l'e-sport", "https://africavox.easybroadcast.fr/articles/l-afrique-nouveau-berceau-du-e-sports"], ["Afrikactus · L'essor du gaming africain sur la scène mondiale", "https://afrikactus.com/essor-du-gaming-africain-sur-la-scene-mondiale/"], ["ADF Magazine · Des start-ups nigérianes pénètrent le marché des jeux vidéo", "https://adf-magazine.com/fr/2014/10/des-start-ups-nigerianes-penetrent-le-marche-des-jeux-video/"], ["Smart Africa", "https://smartafrica.org/fr/page-daccueil/"], ["AfriGamers", "https://afrigamers.com/a-propos-afrigamers/"], ["Tribune Online · 12 times national grid collapsed in 2024", "https://tribuneonlineng.com/updated-12-times-national-grid-collapsed-in-2024/"], ["Nairametrics · PwC lists 10 fastest-growing entertainment and media sectors in Nigeria 2024-2028", "https://nairametrics.com/2025/02/09/pwc-lists-10-fastest-growing-entertainment-and-media-sectors-in-nigeria-2024-2028/"],["World Economic Forum · How will Africa's youth population drive global growth?", "https://www.weforum.org/stories/youth/africa-youth-global-growth-digital-economy/"],["ONU · Youth population trends (fact sheet)", "https://www.un.org/esa/socdev/documents/youth/fact-sheets/YouthPOP.pdf"],["Afrik.com · L'Afrique, avenir du gaming mondial ?", "https://www.afrik.com/l-afrique-avenir-du-gaming-mondial"],["Le360 · À Kigali, l'Afrique se cherche un modèle économique pour l'e-sport", "https://afrique.le360.ma/sports/des-millions-de-gamers-a-la-manette-a-kigali-lafrique-se-cherche-un-modele-economique-pour-le-sport_OLMQPD7RONHW3MNIOV3TPTZBWI/"],["AFJV · Abena Tournaments", "https://afjv.com/news/11374_abena-tournaments-tournoi-feminin-afrocaribeen-tekken8.htm"],["Linda Ikeji · Mobo Game Jam (Edu360 et Kucheza Gaming)", "https://www.lindaikejisblog.com/2020/12/mobo-game-jam-edu360-kucheza-drive-social-impact-through-gaming.html"],["Maliyo Games · Programmes de formation", "https://www.maliyo.com/programme/"],["Stuff South Africa · GameOn with HP, hackathon", "https://stuff.co.za/2024/10/11/get-your-gameon-with-hps-new-hackathon/"],["HP Gaming Garage", "https://www.hpgaminggarage.com/"],["Game Camp Cities · La CASE signe avec HP", "https://www.gamecampcities.pro/post/la-conf%C3%A9d%C3%A9ration-esport-africaine-signe-son-premier-partenaire-strat%C3%A9gique-continental-le-groupe-h?lang=fr"],["Pulse Nigeria · TCN restores power in Kaduna, Kano, Bauchi and Gombe", "https://www.pulse.ng/articles/news/local/tcn-restores-power-in-kaduna-kano-bauchi-and-gombe-after-prolonged-blackout-2024111910462282759"]]) ]) ])
+          BANDE("VI","Sources",[ LIGNE([ SOURCES([["Agence Ecofin · Nigéria en 2027, les jeux vidéo généreront plus de revenus publicitaires que le streaming (PwC)", "https://www.agenceecofin.com/communication/1311-113619-nigeria-en-2027-les-jeux-video-genereront-plus-de-revenus-publicitaires-que-le-streaming-l-affichage-exterieur-et-la-presse-ecrite-pwc"], ["Afrik.com · Le gaming en Afrique, une révolution silencieuse", "https://www.afrik.com/le-gaming-en-afrique-une-revolution-silencieuse"], ["Jeune Afrique · L'Afrique, nouvel eldorado des jeux vidéo", "https://www.jeuneafrique.com/1526043/culture/lafrique-nouvel-eldorado-des-jeux-video/"], ["Sigma · Gaming in Nigeria is on the rise", "https://sigma.world/fr/news/gaming-in-nigeria-is-on-the-rise/"], ["Agence Ecofin · Le marché africain des jeux vidéo devrait croître de 11,62 % par an d'ici 2029", "https://www.agenceecofin.com/innovation/0810-122265-le-marche-africain-des-jeux-video-devrait-croitre-de-11-62-par-an-d-ici-2029-rapport"], ["Jeune Afrique · Le Nigeria part à la conquête du marché africain des jeux vidéo", "https://www.jeuneafrique.com/depeches/20777/politique/le-nigeria-part-a-la-conquete-du-marche-africain-des-jeux-video/"], ["Jeune Afrique · Les recettes du succès de ChopUp", "https://www.jeuneafrique.com/315910/economie-entreprises/reussite-les-recettes-du-succes-de-chopup-le-studio-de-jeux-videos-100-nigerian/"], ["Toonmed (blog) · Reportage : les recettes du succès de ChopUp", "https://toonmed.blogspot.com/2016/04/reportage-les-recettes-du-succes-de.html"], ["Agence Ecofin · Le Nigeria et l'Égypte, pays où la moitié des adultes sont non bancarisés", "https://www.agenceecofin.com/finance/0407-99376-le-nigeria-et-l-egypte-font-partie-des-7-pays-au-monde-dans-lesquels-la-moitie-des-adultes-sont-non-bancarises-rapport"], ["Banque de France · Afrique subsaharienne, la fracture financière entre hommes et femmes", "https://www.banque-france.fr/fr/publications-et-statistiques/publications/afrique-subsaharienne-la-fracture-financiere-entre-hommes-et-femmes"], ["Sport News Africa · Vers la naissance de la Confédération africaine du sport en ligne", "https://sportnewsafrica.com/articles/e-sport-vers-la-naissance-de-la-confederation-africaine-du-sport-en-ligne"], ["Mordor Intelligence · Marché mondial du jeu vidéo", "https://www.mordorintelligence.com/fr/industry-reports/global-gaming-market"], ["Courrier International · Comment le jeu vidéo se développe en Afrique", "https://www.courrierinternational.com/article/tendance-comment-le-jeu-video-se-developpe-en-afrique"], ["Africavox · L'Afrique, nouveau berceau de l'e-sport", "https://africavox.easybroadcast.fr/articles/l-afrique-nouveau-berceau-du-e-sports"], ["Afrikactus · L'essor du gaming africain sur la scène mondiale", "https://afrikactus.com/essor-du-gaming-africain-sur-la-scene-mondiale/"], ["ADF Magazine · Des start-ups nigérianes pénètrent le marché des jeux vidéo", "https://adf-magazine.com/fr/2014/10/des-start-ups-nigerianes-penetrent-le-marche-des-jeux-video/"], ["Smart Africa", "https://smartafrica.org/fr/page-daccueil/"], ["AfriGamers", "https://afrigamers.com/a-propos-afrigamers/"], ["Tribune Online · 12 times national grid collapsed in 2024", "https://tribuneonlineng.com/updated-12-times-national-grid-collapsed-in-2024/"], ["Nairametrics · PwC lists 10 fastest-growing entertainment and media sectors in Nigeria 2024-2028", "https://nairametrics.com/2025/02/09/pwc-lists-10-fastest-growing-entertainment-and-media-sectors-in-nigeria-2024-2028/"],["World Economic Forum · How will Africa's youth population drive global growth?", "https://www.weforum.org/stories/youth/africa-youth-global-growth-digital-economy/"],["ONU · Youth population trends (fact sheet)", "https://www.un.org/esa/socdev/documents/youth/fact-sheets/YouthPOP.pdf"],["Afrik.com · L'Afrique, avenir du gaming mondial ?", "https://www.afrik.com/l-afrique-avenir-du-gaming-mondial"],["Le360 · À Kigali, l'Afrique se cherche un modèle économique pour l'e-sport", "https://afrique.le360.ma/sports/des-millions-de-gamers-a-la-manette-a-kigali-lafrique-se-cherche-un-modele-economique-pour-le-sport_OLMQPD7RONHW3MNIOV3TPTZBWI/"],["AFJV · Abena Tournaments", "https://afjv.com/news/11374_abena-tournaments-tournoi-feminin-afrocaribeen-tekken8.htm"],["Linda Ikeji · Mobo Game Jam (Edu360 et Kucheza Gaming)", "https://www.lindaikejisblog.com/2020/12/mobo-game-jam-edu360-kucheza-drive-social-impact-through-gaming.html"],["Maliyo Games · Programmes de formation", "https://www.maliyo.com/programme/"],["Stuff South Africa · GameOn with HP, hackathon", "https://stuff.co.za/2024/10/11/get-your-gameon-with-hps-new-hackathon/"],["HP Gaming Garage", "https://www.hpgaminggarage.com/"],["Game Camp Cities · La CASE signe avec HP", "https://www.gamecampcities.pro/post/la-conf%C3%A9d%C3%A9ration-esport-africaine-signe-son-premier-partenaire-strat%C3%A9gique-continental-le-groupe-h?lang=fr"],["Pulse Nigeria · TCN restores power in Kaduna, Kano, Bauchi and Gombe", "https://www.pulse.ng/articles/news/local/tcn-restores-power-in-kaduna-kano-bauchi-and-gombe-after-prolonged-blackout-2024111910462282759"],["Carry1st · Africa's gaming market reaches $1.8bn in 2024 (avec Newzoo)", "https://carry1st.com/press/africas-gaming-market-reaches-1-8bn-sixfold-growth-vs-row-driven-by-32mn-new-gamers-in-2024"],["Peoples Gazette · 210 millions d'abonnés mobiles actifs (NCC, 2022)", "https://gazettengr.com/nigerias-mobile-subscribers-hit-210-million-in-august-ncc/"],["Techpoint · Jagun: Clash of Kingdoms (2015)", "https://techpoint.africa/general/jagun-clash-of-kingdoms-chopup/"],["TechCabal · Pledge 51, la société derrière ChopUp", "https://techcabal.com/2014/08/29/tayo-oviosu-and-others-invest-in-chopup/"],["Games Industry Africa · Olivier Madiba et Kiro'o Games", "https://gamesindustryafrica.com/2019/09/16/profile-olivier-madiba"],["GameDev Reports · rapport de Maliyo Games sur l'industrie africaine", "https://gamedevreports.substack.com/p/maliyo-games-the-state-of-the-african"]]) ]) ])
         ] })
   ]
 };
@@ -452,16 +451,15 @@ const PROJECTS_EN = {
         resume:{ contexte:"Game Sup end-of-year project, carried out by the whole class in 4 weeks.",
                  role:"Producer for the 4 teams, working with the instructors acting as publishers.",
                  resultat:"4 games delivered to the jury; 1,387 tasks tracked, 93% completed, despite an art-direction crisis overcome in the second week." },
-        decisions:[ "**Agile at scale**: adapted to 4 projects run in parallel, within the school's Waterfall milestones.",
-                    "**Tracking tools**: a macro-planning and a micro-planning in Excel for each group, 1,387 tasks tracked.",
-                    "**Alignment** between the supervisors and the teams, from milestones to day-to-day issues.",
-                    "**Two playtest sessions** shared by the 4 teams, fitted to the other classes' schedules.",
-                    "**Priorities reset** with each team after playtest feedback." ],
+        decisions:[ "An Agile method adapted to 4 projects run in parallel, within the school's Waterfall milestones.",
+                    "A macro-planning and a micro-planning in Excel for each group, 1,387 tasks tracked.",
+                    "The link between the supervisors and the teams, from milestones to day-to-day issues.",
+                    "Two playtest sessions shared by the 4 teams, fitted to the other classes' schedules.",
+                    "New priorities set with each team after playtest feedback." ],
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("As every year at Game Sup, classes work in teams on a project lasting about 3 to 4 weeks. This edition stood out for several upstream design and selection phases, which led to 4 topics of varied genres."),
-              T("To work within this framework, I organised my work into four macro-tasks, presented below.")
+              T("As every year at Game Sup, classes work in teams on a project lasting about 3 to 4 weeks. This edition began with several design and selection phases, which led to 4 topics of varied genres.")
             ],[ FICHE("The constraints",["Four games to produce at the same time","Milestones set by the school: Proof of Concept, Alpha, Beta","A single producer for more than fifty people","Four weeks, with no margin to catch up on delays"]) ]),
             LIGNE([ KEYART([
                       ["images/fda-castor.jpg","Le Castor et l'Écureuil","A puzzle platformer where animals try to save their endangered environment by neutralising the human infrastructure destroying Anjou's nature."],
@@ -472,8 +470,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Organising four teams in parallel",[
             LIGNE([
-              T("Four games, more than fifty people and a single producer: I knew from the start that I could not be in every room all the time. Yet the instructors' guidelines had to reach every group in the same way. That is why we launched the productions with the whole class together, the day after the selection. Everyone heard the same guidelines at the same time, and we could set the organisation, tools and method together before refining them group by group."),
-              T("To keep a direct link with each team, I appointed two leads per group with the instructors, one for the Game Designers and one for the Game Artists. That did not solve everything: when I was in a meeting with one group, the other three moved on without me. Dailies took over so that tracking continued in my absence, and I remained the link between the instructors and the teams throughout the weeks, not only at milestones."),
+              T("With four games and more than fifty people, I knew from the start that I could not be in every room all the time. Yet the instructors' guidelines had to reach every group in the same way. So we launched the productions with the whole class together, the day after the selection. Everyone heard the same guidelines at the same time, and we could set the organisation, tools and method together before refining them group by group."),
+              T("To keep a direct link with each team, I appointed two leads per group with the instructors, one for the Game Designers and one for the Game Artists. That did not solve everything: when I was in a meeting with one group, the other three moved on without me. Dailies took over so that tracking continued in my absence, and I remained the link between the instructors and the teams every day, including between milestones."),
               T("Looking back, those daily check-ins did not bring the whole team together, and not everyone truly understood the project's progress. On a future project, I would set up whole-team dailies from day one.")
             ],[ SCHEMA("orga") ])
           ]),
@@ -489,7 +487,7 @@ const PROJECTS_EN = {
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
               T("In the second week, the same problem appeared in all four groups: art direction was unclear, and team members struggled to picture the references. Delays quickly reached two to three days, and I could feel the risk of crunch coming."),
-              T("Rather than let each team get bogged down, we held emergency meetings with each group and paused production for a day and a half. That time to step back helped us understand where the problem came from: references that were too broad and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough.")
+              T("We held emergency meetings with each group and paused production for a day and a half. That pause helped us understand where the problem came from: references that were too broad and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
               T("Each group experienced the crisis in its own way, so there was no single answer. For one, I decided, in agreement with the discipline leads, to kill several assets that were off-brief or no longer a priority. For another, we reworked the Level Art and the atmospheric shader."),
@@ -505,12 +503,12 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","Lessons learned",[
             LIGNE([
-              T("It was the first time I had been entrusted with producing for an entire class, and it was above all the mid-course crisis that made me grow. It taught me to set aside what I thought I knew and listen to each team's own needs, to delegate, and to set up clear communication channels from the start, so that no team feels left to fend for itself.")
+              T("It was the first time I had been entrusted with producing for an entire class. The mid-course crisis taught me to set aside what I thought I knew and listen to each team's own needs. I also learned to delegate, and to set up clear communication channels from the start, so that no team feels left to fend for itself.")
             ])
           ]),
           BANDE("VIII","The teams",[
             LIGNE([
-              T("These four games are first and foremost the work of their teams. Here is every member, their role and their LinkedIn profile, group by group."),
+              T("These four games are first and foremost the work of their teams."),
               EQUIPES(EQUIPES_FDA)
             ])
           ])
@@ -522,10 +520,10 @@ const PROJECTS_EN = {
         resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people, each developing a rogue-lite.",
                  role:"Producer for both teams: planning, sprints and decisions.",
                  resultat:"" },
-        decisions:[ "**Two-level planning**: a roadmap for the workshop and daily tasks for each team.",
-                    "**Sprints fitted** to each team, built after listening to their needs.",
-                    "**Made the call** on blockers raised by the teams.",
-                    "**Constructive feedback** on design documents, to keep the scope realistic and feasible." ],
+        decisions:[ "Two-level planning: a roadmap for the workshop and daily tasks for each team.",
+                    "Sprints built for each team, after listening to its needs.",
+                    "Decisions on the blockers raised by the teams.",
+                    "Feedback on design documents, to keep the scope realistic." ],
         contenu:[
           IMG("", "Production schedule")
         ] }),
@@ -536,9 +534,9 @@ const PROJECTS_EN = {
         resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people.",
                  role:"Producer for both teams: production plan, tracking and task distribution.",
                  resultat:"" },
-        decisions:[ "**Agile production plan** built in Excel, with **weekly reviews**.",
-                    "**First dailies** set up, entrusted to the Art and Design leads.",
-                    "**Tasks distributed** between Game Artists and Game Designers, balancing workloads." ],
+        decisions:[ "An agile production plan built in Excel, with weekly reviews.",
+                    "The first dailies, entrusted to the Art and Design leads.",
+                    "Tasks distributed between Game Artists and Game Designers, balancing workloads." ],
         contenu:[
           IMG("", "Production plan")
         ] }),
@@ -549,9 +547,9 @@ const PROJECTS_EN = {
         resume:{ contexte:"Game Sup end-of-year project: two teams of 12 to 13 people, four weeks of development.",
                  role:"Producer for both projects, run in parallel.",
                  resultat:"" },
-        decisions:[ "**Two projects run in parallel** for the first time, tracked in Excel and Miro.",
-                    "**Sprint reviews** held for each team.",
-                    "**Task lists** built together with the Art and Design leads." ],
+        decisions:[ "Two projects run in parallel for the first time, tracked in Excel and Miro.",
+                    "Sprint reviews held for each team.",
+                    "Task lists built together with the Art and Design leads." ],
         contenu:[
           IMG("", "Miro board")
         ] })
@@ -580,9 +578,9 @@ const PROJECTS_EN = {
           BANDE("II","A clear, adjustable production file",[
             LIGNE([
               T("When building my general Excel file, my priority was clarity: every piece of information had to be found quickly, without getting lost among the tabs. So I worked on colour consistency to group related pages, and built buttons and a simple navigation bar."),
-              T("The organisation of the pages and the hierarchy of information within each one were also given particular attention."),
-              T("A key goal of this work was the adaptability of the file: the budget must update in one click when a new member joins the studio or when seniority changes."),
-              T("I also wanted this flexibility to extend to the software assigned to employees, so that the budget adjusts immediately (see image).")
+              T("I also took care over the order of the pages and the hierarchy of information on each one."),
+              T("I also wanted an adaptable file: the budget updates in one click when a new member joins the studio or when someone's seniority changes."),
+              T("It adjusts the same way to the software assigned to each employee (see image).")
             ],[ CAROUSEL([[EX1.nav,"Home page of the production file: buttons and navigation through colour-coded tabs"],[EX1.budget,"Budget overview: team, duration and budget by department"]]) ]),
             LIGNE([
               T("Wyrdfall is a 48-month AA project, comprising 36 months of production and 12 months of live service, for a team of 42 people, 25 of whom remain on the live phase. The total project budget comes to **€9,033,682**, of which €7,070,677 is salaries (78%), the rest being split between Software, Localization, Utilities and Outsourcing.")
@@ -593,7 +591,7 @@ const PROJECTS_EN = {
               T("To estimate potential sales on Steam, I started by analysing the game's competitors, extracting usable averages for my projection scenarios. To build a wide panel, I selected games released over 11 years, from 2014 to 2025: a rather wide period that would benefit from being narrowed to 5 years.")
             ],[ IMG(EX1.market,"Competitor analysis: sales, estimated revenue and averages") ],"dessous"),
             LIGNE([
-              T("The extracted data allowed me to propose two scenarios, an optimistic one and a more conservative one, each broken down into three risk levels (high, average, low), so that the production's economics could be considered as clearly as possible.")
+              T("The extracted data allowed me to propose two scenarios, an optimistic one and a more conservative one, each broken down into three risk levels (high, average, low), to cover the range of possible outcomes.")
             ],[ CAROUSEL([[EX1.roiCons,"ROI estimate, conservative scenario: 250,000 followers, in high, average and low cases"],[EX1.roiOpti,"ROI estimate, optimistic scenario: average sales from the Market Analysis, in high, average and low cases"]]) ]),
             LIGNE([
               T("To know when the project becomes profitable, I calculated its break-even point. From a price of €49.99, I removed Steam's share, taxes and the Unreal Engine royalty in one go (55%), then refunds. It is a cautious choice: each sale only brings in about €20, a little less than in reality. The budget is covered from about **451,000 sales**. If the project holds up under this assumption, it will hold up under a more favourable one."),
@@ -602,19 +600,19 @@ const PROJECTS_EN = {
           ]),
           BANDE("IV","Planning four years of production",[
             LIGNE([
-              T("Finally, this exercise tested my ability to anticipate and plan: it was no longer a three-week project but a 4-year production, from the main production through to the release of the planned DLC."),
-              T("Planning Epics and Stories across an entire production is a real challenge, which pushed me to take every aspect of the project into account: the essential elements, the levels, QA integration, and so on.")
+              T("Finally, I had to plan a 4-year production, from the main production through to the release of the planned DLC, when our workshops last three weeks."),
+              T("To place Epics and Stories across the whole production, I had to take every part of the project into account: the essential elements, the levels, QA integration.")
             ],[ IMG(EX1.epic,"Macro-planning: the production's Epics") ],"dessous"),
             LIGNE([
               T("I completed this work with a detailed sprint and its tasks: a pre-production sprint aimed at preparing the Vertical Slice."),
-              T("This part was demanding: it forced me out of the logic of the sprints in our very constrained 3-week workshops, to reason step by step about the needs that lead from one sprint to the next.")
+              T("This part forced me out of the logic of the sprints in our very constrained 3-week workshops, to reason step by step about the needs that lead from one sprint to the next.")
             ],[ IMG(EX1.sprint,"Pre-production sprint: tasks, priorities and sprint points") ],"dessous")
           ]),
           BANDE("V","What I take away",[
             LIGNE([
-              T("This work was extremely formative and gave me a fresh perspective on the producer role. In hindsight, I see several ways to improve it. First, I underestimated the workload of the QA team: a larger headcount would be needed to avoid a possible crunch. The same goes for the Sound Design team, which is also understaffed."),
+              T("Looking back, I see several things to improve. First, I underestimated the workload of the QA team: a larger headcount would be needed to avoid a possible crunch. The same goes for the Sound Design team, which is also understaffed."),
               T("It would also be useful to study the funding available to a studio of this size to flesh out the dossier: regional, national and European grants, bank financing, Kickstarter."),
-              T("I nonetheless remain proud of this work, which broadened my view of the scope of this role.")
+              T("I remain proud of this work, which showed me how much the producer role covers.")
             ],[ FICHE("Areas for improvement",["Strengthen the QA team to avoid a crunch","Re-evaluate the Sound Design team","Study funding: regional, national and European grants, bank solutions, Kickstarter"]) ])
           ])
         ] }),
@@ -636,7 +634,7 @@ const PROJECTS_EN = {
           BANDE("II","Intentions, pillars and core loop",[
             LIGNE([
               T("I started from values (courage, cooperation, resilience) and themes: survivor guilt, trust, and the question “what is a hero?”. These intentions become three gameplay pillars: fight Typhon's tides, explore a desolate world, and take care of your Source to make it grow."),
-              T("I also listed what the game will not be: multiplayer, grid-based tactical combat, a skill tree, mini-games, stealth, multiple endings. That is what keeps the scope under control.")
+              T("I also listed what the game will not include, to keep the scope under control: multiplayer, grid-based tactical combat, a skill tree, mini-games, stealth, multiple endings.")
             ],[ CAROUSEL([[CT.pillars,"The three gameplay pillars"],[CT.notdo,"What the game is not"]]) ]),
             LIGNE([
               T("The player manages their base, explores, solves puzzles or fights, gathers resources and levels up, then crafts or trades before returning to base. I qualified each step by its role in the game economy (source, converter, drain, trader) to check that the loop feeds itself as much as it consumes."),
@@ -645,7 +643,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("III","From mechanics to story",[
             LIGNE([
-              T("Typhon has defeated the gods and scattered their powers, the Divine Graces. What remains is a barren land, ruins and a few sanctuaries. In this world, every mechanic is embodied in the story: you don't manage a menu, you protect a sacred fountain; you don't unlock a skill, you inherit the power of a fallen god."),
+              T("Typhon has defeated the gods and scattered their powers, the Divine Graces. What remains is a barren land, ruins and a few sanctuaries. In this world, every mechanic is embodied in the story: managing your base means protecting a sacred fountain, and each new skill is the inherited power of a fallen god."),
               T("Even the loot tells a story: Typhon's beasts devour fragments of Grace to grow stronger, so what the player collects is also what the enemy craves.")
             ],[ CAROUSEL([[CT.realm,"The Realm of Light before the Fall"],[CT.typhon,"Typhon"],[CT.sealed,"A Sealed Temple"]]) ]),
             LIGNE([
@@ -663,7 +661,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("V","What I take away",[
             LIGNE([
-              T("A GDD is not just a list of features: it must link intentions to mechanics, and mechanics to what the player feels. That chain is what I tried to make readable, from pillar to level."),
+              T("A GDD must link intentions to mechanics, and mechanics to what the player feels. I tried to make that link readable, from pillar to level."),
               T("As a producer, this is what now helps me understand what is being asked of design teams, estimate its scope, and know where the heart of a project lies when choices have to be made.")
             ])
           ])
@@ -685,8 +683,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","A young, mobile market driven by demographics",[
             LIGNE([
-              T("The industry is still young: in 1994, Africa had only one studio, Celestial Games, in South Africa. According to Mordor Intelligence (2024 edition), the African market would grow from $2.14 bn in 2024 to $3.72 bn in 2029, about 11.6 % a year, against about 9.3 % for the world market by my calculation ($272.86 bn → $426.02 bn). Yet Africa accounts for **less than 1 %** of the world market.")
-            ],[ SCHEMA("marche","The African video game market, 2024-2029 (Mordor Intelligence), compared with the world market"), FICHE("A few pioneering studios",["South Africa: Celestial Games (1994)","Cameroon: Kiro'o Games (2003)","Ghana: Leti Arts (2009)","Nigeria: Kuluya, Gamsole and Maliyo (around 2012)"]) ]),
+              T("The industry is still young: the first known studio, Celestial Games, was founded in 1994 in South Africa. According to Mordor Intelligence (2024 edition), the African market would grow from $2.14 bn in 2024 to $3.72 bn in 2029, about 11.6 % a year, against about 9.3 % for the world market by my calculation ($272.86 bn → $426.02 bn). Newzoo and Carry1st put the same market at $1.8 bn in 2024: the scopes differ, so I do not mix the two series. Yet Africa accounts for **less than 1 %** of the world market.")
+            ],[ SCHEMA("marche","The African video game market, 2024-2029 (Mordor Intelligence), compared with the world market"), FICHE("A few pioneering studios",["South Africa: Celestial Games (1994)","Cameroon: Kiro'o Games (project started in 2003, studio founded in 2012)","Ghana: Leti Arts (2009)","Nigeria: Kuluya, Gamsole and Maliyo (around 2012)"]) ]),
             LIGNE([
               T("This market relies on mobile: in 2022, 200 million Africans played on their phones, and about 90 % of revenue came through smartphones (Afrik.com). The number of players across all platforms varies widely between sources (from 349 to over 600 million): these figures do not measure the same thing, so I do not compare them."),
               T("The driver of this growth is demographic: 1.4 billion inhabitants, 2.5 billion expected by 2050, and over 60 % under 25 (World Economic Forum).")
@@ -694,12 +692,12 @@ const PROJECTS_EN = {
           ]),
           BANDE("III","Nigeria: mobile, local studios",[
             LIGNE([
-              T("In Nigeria, the industry revolves around four major studios founded around 2012: Maliyo Games, ChopUp, Gamsole and Kuluya. All of them focus on mobile, in a country with 150 million mobile subscribers."),
-              T("In 2011, Bayo Puddicombe turns the danfo, Lagos' iconic yellow bus, into a game: Danfo passes one million downloads. He then founds ChopUp with Zubair Abubakar. In 2016, the studio has 4 employees and releases a new game every 6 weeks.")
-            ],[ ETAPES("ChopUp in a few dates",[["2011 · Danfo","Bayo Puddicombe creates the game Danfo: over one million downloads"],["2012 · ChopUp founded","Founded in Lagos with Zubair Abubakar, on the back of Danfo's success"],["2016 · Production pace","4 employees and a new game every 6 weeks"]]) ]),
+              T("In Nigeria, the industry revolves around four major studios founded around 2012: Maliyo Games, ChopUp, Gamsole and Kuluya. All of them focus on mobile, in a country that had 210 million active mobile subscribers in 2022 (NCC)."),
+              T("In 2011, Bayo Puddicombe turns the danfo, Lagos' iconic yellow bus, into a game: Danfo passes one million downloads. He then founds Pledge 51 with Zubair Abubakar, the company that launches ChopUp. In 2016, the studio has 4 employees and releases a new game every 6 weeks.")
+            ],[ ETAPES("ChopUp in a few dates",[["2011 · Danfo","Bayo Puddicombe creates the game Danfo: over one million downloads"],["2012 · Pledge 51, then ChopUp","Bayo Puddicombe and Zubair Abubakar found Pledge 51, the company that will launch ChopUp, on the back of Danfo's success"],["2016 · Production pace","4 employees and a new game every 6 weeks"]]) ]),
             LIGNE([
               T("Its business model gets around low banking penetration: in Nigeria, more than half of adults have no bank account (Global Findex 2021). ChopUp therefore partners with mobile operators and gives access to its catalogue for a small weekly subscription, charged directly to the phone bill. Chicken Escape and Jagun: Clash of Kingdoms were downloaded 100,000 times within a few months.")
-            ],[ IMG(NG.jagun,"Jagun: Clash of Kingdoms, ChopUp, 2017"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
+            ],[ IMG(NG.jagun,"Jagun: Clash of Kingdoms, ChopUp, 2015"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
             LIGNE([
               T("These studios turn away from Western triple-A to speak to the local. For Matteo Maillard (Jeune Afrique, 2024), they have created an African exception against AAA games whose stories often revolve around “the American navel or European cultural codes”. Daily life becomes game material, like Lagos traffic jams in Okada Ride (Maliyo, 2012), and so do history and myths: Iwaju: Rising Chef (Maliyo, 2024), Aurion: Legacy of the Kori-Odan (Kiro'o Games, Cameroon)."),
               T("For lack of suitable universities, studios also provide training: Maliyo Games offers a free, 3-month online course (Game Art Academy).")
@@ -709,19 +707,19 @@ const PROJECTS_EN = {
             LIGNE([
               T("Young people (70 % of Nigerians are under 30) also drive esports. According to PwC (via Agence Ecofin, November 2023), advertising revenue from video games and esports in Nigeria would rise from $111 m in 2022 to $472 m in 2027. Initiatives are multiplying: the African confederation CASE (founded in Dakar in 2023), AfriGamers tournaments and ABENA Tournaments, which highlights women players."),
               T("Cross-checking sources, I noticed an inconsistency: the same article announces 7.1 % growth a year, which would lead to about $156 m in 2027, not $472 m. More recent PwC editions also give lower figures. I therefore retain a trend, double-digit growth driven by the smartphone, rather than an amount.")
-            ],[ TABLEAU("Video games and esports in Nigeria according to PwC, by edition",["Source","Period","Revenue"],[["Agence Ecofin, Nov. 2023","2022 → 2027","$111 → 472 m (advertising)"],["Nairametrics, Feb. 2025","2023 → 2024","$192 → 217 m"],["Nairametrics, Feb. 2025","2024 → 2028","$217 → 322 m (+10.9 % a year)"]],true) ]),
+            ],[ TABLEAU("Video games and esports in Nigeria according to PwC, by edition",["Source","Period","Revenue"],[["Agence Ecofin, Nov. 2023","2022 → 2027","$111 → 472 m (advertising)"],["Nairametrics, Feb. 2025","2023 → 2024","$192 → 217 m"],["Nairametrics, Feb. 2025","2023 → 2028","$192 → 322 m (+10.9 % a year)"]],true) ]),
             LIGNE([
               T("Yet the model remains strongly limited. I identified five obstacles, from the most material to the most structural."),
-              TABLEAU("Obstacles to the sector's development",["Obstacle","Finding"],[["Internet","Fragile network, dependent on a limited number of submarine cables (BBC News)."],["Electricity","12 national grid collapses in 2024. 82 % of African developers see electrification as essential (Hugo Obi's report)."],["Purchasing power","Few computers and powerful smartphones: free games, designed for casual players."],["Training","Few, if any, long training courses in video games."],["Funding","Revenue often tied to foreign donors. Observers quoted by Courrier International find these games “well-meaning”: a perception, not a measured finding."]],true)
+              TABLEAU("Obstacles to the sector's development",["Obstacle","Finding"],[["Internet","Fragile network, dependent on a limited number of submarine cables (BBC News)."],["Electricity","12 national grid collapses in 2024. 82 % of African developers rate an uninterrupted power supply as critical (report by Maliyo Games, Hugo Obi's studio)."],["Purchasing power","Few computers and powerful smartphones: free games, designed for casual players."],["Training","Few, if any, long training courses in video games."],["Funding","Revenue often tied to foreign donors. Observers quoted by Courrier International find these games “well-meaning”: a perception, not a measured finding."]],true)
             ])
           ]),
           BANDE("V","Conclusion and what I take away",[
             LIGNE([
-              T("Africa is part of a growing market thanks to a young population, a fast-growing mobile market and booming esports. Its model, close to the Asian market in the place it gives to mobile, turns away from AAA in favour of everyday games and national history, but it remains strongly limited by infrastructure, purchasing power and funding."),
-              T("What I take away for production. A market is first read through its constraints. ChopUp did not just choose mobile: it built its business model around low banking penetration and set its production pace according to its resources. For a producer, the lesson is that budget, schedule, platform and payment method are decided together, from the start. This study also taught me to tell an established figure from a projection before building a plan on it.")
+              T("The African market is growing, driven by a young population, mobile gaming and esports. Its model, close to the Asian market in the place it gives to mobile, turns away from AAA in favour of everyday games and national history, but it remains strongly limited by infrastructure, purchasing power and funding."),
+              T("For production, my takeaway is that a market is first read through its constraints. ChopUp chose mobile, built its business model around low banking penetration and set its production pace according to its resources. For a producer, the lesson is that budget, schedule, platform and payment method are decided together, from the start. This study also taught me to tell an established figure from a projection before building a plan on it.")
             ],[ FICHE("What I take away",["Read a market through its constraints","Build the business model around access to payment","Set the production pace according to resources","Tell an established figure from a projection"]) ])
           ]),
-          BANDE("VI","Sources",[ LIGNE([ SOURCES([["Agence Ecofin · Nigéria en 2027, les jeux vidéo généreront plus de revenus publicitaires que le streaming (PwC)", "https://www.agenceecofin.com/communication/1311-113619-nigeria-en-2027-les-jeux-video-genereront-plus-de-revenus-publicitaires-que-le-streaming-l-affichage-exterieur-et-la-presse-ecrite-pwc"], ["Afrik.com · Le gaming en Afrique, une révolution silencieuse", "https://www.afrik.com/le-gaming-en-afrique-une-revolution-silencieuse"], ["Jeune Afrique · L'Afrique, nouvel eldorado des jeux vidéo", "https://www.jeuneafrique.com/1526043/culture/lafrique-nouvel-eldorado-des-jeux-video/"], ["Sigma · Gaming in Nigeria is on the rise", "https://sigma.world/fr/news/gaming-in-nigeria-is-on-the-rise/"], ["Agence Ecofin · Le marché africain des jeux vidéo devrait croître de 11,62 % par an d'ici 2029", "https://www.agenceecofin.com/innovation/0810-122265-le-marche-africain-des-jeux-video-devrait-croitre-de-11-62-par-an-d-ici-2029-rapport"], ["Jeune Afrique · Le Nigeria part à la conquête du marché africain des jeux vidéo", "https://www.jeuneafrique.com/depeches/20777/politique/le-nigeria-part-a-la-conquete-du-marche-africain-des-jeux-video/"], ["Jeune Afrique · Les recettes du succès de ChopUp", "https://www.jeuneafrique.com/315910/economie-entreprises/reussite-les-recettes-du-succes-de-chopup-le-studio-de-jeux-videos-100-nigerian/"], ["Toonmed (blog) · Reportage : les recettes du succès de ChopUp", "https://toonmed.blogspot.com/2016/04/reportage-les-recettes-du-succes-de.html"], ["Agence Ecofin · Le Nigeria et l'Égypte, pays où la moitié des adultes sont non bancarisés", "https://www.agenceecofin.com/finance/0407-99376-le-nigeria-et-l-egypte-font-partie-des-7-pays-au-monde-dans-lesquels-la-moitie-des-adultes-sont-non-bancarises-rapport"], ["Banque de France · Afrique subsaharienne, la fracture financière entre hommes et femmes", "https://www.banque-france.fr/fr/publications-et-statistiques/publications/afrique-subsaharienne-la-fracture-financiere-entre-hommes-et-femmes"], ["Sport News Africa · Vers la naissance de la Confédération africaine du sport en ligne", "https://sportnewsafrica.com/articles/e-sport-vers-la-naissance-de-la-confederation-africaine-du-sport-en-ligne"], ["Mordor Intelligence · Marché mondial du jeu vidéo", "https://www.mordorintelligence.com/fr/industry-reports/global-gaming-market"], ["Courrier International · Comment le jeu vidéo se développe en Afrique", "https://www.courrierinternational.com/article/tendance-comment-le-jeu-video-se-developpe-en-afrique"], ["Africavox · L'Afrique, nouveau berceau de l'e-sport", "https://africavox.easybroadcast.fr/articles/l-afrique-nouveau-berceau-du-e-sports"], ["Afrikactus · L'essor du gaming africain sur la scène mondiale", "https://afrikactus.com/essor-du-gaming-africain-sur-la-scene-mondiale/"], ["ADF Magazine · Des start-ups nigérianes pénètrent le marché des jeux vidéo", "https://adf-magazine.com/fr/2014/10/des-start-ups-nigerianes-penetrent-le-marche-des-jeux-video/"], ["Smart Africa", "https://smartafrica.org/fr/page-daccueil/"], ["AfriGamers", "https://afrigamers.com/a-propos-afrigamers/"], ["Tribune Online · 12 times national grid collapsed in 2024", "https://tribuneonlineng.com/updated-12-times-national-grid-collapsed-in-2024/"], ["Nairametrics · PwC lists 10 fastest-growing entertainment and media sectors in Nigeria 2024-2028", "https://nairametrics.com/2025/02/09/pwc-lists-10-fastest-growing-entertainment-and-media-sectors-in-nigeria-2024-2028/"],["World Economic Forum · How will Africa's youth population drive global growth?", "https://www.weforum.org/stories/youth/africa-youth-global-growth-digital-economy/"],["ONU · Youth population trends (fact sheet)", "https://www.un.org/esa/socdev/documents/youth/fact-sheets/YouthPOP.pdf"],["Afrik.com · L'Afrique, avenir du gaming mondial ?", "https://www.afrik.com/l-afrique-avenir-du-gaming-mondial"],["Le360 · À Kigali, l'Afrique se cherche un modèle économique pour l'e-sport", "https://afrique.le360.ma/sports/des-millions-de-gamers-a-la-manette-a-kigali-lafrique-se-cherche-un-modele-economique-pour-le-sport_OLMQPD7RONHW3MNIOV3TPTZBWI/"],["AFJV · Abena Tournaments", "https://afjv.com/news/11374_abena-tournaments-tournoi-feminin-afrocaribeen-tekken8.htm"],["Linda Ikeji · Mobo Game Jam (Edu360 et Kucheza Gaming)", "https://www.lindaikejisblog.com/2020/12/mobo-game-jam-edu360-kucheza-drive-social-impact-through-gaming.html"],["Maliyo Games · Programmes de formation", "https://www.maliyo.com/programme/"],["Stuff South Africa · GameOn with HP, hackathon", "https://stuff.co.za/2024/10/11/get-your-gameon-with-hps-new-hackathon/"],["HP Gaming Garage", "https://www.hpgaminggarage.com/"],["Game Camp Cities · La CASE signe avec HP", "https://www.gamecampcities.pro/post/la-conf%C3%A9d%C3%A9ration-esport-africaine-signe-son-premier-partenaire-strat%C3%A9gique-continental-le-groupe-h?lang=fr"],["Pulse Nigeria · TCN restores power in Kaduna, Kano, Bauchi and Gombe", "https://www.pulse.ng/articles/news/local/tcn-restores-power-in-kaduna-kano-bauchi-and-gombe-after-prolonged-blackout-2024111910462282759"]]) ]) ])
+          BANDE("VI","Sources",[ LIGNE([ SOURCES([["Agence Ecofin · Nigéria en 2027, les jeux vidéo généreront plus de revenus publicitaires que le streaming (PwC)", "https://www.agenceecofin.com/communication/1311-113619-nigeria-en-2027-les-jeux-video-genereront-plus-de-revenus-publicitaires-que-le-streaming-l-affichage-exterieur-et-la-presse-ecrite-pwc"], ["Afrik.com · Le gaming en Afrique, une révolution silencieuse", "https://www.afrik.com/le-gaming-en-afrique-une-revolution-silencieuse"], ["Jeune Afrique · L'Afrique, nouvel eldorado des jeux vidéo", "https://www.jeuneafrique.com/1526043/culture/lafrique-nouvel-eldorado-des-jeux-video/"], ["Sigma · Gaming in Nigeria is on the rise", "https://sigma.world/fr/news/gaming-in-nigeria-is-on-the-rise/"], ["Agence Ecofin · Le marché africain des jeux vidéo devrait croître de 11,62 % par an d'ici 2029", "https://www.agenceecofin.com/innovation/0810-122265-le-marche-africain-des-jeux-video-devrait-croitre-de-11-62-par-an-d-ici-2029-rapport"], ["Jeune Afrique · Le Nigeria part à la conquête du marché africain des jeux vidéo", "https://www.jeuneafrique.com/depeches/20777/politique/le-nigeria-part-a-la-conquete-du-marche-africain-des-jeux-video/"], ["Jeune Afrique · Les recettes du succès de ChopUp", "https://www.jeuneafrique.com/315910/economie-entreprises/reussite-les-recettes-du-succes-de-chopup-le-studio-de-jeux-videos-100-nigerian/"], ["Toonmed (blog) · Reportage : les recettes du succès de ChopUp", "https://toonmed.blogspot.com/2016/04/reportage-les-recettes-du-succes-de.html"], ["Agence Ecofin · Le Nigeria et l'Égypte, pays où la moitié des adultes sont non bancarisés", "https://www.agenceecofin.com/finance/0407-99376-le-nigeria-et-l-egypte-font-partie-des-7-pays-au-monde-dans-lesquels-la-moitie-des-adultes-sont-non-bancarises-rapport"], ["Banque de France · Afrique subsaharienne, la fracture financière entre hommes et femmes", "https://www.banque-france.fr/fr/publications-et-statistiques/publications/afrique-subsaharienne-la-fracture-financiere-entre-hommes-et-femmes"], ["Sport News Africa · Vers la naissance de la Confédération africaine du sport en ligne", "https://sportnewsafrica.com/articles/e-sport-vers-la-naissance-de-la-confederation-africaine-du-sport-en-ligne"], ["Mordor Intelligence · Marché mondial du jeu vidéo", "https://www.mordorintelligence.com/fr/industry-reports/global-gaming-market"], ["Courrier International · Comment le jeu vidéo se développe en Afrique", "https://www.courrierinternational.com/article/tendance-comment-le-jeu-video-se-developpe-en-afrique"], ["Africavox · L'Afrique, nouveau berceau de l'e-sport", "https://africavox.easybroadcast.fr/articles/l-afrique-nouveau-berceau-du-e-sports"], ["Afrikactus · L'essor du gaming africain sur la scène mondiale", "https://afrikactus.com/essor-du-gaming-africain-sur-la-scene-mondiale/"], ["ADF Magazine · Des start-ups nigérianes pénètrent le marché des jeux vidéo", "https://adf-magazine.com/fr/2014/10/des-start-ups-nigerianes-penetrent-le-marche-des-jeux-video/"], ["Smart Africa", "https://smartafrica.org/fr/page-daccueil/"], ["AfriGamers", "https://afrigamers.com/a-propos-afrigamers/"], ["Tribune Online · 12 times national grid collapsed in 2024", "https://tribuneonlineng.com/updated-12-times-national-grid-collapsed-in-2024/"], ["Nairametrics · PwC lists 10 fastest-growing entertainment and media sectors in Nigeria 2024-2028", "https://nairametrics.com/2025/02/09/pwc-lists-10-fastest-growing-entertainment-and-media-sectors-in-nigeria-2024-2028/"],["World Economic Forum · How will Africa's youth population drive global growth?", "https://www.weforum.org/stories/youth/africa-youth-global-growth-digital-economy/"],["ONU · Youth population trends (fact sheet)", "https://www.un.org/esa/socdev/documents/youth/fact-sheets/YouthPOP.pdf"],["Afrik.com · L'Afrique, avenir du gaming mondial ?", "https://www.afrik.com/l-afrique-avenir-du-gaming-mondial"],["Le360 · À Kigali, l'Afrique se cherche un modèle économique pour l'e-sport", "https://afrique.le360.ma/sports/des-millions-de-gamers-a-la-manette-a-kigali-lafrique-se-cherche-un-modele-economique-pour-le-sport_OLMQPD7RONHW3MNIOV3TPTZBWI/"],["AFJV · Abena Tournaments", "https://afjv.com/news/11374_abena-tournaments-tournoi-feminin-afrocaribeen-tekken8.htm"],["Linda Ikeji · Mobo Game Jam (Edu360 et Kucheza Gaming)", "https://www.lindaikejisblog.com/2020/12/mobo-game-jam-edu360-kucheza-drive-social-impact-through-gaming.html"],["Maliyo Games · Programmes de formation", "https://www.maliyo.com/programme/"],["Stuff South Africa · GameOn with HP, hackathon", "https://stuff.co.za/2024/10/11/get-your-gameon-with-hps-new-hackathon/"],["HP Gaming Garage", "https://www.hpgaminggarage.com/"],["Game Camp Cities · La CASE signe avec HP", "https://www.gamecampcities.pro/post/la-conf%C3%A9d%C3%A9ration-esport-africaine-signe-son-premier-partenaire-strat%C3%A9gique-continental-le-groupe-h?lang=fr"],["Pulse Nigeria · TCN restores power in Kaduna, Kano, Bauchi and Gombe", "https://www.pulse.ng/articles/news/local/tcn-restores-power-in-kaduna-kano-bauchi-and-gombe-after-prolonged-blackout-2024111910462282759"],["Carry1st · Africa's gaming market reaches $1.8bn in 2024 (with Newzoo)", "https://carry1st.com/press/africas-gaming-market-reaches-1-8bn-sixfold-growth-vs-row-driven-by-32mn-new-gamers-in-2024"],["Peoples Gazette · 210 millions d'abonnés mobiles actifs (NCC, 2022)", "https://gazettengr.com/nigerias-mobile-subscribers-hit-210-million-in-august-ncc/"],["Techpoint · Jagun: Clash of Kingdoms (2015)", "https://techpoint.africa/general/jagun-clash-of-kingdoms-chopup/"],["TechCabal · Pledge 51, the company behind ChopUp", "https://techcabal.com/2014/08/29/tayo-oviosu-and-others-invest-in-chopup/"],["Games Industry Africa · Olivier Madiba et Kiro'o Games", "https://gamesindustryafrica.com/2019/09/16/profile-olivier-madiba"],["GameDev Reports · rapport de Maliyo Games sur l'industrie africaine", "https://gamedevreports.substack.com/p/maliyo-games-the-state-of-the-african"]]) ]) ])
         ] })
   ]
 };
@@ -833,7 +831,7 @@ const LEGAL_FR = [
   ["Hébergeur", [
     "**GitHub, Inc.** (service GitHub Pages)",
     "88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis",
-    "Téléphone : +1 877 448 4820 – Site : [github.com](https://github.com)"
+    "Téléphone : +1 877 448 4820 · Site : [github.com](https://github.com)"
   ]],
   ["Propriété intellectuelle", [
     "Les textes, la mise en page et les visuels créés pour ce site sont la propriété de Thibault Merle. Toute reproduction sans autorisation est interdite.",
@@ -865,7 +863,7 @@ const LEGAL_EN = [
   ["Hosting", [
     "**GitHub, Inc.** (GitHub Pages service)",
     "88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States",
-    "Phone: +1 877 448 4820 – Website: [github.com](https://github.com)"
+    "Phone: +1 877 448 4820 · Website: [github.com](https://github.com)"
   ]],
   ["Intellectual property", [
     "The texts, layout and visuals created for this site belong to Thibault Merle. Any reproduction without permission is prohibited.",

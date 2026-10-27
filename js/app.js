@@ -112,10 +112,10 @@ marche(){
   o+=`<text x="${x0}" y="22" class="m" font-size="11" letter-spacing="1.2">${q("MARCHÉ AFRICAIN DU JEU VIDÉO · MILLIARDS DE DOLLARS","AFRICAN VIDEO GAME MARKET · BILLION DOLLARS")}</text>`;
   bars.forEach((b,i)=>{const y=44+i*66,w=b[1]*sc;
     o+=`<text x="${x0-14}" y="${y+30}" text-anchor="end" class="t" font-size="13" font-weight="500">${b[0]}</text><rect x="${x0}" y="${y}" width="${w}" height="44" fill="${b[2]}"/><text x="${x0+w-12}" y="${y+29}" text-anchor="end" font-size="16" font-weight="600" fill="#fff">${String(b[1]).replace(".",q(",","."))} Md$</text>`;});
-  o+=`<path d="M${x0+2.14*sc+40} 66C${x0+2.14*sc+80} 66 ${x0+2.14*sc+80} 110 ${x0+2.14*sc+40} 110" class="ln"/><text x="${x0+2.14*sc+92}" y="94" class="g" font-size="13" font-weight="600">≈ +11,6 %${q(" / an"," / yr")}</text>`.replace("+11,6",q("+11,6","+11.6"));
+  o+=`<path d="M${x0+2.14*sc+40} 66C${x0+2.14*sc+80} 66 ${x0+2.14*sc+80} 110 ${x0+2.14*sc+40} 110" class="ln"/><text x="${x0+2.14*sc+92}" y="94" class="g" font-size="13" font-weight="600">≈ +${q("11,6 % / an","11.6% / yr")}</text>`;
   o+=`<path d="M${x0} 186H640" class="axis"/>`;
-  o+=`<text x="${x0}" y="212" class="t" font-size="12.5"><tspan font-weight="600">${q("Monde","World")}</tspan> : 272,86 → 426,02 Md$ (≈ +9,3 %${q(" / an"," / yr")})</text>`.replace("272,86 → 426,02 Md$ (≈ +9,3 %",q("272,86 → 426,02 Md$ (≈ +9,3 %","272.86 → 426.02 Bn$ (≈ +9.3 %"));
-  o+=`<text x="${x0}" y="236" class="m" font-size="12">${q("Part de l'Afrique : environ 0,8 % du marché mondial en 2024, 0,9 % en 2029","Africa's share: about 0.8 % of the world market in 2024, 0.9 % in 2029")}</text></svg>`;
+  o+=`<text x="${x0}" y="212" class="t" font-size="12.5"><tspan font-weight="600">${q("Monde","World")}</tspan>${q(" :",":")} 272,86 → 426,02 Md$ (≈ +9,3 %${q(" / an"," / yr")})</text>`.replace("272,86 → 426,02 Md$ (≈ +9,3 %",q("272,86 → 426,02 Md$ (≈ +9,3 %","272.86 → 426.02 Bn$ (≈ +9.3%"));
+  o+=`<text x="${x0}" y="236" class="m" font-size="12">${q("Part de l'Afrique : environ 0,8 % du marché mondial en 2024, 0,9 % en 2029","Africa's share: about 0.8% of the world market in 2024, 0.9% in 2029")}</text></svg>`;
   return o;
 },
 orga(){

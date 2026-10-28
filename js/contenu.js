@@ -340,7 +340,9 @@ const PROJECTS_FR = {
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
               T("Pour obtenir de vraies données, j'ai fait vivre un premier sprint par squad, compressé à une semaine au lieu de deux. Côté QA, j'ai écrit un **scénario de onze bugs** pour mettre les workflows à l'épreuve : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint."),
-              T("J'ai finalement clôturé les sprints en avance pour faire avancer la simulation, et le burndown le montre : il chute d'un coup au lieu de descendre jour après jour. C'est la limite d'une mise en situation dans Jira, qui construit ses rapports à partir des dates réelles et ne permet pas d'accélérer le temps. Mon objectif était surtout de vérifier que chaque gadget répond bien à sa question."),
+              T("J'ai finalement clôturé les sprints en avance pour faire avancer la simulation, et le burndown le montre : il chute d'un coup au lieu de descendre jour après jour. C'est la limite d'une mise en situation dans Jira, qui construit ses rapports à partir des dates réelles et ne permet pas d'accélérer le temps. Mon objectif était surtout de vérifier que chaque gadget répond bien à sa question.")
+            ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01 : objectif du sprint, burndown, et tickets terminés, dont deux bugs ajoutés en cours de route") ],"dessous"),
+            LIGNE([
               T("Le **dashboard du producer** s'organise autour de trois questions : où en est le sprint, quelle est la qualité du build, et quels risques arrivent. Le périmètre de la Vertical Slice y est ventilé par squad et par statut, les bugs rouverts y remontent seuls, et un **filtre de contrôle** liste les tickets incomplets : sans squad, ou terminés sans résolution. Sur un vrai projet, c'est ce filtre qui garantit que tous les autres chiffres sont fiables.")
             ],[ IMG("images/jira-dashboard.png","Le dashboard du producer : burndown par squad, périmètre de la Vertical Slice, bugs créés et résolus, contrôles") ],"dessous")
           ]),
@@ -691,7 +693,9 @@ const PROJECTS_EN = {
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
               T("To get real data, I ran a first sprint for each squad, compressed to one week instead of two. On the QA side, I wrote a **scenario of eleven bugs** to put the workflows to the test: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint."),
-              T("In the end, I closed the sprints early to move the simulation forward, and the burndown shows it: it drops all at once instead of going down day by day. This is the limit of a simulation in Jira, which builds its reports from real dates and does not let you speed up time. My main goal was to check that each gadget answers its question."),
+              T("In the end, I closed the sprints early to move the simulation forward, and the burndown shows it: it drops all at once instead of going down day by day. This is the limit of a simulation in Jira, which builds its reports from real dates and does not let you speed up time. My main goal was to check that each gadget answers its question.")
+            ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report: sprint goal, burndown, and completed work items, including two bugs added mid-sprint") ],"dessous"),
+            LIGNE([
               T("The **producer dashboard** is organised around three questions: where the sprint stands, how good the build is, and which risks are coming. The Vertical Slice scope is broken down by squad and status, reopened bugs show up on their own, and a **control filter** lists incomplete work items: missing a squad, or done without a resolution. On a real project, this filter is what makes every other figure reliable.")
             ],[ IMG("images/jira-dashboard.png","The producer dashboard: burndown per squad, Vertical Slice scope, created vs resolved bugs, checks") ],"dessous")
           ]),

@@ -337,7 +337,7 @@ const PROJECTS_FR = {
             ],[ SCHEMA("autoflow","Quatre règles du space, lues selon la même logique") ],"dessous"),
             LIGNE([
               T("Le **journal d'audit** de chaque règle m'a servi à comprendre ce qui bloquait. Un calcul échouait parce que deux champs du site portaient le même nom : je l'ai corrigé en appelant le mien par son identifiant.")
-            ],[ CAROUSEL([["images/jira-automations.png","Les règles actives sur le space"],["images/jira-flow-story.png","Quand une sous-tâche démarre, sa Story passe en cours si elle ne l'est pas déjà"]]) ])
+            ],[ CAROUSEL([["images/jira-automations.png","Les règles actives sur le space"],["images/jira-audit-erreur.png","Le journal d'audit : le calcul du score échoue, l'impact revient vide"],["images/jira-audit-correctif.png","Le déclencheur corrigé : l'impact appelé par son identifiant, cf[10091]"],["images/jira-flow-story.png","Quand une sous-tâche démarre, sa Story passe en cours si elle ne l'est pas déjà"]]) ])
           ]),
           BANDE("VIII","Anticiper avec un registre des risques",[
             LIGNE([
@@ -681,7 +681,7 @@ const PROJECTS_EN = {
             ],[ SCHEMA("autoflow","Four rules of the space, read with the same logic") ],"dessous"),
             LIGNE([
               T("Each rule's **audit log** showed me what was going wrong. One calculation failed because two fields on the site had the same name: I fixed it by calling mine by its ID.")
-            ],[ CAROUSEL([["images/jira-automations.png","The rules active on the space"],["images/jira-flow-story.png","When a subtask starts, its Story moves to In Progress if it is not already"]]) ])
+            ],[ CAROUSEL([["images/jira-automations.png","The rules active on the space"],["images/jira-audit-erreur.png","The audit log: the score calculation fails, impact comes back empty"],["images/jira-audit-correctif.png","The fixed trigger: impact called by its ID, cf[10091]"],["images/jira-flow-story.png","When a subtask starts, its Story moves to In Progress if it is not already"]]) ])
           ]),
           BANDE("VIII","Anticipating with a risk register",[
             LIGNE([

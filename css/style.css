@@ -2553,6 +2553,7 @@ html body .prose strong,
 html body .intro strong,
 html body .home-intro strong {
   font-weight: 650;
+  color: var(--gold-d);
 }
 html body .band-head h2::after,
 html body .list-head h1::after,

@@ -352,7 +352,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("J'ai enfin ajouté un **registre des risques** directement dans Jira, sous la forme d'un type de ticket à part. Chaque risque porte une probabilité, un impact, un signal d'alerte, une mesure d'atténuation et un plan de repli. Son score se calcule tout seul, et il est relié aux tickets qu'il menace. Les risques viennent de ce que le projet avait déjà révélé : la saturation de l'animateur et du sound designer, les livraisons des prestataires et la dérive du périmètre."),
               T("Sur le dashboard, une **matrice des risques** croise probabilité et impact, à côté d'une liste classée par score. On voit en un coup d'œil quels risques traiter en premier, et lesquels sont déjà en cours d'atténuation.")
-            ],[ CAROUSEL([["images/jira-risques-liste.png","Les risques ouverts classés par score, et la matrice probabilité × impact"],["images/jira-risques-matrice.png","La matrice des risques : sept risques ouverts, répartis par probabilité et par impact"]]) ])
+            ],[ CAROUSEL([["images/jira-risques-liste.png","Les risques ouverts du dashboard, avec leur score et leur statut"],["images/jira-risques-matrice.png","La matrice des risques : sept risques ouverts, répartis par probabilité et par impact"],["images/jira-risque-r4.png","Un risque : signal d'alerte, atténuation, plan de repli, et les Epics qu'il menace"]]) ])
           ]),
           BANDE("VIII","Ce que j'en retiens",[
             LIGNE([
@@ -703,7 +703,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("Finally, I added a **risk register** directly in Jira, as a dedicated work type. Each risk has a probability, an impact, a warning signal, a mitigation and a fallback plan. Its score is calculated automatically, and it is linked to the work items it threatens. The risks come from what the project had already revealed: the animator and sound designer overload, vendor deliveries and scope creep."),
               T("On the dashboard, a **risk matrix** crosses probability and impact, next to a list ranked by score. At a glance, you can see which risks to handle first, and which are already being mitigated.")
-            ],[ CAROUSEL([["images/jira-risques-liste.png","Open risks ranked by score, and the probability × impact matrix"],["images/jira-risques-matrice.png","The risk matrix: seven open risks, by probability and impact"]]) ])
+            ],[ CAROUSEL([["images/jira-risques-liste.png","Open risks on the dashboard, with their score and status"],["images/jira-risques-matrice.png","The risk matrix: seven open risks, by probability and impact"],["images/jira-risque-r4.png","A risk: warning signal, mitigation, fallback plan, and the Epics it threatens"]]) ])
           ]),
           BANDE("VIII","What I take away",[
             LIGNE([

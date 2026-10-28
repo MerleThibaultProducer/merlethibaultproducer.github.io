@@ -2667,7 +2667,7 @@ html body .brand .brole {
 body.page-home main { position: relative; isolation: isolate; overflow: hidden; }
 body.page-home main::before {
   content: ""; position: absolute; top: 0; right: 0; width: 58%; z-index: -1; pointer-events: none;
-  background: url("../images/accueil-fond.jpg") right center / cover no-repeat;
+  background: url("../images/accueil-fond-jira.jpg") right center / cover no-repeat;
   opacity: .14;
   -webkit-mask-image: linear-gradient(to right, transparent, #000 45%), linear-gradient(to bottom, transparent, #000 15%, #000 85%, transparent);
   -webkit-mask-composite: source-in; mask-composite: intersect;

@@ -332,15 +332,15 @@ const PROJECTS_FR = {
           ]),
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
-              T("J'ai fait vivre un premier sprint par squad, compressé à une semaine, avec un **scénario de onze bugs** écrit pour tester les workflows : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint. J'ai clôturé les sprints en avance, d'où le burndown qui chute d'un coup, puisque Jira construit ses rapports à partir des dates réelles. L'enjeu était de vérifier que chaque rapport répond à sa question.")
+              T("Pour vérifier que chaque rapport répond à sa question, j'ai fait vivre un premier sprint par squad, compressé à une semaine, avec un **scénario de onze bugs** écrit pour tester les workflows : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint. J'ai clôturé les sprints en avance, d'où le burndown qui chute d'un coup, puisque Jira construit ses rapports à partir des dates réelles.")
             ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01 : objectif, burndown et tickets terminés, dont deux bugs ajoutés en cours de route") ]),
             LIGNE([
-              T("Le **dashboard du producer** suit trois choses : l'avancée du sprint, la qualité du build et les risques à venir. Son **filtre de contrôle** liste les tickets incomplets, sans squad ou terminés sans résolution : c'est lui qui garantit que les autres chiffres sont fiables. Le dashboard a évolué avec le projet : après la clôture des sprints, le suivi des bugs et la liste des risques y ont pris la place des burndowns.")
+              T("Le **dashboard du producer** suit trois choses : l'avancée du sprint, la qualité du build et les risques à venir. Son **filtre de contrôle** liste les tickets incomplets, sans squad ou terminés sans résolution, ce qui garantit la fiabilité des autres chiffres. Le dashboard a évolué avec le projet : après la clôture des sprints, le suivi des bugs et la liste des risques y ont pris la place des burndowns.")
             ],[ CAROUSEL([["images/jira-dashboard.png","Pendant le sprint : burndowns, périmètre de la Vertical Slice et contrôles"],["images/jira-dashboard-fin.png","Après la clôture : bugs créés et résolus, bugs rouverts et risques ouverts classés par score"]]) ])
           ]),
           BANDE("VII","Automatiser les gestes répétitifs",[
             LIGNE([
-              T("Je voulais aussi maîtriser les automatisations, l'un des outils les plus utiles de Jira. Chaque règle suit la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. Une sous-tâche hérite de la squad de sa Story, une Story démarre avec sa première sous-tâche, un bug bloquant déclenche une alerte, et le taux de reproduction d'un bug fixe son likelihood. La condition protège la règle : sans elle, celle qui démarre une Story tenterait de la relancer à chaque sous-tâche.")
+              T("Je voulais aussi maîtriser les automatisations de Jira. Chaque règle suit la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. Une sous-tâche hérite de la squad de sa Story, une Story démarre avec sa première sous-tâche, un bug bloquant déclenche une alerte, et le taux de reproduction d'un bug fixe son likelihood. La condition protège la règle : sans elle, celle qui démarre une Story tenterait de la relancer à chaque sous-tâche.")
             ],[ SCHEMA("autoflow","Cinq règles du space, lues selon la même logique") ]),
             LIGNE([
               T("Le **journal d'audit** de chaque règle m'a servi à comprendre ce qui bloquait. Un calcul échouait parce que deux champs du site portaient le même nom : je l'ai corrigé en appelant le mien par son identifiant.")
@@ -358,7 +358,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("IX","Ce que j'en retiens",[
             LIGNE([
-              T("J'ai appris à **penser Jira comme une base de données** : une fois les tickets bien rangés, chaque équipe, chaque jalon et chaque contrôle qualité n'est qu'une requête. L'outil rend visibles les décisions du producer (qui est saturé, ce qui dépend de l'extérieur, ce qu'on accepte de reporter), sans les prendre à sa place."),
+              T("J'ai appris à **penser Jira comme une base de données** : une fois les tickets bien rangés, chaque équipe, chaque jalon et chaque contrôle qualité n'est qu'une requête. L'outil rend visibles les décisions du producer : qui est saturé, ce qui dépend de l'extérieur, ce qu'on accepte de reporter."),
               T("Ce space est devenu une **base réutilisable** : les quatre axes de classement, une bibliothèque de filtres avec son contrôle, des workflows dont chaque fermeture porte une résolution, un ticket de bug qui sépare la mesure du jugement, un registre des risques et quelques automatisations testées. Sur un autre projet, il suffit d'adapter les valeurs à l'équipe et au jeu."),
               T("Sur un vrai projet, j'ouvrirais **le registre des risques dès le lancement**, et je simulerais deux semaines complètes en temps réel.")
             ])
@@ -680,15 +680,15 @@ const PROJECTS_EN = {
           ]),
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
-              T("I ran a first sprint for each squad, compressed to one week, with a **scenario of eleven bugs** written to test the workflows: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint. I closed the sprints early, hence the burndown that drops all at once, since Jira builds its reports from real dates. The point was to check that each report answers its question.")
+              T("To check that each report answers its question, I ran a first sprint for each squad, compressed to one week, with a **scenario of eleven bugs** written to test the workflows: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint. I closed the sprints early, hence the burndown that drops all at once, since Jira builds its reports from real dates.")
             ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report: goal, burndown and completed work items, including two bugs added mid-sprint") ]),
             LIGNE([
-              T("The **producer dashboard** tracks three things: sprint progress, build quality and upcoming risks. Its **control filter** lists incomplete work items, missing a squad or done without a resolution: it is what makes the other figures reliable. The dashboard evolved with the project: once the sprints were closed, bug tracking and the risk list took the place of the burndowns.")
+              T("The **producer dashboard** tracks three things: sprint progress, build quality and upcoming risks. Its **control filter** lists incomplete work items, missing a squad or done without a resolution, which keeps the other figures reliable. The dashboard evolved with the project: once the sprints were closed, bug tracking and the risk list took the place of the burndowns.")
             ],[ CAROUSEL([["images/jira-dashboard.png","During the sprint: burndowns, Vertical Slice scope and checks"],["images/jira-dashboard-fin.png","After closing: created vs resolved bugs, reopened bugs and open risks ranked by score"]]) ])
           ]),
           BANDE("VII","Automating the repetitive actions",[
             LIGNE([
-              T("I also wanted to master automations, one of Jira's most useful tools. Every rule follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. A subtask inherits its Story's squad, a Story starts with its first subtask, a blocker bug triggers an alert, and a bug's repro rate sets its likelihood. The condition keeps a rule safe: without it, the one that starts a Story would try to restart it with every subtask.")
+              T("I also wanted to master Jira's automations. Every rule follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. A subtask inherits its Story's squad, a Story starts with its first subtask, a blocker bug triggers an alert, and a bug's repro rate sets its likelihood. The condition keeps a rule safe: without it, the one that starts a Story would try to restart it with every subtask.")
             ],[ SCHEMA("autoflow","Five rules of the space, read with the same logic") ]),
             LIGNE([
               T("Each rule's **audit log** showed me what was going wrong. One calculation failed because two fields on the site had the same name: I fixed it by calling mine by its ID.")
@@ -706,7 +706,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("IX","What I take away",[
             LIGNE([
-              T("I learned to **think of Jira as a database**: once the work items are well sorted, every team, milestone and quality check is just a query. The tool makes the producer's decisions visible (who is overloaded, what depends on outside partners, what we agree to postpone) without making them."),
+              T("I learned to **think of Jira as a database**: once the work items are well sorted, every team, milestone and quality check is just a query. The tool makes the producer's decisions visible: who is overloaded, what depends on outside partners, what we agree to postpone."),
               T("This space has become a **reusable foundation**: the four sorting axes, a filter library with its control filter, workflows where every closure carries a resolution, a bug ticket that separates measurement from judgement, a risk register and a few tested automations. On another project, all it takes is adapting the values to the team and the game."),
               T("On a real project, I would open **the risk register at kickoff** and simulate two full weeks in real time.")
             ])

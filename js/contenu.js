@@ -279,7 +279,7 @@ const PROJECTS_FR = {
         desc:"Une mise en situation menée seul : la production d'un action-RPG AA fictif structurée dans Jira, des boards au registre des risques.",
         carte:"Un studio fictif structuré dans Jira : workflows à résolutions, circuit des bugs, automatisations et registre des risques.",
         img:"",
-        infos:{ "Rôle":"Producer (mise en situation, mené seul)", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL · Coda", "Période":"Octobre 2026", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
+        infos:{ "Rôle":"Producer (mise en situation, mené seul)", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL", "Période":"Octobre 2026", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
         apercu:"Pour apprendre Jira sur un cas réaliste, j'ai organisé seul la production d'un action-RPG AA fictif : 15 personnes et quatre prestataires, sur le modèle d'Ember Lab pour Kena: Bridge of Spirits. J'y ai construit un board par public, des workflows où chaque ticket fermé porte une résolution, un ticket de bug qui sépare la mesure du jugement, des automatisations et un registre des risques relié aux tickets qu'il menace. Un sprint simulé m'a servi à vérifier que chaque élément répond à une question de production. Je joue tous les rôles et les données sont simulées : le projet montre comment je structure l'outil, sans prétendre mesurer la conduite d'une équipe.",
         contenu:[
           BANDE("I","Le cadre du projet",[
@@ -328,8 +328,8 @@ const PROJECTS_FR = {
               T("J'ai fait vivre un premier sprint par squad, compressé à une semaine, avec un **scénario de onze bugs** écrit pour tester les workflows : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint. J'ai clôturé les sprints en avance, d'où le burndown qui chute d'un coup, puisque Jira construit ses rapports à partir des dates réelles. L'enjeu était de vérifier que chaque rapport répond à sa question.")
             ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01 : objectif, burndown et tickets terminés, dont deux bugs ajoutés en cours de route") ],"dessous"),
             LIGNE([
-              T("Le **dashboard du producer** répond à trois questions : où en est le sprint, quelle est la qualité du build, quels risques arrivent. Son filtre de contrôle liste les tickets incomplets, sans squad ou terminés sans résolution : c'est lui qui garantit que les autres chiffres sont fiables.")
-            ],[ IMG("images/jira-dashboard.png","Le dashboard du producer : burndown, périmètre de la Vertical Slice, bugs créés et résolus, contrôles") ],"dessous")
+              T("Le **dashboard du producer** répond à trois questions : où en est le sprint, quelle est la qualité du build, quels risques arrivent. Son filtre de contrôle liste les tickets incomplets, sans squad ou terminés sans résolution : c'est lui qui garantit que les autres chiffres sont fiables. Le dashboard a évolué avec le projet : après la clôture des sprints, le suivi des bugs et la liste des risques y ont pris la place des burndowns.")
+            ],[ CAROUSEL([["images/jira-dashboard.png","Pendant le sprint : burndowns, périmètre de la Vertical Slice et contrôles"],["images/jira-dashboard-fin.png","Après la clôture : bugs créés et résolus, bugs rouverts et risques ouverts classés par score"]]) ],"dessous")
           ]),
           BANDE("VII","Automatiser les gestes répétitifs",[
             LIGNE([
@@ -352,7 +352,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("J'ai appris à penser Jira comme une base de données : une fois les tickets bien rangés, chaque équipe, chaque jalon et chaque contrôle qualité n'est qu'une requête. L'outil rend visibles les décisions du producer (qui est saturé, ce qui dépend de l'extérieur, ce qu'on accepte de reporter), sans les prendre à sa place."),
               T("Ce space est devenu une **base réutilisable** : les quatre axes de classement, une bibliothèque de filtres avec son contrôle, des workflows dont chaque fermeture porte une résolution, un ticket de bug qui sépare la mesure du jugement, un registre des risques et quelques automatisations testées. Sur un autre projet, il suffit d'adapter les valeurs à l'équipe et au jeu."),
-              T("J'ai aussi transposé cette organisation dans Coda : certains calculs y sont plus simples, mais ses formules ne lisent pas l'historique des statuts. Sur un vrai projet, j'ouvrirais le registre des risques dès le lancement, et je simulerais deux semaines complètes en temps réel.")
+              T("Sur un vrai projet, j'ouvrirais le registre des risques dès le lancement, et je simulerais deux semaines complètes en temps réel.")
             ])
           ])
         ] })
@@ -623,7 +623,7 @@ const PROJECTS_EN = {
         desc:"A simulation run on my own: the production of a fictional AA action-RPG structured in Jira, from the boards to the risk register.",
         carte:"A fictional studio structured in Jira: workflows with resolutions, a bug pipeline, automations and a risk register.",
         img:"",
-        infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL · Coda", "Period":"October 2026", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
+        infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL", "Period":"October 2026", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
         apercu:"To learn Jira on a realistic case, I organised on my own the production of a fictional AA action-RPG: 15 people and four vendors, modelled on Ember Lab's setup for Kena: Bridge of Spirits. I built one board per audience, workflows where every closed work item carries a resolution, a bug ticket that separates measurement from judgement, automations and a risk register linked to the work items it threatens. A simulated sprint let me check that each element answers a production question. I play every role and the data is simulated: the project shows how I structure the tool, without claiming to measure how I lead a team.",
         contenu:[
           BANDE("I","The project framework",[
@@ -672,8 +672,8 @@ const PROJECTS_EN = {
               T("I ran a first sprint for each squad, compressed to one week, with a **scenario of eleven bugs** written to test the workflows: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint. I closed the sprints early, hence the burndown that drops all at once, since Jira builds its reports from real dates. The point was to check that each report answers its question.")
             ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report: goal, burndown and completed work items, including two bugs added mid-sprint") ],"dessous"),
             LIGNE([
-              T("The **producer dashboard** answers three questions: where the sprint stands, how good the build is, which risks are coming. Its control filter lists incomplete work items, missing a squad or done without a resolution: it is what makes the other figures reliable.")
-            ],[ IMG("images/jira-dashboard.png","The producer dashboard: burndown, Vertical Slice scope, created vs resolved bugs, checks") ],"dessous")
+              T("The **producer dashboard** answers three questions: where the sprint stands, how good the build is, which risks are coming. Its control filter lists incomplete work items, missing a squad or done without a resolution: it is what makes the other figures reliable. The dashboard evolved with the project: once the sprints were closed, bug tracking and the risk list took the place of the burndowns.")
+            ],[ CAROUSEL([["images/jira-dashboard.png","During the sprint: burndowns, Vertical Slice scope and checks"],["images/jira-dashboard-fin.png","After closing: created vs resolved bugs, reopened bugs and open risks ranked by score"]]) ],"dessous")
           ]),
           BANDE("VII","Automating the repetitive actions",[
             LIGNE([
@@ -696,7 +696,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("I learned to think of Jira as a database: once the work items are well sorted, every team, milestone and quality check is just a query. The tool makes the producer's decisions visible (who is overloaded, what depends on outside partners, what we agree to postpone) without making them."),
               T("This space has become a **reusable foundation**: the four sorting axes, a filter library with its control filter, workflows where every closure carries a resolution, a bug ticket that separates measurement from judgement, a risk register and a few tested automations. On another project, all it takes is adapting the values to the team and the game."),
-              T("I also transposed this organisation into Coda: some calculations are simpler there, but its formulas cannot read the status history. On a real project, I would open the risk register at kickoff and simulate two full weeks in real time.")
+              T("On a real project, I would open the risk register at kickoff and simulate two full weeks in real time.")
             ])
           ])
         ] })

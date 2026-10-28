@@ -275,10 +275,10 @@ const PROJECTS_FR = {
         ] })
   ],
   perso: [
-    P({ title:"Projet Jira et Agile : un studio en mise en situation – Octobre 2026", large:true, nocover:true,
+    P({ survol:{ items:["Producer","Action-RPG AA · 15 personnes","Mise en situation","Jira · JQL"] }, cat:"Gestion de production", title:"Projet Jira et Agile : un studio en mise en situation – Octobre 2026", large:true, nocover:true,
         desc:"Une mise en situation menée seul : la production d'un action-RPG AA fictif structurée dans Jira, des boards au registre des risques.",
         carte:"Un studio fictif structuré dans Jira : workflows à résolutions, circuit des bugs, automatisations et registre des risques.",
-        img:"",
+        img:"images/jira-vignette.jpg",
         infos:{ "Rôle":"Producer (mise en situation, mené seul)", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL", "Période":"Octobre 2026", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
         apercu:"Pour apprendre Jira sur un cas réaliste, j'ai organisé seul la production d'un action-RPG AA fictif : 15 personnes et quatre prestataires, sur le modèle d'Ember Lab pour Kena: Bridge of Spirits. J'y ai construit un board par public, des workflows où chaque ticket fermé porte une résolution, un ticket de bug qui sépare la mesure du jugement, des automatisations et un registre des risques relié aux tickets qu'il menace. Un sprint simulé m'a servi à vérifier que chaque élément répond à une question de production. Je joue tous les rôles et les données sont simulées : le projet montre comment je structure l'outil, sans prétendre mesurer la conduite d'une équipe.",
         contenu:[
@@ -355,9 +355,7 @@ const PROJECTS_FR = {
               T("Sur un vrai projet, j'ouvrirais le registre des risques dès le lancement, et je simulerais deux semaines complètes en temps réel.")
             ])
           ])
-        ] })
-  ],
-  exo: [
+        ] }),
         P({ survol:{ items:["Producer","Jeu AA · 30 à 50 personnes","48 mois de production","Excel · Coda · ClickUp"] }, cat:"Gestion de production", title:"Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes
         img:"images/wyrdfall-vignette.jpg",
         infos:{ "Rôle":"Producer", "Projet":"AA · 30 à 50 personnes", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
@@ -619,10 +617,10 @@ const PROJECTS_EN = {
         ] })
   ],
   perso: [
-    P({ title:"Jira and Agile Project: A Studio Simulation – October 2026", large:true, nocover:true,
+    P({ survol:{ items:["Producer","AA action-RPG · 15 people","Simulation","Jira · JQL"] }, cat:"Production management", title:"Jira and Agile Project: A Studio Simulation – October 2026", large:true, nocover:true,
         desc:"A simulation run on my own: the production of a fictional AA action-RPG structured in Jira, from the boards to the risk register.",
         carte:"A fictional studio structured in Jira: workflows with resolutions, a bug pipeline, automations and a risk register.",
-        img:"",
+        img:"images/jira-vignette.jpg",
         infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL", "Period":"October 2026", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
         apercu:"To learn Jira on a realistic case, I organised on my own the production of a fictional AA action-RPG: 15 people and four vendors, modelled on Ember Lab's setup for Kena: Bridge of Spirits. I built one board per audience, workflows where every closed work item carries a resolution, a bug ticket that separates measurement from judgement, automations and a risk register linked to the work items it threatens. A simulated sprint let me check that each element answers a production question. I play every role and the data is simulated: the project shows how I structure the tool, without claiming to measure how I lead a team.",
         contenu:[
@@ -699,11 +697,9 @@ const PROJECTS_EN = {
               T("On a real project, I would open the risk register at kickoff and simulate two full weeks in real time.")
             ])
           ])
-        ] })
-  ],
-  exo: [
+        ] }),
     P({ survol:{ items:["Producer","AA game · 30 to 50 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", nocover:true, desc:"Production dossier for a 48-month AA game: team, budget, planning, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
-        img:PROJECTS_FR.exo[0].img,
+        img:PROJECTS_FR.perso[1].img,
         infos:{ "Role":"Producer", "Project":"AA · 30 to 50 people", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
         apercu:"This production exercise was about Wyrdfall, a fictional AA game. I only show the production management part here, where I acted as producer, from building the team to the break-even point. The result: a €9M budget over 48 months, a break-even point at around 451,000 sales and three ROI scenarios, all in an Excel file that updates in one click.",
         contenu:[
@@ -865,13 +861,11 @@ let PROJECTS = PROJECTS_FR;
 
 const SECTIONS_FR = [
   {key:"pro",  label:"Projets Professionnels", route:"#/pro",  intro:"Les productions que j'ai menées comme producer à Game Sup : workshops et projets de fin d'année."},
-  {key:"perso",label:"Projets Personnels",     route:"#/perso",intro:"Les projets menés en dehors du cadre professionnel."},
-  {key:"exo",  label:"Exercices",              route:"#/exo",  intro:"Mes exercices de production, de Game Design et d'analyse de marché."}
+  {key:"perso",label:"Projets Personnels",     route:"#/perso",intro:"Mes projets personnels et mes exercices de production, de Game Design et d'analyse de marché."}
 ];
 const SECTIONS_EN = [
   {key:"pro",  label:"Professional Projects", route:"#/pro",  intro:"The productions I led as a producer at Game Sup: workshops and end-of-year projects."},
-  {key:"perso",label:"Personal Projects",     route:"#/perso",intro:"Projects carried out outside a professional setting."},
-  {key:"exo",  label:"Exercises",             route:"#/exo",  intro:"My production, game design and market-analysis exercises."}
+  {key:"perso",label:"Personal Projects",     route:"#/perso",intro:"My personal projects and my production, game design and market-analysis exercises."}
 ];
 let SECTIONS = SECTIONS_FR;
 

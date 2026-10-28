@@ -81,7 +81,7 @@ function listing(sec){
     <h3>${cardTitle(p.title,p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
     ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="btn" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${t("details")}</a>`}</article>`).join("");
   return `<div class="list-head"><h1>${sec.label}</h1><p class="lead">${sec.intro}</p></div>
-  <div class="stage">${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="exo"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;
+  <div class="stage">${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="perso"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;
 }
 
 const tipNote = (label, key) => {
@@ -358,7 +358,7 @@ let curNav = null, navDir = 0;
 let cur = location.hash || "#/";   /* page courante, gardée en mémoire : marche même dans un aperçu isolé */
 
 function render(){
-  const h = cur, [ , key, id] = h.split("/");
+  const h = cur, [ , k0, id] = h.split("/"), key = k0 === "exo" ? "perso" : k0;  /* anciens liens #/exo/… */
   let html, active = h; curNav = null;
   const sec = SECTIONS.find(s => s.key === key);
   if(sec && id){

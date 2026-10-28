@@ -2834,11 +2834,11 @@ html body nav .lang button {
 html body .project .band:not(:has(.brow:not(.solo), figure, table, .stats, .tbl, details, ul, ol)) { text-align: center; }
 html body .project .band:not(:has(.brow:not(.solo), figure, table, .stats, .tbl, details, ul, ol)) .bt p { margin-inline: auto; max-width: 62ch; }
 
-/* ---------- Équipes : bloc déplié par un bouton ---------- */
-html body .teams-fold > summary { display: inline-flex; list-style: none; margin: .4rem 0 1.4rem; }
-html body .teams-fold > summary::-webkit-details-marker { display: none; }
-html body .teams-fold .f-hide,
-html body .teams-fold[open] .f-show { display: none; }
-html body .teams-fold[open] .f-hide { display: inline; }
+/* ---------- Blocs dépliés par un bouton (équipes, sources) ---------- */
+html body .fold > summary { display: inline-flex; list-style: none; margin: .4rem 0 1.4rem; }
+html body .fold > summary::-webkit-details-marker { display: none; }
+html body .fold .f-hide,
+html body .fold[open] .f-show { display: none; }
+html body .fold[open] .f-hide { display: inline; }
 /* le contenu d'un <details> passe par ::details-content, qui ne reçoit pas le box-sizing hérité */
-html body .teams-fold::details-content { box-sizing: inherit; }
+html body .fold::details-content { box-sizing: inherit; }

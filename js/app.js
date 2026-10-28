@@ -94,7 +94,7 @@ const tipNote = (label, key) => {
     + (N.sources ? `<span class="tip-src">${N.sources.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener">${esc(x[0])}</a>`).join("")}</span>` : "")
     + `</span></span>`;
 };
-const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/==(.+?)==/g,"<mark>$1</mark>").replace(/\[\[(.+?)\|([\w-]+)\]\]/g,(m,l,k)=>tipNote(l,k));
+const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\*([^*]+)\*/g,"<em>$1</em>").replace(/==(.+?)==/g,"<mark>$1</mark>").replace(/\[\[(.+?)\|([\w-]+)\]\]/g,(m,l,k)=>tipNote(l,k));
 /* Bulles : survol sur ordinateur, toucher sur mobile, Échap pour fermer */
 document.addEventListener("click", e => {
   const btn = e.target.closest(".tip-btn");

@@ -41,7 +41,7 @@ let SITE = SITE_FR;
    Les blocs s'affichent dans l'ordre où vous les écrivez.
 
    MISE EN FORME DU TEXTE (dans T, FICHE, etc.) :
-   **mot**  → en gras          ==mot==  → en couleur (doré)
+   **mot**  → en gras          ==mot==  → en couleur (doré)          *titre*  → en italique
 
    VIGNETTE : carte:"texte court" s'affiche sous la vignette (sinon desc). La ligne d'infos reprend les 2 premières infos.
 
@@ -314,7 +314,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("V","Le circuit des bugs",[
             LIGNE([
-              T("J'ai ensuite retravaillé le ticket de bug en pensant à ses deux lecteurs : l'équipe QA, qui doit trouver dans le ticket toutes les informations utiles à son travail, et le producer, qui doit pouvoir le lire rapidement. En m'appuyant sur The Pocket Mentor for Video Game Testing, de Harún H. Ali, j'ai ajouté des **champs dédiés**. Le ticket situe d'abord le bug : le numéro de build, la version où il a été vu et celle où il sera corrigé, et l'Epic qu'il touche. Il le décrit ensuite par le résultat attendu et le résultat obtenu. Le nombre d'essais et d'occurrences donne enfin le **taux de reproduction**, qui indique si le bug revient à chaque fois ou seulement de temps en temps."),
+              T("J'ai ensuite retravaillé le ticket de bug en pensant à ses deux lecteurs : l'équipe QA, qui doit trouver dans le ticket toutes les informations utiles à son travail, et le producer, qui doit pouvoir le lire rapidement. En m'appuyant sur *The Pocket Mentor for Video Game Testing*, de Harún H. Ali, j'ai ajouté des **champs dédiés**. Le ticket situe d'abord le bug : le numéro de build, la version où il a été vu et celle où il sera corrigé, et l'Epic qu'il touche. Il le décrit ensuite par le résultat attendu et le résultat obtenu. Le nombre d'essais et d'occurrences donne enfin le **taux de reproduction**, qui indique si le bug revient à chaque fois ou seulement de temps en temps."),
               T("Pour le producer, le ticket sépare aussi la **sévérité** de la **priorité**. La sévérité dit à quel point le jeu est cassé, la priorité dit dans quel ordre on corrige : un bug peut être grave mais rare, ou bénin mais permanent, et c'est au producer d'arbitrer entre les deux. Avec le responsable, que Jira affiche, on voit d'un coup d'œil **ce qui est cassé, à quel point, qui s'en charge et pour quelle version**.")
             ],[ IMG("images/jira-ticket-bug.png","Le ticket de bug et ses champs : build, versions, sévérité, priorité, taux de reproduction et responsable") ]),
             LIGNE([
@@ -656,7 +656,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("V","The bug pipeline",[
             LIGNE([
-              T("I then reworked the bug ticket with its two readers in mind: the QA team, who need every useful detail directly in the ticket, and the producer, who must be able to read it quickly. Drawing on The Pocket Mentor for Video Game Testing by Harún H. Ali, I added **dedicated fields**. The ticket first places the bug: the build number, the version where it was found and the one where it will be fixed, and the Epic it affects. It then describes it through the expected and actual results. Finally, the number of attempts and occurrences gives the **repro rate**, which shows whether the bug comes back every time or only now and then."),
+              T("I then reworked the bug ticket with its two readers in mind: the QA team, who need every useful detail directly in the ticket, and the producer, who must be able to read it quickly. Drawing on *The Pocket Mentor for Video Game Testing* by Harún H. Ali, I added **dedicated fields**. The ticket first places the bug: the build number, the version where it was found and the one where it will be fixed, and the Epic it affects. It then describes it through the expected and actual results. Finally, the number of attempts and occurrences gives the **repro rate**, which shows whether the bug comes back every time or only now and then."),
               T("For the producer, the ticket also separates **severity** from **priority**. Severity says how broken the game is, priority sets the order in which bugs are fixed: a bug can be severe but rare, or minor but permanent, and it is up to the producer to weigh the two. With the assignee, which Jira displays, you can see at a glance **what is broken, how badly, who is handling it and for which version**.")
             ],[ IMG("images/jira-ticket-bug.png","The bug ticket and its fields: build, versions, severity, priority, repro rate and assignee") ]),
             LIGNE([

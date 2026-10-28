@@ -2825,3 +2825,14 @@ html body .tip-src a { text-underline-offset: 2px; }
   html body .tip.open .tip-pop, html body .tip:focus-within .tip-pop { visibility: visible; opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) { html body .tip-pop { transition: none; } }
+/* Cibles tactiles d'au moins 24 px (WCAG 2.2, critère 2.5.8) */
+html body .back,
+html body footer .legal-row a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
+html body nav .lang button {
+  min-width: 24px;
+  min-height: 24px;
+}

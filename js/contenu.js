@@ -339,18 +339,27 @@ const PROJECTS_FR = {
           ]),
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
-              T("Pour obtenir de vraies données, je fais vivre un premier sprint du 24 au 31 octobre, compressé à une semaine au lieu de deux, car Jira construit ses graphiques à partir des dates réelles. Côté QA, j'ai écrit un **scénario de onze bugs** pour mettre les workflows à l'épreuve : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint."),
-              T("[À compléter après le 31 octobre : ce qui a été terminé, ce qui a été reporté et pourquoi, et ce que le dashboard a permis de voir.]")
-            ],[ IMG("","Capture à ajouter : le dashboard en fin de sprint") ]),
-            LIGNE([
-              T("[À compléter : un blocage marqué par un drapeau, la façon dont il a été levé, et ce qu'il a changé au sprint.]")
-            ],[ IMG("","Capture à ajouter : le burndown ou le sprint report") ])
+              T("Pour obtenir de vraies données, j'ai fait vivre un premier sprint par squad, compressé à une semaine au lieu de deux. Côté QA, j'ai écrit un **scénario de onze bugs** pour mettre les workflows à l'épreuve : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint."),
+              T("J'ai finalement clôturé les sprints en avance pour faire avancer la simulation, et le burndown le montre : il chute d'un coup au lieu de descendre jour après jour. C'est la limite d'une mise en situation dans Jira, qui construit ses rapports à partir des dates réelles et ne permet pas d'accélérer le temps. Mon objectif était surtout de vérifier que chaque gadget répond bien à sa question."),
+              T("Le **dashboard du producer** s'organise autour de trois questions : où en est le sprint, quelle est la qualité du build, et quels risques arrivent. Le périmètre de la Vertical Slice y est ventilé par squad et par statut, les bugs rouverts y remontent seuls, et un **filtre de contrôle** liste les tickets incomplets : sans squad, ou terminés sans résolution. Sur un vrai projet, c'est ce filtre qui garantit que tous les autres chiffres sont fiables.")
+            ],[ IMG("images/jira-dashboard.png","Le dashboard du producer : burndown par squad, périmètre de la Vertical Slice, bugs créés et résolus, contrôles") ],"dessous")
           ]),
-          BANDE("VII","Ce que j'en retiens",[
+          BANDE("VII","Automatiser et anticiper",[
+            LIGNE([
+              T("J'ai ensuite automatisé les gestes répétitifs. Une sous-tâche hérite de la squad de sa Story, une Story démarre dès que sa première sous-tâche démarre, et un bug bloquant déclenche une alerte. Aucune règle ne fait passer un ticket en Done : la validation reste une décision humaine."),
+              T("En les construisant, j'ai appris à lire le **journal d'audit** de chaque règle pour comprendre ce qui bloque. Un calcul échouait par exemple parce que deux champs du site portaient le même nom : j'ai dû appeler le mien par son identifiant.")
+            ],[ CAROUSEL([["images/jira-automations.png","Les règles d'automatisation actives sur le space"],["images/jira-flow-story.png","Une règle : quand une sous-tâche démarre, sa Story passe en cours si elle ne l'est pas déjà"]]) ]),
+            LIGNE([
+              T("J'ai enfin ajouté un **registre des risques** directement dans Jira, sous la forme d'un type de ticket à part. Chaque risque porte une probabilité, un impact, un signal d'alerte, une mesure d'atténuation et un plan de repli. Son score se calcule tout seul, et il est relié aux tickets qu'il menace. Les risques viennent de ce que le projet avait déjà révélé : la saturation de l'animateur et du sound designer, les livraisons des prestataires et la dérive du périmètre."),
+              T("Sur le dashboard, une **matrice des risques** croise probabilité et impact, à côté d'une liste classée par score. On voit en un coup d'œil quels risques traiter en premier, et lesquels sont déjà en cours d'atténuation.")
+            ],[ CAROUSEL([["images/jira-risques-liste.png","Les risques ouverts classés par score, et la matrice probabilité × impact"],["images/jira-risques-matrice.png","La matrice des risques : sept risques ouverts, répartis par probabilité et par impact"]]) ])
+          ]),
+          BANDE("VIII","Ce que j'en retiens",[
             LIGNE([
               T("Ce projet m'a surtout appris à penser Jira comme une base de données plutôt que comme un tableau de tâches : une fois les tickets bien rangés, chaque équipe, chaque jalon et chaque contrôle qualité n'est qu'une requête. Il m'a aussi montré que l'outil rend visibles les décisions du producer sans les prendre à sa place : qui est saturé, ce qui dépend de l'extérieur, ce qu'on accepte de reporter."),
               T("Pour comparer, j'ai transposé cette organisation dans **Coda**. Certains calculs y sont plus simples, mais ses formules ne peuvent pas lire l'historique des statuts : il faut donc enregistrer soi-même les dates utiles."),
-              T("[À compléter après le sprint : ce que je changerais sur un vrai projet.]")
+              T("Ce space est surtout devenu une **base réutilisable**. Sur un prochain projet, je repartirais des mêmes fondations : les quatre axes de classement, une bibliothèque de filtres avec son filtre de contrôle, deux workflows courts, un ticket de bug qui sépare la mesure du jugement, un registre des risques avec sa matrice, et quelques automatisations testées. Il suffit d'adapter les valeurs à l'équipe et au jeu."),
+              T("Ce que je changerais : j'ouvrirais le registre des risques dès le lancement du projet, et non après les premiers signaux, et je prévoirais une simulation en temps réel sur deux semaines complètes pour obtenir des rapports exploitables.")
             ])
           ])
         ] })
@@ -681,18 +690,27 @@ const PROJECTS_EN = {
           ]),
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
-              T("To get real data, I am running a first sprint from 24 to 31 October, compressed to one week instead of two, because Jira builds its charts from real dates. On the QA side, I wrote a **scenario of eleven bugs** to put the workflows to the test: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint."),
-              T("[To complete after 31 October: what was finished, what was carried over and why, and what the dashboard made visible.]")
-            ],[ IMG("","Screenshot to add: the dashboard at the end of the sprint") ]),
-            LIGNE([
-              T("[To complete: a blocker marked with a flag, how it was lifted, and what it changed in the sprint.]")
-            ],[ IMG("","Screenshot to add: the burndown or sprint report") ])
+              T("To get real data, I ran a first sprint for each squad, compressed to one week instead of two. On the QA side, I wrote a **scenario of eleven bugs** to put the workflows to the test: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint."),
+              T("In the end, I closed the sprints early to move the simulation forward, and the burndown shows it: it drops all at once instead of going down day by day. This is the limit of a simulation in Jira, which builds its reports from real dates and does not let you speed up time. My main goal was to check that each gadget answers its question."),
+              T("The **producer dashboard** is organised around three questions: where the sprint stands, how good the build is, and which risks are coming. The Vertical Slice scope is broken down by squad and status, reopened bugs show up on their own, and a **control filter** lists incomplete work items: missing a squad, or done without a resolution. On a real project, this filter is what makes every other figure reliable.")
+            ],[ IMG("images/jira-dashboard.png","The producer dashboard: burndown per squad, Vertical Slice scope, created vs resolved bugs, checks") ],"dessous")
           ]),
-          BANDE("VII","What I take away",[
+          BANDE("VII","Automating and anticipating",[
+            LIGNE([
+              T("I then automated the repetitive actions. A subtask inherits its Story's squad, a Story starts as soon as its first subtask starts, and a blocker bug triggers an alert. No rule moves a work item to Done: approval remains a human decision."),
+              T("While building them, I learned to read each rule's **audit log** to understand what goes wrong. One calculation failed, for example, because two fields on the site had the same name: I had to call mine by its ID.")
+            ],[ CAROUSEL([["images/jira-automations.png","The automation rules active on the space"],["images/jira-flow-story.png","A rule: when a subtask starts, its Story moves to In Progress if it is not already"]]) ]),
+            LIGNE([
+              T("Finally, I added a **risk register** directly in Jira, as a dedicated work type. Each risk has a probability, an impact, a warning signal, a mitigation and a fallback plan. Its score is calculated automatically, and it is linked to the work items it threatens. The risks come from what the project had already revealed: the animator and sound designer overload, vendor deliveries and scope creep."),
+              T("On the dashboard, a **risk matrix** crosses probability and impact, next to a list ranked by score. At a glance, you can see which risks to handle first, and which are already being mitigated.")
+            ],[ CAROUSEL([["images/jira-risques-liste.png","Open risks ranked by score, and the probability × impact matrix"],["images/jira-risques-matrice.png","The risk matrix: seven open risks, by probability and impact"]]) ])
+          ]),
+          BANDE("VIII","What I take away",[
             LIGNE([
               T("Above all, this project taught me to think of Jira as a database rather than a task board: once the work items are well sorted, every team, milestone and quality check is just a query. It also showed me that the tool makes the producer's decisions visible without making them: who is overloaded, what depends on outside partners, what we agree to postpone."),
               T("To compare, I transposed this organisation into **Coda**. Some calculations are simpler there, but its formulas cannot read the status history, so you have to record the useful dates yourself."),
-              T("[To complete after the sprint: what I would change on a real project.]")
+              T("Above all, this space has become a **reusable foundation**. On a future project, I would start from the same base: the four sorting axes, a filter library with its control filter, two short workflows, a bug ticket that separates measurement from judgement, a risk register with its matrix, and a few tested automations. All it takes is adapting the values to the team and the game."),
+              T("What I would change: I would open the risk register at project kickoff rather than after the first warning signs, and plan a real-time simulation over two full weeks to get usable reports.")
             ])
           ])
         ] })

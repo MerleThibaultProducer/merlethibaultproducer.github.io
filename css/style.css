@@ -2534,10 +2534,15 @@ html body .prose figure:not(.keyart) .zf img {
 html body .car:not(.keyart):not(.teams) .car-track {
   align-items: center;
 }
-html body .prose .brow.under .bm > figure.car { margin-inline: auto; }
-/* Schémas en pleine largeur : leur texte garde la taille de celui de la page */
-html body .prose .brow.under .schema { width: 100%; max-width: 56rem; margin-inline: auto; }
-html body .prose .brow.under .schema .cap { text-align: center; }
+/* Rangées « image dessous » : texte, image et légende partagent le même bord gauche,
+   l'image reste proche de la largeur du texte */
+html body .prose .brow.under .bm { max-width: 62rem; }
+html body .prose .brow.under .zf { margin-inline: 0; }
+html body .prose .brow.under figcaption,
+html body .prose .brow.under .schema .cap { text-align: left; }
+html body .prose .brow.under .car-nav { justify-content: flex-start; }
+/* Schémas : leur texte garde la taille de celui de la page */
+html body .prose .brow.under .schema { max-width: 56rem; }
 .grid.exo .card .cmeta {
   display: none;
 }

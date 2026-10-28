@@ -14,7 +14,7 @@
 html {
   scroll-padding-top: env(safe-area-inset-top,0px);
   height: 100%;
-  font-size: clamp(16px,.55vw + 9.5px,21px);
+  font-size: clamp(16px,.2vw + 13.2px,17px);
 }
 *,
 *::before,
@@ -1467,7 +1467,7 @@ body.page-home main {
   align-items: center;
 }
 .home-intro .portrait {
-  width: clamp(220px,24vw,360px);
+  width: clamp(220px,22vw,320px);
   background: var(--band-d);
 }
 .home-intro .intro {

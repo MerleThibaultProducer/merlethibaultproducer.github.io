@@ -1184,7 +1184,8 @@ footer #legal a {
 .car figcaption {
   text-align: center;
 }
-.brow .bm figcaption {
+.brow .bm figcaption,
+.brow .bm .schema .cap {
   text-align: center;
 }
 .brow .bt,
@@ -2519,7 +2520,6 @@ html body .legal-page h2 {
 /* Captures et visuels de projet : jamais agrandis au-delà de leur taille d'origine,
    hauteur plafonnée pour rester à l'échelle du texte voisin */
 html body .prose { --img-h: 30rem; }
-html body .prose .brow.under { --img-h: 40rem; }
 html body .prose figure:not(.keyart) .zf {
   width: fit-content;
   max-width: 100%;
@@ -2534,15 +2534,6 @@ html body .prose figure:not(.keyart) .zf img {
 html body .car:not(.keyart):not(.teams) .car-track {
   align-items: center;
 }
-/* Rangées « image dessous » : texte, image et légende partagent le même bord gauche,
-   l'image reste proche de la largeur du texte */
-html body .prose .brow.under .bm { max-width: 62rem; }
-html body .prose .brow.under .zf { margin-inline: 0; }
-html body .prose .brow.under figcaption,
-html body .prose .brow.under .schema .cap { text-align: left; }
-html body .prose .brow.under .car-nav { justify-content: flex-start; }
-/* Schémas : leur texte garde la taille de celui de la page */
-html body .prose .brow.under .schema { max-width: 56rem; }
 .grid.exo .card .cmeta {
   display: none;
 }
@@ -2783,10 +2774,6 @@ html body .project .car-nav button {
 }
 html body .project .car-nav button:hover { background: var(--gold); color: #13294B; }
 
-/* Captures de documents en pleine largeur, sous le texte */
-html body .project .brow.under { grid-template-columns: minmax(0, 1fr); align-items: start; gap: 1.6rem; }
-html body .project .brow.under .bt p { max-width: 72ch; }
-html body .project .brow.under .bm { justify-items: stretch; }
 html body .project > .lead { font-size: 1.25rem; }
 html body main .back { font-size: .86rem; }
 html body .project .prose figure figcaption,

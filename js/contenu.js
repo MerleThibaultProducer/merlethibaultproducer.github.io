@@ -51,7 +51,6 @@ let SITE = SITE_FR;
      – à droite : IMG("image","légende"), CHIFFRES([["valeur","libellé"],...]), FICHE("titre",["point",...]),
        TABLEAU("titre",["col1","col2","col3"],[ "Groupe", ["ligne","a","b"], ... ])
      – toute image (IMG) s'agrandit au clic.
-     – LIGNE(gauche, droite, "dessous") : les blocs de droite passent sous le texte, côte à côte et à espacement égal
      – EQUIPES(liste) : carrousel des équipes (une diapositive par groupe, voir EQUIPES_FDA).
      – une grande image (IMG) ou un CAROUSEL placé côté texte, dans une LIGNE sans partie droite,
        s'affiche sous le texte, centré sur la page : LIGNE([T("texte"), IMG("image","légende")])
@@ -62,7 +61,7 @@ let SITE = SITE_FR;
    L'ordre dans la liste = l'ordre sur le site.                              */
 const T=text=>({k:"t",text}), IMG=(src,cap="",cls="")=>({k:"img",src,cap,cls}),
       CITATION=(text,by="")=>({k:"q",text,by}), LIEN=(label,url)=>({k:"a",label,url});
-const BANDE=(num,titre,lignes)=>({k:"band",num,titre,lignes}), LIGNE=(t,m=[],pos="")=>({t,m,pos}),
+const BANDE=(num,titre,lignes)=>({k:"band",num,titre,lignes}), LIGNE=(t,m=[])=>({t,m}),
       CHIFFRES=items=>({k:"stats",items}), FICHE=(titre,items)=>({k:"fiche",titre,items}),
       TABLEAU=(titre,cols,rows,plain=false)=>({k:"tbl",titre,cols,rows,plain}), SOURCES=items=>({k:"src",items});
 const ETAPES=(titre,items)=>({k:"etapes",titre,items}), SCHEMA=(nom,cap="")=>({k:"schema",nom,cap});
@@ -199,10 +198,10 @@ const PROJECTS_FR = {
             LIGNE([
               T("L'école fixait chaque jalon (Proof of Concept, Alpha, Bêta) avec ses livrables attendus, en Waterfall, jusqu'à la Vertical Slice de fin de projet. À l'intérieur de ce cadre, chaque équipe travaillait en Agile, par sprints et itérations adaptés à son projet. Il me fallait donc relier les deux, avec un suivi assez homogène pour comparer les quatre groupes et repérer les retards tôt."),
               T("J'ai construit ce suivi sur Excel, à deux niveaux. Pour chaque groupe, un macro-planning pose les sprints et les jalons de l'école. Un micro-planning rattache ensuite chaque tâche à un sprint, une priorité, une difficulté et un statut : au total, **1 387 tâches** ont été suivies. Les documents de travail étaient partagés dans un PowerPoint commun sur OneDrive, et chaque groupe avait son propre espace Discord.")
-            ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)") ],"dessous"),
+            ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)") ]),
             LIGNE([
               T("Tenir près de 1 400 statuts à jour demandait une attention de tous les instants, mais c'est ce qui rendait visibles les retards et les tâches abandonnées (kills), sprint par sprint. À la livraison, 93 % des tâches étaient terminées : les 7 % restants correspondent à ces retards et à ces kills. Ce qui m'a manqué, et c'est la première chose que je changerais, ce sont des livrables de fin de sprint plus précis pour chaque spécialité : l'avancée était parfois difficile à vérifier concrètement.")
-            ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ],"dessous")
+            ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ])
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
@@ -212,7 +211,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Chaque groupe vivait la crise à sa manière : il n'y avait donc pas de réponse unique. Pour l'un, j'ai décidé, en accord avec les référents des disciplines, d'abandonner plusieurs assets qui sortaient du cadre ou n'étaient plus prioritaires. Pour un autre, nous avons revu le Level Art et le shader atmosphérique."),
               T("Si c'était à refaire, je ferais créer dès le départ une petite scène de référence dans le moteur, avec un prop à la qualité visée, les textures souhaitées et les intentions de lumière et de caméra.")
-            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ],"dessous")
+            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ])
           ]),
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
@@ -308,7 +307,7 @@ const PROJECTS_FR = {
             ],[ CAROUSEL([["images/jira-board-production.png","Production : la vue d'ensemble, sans sprint"],["images/jira-board-gameplay.png","Gameplay : le sprint de la squad, groupé par Epic"],["images/jira-board-world.png","World : le sprint de la squad, groupé par Epic"],["images/jira-board-vendors.png","Vendors : les livraisons attendues de chaque prestataire"]]) ]),
             LIGNE([
               T("Pour le producer, une **bibliothèque de filtres** répond aux questions du lundi matin : où en est le sprint, qu'est-ce qui est bloqué ou reporté, le périmètre a-t-il bougé, les données sont-elles fiables. Ces filtres alimentent le dashboard.")
-            ],[ IMG("images/jira-filtres.png","Le filtre du périmètre de la Vertical Slice et la liste des filtres enregistrés") ],"dessous"),
+            ],[ IMG("images/jira-filtres.png","Le filtre du périmètre de la Vertical Slice et la liste des filtres enregistrés") ]),
             LIGNE([
               T("Les Stories suivent un workflow court : une revue, puis une vérification QA avant Done. Chaque retour en arrière est une transition nommée, ce qui permet de le compter.")
             ],[ IMG("images/jira-workflow-dev.png","Le workflow des Stories et des Tasks") ])
@@ -323,20 +322,20 @@ const PROJECTS_FR = {
             ],[ CAROUSEL([["images/jira-board-qa.png","Le board QA-Bugs : une ligne par sévérité"],["images/jira-colonnes-qa.png","Les colonnes et leurs limites de travail en cours"]]) ]),
             LIGNE([
               T("Le workflow pose une règle : **un bug ne se ferme jamais sans résolution**. Verified ferme un bug corrigé avec la résolution Done ; Rejected, depuis le tri, le ferme en Won't Do, Duplicate ou Cannot Reproduce. Reopen renvoie en correction un bug dont le correctif ne tient pas, ce qui permet de compter les réouvertures. Une requête de contrôle vérifie qu'aucun bug fermé n'est privé de résolution.")
-            ],[ SCHEMA("bugflow","Le parcours d'un bug, ses retours en arrière et ses résolutions") ],"dessous")
+            ],[ SCHEMA("bugflow","Le parcours d'un bug, ses retours en arrière et ses résolutions") ])
           ]),
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
               T("J'ai fait vivre un premier sprint par squad, compressé à une semaine, avec un **scénario de onze bugs** écrit pour tester les workflows : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint. J'ai clôturé les sprints en avance, d'où le burndown qui chute d'un coup, puisque Jira construit ses rapports à partir des dates réelles. L'enjeu était de vérifier que chaque rapport répond à sa question.")
-            ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01 : objectif, burndown et tickets terminés, dont deux bugs ajoutés en cours de route") ],"dessous"),
+            ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01 : objectif, burndown et tickets terminés, dont deux bugs ajoutés en cours de route") ]),
             LIGNE([
               T("Le **dashboard du producer** répond à trois questions : où en est le sprint, quelle est la qualité du build, quels risques arrivent. Son filtre de contrôle liste les tickets incomplets, sans squad ou terminés sans résolution : c'est lui qui garantit que les autres chiffres sont fiables. Le dashboard a évolué avec le projet : après la clôture des sprints, le suivi des bugs et la liste des risques y ont pris la place des burndowns.")
-            ],[ CAROUSEL([["images/jira-dashboard.png","Pendant le sprint : burndowns, périmètre de la Vertical Slice et contrôles"],["images/jira-dashboard-fin.png","Après la clôture : bugs créés et résolus, bugs rouverts et risques ouverts classés par score"]]) ],"dessous")
+            ],[ CAROUSEL([["images/jira-dashboard.png","Pendant le sprint : burndowns, périmètre de la Vertical Slice et contrôles"],["images/jira-dashboard-fin.png","Après la clôture : bugs créés et résolus, bugs rouverts et risques ouverts classés par score"]]) ])
           ]),
           BANDE("VII","Automatiser les gestes répétitifs",[
             LIGNE([
               T("Je voulais aussi apprendre à maîtriser les automatisations, l'un des outils les plus utiles de Jira. Chaque règle suit la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. Une sous-tâche hérite de la squad de sa Story, une Story démarre avec sa première sous-tâche, un bug bloquant déclenche une alerte. La condition rend la règle sûre : sans elle, la règle qui démarre une Story tenterait de la relancer à chaque sous-tâche.")
-            ],[ SCHEMA("autoflow","Quatre règles du space, lues selon la même logique") ],"dessous"),
+            ],[ SCHEMA("autoflow","Quatre règles du space, lues selon la même logique") ]),
             LIGNE([
               T("Le **journal d'audit** de chaque règle m'a servi à comprendre ce qui bloquait. Un calcul échouait parce que deux champs du site portaient le même nom : je l'ai corrigé en appelant le mien par son identifiant.")
             ],[ CAROUSEL([["images/jira-automations.png","Les règles actives sur le space"],["images/jira-audit-erreur.png","Le journal d'audit : le calcul du score échoue, l'impact revient vide"],["images/jira-audit-correctif.png","Le déclencheur corrigé : l'impact appelé par son identifiant, cf[10091]"],["images/jira-flow-story.png","Quand une sous-tâche démarre, sa Story passe en cours si elle ne l'est pas déjà"]]) ])
@@ -348,7 +347,7 @@ const PROJECTS_FR = {
             ],[ CAROUSEL([["images/jira-risques-liste.png","Les risques ouverts, avec leur score et leur statut"],["images/jira-risques-matrice.png","La matrice probabilité × impact"],["images/jira-risque-r4.png","Un risque : signal d'alerte, atténuation, plan de repli et Epics menacés"]]) ]),
             LIGNE([
               T("Le workflow reste court. Un risque identifié passe en suivi, puis en atténuation quand son signal d'alerte apparaît, et revient en suivi si la mesure a fonctionné. Sa résolution dit ce qui s'est passé (Mitigated, Occurred ou Obsolete), et un risque rouvert la perd. Le score, probabilité × impact, est calculé par une automatisation et ne peut donc pas contredire ses deux composantes.")
-            ],[ SCHEMA("riskflow","Le parcours d'un risque, ses résolutions et le calcul de son score") ],"dessous")
+            ],[ SCHEMA("riskflow","Le parcours d'un risque, ses résolutions et le calcul de son score") ])
           ]),
           BANDE("IX","Ce que j'en retiens",[
             LIGNE([
@@ -382,7 +381,7 @@ const PROJECTS_FR = {
           BANDE("III","Le Market Analysis et le seuil de rentabilité",[
             LIGNE([
               T("Pour estimer les ventes potentielles sur Steam, j'ai commencé par l'analyse des concurrents du jeu, dont j'ai extrait des moyennes exploitables pour mes scénarios de projection. Pour disposer d'un large panel, j'ai retenu des jeux sortis sur 11 ans, de 2014 à 2025 : une période un peu longue, qui gagnerait à être ramenée à cinq ans.")
-            ],[ IMG(EX1.market,"Analyse des concurrents : ventes, revenus estimés et moyennes") ],"dessous"),
+            ],[ IMG(EX1.market,"Analyse des concurrents : ventes, revenus estimés et moyennes") ]),
             LIGNE([
               T("Les données extraites m'ont permis de proposer deux scénarios, un optimiste et un plus conservateur, chacun décliné en trois niveaux de risque (haut, moyen, bas), pour couvrir l'éventail des issues possibles.")
             ],[ CAROUSEL([[EX1.roiCons,"Estimation du ROI, scénario conservateur : 250 000 followers, selon les cas haut, moyen et bas"],[EX1.roiOpti,"Estimation du ROI, scénario optimiste : moyenne des ventes du Market Analysis, selon les cas haut, moyen et bas"]]) ]),
@@ -395,11 +394,11 @@ const PROJECTS_FR = {
             LIGNE([
               T("Enfin, il fallait planifier quatre ans de production, jusqu'à la sortie du DLC prévu, alors que nos workshops durent trois semaines."),
               T("Pour placer les Epics et les Stories sur toute la production, j'ai dû prendre en compte chaque partie du projet : les fonctionnalités essentielles, les niveaux et l'intégration de la QA.")
-            ],[ IMG(EX1.epic,"Macro-planning : les Epics de la production") ],"dessous"),
+            ],[ IMG(EX1.epic,"Macro-planning : les Epics de la production") ]),
             LIGNE([
               T("J'ai complété ce travail par un sprint détaillé avec ses tâches : un sprint de préproduction destiné à préparer la Vertical Slice."),
               T("Cette partie m'a obligé à quitter la logique des sprints de nos workshops de trois semaines, très contraints, pour raisonner pas à pas sur les besoins qui font passer d'un sprint à l'autre.")
-            ],[ IMG(EX1.sprint,"Sprint de préproduction : tâches, priorités et story points") ],"dessous")
+            ],[ IMG(EX1.sprint,"Sprint de préproduction : tâches, priorités et story points") ])
           ]),
           BANDE("V","Ce que j'en retiens",[
             LIGNE([
@@ -540,10 +539,10 @@ const PROJECTS_EN = {
             LIGNE([
               T("The school set each milestone (Proof of Concept, Alpha, Beta) with its expected deliverables, Waterfall style, up to the Vertical Slice at the end of the project. Within this frame, each team worked in Agile, with sprints and iterations suited to its project. I had to connect the two, with tracking consistent enough to compare the four groups and spot delays early."),
               T("I built this tracking in Excel, on two levels. For each group, a macro plan sets out the sprints and the school's milestones. A micro plan then links each task to a sprint, a priority, a difficulty and a status: in total, **1,387 tasks** were tracked. Working documents were shared in a common PowerPoint on OneDrive, and each group had its own Discord space.")
-            ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)") ],"dessous"),
+            ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)") ]),
             LIGNE([
               T("Keeping nearly 1,400 statuses up to date took constant attention, but it is what made delays and cuts visible, sprint by sprint. At delivery, 93% of the tasks were done: the remaining 7% were these delays and cuts. What I lacked, and the first thing I would change, were more precise end-of-sprint deliverables for each discipline: progress was sometimes hard to check concretely.")
-            ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses") ],"dessous")
+            ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses") ])
           ]),
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
@@ -553,7 +552,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("Each group experienced the crisis in its own way, so there was no single answer. For one, I decided, in agreement with the discipline leads, to cut several assets that were off-brief or no longer a priority. For another, we reworked the Level Art and the atmospheric shader."),
               T("If I had to do it again, I would have a small reference scene built in the engine from the start, with a prop at the target quality, the desired textures and the lighting and camera intentions.")
-            ],[ IMG(PRO1.kill,"Cut tasks in one group's tracking") ],"dessous")
+            ],[ IMG(PRO1.kill,"Cut tasks in one group's tracking") ])
           ]),
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
@@ -649,7 +648,7 @@ const PROJECTS_EN = {
             ],[ CAROUSEL([["images/jira-board-production.png","Production: the overview, with no sprint"],["images/jira-board-gameplay.png","Gameplay: the squad's sprint, grouped by Epic"],["images/jira-board-world.png","World: the squad's sprint, grouped by Epic"],["images/jira-board-vendors.png","Vendors: the deliveries expected from each vendor"]]) ]),
             LIGNE([
               T("For the producer, a **filter library** answers the Monday-morning questions: where the sprint stands, what is blocked or carried over, whether the scope has moved, whether the data can be trusted. These filters feed the dashboard.")
-            ],[ IMG("images/jira-filtres.png","The Vertical Slice scope filter and the list of saved filters") ],"dessous"),
+            ],[ IMG("images/jira-filtres.png","The Vertical Slice scope filter and the list of saved filters") ]),
             LIGNE([
               T("Stories follow a short workflow: a review, then a QA check before Done. Every step back is a named transition, which makes it countable.")
             ],[ IMG("images/jira-workflow-dev.png","The Story and Task workflow") ])
@@ -664,20 +663,20 @@ const PROJECTS_EN = {
             ],[ CAROUSEL([["images/jira-board-qa.png","The QA-Bugs board: one lane per severity"],["images/jira-colonnes-qa.png","The columns and their work-in-progress limits"]]) ]),
             LIGNE([
               T("The workflow sets one rule: **a bug is never closed without a resolution**. Verified closes a fixed bug with the Done resolution; Rejected, from triage, closes it as Won't Do, Duplicate or Cannot Reproduce. Reopen sends back a bug whose fix does not hold, which lets you count reopened bugs. A control query checks that no closed bug is missing a resolution.")
-            ],[ SCHEMA("bugflow","The path of a bug, its ways back and its resolutions") ],"dessous")
+            ],[ SCHEMA("bugflow","The path of a bug, its ways back and its resolutions") ])
           ]),
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
               T("I ran a first sprint for each squad, compressed to one week, with a **scenario of eleven bugs** written to test the workflows: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint. I closed the sprints early, hence the burndown that drops all at once, since Jira builds its reports from real dates. The point was to check that each report answers its question.")
-            ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report: goal, burndown and completed work items, including two bugs added mid-sprint") ],"dessous"),
+            ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report: goal, burndown and completed work items, including two bugs added mid-sprint") ]),
             LIGNE([
               T("The **producer dashboard** answers three questions: where the sprint stands, how good the build is, which risks are coming. Its control filter lists incomplete work items, missing a squad or done without a resolution: it is what makes the other figures reliable. The dashboard evolved with the project: once the sprints were closed, bug tracking and the risk list took the place of the burndowns.")
-            ],[ CAROUSEL([["images/jira-dashboard.png","During the sprint: burndowns, Vertical Slice scope and checks"],["images/jira-dashboard-fin.png","After closing: created vs resolved bugs, reopened bugs and open risks ranked by score"]]) ],"dessous")
+            ],[ CAROUSEL([["images/jira-dashboard.png","During the sprint: burndowns, Vertical Slice scope and checks"],["images/jira-dashboard-fin.png","After closing: created vs resolved bugs, reopened bugs and open risks ranked by score"]]) ])
           ]),
           BANDE("VII","Automating the repetitive actions",[
             LIGNE([
               T("I also wanted to master automations, one of Jira's most useful tools. Every rule follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. A subtask inherits its Story's squad, a Story starts with its first subtask, a blocker bug triggers an alert. The condition is what makes a rule safe: without it, the rule that starts a Story would try to restart it with every subtask.")
-            ],[ SCHEMA("autoflow","Four rules of the space, read with the same logic") ],"dessous"),
+            ],[ SCHEMA("autoflow","Four rules of the space, read with the same logic") ]),
             LIGNE([
               T("Each rule's **audit log** showed me what was going wrong. One calculation failed because two fields on the site had the same name: I fixed it by calling mine by its ID.")
             ],[ CAROUSEL([["images/jira-automations.png","The rules active on the space"],["images/jira-audit-erreur.png","The audit log: the score calculation fails, impact comes back empty"],["images/jira-audit-correctif.png","The fixed trigger: impact called by its ID, cf[10091]"],["images/jira-flow-story.png","When a subtask starts, its Story moves to In Progress if it is not already"]]) ])
@@ -689,7 +688,7 @@ const PROJECTS_EN = {
             ],[ CAROUSEL([["images/jira-risques-liste.png","Open risks, with their score and status"],["images/jira-risques-matrice.png","The probability × impact matrix"],["images/jira-risque-r4.png","A risk: warning signal, mitigation, fallback plan and threatened Epics"]]) ]),
             LIGNE([
               T("The workflow stays short. An identified risk moves to monitoring, then to mitigation when its warning signal appears, and back to monitoring if the measure worked. Its resolution says what happened (Mitigated, Occurred or Obsolete), and a reopened risk loses it. The score, probability × impact, is calculated by an automation, so it cannot contradict its two components.")
-            ],[ SCHEMA("riskflow","The path of a risk, its resolutions and how its score is calculated") ],"dessous")
+            ],[ SCHEMA("riskflow","The path of a risk, its resolutions and how its score is calculated") ])
           ]),
           BANDE("IX","What I take away",[
             LIGNE([
@@ -723,7 +722,7 @@ const PROJECTS_EN = {
           BANDE("III","The Market Analysis and the break-even point",[
             LIGNE([
               T("To estimate potential sales on Steam, I started by analysing the game's competitors, extracting usable averages for my projection scenarios. To build a large sample, I selected games released over 11 years, from 2014 to 2025: a fairly long period, which would be better narrowed to five years.")
-            ],[ IMG(EX1.market,"Competitor analysis: sales, estimated revenue and averages") ],"dessous"),
+            ],[ IMG(EX1.market,"Competitor analysis: sales, estimated revenue and averages") ]),
             LIGNE([
               T("The extracted data allowed me to propose two scenarios, an optimistic one and a more conservative one, each broken down into three risk levels (high, average, low), to cover the range of possible outcomes.")
             ],[ CAROUSEL([[EX1.roiCons,"ROI estimate, conservative scenario: 250,000 followers, in high, average and low cases"],[EX1.roiOpti,"ROI estimate, optimistic scenario: average sales from the Market Analysis, in high, average and low cases"]]) ]),
@@ -736,11 +735,11 @@ const PROJECTS_EN = {
             LIGNE([
               T("Finally, I had to plan four years of production, through to the release of the planned DLC, when our school workshops last three weeks."),
               T("To place Epics and Stories across the whole production, I had to take every part of the project into account: core features, levels and QA integration.")
-            ],[ IMG(EX1.epic,"Macro plan: the production's Epics") ],"dessous"),
+            ],[ IMG(EX1.epic,"Macro plan: the production's Epics") ]),
             LIGNE([
               T("I completed this work with a detailed sprint and its tasks: a pre-production sprint aimed at preparing the Vertical Slice."),
               T("This part pushed me beyond the sprint logic of our tightly constrained three-week workshops, and made me reason step by step about what each sprint needs from the one before.")
-            ],[ IMG(EX1.sprint,"Pre-production sprint: tasks, priorities and story points") ],"dessous")
+            ],[ IMG(EX1.sprint,"Pre-production sprint: tasks, priorities and story points") ])
           ]),
           BANDE("V","What I take away",[
             LIGNE([

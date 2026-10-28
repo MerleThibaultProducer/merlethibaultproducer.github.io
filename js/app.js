@@ -289,7 +289,8 @@ function brief(p){
 function recap(p){
   const facts = Object.entries(p.infos||{}).map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
   const txt = [].concat(p.apercu).map(x=>`<p>${rich(x)}</p>`).join("");
-  return `<section class="recap">${facts?`<dl class="facts">${facts}</dl>`:""}<div class="recap-txt">${txt}</div></section>`;
+  const res = p.resultats ? `<div class="recap-res"><h2>${q("Ce que le projet a produit","What the project produced")}</h2><ul>${p.resultats.map(x=>`<li>${rich(x)}</li>`).join("")}</ul></div>` : "";
+  return `<section class="recap">${facts?`<dl class="facts">${facts}</dl>`:""}<div class="recap-txt">${txt}</div>${res}</section>`;
 }
 /* Key arts des jeux en carrousel, avec le one-liner de chaque jeu sous l'image */
 function keyart(list){

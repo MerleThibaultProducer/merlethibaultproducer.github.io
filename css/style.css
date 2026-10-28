@@ -2844,3 +2844,10 @@ html body .fold[open] .f-show { display: none; }
 html body .fold[open] .f-hide { display: inline; }
 /* le contenu d'un <details> passe par ::details-content, qui ne reçoit pas le box-sizing hérité */
 html body .fold::details-content { box-sizing: inherit; }
+
+/* ---------- Encart de départ : ce que le projet a produit ---------- */
+html body .recap-res { margin-top: 1.3rem; }
+html body .recap-res h2 { margin: 0 0 .55rem; font: 500 .82rem/1.4 var(--sans); color: var(--muted); }
+html body .recap-res ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .5rem; }
+html body .recap-res li { position: relative; padding-left: 1.15rem; line-height: 1.55; }
+html body .recap-res li::before { content: ""; position: absolute; left: 0; top: .58em; width: .45rem; height: .45rem; border-radius: 50%; background: var(--gold); }

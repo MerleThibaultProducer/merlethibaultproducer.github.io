@@ -318,6 +318,9 @@ const PROJECTS_FR = {
               T("Pour le producer, le ticket sépare aussi la **sévérité** de la **priorité**. La sévérité dit à quel point le jeu est cassé, la priorité dit dans quel ordre on corrige : un bug peut être grave mais rare, ou bénin mais permanent, et c'est au producer d'arbitrer entre les deux. Avec le responsable, que Jira affiche, on voit d'un coup d'œil **ce qui est cassé, à quel point, qui s'en charge et pour quelle version**.")
             ],[ IMG("images/jira-ticket-bug.png","Un bug bloquant reproduit 8 fois sur 10 : build, versions, sévérité, priorité, taux de reproduction et responsable") ]),
             LIGNE([
+              T("Le likelihood, lui, n'est plus choisi à l'œil : choisi ainsi, il pouvait varier d'un testeur à l'autre pour un même bug. Une **automatisation** le déduit désormais du taux de reproduction. Dès que le nombre d'essais ou d'occurrences change, elle calcule le taux, l'écrit dans le ticket et choisit l'option : **Always à 100 %, Very frequent de 70 à 99 %, Sometimes de 30 à 69 %, Rarely en dessous**. Si les occurrences dépassent les essais, elle laisse le likelihood tel quel et signale l'erreur par un commentaire ; à 0 %, c'est au testeur de trancher. Le bug de la capture précédente, reproduit 8 fois sur 10, passe ainsi automatiquement en Very frequent.")
+            ],[ IMG("images/jira-auto-repro.png","La règle du taux de reproduction : calcul, contrôle des valeurs, puis une branche par option de likelihood") ]),
+            LIGNE([
               T("Sur le board QA, les **swimlanes** sont des requêtes JQL qui rangent les bugs par sévérité, les bloquants en haut, et la carte affiche la priorité. Chaque colonne a **une limite de travail en cours** : quand une colonne déborde, l'équipe finit des bugs avant d'en ouvrir d'autres.")
             ],[ CAROUSEL([["images/jira-board-qa.png","Le board QA-Bugs : une ligne par sévérité"],["images/jira-colonnes-qa.png","Les colonnes et leurs limites de travail en cours"]]) ]),
             LIGNE([
@@ -334,8 +337,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("VII","Automatiser les gestes répétitifs",[
             LIGNE([
-              T("Je voulais aussi apprendre à maîtriser les automatisations, l'un des outils les plus utiles de Jira. Chaque règle suit la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. Une sous-tâche hérite de la squad de sa Story, une Story démarre avec sa première sous-tâche, un bug bloquant déclenche une alerte. La condition rend la règle sûre : sans elle, la règle qui démarre une Story tenterait de la relancer à chaque sous-tâche.")
-            ],[ SCHEMA("autoflow","Quatre règles du space, lues selon la même logique") ]),
+              T("Je voulais aussi apprendre à maîtriser les automatisations, l'un des outils les plus utiles de Jira. Chaque règle suit la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. Une sous-tâche hérite de la squad de sa Story, une Story démarre avec sa première sous-tâche, un bug bloquant déclenche une alerte, et le taux de reproduction d'un bug fixe son likelihood. La condition rend la règle sûre : sans elle, la règle qui démarre une Story tenterait de la relancer à chaque sous-tâche.")
+            ],[ SCHEMA("autoflow","Cinq règles du space, lues selon la même logique") ]),
             LIGNE([
               T("Le **journal d'audit** de chaque règle m'a servi à comprendre ce qui bloquait. Un calcul échouait parce que deux champs du site portaient le même nom : je l'ai corrigé en appelant le mien par son identifiant.")
             ],[ CAROUSEL([["images/jira-automations.png","Les règles actives sur le space"],["images/jira-audit-erreur.png","Le journal d'audit : le calcul du score échoue, l'impact revient vide"],["images/jira-audit-correctif.png","Le déclencheur corrigé : l'impact appelé par son identifiant, cf[10091]"],["images/jira-flow-story.png","Quand une sous-tâche démarre, sa Story passe en cours si elle ne l'est pas déjà"]]) ])
@@ -660,6 +663,9 @@ const PROJECTS_EN = {
               T("For the producer, the ticket also separates **severity** from **priority**. Severity says how broken the game is, priority sets the order in which bugs are fixed: a bug can be severe but rare, or minor but permanent, and it is up to the producer to weigh the two. With the assignee, which Jira displays, you can see at a glance **what is broken, how badly, who is handling it and for which version**.")
             ],[ IMG("images/jira-ticket-bug.png","A blocker bug reproduced 8 times out of 10: build, versions, severity, priority, repro rate and assignee") ]),
             LIGNE([
+              T("Likelihood, for its part, is no longer picked by eye: chosen that way, it could vary from one tester to another for the same bug. An **automation** now derives it from the repro rate. As soon as the number of attempts or occurrences changes, it calculates the rate, writes it into the ticket and picks the option: **Always at 100%, Very frequent from 70 to 99%, Sometimes from 30 to 69%, Rarely below that**. If occurrences exceed attempts, it leaves the likelihood unchanged and flags the error in a comment; at 0%, the decision stays with the tester. The bug in the previous screenshot, reproduced 8 times out of 10, is therefore set to Very frequent automatically.")
+            ],[ IMG("images/jira-auto-repro.png","The repro rate rule: calculation, value check, then one branch per likelihood option") ]),
+            LIGNE([
               T("On the QA board, **swimlanes** are JQL queries that sort bugs by severity, blockers at the top, and the card shows the priority. Each column has **a work-in-progress limit**: when a column overflows, the team finishes bugs before opening new ones.")
             ],[ CAROUSEL([["images/jira-board-qa.png","The QA-Bugs board: one lane per severity"],["images/jira-colonnes-qa.png","The columns and their work-in-progress limits"]]) ]),
             LIGNE([
@@ -676,8 +682,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","Automating the repetitive actions",[
             LIGNE([
-              T("I also wanted to master automations, one of Jira's most useful tools. Every rule follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. A subtask inherits its Story's squad, a Story starts with its first subtask, a blocker bug triggers an alert. The condition is what makes a rule safe: without it, the rule that starts a Story would try to restart it with every subtask.")
-            ],[ SCHEMA("autoflow","Four rules of the space, read with the same logic") ]),
+              T("I also wanted to master automations, one of Jira's most useful tools. Every rule follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. A subtask inherits its Story's squad, a Story starts with its first subtask, a blocker bug triggers an alert, and a bug's repro rate sets its likelihood. The condition is what makes a rule safe: without it, the rule that starts a Story would try to restart it with every subtask.")
+            ],[ SCHEMA("autoflow","Five rules of the space, read with the same logic") ]),
             LIGNE([
               T("Each rule's **audit log** showed me what was going wrong. One calculation failed because two fields on the site had the same name: I fixed it by calling mine by its ID.")
             ],[ CAROUSEL([["images/jira-automations.png","The rules active on the space"],["images/jira-audit-erreur.png","The audit log: the score calculation fails, impact comes back empty"],["images/jira-audit-correctif.png","The fixed trigger: impact called by its ID, cf[10091]"],["images/jira-flow-story.png","When a subtask starts, its Story moves to In Progress if it is not already"]]) ])

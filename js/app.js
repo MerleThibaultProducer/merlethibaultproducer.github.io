@@ -166,15 +166,16 @@ autoflow(){
   const Rw=[[q("Sous-tâche créée","Subtask created"),q("Type = Sub-task","Type = Sub-task"),q("Squad copiée de la Story","Squad copied from the Story")],
     [q("Sous-tâche passée In Progress","Subtask moved to In Progress"),q("Story parente en To Do","Parent Story in To Do"),q("Story passée In Progress","Story moved to In Progress")],
     [q("Bug créé","Bug created"),q("Highest ou Blocker","Highest or Blocker"),q("Commentaire et e-mail","Comment and email")],
-    [q("Probabilité ou impact modifié","Probability or impact changed"),q("Type = Risk","Type = Risk"),"Risk score = P × I"]];
-  let o=`<svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg">`;
+    [q("Probabilité ou impact modifié","Probability or impact changed"),q("Type = Risk","Type = Risk"),"Risk score = P × I"],
+    [q("Essais ou occurrences modifiés","Attempts or occurrences changed"),q("Bug avec au moins un essai","Bug with at least one attempt"),q("Repro rate et likelihood","Repro rate and likelihood")]];
+  let o=`<svg viewBox="0 0 760 342" xmlns="http://www.w3.org/2000/svg">`;
   H.forEach((t,i)=>o+=`<text x="${X[i]}" y="22" class="m" font-size="11" letter-spacing="1.2">${t}</text>`);
   Rw.forEach((r,j)=>{const y=36+j*(h+12);
     r.forEach((t,i)=>{o+=i<2?`<rect x="${X[i]}" y="${y}" width="${w}" height="${h}" rx="4" class="ob"/><text x="${X[i]+14}" y="${y+25}" class="t" font-size="12.5">${t}</text>`
       :`<rect x="${X[i]}" y="${y}" width="${w}" height="${h}" rx="4" class="navy"/><text x="${X[i]+14}" y="${y+25}" class="ond" font-size="12.5" font-weight="600">${t}</text>`;
       if(i<2) o+=`<path d="M${X[i]+w} ${y+20}H${X[i+1]-2}" class="axis" fill="none" stroke-width="1.4"/><polygon points="${X[i+1]},${y+20} ${X[i+1]-6},${y+16} ${X[i+1]-6},${y+24}" class="m"/>`;});
   });
-  o+=`<text x="20" y="270" class="m" font-size="12">${q("Aucune règle ne fait passer un ticket en Done : la validation reste une décision humaine.","No rule moves a work item to Done: approval remains a human decision.")}</text></svg>`;
+  o+=`<text x="20" y="322" class="m" font-size="12">${q("Aucune règle ne fait passer un ticket en Done : la validation reste une décision humaine.","No rule moves a work item to Done: approval remains a human decision.")}</text></svg>`;
   return o;
 },
 marche(){

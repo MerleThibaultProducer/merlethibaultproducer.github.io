@@ -279,10 +279,7 @@ const PROJECTS_FR = {
         carte:"Un studio fictif structuré dans Jira : workflows à résolutions, circuit des bugs, automatisations et registre des risques.",
         img:"images/jira-vignette.jpg",
         infos:{ "Rôle":"Producer (mise en situation, mené seul)", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL", "Période":"Octobre 2026", "Temps de travail":"15 h environ", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
-        apercu:"Pour apprendre Jira sur un cas réaliste, j'ai organisé seul la production d'un **action-RPG AA fictif** : **15 personnes et quatre prestataires**, sur le modèle d'Ember Lab pour Kena: Bridge of Spirits. **Un sprint simulé** m'a servi à vérifier que chaque élément répond à une question de production. Je joue tous les rôles et les données sont simulées : le projet montre comment je structure l'outil, sans prétendre mesurer la conduite d'une équipe.",
-        resultats:[ "Un board par public (les deux squads, la QA, les prestataires et la production), alimenté par une bibliothèque de filtres et un dashboard producer.",
-                    "Un circuit des bugs où le likelihood se déduit du taux de reproduction et où aucun bug ne se ferme sans résolution.",
-                    "Sept risques notés et reliés aux tickets qu'ils menacent, chacun avec un signal d'alerte, une atténuation et un plan de repli." ],
+        apercu:"Pour apprendre Jira sur un cas réaliste, j'ai organisé seul la production d'un **action-RPG AA fictif** : **15 personnes et quatre prestataires**, sur le modèle d'Ember Lab pour Kena: Bridge of Spirits. Le space compte aujourd'hui cinq boards, une bibliothèque de filtres, cinq automatisations et un registre de sept risques. **Un sprint simulé** m'a servi à vérifier que chaque élément répond à une question de production. Je joue tous les rôles et les données sont simulées : le projet montre comment je structure l'outil, sans prétendre mesurer la conduite d'une équipe.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
@@ -627,10 +624,7 @@ const PROJECTS_EN = {
         carte:"A fictional studio structured in Jira: workflows with resolutions, a bug pipeline, automations and a risk register.",
         img:"images/jira-vignette.jpg",
         infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL", "Period":"October 2026", "Workload":"About 15 hours", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
-        apercu:"To learn Jira on a realistic case, I organised the production of a **fictional AA action-RPG** on my own: **15 people and four vendors**, modelled on Ember Lab's setup for Kena: Bridge of Spirits. **A simulated sprint** let me check that each element answers a production question. I play every role and the data is simulated: the project shows how I structure the tool, without claiming to measure how I lead a team.",
-        resultats:[ "One board per audience (the two squads, QA, vendors and production), fed by a filter library and a producer dashboard.",
-                    "A bug pipeline where likelihood is derived from the repro rate and no bug is closed without a resolution.",
-                    "Seven risks scored and linked to the work items they threaten, each with a warning signal, a mitigation and a fallback plan." ],
+        apercu:"To learn Jira on a realistic case, I organised the production of a **fictional AA action-RPG** on my own: **15 people and four vendors**, modelled on Ember Lab's setup for Kena: Bridge of Spirits. The space now has five boards, a filter library, five automations and a register of seven risks. **A simulated sprint** let me check that each element answers a production question. I play every role and the data is simulated: the project shows how I structure the tool, without claiming to measure how I lead a team.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([

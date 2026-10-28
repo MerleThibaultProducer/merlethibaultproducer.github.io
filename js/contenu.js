@@ -300,24 +300,13 @@ const PROJECTS_FR = {
               T("Avec le recul, c'est cette séparation qui m'a demandé le plus de réflexion. Une tâche du tech artist, par exemple, appartient à la squad qui s'engage à la livrer dans son sprint. Rangée dans le groupe Transverse, elle n'apparaîtrait sur aucun board.")
             ],[ IMG("images/jira-ticket.png","Une Story de la Vertical Slice : critères d'acceptation, sous-tâches, squad, composant, version et Epic parent") ])
           ]),
-          BANDE("III","Les goulots et le chemin critique",[
+          BANDE("III","Préparer la Vertical Slice",[
             LIGNE([
-              T("J'ai découpé le jeu en Epics (combat, compagnons, bestiaire, actes), puis rédigé le backlog de la Vertical Slice sous forme de Stories à valeur joueur, chacune découpée en sous-tâches nominatives. « Enemy AI framework » devient ainsi « Enemies perceive, chase and attack the player »."),
-              T("Ce découpage a fait apparaître le premier risque du projet. L'**animateur gameplay** intervient dans 13 Stories sur 23, et le **sound designer** dans 15. Ce sont eux qui fixent le rythme, bien plus que la taille des squads. Le deuxième sprint de la squad Gameplay le montre bien : trois de ses Stories demandent de l'animation, et l'animateur y serait saturé. Il y avait deux options : sortir une Story du sprint, ou la garder en signalant le risque dès le planning.")
-            ],[ CHIFFRES([["23","Stories dans la Vertical Slice"],["126","Points estimés"],["13 et 15","Stories pour l'animateur et le sound designer"],["3","Livraisons externes qui bloquent des Stories"]]) ]),
-            LIGNE([
-              T("Le second risque vient de l'extérieur. Trois Stories de la squad World (l'entrée de la forêt, le PNJ guide et l'ambiance sonore) attendent des livraisons de prestataires : un lot de props, un lot d'animations et le thème principal. Dans Jira, chaque livraison est un ticket relié à la Story qu'il bloque, et une Story n'entre en sprint que si ses dépendances sont levées : c'est une condition de ma **Definition of Ready**."),
-              T("Quelle que soit sa vitesse, la squad World ne peut donc pas finir la Vertical Slice avant ces livraisons : **le chemin critique passe par les prestataires**. J'ai engagé volontairement la squad World sur un premier sprint léger, et réservé le reste de sa capacité à la préproduction : bible artistique, concepts et cahiers des charges des prestataires. Sur un vrai projet, c'est la date de ces livraisons que je suivrais en premier.")
-            ],[ IMG("images/jira-backlog-vs.png","Le premier sprint de la squad Gameplay : chaque Story découpée en sous-tâches") ],"dessous")
+              T("J'ai découpé le backlog de la Vertical Slice en **Stories à valeur joueur**, chacune divisée en sous-tâches nominatives. Ce découpage a fait apparaître deux goulots : l'**animateur gameplay** et le **sound designer**, présents dans plus de la moitié des Stories, fixent le rythme bien plus que la taille des squads. Il a aussi montré que **le chemin critique passe par les prestataires** : trois Stories attendent une livraison externe, reliée au ticket qu'elle bloque."),
+              T("J'ai ensuite engagé chaque squad selon sa **capacité** : 21 points pour Gameplay, 13 pour World, volontairement léger tant que les livraisons n'étaient pas arrivées. Ces constats sont devenus les premiers risques du registre présenté plus bas.")
+            ],[ CHIFFRES([["23","Stories dans la Vertical Slice"],["126","Points estimés"],["13 et 15","Stories pour l'animateur et le sound designer"],["3","Livraisons externes qui bloquent des Stories"]]) ])
           ]),
-          BANDE("IV","Estimer ce que chaque squad peut tenir",[
-            LIGNE([
-              T("Avant d'engager un sprint, j'ai calculé la **capacité** de chaque squad : les jours du sprint multipliés par la part du temps réellement consacrée à son travail. J'ai retiré environ [[20 %|capacite]] pour les événements du sprint et l'affinage du backlog, et compté les leads à mi-temps, parce qu'une partie de leur temps va au management et aux revues. Ce mi-temps est une hypothèse de travail, sans norme établie : sur un vrai projet, je la validerais avec chaque lead."),
-              T("Sans historique, on s'engage prudemment. La squad Gameplay part donc sur **21 points**, avec un objectif de sprint clair : le joueur peut se battre, esquiver et subir des dégâts, face à des ennemis qui le poursuivent. La squad World s'engage sur **13 points**, pour les raisons de dépendance vues plus haut. Ensuite, c'est la vélocité moyenne des trois derniers sprints qui sert de référence, et une Story non terminée n'est jamais comptée à moitié : elle passe entière au sprint suivant."),
-              T("Les deux squads suivent la même cadence, pour faciliter les revues communes et les dépendances. À l'intérieur d'une Story, une règle simple évite les signaux contradictoires : **une sous-tâche ne dépasse jamais la priorité de sa Story**. Une requête qui classe les sous-tâches par personne et par priorité donne enfin la vue à présenter au premier daily.")
-            ],[ IMG("images/jira-sprints.png","Le sprint en cours de la squad Gameplay, et le suivant déjà préparé") ])
-          ]),
-          BANDE("V","Donner à chacun la bonne visibilité",[
+          BANDE("IV","Donner à chacun la bonne visibilité",[
             LIGNE([
               T("Dans Jira, **un board n'est qu'une vue posée sur un filtre**. J'ai donc pensé les boards par public : un board Scrum pour chaque squad, un board Kanban pour la QA, un board Kanban pour les livraisons des prestataires, qui arrivent par lots et ne suivent pas le rythme des sprints, et un board Production qui voit tout le projet mais sur lequel on ne lance jamais de sprint.")
             ],[ CAROUSEL([["images/jira-board-production.png","Production : la vue d'ensemble, sur laquelle on ne lance jamais de sprint"],["images/jira-board-gameplay.png","Gameplay : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-world.png","World : le sprint en cours de la squad, groupé par Epic"],["images/jira-board-qa.png","QA-Bugs : les bugs rangés par sévérité, une ligne par niveau"],["images/jira-board-vendors.png","Vendors : les livraisons attendues de chaque prestataire"]]) ]),
@@ -340,7 +329,7 @@ const PROJECTS_FR = {
               T("Deux retours en arrière sont nommés. **Rejected**, depuis le tri, ferme un bug qui ne sera pas corrigé. **Reopen** renvoie en correction un bug dont le correctif ne tient pas : c'est ce qui permet de compter les réouvertures, un bon indicateur de la qualité des correctifs.")
             ],[ SCHEMA("bugflow","Le parcours d'un bug, ses deux retours en arrière et ses résolutions") ],"dessous")
           ]),
-          BANDE("VI","Éprouver l'outil avec un sprint simulé",[
+          BANDE("V","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
               T("Pour obtenir de vraies données, j'ai fait vivre un premier sprint par squad, compressé à une semaine au lieu de deux. Côté QA, j'ai écrit un **scénario de onze bugs** pour mettre les workflows à l'épreuve : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint."),
               T("J'ai finalement clôturé les sprints en avance pour faire avancer la simulation, et le burndown le montre : il chute d'un coup au lieu de descendre jour après jour. C'est la limite d'une mise en situation dans Jira, qui construit ses rapports à partir des dates réelles et ne permet pas d'accélérer le temps. Mon objectif était surtout de vérifier que chaque gadget répond bien à sa question.")
@@ -349,7 +338,7 @@ const PROJECTS_FR = {
               T("Le **dashboard du producer** s'organise autour de trois questions : où en est le sprint, quelle est la qualité du build, et quels risques arrivent. Le périmètre de la Vertical Slice y est ventilé par squad et par statut, les bugs rouverts y remontent seuls, et un **filtre de contrôle** liste les tickets incomplets : sans squad, ou terminés sans résolution. Sur un vrai projet, c'est ce filtre qui garantit que tous les autres chiffres sont fiables.")
             ],[ IMG("images/jira-dashboard.png","Le dashboard du producer : burndown par squad, périmètre de la Vertical Slice, bugs créés et résolus, contrôles") ],"dessous")
           ]),
-          BANDE("VII","Automatiser et anticiper",[
+          BANDE("VI","Automatiser et anticiper",[
             LIGNE([
               T("J'ai ensuite automatisé les gestes répétitifs. Une sous-tâche hérite de la squad de sa Story, une Story démarre dès que sa première sous-tâche démarre, et un bug bloquant déclenche une alerte. Aucune règle ne fait passer un ticket en Done : la validation reste une décision humaine."),
               T("En les construisant, j'ai appris à lire le **journal d'audit** de chaque règle pour comprendre ce qui bloque. Un calcul échouait par exemple parce que deux champs du site portaient le même nom : j'ai dû appeler le mien par son identifiant.")
@@ -366,7 +355,7 @@ const PROJECTS_FR = {
               T("Le score n'est jamais saisi à la main : il découle de la probabilité et de l'impact, ce qui l'empêche de les contredire.")
             ],[ SCHEMA("riskflow","Le parcours d'un risque, ses résolutions et le calcul de son score") ],"dessous")
           ]),
-          BANDE("VIII","Ce que j'en retiens",[
+          BANDE("VII","Ce que j'en retiens",[
             LIGNE([
               T("Ce projet m'a surtout appris à penser Jira comme une base de données plutôt que comme un tableau de tâches : une fois les tickets bien rangés, chaque équipe, chaque jalon et chaque contrôle qualité n'est qu'une requête. Il m'a aussi montré que l'outil rend visibles les décisions du producer sans les prendre à sa place : qui est saturé, ce qui dépend de l'extérieur, ce qu'on accepte de reporter."),
               T("Pour comparer, j'ai transposé cette organisation dans **Coda**. Certains calculs y sont plus simples, mais ses formules ne peuvent pas lire l'historique des statuts : il faut donc enregistrer soi-même les dates utiles."),
@@ -663,24 +652,13 @@ const PROJECTS_EN = {
               T("Looking back, this separation is what took the most thought. A task done by the tech artist, for instance, belongs to the squad that commits to delivering it in its sprint. Filed under the Transverse group, it would appear on no board.")
             ],[ IMG("images/jira-ticket.png","A Vertical Slice Story: acceptance criteria, sub-tasks, squad, component, version and parent Epic") ])
           ]),
-          BANDE("III","The bottlenecks and the critical path",[
+          BANDE("III","Preparing the Vertical Slice",[
             LIGNE([
-              T("I broke the game down into Epics (combat, companions, bestiary, acts), then wrote the Vertical Slice backlog as player-value Stories, each split into sub-tasks assigned to a person. “Enemy AI framework” thus becomes “Enemies perceive, chase and attack the player”."),
-              T("This breakdown revealed the project's first risk. The **gameplay animator** works on 13 Stories out of 23, and the **sound designer** on 15. They set the pace, far more than the size of the squads. The Gameplay squad's second sprint shows it well: three of its Stories need animation, and the animator would be overloaded. There were two options: take one Story out of the sprint, or keep it and flag the risk from sprint planning onwards.")
-            ],[ CHIFFRES([["23","Stories in the Vertical Slice"],["126","Estimated points"],["13 and 15","Stories for the animator and the sound designer"],["3","Vendor deliveries blocking Stories"]]) ]),
-            LIGNE([
-              T("The second risk comes from outside. Three World Stories (the forest entrance, the guide NPC and the forest soundscape) are waiting on vendor deliveries: a batch of props, a batch of animations and the main theme. In Jira, each delivery is a work item linked to the Story it blocks, and a Story only enters a sprint once its dependencies are cleared: it is a condition of my **Definition of Ready**."),
-              T("However fast it goes, the World squad therefore cannot finish the Vertical Slice before these deliveries: **the critical path runs through the vendors**. I deliberately gave the World squad a light first sprint, and kept the rest of its capacity for preproduction: art bible, concepts and vendor briefs. On a real project, the dates of these deliveries are what I would track first.")
-            ],[ IMG("images/jira-backlog-vs.png","The Gameplay squad's first sprint: each Story broken down into sub-tasks") ],"dessous")
+              T("I broke the Vertical Slice backlog down into **player-value Stories**, each split into sub-tasks assigned to a person. This breakdown revealed two bottlenecks: the **gameplay animator** and the **sound designer**, involved in more than half of the Stories, set the pace far more than the size of the squads. It also showed that **the critical path runs through the vendors**: three Stories are waiting on an external delivery, linked to the work item it blocks."),
+              T("I then committed each squad according to its **capacity**: 21 points for Gameplay, 13 for World, deliberately light until the deliveries arrived. These findings became the first risks in the register presented further down.")
+            ],[ CHIFFRES([["23","Stories in the Vertical Slice"],["126","Estimated points"],["13 and 15","Stories for the animator and the sound designer"],["3","Vendor deliveries blocking Stories"]]) ])
           ]),
-          BANDE("IV","Estimating what each squad can hold",[
-            LIGNE([
-              T("Before committing to a sprint, I calculated each squad's **capacity**: the days in the sprint multiplied by the share of time really spent on its work. I took off about [[20%|capacite]] for sprint events and backlog refinement, and counted leads at half time, because part of their time goes to management and reviews. This half time is a working assumption, with no established standard: on a real project, I would check it with each lead."),
-              T("Without history, you commit cautiously. The Gameplay squad therefore starts with **21 points**, with a clear sprint goal: the player can fight, dodge and take damage, against enemies that chase them. The World squad commits to **13 points**, for the dependency reasons above. After that, the average velocity of the last three sprints becomes the reference, and an unfinished Story is never half-counted: it moves whole to the next sprint."),
-              T("Both squads follow the same cadence, to make joint reviews and dependencies easier. Within a Story, one simple rule avoids mixed signals: **a sub-task never has a higher priority than its Story**. Finally, a query that sorts sub-tasks by person and priority gives the view to show at the first daily.")
-            ],[ IMG("images/jira-sprints.png","The Gameplay squad's current sprint, with the next one already prepared") ])
-          ]),
-          BANDE("V","Giving everyone the right visibility",[
+          BANDE("IV","Giving everyone the right visibility",[
             LIGNE([
               T("In Jira, **a board is just a view on top of a filter**. So I designed the boards by audience: a Scrum board for each squad, a Kanban board for QA, a Kanban board for vendor deliveries, which arrive in batches and do not follow the sprint rhythm, and a Production board that sees the whole project but on which no sprint is ever started.")
             ],[ CAROUSEL([["images/jira-board-production.png","Production: the overview, on which no sprint is ever started"],["images/jira-board-gameplay.png","Gameplay: the squad's current sprint, grouped by Epic"],["images/jira-board-world.png","World: the squad's current sprint, grouped by Epic"],["images/jira-board-qa.png","QA-Bugs: bugs sorted by severity, one lane per level"],["images/jira-board-vendors.png","Vendors: the deliveries expected from each vendor"]]) ]),
@@ -703,7 +681,7 @@ const PROJECTS_EN = {
               T("Two ways back are named. **Rejected**, from triage, closes a bug that will not be fixed. **Reopen** sends back a bug whose fix does not hold: this is what lets you count reopened bugs, a good indicator of fix quality.")
             ],[ SCHEMA("bugflow","The path of a bug, its two ways back and its resolutions") ],"dessous")
           ]),
-          BANDE("VI","Testing the tool with a simulated sprint",[
+          BANDE("V","Testing the tool with a simulated sprint",[
             LIGNE([
               T("To get real data, I ran a first sprint for each squad, compressed to one week instead of two. On the QA side, I wrote a **scenario of eleven bugs** to put the workflows to the test: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint."),
               T("In the end, I closed the sprints early to move the simulation forward, and the burndown shows it: it drops all at once instead of going down day by day. This is the limit of a simulation in Jira, which builds its reports from real dates and does not let you speed up time. My main goal was to check that each gadget answers its question.")
@@ -712,7 +690,7 @@ const PROJECTS_EN = {
               T("The **producer dashboard** is organised around three questions: where the sprint stands, how good the build is, and which risks are coming. The Vertical Slice scope is broken down by squad and status, reopened bugs show up on their own, and a **control filter** lists incomplete work items: missing a squad, or done without a resolution. On a real project, this filter is what makes every other figure reliable.")
             ],[ IMG("images/jira-dashboard.png","The producer dashboard: burndown per squad, Vertical Slice scope, created vs resolved bugs, checks") ],"dessous")
           ]),
-          BANDE("VII","Automating and anticipating",[
+          BANDE("VI","Automating and anticipating",[
             LIGNE([
               T("I then automated the repetitive actions. A subtask inherits its Story's squad, a Story starts as soon as its first subtask starts, and a blocker bug triggers an alert. No rule moves a work item to Done: approval remains a human decision."),
               T("While building them, I learned to read each rule's **audit log** to understand what goes wrong. One calculation failed, for example, because two fields on the site had the same name: I had to call mine by its ID.")
@@ -729,7 +707,7 @@ const PROJECTS_EN = {
               T("The score is never typed by hand: it derives from probability and impact, which stops it from contradicting them.")
             ],[ SCHEMA("riskflow","The path of a risk, its resolutions and how its score is calculated") ],"dessous")
           ]),
-          BANDE("VIII","What I take away",[
+          BANDE("VII","What I take away",[
             LIGNE([
               T("Above all, this project taught me to think of Jira as a database rather than a task board: once the work items are well sorted, every team, milestone and quality check is just a query. It also showed me that the tool makes the producer's decisions visible without making them: who is overloaded, what depends on outside partners, what we agree to postpone."),
               T("To compare, I transposed this organisation into **Coda**. Some calculations are simpler there, but its formulas cannot read the status history, so you have to record the useful dates yourself."),

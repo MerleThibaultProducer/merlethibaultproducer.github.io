@@ -191,17 +191,17 @@ const PROJECTS_FR = {
           BANDE("II","Organiser quatre équipes en parallèle",[
             LIGNE([
               T("Avec quatre jeux et plus de cinquante personnes, je savais dès le départ que je ne pourrais pas être dans chaque salle en permanence. Il fallait pourtant que les consignes des intervenants arrivent de la même façon à tous les groupes. Nous avons donc lancé les productions en promotion entière, le lendemain de la sélection. Tout le monde a entendu les mêmes consignes au même moment, et nous avons pu poser ensemble l'organisation, les outils et la méthode, avant de les affiner groupe par groupe."),
-              T("Pour garder un lien direct avec chaque équipe, j'ai désigné avec les intervenants deux référents par groupe, un pour les Game Designers et un pour les Game Artists. Cela n'a pas tout réglé : quand j'étais en réunion avec un groupe, les trois autres avançaient sans moi. Les dailies ont pris le relais pour que le suivi continue en mon absence, et je suis resté l'interlocuteur entre les intervenants et les équipes au quotidien, y compris entre les jalons."),
-              T("Avec le recul, ces points quotidiens ne réunissaient pas toute l'équipe, et tout le monde n'avait pas une vision claire de l'avancée du projet. Sur un prochain projet, je mettrais en place des dailies en équipe entière dès le premier jour.")
+              T("Pour garder un lien direct avec chaque équipe, j'ai désigné avec les intervenants deux référents par groupe, un pour les Game Designers et un pour les Game Artists. Cela n'a pas tout réglé : quand j'étais en réunion avec un groupe, les trois autres avançaient sans moi. Les dailies, avec les référents et toute l'équipe, ont pris le relais pour que le suivi continue en mon absence, et je suis resté l'interlocuteur entre les intervenants et les équipes au quotidien, y compris entre les jalons."),
+              T("Avec le recul, ces dailies ne suffisaient pas à donner à chacun une vision claire de l'avancée du projet. Sur un prochain projet, je les mettrais en place en équipe entière dès le premier jour.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planifier et suivre la production",[
             LIGNE([
-              T("L'école imposait ses jalons Waterfall (Proof of Concept, Alpha, Bêta), mais chaque équipe avait besoin de sprints adaptés à son projet. Il me fallait donc relier les deux, avec un suivi assez homogène pour comparer les quatre groupes et repérer les retards tôt."),
+              T("L'école fixait chaque jalon (Proof of Concept, Alpha, Bêta) avec ses livrables attendus, en Waterfall, jusqu'à la Vertical Slice de fin de projet. À l'intérieur de ce cadre, chaque équipe travaillait en Agile, par sprints et itérations adaptés à son projet. Il me fallait donc relier les deux, avec un suivi assez homogène pour comparer les quatre groupes et repérer les retards tôt."),
               T("J'ai construit ce suivi sur Excel, à deux niveaux. Pour chaque groupe, un macro-planning pose les sprints et les jalons de l'école. Un micro-planning rattache ensuite chaque tâche à un sprint, une priorité, une difficulté et un statut : au total, **1 387 tâches** ont été suivies. Les documents de travail étaient partagés dans un PowerPoint commun sur OneDrive, et chaque groupe avait son propre espace Discord.")
             ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)") ],"dessous"),
             LIGNE([
-              T("Tenir près de 1 400 statuts à jour demandait une attention de tous les instants, mais c'est ce qui rendait visibles les retards et les tâches abandonnées (kills), sprint par sprint. Ce qui m'a manqué, ce sont des livrables de fin de sprint plus précis pour chaque spécialité : l'avancée était parfois difficile à vérifier concrètement. C'est la première chose que je changerais.")
+              T("Tenir près de 1 400 statuts à jour demandait une attention de tous les instants, mais c'est ce qui rendait visibles les retards et les tâches abandonnées (kills), sprint par sprint. À la livraison, 93 % des tâches étaient terminées : les 7 % restants correspondent à ces retards et à ces kills. Ce qui m'a manqué, ce sont des livrables de fin de sprint plus précis pour chaque spécialité : l'avancée était parfois difficile à vérifier concrètement. C'est la première chose que je changerais.")
             ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ],"dessous")
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
@@ -221,7 +221,7 @@ const PROJECTS_FR = {
               T("Les retours ont été nombreux, et souvent critiques, à un moment où le moral était déjà entamé. Avec chaque équipe, nous les avons triés pour garder les points les plus importants, puis j'ai redéfini les priorités et réorganisé les plannings. Voir des inconnus jouer aux projets a aussi redonné de l'énergie aux équipes : malgré les critiques, les jeux plaisaient.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest de « Le Castor et l'Écureuil » : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
           ]),
-          BANDE("VI","Les enseignements",[
+          BANDE("VI","Ce que j'en retiens",[
             LIGNE([
               T("C'était la première fois que l'on me confiait la production d'une promotion entière. La crise de mi-parcours m'a appris à mettre de côté ce que je croyais savoir pour écouter les besoins propres à chaque équipe. J'ai aussi appris à déléguer, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même.")
             ])
@@ -372,13 +372,11 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Un fichier de production clair et modulable",[
             LIGNE([
-              T("En construisant mon fichier Excel général, j'ai fait de la clarté ma priorité : chaque information devait pouvoir être trouvée rapidement, sans se perdre dans les onglets. J'ai donc travaillé la cohérence des couleurs pour regrouper les pages liées entre elles, et mis au point des boutons ainsi qu'une barre de navigation simple."),
-              T("J'ai soigné l'ordre des pages et la hiérarchie des informations dans chacune d'elles."),
-              T("Je voulais aussi un fichier adaptable : le budget se met à jour en un clic quand un nouveau membre arrive dans le studio ou qu'une ancienneté change."),
-              T("Il s'ajuste de la même façon aux logiciels attribués à chaque employé (voir l'image).")
+              T("Mon fichier Excel devait rester lisible, avec des onglets regroupés par couleur et une barre de navigation, mais surtout adaptable : le budget se recalcule en un clic quand un membre rejoint le studio, change d'ancienneté ou reçoit de nouveaux logiciels.")
             ],[ CAROUSEL([[EX1.nav,"Page d'accueil du fichier de production : boutons et navigation par onglets colorés"],[EX1.budget,"Vue d'ensemble du budget : équipe, durée et budget par département"]]) ]),
             LIGNE([
-              T("Wyrdfall est un projet AA de 48 mois, comprenant 36 mois de production et 12 mois de live service, pour une équipe de 42 personnes dont 25 restent mobilisées sur la phase de live. Le budget total du projet s'élève à **9 033 682 €**, dont 7 070 677 € de salaires (78 %), le reste se répartissant entre les logiciels, la localisation, les frais de fonctionnement et l'externalisation.")
+              T("Wyrdfall est un projet AA de 48 mois, comprenant 36 mois de production et 12 mois de live service, pour une équipe de 42 personnes dont 25 restent mobilisées sur la phase de live. Le budget total du projet s'élève à **9 033 682 €**, dont 7 070 677 € de salaires (78 %), le reste se répartissant entre les logiciels, la localisation, les frais de fonctionnement et l'externalisation."),
+              T("J'ai composé l'équipe en raisonnant par éléments de production, en m'inspirant de celle de Sandfall Interactive sur Clair Obscur: Expedition 33. Un projet AA impose une équipe resserrée, d'où 42 personnes au pic. Après la sortie, l'effectif passe à 25 : c'est une façon de simuler le démarrage d'autres projets au studio, et une production plus petite consacrée à l'extension.")
             ],[ CHIFFRES([["9 033 682 €","Budget total"],["42","Personnes dans l'équipe"],["48 mois","36 production · 12 live"],["78 %","Part des salaires"]]) ])
           ]),
           BANDE("III","Le Market Analysis et le seuil de rentabilité",[
@@ -390,7 +388,7 @@ const PROJECTS_FR = {
             ],[ CAROUSEL([[EX1.roiCons,"Estimation du ROI, scénario conservateur : 250 000 followers, selon les cas haut, moyen et bas"],[EX1.roiOpti,"Estimation du ROI, scénario optimiste : moyenne des ventes du Market Analysis, selon les cas haut, moyen et bas"]]) ]),
             LIGNE([
               T("Pour savoir à partir de quand le projet devient rentable, j'ai calculé son seuil de rentabilité. Sur un prix de 49,99 €, j'ai retiré en une seule fois la part de Steam, les taxes et la redevance d'Unreal Engine (55 %), puis les remboursements. C'est un choix de prudence : une vente ne rapporte ainsi qu'environ 20 €, un peu moins que dans la réalité. Le budget est couvert à partir d'environ **451 000 ventes**. Si le projet tient avec cette hypothèse, il tiendra avec un calcul plus favorable."),
-              T("Dans le scénario conservateur moyen, j'estime les ventes à 482 000, juste au-dessus du seuil, pour un bénéfice de 616 438 €, soit un ROI d'environ + 6,8 %. Le tableau montre les autres cas : tout se joue sur le taux de conversion des wishlists. Par prudence, j'ai fait varier le revenu par vente d'environ 2 € d'un cas à l'autre : environ 21,8 € dans les cas hauts, 20 € dans les cas moyens et 18,7 € dans les cas bas. Ces estimations ne comptent que les ventes sur Steam, sans le DLC."),
+              T("Dans le scénario conservateur moyen, j'estime les ventes à 482 000, juste au-dessus du seuil, pour un bénéfice de 616 438 €, soit un ROI d'environ + 6,8 %. Le tableau montre les autres cas : tout se joue sur le taux de conversion des wishlists. Dans le cas moyen, avec un taux de conversion de 20 %, environ 234 000 followers suffiraient pour atteindre le seuil, contre les 250 000 prévus. Par prudence, j'ai fait varier le revenu par vente d'environ 2 € d'un cas à l'autre : environ 21,8 € dans les cas hauts, 20 € dans les cas moyens et 18,7 € dans les cas bas. Ces estimations ne comptent que les ventes sur Steam, sans le DLC."),
             ],[ TABLEAU("Bénéfice net et ROI selon les scénarios · Budget total : 9 033 682 €",["Scénario","Ventes estimées","Bénéfice net (ROI)"],["Conservateur : 250 000 followers", ["Haut", "626 600", "+ 4 639 128 € (+ 51,4 %)"], ["Moyen", "482 000", "+ 616 438 € (+ 6,8 %)"], ["Bas", "115 680", "− 6 873 790 € (− 76,1 %)"], "Optimiste : moyenne des ventes du Market Analysis", ["Haut", "959 400", "+ 11 901 031 € (+ 131,7 %)"], ["Moyen", "738 000", "+ 5 741 809 € (+ 63,6 %)"], ["Bas", "177 120", "− 5 726 628 € (− 63,4 %)"]]) ])
           ]),
           BANDE("IV","Planifier quatre ans de production",[
@@ -494,7 +492,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("IV","L'e-sport et les freins au développement",[
             LIGNE([
-              T("La jeunesse (70 % des Nigérians ont moins de 30 ans) porte aussi l'e-sport. Selon PwC (via Agence Ecofin, novembre 2023), les revenus publicitaires des jeux vidéo et de l'e-sport au Nigéria passeraient de 111 M$ en 2022 à 472 M$ en 2027. Les initiatives se multiplient : la confédération africaine CASE (fondée à Dakar en 2023), les tournois AfriGamers ou ABENA Tournaments, qui met en avant les joueuses."),
+              T("La jeunesse (70 % des Nigérians ont moins de 30 ans) porte aussi l'e-sport. Selon PwC (via Agence Ecofin, novembre 2023), les revenus publicitaires des jeux vidéo et de l'e-sport au Nigéria passeraient de 111 M$ en 2022 à 472 M$ en 2027."),
               T("En recoupant les sources, j'ai relevé une incohérence : le même article annonce 7,1 % de croissance par an, ce qui mènerait à environ 156 M$ en 2027, et non 472 M$. Les éditions plus récentes de PwC donnent d'ailleurs des chiffres plus bas. Je retiens donc une tendance, une croissance à deux chiffres portée par le smartphone, plutôt qu'un montant.")
             ],[ TABLEAU("Jeux vidéo et e-sport au Nigéria : les chiffres de PwC, édition par édition",["Source","Période","Revenus"],[["Agence Ecofin, nov. 2023","2022 → 2027","111 → 472 M$ (publicité)"],["Nairametrics, fév. 2025","2023 → 2024","192 → 217 M$"],["Nairametrics, fév. 2025","2023 → 2028","192 → 322 M$ (+ 10,9 % par an)"]],true) ]),
             LIGNE([
@@ -502,7 +500,7 @@ const PROJECTS_FR = {
               TABLEAU("Les freins au développement du secteur",["Frein","Constat"],[["Internet","Réseau fragile, dépendant d'un nombre limité de câbles sous-marins (BBC News)."],["Électricité","12 effondrements du réseau national en 2024. 82 % des développeurs africains jugent critique une alimentation électrique sans coupure (rapport de Maliyo Games, le studio d'Hugo Obi)."],["Pouvoir d'achat","Peu d'ordinateurs et de smartphones puissants : des jeux gratuits, pensés pour des joueurs occasionnels."],["Formation","Peu de formations longues au jeu vidéo, voire aucune."],["Financement","Des revenus souvent liés à des bailleurs de fonds étrangers. Des observateurs cités par Courrier International jugent ces jeux « bien-pensants » : un ressenti, pas un constat chiffré."]],true)
             ])
           ]),
-          BANDE("V","Conclusion et ce que j'en retiens",[
+          BANDE("V","Ce que j'en retiens",[
             LIGNE([
               T("Le marché africain progresse, porté par une population jeune, le jeu sur mobile et l'e-sport. Son modèle, proche du marché asiatique par la place du mobile, se détourne des AAA au profit de jeux du quotidien et de l'histoire nationale, mais il reste fortement limité par les infrastructures, le pouvoir d'achat et le financement."),
               T("Côté production, j'en retiens qu'un marché se lit d'abord par ses contraintes. ChopUp a choisi le mobile, construit son modèle économique autour de la faible bancarisation et calé son rythme de production sur ses ressources. Pour un producer, la leçon est que le budget, le calendrier, la plateforme et le mode de paiement se décident ensemble, dès la conception. Cette étude m'a aussi appris à distinguer un chiffre établi d'une projection avant de bâtir un plan dessus.")
@@ -535,17 +533,17 @@ const PROJECTS_EN = {
           BANDE("II","Organising four teams in parallel",[
             LIGNE([
               T("With four games and more than fifty people, I knew from the start that I could not be in every room all the time. Yet the instructors' guidelines had to reach every group in the same way. So we launched production with the whole class, the day after the selection. Everyone heard the same guidelines at the same time, and we could set the organisation, tools and method together before refining them group by group."),
-              T("To keep a direct link with each team, I appointed two leads per group together with the instructors, one for the Game Designers and one for the Game Artists. That did not solve everything: when I was in a meeting with one group, the other three moved on without me. Dailies kept tracking going when I was elsewhere, and I remained the link between the instructors and the teams every day, including between milestones."),
-              T("Looking back, those daily check-ins did not bring the whole team together, and not everyone had a clear picture of the project's progress. On a future project, I would set up whole-team dailies from day one.")
+              T("To keep a direct link with each team, I appointed two leads per group together with the instructors, one for the Game Designers and one for the Game Artists. That did not solve everything: when I was in a meeting with one group, the other three moved on without me. Dailies, with the leads and the whole team, kept tracking going when I was elsewhere, and I remained the link between the instructors and the teams every day, including between milestones."),
+              T("Looking back, these dailies were not enough to give everyone a clear picture of the project's progress. On a future project, I would set them up with the whole team from day one.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planning and tracking production",[
             LIGNE([
-              T("The school set its Waterfall milestones (Proof of Concept, Alpha, Beta), but each team needed sprints suited to its project. I had to connect the two, with tracking consistent enough to compare the four groups and spot delays early."),
+              T("The school set each milestone (Proof of Concept, Alpha, Beta) with its expected deliverables, Waterfall style, up to the Vertical Slice at the end of the project. Within this frame, each team worked in Agile, with sprints and iterations suited to its project. I had to connect the two, with tracking consistent enough to compare the four groups and spot delays early."),
               T("I built this tracking in Excel, on two levels. For each group, a macro plan sets out the sprints and the school's milestones. A micro plan then links each task to a sprint, a priority, a difficulty and a status: in total, **1,387 tasks** were tracked. Working documents were shared in a common PowerPoint on OneDrive, and each group had its own Discord space.")
             ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)") ],"dessous"),
             LIGNE([
-              T("Keeping nearly 1,400 statuses up to date took constant attention, but it is what made delays and cuts visible, sprint by sprint. What I lacked were more precise end-of-sprint deliverables for each discipline: progress was sometimes hard to check concretely. That is the first thing I would change.")
+              T("Keeping nearly 1,400 statuses up to date took constant attention, but it is what made delays and cuts visible, sprint by sprint. At delivery, 93% of the tasks were done: the remaining 7% were these delays and cuts. What I lacked were more precise end-of-sprint deliverables for each discipline: progress was sometimes hard to check concretely. That is the first thing I would change.")
             ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses") ],"dessous")
           ]),
           BANDE("IV","Handling the art direction crisis",[
@@ -565,7 +563,7 @@ const PROJECTS_EN = {
               T("The feedback was plentiful, and often critical, at a time when morale was already low. With each team, we sorted it to keep the most important points, then I redefined priorities and reorganised the schedules. Seeing strangers play the projects also gave the teams new energy: despite the criticism, players enjoyed the games.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","The playtest feedback form for Le Castor et l'Écureuil: 22 responses"],["images/fda-playtest-perso.jpg","A section of the questionnaire: how players rated the characters"],["images/fda-playtest-coherence.jpg","A section of the questionnaire: design consistency, rated from 1 to 7"]]) ])
           ]),
-          BANDE("VI","Lessons learned",[
+          BANDE("VI","What I take away",[
             LIGNE([
               T("It was the first time I had been the producer for an entire class. The mid-course crisis taught me to set aside what I thought I knew and listen to each team's own needs. I also learned to delegate, and to set up clear communication channels from the start, so that no team feels left to fend for itself.")
             ])
@@ -716,13 +714,11 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","A clear, adjustable production file",[
             LIGNE([
-              T("When building my main Excel file, my priority was clarity: every piece of information had to be found quickly, without getting lost among the tabs. So I worked on colour consistency to group related pages, and built buttons and a simple navigation bar."),
-              T("I took care over the order of the pages and the hierarchy of information on each one."),
-              T("I also wanted an adaptable file: the budget updates in one click when a new member joins the studio or when someone's seniority changes."),
-              T("It adjusts the same way to the software assigned to each employee (see image).")
+              T("My Excel file had to stay readable, with tabs grouped by colour and a navigation bar, but above all adaptable: the budget recalculates in one click when someone joins the studio, changes seniority or is assigned new software.")
             ],[ CAROUSEL([[EX1.nav,"Home page of the production file: buttons and navigation through colour-coded tabs"],[EX1.budget,"Budget overview: team, duration and budget by department"]]) ]),
             LIGNE([
-              T("Wyrdfall is a 48-month AA project, comprising 36 months of production and 12 months of live service, for a team of 42 people, 25 of whom remain on the live phase. The total project budget comes to **€9,033,682**, of which €7,070,677 is salaries (78%), the rest being split between Software, Localisation, Utilities and Outsourcing.")
+              T("Wyrdfall is a 48-month AA project, comprising 36 months of production and 12 months of live service, for a team of 42 people, 25 of whom remain on the live phase. The total project budget comes to **€9,033,682**, of which €7,070,677 is salaries (78%), the rest being split between Software, Localisation, Utilities and Outsourcing."),
+              T("I built the team by reasoning in production elements, drawing on Sandfall Interactive's team for Clair Obscur: Expedition 33. An AA project calls for a lean team, hence 42 people at peak. After release, headcount drops to 25: this simulates the studio starting other projects, and a smaller production dedicated to the expansion.")
             ],[ CHIFFRES([["€9,033,682","Total Budget"],["42","People on the team"],["48 months","36 production · 12 live"],["78%","Share of salaries"]]) ])
           ]),
           BANDE("III","The Market Analysis and the break-even point",[
@@ -734,7 +730,7 @@ const PROJECTS_EN = {
             ],[ CAROUSEL([[EX1.roiCons,"ROI estimate, conservative scenario: 250,000 followers, in high, average and low cases"],[EX1.roiOpti,"ROI estimate, optimistic scenario: average sales from the Market Analysis, in high, average and low cases"]]) ]),
             LIGNE([
               T("To know when the project becomes profitable, I calculated its break-even point. From a price of €49.99, I deducted Steam's share, taxes and the Unreal Engine royalty in one go (55%), then refunds. It is a cautious choice: each sale only brings in about €20, a little less than in reality. The budget is covered from about **451,000 sales**. If the project holds up under this assumption, it will hold up under a more favourable one."),
-              T("In the average conservative scenario, I estimate sales at 482,000, just above the threshold, for a profit of €616,438, an ROI of about +6.8%. The table shows the other cases: everything depends on the wishlist conversion rate. To stay cautious, I varied the revenue per sale by about €2 from one case to another: about €21.80 in the high cases, €20 in the average cases and €18.70 in the low cases. These estimates only count Steam sales, without the DLC."),
+              T("In the average conservative scenario, I estimate sales at 482,000, just above the threshold, for a profit of €616,438, an ROI of about +6.8%. The table shows the other cases: everything depends on the wishlist conversion rate. In the average case, with a 20% conversion rate, about 234,000 followers would be enough to reach the threshold, against the 250,000 planned. To stay cautious, I varied the revenue per sale by about €2 from one case to another: about €21.80 in the high cases, €20 in the average cases and €18.70 in the low cases. These estimates only count Steam sales, without the DLC."),
             ],[ TABLEAU("Net profit and ROI by scenario · Total budget: €9,033,682",["Scenario","Estimated sales","Net profit (ROI)"],["Conservative: 250,000 followers", ["High", "626,600", "+ €4,639,128 (+ 51.4%)"], ["Average", "482,000", "+ €616,438 (+ 6.8%)"], ["Low", "115,680", "− €6,873,790 (− 76.1%)"], "Optimistic: average sales from the Market Analysis", ["High", "959,400", "+ €11,901,031 (+ 131.7%)"], ["Average", "738,000", "+ €5,741,809 (+ 63.6%)"], ["Low", "177,120", "− €5,726,628 (− 63.4%)"]]) ])
           ]),
           BANDE("IV","Planning four years of production",[
@@ -838,7 +834,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("IV","Esports and obstacles to growth",[
             LIGNE([
-              T("Young people (70% of Nigerians are under 30) also drive esports. According to PwC (via Agence Ecofin, November 2023), advertising revenue from video games and esports in Nigeria would rise from $111 m in 2022 to $472 m in 2027. Initiatives are multiplying: the African confederation CASE (founded in Dakar in 2023), AfriGamers tournaments and ABENA Tournaments, which highlights women players."),
+              T("Young people (70% of Nigerians are under 30) also drive esports. According to PwC (via Agence Ecofin, November 2023), advertising revenue from video games and esports in Nigeria would rise from $111 m in 2022 to $472 m in 2027."),
               T("While cross-checking sources, I noticed an inconsistency: the same article announces 7.1% growth a year, which would lead to about $156 m in 2027, not $472 m. More recent PwC editions also give lower figures. I therefore retain a trend, double-digit growth driven by the smartphone, rather than an amount.")
             ],[ TABLEAU("Video games and esports in Nigeria according to PwC, by edition",["Source","Period","Revenue"],[["Agence Ecofin, Nov. 2023","2022 → 2027","$111 → 472 m (advertising)"],["Nairametrics, Feb. 2025","2023 → 2024","$192 → 217 m"],["Nairametrics, Feb. 2025","2023 → 2028","$192 → 322 m (+10.9% a year)"]],true) ]),
             LIGNE([
@@ -846,7 +842,7 @@ const PROJECTS_EN = {
               TABLEAU("Obstacles to the sector's development",["Obstacle","Finding"],[["Internet","Fragile network, dependent on a limited number of submarine cables (BBC News)."],["Electricity","12 national grid collapses in 2024. 82% of African developers rate an uninterrupted power supply as critical (report by Maliyo Games, Hugo Obi's studio)."],["Purchasing power","Few computers and powerful smartphones: free games, designed for casual players."],["Training","Few long-form video game training programmes, if any."],["Funding","Revenue often tied to foreign donors. Observers quoted by Courrier International find these games “well-meaning”: a perception, not a measured finding."]],true)
             ])
           ]),
-          BANDE("V","Conclusion and what I take away",[
+          BANDE("V","What I take away",[
             LIGNE([
               T("The African market is growing, driven by a young population, mobile gaming and esports. Its model, close to the Asian market in the place it gives to mobile, turns away from AAA in favour of everyday games and national history, but it remains heavily constrained by infrastructure, purchasing power and funding."),
               T("For production, my takeaway is that a market is first read through its constraints. ChopUp chose mobile, built its business model around low banking penetration and set its production pace according to its resources. For a producer, the lesson is that budget, schedule, platform and payment method are decided together, from the start. This study also taught me to tell an established figure from a projection before building a plan on it.")

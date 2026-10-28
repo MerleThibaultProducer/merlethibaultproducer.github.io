@@ -2551,7 +2551,8 @@ html body .car:not(.keyart):not(.teams) .car-track {
 html body .band strong,
 html body .prose strong,
 html body .intro strong,
-html body .home-intro strong {
+html body .home-intro strong,
+html body .project .recap strong {
   font-weight: 650;
   color: var(--gold-d);
 }

@@ -278,7 +278,7 @@ const PROJECTS_FR = {
         desc:"Une mise en situation menée seul : la production d'un action-RPG AA fictif structurée dans Jira, des boards au registre des risques.",
         carte:"Un studio fictif structuré dans Jira : workflows à résolutions, circuit des bugs, automatisations et registre des risques.",
         img:"images/jira-vignette.jpg",
-        infos:{ "Rôle":"Producer (mise en situation, mené seul)", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL", "Période":"Octobre 2026", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
+        infos:{ "Rôle":"Producer (mise en situation, mené seul)", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL", "Période":"Octobre 2026", "Temps de travail":"15 h environ", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
         apercu:"Pour apprendre Jira sur un cas réaliste, j'ai organisé seul la production d'un **action-RPG AA fictif** : **15 personnes et quatre prestataires**, sur le modèle d'Ember Lab pour Kena: Bridge of Spirits. J'y ai construit un board par public, des workflows où chaque ticket fermé porte une résolution, un ticket de bug qui sépare la mesure du jugement, des automatisations et un registre des risques relié aux tickets qu'il menace. **Un sprint simulé** m'a servi à vérifier que chaque élément répond à une question de production. Je joue tous les rôles et les données sont simulées : le projet montre comment je structure l'outil, sans prétendre mesurer la conduite d'une équipe.",
         contenu:[
           BANDE("I","Le cadre du projet",[
@@ -619,7 +619,7 @@ const PROJECTS_EN = {
         desc:"A simulation run on my own: the production of a fictional AA action-RPG structured in Jira, from the boards to the risk register.",
         carte:"A fictional studio structured in Jira: workflows with resolutions, a bug pipeline, automations and a risk register.",
         img:"images/jira-vignette.jpg",
-        infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL", "Period":"October 2026", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
+        infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL", "Period":"October 2026", "Workload":"About 15 hours", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
         apercu:"To learn Jira on a realistic case, I organised the production of a **fictional AA action-RPG** on my own: **15 people and four vendors**, modelled on Ember Lab's setup for Kena: Bridge of Spirits. I built one board per audience, workflows where every closed work item carries a resolution, a bug ticket that separates measurement from judgement, automations and a risk register linked to the work items it threatens. **A simulated sprint** let me check that each element answers a production question. I play every role and the data is simulated: the project shows how I structure the tool, without claiming to measure how I lead a team.",
         contenu:[
           BANDE("I","The project framework",[

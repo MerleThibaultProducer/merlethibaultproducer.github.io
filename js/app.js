@@ -105,6 +105,63 @@ document.addEventListener("keydown", e => { if(e.key==="Escape") document.queryS
 const LENS = '<span class="lens" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 8v5M8 10.5h5"/></svg></span>';
 
 const SCHEMAS = {
+bugflow(){
+  const B=(x,y,w,l,c)=>c==="todo"?`<rect x="${x}" y="${y}" width="${w}" height="40" rx="4" class="ob"/><text x="${x+w/2}" y="${y+25}" text-anchor="middle" class="t" font-size="13" font-weight="600">${l}</text>`
+    :`<rect x="${x}" y="${y}" width="${w}" height="40" rx="4" class="${c==="prog"?"navy":"gold"}"/><text x="${x+w/2}" y="${y+25}" text-anchor="middle" ${c==="prog"?'class="ond"':'fill="#152F5C"'} font-size="13" font-weight="600">${l}</text>`;
+  const R=(x,y)=>`<polygon points="${x},${y} ${x-6},${y-4} ${x-6},${y+4}" class="m"/>`, D=(x,y)=>`<polygon points="${x},${y} ${x-4},${y-6} ${x+4},${y-6}" class="m"/>`, U=(x,y)=>`<polygon points="${x},${y} ${x-4},${y+6} ${x+4},${y+6}" class="m"/>`;
+  const S=[["Open","todo"],["Triage","todo"],["To Fix","todo"],["In Progress","prog"],["Fixed","prog"],["Closed","done"]], w=100, g=24, x=i=>20+i*(w+g), y=96;
+  let o=`<svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg">`;
+  o+=`<text x="20" y="22" class="m" font-size="11" letter-spacing="1.2">${q("WORKFLOW DES BUGS","BUG WORKFLOW")}</text>`;
+  S.forEach((st,i)=>{o+=B(x(i),y,w,st[0],st[1]); if(i<5) o+=`<path d="M${x(i)+w} ${y+20}H${x(i+1)-2}" class="axis" fill="none" stroke-width="1.4"/>`+R(x(i+1),y+20);});
+  const c=i=>x(i)+w/2;
+  o+=`<path d="M${c(4)} ${y}V60H${c(2)}V${y-2}" class="axis" fill="none" stroke-width="1.4"/>`+D(c(2),y);
+  o+=`<text x="${(c(2)+c(4))/2}" y="52" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Reopen<tspan class="m" font-weight="400">${q(" : le correctif ne tient pas"," : the fix does not hold")}</tspan></text>`;
+  o+=`<path d="M${c(1)} ${y+40}V176H${c(5)}V${y+42}" class="axis" fill="none" stroke-width="1.4"/>`+U(c(5),y+40);
+  o+=`<text x="${(c(1)+c(5))/2}" y="196" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Rejected<tspan class="m" font-weight="400"> · Won't Do · Duplicate · Cannot Reproduce</tspan></text>`;
+  o+=`<text x="${c(4)+w/2+g/2}" y="${y+58}" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Verified</text><text x="${c(4)+w/2+g/2}" y="${y+73}" text-anchor="middle" class="m" font-size="11.5">${q("résolution Done","resolution Done")}</text>`;
+  const L=[[q("À faire","To do"),"todo"],[q("En cours","In progress"),"prog"],[q("Terminé : résolution obligatoire","Done: resolution required"),"done"]];
+  let lx=20; L.forEach(l=>{o+=l[1]==="todo"?`<rect x="${lx}" y="236" width="14" height="14" rx="3" class="ob"/>`:`<rect x="${lx}" y="236" width="14" height="14" rx="3" class="${l[1]==="prog"?"navy":"gold"}"/>`; o+=`<text x="${lx+22}" y="248" class="m" font-size="12">${l[0]}</text>`; lx+=l[1]==="done"?0:150;});
+  o+=`<text x="20" y="276" class="m" font-size="11.5">${q("Contrôle : statusCategory = Done AND resolution = Unresolved doit renvoyer 0","Check: statusCategory = Done AND resolution = Unresolved must return 0")}</text></svg>`;
+  return o;
+},
+riskflow(){
+  const R=(x,y)=>`<polygon points="${x},${y} ${x-6},${y-4} ${x-6},${y+4}" class="m"/>`, Lf=(x,y)=>`<polygon points="${x},${y} ${x+6},${y-4} ${x+6},${y+4}" class="m"/>`, D=(x,y)=>`<polygon points="${x},${y} ${x-4},${y-6} ${x+4},${y-6}" class="m"/>`, U=(x,y)=>`<polygon points="${x},${y} ${x-4},${y+6} ${x+4},${y+6}" class="m"/>`;
+  const w=140, x=i=>20+i*190, y=84, c=i=>x(i)+w/2;
+  const B=(i,l,k)=>k==="todo"?`<rect x="${x(i)}" y="${y}" width="${w}" height="40" rx="4" class="ob"/><text x="${c(i)}" y="${y+25}" text-anchor="middle" class="t" font-size="13" font-weight="600">${l}</text>`
+    :`<rect x="${x(i)}" y="${y}" width="${w}" height="40" rx="4" class="${k==="prog"?"navy":"gold"}"/><text x="${c(i)}" y="${y+25}" text-anchor="middle" ${k==="prog"?'class="ond"':'fill="#152F5C"'} font-size="13" font-weight="600">${l}</text>`;
+  const P=d=>`<path d="${d}" class="axis" fill="none" stroke-width="1.4"/>`;
+  let o=`<svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg">`;
+  o+=`<text x="20" y="22" class="m" font-size="11" letter-spacing="1.2">${q("WORKFLOW DES RISQUES","RISK WORKFLOW")}</text>`;
+  o+=B(0,"Identified","todo")+B(1,"Monitoring","prog")+B(2,"Mitigating","prog")+B(3,"Closed","done");
+  o+=P(`M${x(0)+w} ${y+20}H${x(1)-2}`)+R(x(1),y+20);
+  o+=P(`M${x(1)+w} ${y+13}H${x(2)-2}`)+R(x(2),y+13)+P(`M${x(2)} ${y+27}H${x(1)+w+2}`)+Lf(x(1)+w,y+27);
+  o+=P(`M${x(2)+w} ${y+20}H${x(3)-2}`)+R(x(3),y+20);
+  o+=`<text x="${(x(1)+w+x(2))/2}" y="${y-8}" text-anchor="middle" class="m" font-size="11">${q("signal d'alerte","warning signal")}</text>`;
+  o+=P(`M${c(3)} ${y}V52H${c(1)}V${y-2}`)+D(c(1),y);
+  o+=`<text x="${(c(1)+c(3))/2}" y="44" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Reopen<tspan class="m" font-weight="400">${q(" : la résolution est vidée"," : the resolution is cleared")}</tspan></text>`;
+  o+=P(`M${c(0)} ${y+40}V160H${c(3)}V${y+42}`)+U(c(3),y+40);
+  o+=`<text x="${(c(0)+c(3))/2}" y="180" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Close<tspan class="m" font-weight="400">${q(" depuis tout statut · Mitigated · Occurred · Obsolete"," from any status · Mitigated · Occurred · Obsolete")}</tspan></text>`;
+  o+=`<rect x="20" y="212" width="720" height="96" rx="4" class="ob"/>`;
+  o+=`<text x="40" y="240" class="t" font-size="13.5" font-weight="600">Risk score = Probability (1-5) × Impact (1-5)</text><text x="40" y="260" class="m" font-size="12">${q("Calculé par une automatisation à chaque modification, jamais saisi à la main","Calculated by an automation on every change, never typed by hand")}</text>`;
+  [["#B5524F",q("15 et plus : à traiter en premier","15 and above: handle first")],["#C98200",q("8 à 14 : à surveiller","8 to 14: monitor")],["#2F6B4F",q("7 et moins : acceptable","7 and below: acceptable")]].forEach((k,i)=>{const cx=48+i*236;o+=`<circle cx="${cx}" cy="286" r="6" fill="${k[0]}"/><text x="${cx+14}" y="290" class="t" font-size="12">${k[1]}</text>`;});
+  return o+`</svg>`;
+},
+autoflow(){
+  const H=[q("QUAND","WHEN"),q("SEULEMENT SI","ONLY IF"),q("ALORS","THEN")], X=[20,270,520], w=220, h=40;
+  const Rw=[[q("Sous-tâche créée","Subtask created"),q("Type = Sub-task","Type = Sub-task"),q("Squad copiée de la Story","Squad copied from the Story")],
+    [q("Sous-tâche passée In Progress","Subtask moved to In Progress"),q("Story parente en To Do","Parent Story in To Do"),q("Story passée In Progress","Story moved to In Progress")],
+    [q("Bug créé","Bug created"),q("Highest ou Blocker","Highest or Blocker"),q("Commentaire et e-mail","Comment and email")],
+    [q("Probabilité ou impact modifié","Probability or impact changed"),q("Type = Risk","Type = Risk"),"Risk score = P × I"]];
+  let o=`<svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg">`;
+  H.forEach((t,i)=>o+=`<text x="${X[i]}" y="22" class="m" font-size="11" letter-spacing="1.2">${t}</text>`);
+  Rw.forEach((r,j)=>{const y=36+j*(h+12);
+    r.forEach((t,i)=>{o+=i<2?`<rect x="${X[i]}" y="${y}" width="${w}" height="${h}" rx="4" class="ob"/><text x="${X[i]+14}" y="${y+25}" class="t" font-size="12.5">${t}</text>`
+      :`<rect x="${X[i]}" y="${y}" width="${w}" height="${h}" rx="4" class="navy"/><text x="${X[i]+14}" y="${y+25}" class="ond" font-size="12.5" font-weight="600">${t}</text>`;
+      if(i<2) o+=`<path d="M${X[i]+w} ${y+20}H${X[i+1]-2}" class="axis" fill="none" stroke-width="1.4"/><polygon points="${X[i+1]},${y+20} ${X[i+1]-6},${y+16} ${X[i+1]-6},${y+24}" class="m"/>`;});
+  });
+  o+=`<text x="20" y="270" class="m" font-size="12">${q("Aucune règle ne fait passer un ticket en Done : la validation reste une décision humaine.","No rule moves a work item to Done: approval remains a human decision.")}</text></svg>`;
+  return o;
+},
 marche(){
   const bars=[[q("2024","2024"),2.14,"#317AC1"],[q("2029 (prévision)","2029 (forecast)"),3.72,"#94670A"]];
   const x0=190,sc=(640-x0)/4.2;

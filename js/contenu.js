@@ -303,8 +303,7 @@ const PROJECTS_FR = {
           BANDE("III","Les goulots et le chemin critique",[
             LIGNE([
               T("J'ai découpé le jeu en Epics (combat, compagnons, bestiaire, actes), puis rédigé le backlog de la Vertical Slice sous forme de Stories à valeur joueur, chacune découpée en sous-tâches nominatives. « Enemy AI framework » devient ainsi « Enemies perceive, chase and attack the player »."),
-              T("Ce découpage a fait apparaître le premier risque du projet. L'**animateur gameplay** intervient dans 13 Stories sur 23, et le **sound designer** dans 15. Ce sont eux qui fixent le rythme, bien plus que la taille des squads. Le deuxième sprint de la squad Gameplay le montre bien : trois de ses Stories demandent de l'animation, et l'animateur y serait saturé. Il y avait deux options : sortir une Story du sprint, ou la garder en signalant le risque dès le planning."),
-              T("[À compléter : l'arbitrage que tu as retenu pour Gameplay S02, et pourquoi.]")
+              T("Ce découpage a fait apparaître le premier risque du projet. L'**animateur gameplay** intervient dans 13 Stories sur 23, et le **sound designer** dans 15. Ce sont eux qui fixent le rythme, bien plus que la taille des squads. Le deuxième sprint de la squad Gameplay le montre bien : trois de ses Stories demandent de l'animation, et l'animateur y serait saturé. Il y avait deux options : sortir une Story du sprint, ou la garder en signalant le risque dès le planning.")
             ],[ CHIFFRES([["23","Stories dans la Vertical Slice"],["126","Points estimés"],["13 et 15","Stories pour l'animateur et le sound designer"],["3","Livraisons externes qui bloquent des Stories"]]) ]),
             LIGNE([
               T("Le second risque vient de l'extérieur. Trois Stories de la squad World (l'entrée de la forêt, le PNJ guide et l'ambiance sonore) attendent des livraisons de prestataires : un lot de props, un lot d'animations et le thème principal. Dans Jira, chaque livraison est un ticket relié à la Story qu'il bloque, et une Story n'entre en sprint que si ses dépendances sont levées : c'est une condition de ma **Definition of Ready**."),
@@ -335,7 +334,11 @@ const PROJECTS_FR = {
               T("J'ai ensuite repensé le **ticket de bug** lui-même. Mon premier modèle tenait dans la description ; je l'ai remplacé par des champs dédiés : le build concerné, les étapes de reproduction, le résultat attendu et le résultat obtenu. J'ai surtout séparé les mesures des jugements. Le nombre d'essais et d'occurrences donne un taux de reproduction, la sévérité dit à quel point le jeu est cassé, et la priorité dit dans quel ordre on corrige. Un bug peut être grave mais rare, ou bénin mais permanent, d'où des champs séparés."),
               T("C'est en testant ce modèle sur un vrai cas que j'ai trouvé ses défauts. Sur un bloquant du sprint Gameplay, la probabilité indiquait « Always » alors que le bug ne se reproduisait que 8 fois sur 10. Le taux de reproduction est donc devenu la référence, et la probabilité se déduit de lui. J'ai aussi distingué la version où le bug a été vu de celle où il doit être corrigé, et rattaché chaque bug à l'Epic du système qu'il touche, pour qu'il compte dans son avancement."),
               T("Sur le board QA, les **swimlanes** rangent désormais les bugs par sévérité, et chaque ligne est une requête JQL : les bloquants en haut, puis les bugs modérés et les bugs mineurs. La carte affiche la priorité, puisque la ligne donne déjà la sévérité : on voit ainsi d'un coup d'œil ce qui casse le jeu et où en est sa correction.")
-            ],[ IMG("images/jira-ticket-bug.png","Un bug bloquant après ces itérations : taux de reproduction, sévérité, priorité, versions et Story bloquée") ])
+            ],[ IMG("images/jira-ticket-bug.png","Un bug bloquant après ces itérations : taux de reproduction, sévérité, priorité, versions et Story bloquée") ]),
+            LIGNE([
+              T("Le workflow des bugs repose sur une règle simple : **un bug ne se ferme jamais sans résolution**. La résolution dit comment il s'est terminé : corrigé et vérifié par la QA (Done), refusé (Won't Do), signalé en double (Duplicate) ou impossible à reproduire (Cannot Reproduce). Elle est remplie par la transition elle-même, et une requête de contrôle vérifie qu'aucun bug terminé n'en est privé."),
+              T("Deux retours en arrière sont nommés. **Rejected**, depuis le tri, ferme un bug qui ne sera pas corrigé. **Reopen** renvoie en correction un bug dont le correctif ne tient pas : c'est ce qui permet de compter les réouvertures, un bon indicateur de la qualité des correctifs.")
+            ],[ SCHEMA("bugflow","Le parcours d'un bug, ses deux retours en arrière et ses résolutions") ],"dessous")
           ]),
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
@@ -352,9 +355,16 @@ const PROJECTS_FR = {
               T("En les construisant, j'ai appris à lire le **journal d'audit** de chaque règle pour comprendre ce qui bloque. Un calcul échouait par exemple parce que deux champs du site portaient le même nom : j'ai dû appeler le mien par son identifiant.")
             ],[ CAROUSEL([["images/jira-automations.png","Les règles d'automatisation actives sur le space"],["images/jira-flow-story.png","Une règle : quand une sous-tâche démarre, sa Story passe en cours si elle ne l'est pas déjà"]]) ]),
             LIGNE([
+              T("Toutes les règles suivent la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. C'est la condition qui rend une règle sûre : sans elle, la règle qui démarre une Story tenterait de la relancer à chaque nouvelle sous-tâche.")
+            ],[ SCHEMA("autoflow","Quatre règles du space, lues selon la même logique") ],"dessous"),
+            LIGNE([
               T("J'ai enfin ajouté un **registre des risques** directement dans Jira, sous la forme d'un type de ticket à part. Chaque risque porte une probabilité, un impact, un signal d'alerte, une mesure d'atténuation et un plan de repli. Son score se calcule tout seul, et il est relié aux tickets qu'il menace. Les risques viennent de ce que le projet avait déjà révélé : la saturation de l'animateur et du sound designer, les livraisons des prestataires et la dérive du périmètre."),
               T("Sur le dashboard, une **matrice des risques** croise probabilité et impact, à côté d'une liste classée par score. On voit en un coup d'œil quels risques traiter en premier, et lesquels sont déjà en cours d'atténuation.")
-            ],[ CAROUSEL([["images/jira-risques-liste.png","Les risques ouverts du dashboard, avec leur score et leur statut"],["images/jira-risques-matrice.png","La matrice des risques : sept risques ouverts, répartis par probabilité et par impact"],["images/jira-risque-r4.png","Un risque : signal d'alerte, atténuation, plan de repli, et les Epics qu'il menace"]]) ])
+            ],[ CAROUSEL([["images/jira-risques-liste.png","Les risques ouverts du dashboard, avec leur score et leur statut"],["images/jira-risques-matrice.png","La matrice des risques : sept risques ouverts, répartis par probabilité et par impact"],["images/jira-risque-r4.png","Un risque : signal d'alerte, atténuation, plan de repli, et les Epics qu'il menace"]]) ]),
+            LIGNE([
+              T("Les risques ont leur propre workflow, volontairement court. Un risque identifié passe en **suivi**, puis en **atténuation** quand son signal d'alerte apparaît, et il peut revenir en suivi si la mesure a fonctionné. À la fermeture, la résolution dit ce qui s'est passé : **Mitigated** (le risque a été neutralisé), **Occurred** (il s'est produit) ou **Obsolete** (il n'a plus lieu d'être). Un risque rouvert perd sa résolution, pour ne pas compter comme traité."),
+              T("Le score n'est jamais saisi à la main : il découle de la probabilité et de l'impact, ce qui l'empêche de les contredire.")
+            ],[ SCHEMA("riskflow","Le parcours d'un risque, ses résolutions et le calcul de son score") ],"dessous")
           ]),
           BANDE("VIII","Ce que j'en retiens",[
             LIGNE([
@@ -656,8 +666,7 @@ const PROJECTS_EN = {
           BANDE("III","The bottlenecks and the critical path",[
             LIGNE([
               T("I broke the game down into Epics (combat, companions, bestiary, acts), then wrote the Vertical Slice backlog as player-value Stories, each split into sub-tasks assigned to a person. “Enemy AI framework” thus becomes “Enemies perceive, chase and attack the player”."),
-              T("This breakdown revealed the project's first risk. The **gameplay animator** works on 13 Stories out of 23, and the **sound designer** on 15. They set the pace, far more than the size of the squads. The Gameplay squad's second sprint shows it well: three of its Stories need animation, and the animator would be overloaded. There were two options: take one Story out of the sprint, or keep it and flag the risk from sprint planning onwards."),
-              T("[To complete: the call you made for Gameplay S02, and why.]")
+              T("This breakdown revealed the project's first risk. The **gameplay animator** works on 13 Stories out of 23, and the **sound designer** on 15. They set the pace, far more than the size of the squads. The Gameplay squad's second sprint shows it well: three of its Stories need animation, and the animator would be overloaded. There were two options: take one Story out of the sprint, or keep it and flag the risk from sprint planning onwards.")
             ],[ CHIFFRES([["23","Stories in the Vertical Slice"],["126","Estimated points"],["13 and 15","Stories for the animator and the sound designer"],["3","Vendor deliveries blocking Stories"]]) ]),
             LIGNE([
               T("The second risk comes from outside. Three World Stories (the forest entrance, the guide NPC and the forest soundscape) are waiting on vendor deliveries: a batch of props, a batch of animations and the main theme. In Jira, each delivery is a work item linked to the Story it blocks, and a Story only enters a sprint once its dependencies are cleared: it is a condition of my **Definition of Ready**."),
@@ -688,7 +697,11 @@ const PROJECTS_EN = {
               T("I then redesigned the **bug ticket** itself. My first template lived in the description; I replaced it with dedicated fields: the build, the steps to reproduce, the expected result and the actual result. Above all, I separated measurements from judgements. The number of attempts and occurrences gives a repro rate, the severity says how broken the game is, and the priority says in which order we fix. A bug can be severe but rare, or minor but permanent, hence separate fields."),
               T("Testing this template on a real case is what revealed its flaws. On a blocker in the Gameplay sprint, the likelihood said \"Always\" while the bug only reproduced 8 times out of 10. The repro rate therefore became the reference, and the likelihood is derived from it. I also distinguished the version where the bug was found from the one where it must be fixed, and linked each bug to the Epic of the system it affects, so it counts in that Epic's progress."),
               T("On the QA board, **swimlanes** now sort bugs by severity, each lane being a JQL query: blockers at the top, then moderate and trivial bugs. The card shows the priority, since the lane already gives the severity, so you can see at a glance what breaks the game and how far its fix has gone.")
-            ],[ IMG("images/jira-ticket-bug.png","A blocker after these iterations: repro rate, severity, priority, versions and the blocked Story") ])
+            ],[ IMG("images/jira-ticket-bug.png","A blocker after these iterations: repro rate, severity, priority, versions and the blocked Story") ]),
+            LIGNE([
+              T("The bug workflow rests on one simple rule: **a bug is never closed without a resolution**. The resolution says how it ended: fixed and verified by QA (Done), refused (Won't Do), reported twice (Duplicate) or impossible to reproduce (Cannot Reproduce). It is set by the transition itself, and a control query checks that no closed bug is missing one."),
+              T("Two ways back are named. **Rejected**, from triage, closes a bug that will not be fixed. **Reopen** sends back a bug whose fix does not hold: this is what lets you count reopened bugs, a good indicator of fix quality.")
+            ],[ SCHEMA("bugflow","The path of a bug, its two ways back and its resolutions") ],"dessous")
           ]),
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
@@ -705,9 +718,16 @@ const PROJECTS_EN = {
               T("While building them, I learned to read each rule's **audit log** to understand what goes wrong. One calculation failed, for example, because two fields on the site had the same name: I had to call mine by its ID.")
             ],[ CAROUSEL([["images/jira-automations.png","The automation rules active on the space"],["images/jira-flow-story.png","A rule: when a subtask starts, its Story moves to In Progress if it is not already"]]) ]),
             LIGNE([
+              T("Every rule follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. The condition is what makes a rule safe: without it, the rule that starts a Story would try to restart it with every new subtask.")
+            ],[ SCHEMA("autoflow","Four rules of the space, read with the same logic") ],"dessous"),
+            LIGNE([
               T("Finally, I added a **risk register** directly in Jira, as a dedicated work type. Each risk has a probability, an impact, a warning signal, a mitigation and a fallback plan. Its score is calculated automatically, and it is linked to the work items it threatens. The risks come from what the project had already revealed: the animator and sound designer overload, vendor deliveries and scope creep."),
               T("On the dashboard, a **risk matrix** crosses probability and impact, next to a list ranked by score. At a glance, you can see which risks to handle first, and which are already being mitigated.")
-            ],[ CAROUSEL([["images/jira-risques-liste.png","Open risks on the dashboard, with their score and status"],["images/jira-risques-matrice.png","The risk matrix: seven open risks, by probability and impact"],["images/jira-risque-r4.png","A risk: warning signal, mitigation, fallback plan, and the Epics it threatens"]]) ])
+            ],[ CAROUSEL([["images/jira-risques-liste.png","Open risks on the dashboard, with their score and status"],["images/jira-risques-matrice.png","The risk matrix: seven open risks, by probability and impact"],["images/jira-risque-r4.png","A risk: warning signal, mitigation, fallback plan, and the Epics it threatens"]]) ]),
+            LIGNE([
+              T("Risks have their own workflow, deliberately short. An identified risk moves to **monitoring**, then to **mitigation** when its warning signal appears, and it can go back to monitoring if the measure worked. On closing, the resolution says what happened: **Mitigated** (the risk was neutralised), **Occurred** (it happened) or **Obsolete** (it no longer applies). A reopened risk loses its resolution, so it does not count as handled."),
+              T("The score is never typed by hand: it derives from probability and impact, which stops it from contradicting them.")
+            ],[ SCHEMA("riskflow","The path of a risk, its resolutions and how its score is calculated") ],"dessous")
           ]),
           BANDE("VIII","What I take away",[
             LIGNE([

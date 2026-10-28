@@ -931,7 +931,7 @@ const INFOS_EN = {
   autresTitre: "Languages, degrees and certificates",
   autres: [
     { icone:"langues", titre:"Languages", items:["French: native","English: fluent","Spanish: basic","Modern Greek: learning"] },
-    { icone:"diplome", titre:"Degrees and certificates", items:["Certification in Conception and Game Design, Game Sup (2023‑2027)","Agile with Atlassian Jira certificate, Atlassian via Coursera (2026)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018‑2020)"] }
+    { icone:"diplome", titre:"Degrees and certificates", items:["Game Design and Concept Development certification, Game Sup (2023‑2027)","Agile with Atlassian Jira certificate, Atlassian via Coursera (2026)","Master's in Religious Anthropology of the Ancient Mediterranean, École Pratique des Hautes Études (2018‑2020)"] }
   ],
   loisirsTitre: "Hobbies",
   loisirs: [

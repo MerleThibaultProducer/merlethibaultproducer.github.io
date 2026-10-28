@@ -5,7 +5,7 @@ const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS,{label:t("infos"),ro
 /* ---------- Langue (FR / EN) ---------- */
 const UI = {
   fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",cvView:"Aperçu du CV",stWip:"En préparation",stDone:"Terminé",nightMode:"Passer en mode nuit",dayMode:"Passer en mode jour",toTop:"Haut de la page",backCat:"Retour :",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",brief:"En bref",ctx:"Contexte",myRole:"Mon rôle",result:"Résultat",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
-  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",cvView:"Preview CV",stWip:"In preparation",stDone:"Done",nightMode:"Switch to dark mode",dayMode:"Switch to light mode",toTop:"Back to top",backCat:"Back:",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
+  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",cvView:"Preview CV",stWip:"In progress",stDone:"Done",nightMode:"Switch to dark mode",dayMode:"Switch to light mode",toTop:"Back to top",backCat:"Back:",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",brief:"At a glance",ctx:"Context",myRole:"My role",result:"Outcome",decisions:"My role and decisions",updated:"Last updated:"}
 };
 let lang = "fr";
 const t = k => UI[lang][k];
@@ -116,8 +116,8 @@ squads(){
   o+=S(390,q("Squad World · 6","World squad · 6"),q("Niveaux, environnement, narration, son","Levels, environment, narrative, sound"),[["Lead Environment Artist"],["Environment / Props Artist"],[q("2 Level Designers","2 Level Designers")],["Narrative Designer"],["Sound Designer",1]]);
   o+=`<circle cx="24" cy="340" r="4" class="gold"/>`+T(34,344,q("Les deux goulots de la Vertical Slice","The two Vertical Slice bottlenecks"),"m",400,"start",11.5);
   o+=`<rect x="20" y="358" width="720" height="72" rx="4" class="ob" stroke-dasharray="5 4"/>`+T(36,382,q("Prestataires · External","Vendors · External"),"t",700,"start",13.5);
-  o+=T(36,404,q("QA Studio (référent : producer) · Animation Studio (référent : animateur gameplay)","QA Studio (lead: producer) · Animation Studio (lead: gameplay animator)"),"m",400,"start",12);
-  o+=T(36,422,q("Art Studio (référent : lead environment artist) · Music Composer","Art Studio (lead: lead environment artist) · Music Composer"),"m",400,"start",12);
+  o+=T(36,404,q("QA Studio (référent : producer) · Animation Studio (référent : animateur gameplay)","QA Studio (contact: producer) · Animation Studio (contact: gameplay animator)"),"m",400,"start",12);
+  o+=T(36,422,q("Art Studio (référent : lead environment artist) · Music Composer","Art Studio (contact: lead environment artist) · Music Composer"),"m",400,"start",12);
   return o+`</svg>`;
 },
 bugflow(){
@@ -130,7 +130,7 @@ bugflow(){
   S.forEach((st,i)=>{o+=B(x(i),y,w,st[0],st[1]); if(i<5) o+=`<path d="M${x(i)+w} ${y+20}H${x(i+1)-2}" class="axis" fill="none" stroke-width="1.4"/>`+R(x(i+1),y+20);});
   const c=i=>x(i)+w/2;
   o+=`<path d="M${c(4)} ${y}V60H${c(2)}V${y-2}" class="axis" fill="none" stroke-width="1.4"/>`+D(c(2),y);
-  o+=`<text x="${(c(2)+c(4))/2}" y="52" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Reopen<tspan class="m" font-weight="400">${q(" : le correctif ne tient pas"," : the fix does not hold")}</tspan></text>`;
+  o+=`<text x="${(c(2)+c(4))/2}" y="52" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Reopen<tspan class="m" font-weight="400">${q(" : le correctif ne tient pas",": the fix does not hold")}</tspan></text>`;
   o+=`<path d="M${c(1)} ${y+40}V176H${c(5)}V${y+42}" class="axis" fill="none" stroke-width="1.4"/>`+U(c(5),y+40);
   o+=`<text x="${(c(1)+c(5))/2}" y="196" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Rejected<tspan class="m" font-weight="400"> · Won't Do · Duplicate · Cannot Reproduce</tspan></text>`;
   o+=`<text x="${c(4)+w/2+g/2}" y="${y+58}" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Verified</text><text x="${c(4)+w/2+g/2}" y="${y+73}" text-anchor="middle" class="m" font-size="11.5">${q("résolution Done","resolution Done")}</text>`;
@@ -153,7 +153,7 @@ riskflow(){
   o+=P(`M${x(2)+w} ${y+20}H${x(3)-2}`)+R(x(3),y+20);
   o+=`<text x="${(x(1)+w+x(2))/2}" y="${y-8}" text-anchor="middle" class="m" font-size="11">${q("signal d'alerte","warning signal")}</text>`;
   o+=P(`M${c(3)} ${y}V52H${c(1)}V${y-2}`)+D(c(1),y);
-  o+=`<text x="${(c(1)+c(3))/2}" y="44" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Reopen<tspan class="m" font-weight="400">${q(" : la résolution est vidée"," : the resolution is cleared")}</tspan></text>`;
+  o+=`<text x="${(c(1)+c(3))/2}" y="44" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Reopen<tspan class="m" font-weight="400">${q(" : la résolution est vidée",": the resolution is cleared")}</tspan></text>`;
   o+=P(`M${c(0)} ${y+40}V160H${c(3)}V${y+42}`)+U(c(3),y+40);
   o+=`<text x="${(c(0)+c(3))/2}" y="180" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Close<tspan class="m" font-weight="400">${q(" depuis tout statut · Mitigated · Occurred · Obsolete"," from any status · Mitigated · Occurred · Obsolete")}</tspan></text>`;
   o+=`<rect x="20" y="212" width="720" height="96" rx="4" class="ob"/>`;
@@ -181,12 +181,12 @@ marche(){
   const bars=[[q("2024","2024"),2.14,"#317AC1"],[q("2029 (prévision)","2029 (forecast)"),3.72,"#94670A"]];
   const x0=190,sc=(640-x0)/4.2;
   let o=`<svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg">`;
-  o+=`<text x="${x0}" y="22" class="m" font-size="11" letter-spacing="1.2">${q("MARCHÉ AFRICAIN DU JEU VIDÉO · MILLIARDS DE DOLLARS","AFRICAN VIDEO GAME MARKET · BILLION DOLLARS")}</text>`;
+  o+=`<text x="${x0}" y="22" class="m" font-size="11" letter-spacing="1.2">${q("MARCHÉ AFRICAIN DU JEU VIDÉO · MILLIARDS DE DOLLARS","AFRICAN VIDEO GAME MARKET · $ BILLION")}</text>`;
   bars.forEach((b,i)=>{const y=44+i*66,w=b[1]*sc;
     o+=`<text x="${x0-14}" y="${y+30}" text-anchor="end" class="t" font-size="13" font-weight="500">${b[0]}</text><rect x="${x0}" y="${y}" width="${w}" height="44" fill="${b[2]}"/><text x="${x0+w-12}" y="${y+29}" text-anchor="end" font-size="16" font-weight="600" fill="#fff">${String(b[1]).replace(".",q(",","."))} Md$</text>`;});
   o+=`<path d="M${x0+2.14*sc+40} 66C${x0+2.14*sc+80} 66 ${x0+2.14*sc+80} 110 ${x0+2.14*sc+40} 110" class="ln"/><text x="${x0+2.14*sc+92}" y="94" class="g" font-size="13" font-weight="600">≈ +${q("11,6 % / an","11.6% / yr")}</text>`;
   o+=`<path d="M${x0} 186H640" class="axis"/>`;
-  o+=`<text x="${x0}" y="212" class="t" font-size="12.5"><tspan font-weight="600">${q("Monde","World")}</tspan>${q(" :",":")} 272,86 → 426,02 Md$ (≈ +9,3 %${q(" / an"," / yr")})</text>`.replace("272,86 → 426,02 Md$ (≈ +9,3 %",q("272,86 → 426,02 Md$ (≈ +9,3 %","272.86 → 426.02 Bn$ (≈ +9.3%"));
+  o+=`<text x="${x0}" y="212" class="t" font-size="12.5"><tspan font-weight="600">${q("Monde","World")}</tspan>${q(" :",":")} 272,86 → 426,02 Md$ (≈ +9,3 %${q(" / an"," / yr")})</text>`.replace("272,86 → 426,02 Md$ (≈ +9,3 %",q("272,86 → 426,02 Md$ (≈ +9,3 %","$272.86 bn → $426.02 bn (≈ +9.3%"));
   o+=`<text x="${x0}" y="236" class="m" font-size="12">${q("Part de l'Afrique : environ 0,8 % du marché mondial en 2024, 0,9 % en 2029","Africa's share: about 0.8% of the world market in 2024, 0.9% in 2029")}</text></svg>`;
   return o;
 },

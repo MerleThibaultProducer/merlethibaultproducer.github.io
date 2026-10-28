@@ -2516,27 +2516,28 @@ html body .infos-page>h1::after {
 html body .legal-page h2 {
   font: 700 1.2rem/1.3 var(--sans);
 }
-html body .car:not(.keyart):not(.teams) .zf {
-  aspect-ratio: 16/10;
-  background: #EEF3FA;
+/* Captures et visuels de projet : jamais agrandis au-delà de leur taille d'origine,
+   hauteur plafonnée pour rester à l'échelle du texte voisin */
+html body .prose { --img-h: 30rem; }
+html body .prose .brow.under { --img-h: 40rem; }
+html body .prose figure:not(.keyart) .zf {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
 }
-html body .car:not(.keyart):not(.teams) .zf img {
-  position: absolute;
-  height: 100%;
-  object-fit: contain;
-  background: transparent!important;
+html body .prose figure:not(.keyart) .zf img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: var(--img-h);
 }
 html body .car:not(.keyart):not(.teams) .car-track {
-  align-items: flex-start;
+  align-items: center;
 }
-:root[data-theme="dark"] .car:not(.keyart):not(.teams) .zf {
-  background: #172A47;
-}
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .car:not(.keyart):not(.teams) .zf {
-    background: #172A47;
-  }
-}
+html body .prose .brow.under .bm > figure.car { margin-inline: auto; }
+/* Schémas en pleine largeur : leur texte garde la taille de celui de la page */
+html body .prose .brow.under .schema { width: 100%; max-width: 56rem; margin-inline: auto; }
+html body .prose .brow.under .schema .cap { text-align: center; }
 .grid.exo .card .cmeta {
   display: none;
 }

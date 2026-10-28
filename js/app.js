@@ -249,11 +249,11 @@ function teamsCarousel(groupes){
   /* Le producer est affiché à part, au-dessus des deux colonnes, et n'est pas compté dans l'équipe */
   const prod = list => list.filter(m=>m.role==="Producer"), team = list => list.filter(m=>m.role!=="Producer");
   const col = (titre, list) => `<div class="tm-col"><h4>${titre}<small>${list.length}</small></h4><ul>${sorted(list).map(person).join("")}</ul></div>`;
-  return `<figure class="car teams" aria-roledescription="carrousel"><div class="car-track">${groupes.map((g,i)=>`<section class="car-s team" aria-label="${esc(g.nom)}">
+  return `<details class="teams-fold"><summary class="btn ghost"><span class="f-show">${q("Voir les membres des équipes","See the team members")}</span><span class="f-hide">${q("Masquer les membres des équipes","Hide the team members")}</span></summary><figure class="car teams" aria-roledescription="carrousel"><div class="car-track">${groupes.map((g,i)=>`<section class="car-s team" aria-label="${esc(g.nom)}">
       <header><span class="tm-k">${t("group")} ${i+1}</span><h3>${esc(g.nom)}</h3><p>${esc(lang==="en"?g.genreEn:g.genre)} · ${team(g.design).length+g.art.length} ${t("members")}</p></header>
       ${prod(g.design).length?`<div class="tm-col tm-prod"><ul>${prod(g.design).map(person).join("")}</ul></div>`:""}
       <div class="tm-cols">${col("Game Design",team(g.design))}${col("Game Art",team(g.art))}</div></section>`).join("")}</div>
-    <div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Groupe précédent","Previous group")}">‹</button><span class="car-cnt">1 / ${groupes.length}</span><button type="button" data-car="1" aria-label="${q("Groupe suivant","Next group")}">›</button></div></figure>`;
+    <div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Groupe précédent","Previous group")}">‹</button><span class="car-cnt">1 / ${groupes.length}</span><button type="button" data-car="1" aria-label="${q("Groupe suivant","Next group")}">›</button></div></figure></details>`;
 }
 function blocks(list){
   return (list||[]).map(b=>{

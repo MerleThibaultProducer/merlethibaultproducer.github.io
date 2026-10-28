@@ -291,7 +291,9 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Organiser le studio et ses prestataires",[
             LIGNE([
-              T("J'ai réparti l'équipe en deux **squads** de six personnes, Gameplay et World, plus un groupe Transverse (direction créative, production, tech art). Les prestataires ont leur propre valeur, External, et un référent interne qui valide leurs livraisons, car leur travail ne suit pas le sprint d'une squad."),
+              T("J'ai réparti l'équipe en deux **squads** de six personnes, Gameplay et World, plus un groupe Transverse (direction créative, production, tech art). Les prestataires ont leur propre valeur, External, et un référent interne qui valide leurs livraisons, car leur travail ne suit pas le sprint d'une squad.")
+            ],[ SCHEMA("squads","L'équipe : deux squads de six personnes, un groupe transverse et quatre prestataires") ]),
+            LIGNE([
               T("Chaque ticket est rangé sur quatre axes : où dans le jeu (le composant), qui le fait (la squad), pour quelle phase (la version) et dans quelle catégorie transverse (le label). Chaque vue du projet devient alors une simple requête. Une tâche du tech artist appartient ainsi à la squad qui s'engage à la livrer : rangée dans le groupe Transverse, elle n'apparaîtrait sur aucun board.")
             ],[ CAROUSEL([["images/jira-versions.png","Les versions du projet, avec leurs critères de sortie"],["images/jira-composants.png","Une partie des 29 composants : systèmes, disciplines et niveaux"],["images/jira-squad.png","Le champ Squad et ses quatre valeurs"],["images/jira-ticket.png","Une Story de la Vertical Slice, rangée sur les quatre axes"]]) ])
           ]),
@@ -633,7 +635,9 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Organising the studio and its vendors",[
             LIGNE([
-              T("I split the team into two **squads** of six, Gameplay and World, plus a Transverse group (creative direction, production, tech art). Vendors have their own value, External, and an internal lead who approves their deliveries, because their work does not follow a squad's sprint."),
+              T("I split the team into two **squads** of six, Gameplay and World, plus a Transverse group (creative direction, production, tech art). Vendors have their own value, External, and an internal lead who approves their deliveries, because their work does not follow a squad's sprint.")
+            ],[ SCHEMA("squads","The team: two squads of six, a transverse group and four vendors") ]),
+            LIGNE([
               T("Each work item is sorted on four axes: where in the game (the component), who does it (the squad), for which phase (the version) and in which cross-cutting category (the label). Every view of the project then becomes a simple query. A tech artist's task therefore belongs to the squad that commits to delivering it: filed under Transverse, it would appear on no board.")
             ],[ CAROUSEL([["images/jira-versions.png","The project versions, with their exit criteria"],["images/jira-composants.png","Some of the 29 components: systems, disciplines and levels"],["images/jira-squad.png","The Squad field and its four values"],["images/jira-ticket.png","A Vertical Slice Story, sorted on the four axes"]]) ])
           ]),

@@ -105,6 +105,21 @@ document.addEventListener("keydown", e => { if(e.key==="Escape") document.queryS
 const LENS = '<span class="lens" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 8v5M8 10.5h5"/></svg></span>';
 
 const SCHEMAS = {
+squads(){
+  const T=(x,y,s,c="t",w=400,a="start",fs=12.5)=>`<text x="${x}" y="${y}" text-anchor="${a}" class="${c}" font-size="${fs}" font-weight="${w}">${s}</text>`;
+  let o=`<svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg">`;
+  o+=`<rect x="200" y="8" width="360" height="72" rx="4" class="ob"/>`+T(380,36,q("Transverse · 3","Transverse · 3"),"t",700,"middle",14)+T(380,60,q("Directeur créatif · Producer · Tech Artist","Creative Director · Producer · Tech Artist"),"m",400,"middle");
+  o+=`<path d="M380 80V100M195 100H565M195 100V120M565 100V120" class="ln2"/>`;
+  const S=(x,titre,sous,m)=>{let s=`<rect x="${x}" y="120" width="350" height="200" rx="4" class="ob"/><rect x="${x}" y="120" width="350" height="36" rx="4" class="navy"/>`+T(x+16,143,titre,"ond",700,"start",14)+T(x+16,178,sous,"m",400,"start",12);
+    m.forEach((p,i)=>{const y=204+i*20; s+=p[1]?`<circle cx="${x+20}" cy="${y-4}" r="4" class="gold"/>`+T(x+32,y,p[0],"g",600):T(x+32,y,p[0]);}); return s;};
+  o+=S(20,q("Squad Gameplay · 6","Gameplay squad · 6"),q("Combat, IA, personnage","Combat, AI, character"),[["Lead Game Designer"],["Gameplay Designer"],[q("2 Gameplay Programmers","2 Gameplay Programmers")],["Character Artist"],[q("Animateur gameplay","Gameplay Animator"),1]]);
+  o+=S(390,q("Squad World · 6","World squad · 6"),q("Niveaux, environnement, narration, son","Levels, environment, narrative, sound"),[["Lead Environment Artist"],["Environment / Props Artist"],[q("2 Level Designers","2 Level Designers")],["Narrative Designer"],["Sound Designer",1]]);
+  o+=`<circle cx="24" cy="340" r="4" class="gold"/>`+T(34,344,q("Les deux goulots de la Vertical Slice","The two Vertical Slice bottlenecks"),"m",400,"start",11.5);
+  o+=`<rect x="20" y="358" width="720" height="72" rx="4" class="ob" stroke-dasharray="5 4"/>`+T(36,382,q("Prestataires · External","Vendors · External"),"t",700,"start",13.5);
+  o+=T(36,404,q("QA Studio (référent : producer) · Animation Studio (référent : animateur gameplay)","QA Studio (lead: producer) · Animation Studio (lead: gameplay animator)"),"m",400,"start",12);
+  o+=T(36,422,q("Art Studio (référent : lead environment artist) · Music Composer","Art Studio (lead: lead environment artist) · Music Composer"),"m",400,"start",12);
+  return o+`</svg>`;
+},
 bugflow(){
   const B=(x,y,w,l,c)=>c==="todo"?`<rect x="${x}" y="${y}" width="${w}" height="40" rx="4" class="ob"/><text x="${x+w/2}" y="${y+25}" text-anchor="middle" class="t" font-size="13" font-weight="600">${l}</text>`
     :`<rect x="${x}" y="${y}" width="${w}" height="40" rx="4" class="${c==="prog"?"navy":"gold"}"/><text x="${x+w/2}" y="${y+25}" text-anchor="middle" ${c==="prog"?'class="ond"':'fill="#152F5C"'} font-size="13" font-weight="600">${l}</text>`;

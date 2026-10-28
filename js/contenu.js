@@ -333,7 +333,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("VII","Automatiser les gestes répétitifs",[
             LIGNE([
-              T("Chaque règle suit la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. Une sous-tâche hérite de la squad de sa Story, une Story démarre avec sa première sous-tâche, un bug bloquant déclenche une alerte. La condition rend la règle sûre : sans elle, la règle qui démarre une Story tenterait de la relancer à chaque sous-tâche. Aucune règle ne fait passer un ticket en Done.")
+              T("Je voulais aussi apprendre à maîtriser les automatisations, l'un des outils les plus utiles de Jira. Chaque règle suit la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. Une sous-tâche hérite de la squad de sa Story, une Story démarre avec sa première sous-tâche, un bug bloquant déclenche une alerte. La condition rend la règle sûre : sans elle, la règle qui démarre une Story tenterait de la relancer à chaque sous-tâche. Aucune règle ne fait passer un ticket en Done.")
             ],[ SCHEMA("autoflow","Quatre règles du space, lues selon la même logique") ],"dessous"),
             LIGNE([
               T("Le **journal d'audit** de chaque règle m'a servi à comprendre ce qui bloquait. Un calcul échouait parce que deux champs du site portaient le même nom : je l'ai corrigé en appelant le mien par son identifiant.")
@@ -677,7 +677,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","Automating the repetitive actions",[
             LIGNE([
-              T("Every rule follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. A subtask inherits its Story's squad, a Story starts with its first subtask, a blocker bug triggers an alert. The condition is what makes a rule safe: without it, the rule that starts a Story would try to restart it with every subtask. No rule moves a work item to Done.")
+              T("I also wanted to learn to master automations, one of the most useful tools in Jira. Every rule follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. A subtask inherits its Story's squad, a Story starts with its first subtask, a blocker bug triggers an alert. The condition is what makes a rule safe: without it, the rule that starts a Story would try to restart it with every subtask. No rule moves a work item to Done.")
             ],[ SCHEMA("autoflow","Four rules of the space, read with the same logic") ],"dessous"),
             LIGNE([
               T("Each rule's **audit log** showed me what was going wrong. One calculation failed because two fields on the site had the same name: I fixed it by calling mine by its ID.")

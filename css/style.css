@@ -1341,7 +1341,7 @@ footer {
 }
 .prose blockquote cite,
 .band blockquote cite {
-  color: var(--gold-n);
+  color: var(--gold-d);  /* contraste AA en mode clair */
   font-weight: 600;
 }
 figcaption,
@@ -1360,7 +1360,7 @@ figcaption,
   display: block;
   margin-bottom: .3rem;
   font: 700 .74rem/1.4 var(--sans);
-  color: var(--gold-n);
+  color: var(--gold-d);  /* contraste AA en mode clair */
 }
 .intro {
   padding: .2rem 0 .2rem 1.5rem;
@@ -1617,7 +1617,7 @@ body.page-home main {
   padding-right: .6rem;
 }
 .tm-col li.me .tm-r {
-  color: var(--gold-n);
+  color: var(--gold-d);  /* contraste AA en mode clair */
   font-weight: 700;
 }
 @media(max-width:760px) {
@@ -1863,7 +1863,7 @@ html body .team .tm-k {
   background: none;
   border: 0;
   padding: 0;
-  color: var(--gold-n);
+  color: var(--gold-d);  /* contraste AA en mode clair */
   text-transform: none;
   letter-spacing: 0;
   font: 600 .95rem var(--sans);
@@ -2346,6 +2346,10 @@ html body .grid.exo .thumb.has-img img {
 @media(max-width:600px) {
   .card.is-wip .thumb {
     aspect-ratio: 3/1;
+  }
+  /* vignette réduite : le texte de survol n'y tient pas */
+  .card.is-wip .thumb .survol {
+    display: none;
   }
 }
 .side {

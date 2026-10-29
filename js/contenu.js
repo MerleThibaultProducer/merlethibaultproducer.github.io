@@ -172,7 +172,7 @@ const PROJECTS_FR = {
     P({ title:"Projets de fin d'année : quatre jeux en parallèle – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"Une promotion entière, un seul producer : de la mise en place de la production à la livraison au jury, en passant par une crise à mi-parcours.", carte:"Toute une promotion et un seul producer, avec une méthode Agile intégrée aux jalons Waterfall de l'école.",
         img:PRO1.thumb,
-        infos:{ "Rôle":"Producer", "Équipe":"4 équipes · 13 à 14 personnes", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
+        infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (53 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes","Genres variés","4 semaines"] },
         apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines, et j'en étais le producer, en lien avec les intervenants qui jouaient le rôle d'éditeurs. J'ai adapté une **méthode Agile** aux jalons Waterfall de l'école, mis en place un suivi Excel pour chaque groupe et fait le lien entre l'encadrement et les équipes au quotidien. Après une crise de direction artistique en deuxième semaine, j'ai organisé deux sessions de playtest communes aux quatre équipes, puis redéfini les priorités avec chacune. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
         contenu:[
@@ -191,7 +191,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Avec quatre jeux et plus de cinquante personnes, je savais dès le départ que je ne pourrais pas être dans chaque salle en permanence. Il fallait pourtant que les consignes des intervenants arrivent de la même façon à tous les groupes. Nous avons donc **lancé les productions en promotion entière**, le lendemain de la sélection. Tout le monde a entendu les mêmes consignes au même moment, et nous avons pu poser ensemble l'organisation, les outils et la méthode, avant de les affiner groupe par groupe."),
               T("Pour garder un lien direct avec chaque équipe, j'ai désigné avec les intervenants **deux référents par groupe**, un pour les Game Designers et un pour les Game Artists. Cela n'a pas tout réglé : quand j'étais en réunion avec un groupe, les trois autres avançaient sans moi. **Les dailies**, avec les référents et toute l'équipe, ont pris le relais pour que le suivi continue en mon absence, et je suis resté l'interlocuteur entre les intervenants et les équipes au quotidien, y compris entre les jalons."),
-              T("Avec le recul, ces dailies ne suffisaient pas à donner à chacun une vision claire de l'avancée du projet. Sur un prochain projet, je les mettrais en place en équipe entière dès le premier jour.")
+              T("Avec le recul, ces dailies ne suffisaient pas à donner à chacun une vision claire de l'avancée du projet. Sur un prochain projet, je les structurerais mieux, sur le modèle du Daily Scrum : quinze minutes au plus, centrées sur l'objectif du sprint et les blocages, pour garder des réunions courtes mais productives.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planifier et suivre la production",[
@@ -235,7 +235,7 @@ const PROJECTS_FR = {
     P({ title:"Workshop Rogue-lite – Février 2026", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
         desc:"Planification à deux niveaux pour deux équipes sur trois semaines : feuille de route du workshop et tâches quotidiennes.", carte:"Deux équipes sur trois semaines, avec une feuille de route pour le workshop et des tâches quotidiennes pour chaque équipe.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","12 à 13 personnes","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
-        infos:{ "Rôle":"Producer", "Équipe":"2 équipes · 12 à 13 personnes", "Durée":"3 semaines", "Genre":"Rogue-lite" },
+        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 12 à 13 personnes", "Durée":"3 semaines", "Genre":"Rogue-lite" },
         resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes développent chacune un rogue-lite.",
                  role:"Producer des deux équipes : planification, sprints et arbitrages.",
                  resultat:"" },
@@ -249,7 +249,7 @@ const PROJECTS_FR = {
     P({ title:"Workshop Fusion – Novembre 2025", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
         desc:"Plan de production Agile sur Excel, revues hebdomadaires et premiers dailies pour deux équipes.", carte:"Un plan de production Agile sur Excel, des revues hebdomadaires et les premiers dailies, confiés aux référents des équipes.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","12 à 13 personnes","Racing · Fusion"] }, img:"images/fusion-thumb.jpg",
-        infos:{ "Rôle":"Producer", "Équipe":"2 équipes · 12 à 13 personnes", "Durée":"3 semaines", "Outils":"Excel" },
+        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 12 à 13 personnes", "Durée":"3 semaines", "Outils":"Excel" },
         resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes.",
                  role:"Producer des deux équipes : plan de production, suivi et répartition des tâches.",
                  resultat:"" },
@@ -262,7 +262,7 @@ const PROJECTS_FR = {
     P({ title:"Projets de fin d'année : mes deux premières productions – Juin 2025", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
         desc:"Ma première gestion de deux projets en parallèle, suivis sur Excel et Miro.", carte:"Deux équipes suivies en parallèle sur Excel et Miro, avec des revues de sprint pour chacune.",
         survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","12 à 13 personnes","Genres variés"] }, img:"images/fin-annee-2025-thumb.jpg",
-        infos:{ "Rôle":"Producer", "Équipe":"2 équipes · 12 à 13 personnes", "Durée":"4 semaines", "Outils":"Excel · Miro" },
+        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 12 à 13 personnes", "Durée":"4 semaines", "Outils":"Excel · Miro" },
         resume:{ contexte:"Projet de fin d'année à Game Sup : deux équipes de 12 à 13 personnes, quatre semaines de développement.",
                  role:"Producer des deux projets, menés en parallèle.",
                  resultat:"" },
@@ -274,7 +274,7 @@ const PROJECTS_FR = {
         ] })
   ],
   perso: [
-    P({ survol:{ items:["Producer","Action-RPG AA · 15 personnes","Mise en situation","Jira · JQL"] }, cat:"Gestion de production", title:"Projet Jira et Agile : un studio en mise en situation – Octobre 2026", large:true, nocover:true,
+    P({ survol:{ items:["Producer","Action-RPG AA · 15 personnes","Mise en situation","Jira · JQL"] }, cat:"Gestion de production", id:"projet-jira-et-agile-un-studio-en-mise-en-situation-octobre-2026", title:"Projet Jira et Agile : un studio en mise en situation", large:true, nocover:true,
         desc:"Une mise en situation menée seul : la production d'un action-RPG AA fictif structurée dans Jira, des boards au registre des risques.",
         carte:"Un studio fictif organisé dans Jira en Scrum : sprints, bugs, risques et automatisations.",
         img:"images/jira-vignette.jpg",
@@ -299,7 +299,7 @@ const PROJECTS_FR = {
           BANDE("III","Préparer la Vertical Slice",[
             LIGNE([
               T("J'ai découpé le backlog de la Vertical Slice en Stories à valeur joueur, chacune divisée en sous-tâches attribuées à une personne. Ce découpage a fait apparaître deux goulots, l'**animateur gameplay** et le **sound designer**, présents dans plus de la moitié des Stories. Il a aussi montré que le **chemin critique** passe par les prestataires : trois Stories attendent une livraison externe, reliée au ticket qu'elle bloque. J'ai donc engagé les squads prudemment, 21 points pour Gameplay et 13 pour World, et ces constats sont devenus les premiers risques du registre."),
-              T("Chaque sprint part d'un **objectif écrit du point de vue du joueur**, vérifiable en démo. Pour Gameplay S01 : « The player can fight, attack, dodge, take damage, with enemies able to follow them ». Une Story n'entre en sprint que si elle est estimée, a ses critères d'acceptation, sa squad, ses composants et sa version, et si ses dépendances sont levées ou datées (**Definition of Ready**). La **Definition of Done** fixe l'autre bout : une Story n'est terminée qu'une fois ses critères vérifiés, relue, validée en QA et intégrée au build sans bug bloquant.")
+              T("Chaque sprint part d'un **objectif écrit du point de vue du joueur**, vérifiable en démo. Pour Gameplay S01 : « The player can attack, dodge and take damage from enemies that chase them ». Une Story n'entre en sprint que si elle est estimée, a ses critères d'acceptation, sa squad, ses composants et sa version, et si ses dépendances sont levées ou datées (**Definition of Ready**). La **Definition of Done** fixe l'autre bout : une Story n'est terminée qu'une fois ses critères vérifiés, relue, validée en QA et intégrée au build sans bug bloquant.")
             ],[ CHIFFRES([["23","Stories dans la Vertical Slice"],["126","Points estimés"],["13 et 15","Stories pour l'animateur et le sound designer"],["3","Livraisons externes qui bloquent des Stories"]]) ])
           ]),
           BANDE("IV","Donner à chacun la bonne visibilité",[
@@ -364,7 +364,7 @@ const PROJECTS_FR = {
         ] }),
         P({ survol:{ items:["Producer","Jeu AA · 30 à 50 personnes","48 mois de production","Excel · Coda · ClickUp"] }, cat:"Gestion de production", title:"Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes
         img:"images/wyrdfall-vignette.jpg",
-        infos:{ "Rôle":"Producer", "Projet":"AA · 30 à 50 personnes", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
+        infos:{ "Rôle":"Producer", "Cadre":"Gestion de production · Game Sup", "Date":"Mars 2026", "Projet":"AA · 30 à 50 personnes", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
         apercu:"Cet exercice de production portait sur Wyrdfall, un jeu AA fictif. Je ne présente ici que la partie gestion de production, où j'ai tenu le rôle de producer, de la composition de l'équipe jusqu'au seuil de rentabilité. Le résultat : **un budget de 9 M€ sur 48 mois**, un seuil atteint vers **451 000 ventes** et trois scénarios de ROI, le tout dans un fichier Excel qui se met à jour en un clic.",
         contenu:[
           BANDE("I","Le sujet et mon rôle",[
@@ -392,7 +392,7 @@ const PROJECTS_FR = {
             ],[ CAROUSEL([[EX1.roiCons,"Estimation du ROI, scénario conservateur : 250 000 followers, selon les cas haut, moyen et bas"],[EX1.roiOpti,"Estimation du ROI, scénario optimiste : moyenne des ventes du Market Analysis, selon les cas haut, moyen et bas"]]) ]),
             LIGNE([
               T("Pour savoir à partir de quand le projet devient rentable, j'ai calculé son **seuil de rentabilité**. Sur un prix de 49,99 €, j'ai retiré en une seule fois la part de Steam, les taxes et la redevance d'Unreal Engine (55 %), puis les remboursements. C'est un choix de prudence : une vente ne rapporte ainsi qu'environ 20 €, un peu moins que dans la réalité. Le budget est couvert à partir d'environ **451 000 ventes**. Si le projet tient avec cette hypothèse, il tiendra avec un calcul plus favorable."),
-              T("Dans le scénario conservateur moyen, j'estime les ventes à 482 000, juste au-dessus du seuil, pour un bénéfice de 616 438 €, soit un **ROI d'environ + 6,8 %**. Le tableau montre les autres cas : tout se joue sur le **taux de conversion des wishlists**. Dans le cas moyen, avec un taux de conversion de 20 %, environ 234 000 followers suffiraient pour atteindre le seuil, contre les 250 000 prévus. Par prudence, j'ai fait varier le revenu par vente d'environ 2 € d'un cas à l'autre : environ 21,8 € dans les cas hauts, 20 € dans les cas moyens et 18,7 € dans les cas bas. Ces estimations ne comptent que les ventes sur Steam, sans le DLC."),
+              T("Dans le scénario conservateur moyen, j'estime les ventes à 482 000, juste au-dessus du seuil, pour un bénéfice de 616 438 €, soit un **ROI d'environ + 6,8 %**. Le calcul part des followers Steam : j'estime les wishlists à 9,64 fois leur nombre, soit 2,41 millions pour 250 000 followers, puis une part de ces wishlists se convertit en ventes. Tout se joue donc sur le **taux de conversion des wishlists** : 20 % dans le cas moyen, 26 % dans le cas haut et 4,8 % dans le cas bas. Au taux moyen, environ 234 000 followers suffiraient pour atteindre le seuil, contre les 250 000 prévus. Par prudence, j'ai fait varier le revenu par vente d'environ 2 € d'un cas à l'autre : environ 21,8 € dans les cas hauts, 20 € dans les cas moyens et 18,7 € dans les cas bas. Ces estimations ne comptent que les ventes sur Steam, sans le DLC."),
             ],[ TABLEAU("Bénéfice net et ROI selon les scénarios · Budget total : 9 033 682 €",["Scénario","Ventes estimées","Bénéfice net (ROI)"],["Conservateur : 250 000 followers", ["Haut", "626 600", "+ 4 639 128 € (+ 51,4 %)"], ["Moyen", "482 000", "+ 616 438 € (+ 6,8 %)"], ["Bas", "115 680", "− 6 873 790 € (− 76,1 %)"], "Optimiste : moyenne des ventes du Market Analysis", ["Haut", "959 400", "+ 11 901 031 € (+ 131,7 %)"], ["Moyen", "738 000", "+ 5 741 809 € (+ 63,6 %)"], ["Bas", "177 120", "− 5 726 628 € (− 63,4 %)"]]) ])
           ]),
           BANDE("IV","Planifier quatre ans de production",[
@@ -518,7 +518,7 @@ const PROJECTS_EN = {
     P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", large:true, nocover:true,
         desc:"A whole class, a single producer: from setting up production to delivery to the jury, through a mid-course crisis.", carte:"A whole class and a single producer, with an Agile method embedded in the school's Waterfall milestones.",
         img:PRO1.thumb,
-        infos:{ "Role":"Producer", "Team":"4 teams · 13 to 14 people", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
+        infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (53 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams","Varied game genres","4 weeks"] },
         apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks, and I was their producer, working with the instructors who acted as publishers. I adapted an **Agile method** to the school's Waterfall milestones, set up Excel tracking for each group and kept the supervisors and teams connected day to day. After an art direction crisis in the second week, I organised two playtest sessions for all four teams, then reset priorities with each of them. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
         contenu:[
@@ -537,7 +537,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("With four games and more than fifty people, I knew from the start that I could not be in every room all the time. Yet the instructors' guidelines had to reach every group in the same way. So we **launched production with the whole class**, the day after the selection. Everyone heard the same guidelines at the same time, and we could set the organisation, tools and method together before refining them group by group."),
               T("To keep a direct link with each team, I appointed **two leads per group** together with the instructors, one for the Game Designers and one for the Game Artists. That did not solve everything: when I was in a meeting with one group, the other three moved on without me. **Dailies**, with the leads and the whole team, kept tracking going when I was elsewhere, and I remained the link between the instructors and the teams every day, including between milestones."),
-              T("Looking back, these dailies were not enough to give everyone a clear picture of the project's progress. On a future project, I would set them up with the whole team from day one.")
+              T("Looking back, these dailies were not enough to give everyone a clear picture of the project's progress. On a future project, I would structure them better, on the Daily Scrum model: fifteen minutes at most, focused on the sprint goal and blockers, to keep meetings short but productive.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planning and tracking production",[
@@ -581,7 +581,7 @@ const PROJECTS_EN = {
     P({ title:"Rogue-lite Workshop – February 2026", wip:true,
         desc:"Two-level planning for two teams over three weeks: a workshop roadmap and daily tasks.", carte:"Two teams over three weeks, with a roadmap for the workshop and daily tasks for each team.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","12 to 13 people","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
-        infos:{ "Role":"Producer", "Team":"2 teams · 12 to 13 people", "Duration":"3 weeks", "Genre":"Rogue-lite" },
+        infos:{ "Role":"Producer", "Team":"2 teams of 12 to 13 people", "Duration":"3 weeks", "Genre":"Rogue-lite" },
         resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people, each developing a rogue-lite.",
                  role:"Producer for both teams: planning, sprints and decisions.",
                  resultat:"" },
@@ -595,7 +595,7 @@ const PROJECTS_EN = {
     P({ title:"Fusion Workshop – November 2025", wip:true,
         desc:"An Agile production plan in Excel, weekly reviews and the first dailies for two teams.", carte:"An Agile production plan in Excel, weekly reviews and the first dailies, entrusted to the team leads.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","12 to 13 people","Racing · Fusion"] }, img:"images/fusion-thumb.jpg",
-        infos:{ "Role":"Producer", "Team":"2 teams · 12 to 13 people", "Duration":"3 weeks", "Tools":"Excel" },
+        infos:{ "Role":"Producer", "Team":"2 teams of 12 to 13 people", "Duration":"3 weeks", "Tools":"Excel" },
         resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people.",
                  role:"Producer for both teams: production plan, tracking and task distribution.",
                  resultat:"" },
@@ -608,7 +608,7 @@ const PROJECTS_EN = {
     P({ title:"End-of-Year Projects: My First Two Productions – June 2025", wip:true,
         desc:"My first time managing two projects in parallel, tracked in Excel and Miro.", carte:"Two teams tracked in parallel in Excel and Miro, with sprint reviews for each.",
         survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","12 to 13 people","Varied genres"] }, img:"images/fin-annee-2025-thumb.jpg",
-        infos:{ "Role":"Producer", "Team":"2 teams · 12 to 13 people", "Duration":"4 weeks", "Tools":"Excel · Miro" },
+        infos:{ "Role":"Producer", "Team":"2 teams of 12 to 13 people", "Duration":"4 weeks", "Tools":"Excel · Miro" },
         resume:{ contexte:"Game Sup end-of-year project: two teams of 12 to 13 people, four weeks of development.",
                  role:"Producer for both projects, run in parallel.",
                  resultat:"" },
@@ -620,7 +620,7 @@ const PROJECTS_EN = {
         ] })
   ],
   perso: [
-    P({ survol:{ items:["Producer","AA action-RPG · 15 people","Simulation","Jira · JQL"] }, cat:"Production management", title:"Jira and Agile Project: A Studio Simulation – October 2026", large:true, nocover:true,
+    P({ survol:{ items:["Producer","AA action-RPG · 15 people","Simulation","Jira · JQL"] }, cat:"Production management", title:"Jira and Agile Project: A Studio Simulation", large:true, nocover:true,
         desc:"A simulation run on my own: the production of a fictional AA action-RPG structured in Jira, from the boards to the risk register.",
         carte:"A fictional studio run in Jira with Scrum: sprints, bugs, risks and automations.",
         img:"images/jira-vignette.jpg",
@@ -645,7 +645,7 @@ const PROJECTS_EN = {
           BANDE("III","Preparing the Vertical Slice",[
             LIGNE([
               T("I broke the Vertical Slice backlog down into player-value Stories, each split into subtasks with a named owner. This revealed two bottlenecks, the **gameplay animator** and the **sound designer**, involved in more than half of the Stories. It also showed that the **critical path** runs through the vendors: three Stories are waiting on an external delivery, linked to the work item it blocks. I therefore committed the squads cautiously, 21 points for Gameplay and 13 for World, and these findings became the first risks in the register."),
-              T("Each sprint starts from a **goal written from the player's point of view** that can be checked in a demo. For Gameplay S01: \"The player can fight, attack, dodge, take damage, with enemies able to follow them\". A Story only enters a sprint once it is estimated and has its acceptance criteria, squad, components and version, with its dependencies cleared or dated (**Definition of Ready**). The **Definition of Done** sets the other end: a Story is only finished once its criteria are checked and it has been reviewed, validated by QA and integrated into the build with no blocking bug.")
+              T("Each sprint starts from a **goal written from the player's point of view** that can be checked in a demo. For Gameplay S01: \"The player can attack, dodge and take damage from enemies that chase them\". A Story only enters a sprint once it is estimated and has its acceptance criteria, squad, components and version, with its dependencies cleared or dated (**Definition of Ready**). The **Definition of Done** sets the other end: a Story is only finished once its criteria are checked and it has been reviewed, validated by QA and integrated into the build with no blocking bug.")
             ],[ CHIFFRES([["23","Stories in the Vertical Slice"],["126","Estimated points"],["13 and 15","Stories for the animator and the sound designer"],["3","Vendor deliveries blocking Stories"]]) ])
           ]),
           BANDE("IV","Giving everyone the right visibility",[
@@ -710,7 +710,7 @@ const PROJECTS_EN = {
         ] }),
     P({ survol:{ items:["Producer","AA game · 30 to 50 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", nocover:true, desc:"Production plan for a 48-month AA game: team, budget, schedule, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
         img:PROJECTS_FR.perso[1].img,
-        infos:{ "Role":"Producer", "Project":"AA · 30 to 50 people", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
+        infos:{ "Role":"Producer", "Context":"Production management · Game Sup", "Date":"March 2026", "Project":"AA · 30 to 50 people", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
         apercu:"This production exercise was about Wyrdfall, a fictional AA game. I only show the production management part here, where I acted as producer, from building the team to the break-even point. The result: **a €9M budget over 48 months**, a break-even point at around **451,000 sales** and three ROI scenarios, all in an Excel file that updates in one click.",
         contenu:[
           BANDE("I","The brief and my role",[
@@ -738,7 +738,7 @@ const PROJECTS_EN = {
             ],[ CAROUSEL([[EX1.roiCons,"ROI estimate, conservative scenario: 250,000 followers, in high, average and low cases"],[EX1.roiOpti,"ROI estimate, optimistic scenario: average sales from the Market Analysis, in high, average and low cases"]]) ]),
             LIGNE([
               T("To know when the project becomes profitable, I calculated its **break-even point**. From a price of €49.99, I deducted Steam's share, taxes and the Unreal Engine royalty in one go (55%), then refunds. It is a cautious choice: each sale only brings in about €20, a little less than in reality. The budget is covered from about **451,000 sales**. If the project holds up under this assumption, it will hold up under a more favourable one."),
-              T("In the average conservative scenario, I estimate sales at 482,000, just above the threshold, for a profit of €616,438, an **ROI of about +6.8%**. The table shows the other cases: everything depends on the **wishlist conversion rate**. In the average case, with a 20% conversion rate, about 234,000 followers would be enough to reach the threshold, against the 250,000 planned. To stay cautious, I varied the revenue per sale by about €2 from one case to another: about €21.80 in the high cases, €20 in the average cases and €18.70 in the low cases. These estimates only count Steam sales, without the DLC."),
+              T("In the average conservative scenario, I estimate sales at 482,000, just above the threshold, for a profit of €616,438, an **ROI of about +6.8%**. The calculation starts from Steam followers: I estimate wishlists at 9.64 times their number, so 2.41 million for 250,000 followers, and a share of those wishlists converts into sales. Everything therefore depends on the **wishlist conversion rate**: 20% in the average case, 26% in the high case and 4.8% in the low case. At the average rate, about 234,000 followers would be enough to reach the threshold, against the 250,000 planned. To stay cautious, I varied the revenue per sale by about €2 from one case to another: about €21.80 in the high cases, €20 in the average cases and €18.70 in the low cases. These estimates only count Steam sales, without the DLC."),
             ],[ TABLEAU("Net profit and ROI by scenario · Total budget: €9,033,682",["Scenario","Estimated sales","Net profit (ROI)"],["Conservative: 250,000 followers", ["High", "626,600", "+ €4,639,128 (+ 51.4%)"], ["Average", "482,000", "+ €616,438 (+ 6.8%)"], ["Low", "115,680", "− €6,873,790 (− 76.1%)"], "Optimistic: average sales from the Market Analysis", ["High", "959,400", "+ €11,901,031 (+ 131.7%)"], ["Average", "738,000", "+ €5,741,809 (+ 63.6%)"], ["Low", "177,120", "− €5,726,628 (− 63.4%)"]]) ])
           ]),
           BANDE("IV","Planning four years of production",[
@@ -861,14 +861,14 @@ const PROJECTS_EN = {
 };
 /* Identifiants créés automatiquement à partir des titres */
 Object.entries(PROJECTS_FR).forEach(([key,list])=>{const seen={};list.forEach(p=>{
-  let b=p.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"projet";
+  let b=p.id||p.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"projet";
   seen[b]=(seen[b]||0)+1;p.id=seen[b]>1?b+"-"+seen[b]:b;p.key=key;});});
 Object.entries(PROJECTS_EN).forEach(([key,list])=>list.forEach((p,i)=>{p.id=PROJECTS_FR[key][i].id;p.key=key;}));
 let PROJECTS = PROJECTS_FR;
 
 const SECTIONS_FR = [
-  {key:"pro",  label:"Projets Professionnels", route:"#/pro",  intro:"Les productions que j'ai menées comme producer à Game Sup : workshops et projets de fin d'année."},
-  {key:"perso",label:"Projets Personnels",     route:"#/perso",intro:"Mes projets personnels et mes exercices de production, de Game Design et d'analyse de marché."}
+  {key:"pro",  label:"Projets professionnels", route:"#/pro",  intro:"Les productions que j'ai menées comme producer à Game Sup : workshops et projets de fin d'année."},
+  {key:"perso",label:"Projets personnels",     route:"#/perso",intro:"Mes projets personnels et mes exercices de production, de Game Design et d'analyse de marché."}
 ];
 const SECTIONS_EN = [
   {key:"pro",  label:"Professional Projects", route:"#/pro",  intro:"The productions I led as a producer at Game Sup: workshops and end-of-year projects."},

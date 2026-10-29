@@ -81,7 +81,7 @@ function listing(sec){
     <h3>${cardTitle(p.title,p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
     ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="btn" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${t("details")}</a>`}</article>`).join("");
   return `<div class="list-head"><h1>${sec.label}</h1><p class="lead">${sec.intro}</p></div>
-  <div class="stage">${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="perso"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;
+  <div class="stage"><h2 class="sr">${q("Liste des projets","Project list")}</h2>${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="perso"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;
 }
 
 const tipNote = (label, key) => {
@@ -383,7 +383,7 @@ function render(){
       const p = list[i], prev = list[i-1], next = list[i+1];
       html = detail(sec, p, prev, next); active = sec.route;
       curNav = {prev: prev && `#/${key}/${prev.id}`, next: next && `#/${key}/${next.id}`};
-      document.title = `${p.cat?p.cat+" : ":""}${p.title} – ${SITE.prenom} ${SITE.nom}`;
+      document.title = `${p.title} – ${SITE.prenom} ${SITE.nom}`;
     }
   }
   if(!html){
@@ -391,7 +391,8 @@ function render(){
     else if(key === "infos"){ html = infos(); active = "#/infos"; }
     else if(key === "mentions"){ html = mentions(); active = "#/mentions"; }
     else { html = home(); active = "#/"; }
-    document.title = key === "mentions" ? `${t("legalPage")} – ${SITE.prenom} ${SITE.nom}` : `${SITE.prenom} ${SITE.nom} – ${SITE.titre}`;
+    const page = sec ? sec.label : key === "infos" ? t("infos") : key === "mentions" ? t("legalPage") : "";
+    document.title = page ? `${page} – ${SITE.prenom} ${SITE.nom}` : `${SITE.prenom} ${SITE.nom} – ${SITE.titre}`;
   }
   chrome(active);
   const v = $("#view"); v.innerHTML = html;

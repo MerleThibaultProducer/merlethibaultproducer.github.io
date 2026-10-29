@@ -256,11 +256,12 @@ function teamsCarousel(groupes){
       <div class="tm-cols">${col("Game Design",team(g.design))}${col("Game Art",team(g.art))}</div></section>`).join("")}</div>
     <div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Groupe précédent","Previous group")}">‹</button><span class="car-cnt">1 / ${groupes.length}</span><button type="button" data-car="1" aria-label="${q("Groupe suivant","Next group")}">›</button></div></figure></details>`;
 }
+const brow = l => `<div class="brow${l.m&&l.m.length?"":" solo"}"><div class="bt">${blocks(l.t)}</div>${l.m&&l.m.length?`<div class="bm">${blocks(l.m)}</div>`:""}</div>`;
 function blocks(list){
   return (list||[]).map(b=>{
     switch(b.k){
       case "t": return String(b.text).split(/\n\s*\n/).map(x=>`<p>${rich(x)}</p>`).join("");
-      case "band": return `<section class="band"><div class="band-head"><span class="band-num">${esc(bandNum(b.num))}</span><h2>${esc(b.titre)}</h2></div>${b.lignes.map(l=>`<div class="brow${l.m&&l.m.length?"":" solo"}"><div class="bt">${blocks(l.t)}</div>${l.m&&l.m.length?`<div class="bm">${blocks(l.m)}</div>`:""}</div>`).join("")}</section>`;
+      case "band": return `<section class="band"><div class="band-head"><span class="band-num">${esc(bandNum(b.num))}</span><h2>${esc(b.titre)}</h2></div>${b.lignes.map(l=>l.plus?`<details class="fold plus"><summary class="btn ghost"><span class="f-show">${q("Voir le détail","See the details")}</span><span class="f-hide">${q("Masquer le détail","Hide the details")}</span></summary>${l.lignes.map(brow).join("")}</details>`:brow(l)).join("")}</section>`;
       case "etapes": return `<ol class="etapes"><h3>${esc(b.titre)}</h3>${b.items.map(i=>`<li${i[2]?` class="${i[2]}"`:""}><b>${rich(i[0])}</b>${i[1]?`<span>${rich(i[1])}</span>`:""}</li>`).join("")}</ol>`;
       case "schema": return `<figure class="schema" role="img" aria-label="${esc(b.cap)}">${SCHEMAS[b.nom]()}${b.cap?`<div class="cap">${esc(b.cap)}</div>`:""}</figure>`;
       case "stats": return `<div class="stats">${b.items.map(i=>`<div class="stat"><b>${esc(i[0])}</b><span>${esc(i[1])}</span></div>`).join("")}</div>`;

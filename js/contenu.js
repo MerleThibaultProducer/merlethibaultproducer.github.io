@@ -66,6 +66,7 @@ const BANDE=(num,titre,lignes)=>({k:"band",num,titre,lignes}), LIGNE=(t,m=[])=>(
       TABLEAU=(titre,cols,rows,plain=false)=>({k:"tbl",titre,cols,rows,plain}), SOURCES=items=>({k:"src",items});
 const ETAPES=(titre,items)=>({k:"etapes",titre,items}), SCHEMA=(nom,cap="")=>({k:"schema",nom,cap});
 const CAROUSEL=items=>({k:"car",items});
+const PLUS=(...lignes)=>({plus:true,lignes});   // dans une BANDE : lignes repliées derrière « Voir le détail »
 const EQUIPES=groupes=>({k:"teams",groupes});
 const KEYART=items=>({k:"keyart",items});
 const P = o => o;
@@ -292,9 +293,9 @@ const PROJECTS_FR = {
             LIGNE([
               T("J'ai réparti l'équipe en deux **squads** de six personnes, Gameplay et World, plus un groupe Transverse (direction créative, production, tech art). Les prestataires ont leur propre valeur de squad, External, et un référent interne qui valide leurs livraisons, car leur travail ne suit pas le sprint d'une squad.")
             ],[ SCHEMA("squads","L'équipe : deux squads de six personnes, un groupe transverse et quatre prestataires") ]),
-            LIGNE([
+            PLUS(LIGNE([
               T("Chaque ticket est **rangé selon quatre axes** : où dans le jeu (le composant), qui le fait (la squad), pour quelle phase (la version) et dans quelle catégorie transverse (le label). Chaque vue du projet devient alors une simple requête. Une tâche du tech artist appartient ainsi à la squad qui s'engage à la livrer : rangée dans le groupe Transverse, elle n'apparaîtrait sur aucun board.")
-            ],[ CAROUSEL([["images/jira-versions.png","Les versions du projet, avec leurs critères de sortie"],["images/jira-composants.png","Une partie des 29 composants : systèmes, disciplines et niveaux"],["images/jira-squad.png","Le champ Squad et ses quatre valeurs"],["images/jira-ticket.png","Une Story de la Vertical Slice, rangée selon les quatre axes"]]) ])
+            ],[ CAROUSEL([["images/jira-versions.png","Les versions du projet, avec leurs critères de sortie"],["images/jira-composants.png","Une partie des 29 composants : systèmes, disciplines et niveaux"],["images/jira-squad.png","Le champ Squad et ses quatre valeurs"],["images/jira-ticket.png","Une Story de la Vertical Slice, rangée selon les quatre axes"]]) ]))
           ]),
           BANDE("III","Préparer la Vertical Slice",[
             LIGNE([
@@ -318,7 +319,7 @@ const PROJECTS_FR = {
               T("J'ai ensuite retravaillé le ticket de bug en pensant à ses deux lecteurs : l'équipe QA, qui doit y trouver toutes les informations utiles à son travail, et le producer, qui doit pouvoir le lire rapidement. En m'appuyant sur *The Pocket Mentor for Video Game Testing*, de Harún H. Ali, j'ai ajouté des **champs dédiés**. Le ticket situe d'abord le bug : le numéro de build, la version où il a été vu et celle où il sera corrigé, et l'Epic qu'il touche. Il le décrit ensuite par le résultat attendu et le résultat obtenu. Le nombre d'essais et d'occurrences donne enfin le **taux de reproduction**, qui indique si le bug revient à chaque fois ou seulement de temps en temps."),
               T("Le ticket sépare aussi la **sévérité** de la **priorité**. La sévérité dit à quel point le jeu est cassé, la priorité dit dans quel ordre on corrige : un bug peut être grave mais rare, ou bénin mais permanent, et c'est au producer d'arbitrer entre les deux. Avec le responsable, que Jira affiche, on voit d'un coup d'œil **ce qui est cassé, à quel point, qui s'en charge et pour quelle version**. Sur la capture, je suis à la fois rapporteur et responsable, puisque je joue tous les rôles : dans une vraie équipe, le rapporteur serait le testeur, et le responsable le développeur qui corrige.")
             ],[ IMG("images/jira-ticket-bug.png","Un bug bloquant reproduit 8 fois sur 10, corrigé et fermé : sévérité Blocker, priorité Highest, likelihood Very frequent, et la Story qu'il bloquait") ]),
-            LIGNE([
+            PLUS(LIGNE([
               T("Le likelihood n'est plus choisi à l'œil, ce qui le faisait varier d'un testeur à l'autre pour un même bug : une **automatisation** le déduit désormais du taux de reproduction. Dès que le nombre d'essais ou d'occurrences change, elle calcule le taux, l'écrit dans le ticket et choisit l'option : **Always à 100 %, Very frequent de 70 à 99 %, Sometimes de 30 à 69 %, Rarely en dessous**. Si les occurrences dépassent les essais, elle laisse le likelihood tel quel et signale l'erreur par un commentaire ; à 0 %, c'est au testeur de trancher. Le bug de la capture précédente, reproduit 8 fois sur 10, passe ainsi automatiquement en Very frequent.")
             ],[ IMG("images/jira-auto-repro.png","La règle du taux de reproduction : calcul, contrôle des valeurs, puis une branche par option de likelihood") ]),
             LIGNE([
@@ -326,7 +327,7 @@ const PROJECTS_FR = {
             ],[ CAROUSEL([["images/jira-board-qa.png","Le board QA-Bugs : une ligne par sévérité"],["images/jira-colonnes-qa.png","Les colonnes et leurs limites de travail en cours"]]) ]),
             LIGNE([
               T("Le workflow pose une règle : **un bug ne se ferme jamais sans résolution**. Verified ferme un bug corrigé avec la résolution Done ; Rejected, depuis le tri, le ferme en Won't Do, Duplicate ou Cannot Reproduce. Reopen renvoie en correction un bug dont le correctif ne tient pas, ce qui permet de compter les réouvertures. Une requête de contrôle vérifie qu'aucun bug fermé n'est privé de résolution.")
-            ],[ SCHEMA("bugflow","Le parcours d'un bug, ses retours en arrière et ses résolutions") ])
+            ],[ SCHEMA("bugflow","Le parcours d'un bug, ses retours en arrière et ses résolutions") ]))
           ]),
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
@@ -340,9 +341,9 @@ const PROJECTS_FR = {
             LIGNE([
               T("Je voulais aussi maîtriser les automatisations de Jira. Chaque règle suit la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. Une sous-tâche hérite de la squad de sa Story, une Story démarre avec sa première sous-tâche, un bug bloquant déclenche une alerte, et le taux de reproduction d'un bug fixe son likelihood. La condition protège la règle : sans elle, celle qui démarre une Story tenterait de la relancer à chaque sous-tâche.")
             ],[ SCHEMA("autoflow","Cinq règles du space, lues selon la même logique") ]),
-            LIGNE([
+            PLUS(LIGNE([
               T("Le **journal d'audit** de chaque règle m'a servi à comprendre ce qui bloquait. Un calcul échouait parce que deux champs du site portaient le même nom : je l'ai corrigé en appelant le mien par son identifiant.")
-            ],[ CAROUSEL([["images/jira-automations.png","Les règles actives sur le space"],["images/jira-audit-erreur.png","Le journal d'audit : le calcul du score échoue, l'impact revient vide"],["images/jira-audit-correctif.png","Le déclencheur corrigé : l'impact appelé par son identifiant, cf[10091]"],["images/jira-flow-story.png","Quand une sous-tâche démarre, sa Story passe en cours si elle ne l'est pas déjà"]]) ])
+            ],[ CAROUSEL([["images/jira-automations.png","Les règles actives sur le space"],["images/jira-audit-erreur.png","Le journal d'audit : le calcul du score échoue, l'impact revient vide"],["images/jira-audit-correctif.png","Le déclencheur corrigé : l'impact appelé par son identifiant, cf[10091]"],["images/jira-flow-story.png","Quand une sous-tâche démarre, sa Story passe en cours si elle ne l'est pas déjà"]]) ]))
           ]),
           BANDE("VIII","Anticiper avec un registre des risques",[
             LIGNE([
@@ -350,9 +351,9 @@ const PROJECTS_FR = {
               T("Cette dérive est devenue le risque R4. Jugée possible (3 sur 5) et d'impact majeur (4 sur 5), elle obtient un score de 12. Son signal d'alerte est mesurable : le filtre du périmètre de la Vertical Slice compte plus de tickets en cours de sprint. L'atténuation pose une règle simple, **tout ajout doit être approuvé par le producer et compensé par un retrait équivalent**, et si elle ne suffit pas, le plan de repli **gèle le périmètre deux sprints avant le jalon**. Il est relié aux Epics Combat et Act 1, et son atténuation est en cours."),
               T("Sur le dashboard, une matrice croise probabilité et impact à côté d'une liste classée par score : on voit quels risques traiter en premier et lesquels sont déjà en cours d'atténuation.")
             ],[ CAROUSEL([["images/jira-risque-r4.png","Le risque R4, dérive du périmètre : score, signal d'alerte, atténuation, plan de repli et Epics menacés"],["images/jira-risques-liste.png","Les sept risques et leur statut : cinq en atténuation, deux en suivi"],["images/jira-risques-matrice.png","La matrice probabilité × impact"]]) ]),
-            LIGNE([
+            PLUS(LIGNE([
               T("Le workflow reste court. Un risque identifié passe en suivi, puis en atténuation quand son signal d'alerte apparaît, et revient en suivi si la mesure a fonctionné. Sa résolution dit ce qui s'est passé (Mitigated, Occurred ou Obsolete), et un risque rouvert la perd. Le score, probabilité × impact, est **calculé par une automatisation** et ne peut donc pas contredire ses deux composantes.")
-            ],[ SCHEMA("riskflow","Le parcours d'un risque, ses résolutions et le calcul de son score") ])
+            ],[ SCHEMA("riskflow","Le parcours d'un risque, ses résolutions et le calcul de son score") ]))
           ]),
           BANDE("IX","Ce que j'en retiens",[
             LIGNE([
@@ -638,9 +639,9 @@ const PROJECTS_EN = {
             LIGNE([
               T("I split the team into two **squads** of six, Gameplay and World, plus a Transverse group (creative direction, production, tech art). Vendors get their own Squad value, External, and an internal point of contact who approves their deliveries, because their work does not follow a squad's sprint.")
             ],[ SCHEMA("squads","The team: two squads of six, a transverse group and four vendors") ]),
-            LIGNE([
+            PLUS(LIGNE([
               T("Each work item is **sorted along four axes**: where in the game (the component), who does it (the squad), for which phase (the version) and in which cross-cutting category (the label). Every view of the project then becomes a simple query. This is why a tech artist's task belongs to the squad that commits to delivering it: filed under Transverse, it would not appear on any board.")
-            ],[ CAROUSEL([["images/jira-versions.png","The project versions, with their exit criteria"],["images/jira-composants.png","Some of the 29 components: systems, disciplines and levels"],["images/jira-squad.png","The Squad field and its four values"],["images/jira-ticket.png","A Vertical Slice Story, sorted along the four axes"]]) ])
+            ],[ CAROUSEL([["images/jira-versions.png","The project versions, with their exit criteria"],["images/jira-composants.png","Some of the 29 components: systems, disciplines and levels"],["images/jira-squad.png","The Squad field and its four values"],["images/jira-ticket.png","A Vertical Slice Story, sorted along the four axes"]]) ]))
           ]),
           BANDE("III","Preparing the Vertical Slice",[
             LIGNE([
@@ -664,7 +665,7 @@ const PROJECTS_EN = {
               T("I then reworked the bug ticket with its two readers in mind: the QA team, who need every useful detail right there, and the producer, who must be able to read it quickly. Drawing on *The Pocket Mentor for Video Game Testing* by Harún H. Ali, I added **dedicated fields**. The ticket first places the bug: the build number, the version where it was found and the one where it will be fixed, and the Epic it affects. It then describes it through the expected and actual results. Finally, the number of attempts and occurrences gives the **repro rate**, which shows whether the bug comes back every time or only now and then."),
               T("The ticket also separates **severity** from **priority**. Severity says how broken the game is, priority sets the order in which bugs are fixed: a bug can be severe but rare, or minor but permanent, and it is up to the producer to weigh the two. With the assignee, which Jira displays, you can see at a glance **what is broken, how badly, who is handling it and for which version**. In the screenshot I am both reporter and assignee, since I play every role; in a real team, the reporter would be the tester and the assignee the developer fixing the bug.")
             ],[ IMG("images/jira-ticket-bug.png","A blocker bug reproduced 8 times out of 10, fixed and closed: Blocker severity, Highest priority, Very frequent likelihood, and the Story it was blocking") ]),
-            LIGNE([
+            PLUS(LIGNE([
               T("Likelihood is no longer picked by eye, which made it vary from one tester to another for the same bug: an **automation** now derives it from the repro rate. As soon as the number of attempts or occurrences changes, it calculates the rate, writes it into the ticket and picks the option: **Always at 100%, Very frequent from 70 to 99%, Sometimes from 30 to 69%, Rarely below that**. If occurrences exceed attempts, it leaves the likelihood unchanged and flags the error in a comment; at 0%, the decision stays with the tester. The bug in the previous screenshot, reproduced 8 times out of 10, is therefore set to Very frequent automatically.")
             ],[ IMG("images/jira-auto-repro.png","The repro rate rule: calculation, value check, then one branch per likelihood option") ]),
             LIGNE([
@@ -672,7 +673,7 @@ const PROJECTS_EN = {
             ],[ CAROUSEL([["images/jira-board-qa.png","The QA-Bugs board: one lane per severity"],["images/jira-colonnes-qa.png","The columns and their work-in-progress limits"]]) ]),
             LIGNE([
               T("The workflow sets one rule: **a bug is never closed without a resolution**. Verified closes a fixed bug with the Done resolution; Rejected, from triage, closes it as Won't Do, Duplicate or Cannot Reproduce. Reopen sends back a bug whose fix does not hold, which lets you count reopened bugs. A control query checks that no closed bug is missing a resolution.")
-            ],[ SCHEMA("bugflow","The path of a bug, its ways back and its resolutions") ])
+            ],[ SCHEMA("bugflow","The path of a bug, its ways back and its resolutions") ]))
           ]),
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
@@ -686,9 +687,9 @@ const PROJECTS_EN = {
             LIGNE([
               T("I also wanted to master Jira's automations. Every rule follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. A subtask inherits its Story's squad, a Story starts with its first subtask, a blocker bug triggers an alert, and a bug's repro rate sets its likelihood. The condition keeps a rule safe: without it, the one that starts a Story would try to restart it with every subtask.")
             ],[ SCHEMA("autoflow","Five rules of the space, read with the same logic") ]),
-            LIGNE([
+            PLUS(LIGNE([
               T("Each rule's **audit log** showed me what was going wrong. One calculation failed because two fields on the site had the same name: I fixed it by calling mine by its ID.")
-            ],[ CAROUSEL([["images/jira-automations.png","The rules active on the space"],["images/jira-audit-erreur.png","The audit log: the score calculation fails, impact comes back empty"],["images/jira-audit-correctif.png","The fixed trigger: impact called by its ID, cf[10091]"],["images/jira-flow-story.png","When a subtask starts, its Story moves to In Progress if it is not already"]]) ])
+            ],[ CAROUSEL([["images/jira-automations.png","The rules active on the space"],["images/jira-audit-erreur.png","The audit log: the score calculation fails, impact comes back empty"],["images/jira-audit-correctif.png","The fixed trigger: impact called by its ID, cf[10091]"],["images/jira-flow-story.png","When a subtask starts, its Story moves to In Progress if it is not already"]]) ]))
           ]),
           BANDE("VIII","Anticipating with a risk register",[
             LIGNE([
@@ -696,9 +697,9 @@ const PROJECTS_EN = {
               T("Scope creep became risk R4. Rated possible (3 out of 5) with a major impact (4 out of 5), it scores 12. Its warning signal is measurable: the Vertical Slice scope filter counts more work items during the sprint. The mitigation sets a simple rule, **any addition must be approved by the producer and traded for an equal cut**, and if that is not enough, the fallback plan **freezes the scope two sprints before the milestone**. It is linked to the Combat and Act 1 Epics, and mitigation is under way."),
               T("On the dashboard, a matrix crosses probability and impact next to a list ranked by score: you can see which risks to handle first and which are already being mitigated.")
             ],[ CAROUSEL([["images/jira-risque-r4.png","Risk R4, scope creep: score, warning signal, mitigation, fallback plan and threatened Epics"],["images/jira-risques-liste.png","The seven risks and their status: five being mitigated, two monitored"],["images/jira-risques-matrice.png","The probability × impact matrix"]]) ]),
-            LIGNE([
+            PLUS(LIGNE([
               T("The workflow stays short. An identified risk moves to monitoring, then to mitigation when its warning signal appears, and back to monitoring if the measure worked. Its resolution says what happened (Mitigated, Occurred or Obsolete), and a reopened risk loses it. The score, probability × impact, is **calculated by an automation**, so it cannot contradict its two components.")
-            ],[ SCHEMA("riskflow","The path of a risk, its resolutions and how its score is calculated") ])
+            ],[ SCHEMA("riskflow","The path of a risk, its resolutions and how its score is calculated") ]))
           ]),
           BANDE("IX","What I take away",[
             LIGNE([

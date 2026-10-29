@@ -232,19 +232,48 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ title:"Workshop Rogue-lite – Février 2026", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
-        desc:"Planification à deux niveaux pour deux équipes sur trois semaines : feuille de route du workshop et tâches quotidiennes.", carte:"Deux équipes sur trois semaines, avec une feuille de route pour le workshop et des tâches quotidiennes pour chaque équipe.",
+    P({ title:"Workshop Rogue-lite – Février 2026", large:true, nocover:true,
+        desc:"Deux équipes, deux licences de films d'animation et quinze jours pour livrer deux rogue-lites jouables sous Unity.",
+        carte:"Deux rogue-lites sous Unity en quinze jours, avec un planning commun et un suivi quotidien des tâches pour chaque équipe.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","12 à 13 personnes","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
-        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 12 à 13 personnes", "Durée":"3 semaines", "Genre":"Rogue-lite" },
-        resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes développent chacune un rogue-lite.",
-                 role:"Producer des deux équipes : planification, sprints et arbitrages.",
-                 resultat:"" },
-        decisions:[ "Une planification à deux niveaux : une feuille de route pour le workshop et des tâches quotidiennes pour chaque équipe.",
-                    "Des sprints adaptés à chaque équipe, à l'écoute de ses besoins.",
-                    "L'arbitrage des points bloquants remontés par les équipes.",
-                    "Des retours sur les documents de design, pour garder un périmètre réaliste." ],
+        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 12 à 13 personnes", "Durée":"2 – 20 février 2026", "Outils":"Excel" },
+        apercu:"Pour ce workshop de Game Sup, deux équipes avaient quinze jours pour livrer chacune un **rogue-lite en 2,5D sous Unity**, d'après une licence imposée : *Vampire Hunter D: Bloodlust* pour l'une, *Mad Max: Fury Road* pour l'autre. J'étais le producer des deux. J'ai tenu un **planning commun** calé sur les jalons de l'école et un suivi quotidien des tâches propre à chaque équipe. Vampire Hunter E-Cycle et Mad Max Fury Rogue ont été livrés au jury avec **94 % et 92 % des tâches terminées**, sur 573 tâches suivies.",
         contenu:[
-          IMG("", "Planning de production")
+          BANDE("I","Le cadre du projet",[
+            LIGNE([
+              T("Le cahier des charges était dense pour quinze jours : une boucle complète « run, mort, amélioration », un HUB où améliorer son personnage, au moins cinq salles de combat et trois salles iconiques assemblées procéduralement, une économie de monnaies, un boss et un combat avec esquive, combo et capacité. S'y ajoutaient les menus, l'écran de score, les splashscreens et toute la documentation : High Concept, Level Design, narration, direction artistique et gestion de production.")
+            ],[ FICHE("Les contraintes",["Deux jeux à produire en même temps","Cinq jalons en quinze jours : Intentions, Proof of Concept, Alpha, Bêta, Gold","Une licence de film d'animation imposée à chaque équipe","Le conseil de l'école : ne pas voir trop grand"]) ]),
+            LIGNE([
+              T("Chaque équipe a reçu sa licence dans une liste de films et de séries d'animation. Le Groupe 3 en a tiré **Vampire Hunter E-Cycle**, d'après *Vampire Hunter D: Bloodlust*, et le Groupe 4 **Mad Max Fury Rogue**, d'après *Mad Max: Fury Road*.")
+            ],[ IMG("images/rogue-thumb.jpg","Mad Max Fury Rogue et Vampire Hunter E-Cycle, les deux jeux du workshop") ])
+          ]),
+          BANDE("II","Planifier à deux niveaux",[
+            LIGNE([
+              T("Les deux équipes partageaient le même calendrier : **trois sprints d'une semaine**, calés sur les jalons de l'école. Le premier posait le blocking et les assets essentiels. Le deuxième poussait la modélisation et l'environnement vers le rendu final et terminait le système d'attaque, sans créer de nouveaux assets. Le dernier était réservé à l'équilibrage et au polish."),
+              T("En dessous, chaque équipe avait son **backlog** dans Excel : 336 tâches pour Vampire Hunter E-Cycle, 237 pour Mad Max Fury Rogue. Chaque tâche avait une personne, un sprint, des dates, une difficulté, une priorité et un statut, et chaque sprint avait son propre onglet.")
+            ],[ CHIFFRES([["573","tâches suivies"],["94 % et 92 %","tâches terminées"],["3","sprints d'une semaine"],["5","jalons en quinze jours"]]) ]),
+            LIGNE([
+              IMG("images/rogue-planning.png","Le planning de production : phases, jalons de l'école et sprints d'une semaine")
+            ])
+          ]),
+          BANDE("III","Préparer les coupes",[
+            LIGNE([
+              T("En quinze jours, chaque fonctionnalité de trop met le jeu en danger. Avec chaque équipe, j'ai donc dressé une **liste de tâches sacrifiables**, les premières à couper si le temps manquait : 28 pour Vampire Hunter E-Cycle, 14 pour Mad Max Fury Rogue. La plupart ne sont jamais entrées dans les sprints. Cinq seulement y ont trouvé une place : le double dash, l'épée et le bouclier d'un côté, l'écran de chargement de l'autre ont été réalisés, et des tuyaux modulaires ont finalement été coupés."),
+              T("Il a fallu couper encore en production : **sept tâches dans chaque équipe**, sans toucher au cœur du jeu. Pour Vampire Hunter E-Cycle, toutes l'ont été pendant le sprint 2, le plus chargé avec 137 tâches : le gestionnaire de musique, les maquettes du marchand, l'arc émotionnel du document narratif. Pour Mad Max Fury Rogue, les coupes ont touché un second ennemi, le shader de sable et des éléments de décor modulaires.")
+            ],[ FICHE("La liste sacrifiable",["Un double saut et un système de dialogue","Une salle maudite et un inventaire","Un ennemi lance-flammes et un marché","42 tâches listées : 37 jamais lancées, 4 réalisées, 1 coupée"]) ])
+          ]),
+          BANDE("IV","Suivre deux équipes en même temps",[
+            LIGNE([
+              T("J'ai construit les sprints avec chaque équipe et levé les blocages au fil de l'eau. Chaque équipe avait deux leads, un en Game Design et un en Game Art, qui étaient mes relais au quotidien."),
+              T("J'ai aussi relu les documents de design des deux équipes, surtout pour vérifier que le périmètre et la faisabilité tenaient en quinze jours.")
+            ])
+          ]),
+          BANDE("V","Ce que j'en retiens",[
+            LIGNE([
+              T("Ce workshop m'a appris à **décider des coupes avant d'en avoir besoin**. Une liste sacrifiable préparée à l'avance évite d'improviser pendant le rush : quand le temps manque, on sait déjà ce qu'on laisse de côté."),
+              T("J'avais écrit les mêmes objectifs de sprint pour les deux équipes. Avec le recul, chacune aurait gagné à avoir **ses propres objectifs**, tirés de son jeu et de son avancement : elles n'avaient pas le même volume de travail, 336 tâches d'un côté et 237 de l'autre.")
+            ])
+          ])
         ] }),
     P({ title:"Workshop Fusion – Novembre 2025", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
         desc:"Plan de production Agile sur Excel, revues hebdomadaires et premiers dailies pour deux équipes.", carte:"Un plan de production Agile sur Excel, des revues hebdomadaires et les premiers dailies, confiés aux référents des équipes.",
@@ -578,19 +607,48 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ title:"Rogue-lite Workshop – February 2026", wip:true,
-        desc:"Two-level planning for two teams over three weeks: a workshop roadmap and daily tasks.", carte:"Two teams over three weeks, with a roadmap for the workshop and daily tasks for each team.",
+    P({ title:"Rogue-lite Workshop – February 2026", large:true, nocover:true,
+        desc:"Two teams, two animated film licences and fifteen days to deliver two playable rogue-lites in Unity.",
+        carte:"Two rogue-lites in Unity in fifteen days, with a shared schedule and daily task tracking for each team.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","12 to 13 people","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
-        infos:{ "Role":"Producer", "Team":"2 teams of 12 to 13 people", "Duration":"3 weeks", "Genre":"Rogue-lite" },
-        resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people, each developing a rogue-lite.",
-                 role:"Producer for both teams: planning, sprints and decisions.",
-                 resultat:"" },
-        decisions:[ "Two-level planning: a roadmap for the workshop and daily tasks for each team.",
-                    "Sprints tailored to each team, after listening to its needs.",
-                    "Decisions on the blockers raised by the teams.",
-                    "Feedback on design documents, to keep the scope realistic." ],
+        infos:{ "Role":"Producer", "Team":"2 teams of 12 to 13 people", "Duration":"2 – 20 February 2026", "Tools":"Excel" },
+        apercu:"For this Game Sup workshop, two teams had fifteen days to each deliver a **2.5D rogue-lite in Unity**, based on an assigned licence: *Vampire Hunter D: Bloodlust* for one, *Mad Max: Fury Road* for the other. I was the producer for both. I kept a **shared schedule** aligned with the school's milestones and a daily task tracker for each team. Vampire Hunter E-Cycle and Mad Max Fury Rogue were delivered to the jury with **94% and 92% of tasks completed**, out of 573 tracked tasks.",
         contenu:[
-          IMG("", "Production schedule")
+          BANDE("I","The project framework",[
+            LIGNE([
+              T("The brief was dense for fifteen days: a full \"run, death, upgrade\" loop, a HUB to upgrade your character, at least five combat rooms and three iconic rooms assembled procedurally, a currency economy, a boss and combat with a dash, a combo and an ability. On top of that came the menus, the score screen, the splash screens and all the documentation: High Concept, Level Design, narrative, art direction and production management.")
+            ],[ FICHE("Constraints",["Two games to produce at the same time","Five milestones in fifteen days: Intentions, Proof of Concept, Alpha, Beta, Gold","An animated film licence assigned to each team","The school's advice: don't think too big"]) ]),
+            LIGNE([
+              T("Each team received its licence from a list of animated films and series. Group 3 turned theirs into **Vampire Hunter E-Cycle**, based on *Vampire Hunter D: Bloodlust*, and Group 4 into **Mad Max Fury Rogue**, based on *Mad Max: Fury Road*.")
+            ],[ IMG("images/rogue-thumb.jpg","Mad Max Fury Rogue and Vampire Hunter E-Cycle, the two workshop games") ])
+          ]),
+          BANDE("II","Planning on two levels",[
+            LIGNE([
+              T("Both teams shared the same calendar: **three one-week sprints**, aligned with the school's milestones. The first set up the blocking and the essential assets. The second pushed modelling and environments towards the final look and finished the attack system, without creating new assets. The last was kept for balancing and polish."),
+              T("Underneath, each team had its own **backlog** in Excel: 336 tasks for Vampire Hunter E-Cycle, 237 for Mad Max Fury Rogue. Each task had an owner, a sprint, dates, a difficulty, a priority and a status, and each sprint had its own tab.")
+            ],[ CHIFFRES([["573","tasks tracked"],["94% and 92%","tasks completed"],["3","one-week sprints"],["5","milestones in fifteen days"]]) ]),
+            LIGNE([
+              IMG("images/rogue-planning.png","The production schedule: phases, school milestones and one-week sprints")
+            ])
+          ]),
+          BANDE("III","Preparing the cuts",[
+            LIGNE([
+              T("In fifteen days, every extra feature puts the game at risk. With each team, I drew up a **list of expendable tasks**, the first to go if time ran short: 28 for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue. Most of them never entered the sprints. Only five found a place: the double dash, the sword and the shield on one side, the loading screen on the other were done, and some modular pipes were eventually cut."),
+              T("More had to be cut during production: **seven tasks in each team**, without touching the core of the game. For Vampire Hunter E-Cycle, all of them went during sprint 2, the busiest with 137 tasks: the music manager, the merchant mockups, the emotional arc of the narrative document. For Mad Max Fury Rogue, the cuts hit a second enemy, the sand shader and some modular set pieces.")
+            ],[ FICHE("The expendable list",["A double jump and a dialogue system","A cursed room and an inventory","A flamethrower enemy and a market","42 tasks listed: 37 never started, 4 done, 1 cut"]) ])
+          ]),
+          BANDE("IV","Tracking two teams at once",[
+            LIGNE([
+              T("I built the sprints with each team and cleared blockers as they came up. Each team had two leads, one in Game Design and one in Game Art, who were my day-to-day relays."),
+              T("I also reviewed both teams' design documents, mostly to check that scope and feasibility fit into fifteen days.")
+            ])
+          ]),
+          BANDE("V","What I take away",[
+            LIGNE([
+              T("This workshop taught me to **decide on cuts before I need them**. An expendable list prepared in advance avoids improvising during the crunch: when time runs short, you already know what to leave aside."),
+              T("I had written the same sprint goals for both teams. Looking back, each would have benefited from **its own goals**, drawn from its game and its progress: they did not have the same workload, 336 tasks on one side and 237 on the other.")
+            ])
+          ])
         ] }),
     P({ title:"Fusion Workshop – November 2025", wip:true,
         desc:"An Agile production plan in Excel, weekly reviews and the first dailies for two teams.", carte:"An Agile production plan in Excel, weekly reviews and the first dailies, entrusted to the team leads.",

@@ -4,8 +4,8 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const NAV = () => [{label:t("home"),route:"#/"},...SECTIONS,{label:t("infos"),route:"#/infos"}];
 /* ---------- Langue (FR / EN) ---------- */
 const UI = {
-  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",cvView:"Aperçu du CV",stWip:"En préparation",stDone:"Terminé",nightMode:"Passer en mode nuit",dayMode:"Passer en mode jour",toTop:"Haut de la page",backCat:"Retour :",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",brief:"En bref",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
-  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",cvView:"Preview CV",stWip:"In progress",stDone:"Done",nightMode:"Switch to dark mode",dayMode:"Switch to light mode",toTop:"Back to top",backCat:"Back:",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",brief:"At a glance",decisions:"My role and decisions",updated:"Last updated:"}
+  fr:{home:"Accueil",infos:"Infos",seeProjects:"Voir mes projets",contactMe:"Me contacter",details:"Détails",prev:"Projet précédent",next:"Projet suivant",others:"Autres projets",legal:"Informations légales",contact:"Contact",mainNav:"Navigation principale",linkedin:"LinkedIn (nouvel onglet)",portrait:"Portrait de",cvDl:"Télécharger le CV (PDF)",cvView:"Aperçu du CV",stWip:"En préparation",stDone:"Terminé",nightMode:"Passer en mode nuit",dayMode:"Passer en mode jour",toTop:"Haut de la page",backCat:"Retour :",cvAlt:"CV de",zoom:"Agrandir l'image",close:"Fermer",enlarged:"Image agrandie",imgToAdd:"Image à ajouter",langLabel:"Choisir la langue",group:"Groupe",members:"membres",newTab:"nouvel onglet",cvShort:"Mon CV",legalPage:"Mentions légales et confidentialité",skip:"Aller au contenu",brief:"En bref",decisions:"Mon rôle et mes décisions",updated:"Dernière mise à jour :"},
+  en:{home:"Home",infos:"Info",seeProjects:"See my projects",contactMe:"Contact me",details:"Details",prev:"Previous project",next:"Next project",others:"Other projects",legal:"Legal notice",contact:"Contact",mainNav:"Main navigation",linkedin:"LinkedIn (new tab)",portrait:"Portrait of",cvDl:"Download CV (PDF)",cvView:"Preview CV",stWip:"In progress",stDone:"Done",nightMode:"Switch to dark mode",dayMode:"Switch to light mode",toTop:"Back to top",backCat:"Back:",cvAlt:"CV of",zoom:"Enlarge image",close:"Close",enlarged:"Enlarged image",imgToAdd:"Image to add",langLabel:"Choose language",group:"Group",members:"members",newTab:"new tab",cvShort:"My CV",legalPage:"Legal notice and privacy",skip:"Skip to content",brief:"At a glance",decisions:"My role and decisions",updated:"Last updated:"}
 };
 let lang = "fr";
 const t = k => UI[lang][k];
@@ -37,7 +37,7 @@ function chrome(active){
     + `<li class="lang" role="group" aria-label="${t("langLabel")}"><button type="button" data-lang="fr" aria-pressed="${lang==="fr"}" lang="fr" aria-label="Français">FR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="${lang==="en"}" lang="en" aria-label="English">EN</button><button type="button" class="theme-btn" data-theme-toggle aria-label="${isDark()?t("dayMode"):t("nightMode")}" title="${isDark()?t("dayMode"):t("nightMode")}">${isDark()?SUN:MOON}</button></li>`;
   document.querySelector("header nav").setAttribute("aria-label", t("mainNav"));
   $("#h-legal").textContent = t("legal"); $("#h-contact").textContent = t("contact");
-  $("#lb").setAttribute("aria-label", t("enlarged")); $("#lb button").setAttribute("aria-label", t("close"));
+  $(".skip").textContent = t("skip"); $("#lb").setAttribute("aria-label", t("enlarged")); $("#lb button").setAttribute("aria-label", t("close"));
   $("#legal").innerHTML = `<p>${SITE.legal.map(l=>`<span>${esc(l)}</span>`).join("")}<a data-go="#/mentions" role="link" tabindex="0">${t("legalPage")}</a></p>`;
   $("#contact").innerHTML = `<a class="social" href="mailto:${esc(SITE.email)}">${MAIL_ICON}<span>${esc(SITE.email)}</span></a>`
     + `<a class="social" href="${esc(SITE.linkedin)}" target="_blank" rel="noopener" aria-label="${t("linkedin")}">${LINKEDIN_ICON}<span>LinkedIn</span></a>`
@@ -360,8 +360,9 @@ function reveal(){
   bands.forEach(b=>io.observe(b));
 }
 const LB=$("#lb");
-function openLB(f){const im=f.querySelector("img");LB.querySelector("img").src=im.src;LB.querySelector("p").textContent=im.alt||"";LB.classList.toggle("doc",f.hasAttribute("data-doc"));LB.scrollTop=0;LB.classList.add("on");LB.querySelector("button").focus();}
-function closeLB(){LB.classList.remove("on");}
+let lbFrom=null;
+function openLB(f){lbFrom=f;const im=f.querySelector("img");LB.querySelector("img").src=im.src;LB.querySelector("p").textContent=im.alt||"";LB.classList.toggle("doc",f.hasAttribute("data-doc"));LB.scrollTop=0;LB.classList.add("on");LB.querySelector("button").focus();}
+function closeLB(){LB.classList.remove("on");if(lbFrom){lbFrom.focus({preventScroll:true});lbFrom=null;}}
 document.addEventListener("click",e=>{const f=e.target.closest("[data-zoom]");if(f){openLB(f);return;}if(LB.classList.contains("on"))closeLB();});
 document.addEventListener("click",e=>{const b=e.target.closest("[data-car]");if(!b)return;const tr=b.closest(".car").querySelector(".car-track"),n=tr.children.length,st=n>1?tr.children[1].offsetLeft-tr.children[0].offsetLeft:1;let i=(Math.round(tr.scrollLeft/st)+ +b.dataset.car+n)%n;tr.scrollTo({left:i*st,behavior:"smooth"});});
 document.addEventListener("scroll",e=>{const tr=e.target;if(!tr.classList||!tr.classList.contains("car-track"))return;const n=tr.children.length,st=n>1?tr.children[1].offsetLeft-tr.children[0].offsetLeft:1;tr.parentNode.querySelector(".car-cnt").textContent=(Math.min(n-1,Math.round(tr.scrollLeft/st))+1)+" / "+n;},true);
@@ -423,11 +424,13 @@ addEventListener("touchend", e => {
   const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
   if(Math.abs(dx) > 80 && Math.abs(dx) > Math.abs(dy) * 2) go(dx < 0 ? 1 : -1);
 }, {passive:true});
+/* Après un changement de page, le focus va au titre : le lecteur d'écran annonce la nouvelle page */
+function pageFocus(){const h=$("#view h1");if(h){h.setAttribute("tabindex","-1");h.focus({preventScroll:true});}}
 function goTo(h){
   if(h === cur) return;
   cur = h;
   try{ history.pushState(null, "", h); }catch(e){}   /* met à jour l'adresse quand c'est permis */
-  render(); scrollTo(0,0);
+  render(); scrollTo(0,0); pageFocus();
 }
 document.addEventListener("click", e => {
   const a = e.target.closest && e.target.closest("[data-go]");
@@ -439,6 +442,7 @@ document.addEventListener("keydown", e => {
   const a = e.target.closest && e.target.closest("[data-go]");
   if(a){ e.preventDefault(); goTo(a.getAttribute("data-go")); }
 });
+document.addEventListener("click", e => { if(e.target.closest && e.target.closest(".skip")){ e.preventDefault(); pageFocus(); } });
 document.addEventListener("click", e => {
   const b = e.target.closest && e.target.closest("[data-lang]");
   if(!b) return;
@@ -453,7 +457,7 @@ document.addEventListener("click", e => {
   try{ localStorage.setItem("theme", th); }catch(err){}
   const y = scrollY; render(); scrollTo(0, y);
 });
-addEventListener("popstate", () => { cur = location.hash || "#/"; render(); scrollTo(0,0); });
-addEventListener("hashchange", () => { const h = location.hash || "#/"; if(h !== cur){ cur = h; render(); scrollTo(0,0); } });
+addEventListener("popstate", () => { cur = location.hash || "#/"; render(); scrollTo(0,0); pageFocus(); });
+addEventListener("hashchange", () => { const h = location.hash || "#/"; if(h !== cur){ cur = h; render(); scrollTo(0,0); pageFocus(); } });
 render();
 document.addEventListener("click",e=>{if(e.target.closest("[data-top]")){const r=matchMedia("(prefers-reduced-motion:reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"});}});

@@ -2849,3 +2849,8 @@ html body .fold[open] .f-hide { display: inline; }
 /* le contenu d'un <details> passe par ::details-content, qui ne reçoit pas le box-sizing hérité */
 html body .fold::details-content { box-sizing: inherit; }
 
+/* Lien d'évitement : invisible jusqu'à ce qu'il reçoive le focus clavier */
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: .6rem 1rem; border-radius: 6px; background: var(--gold); color: #13294B; font-weight: 700; text-decoration: none; }
+.skip:focus { top: .75rem; }
+/* Titre qui reçoit le focus après un changement de page : pas de cadre */
+#view h1[tabindex="-1"]:focus { outline: none; }

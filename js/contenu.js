@@ -235,8 +235,8 @@ const PROJECTS_FR = {
     P({ title:"Workshop Rogue-lite – Février 2026", large:true, nocover:true,
         desc:"Deux équipes, deux licences de films d'animation et quinze jours pour livrer deux rogue-lites jouables sous Unity.",
         carte:"Deux rogue-lites sous Unity en quinze jours, avec un planning commun et un suivi quotidien des tâches pour chaque équipe.",
-        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","12 à 13 personnes","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
-        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 12 à 13 personnes", "Durée":"2 – 20 février 2026", "Outils":"Excel" },
+        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","14 personnes par équipe","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
+        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026", "Outils":"Excel" },
         apercu:"Pour ce workshop de Game Sup, deux équipes avaient quinze jours pour livrer chacune un **rogue-lite en 2,5D sous Unity**, d'après une licence imposée : *Vampire Hunter D: Bloodlust* pour l'une, *Mad Max: Fury Road* pour l'autre. J'étais le producer des deux. J'ai tenu un **planning commun** calé sur les jalons de l'école et un suivi quotidien des tâches propre à chaque équipe. Vampire Hunter E-Cycle et Mad Max Fury Rogue ont été livrés au jury avec **94 % et 92 % des tâches terminées**, sur 573 tâches suivies.",
         contenu:[
           BANDE("I","Le cadre du projet",[
@@ -610,8 +610,8 @@ const PROJECTS_EN = {
     P({ title:"Rogue-lite Workshop – February 2026", large:true, nocover:true,
         desc:"Two teams, two animated film licences and fifteen days to deliver two playable rogue-lites in Unity.",
         carte:"Two rogue-lites in Unity in fifteen days, with a shared schedule and daily task tracking for each team.",
-        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","12 to 13 people","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
-        infos:{ "Role":"Producer", "Team":"2 teams of 12 to 13 people", "Duration":"2 – 20 February 2026", "Tools":"Excel" },
+        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","14 people per team","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
+        infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026", "Tools":"Excel" },
         apercu:"For this Game Sup workshop, two teams had fifteen days to each deliver a **2.5D rogue-lite in Unity**, based on an assigned licence: *Vampire Hunter D: Bloodlust* for one, *Mad Max: Fury Road* for the other. I was the producer for both. I kept a **shared schedule** aligned with the school's milestones and a daily task tracker for each team. Vampire Hunter E-Cycle and Mad Max Fury Rogue were delivered to the jury with **94% and 92% of tasks completed**, out of 573 tracked tasks.",
         contenu:[
           BANDE("I","The project framework",[

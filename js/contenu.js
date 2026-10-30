@@ -251,7 +251,7 @@ const PROJECTS_FR = {
               T("Nous avons organisé des réunions d'urgence avec chaque groupe et **suspendu la production pendant une journée et demie**. Cette pause nous a permis de comprendre d'où venait le problème : des références trop vastes et peu précises, et une passe de recherche trop courte au démarrage, parce que nous pensions que celle de la sélection suffirait.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
-              T("Chaque groupe vivait la crise à sa manière : il n'y avait donc pas de réponse unique. Pour l'un, j'ai décidé, en accord avec les référents des disciplines, **d'abandonner plusieurs assets** qui sortaient du cadre ou n'étaient plus prioritaires. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
+              T("Chaque groupe vivait la crise à sa manière : il n'y avait donc pas de réponse unique. Pour Project GLOW, j'ai décidé, en accord avec les référents des disciplines, **d'abandonner plusieurs assets** qui sortaient du cadre ou n'étaient plus prioritaires. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
             ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ]),
             LIGNE([
               T("Si c'était à refaire, je ferais créer dès le départ **une petite scène de référence dans le moteur**, avec un prop à la qualité visée, les textures souhaitées et les intentions de lumière et de caméra.")
@@ -274,7 +274,9 @@ const PROJECTS_FR = {
           ]),
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
-              T("C'était la première fois que l'on me confiait la production d'une promotion entière. La crise de mi-parcours m'a appris à mettre de côté ce que je croyais savoir pour **écouter les besoins propres à chaque équipe**. J'ai aussi appris à **déléguer**, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même.")
+              T("C'était la première fois que l'on me confiait la production d'une promotion entière. La crise de mi-parcours m'a appris à mettre de côté ce que je croyais savoir pour **écouter les besoins propres à chaque équipe**. J'ai aussi appris à **déléguer**, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même."),
+              T("Sur un prochain projet de cette taille, je ferais d'abord créer **une scène de référence dans le moteur**, pour que chaque groupe parte d'une direction artistique concrète, visible à l'écran dès la première semaine."),
+              T("Je rendrais aussi l'avancée plus facile à suivre. Des **dailies sur le modèle du Daily Scrum**, courts et centrés sur l'objectif du sprint, et des **livrables de fin de sprint précis pour chaque spécialité** rendraient le travail vérifiable, pour les équipes comme pour moi.")
             ])
           ]),
           BANDE("VIII","Les équipes",[
@@ -692,7 +694,7 @@ const PROJECTS_EN = {
               T("We held emergency meetings with each group and **paused production for a day and a half**. That pause helped us understand where the problem came from: references that were too broad and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
-              T("Each group experienced the crisis in its own way, so there was no single answer. For one, I decided, in agreement with the discipline leads, **to cut several assets** that were off-brief or no longer a priority. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
+              T("Each group experienced the crisis in its own way, so there was no single answer. For Project GLOW, I decided, in agreement with the discipline leads, **to cut several assets** that were off-brief or no longer a priority. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
             ],[ IMG(PRO1.kill,"Cut tasks in one group's tracking") ]),
             LIGNE([
               T("If I had to do it again, I would have **a small reference scene built in the engine** from the start, with a prop at the target quality, the desired textures and the lighting and camera intentions.")
@@ -715,7 +717,9 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","What I take away",[
             LIGNE([
-              T("It was the first time I had been the producer for an entire class. The mid-course crisis taught me to set aside what I thought I knew and **listen to each team's own needs**. I also learned to **delegate**, and to set up clear communication channels from the start, so that no team feels left to fend for itself.")
+              T("It was the first time I had been the producer for an entire class. The mid-course crisis taught me to set aside what I thought I knew and **listen to each team's own needs**. I also learned to **delegate**, and to set up clear communication channels from the start, so that no team feels left to fend for itself."),
+              T("On a next project of this size, I would first have **a reference scene built in the engine**, so that each group starts from a concrete art direction, visible on screen from the first week."),
+              T("I would also make progress easier to follow. **Dailies modelled on the Daily Scrum**, short and focused on the sprint goal, and **precise end-of-sprint deliverables for each discipline** would make the work verifiable, for the teams as well as for me.")
             ])
           ]),
           BANDE("VIII","The teams",[

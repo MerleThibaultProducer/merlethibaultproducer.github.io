@@ -90,7 +90,7 @@ function survol(s){
   return `<div class="survol" aria-hidden="true">${s.moteur?`<div class="sv-eng">${s.logos?`<span class="sv-logos">${s.logos.map(l=>`<img src="${esc(l)}" alt="" width="36" height="36">`).join("")}</span>`:s.logo?`<img src="${esc(s.logo)}" alt="" width="40" height="40">`:ENGINE_ICON}<span>${esc(s.moteur)}</span></div><i></i>`:""}<ul>${s.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
 }
 function listing(sec){
-  const items = PROJECTS[sec.key];
+  const items = PROJECTS[sec.key].filter(p => !p.wip);   // projets wip:true masqués jusqu'à leur mise à jour
   const cards = items.map(p => `<article class="card${p.wip?" is-wip":""}">
     <div class="thumb${p.img?" has-img":""}"${p.wip?"":` data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}"`}>${img(p.img,p.title,p.title[0])}${p.wip?'<span class="wip-blur" aria-hidden="true"></span>':""}${p.survol?survol(p.survol):""}<span class="status${p.wip?" wip":""}"><i aria-hidden="true"></i>${p.wip?t("stWip"):t("stDone")}</span></div>
     <h3>${cardTitle(p.title,p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>

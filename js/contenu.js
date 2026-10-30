@@ -167,6 +167,47 @@ const EQUIPES_FDA = [
         M("Théo David","https://www.linkedin.com/in/th%C3%A9o-david-94080a3b6/","Technical Art") ] }
 ];
 
+/* Équipes du Workshop Rogue-lite (février 2026) : rôles tirés des fichiers de production, liens repris des équipes de fin d'année.
+   Un lien vide = pas de LinkedIn (le nom s'affiche sans lien). num = numéro du groupe à l'école. */
+const EQUIPES_ROGUE = [
+  { num:3, nom:"Vampire Hunter E-Cycle", genre:"rogue-lite gothique", genreEn:"gothic rogue-lite",
+    design:[
+        M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
+        M("Guillaume Soyez-Martin","https://www.linkedin.com/in/guillaume-soyez-martin-71a863253/","Référent Game Design · Narrative Design","Game Design Lead · Narrative Design"),
+        M("Tom Rossignol","https://www.linkedin.com/in/tom-rossignol-63148a3b8/","System Design"),
+        M("Kylian Chapon","https://www.linkedin.com/in/kylian-chapon-903924251/","Technical Design"),
+        M("Lylian Armant","https://www.linkedin.com/in/lylian-armant/","Level Design"),
+        M("Baptiste Feron","https://www.linkedin.com/in/baptiste-feron-51232b264/","Narrative Design") ],
+    art:[
+        M("Tess Bornard","https://www.linkedin.com/in/tess-bornard-1251bb3b3/","Référent Game Art · Environment Art","Game Art Lead · Environment Art"),
+        M("Allan Goniak","https://www.linkedin.com/in/allan-goniak-267044307/","Environment Art"),
+        M("Essoham Talle","https://www.linkedin.com/in/essoham-talle-290128360/","Environment Art"),
+        M("Manon Lebert","https://www.linkedin.com/in/manon-lebert-4a0602385/","Level Art"),
+        M("Bartholomé Girelli","https://www.linkedin.com/in/bartholome-girelli-071076333/","Technical Art"),
+        M("Naëlle Bigouraux","https://www.linkedin.com/in/na%C3%ABlle-bigouraux-4237363a3/","Character Art"),
+        M("Sarah Ounali","https://www.linkedin.com/in/sarah-ounali-6a1a47271/","Concept Art"),
+        M("Hugo Ballet","https://www.linkedin.com/in/hugo-ballet-038899370/","Concept Art"),
+        M("Augeul Meunier","","Concept Art") ] },
+  { num:4, nom:"Mad Max Fury Rogue", genre:"rogue-lite post-apocalyptique", genreEn:"post-apocalyptic rogue-lite",
+    design:[
+        M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
+        M("Malo Fougères","https://www.linkedin.com/in/malo-foug%C3%A8res-65476938b/","Référent Game Design · System Design","Game Design Lead · System Design"),
+        M("Dylan Dessalines","","Technical Design"),
+        M("Tao Rimet","https://www.linkedin.com/in/tao-rimet-256a21330/","Level Design"),
+        M("Matthias Gimenez","https://www.linkedin.com/in/matthias-gimenez-583615375/","Level Design"),
+        M("Flavie Hugonnard-Cotton","https://www.linkedin.com/in/flavie-hugonnard-cotton-b57bb6430/","Narrative Design") ],
+    art:[
+        M("Anaïs Lacoste","https://www.linkedin.com/in/ana%C3%AFs-lacoste-891315225/","Référent Game Art · Technical Art","Game Art Lead · Technical Art"),
+        M("Chloé Stagnitto","https://www.linkedin.com/in/chlo%C3%A9-stagnitto-0aa837345/","Environment Art"),
+        M("Vincent Sanchez","https://www.linkedin.com/in/vincent-sanchez-50844b375/","Environment Art"),
+        M("Lou Azzi","https://www.linkedin.com/in/lou-azzi-6a3076333/","Environment Art"),
+        M("Thomas Vauché","https://www.linkedin.com/in/thomas-vauch%C3%A9-8181a3333/","Level Art"),
+        M("Camille Chautard","https://www.linkedin.com/in/camille-chautard-81225a268/","Character Art"),
+        M("Théo David","https://www.linkedin.com/in/th%C3%A9o-david-94080a3b6/","Character Art"),
+        M("Pedro Garcia dos Santos","https://www.linkedin.com/in/pedro-garcia-dos-santos-776582268/","Concept Art"),
+        M("Valentin Brun","https://www.linkedin.com/in/valentin-brun-495426393/","Concept Art") ] }
+];
+
 const PROJECTS_FR = {
   pro: [
     P({ title:"Projets de fin d'année : quatre jeux en parallèle – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
@@ -303,6 +344,12 @@ const PROJECTS_FR = {
             LIGNE([
               T("Ce workshop m'a appris à **décider des coupes avant d'en avoir besoin**. Une liste sacrifiable préparée à l'avance évite d'improviser pendant le rush : quand le temps manque, on sait déjà ce qu'on laisse de côté."),
               T("J'avais écrit les mêmes objectifs de sprint pour les deux équipes. Avec le recul, chacune aurait gagné à avoir **ses propres objectifs**, tirés de son jeu et de son avancement : elles n'avaient pas le même volume de travail, 336 tâches d'un côté et 237 de l'autre.")
+            ])
+          ]),
+          BANDE("VIII","Les équipes",[
+            LIGNE([
+              T("Ces deux jeux sont avant tout le travail de leurs équipes."),
+              EQUIPES(EQUIPES_ROGUE)
             ])
           ])
         ] }),
@@ -709,6 +756,12 @@ const PROJECTS_EN = {
             LIGNE([
               T("This workshop taught me to **decide on cuts before I need them**. An expendable list prepared in advance avoids improvising during the crunch: when time runs short, you already know what to leave aside."),
               T("I had written the same sprint goals for both teams. Looking back, each would have benefited from **its own goals**, drawn from its game and its progress: they did not have the same workload, 336 tasks on one side and 237 on the other.")
+            ])
+          ]),
+          BANDE("VIII","The teams",[
+            LIGNE([
+              T("These two games are first and foremost the work of their teams."),
+              EQUIPES(EQUIPES_ROGUE)
             ])
           ])
         ] }),

@@ -2854,3 +2854,6 @@ html body .fold::details-content { box-sizing: inherit; }
 .skip:focus { top: .75rem; }
 /* Titre qui reçoit le focus après un changement de page : pas de cadre */
 #view h1[tabindex="-1"]:focus { outline: none; }
+/* Membre d'équipe sans LinkedIn : même alignement qu'un nom avec lien */
+.tm-col li .tm-a { display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; }
+.tm-col li .tm-a i { width: 17px; height: 17px; flex: none; }

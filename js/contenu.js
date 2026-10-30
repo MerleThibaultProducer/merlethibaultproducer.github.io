@@ -188,7 +188,7 @@ const EQUIPES_ROGUE = [
         M("Naëlle Bigouraux","https://www.linkedin.com/in/na%C3%ABlle-bigouraux-4237363a3/","Character Art"),
         M("Sarah Ounali","https://www.linkedin.com/in/sarah-ounali-6a1a47271/","Concept Art"),
         M("Hugo Ballet","https://www.linkedin.com/in/hugo-ballet-038899370/","Concept Art"),
-        M("Samuel Augeul Meunier","https://www.linkedin.com/in/samuel-augeul-meunier-0b41a2333/","Concept Art") ] },
+        M("Samuel Augeul Meunier","https://www.linkedin.com/in/samuel-augeul-meunier-0b41a2333/","Character Art") ] },
   { num:4, nom:"Mad Max Fury Rogue", genre:"rogue-lite post-apocalyptique", genreEn:"post-apocalyptic rogue-lite",
     design:[
         M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
@@ -275,7 +275,7 @@ const PROJECTS_FR = {
           ])
         ] }),
     P({ title:"Workshop Rogue-lite – Février 2026", large:true, nocover:true,
-        desc:"Deux équipes, deux licences de films d'animation et quinze jours pour livrer deux rogue-lites jouables sous Unity.",
+        desc:"Quinze jours pour livrer deux rogue-lites jouables sous Unity, chacun d'après une licence de film d'animation.",
         carte:"Deux rogue-lites sous Unity en quinze jours, avec un planning commun et un suivi quotidien des tâches pour chaque équipe.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","14 personnes par équipe","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026", "Outils":"Excel" },
@@ -286,8 +286,8 @@ const PROJECTS_FR = {
               T("Le cahier des charges était dense pour quinze jours : une boucle complète « run, mort, amélioration », un HUB où améliorer son personnage, au moins cinq salles de combat et trois salles iconiques assemblées procéduralement, une économie de monnaies, un boss et un combat avec esquive, combo et capacité. S'y ajoutaient les menus, l'écran de score, les splashscreens et toute la documentation : High Concept, Level Design, narration, direction artistique et gestion de production.")
             ],[ FICHE("Les contraintes",["Deux jeux à produire en même temps","Cinq jalons en quinze jours : Intentions, Proof of Concept, Alpha, Bêta, Gold","Une licence de film d'animation imposée à chaque équipe","Le conseil de l'école : ne pas voir trop grand"]) ]),
             LIGNE([ KEYART([
-                      ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","Le Groupe 3 a tiré sa licence de Vampire Hunter D: Bloodlust : un rogue-lite gothique, dans les salles d'un château."],
-                      ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","Le Groupe 4 a tiré la sienne de Mad Max: Fury Road : un rogue-lite post-apocalyptique, entre désert et cavernes."]
+                      ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","Le Groupe 3 a reçu Vampire Hunter D: Bloodlust et en a fait un rogue-lite gothique, dans les salles d'un château."],
+                      ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","Le Groupe 4 a reçu Mad Max: Fury Road et en a fait un rogue-lite post-apocalyptique, entre désert et cavernes."]
                     ]) ])
           ]),
           BANDE("II","Planifier à deux niveaux",[
@@ -304,17 +304,17 @@ const PROJECTS_FR = {
           ]),
           BANDE("III","Préparer les coupes",[
             LIGNE([
-              T("En quinze jours, chaque fonctionnalité de trop met le jeu en danger. Avec chaque équipe, j'ai donc dressé une **liste de tâches sacrifiables**, les premières à couper si le temps manquait : 28 pour Vampire Hunter E-Cycle, 14 pour Mad Max Fury Rogue. La plupart ne sont jamais entrées dans les sprints. Cinq seulement y ont trouvé une place : le double dash, l'épée et le bouclier d'un côté, l'écran de chargement de l'autre ont été réalisés, et des tuyaux modulaires ont finalement été coupés."),
+              T("Avec chaque équipe, j'ai dressé une **liste de tâches sacrifiables**, les premières à couper si le temps manquait : 28 pour Vampire Hunter E-Cycle, 14 pour Mad Max Fury Rogue. La plupart ne sont jamais entrées dans les sprints. Cinq y ont trouvé une place : le double dash, l'épée, le bouclier et l'écran de chargement ont été réalisés, et des tuyaux modulaires ont été coupés en route."),
               T("Il a fallu couper encore en production : **sept tâches dans chaque équipe**, sans toucher au cœur du jeu. Pour Vampire Hunter E-Cycle, toutes l'ont été pendant le sprint 2, le plus chargé avec 137 tâches : le gestionnaire de musique, les maquettes du marchand, l'arc émotionnel du document narratif. Pour Mad Max Fury Rogue, les coupes ont touché un second ennemi, le shader de sable et des éléments de décor modulaires.")
             ],[ FICHE("La liste sacrifiable",["Un double saut et un système de dialogue","Une salle maudite et un inventaire","Un ennemi lance-flammes et un marché","42 tâches listées : 37 jamais lancées, 4 réalisées, 1 coupée"]) ]),
             LIGNE([
-              T("Chez Mad Max Fury Rogue, la liste mettait de côté un ennemi lance-flammes, un marché entier, de la conception à l'interface, et une grenade.")
+              T("Chez Mad Max Fury Rogue, la liste écartait par exemple tout le marché : son concept, sa modélisation, son système, son intégration et son interface.")
             ],[ IMG("images/rogue-mm-sacrifiable.png","La liste des tâches sacrifiables de Mad Max Fury Rogue") ])
           ]),
           BANDE("IV","Simuler la génération procédurale",[
             LIGNE([
               T("Chez Mad Max Fury Rogue, la **génération procédurale** s'est révélée bien plus complexe que prévu : la tâche, jugée très difficile, était déjà en retard à la fin du premier sprint. C'était pourtant le cœur d'un rogue-lite, et une contrainte imposée."),
-              T("Pour ne pas retarder le reste de la production, j'ai décidé, avec le référent Game Design du groupe, de chercher un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Ensemble, nous avons choisi de **simuler le procédural** : plusieurs checkpoints préparés dans le level design donnaient l'illusion d'une génération aléatoire. Nous pouvions ainsi présenter nos idées de procédural à travers une séquence de jeu qui les mettait en avant.")
+              T("Pour ne pas retarder le reste de la production, j'ai décidé, avec le référent Game Design du groupe, de chercher un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Ensemble, nous avons choisi de **simuler le procédural** : plusieurs checkpoints préparés dans le level design donnaient l'illusion d'une génération aléatoire. Nos idées de procédural ont ainsi pu être présentées dans une séquence de jeu qui les mettait en avant.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.gif","Le blocking du niveau de Mad Max Fury Rogue"],["images/rogue-mm-ld-2.gif","Le niveau de Mad Max Fury Rogue en blocking, avec ses ennemis"]]) ])
           ]),
           BANDE("V","Suivre deux équipes en même temps",[
@@ -343,7 +343,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
-              T("Ce workshop m'a appris à **décider des coupes avant d'en avoir besoin**. Une liste sacrifiable préparée à l'avance évite d'improviser pendant le rush : quand le temps manque, on sait déjà ce qu'on laisse de côté."),
+              T("Ce workshop m'a appris à **décider des coupes avant d'en avoir besoin**. Avec une liste préparée à l'avance, on sait quoi laisser de côté quand le temps manque, au lieu d'improviser pendant le rush."),
               T("J'avais écrit les mêmes objectifs de sprint pour les deux équipes. Avec le recul, chacune aurait gagné à avoir **ses propres objectifs**, tirés de son jeu et de son avancement : elles n'avaient pas le même volume de travail, 336 tâches d'un côté et 237 de l'autre.")
             ])
           ]),
@@ -687,7 +687,7 @@ const PROJECTS_EN = {
           ])
         ] }),
     P({ title:"Rogue-lite Workshop – February 2026", large:true, nocover:true,
-        desc:"Two teams, two animated film licences and fifteen days to deliver two playable rogue-lites in Unity.",
+        desc:"Fifteen days to deliver two playable rogue-lites in Unity, each based on an animated film licence.",
         carte:"Two rogue-lites in Unity in fifteen days, with a shared schedule and daily task tracking for each team.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","14 people per team","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026", "Tools":"Excel" },
@@ -698,8 +698,8 @@ const PROJECTS_EN = {
               T("The brief was dense for fifteen days: a full \"run, death, upgrade\" loop, a HUB to upgrade your character, at least five combat rooms and three iconic rooms assembled procedurally, a currency economy, a boss and combat with a dash, a combo and an ability. On top of that came the menus, the score screen, the splash screens and all the documentation: High Concept, Level Design, narrative, art direction and production management.")
             ],[ FICHE("Constraints",["Two games to produce at the same time","Five milestones in fifteen days: Intentions, Proof of Concept, Alpha, Beta, Gold","An animated film licence assigned to each team","The school's advice: don't think too big"]) ]),
             LIGNE([ KEYART([
-                      ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","Group 3 drew its licence from Vampire Hunter D: Bloodlust: a gothic rogue-lite set in the rooms of a castle."],
-                      ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","Group 4 drew its own from Mad Max: Fury Road: a post-apocalyptic rogue-lite, between desert and caves."]
+                      ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","Group 3 was given Vampire Hunter D: Bloodlust and turned it into a gothic rogue-lite set in the rooms of a castle."],
+                      ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","Group 4 was given Mad Max: Fury Road and turned it into a post-apocalyptic rogue-lite, between desert and caves."]
                     ]) ])
           ]),
           BANDE("II","Planning on two levels",[
@@ -716,17 +716,17 @@ const PROJECTS_EN = {
           ]),
           BANDE("III","Preparing the cuts",[
             LIGNE([
-              T("In fifteen days, every extra feature puts the game at risk. With each team, I drew up a **list of expendable tasks**, the first to go if time ran short: 28 for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue. Most of them never entered the sprints. Only five found a place: the double dash, the sword and the shield on one side, the loading screen on the other were done, and some modular pipes were eventually cut."),
+              T("With each team, I drew up a **list of expendable tasks**, the first to go if time ran short: 28 for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue. Most of them never entered the sprints. Five found a place: the double dash, the sword, the shield and the loading screen were done, and some modular pipes were cut along the way."),
               T("More had to be cut during production: **seven tasks in each team**, without touching the core of the game. For Vampire Hunter E-Cycle, all of them went during sprint 2, the busiest with 137 tasks: the music manager, the merchant mockups, the emotional arc of the narrative document. For Mad Max Fury Rogue, the cuts hit a second enemy, the sand shader and some modular set pieces.")
             ],[ FICHE("The expendable list",["A double jump and a dialogue system","A cursed room and an inventory","A flamethrower enemy and a market","42 tasks listed: 37 never started, 4 done, 1 cut"]) ]),
             LIGNE([
-              T("At Mad Max Fury Rogue, the list set aside a flamethrower enemy, a whole market, from concept to interface, and a grenade.")
+              T("At Mad Max Fury Rogue, for example, the list set aside the whole market: its concept, modelling, system, integration and interface.")
             ],[ IMG("images/rogue-mm-sacrifiable.png","The Mad Max Fury Rogue list of expendable tasks") ])
           ]),
           BANDE("IV","Faking procedural generation",[
             LIGNE([
               T("At Mad Max Fury Rogue, **procedural generation** turned out to be far more complex than planned: the task, rated very hard, was already late by the end of the first sprint. Yet it was the core of a rogue-lite, and a required feature."),
-              T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. This let us present our procedural ideas through a gameplay sequence built to show them off.")
+              T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. Our procedural ideas could then be presented in a gameplay sequence that put them forward.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.gif","The Mad Max Fury Rogue level in blocking"],["images/rogue-mm-ld-2.gif","The Mad Max Fury Rogue level in blocking, with its enemies"]]) ])
           ]),
           BANDE("V","Tracking two teams at once",[
@@ -755,7 +755,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","What I take away",[
             LIGNE([
-              T("This workshop taught me to **decide on cuts before I need them**. An expendable list prepared in advance avoids improvising during the crunch: when time runs short, you already know what to leave aside."),
+              T("This workshop taught me to **decide on cuts before I need them**. With a list prepared in advance, you know what to leave aside when time runs short, instead of improvising during the crunch."),
               T("I had written the same sprint goals for both teams. Looking back, each would have benefited from **its own goals**, drawn from its game and its progress: they did not have the same workload, 336 tasks on one side and 237 on the other.")
             ])
           ]),

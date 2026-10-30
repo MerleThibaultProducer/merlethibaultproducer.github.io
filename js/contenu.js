@@ -248,7 +248,8 @@ const PROJECTS_FR = {
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
               T("En deuxième semaine, un même problème est apparu dans les quatre groupes : **la direction artistique était confuse**, et les membres peinaient à se représenter les références. Les retards ont vite atteint deux à trois jours, et je sentais venir **le risque de crunch**."),
-              T("Nous avons organisé des réunions d'urgence avec chaque groupe et **suspendu la production pendant une journée et demie**. Cette pause nous a permis de comprendre d'où venait le problème : des références trop vastes et peu précises, et une passe de recherche trop courte au démarrage, parce que nous pensions que celle de la sélection suffirait.")
+              T("Nous avons organisé des réunions d'urgence avec chaque groupe et **suspendu la production pendant une journée et demie**. Cette pause nous a permis de comprendre d'où venait le problème : des références trop vastes et peu précises, et une passe de recherche trop courte au démarrage, parce que nous pensions que celle de la sélection suffirait."),
+              T("Suspendre la production n'a pas été une décision facile. Je craignais surtout que les équipes perdent leur motivation, ou leur foi dans leur projet. J'ai donc abordé ces réunions avec confiance et empathie, pour que chaque groupe puisse réfléchir ensemble et repartir avec une direction claire.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
               T("Chaque groupe vivait la crise à sa manière : il n'y avait donc pas de réponse unique. Pour Project GLOW, j'ai décidé, en accord avec les référents des disciplines, **d'abandonner plusieurs assets** qui sortaient du cadre ou n'étaient plus prioritaires. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
@@ -266,7 +267,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("VI","Les quatre jeux livrés",[
             LIGNE([
-              T("Les quatre jeux ont été livrés au jury en fin de projet, chacun dans son univers : la forêt de l'Anjou du Castor et l'Écureuil, le manoir des années 1930 d'Insight, la ville envahie par les plantes de The Flowering Dead et les rues de Project GLOW.")
+              T("Les quatre jeux ont été livrés au jury en fin de projet, chacun dans son univers : la forêt de l'Anjou du Castor et l'Écureuil, le manoir des années 1930 d'Insight, la ville envahie par les plantes de The Flowering Dead et les rues de Project GLOW."),
+              T("Les retours du jury ont été un vrai soulagement : il a souligné la qualité des quatre projets, et avec elle le travail des équipes.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil : le menu principal et la forêt en jeu"],["images/fda-insight-1.jpg","Insight : la bibliothèque du manoir"],["images/fda-insight-2.jpg","Insight : la grande salle et ses lustres"],["images/fda-insight-3.jpg","Insight : la lunette astronomique de la mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead : la ville envahie par les plantes"],["images/fda-flowering-2.jpg","The Flowering Dead : un passage sous les arcades"],["images/fda-flowering-3.jpg","The Flowering Dead : le beffroi et la tour"],["images/fda-glow-jeu.jpg","Project GLOW en jeu : une rue barrée par une grille"]]) ]),
             LIGNE([
               T("Derrière ces images, il y a les tâches suivies dans les micro-plannings. Pour Project GLOW, on voit la ville passer du plan du niveau au blockout, puis au Level Art et à la lumière.")
@@ -305,7 +307,8 @@ const PROJECTS_FR = {
           BANDE("II","Simuler la génération procédurale",[
             LIGNE([
               T("Chez Mad Max Fury Rogue, la **génération procédurale** s'est révélée bien plus complexe que prévu : la tâche, jugée très difficile, était déjà en retard à la fin du premier sprint. C'était pourtant le cœur d'un rogue-lite, et une contrainte imposée."),
-              T("Pour ne pas retarder le reste de la production, j'ai décidé, avec le référent Game Design du groupe, de chercher un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Ensemble, nous avons choisi de **simuler le procédural** : plusieurs checkpoints préparés dans le level design donnaient l'illusion d'une génération aléatoire. Nos idées de procédural ont ainsi pu être présentées dans une séquence de jeu qui les mettait en avant. Le jury, composé de ces mêmes intervenants, avait validé ce changement en amont, et le projet a été **reçu favorablement**.")
+              T("Pour ne pas retarder le reste de la production, j'ai décidé, avec le référent Game Design du groupe, de chercher un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Ensemble, nous avons choisi de **simuler le procédural** : plusieurs checkpoints préparés dans le level design donnaient l'illusion d'une génération aléatoire. Nos idées de procédural ont ainsi pu être présentées dans une séquence de jeu qui les mettait en avant. Le jury, composé de ces mêmes intervenants, avait validé ce changement en amont, et le projet a été **reçu favorablement**."),
+              T("Obtenir cet accord a été un soulagement. Ma crainte de devoir passer par du crunch pour finir le projet s'est largement éloignée, et l'équipe s'est libérée d'un point très stressant pour se reconcentrer sur les aspects essentiels du jeu.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.webp","Le blocking du niveau de Mad Max Fury Rogue"],["images/rogue-mm-ld-2.webp","Le niveau de Mad Max Fury Rogue en blocking, avec ses ennemis"]]) ])
           ]),
           BANDE("III","Planifier à deux niveaux",[
@@ -688,7 +691,8 @@ const PROJECTS_EN = {
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
               T("In the second week, the same problem appeared in all four groups: **art direction was unclear**, and team members struggled to picture the references. Delays quickly reached two to three days, and I could feel **the risk of crunch** coming."),
-              T("We held emergency meetings with each group and **paused production for a day and a half**. That pause helped us understand where the problem came from: references that were too broad and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough.")
+              T("We held emergency meetings with each group and **paused production for a day and a half**. That pause helped us understand where the problem came from: references that were too broad and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough."),
+              T("Pausing production was not an easy decision. My main fear was that the teams would lose their motivation, or their faith in their projects. I approached these meetings with confidence and empathy, so that each group could think things through together and leave with a clear direction.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
               T("Each group experienced the crisis in its own way, so there was no single answer. For Project GLOW, I decided, in agreement with the discipline leads, **to cut several assets** that were off-brief or no longer a priority. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
@@ -706,7 +710,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("VI","The four games delivered",[
             LIGNE([
-              T("All four games were delivered to the jury at the end of the project, each in its own world: the Anjou forest of Le Castor et l'Écureuil, the 1930s mansion of Insight, the plant-overrun city of The Flowering Dead and the streets of Project GLOW.")
+              T("All four games were delivered to the jury at the end of the project, each in its own world: the Anjou forest of Le Castor et l'Écureuil, the 1930s mansion of Insight, the plant-overrun city of The Flowering Dead and the streets of Project GLOW."),
+              T("The jury's feedback was a real relief: it praised the quality of all four projects, and with it the work of the teams.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil: the main menu and the forest in game"],["images/fda-insight-1.jpg","Insight: the mansion's library"],["images/fda-insight-2.jpg","Insight: the great hall and its chandeliers"],["images/fda-insight-3.jpg","Insight: the telescope on the mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead: the city overrun by plants"],["images/fda-flowering-2.jpg","The Flowering Dead: a passage under the arcades"],["images/fda-flowering-3.jpg","The Flowering Dead: the belfry and the tower"],["images/fda-glow-jeu.jpg","Project GLOW in game: a street blocked by a gate"]]) ]),
             LIGNE([
               T("Behind these images are the tasks tracked in the micro-schedules. For Project GLOW, you can see the city move from the level layout to the blockout, then to Level Art and lighting.")
@@ -745,7 +750,8 @@ const PROJECTS_EN = {
           BANDE("II","Faking procedural generation",[
             LIGNE([
               T("At Mad Max Fury Rogue, **procedural generation** turned out to be far more complex than planned: the task, rated very hard, was already late by the end of the first sprint. Yet it was the core of a rogue-lite, and a required feature."),
-              T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. Our procedural ideas could then be presented in a gameplay sequence that put them forward. The jury, made up of those same instructors, had approved this change beforehand, and the project was **well received**.")
+              T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. Our procedural ideas could then be presented in a gameplay sequence that put them forward. The jury, made up of those same instructors, had approved this change beforehand, and the project was **well received**."),
+              T("Getting this agreement was a relief. My fear of needing a crunch to finish the project largely faded, and the team was freed from a very stressful issue to refocus on the parts of the game that mattered most.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.webp","The Mad Max Fury Rogue level in blocking"],["images/rogue-mm-ld-2.webp","The Mad Max Fury Rogue level in blocking, with its enemies"]]) ])
           ]),
           BANDE("III","Planning on two levels",[

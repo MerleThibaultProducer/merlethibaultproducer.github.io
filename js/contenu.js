@@ -293,7 +293,7 @@ const PROJECTS_FR = {
           BANDE("II","Simuler la génération procédurale",[
             LIGNE([
               T("Chez Mad Max Fury Rogue, la **génération procédurale** s'est révélée bien plus complexe que prévu : la tâche, jugée très difficile, était déjà en retard à la fin du premier sprint. C'était pourtant le cœur d'un rogue-lite, et une contrainte imposée."),
-              T("Pour ne pas retarder le reste de la production, j'ai décidé, avec le référent Game Design du groupe, de chercher un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Ensemble, nous avons choisi de **simuler le procédural** : plusieurs checkpoints préparés dans le level design donnaient l'illusion d'une génération aléatoire. Nos idées de procédural ont ainsi pu être présentées dans une séquence de jeu qui les mettait en avant.")
+              T("Pour ne pas retarder le reste de la production, j'ai décidé, avec le référent Game Design du groupe, de chercher un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Ensemble, nous avons choisi de **simuler le procédural** : plusieurs checkpoints préparés dans le level design donnaient l'illusion d'une génération aléatoire. Nos idées de procédural ont ainsi pu être présentées dans une séquence de jeu qui les mettait en avant. Le jury avait validé ce changement en amont, et le projet a été **reçu favorablement**.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.gif","Le blocking du niveau de Mad Max Fury Rogue"],["images/rogue-mm-ld-2.gif","Le niveau de Mad Max Fury Rogue en blocking, avec ses ennemis"]]) ])
           ]),
           BANDE("III","Planifier à deux niveaux",[
@@ -724,7 +724,7 @@ const PROJECTS_EN = {
           BANDE("II","Faking procedural generation",[
             LIGNE([
               T("At Mad Max Fury Rogue, **procedural generation** turned out to be far more complex than planned: the task, rated very hard, was already late by the end of the first sprint. Yet it was the core of a rogue-lite, and a required feature."),
-              T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. Our procedural ideas could then be presented in a gameplay sequence that put them forward.")
+              T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. Our procedural ideas could then be presented in a gameplay sequence that put them forward. The jury had approved this change beforehand, and the project was **well received**.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.gif","The Mad Max Fury Rogue level in blocking"],["images/rogue-mm-ld-2.gif","The Mad Max Fury Rogue level in blocking, with its enemies"]]) ])
           ]),
           BANDE("III","Planning on two levels",[

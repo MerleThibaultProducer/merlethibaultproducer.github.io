@@ -251,9 +251,11 @@ const PROJECTS_FR = {
               T("Nous avons organisé des réunions d'urgence avec chaque groupe et **suspendu la production pendant une journée et demie**. Cette pause nous a permis de comprendre d'où venait le problème : des références trop vastes et peu précises, et une passe de recherche trop courte au démarrage, parce que nous pensions que celle de la sélection suffirait.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
-              T("Chaque groupe vivait la crise à sa manière : il n'y avait donc pas de réponse unique. Pour l'un, j'ai décidé, en accord avec les référents des disciplines, **d'abandonner plusieurs assets** qui sortaient du cadre ou n'étaient plus prioritaires. Pour un autre, nous avons revu le Level Art et le shader atmosphérique."),
+              T("Chaque groupe vivait la crise à sa manière : il n'y avait donc pas de réponse unique. Pour l'un, j'ai décidé, en accord avec les référents des disciplines, **d'abandonner plusieurs assets** qui sortaient du cadre ou n'étaient plus prioritaires. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
+            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ]),
+            LIGNE([
               T("Si c'était à refaire, je ferais créer dès le départ **une petite scène de référence dans le moteur**, avec un prop à la qualité visée, les textures souhaitées et les intentions de lumière et de caméra.")
-            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ])
+            ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil : du blockout au Level Art et au shader atmosphérique revus après la crise") ])
           ]),
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
@@ -267,8 +269,8 @@ const PROJECTS_FR = {
               T("Les quatre jeux ont été livrés au jury en fin de projet, chacun dans son univers : la forêt de l'Anjou du Castor et l'Écureuil, le manoir des années 1930 d'Insight, la ville envahie par les plantes de The Flowering Dead et les rues de Project GLOW.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil : le menu principal et la forêt en jeu"],["images/fda-insight-1.jpg","Insight : la bibliothèque du manoir"],["images/fda-insight-2.jpg","Insight : la grande salle et ses lustres"],["images/fda-insight-3.jpg","Insight : la lunette astronomique de la mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead : la ville envahie par les plantes"],["images/fda-flowering-2.jpg","The Flowering Dead : un passage sous les arcades"],["images/fda-flowering-3.jpg","The Flowering Dead : le beffroi et la tour"],["images/fda-glow-jeu.jpg","Project GLOW en jeu : une rue barrée par une grille"]]) ]),
             LIGNE([
-              T("Derrière ces images, il y a les tâches suivies dans les micro-plannings. Pour Le Castor et l'Écureuil comme pour Project GLOW, on voit les niveaux passer du plan ou du blockout au Level Art, puis à la lumière.")
-            ],[ CAROUSEL([["images/fda-castor-ld.webp","Le Castor et l'Écureuil : du blockout au niveau éclairé"],["images/fda-glow-plan.webp","Project GLOW : du plan du niveau à la ville finale, vue du dessus"],["images/fda-glow-editeur.jpg","Project GLOW : la ville dans l'éditeur"]]) ])
+              T("Derrière ces images, il y a les tâches suivies dans les micro-plannings. Pour Project GLOW, on voit la ville passer du plan du niveau au blockout, puis au Level Art et à la lumière.")
+            ],[ CAROUSEL([["images/fda-glow-plan.webp","Project GLOW : du plan du niveau à la ville finale, vue du dessus"],["images/fda-glow-editeur.jpg","Project GLOW : la ville dans l'éditeur"]]) ])
           ]),
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
@@ -690,9 +692,11 @@ const PROJECTS_EN = {
               T("We held emergency meetings with each group and **paused production for a day and a half**. That pause helped us understand where the problem came from: references that were too broad and imprecise, and a research pass that was too short at the start, because we thought the selection-phase research would be enough.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
-              T("Each group experienced the crisis in its own way, so there was no single answer. For one, I decided, in agreement with the discipline leads, **to cut several assets** that were off-brief or no longer a priority. For another, we reworked the Level Art and the atmospheric shader."),
+              T("Each group experienced the crisis in its own way, so there was no single answer. For one, I decided, in agreement with the discipline leads, **to cut several assets** that were off-brief or no longer a priority. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
+            ],[ IMG(PRO1.kill,"Cut tasks in one group's tracking") ]),
+            LIGNE([
               T("If I had to do it again, I would have **a small reference scene built in the engine** from the start, with a prop at the target quality, the desired textures and the lighting and camera intentions.")
-            ],[ IMG(PRO1.kill,"Cut tasks in one group's tracking") ])
+            ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil: from blockout to the Level Art and atmospheric shader reworked after the crisis") ])
           ]),
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
@@ -706,8 +710,8 @@ const PROJECTS_EN = {
               T("All four games were delivered to the jury at the end of the project, each in its own world: the Anjou forest of Le Castor et l'Écureuil, the 1930s mansion of Insight, the plant-overrun city of The Flowering Dead and the streets of Project GLOW.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil: the main menu and the forest in game"],["images/fda-insight-1.jpg","Insight: the mansion's library"],["images/fda-insight-2.jpg","Insight: the great hall and its chandeliers"],["images/fda-insight-3.jpg","Insight: the telescope on the mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead: the city overrun by plants"],["images/fda-flowering-2.jpg","The Flowering Dead: a passage under the arcades"],["images/fda-flowering-3.jpg","The Flowering Dead: the belfry and the tower"],["images/fda-glow-jeu.jpg","Project GLOW in game: a street blocked by a gate"]]) ]),
             LIGNE([
-              T("Behind these images are the tasks tracked in the micro-schedules. For Le Castor et l'Écureuil as for Project GLOW, you can see the levels move from the layout or blockout to Level Art, then to lighting.")
-            ],[ CAROUSEL([["images/fda-castor-ld.webp","Le Castor et l'Écureuil: from blockout to the lit level"],["images/fda-glow-plan.webp","Project GLOW: from the level layout to the final city, top view"],["images/fda-glow-editeur.jpg","Project GLOW: the city in the editor"]]) ])
+              T("Behind these images are the tasks tracked in the micro-schedules. For Project GLOW, you can see the city move from the level layout to the blockout, then to Level Art and lighting.")
+            ],[ CAROUSEL([["images/fda-glow-plan.webp","Project GLOW: from the level layout to the final city, top view"],["images/fda-glow-editeur.jpg","Project GLOW: the city in the editor"]]) ])
           ]),
           BANDE("VII","What I take away",[
             LIGNE([

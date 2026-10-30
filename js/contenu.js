@@ -164,7 +164,8 @@ const EQUIPES_FDA = [
         M("Léa Libert","https://www.linkedin.com/in/l%C3%A9a-libert/","Concept Art"),
         M("Fanny Bernhard","https://www.linkedin.com/in/fanny-bernhard-4a81a6333/","Character Art"),
         M("Lisa Canovas","https://www.linkedin.com/in/lisa-canovas-21915522b/","Technical Art"),
-        M("Théo David","https://www.linkedin.com/in/th%C3%A9o-david-94080a3b6/","Technical Art") ] }
+        M("Théo David","https://www.linkedin.com/in/th%C3%A9o-david-94080a3b6/","Technical Art"),
+        M("Samuel Augeul Meunier","https://www.linkedin.com/in/samuel-augeul-meunier-0b41a2333/","Character Art") ] }
 ];
 
 /* Équipes du Workshop Rogue-lite (février 2026) : rôles tirés des fichiers de production, liens repris des équipes de fin d'année.
@@ -187,7 +188,7 @@ const EQUIPES_ROGUE = [
         M("Naëlle Bigouraux","https://www.linkedin.com/in/na%C3%ABlle-bigouraux-4237363a3/","Character Art"),
         M("Sarah Ounali","https://www.linkedin.com/in/sarah-ounali-6a1a47271/","Concept Art"),
         M("Hugo Ballet","https://www.linkedin.com/in/hugo-ballet-038899370/","Concept Art"),
-        M("Augeul Meunier","","Concept Art") ] },
+        M("Samuel Augeul Meunier","https://www.linkedin.com/in/samuel-augeul-meunier-0b41a2333/","Concept Art") ] },
   { num:4, nom:"Mad Max Fury Rogue", genre:"rogue-lite post-apocalyptique", genreEn:"post-apocalyptic rogue-lite",
     design:[
         M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
@@ -213,7 +214,7 @@ const PROJECTS_FR = {
     P({ title:"Projets de fin d'année : quatre jeux en parallèle – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"Une promotion entière, un seul producer : de la mise en place de la production à la livraison au jury, en passant par une crise à mi-parcours.", carte:"Toute une promotion et un seul producer, avec une méthode Agile intégrée aux jalons Waterfall de l'école.",
         img:PRO1.thumb,
-        infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (53 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
+        infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes","Genres variés","4 semaines"] },
         apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines, et j'en étais le producer, en lien avec les intervenants qui jouaient le rôle d'éditeurs. J'ai adapté une **méthode Agile** aux jalons Waterfall de l'école, mis en place un suivi Excel pour chaque groupe et fait le lien entre l'encadrement et les équipes au quotidien. Après une crise de direction artistique en deuxième semaine, j'ai organisé deux sessions de playtest communes aux quatre équipes, puis redéfini les priorités avec chacune. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
         contenu:[
@@ -331,7 +332,7 @@ const PROJECTS_FR = {
             LIGNE([
               TABLEAU("Le cahier des charges, d'après les backlogs",["Exigence","Vampire Hunter E-Cycle","Mad Max Fury Rogue"],[
                 ["Génération procédurale","Deux versions du générateur","Simulée par des checkpoints dans le level design"],
-                ["Amélioration du personnage","HUB, salle d'amélioration et boutique","Menu d'amélioration"],
+                ["Amélioration du personnage","HUB, salle d'amélioration et boutique","Le camion de Furiosa, première pièce de la run, avec son menu d'amélioration"],
                 ["Monnaie","Des âmes, dépensées à la boutique","Des écrous ; le marché a été mis de côté"],
                 ["Salles","Salles de combat (trois sur six habillées), salle de soin, boutique et salle d'amélioration","Salles de combat et salles iconiques, avec leur éclairage"],
                 ["Ennemis et boss","Un crâne et un rat ; le boss est une version élite du crâne","Des Warboys et un boss Warboy"],
@@ -625,7 +626,7 @@ const PROJECTS_EN = {
     P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", large:true, nocover:true,
         desc:"A whole class, a single producer: from setting up production to delivery to the jury, through a mid-course crisis.", carte:"A whole class and a single producer, with an Agile method embedded in the school's Waterfall milestones.",
         img:PRO1.thumb,
-        infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (53 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
+        infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams","Varied game genres","4 weeks"] },
         apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks, and I was their producer, working with the instructors who acted as publishers. I adapted an **Agile method** to the school's Waterfall milestones, set up Excel tracking for each group and kept the supervisors and teams connected day to day. After an art direction crisis in the second week, I organised two playtest sessions for all four teams, then reset priorities with each of them. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
         contenu:[
@@ -743,7 +744,7 @@ const PROJECTS_EN = {
             LIGNE([
               TABLEAU("The brief, game by game, from the backlogs",["Requirement","Vampire Hunter E-Cycle","Mad Max Fury Rogue"],[
                 ["Procedural generation","Two versions of the generator","Faked with checkpoints in the level design"],
-                ["Character upgrades","HUB, upgrade room and shop","Upgrade menu"],
+                ["Character upgrades","HUB, upgrade room and shop","Furiosa's truck, the first room of each run, with its upgrade menu"],
                 ["Currency","Souls, spent at the shop","Nuts; the market was set aside"],
                 ["Rooms","Combat rooms (three of six dressed), healing room, shop and upgrade room","Combat rooms and iconic rooms, with their lighting"],
                 ["Enemies and boss","A skull and a rat; the boss is an elite skull","Warboys and a Warboy boss"],

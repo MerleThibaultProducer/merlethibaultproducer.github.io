@@ -262,12 +262,20 @@ const PROJECTS_FR = {
               T("Les retours ont été nombreux, et souvent critiques, à un moment où le moral était déjà entamé. Avec chaque équipe, nous les avons triés pour garder les points les plus importants, puis **j'ai redéfini les priorités et réorganisé les plannings**. Voir des inconnus jouer aux projets a aussi redonné de l'énergie aux équipes : malgré les critiques, les jeux plaisaient.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest de « Le Castor et l'Écureuil » : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
           ]),
-          BANDE("VI","Ce que j'en retiens",[
+          BANDE("VI","Les quatre jeux livrés",[
+            LIGNE([
+              T("Les quatre jeux ont été livrés au jury en fin de projet, chacun dans son univers : la forêt de l'Anjou du Castor et l'Écureuil, le manoir des années 1930 d'Insight, la ville envahie par les plantes de The Flowering Dead et les rues de Project GLOW.")
+            ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil : le menu principal et la forêt en jeu"],["images/fda-insight-1.jpg","Insight : la bibliothèque du manoir"],["images/fda-insight-2.jpg","Insight : la grande salle et ses lustres"],["images/fda-insight-3.jpg","Insight : la lunette astronomique de la mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead : la ville envahie par les plantes"],["images/fda-flowering-2.jpg","The Flowering Dead : un passage sous les arcades"],["images/fda-flowering-3.jpg","The Flowering Dead : le beffroi et la tour"],["images/fda-glow-jeu.jpg","Project GLOW en jeu : une rue barrée par une grille"]]) ]),
+            LIGNE([
+              T("Derrière ces images, il y a les tâches suivies dans les micro-plannings. Pour Le Castor et l'Écureuil comme pour Project GLOW, on voit les niveaux passer du plan ou du blockout au Level Art, puis à la lumière.")
+            ],[ CAROUSEL([["images/fda-castor-ld.webp","Le Castor et l'Écureuil : du blockout au niveau éclairé"],["images/fda-glow-plan.webp","Project GLOW : du plan du niveau à la ville finale, vue du dessus"],["images/fda-glow-editeur.jpg","Project GLOW : la ville dans l'éditeur"]]) ])
+          ]),
+          BANDE("VII","Ce que j'en retiens",[
             LIGNE([
               T("C'était la première fois que l'on me confiait la production d'une promotion entière. La crise de mi-parcours m'a appris à mettre de côté ce que je croyais savoir pour **écouter les besoins propres à chaque équipe**. J'ai aussi appris à **déléguer**, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même.")
             ])
           ]),
-          BANDE("VII","Les équipes",[
+          BANDE("VIII","Les équipes",[
             LIGNE([
               T("Ces quatre jeux sont avant tout le travail de leurs équipes."),
               EQUIPES(EQUIPES_FDA)
@@ -693,12 +701,20 @@ const PROJECTS_EN = {
               T("The feedback was plentiful, and often critical, at a time when morale was already low. With each team, we sorted it to keep the most important points, then **I redefined priorities and reorganised the schedules**. Seeing strangers play the projects also gave the teams new energy: despite the criticism, players enjoyed the games.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","The playtest feedback form for Le Castor et l'Écureuil: 22 responses"],["images/fda-playtest-perso.jpg","A section of the questionnaire: how players rated the characters"],["images/fda-playtest-coherence.jpg","A section of the questionnaire: design consistency, rated from 1 to 7"]]) ])
           ]),
-          BANDE("VI","What I take away",[
+          BANDE("VI","The four games delivered",[
+            LIGNE([
+              T("All four games were delivered to the jury at the end of the project, each in its own world: the Anjou forest of Le Castor et l'Écureuil, the 1930s mansion of Insight, the plant-overrun city of The Flowering Dead and the streets of Project GLOW.")
+            ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil: the main menu and the forest in game"],["images/fda-insight-1.jpg","Insight: the mansion's library"],["images/fda-insight-2.jpg","Insight: the great hall and its chandeliers"],["images/fda-insight-3.jpg","Insight: the telescope on the mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead: the city overrun by plants"],["images/fda-flowering-2.jpg","The Flowering Dead: a passage under the arcades"],["images/fda-flowering-3.jpg","The Flowering Dead: the belfry and the tower"],["images/fda-glow-jeu.jpg","Project GLOW in game: a street blocked by a gate"]]) ]),
+            LIGNE([
+              T("Behind these images are the tasks tracked in the micro-schedules. For Le Castor et l'Écureuil as for Project GLOW, you can see the levels move from the layout or blockout to Level Art, then to lighting.")
+            ],[ CAROUSEL([["images/fda-castor-ld.webp","Le Castor et l'Écureuil: from blockout to the lit level"],["images/fda-glow-plan.webp","Project GLOW: from the level layout to the final city, top view"],["images/fda-glow-editeur.jpg","Project GLOW: the city in the editor"]]) ])
+          ]),
+          BANDE("VII","What I take away",[
             LIGNE([
               T("It was the first time I had been the producer for an entire class. The mid-course crisis taught me to set aside what I thought I knew and **listen to each team's own needs**. I also learned to **delegate**, and to set up clear communication channels from the start, so that no team feels left to fend for itself.")
             ])
           ]),
-          BANDE("VII","The teams",[
+          BANDE("VIII","The teams",[
             LIGNE([
               T("These four games are first and foremost the work of their teams."),
               EQUIPES(EQUIPES_FDA)

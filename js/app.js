@@ -52,6 +52,21 @@ function home(){
       <div class="intro"><h1 class="home-h1">${esc(SITE.accueilTitre||SITE.titre)}</h1>${SITE.intro.map(p=>`<p>${rich(p)}</p>`).join("")}</div>
       <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a>${SITE.email?`<a class="btn ghost" href="mailto:${esc(SITE.email)}">${t("contactMe")}</a>`:""}</p>
     </div>
+  </section>${homeFeat()}`;
+}
+/* Encadré « Par où commencer » : les projets marqués une:true dans contenu.js */
+function homeFeat(){
+  const items = Object.entries(PROJECTS).flatMap(([k,l]) => l.filter(p => p.une && !p.wip).map(p => [k,p]));
+  if(!items.length) return "";
+  return `<section class="home-feat" aria-labelledby="feat-h">
+    <h2 id="feat-h">${q("Par où commencer","Where to start")}</h2>
+    <div class="feat-row">${items.map(([k,p]) => {
+      const m = p.title.match(/^(.+?)\s+–\s+(\S.*\d{4})$/);
+      const kick = k==="pro" ? q("Projet professionnel","Professional project")+(m?` · ${m[2]}`:"") : q("Projet personnel","Personal project")+(p.cat?` · ${p.cat}`:"");
+      return `<a class="feat" data-go="#/${k}/${esc(p.id)}" role="link" tabindex="0">
+        <span class="feat-img">${img(p.img,"",p.title[0])}</span>
+        <span class="feat-txt"><small>${esc(kick)}</small><h3>${esc(m?m[1]:p.title)}</h3><span class="feat-d">${esc(p.carte||p.desc)}</span><span class="feat-go">${q("Voir le projet","See the project")}<span aria-hidden="true"> →</span></span></span>
+      </a>`;}).join("")}</div>
   </section>`;
 }
 
@@ -60,7 +75,7 @@ function cardTitle(title,cat){
   if(cat) return `<small>${esc(cat)}</small>${esc(title)}`;
   let m = title.match(/^((?:Exercice|Exercise)\s+\d+)\s+–\s+(.+)$/);
   if(m) return `<small>${esc(m[1])}</small>${esc(m[2])}`;
-  m = title.match(/^(.+?)\s+–\s+([^–]*\d{4})$/);
+  m = title.match(/^(.+?)\s+–\s+(\S.*\d{4})$/);
   if(m) return `<small>${esc(m[2])}</small>${esc(m[1])}`;
   return esc(title);
 }

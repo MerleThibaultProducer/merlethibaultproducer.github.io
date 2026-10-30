@@ -213,9 +213,9 @@ const PROJECTS_FR = {
   pro: [
     P({ title:"Projets de fin d'année : quatre jeux en parallèle – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"Une promotion entière, un seul producer : de la mise en place de la production à la livraison au jury, en passant par une crise à mi-parcours.", carte:"Toute une promotion et un seul producer, avec une méthode Agile intégrée aux jalons Waterfall de l'école.",
-        img:PRO1.thumb,
+        img:PRO1.thumb, une:true,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
-        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes","Genres variés","4 semaines"] },
+        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
         apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines, et j'en étais le producer, en lien avec les intervenants qui jouaient le rôle d'éditeurs. J'ai adapté une **méthode Agile** aux jalons Waterfall de l'école, mis en place un suivi Excel pour chaque groupe et fait le lien entre l'encadrement et les équipes au quotidien. Après une crise de direction artistique en deuxième semaine, j'ai organisé deux sessions de playtest communes aux quatre équipes, puis redéfini les priorités avec chacune. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
@@ -276,8 +276,8 @@ const PROJECTS_FR = {
         ] }),
     P({ title:"Workshop Rogue-lite – Février 2026", large:true, nocover:true,
         desc:"Quinze jours pour livrer deux rogue-lites jouables sous Unity, chacun d'après une licence de film d'animation.",
-        carte:"Deux rogue-lites sous Unity en quinze jours, avec un planning commun et un suivi quotidien des tâches pour chaque équipe.",
-        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","14 personnes par équipe","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
+        carte:"Deux rogue-lites livrés sous Unity en quinze jours, un planning tenu à deux niveaux et des coupes préparées avant les premiers retards.",
+        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026", "Outils":"Excel · PowerPoint · Miro · Discord" },
         apercu:"Pour ce workshop de Game Sup, deux équipes avaient quinze jours pour livrer chacune un **rogue-lite en 2,5D sous Unity**, d'après une licence imposée : *Vampire Hunter D: Bloodlust* pour l'une, *Mad Max: Fury Road* pour l'autre. J'étais le producer des deux. J'ai tenu un **planning commun** calé sur les jalons de l'école et un suivi quotidien des tâches propre à chaque équipe. Quand la génération procédurale a résisté, nous l'avons simulée pour tenir la date. Vampire Hunter E-Cycle et Mad Max Fury Rogue ont été livrés au jury **jouables de bout en bout**.",
         contenu:[
@@ -375,7 +375,7 @@ const PROJECTS_FR = {
         ] }),
     P({ title:"Workshop Fusion – Novembre 2025", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
         desc:"Plan de production Agile sur Excel, revues hebdomadaires et premiers dailies pour deux équipes.", carte:"Un plan de production Agile sur Excel, des revues hebdomadaires et les premiers dailies, confiés aux référents des équipes.",
-        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","12 à 13 personnes","Racing · Fusion"] }, img:"images/fusion-thumb.jpg",
+        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 équipes de 12 à 13","Racing · Fusion","3 semaines"] }, img:"images/fusion-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 12 à 13 personnes", "Durée":"3 semaines", "Outils":"Excel" },
         resume:{ contexte:"Workshop de trois semaines à Game Sup : deux équipes de 12 à 13 personnes.",
                  role:"Producer des deux équipes : plan de production, suivi et répartition des tâches.",
@@ -388,7 +388,7 @@ const PROJECTS_FR = {
         ] }),
     P({ title:"Projets de fin d'année : mes deux premières productions – Juin 2025", wip:true,   // wip:true = en cours (bandeau WIP, bouton Détails inactif). Supprimez ce mot pour activer le projet.
         desc:"Ma première gestion de deux projets en parallèle, suivis sur Excel et Miro.", carte:"Deux équipes suivies en parallèle sur Excel et Miro, avec des revues de sprint pour chacune.",
-        survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","12 à 13 personnes","Genres variés"] }, img:"images/fin-annee-2025-thumb.jpg",
+        survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","2 équipes de 12 à 13","Genres variés","4 semaines"] }, img:"images/fin-annee-2025-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 12 à 13 personnes", "Durée":"4 semaines", "Outils":"Excel · Miro" },
         resume:{ contexte:"Projet de fin d'année à Game Sup : deux équipes de 12 à 13 personnes, quatre semaines de développement.",
                  role:"Producer des deux projets, menés en parallèle.",
@@ -401,7 +401,7 @@ const PROJECTS_FR = {
         ] })
   ],
   perso: [
-    P({ survol:{ items:["Producer","Action-RPG AA · 15 personnes","Mise en situation","Jira · JQL"] }, cat:"Gestion de production", id:"projet-jira-et-agile-un-studio-en-mise-en-situation-octobre-2026", title:"Projet Jira et Agile : un studio en mise en situation", large:true, nocover:true,
+    P({ une:true, survol:{ items:["Producer","Action-RPG AA · 15 personnes","Mise en situation","Jira · JQL"] }, cat:"Gestion de production", id:"projet-jira-et-agile-un-studio-en-mise-en-situation-octobre-2026", title:"Projet Jira et Agile : un studio en mise en situation", large:true, nocover:true,
         desc:"Une mise en situation menée seul : la production d'un action-RPG AA fictif structurée dans Jira, des boards au registre des risques.",
         carte:"Un studio fictif organisé dans Jira en Scrum : sprints, bugs, risques et automatisations.",
         img:"images/jira-vignette.jpg",
@@ -644,9 +644,9 @@ const PROJECTS_EN = {
   pro: [
     P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", large:true, nocover:true,
         desc:"A whole class, a single producer: from setting up production to delivery to the jury, through a mid-course crisis.", carte:"A whole class and a single producer, with an Agile method embedded in the school's Waterfall milestones.",
-        img:PRO1.thumb,
+        img:PRO1.thumb, une:true,
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
-        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams","Varied game genres","4 weeks"] },
+        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
         apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks, and I was their producer, working with the instructors who acted as publishers. I adapted an **Agile method** to the school's Waterfall milestones, set up Excel tracking for each group and kept the supervisors and teams connected day to day. After an art direction crisis in the second week, I organised two playtest sessions for all four teams, then reset priorities with each of them. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
         contenu:[
           BANDE("I","The project framework",[
@@ -707,8 +707,8 @@ const PROJECTS_EN = {
         ] }),
     P({ title:"Rogue-lite Workshop – February 2026", large:true, nocover:true,
         desc:"Fifteen days to deliver two playable rogue-lites in Unity, each based on an animated film licence.",
-        carte:"Two rogue-lites in Unity in fifteen days, with a shared schedule and daily task tracking for each team.",
-        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","14 people per team","Rogue-lite"] }, img:"images/rogue-thumb.jpg",
+        carte:"Two rogue-lites shipped in Unity in fifteen days, a schedule run on two levels and cuts prepared before the first delays.",
+        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026", "Tools":"Excel · PowerPoint · Miro · Discord" },
         apercu:"For this Game Sup workshop, two teams had fifteen days to each deliver a **2.5D rogue-lite in Unity**, based on an assigned licence: *Vampire Hunter D: Bloodlust* for one, *Mad Max: Fury Road* for the other. I was the producer for both. I kept a **shared schedule** aligned with the school's milestones and a daily task tracker for each team. When procedural generation resisted, we faked it to hold the deadline. Vampire Hunter E-Cycle and Mad Max Fury Rogue were delivered to the jury **playable from start to finish**.",
         contenu:[
@@ -806,7 +806,7 @@ const PROJECTS_EN = {
         ] }),
     P({ title:"Fusion Workshop – November 2025", wip:true,
         desc:"An Agile production plan in Excel, weekly reviews and the first dailies for two teams.", carte:"An Agile production plan in Excel, weekly reviews and the first dailies, entrusted to the team leads.",
-        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","12 to 13 people","Racing · Fusion"] }, img:"images/fusion-thumb.jpg",
+        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 teams of 12 to 13","Racing · Fusion","3 weeks"] }, img:"images/fusion-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams of 12 to 13 people", "Duration":"3 weeks", "Tools":"Excel" },
         resume:{ contexte:"Three-week workshop at Game Sup: two teams of 12 to 13 people.",
                  role:"Producer for both teams: production plan, tracking and task distribution.",
@@ -819,7 +819,7 @@ const PROJECTS_EN = {
         ] }),
     P({ title:"End-of-Year Projects: My First Two Productions – June 2025", wip:true,
         desc:"My first time managing two projects in parallel, tracked in Excel and Miro.", carte:"Two teams tracked in parallel in Excel and Miro, with sprint reviews for each.",
-        survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","12 to 13 people","Varied genres"] }, img:"images/fin-annee-2025-thumb.jpg",
+        survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","2 teams of 12 to 13","Varied genres","4 weeks"] }, img:"images/fin-annee-2025-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams of 12 to 13 people", "Duration":"4 weeks", "Tools":"Excel · Miro" },
         resume:{ contexte:"Game Sup end-of-year project: two teams of 12 to 13 people, four weeks of development.",
                  role:"Producer for both projects, run in parallel.",
@@ -832,7 +832,7 @@ const PROJECTS_EN = {
         ] })
   ],
   perso: [
-    P({ survol:{ items:["Producer","AA action-RPG · 15 people","Simulation","Jira · JQL"] }, cat:"Production management", title:"Jira and Agile Project: A Studio Simulation", large:true, nocover:true,
+    P({ une:true, survol:{ items:["Producer","AA action-RPG · 15 people","Simulation","Jira · JQL"] }, cat:"Production management", title:"Jira and Agile Project: A Studio Simulation", large:true, nocover:true,
         desc:"A simulation run on my own: the production of a fictional AA action-RPG structured in Jira, from the boards to the risk register.",
         carte:"A fictional studio run in Jira with Scrum: sprints, bugs, risks and automations.",
         img:"images/jira-vignette.jpg",

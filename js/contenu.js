@@ -1182,8 +1182,8 @@ const INFOS_EN = {
 };
 
 const CV_VISUAL = {
-  image: "cv/cv-apercu-v6.jpg",
-  pdf: "cv/MERLE_Thibault_CV_PROD_v6.pdf",
+  image: "cv/cv-apercu-v7.jpg",
+  pdf: "cv/MERLE_Thibault_CV_PROD_v7.pdf",
   filename: "MERLE_Thibault_CV_PROD.pdf"   // nom du fichier téléchargé
 };
 

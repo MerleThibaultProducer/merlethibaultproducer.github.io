@@ -10,7 +10,7 @@ const SITE_FR = {
   accueilTitre: "Junior Associate Producer, formé à Game Sup",   // grand titre de la page d'accueil
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
-    "Je m'appelle Thibault et je suis en dernière année à Game Sup. Sur quatre productions d'école, j'ai planifié et suivi des projets avec **jusqu'à quatre équipes en même temps**, des premiers jalons jusqu'aux playtests. **J'adapte la méthode de production à chaque équipe** après l'avoir écoutée, et je veille à ce que chacun sache où en est le projet.",
+    "Je m'appelle Thibault et je suis en dernière année à Game Sup. Sur quatre productions d'école, j'ai planifié et suivi des projets avec **jusqu'à quatre équipes en même temps**, des premiers jalons jusqu'aux playtests. **J'adapte la méthode de production à chaque équipe** après l'avoir écoutée, et **je prépare les coupes avant que les retards ne les imposent**, pour que chacun sache où en est le projet.",
     "C'est pendant un projet de groupe à Game Sup que j'ai pris goût à la production : faire circuler l'information entre Game Artists et Game Designers, et entretenir l'esprit d'équipe jusqu'au bout du projet. Cinq ans d'enseignement et autant comme maître du jeu m'avaient préparé à ce rôle : faire progresser un groupe, et qu'il prenne plaisir au temps passé ensemble. C'est pourquoi je recherche aujourd'hui **un stage de fin d'études en production à partir de janvier 2027**, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
@@ -23,7 +23,7 @@ const SITE_FR = {
 const SITE_EN = {...SITE_FR,
   accueilTitre: "Junior Associate Producer, trained at Game Sup",
   intro: [
-    "My name is Thibault and I'm in my final year at Game Sup. Across four school productions, I have planned and tracked projects with **up to four teams at once**, from the first milestones to the playtests. **I adapt the production method to each team** after listening to its needs, and I make sure everyone knows where the project stands.",
+    "My name is Thibault and I'm in my final year at Game Sup. Across four school productions, I have planned and tracked projects with **up to four teams at once**, from the first milestones to the playtests. **I adapt the production method to each team** after listening to its needs, and **I prepare cuts before delays force them**, so that everyone knows where the project stands.",
     "I discovered production during a group project at Game Sup: passing information between Game Artists and Game Designers, and keeping the team spirit going until the project was done. Five years of teaching, and as many as a tabletop game master, had prepared me for the role: helping a group make progress, and enjoy the time spent together. That is why I am now looking for **a final-year production internship starting in January 2027**, anywhere in France or remotely."
   ],
   legal: [

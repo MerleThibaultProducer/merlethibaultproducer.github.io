@@ -413,7 +413,7 @@ const PROJECTS_FR = {
         ] })
   ],
   perso: [
-    P({ une:true, survol:{ items:["Producer","Action-RPG AA · 15 personnes","Mise en situation","Jira · JQL"] }, cat:"Gestion de production", id:"projet-jira-et-agile-un-studio-en-mise-en-situation-octobre-2026", title:"Projet Jira et Agile : un studio en mise en situation", large:true, nocover:true,
+    P({ une:true, date:"Octobre 2026", survol:{ items:["Producer","Action-RPG AA · 15 personnes","Mise en situation","Jira · JQL"] }, cat:"Gestion de production", id:"projet-jira-et-agile-un-studio-en-mise-en-situation-octobre-2026", title:"Projet Jira et Agile : un studio en mise en situation", large:true, nocover:true,
         desc:"Une mise en situation menée seul : la production d'un action-RPG AA fictif structurée dans Jira, des boards au registre des risques.",
         carte:"Un studio fictif organisé dans Jira en Scrum : sprints, bugs, risques et automatisations.",
         img:"images/jira-vignette.jpg",
@@ -462,7 +462,7 @@ const PROJECTS_FR = {
             ],[ IMG("images/jira-auto-repro.png","La règle du taux de reproduction : calcul, contrôle des valeurs, puis une branche par option de likelihood") ]),
             LIGNE([
               T("Sur le board QA, les **swimlanes** sont des requêtes JQL qui rangent les bugs par sévérité, les bloquants en haut, et la carte affiche la priorité. Chaque colonne a **une limite de travail en cours** : quand une colonne déborde, l'équipe finit des bugs avant d'en ouvrir d'autres.")
-            ],[ CAROUSEL([["images/jira-board-qa.png","Le board QA-Bugs : une ligne par sévérité"],["images/jira-colonnes-qa.png","Les colonnes et leurs limites de travail en cours"]]) ]),
+            ],[ CAROUSEL([["images/jira-board-qa.png","Le board QA-Bugs : les bugs bloquants regroupés en haut, du triage à la fermeture"],["images/jira-colonnes-qa.png","Les colonnes et leurs limites de travail en cours"]]) ]),
             LIGNE([
               T("Le workflow pose une règle : **un bug ne se ferme jamais sans résolution**. Verified ferme un bug corrigé avec la résolution Done ; Rejected, depuis le tri, le ferme en Won't Do, Duplicate ou Cannot Reproduce. Reopen renvoie en correction un bug dont le correctif ne tient pas, ce qui permet de compter les réouvertures. Une requête de contrôle vérifie qu'aucun bug fermé n'est privé de résolution.")
             ],[ SCHEMA("bugflow","Le parcours d'un bug, ses retours en arrière et ses résolutions") ])
@@ -856,7 +856,7 @@ const PROJECTS_EN = {
         ] })
   ],
   perso: [
-    P({ une:true, survol:{ items:["Producer","AA action-RPG · 15 people","Simulation","Jira · JQL"] }, cat:"Production management", title:"Jira and Agile Project: A Studio Simulation", large:true, nocover:true,
+    P({ une:true, date:"October 2026", survol:{ items:["Producer","AA action-RPG · 15 people","Simulation","Jira · JQL"] }, cat:"Production management", title:"Jira and Agile Project: A Studio Simulation", large:true, nocover:true,
         desc:"A simulation run on my own: the production of a fictional AA action-RPG structured in Jira, from the boards to the risk register.",
         carte:"A fictional studio run in Jira with Scrum: sprints, bugs, risks and automations.",
         img:"images/jira-vignette.jpg",
@@ -905,7 +905,7 @@ const PROJECTS_EN = {
             ],[ IMG("images/jira-auto-repro.png","The repro rate rule: calculation, value check, then one branch per likelihood option") ]),
             LIGNE([
               T("On the QA board, **swimlanes** are JQL queries that sort bugs by severity, blockers at the top, and the card shows the priority. Each column has **a work-in-progress limit**: when a column overflows, the team finishes bugs before opening new ones.")
-            ],[ CAROUSEL([["images/jira-board-qa.png","The QA-Bugs board: one lane per severity"],["images/jira-colonnes-qa.png","The columns and their work-in-progress limits"]]) ]),
+            ],[ CAROUSEL([["images/jira-board-qa.png","The QA-Bugs board: blocking bugs grouped at the top, from triage to closure"],["images/jira-colonnes-qa.png","The columns and their work-in-progress limits"]]) ]),
             LIGNE([
               T("The workflow sets one rule: **a bug is never closed without a resolution**. Verified closes a fixed bug with the Done resolution; Rejected, from triage, closes it as Won't Do, Duplicate or Cannot Reproduce. Reopen sends back a bug whose fix does not hold, which lets you count reopened bugs. A control query checks that no closed bug is missing a resolution.")
             ],[ SCHEMA("bugflow","The path of a bug, its ways back and its resolutions") ])

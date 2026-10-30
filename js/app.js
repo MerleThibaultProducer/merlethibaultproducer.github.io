@@ -62,7 +62,7 @@ function homeFeat(){
     <h2 id="feat-h">${q("Par où commencer","Where to start")}</h2>
     <div class="feat-row">${items.map(([k,p]) => {
       const m = p.title.match(/^(.+?)\s+–\s+(\S.*\d{4})$/);
-      const kick = k==="pro" ? q("Projet professionnel","Professional project")+(m?` · ${m[2]}`:"") : q("Projet personnel","Personal project")+(p.cat?` · ${p.cat}`:"");
+      const kick = k==="pro" ? q("Projet professionnel","Professional project")+(m?` · ${m[2]}`:"") : q("Projet personnel","Personal project")+(p.date||p.cat?` · ${p.date||p.cat}`:"");
       return `<a class="feat" data-go="#/${k}/${esc(p.id)}" role="link" tabindex="0">
         <span class="feat-img">${img(p.img,"",p.title[0])}</span>
         <span class="feat-txt"><small>${esc(kick)}</small><h3>${esc(m?m[1]:p.title)}</h3><span class="feat-d">${esc(p.carte||p.desc)}</span><span class="feat-go">${q("Voir le projet","See the project")}<span aria-hidden="true"> →</span></span></span>
@@ -93,7 +93,7 @@ function listing(sec){
   const items = PROJECTS[sec.key].filter(p => !p.wip);   // projets wip:true masqués jusqu'à leur mise à jour
   const cards = items.map(p => `<article class="card${p.wip?" is-wip":""}">
     <div class="thumb${p.img?" has-img":""}"${p.wip?"":` data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}"`}>${img(p.img,p.title,p.title[0])}${p.wip?'<span class="wip-blur" aria-hidden="true"></span>':""}${p.survol?survol(p.survol):""}<span class="status${p.wip?" wip":""}"><i aria-hidden="true"></i>${p.wip?t("stWip"):t("stDone")}</span></div>
-    <h3>${cardTitle(p.title,p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
+    <h3>${cardTitle(p.title,p.cat&&p.date?`${p.cat} · ${p.date}`:p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
     ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="btn" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${t("details")}</a>`}</article>`).join("");
   return `<div class="list-head"><h1>${sec.label}</h1><p class="lead">${sec.intro}</p></div>
   <div class="stage"><h2 class="sr">${q("Liste des projets","Project list")}</h2>${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="perso"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;

@@ -25,6 +25,7 @@ const isDark = () => document.documentElement.dataset.theme ? document.documentE
 const MOON = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>`;
 const SUN = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>`;
 
+const srcset = src => (typeof IMG_M!=="undefined" && IMG_M[src]) ? ` srcset="${esc(src.replace(/(\.\w+)$/,"-m$1"))} 900w, ${esc(src)} ${IMG_M[src]}w" sizes="(max-width: 860px) 92vw, 50vw"` : "";
 function img(src, alt, fallback){ return src ? `<img src="${esc(src)}" alt="${esc(alt)}">` : esc(fallback); }
 
 const MAIL_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>`;
@@ -129,7 +130,7 @@ squads(){
     m.forEach((p,i)=>{const y=204+i*20; s+=p[1]?`<circle cx="${x+20}" cy="${y-4}" r="4" class="gold"/>`+T(x+32,y,p[0],"g",600):T(x+32,y,p[0]);}); return s;};
   o+=S(20,q("Squad Gameplay · 6","Gameplay squad · 6"),q("Combat, IA, personnage","Combat, AI, character"),[["Lead Game Designer"],["Gameplay Designer"],[q("2 Gameplay Programmers","2 Gameplay Programmers")],["Character Artist"],[q("Animateur gameplay","Gameplay Animator"),1]]);
   o+=S(390,q("Squad World · 6","World squad · 6"),q("Niveaux, environnement, narration, son","Levels, environment, narrative, sound"),[["Lead Environment Artist"],["Environment / Props Artist"],[q("2 Level Designers","2 Level Designers")],["Narrative Designer"],["Sound Designer",1]]);
-  o+=`<circle cx="24" cy="340" r="4" class="gold"/>`+T(34,344,q("Les deux goulots de la Vertical Slice","The two Vertical Slice bottlenecks"),"m",400,"start",11.5);
+  o+=`<circle cx="24" cy="340" r="4" class="gold"/>`+T(34,344,q("Les deux goulots de la Vertical Slice","The two Vertical Slice bottlenecks"),"m",400,"start",12);
   o+=`<rect x="20" y="358" width="720" height="72" rx="4" class="ob" stroke-dasharray="5 4"/>`+T(36,382,q("Prestataires · External","Vendors · External"),"t",700,"start",13.5);
   o+=T(36,404,q("QA Studio (référent : producer) · Animation Studio (référent : animateur gameplay)","QA Studio (contact: producer) · Animation Studio (contact: gameplay animator)"),"m",400,"start",12);
   o+=T(36,422,q("Art Studio (référent : lead environment artist) · Music Composer","Art Studio (contact: lead environment artist) · Music Composer"),"m",400,"start",12);
@@ -141,17 +142,17 @@ bugflow(){
   const R=(x,y)=>`<polygon points="${x},${y} ${x-6},${y-4} ${x-6},${y+4}" class="m"/>`, D=(x,y)=>`<polygon points="${x},${y} ${x-4},${y-6} ${x+4},${y-6}" class="m"/>`, U=(x,y)=>`<polygon points="${x},${y} ${x-4},${y+6} ${x+4},${y+6}" class="m"/>`;
   const S=[["Open","todo"],["Triage","todo"],["To Fix","todo"],["In Progress","prog"],["Fixed","prog"],["Closed","done"]], w=100, g=24, x=i=>20+i*(w+g), y=96;
   let o=`<svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg">`;
-  o+=`<text x="20" y="22" class="m" font-size="11" letter-spacing="1.2">${q("WORKFLOW DES BUGS","BUG WORKFLOW")}</text>`;
+  o+=`<text x="20" y="22" class="m" font-size="12" letter-spacing="1.2">${q("WORKFLOW DES BUGS","BUG WORKFLOW")}</text>`;
   S.forEach((st,i)=>{o+=B(x(i),y,w,st[0],st[1]); if(i<5) o+=`<path d="M${x(i)+w} ${y+20}H${x(i+1)-2}" class="axis" fill="none" stroke-width="1.4"/>`+R(x(i+1),y+20);});
   const c=i=>x(i)+w/2;
   o+=`<path d="M${c(4)} ${y}V60H${c(2)}V${y-2}" class="axis" fill="none" stroke-width="1.4"/>`+D(c(2),y);
   o+=`<text x="${(c(2)+c(4))/2}" y="52" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Reopen<tspan class="m" font-weight="400">${q(" : le correctif ne tient pas",": the fix does not hold")}</tspan></text>`;
   o+=`<path d="M${c(1)} ${y+40}V176H${c(5)}V${y+42}" class="axis" fill="none" stroke-width="1.4"/>`+U(c(5),y+40);
   o+=`<text x="${(c(1)+c(5))/2}" y="196" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Rejected<tspan class="m" font-weight="400"> · Won't Do · Duplicate · Cannot Reproduce</tspan></text>`;
-  o+=`<text x="${c(4)+w/2+g/2}" y="${y+58}" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Verified</text><text x="${c(4)+w/2+g/2}" y="${y+73}" text-anchor="middle" class="m" font-size="11.5">${q("résolution Done","resolution Done")}</text>`;
+  o+=`<text x="${c(4)+w/2+g/2}" y="${y+58}" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Verified</text><text x="${c(4)+w/2+g/2}" y="${y+73}" text-anchor="middle" class="m" font-size="12">${q("résolution Done","resolution Done")}</text>`;
   const L=[[q("À faire","To do"),"todo"],[q("En cours","In progress"),"prog"],[q("Terminé : résolution obligatoire","Done: resolution required"),"done"]];
   let lx=20; L.forEach(l=>{o+=l[1]==="todo"?`<rect x="${lx}" y="236" width="14" height="14" rx="3" class="ob"/>`:`<rect x="${lx}" y="236" width="14" height="14" rx="3" class="${l[1]==="prog"?"navy":"gold"}"/>`; o+=`<text x="${lx+22}" y="248" class="m" font-size="12">${l[0]}</text>`; lx+=l[1]==="done"?0:150;});
-  o+=`<text x="20" y="276" class="m" font-size="11.5">${q("Contrôle : statusCategory = Done AND resolution = Unresolved doit renvoyer 0","Check: statusCategory = Done AND resolution = Unresolved must return 0")}</text></svg>`;
+  o+=`<text x="20" y="276" class="m" font-size="12">${q("Contrôle : statusCategory = Done AND resolution = Unresolved doit renvoyer 0","Check: statusCategory = Done AND resolution = Unresolved must return 0")}</text></svg>`;
   return o;
 },
 riskflow(){
@@ -161,12 +162,12 @@ riskflow(){
     :`<rect x="${x(i)}" y="${y}" width="${w}" height="40" rx="4" class="${k==="prog"?"navy":"gold"}"/><text x="${c(i)}" y="${y+25}" text-anchor="middle" ${k==="prog"?'class="ond"':'fill="#152F5C"'} font-size="13" font-weight="600">${l}</text>`;
   const P=d=>`<path d="${d}" class="axis" fill="none" stroke-width="1.4"/>`;
   let o=`<svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg">`;
-  o+=`<text x="20" y="22" class="m" font-size="11" letter-spacing="1.2">${q("WORKFLOW DES RISQUES","RISK WORKFLOW")}</text>`;
+  o+=`<text x="20" y="22" class="m" font-size="12" letter-spacing="1.2">${q("WORKFLOW DES RISQUES","RISK WORKFLOW")}</text>`;
   o+=B(0,"Identified","todo")+B(1,"Monitoring","prog")+B(2,"Mitigating","prog")+B(3,"Closed","done");
   o+=P(`M${x(0)+w} ${y+20}H${x(1)-2}`)+R(x(1),y+20);
   o+=P(`M${x(1)+w} ${y+13}H${x(2)-2}`)+R(x(2),y+13)+P(`M${x(2)} ${y+27}H${x(1)+w+2}`)+Lf(x(1)+w,y+27);
   o+=P(`M${x(2)+w} ${y+20}H${x(3)-2}`)+R(x(3),y+20);
-  o+=`<text x="${(x(1)+w+x(2))/2}" y="${y-8}" text-anchor="middle" class="m" font-size="11">${q("signal d'alerte","warning signal")}</text>`;
+  o+=`<text x="${(x(1)+w+x(2))/2}" y="${y-8}" text-anchor="middle" class="m" font-size="12">${q("signal d'alerte","warning signal")}</text>`;
   o+=P(`M${c(3)} ${y}V52H${c(1)}V${y-2}`)+D(c(1),y);
   o+=`<text x="${(c(1)+c(3))/2}" y="44" text-anchor="middle" class="t" font-size="12.5" font-weight="600">Reopen<tspan class="m" font-weight="400">${q(" : la résolution est vidée",": the resolution is cleared")}</tspan></text>`;
   o+=P(`M${c(0)} ${y+40}V160H${c(3)}V${y+42}`)+U(c(3),y+40);
@@ -184,7 +185,7 @@ autoflow(){
     [q("Probabilité ou impact modifié","Probability or impact changed"),q("Type = Risk","Type = Risk"),"Risk score = P × I"],
     [q("Essais ou occurrences modifiés","Attempts or occurrences changed"),q("Bug avec au moins un essai","Bug with at least one attempt"),q("Repro rate et likelihood","Repro rate and likelihood")]];
   let o=`<svg viewBox="0 0 760 342" xmlns="http://www.w3.org/2000/svg">`;
-  H.forEach((t,i)=>o+=`<text x="${X[i]}" y="22" class="m" font-size="11" letter-spacing="1.2">${t}</text>`);
+  H.forEach((t,i)=>o+=`<text x="${X[i]}" y="22" class="m" font-size="12" letter-spacing="1.2">${t}</text>`);
   Rw.forEach((r,j)=>{const y=36+j*(h+12);
     r.forEach((t,i)=>{o+=i<2?`<rect x="${X[i]}" y="${y}" width="${w}" height="${h}" rx="4" class="ob"/><text x="${X[i]+14}" y="${y+25}" class="t" font-size="12.5">${t}</text>`
       :`<rect x="${X[i]}" y="${y}" width="${w}" height="${h}" rx="4" class="navy"/><text x="${X[i]+14}" y="${y+25}" class="ond" font-size="12.5" font-weight="600">${t}</text>`;
@@ -197,9 +198,9 @@ marche(){
   const bars=[[q("2024","2024"),2.14,"#317AC1"],[q("2029 (prévision)","2029 (forecast)"),3.72,"#94670A"]];
   const x0=190,sc=(640-x0)/4.2;
   let o=`<svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg">`;
-  o+=`<text x="${x0}" y="22" class="m" font-size="11" letter-spacing="1.2">${q("MARCHÉ AFRICAIN DU JEU VIDÉO · MILLIARDS DE DOLLARS","AFRICAN VIDEO GAME MARKET · $ BILLION")}</text>`;
+  o+=`<text x="${x0}" y="22" class="m" font-size="12" letter-spacing="1.2">${q("MARCHÉ AFRICAIN DU JEU VIDÉO · MILLIARDS DE DOLLARS","AFRICAN VIDEO GAME MARKET · $ BILLION")}</text>`;
   bars.forEach((b,i)=>{const y=44+i*66,w=b[1]*sc;
-    o+=`<text x="${x0-14}" y="${y+30}" text-anchor="end" class="t" font-size="13" font-weight="500">${b[0]}</text><rect x="${x0}" y="${y}" width="${w}" height="44" fill="${b[2]}"/><text x="${x0+w-12}" y="${y+29}" text-anchor="end" font-size="16" font-weight="600" fill="#fff">${String(b[1]).replace(".",q(",","."))} Md$</text>`;});
+    o+=`<text x="${x0-14}" y="${y+30}" text-anchor="end" class="t" font-size="13" font-weight="500">${b[0]}</text><rect x="${x0}" y="${y}" width="${w}" height="44" fill="${b[2]}"/><text x="${x0+w-12}" y="${y+29}" text-anchor="end" font-size="16" font-weight="600" fill="#fff">${q(String(b[1]).replace(".",",")+" Md$","$"+b[1]+" bn")}</text>`;});
   o+=`<path d="M${x0+2.14*sc+40} 66C${x0+2.14*sc+80} 66 ${x0+2.14*sc+80} 110 ${x0+2.14*sc+40} 110" class="ln"/><text x="${x0+2.14*sc+92}" y="94" class="g" font-size="13" font-weight="600">≈ +${q("11,6 % / an","11.6% / yr")}</text>`;
   o+=`<path d="M${x0} 186H640" class="axis"/>`;
   o+=`<text x="${x0}" y="212" class="t" font-size="12.5"><tspan font-weight="600">${q("Monde","World")}</tspan>${q(" :",":")} 272,86 → 426,02 Md$ (≈ +9,3 %${q(" / an"," / yr")})</text>`.replace("272,86 → 426,02 Md$ (≈ +9,3 %",q("272,86 → 426,02 Md$ (≈ +9,3 %","$272.86 bn → $426.02 bn (≈ +9.3%"));
@@ -231,20 +232,20 @@ planning(){
   const wk=[3,4,10,11,17,18,24,25];
   let o=`<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg">`;
   wk.forEach(d=>o+=`<rect x="${X(d)}" y="34" width="${dw}" height="196" class="m" fill-opacity=".13"/>`);
-  o+=`<rect x="${X(5)}" y="34" width="${5*dw}" height="196" fill="#B5524F" fill-opacity=".2"/><text x="${X(5)+2.5*dw}" y="26" text-anchor="middle" font-size="10.5" font-weight="500" fill="#B5524F">${q("Crise de mi-parcours","Mid-course crisis")}</text>`;
-  o+=`<rect x="${X(15)}" y="34" width="${14*dw}" height="196" fill="#2F6B4F" fill-opacity=".16"/><text x="${X(15)+7*dw}" y="26" text-anchor="middle" font-size="10.5" font-weight="500" fill="#2F6B4F">Playtests</text>`;
+  o+=`<rect x="${X(5)}" y="34" width="${5*dw}" height="196" fill="#B5524F" fill-opacity=".2"/><text x="${X(5)+2.5*dw}" y="26" text-anchor="middle" font-size="12" font-weight="500" fill="#B5524F">${q("Crise de mi-parcours","Mid-course crisis")}</text>`;
+  o+=`<rect x="${X(15)}" y="34" width="${14*dw}" height="196" fill="#2F6B4F" fill-opacity=".16"/><text x="${X(15)+7*dw}" y="26" text-anchor="middle" font-size="12" font-weight="500" fill="#2F6B4F">Playtests</text>`;
   const S=[["Sprint 1",0,3],["Sprint 2",5,11],["Sprint 3",16,8],["Sprint 4",26,3]];
   S.forEach((a,i)=>{o+=`<rect x="${X(a[1])+1}" y="52" width="${a[2]*dw-2}" height="30" class="navy"/><text x="${X(a[1])+a[2]*dw/2}" y="72" text-anchor="middle" class="ond" font-size="${a[2]<4?11:12}" font-weight="500">${a[2]<4?a[0].replace("Sprint ","S"):a[0]}</text>`;});
-  o+=`<text x="${x0}" y="104" class="m" font-size="10" letter-spacing="1.2">SPRINTS</text>`;
-  o+=`<path d="M${x0} 150H724" class="ln"/><text x="${x0}" y="132" class="m" font-size="10" letter-spacing="1.2">${q("JALONS","MILESTONES")}</text>`;
+  o+=`<text x="${x0}" y="104" class="m" font-size="12" letter-spacing="1.2">SPRINTS</text>`;
+  o+=`<path d="M${x0} 150H724" class="ln"/><text x="${x0}" y="132" class="m" font-size="12" letter-spacing="1.2">${q("JALONS","MILESTONES")}</text>`;
   const M=[[q("Intentions et","Intentions &"),q("moodboards","moodboards"),2],[q("Proof of","Proof of"),"Concept",8],["Alpha","",15],[q("Bêta","Beta"),"",22],["Build",q("final","final"),28]];
   M.forEach(m=>{const x=X(m[2])+dw/2;
     o+=`<rect x="${x-6}" y="144" width="12" height="12" transform="rotate(45 ${x} 150)" class="gold"/>`;
     const an=m[2]===28?"end":"middle",tx=m[2]===28?x+8:x;
-    o+=`<text x="${tx}" y="178" text-anchor="${an}" class="t" font-size="11.5" font-weight="500">${m[0]}</text>${m[1]?`<text x="${tx}" y="192" text-anchor="${an}" class="t" font-size="11.5" font-weight="500">${m[1]}</text>`:""}`;});
+    o+=`<text x="${tx}" y="178" text-anchor="${an}" class="t" font-size="12" font-weight="500">${m[0]}</text>${m[1]?`<text x="${tx}" y="192" text-anchor="${an}" class="t" font-size="12" font-weight="500">${m[1]}</text>`:""}`;});
   o+=`<path d="M${x0} 230H724" class="axis"/>`;
-  [[0,q("27/05","27 May")],[5,q("01/06","1 Jun")],[12,q("08/06","8 Jun")],[19,q("15/06","15 Jun")],[26,q("22/06","22 Jun")],[28,q("24/06","24 Jun")]].forEach(tk=>{const x=X(tk[0])+dw/2;o+=`<path d="M${x} 230v6" class="axis"/><text x="${x}" y="252" text-anchor="middle" class="m" font-size="10.5">${tk[1]}</text>`;});
-  o+=`<text x="${x0}" y="286" class="m" font-size="10.5">${q("Week-ends en grisé · production du 27 mai au 24 juin 2026","Weekends shaded · production from 27 May to 24 June 2026")}</text></svg>`;
+  [[0,q("27/05","27 May")],[5,q("01/06","1 Jun")],[12,q("08/06","8 Jun")],[19,q("15/06","15 Jun")],[26,q("22/06","22 Jun")],[28,q("24/06","24 Jun")]].forEach(tk=>{const x=X(tk[0])+dw/2;o+=`<path d="M${x} 230v6" class="axis"/><text x="${x}" y="252" text-anchor="middle" class="m" font-size="12">${tk[1]}</text>`;});
+  o+=`<text x="${x0}" y="286" class="m" font-size="12">${q("Week-ends en grisé · production du 27 mai au 24 juin 2026","Weekends shaded · production from 27 May to 24 June 2026")}</text></svg>`;
   return o;
 }
 };
@@ -284,10 +285,10 @@ function blocks(list){
       case "fiche": return `<div class="fiche"><h3>${esc(b.titre)}</h3><ul>${b.items.map(x=>`<li>${rich(x)}</li>`).join("")}</ul></div>`;
       case "src": return `<details class="fold"><summary class="btn ghost"><span class="f-show">${q("Voir les sources","See the sources")} (${b.items.length})</span><span class="f-hide">${q("Masquer les sources","Hide the sources")}</span></summary><ol class="src">${b.items.map(i=>`<li><a href="${esc(i[1])}" target="_blank" rel="noopener">${esc(i[0])}</a></li>`).join("")}</ol></details>`;
       case "tbl": return `<table class="tbl${b.plain?" plain":""}"><caption>${esc(b.titre)}</caption><thead><tr>${b.cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${b.rows.map(r=>typeof r==="string"?`<tr class="grp"><td colspan="${b.cols.length}">${esc(r)}</td></tr>`:`<tr>${r.map((c,i)=>`<td${(!b.plain&&i===2)?` class="${/^\+/.test(c)?"pos":"neg"}"`:""}>${b.plain&&i===0?`<b>${esc(c)}</b>`:esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
-      case "img": return `<figure${b.cls?` class="${b.cls}"`:""}>${b.src?`<div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img loading="lazy" decoding="async" src="${esc(b.src)}" alt="${esc(b.cap)}" loading="lazy">${LENS}</div>`:`<div class="ph">${t("imgToAdd")}</div>`}${b.cap?`<figcaption>${esc(b.cap)}</figcaption>`:""}</figure>`;
+      case "img": return `<figure${b.cls?` class="${b.cls}"`:""}>${b.src?`<div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img loading="lazy" decoding="async" src="${esc(b.src)}"${srcset(b.src)} alt="${esc(b.cap)}">${LENS}</div>`:`<div class="ph">${t("imgToAdd")}</div>`}${b.cap?`<figcaption>${esc(b.cap)}</figcaption>`:""}</figure>`;
       case "teams": return teamsCarousel(b.groupes);
       case "keyart": return keyart(b.items);
-      case "car": return `<figure class="car"><div class="car-track">${b.items.map(x=>`<div class="car-s"><div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img loading="lazy" decoding="async" src="${esc(x[0])}" alt="${esc(x[1])}" loading="lazy">${LENS}</div><figcaption>${esc(x[1])}</figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Précédent","Previous")}">‹</button><span class="car-cnt">1 / ${b.items.length}</span><button type="button" data-car="1" aria-label="${q("Suivant","Next")}">›</button></div></figure>`;
+      case "car": return `<figure class="car"><div class="car-track">${b.items.map(x=>`<div class="car-s"><div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img loading="lazy" decoding="async" src="${esc(x[0])}"${srcset(x[0])} alt="${esc(x[1])}">${LENS}</div><figcaption>${esc(x[1])}</figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Précédent","Previous")}">‹</button><span class="car-cnt">1 / ${b.items.length}</span><button type="button" data-car="1" aria-label="${q("Suivant","Next")}">›</button></div></figure>`;
       case "q": return `<blockquote>${esc(b.text)}${b.by?`<cite>${esc(b.by)}</cite>`:""}</blockquote>`;
       case "a": return /^https?:\/\//.test(b.url)?`<p><a class="btn ghost" href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.label)}</a></p>`:"";
       default: return "";
@@ -310,7 +311,7 @@ function recap(p){
 }
 /* Key arts des jeux en carrousel, avec le one-liner de chaque jeu sous l'image */
 function keyart(list){
-  return `<figure class="car keyart"><div class="car-track">${list.map(k=>`<div class="car-s"><div class="zf${k[3]?" portrait":""}" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img loading="lazy" decoding="async" src="${esc(k[0])}" alt="${esc(k[1])} – key art">${LENS}</div><figcaption><b>${esc(k[1])}</b><span>${esc(k[2])}</span></figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Jeu précédent","Previous game")}">‹</button><span class="car-cnt">1 / ${list.length}</span><button type="button" data-car="1" aria-label="${q("Jeu suivant","Next game")}">›</button></div></figure>`;
+  return `<figure class="car keyart"><div class="car-track">${list.map(k=>`<div class="car-s"><div class="zf${k[3]?" portrait":""}" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img loading="lazy" decoding="async" src="${esc(k[0])}"${srcset(k[0])} alt="${esc(k[1])} – key art">${LENS}</div><figcaption><b>${esc(k[1])}</b><span>${esc(k[2])}</span></figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Jeu précédent","Previous game")}">‹</button><span class="car-cnt">1 / ${list.length}</span><button type="button" data-car="1" aria-label="${q("Jeu suivant","Next game")}">›</button></div></figure>`;
 }
 function detail(sec, p, prev, next){
   const infos = Object.entries(p.infos||{}).map(([k,v])=>`<li><span>${esc(k)}</span>${esc(v)}</li>`).join("");

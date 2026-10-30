@@ -306,7 +306,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Chez Mad Max Fury Rogue, la **génération procédurale** s'est révélée bien plus complexe que prévu : la tâche, jugée très difficile, était déjà en retard à la fin du premier sprint. C'était pourtant le cœur d'un rogue-lite, et une contrainte imposée."),
               T("Pour ne pas retarder le reste de la production, j'ai décidé, avec le référent Game Design du groupe, de chercher un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Ensemble, nous avons choisi de **simuler le procédural** : plusieurs checkpoints préparés dans le level design donnaient l'illusion d'une génération aléatoire. Nos idées de procédural ont ainsi pu être présentées dans une séquence de jeu qui les mettait en avant. Le jury, composé de ces mêmes intervenants, avait validé ce changement en amont, et le projet a été **reçu favorablement**.")
-            ],[ CAROUSEL([["images/rogue-mm-ld-1.gif","Le blocking du niveau de Mad Max Fury Rogue"],["images/rogue-mm-ld-2.gif","Le niveau de Mad Max Fury Rogue en blocking, avec ses ennemis"]]) ])
+            ],[ CAROUSEL([["images/rogue-mm-ld-1.webp","Le blocking du niveau de Mad Max Fury Rogue"],["images/rogue-mm-ld-2.webp","Le niveau de Mad Max Fury Rogue en blocking, avec ses ennemis"]]) ])
           ]),
           BANDE("III","Planifier à deux niveaux",[
             LIGNE([
@@ -352,7 +352,7 @@ const PROJECTS_FR = {
               T("J'ai construit le détail des sprints avec chaque équipe et levé les blocages au fil de l'eau. Chaque équipe avait deux leads, un en Game Design et un en Game Art, qui étaient mes relais au quotidien."),
               T("Chez Vampire Hunter E-Cycle, le **shader d'outlines** a pris du retard dès le premier sprint. Il était essentiel à la direction artistique : j'ai revu le planning, et nous avons supprimé une partie des VFX prévus, comme le feu de cheminée, les braises ou les flaques d'eau, pour laisser le temps de le terminer."),
               T("Je donnais aussi mon avis quand on me le demandait : surtout sur la narration des deux projets, pour aider au worldbuilding, et pour trancher pendant les réunions des System Designers.")
-            ],[ IMG("images/rogue-vh-ld-la.gif","Une salle de Vampire Hunter E-Cycle, du blocking au level art") ])
+            ],[ IMG("images/rogue-vh-ld-la.webp","Une salle de Vampire Hunter E-Cycle, du blocking au level art") ])
           ]),
           BANDE("VI","Tester et livrer",[
             LIGNE([
@@ -469,7 +469,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
-              T("Pour vérifier que chaque rapport répond à sa question, j'ai fait vivre un premier sprint par squad, compressé à une semaine, avec un **scénario de onze bugs** écrit pour tester les workflows : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint. J'ai clôturé les sprints en avance, d'où le burndown qui chute d'un coup, puisque Jira construit ses rapports à partir des dates réelles.")
+              T("Pour vérifier que chaque rapport répond à sa question, j'ai fait vivre un premier sprint par squad, compressé à une semaine, avec un **scénario de onze bugs** écrit pour tester les workflows : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash au respawn. Tous ont été ouverts pendant le sprint, comme lors d'un vrai test : le sprint report les marque donc comme ajoutés en cours de route. J'ai clôturé les sprints en avance, d'où le burndown qui chute d'un coup, puisque Jira construit ses rapports à partir des dates réelles.")
             ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01 : objectif, burndown et tickets terminés, dont quatre bugs ajoutés en cours de route") ]),
             LIGNE([
               T("Le **dashboard du producer** suit trois choses : l'avancée du sprint, la qualité du build et les risques à venir. Son **filtre de contrôle** liste les tickets incomplets, sans squad ou terminés sans résolution, ce qui garantit la fiabilité des autres chiffres. Le dashboard a évolué avec le projet : après le premier sprint, le suivi des bugs et le registre des risques sont venus s'ajouter aux burndowns.")
@@ -501,7 +501,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-        P({ survol:{ items:["Producer","Jeu AA · 42 personnes","48 mois de production","Excel · Coda · ClickUp"] }, cat:"Gestion de production", title:"Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes
+        P({ date:"Mars 2026", survol:{ items:["Producer","Jeu AA · 42 personnes","48 mois de production","Excel · Coda · ClickUp"] }, cat:"Gestion de production", title:"Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes
         img:"images/wyrdfall-vignette.jpg",
         infos:{ "Rôle":"Producer", "Cadre":"Gestion de production · Game Sup", "Date":"Mars 2026", "Projet":"AA · 42 personnes au pic", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
         apercu:"Cet exercice de production portait sur Wyrdfall, un jeu AA fictif. Je ne présente ici que la partie gestion de production, où j'ai tenu le rôle de producer, de la composition de l'équipe jusqu'au seuil de rentabilité. Le résultat : **un budget de 9 M€ sur 48 mois**, un seuil atteint vers **451 000 ventes** et deux scénarios de ROI déclinés en trois niveaux, le tout dans un fichier Excel qui se met à jour en un clic.",
@@ -551,7 +551,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ survol:{ items:["Auteur du GDD","RPG au tour par tour","90 heures","67 pages"] }, cat:"Game Design et Narrative Design", title:"Castalie's Tears", large:true, nocover:true,
+    P({ date:"Avril 2025", survol:{ items:["Auteur du GDD","RPG au tour par tour","90 heures","67 pages"] }, cat:"Game Design et Narrative Design", title:"Castalie's Tears", large:true, nocover:true,
         desc:"Game Design Document d'un RPG au tour par tour d'inspiration mythologique : la boucle de jeu et ses systèmes, puis leur incarnation dans l'univers, le personnage et un niveau de Narrative Design.", carte:"Le Game Design Document d'un RPG mythologique au tour par tour : boucle de jeu, systèmes et leur incarnation dans le récit.",
         img:CT.thumb,
         infos:{ "Rôle":"Auteur du GDD", "Cadre":"Game Design · Game Sup", "Date":"Avril 2025", "Temps de travail":"90 h", "Livrable":"Game Design Document · 67 pages" },
@@ -598,7 +598,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ survol:{ items:["Auteur de l'étude","Analyse de marché","Recoupement des sources","30 diapositives"] }, cat:"Analyse de marché", title:"Le marché africain du jeu vidéo : le cas du Nigéria", large:true, nocover:true,
+    P({ date:"Janvier 2025", survol:{ items:["Auteur de l'étude","Analyse de marché","Recoupement des sources","30 diapositives"] }, cat:"Analyse de marché", title:"Le marché africain du jeu vidéo : le cas du Nigéria", large:true, nocover:true,
         desc:"Étude du marché du jeu vidéo en Afrique à travers le cas du Nigéria : un modèle mobile, local et affranchi du AAA occidental, ses moteurs et ses limites.", carte:"Un marché porté par le mobile et une population jeune, des studios tournés vers le public local, et des infrastructures qui freinent encore son essor.",
         img:NG.thumb,
         infos:{ "Rôle":"Auteur de l'étude", "Cadre":"Culture vidéoludique · Game Sup", "Date":"Janvier 2025 · sources vérifiées en octobre 2026", "Livrable":"Présentation PowerPoint · 30 diapositives" },
@@ -749,7 +749,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("At Mad Max Fury Rogue, **procedural generation** turned out to be far more complex than planned: the task, rated very hard, was already late by the end of the first sprint. Yet it was the core of a rogue-lite, and a required feature."),
               T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. Our procedural ideas could then be presented in a gameplay sequence that put them forward. The jury, made up of those same instructors, had approved this change beforehand, and the project was **well received**.")
-            ],[ CAROUSEL([["images/rogue-mm-ld-1.gif","The Mad Max Fury Rogue level in blocking"],["images/rogue-mm-ld-2.gif","The Mad Max Fury Rogue level in blocking, with its enemies"]]) ])
+            ],[ CAROUSEL([["images/rogue-mm-ld-1.webp","The Mad Max Fury Rogue level in blocking"],["images/rogue-mm-ld-2.webp","The Mad Max Fury Rogue level in blocking, with its enemies"]]) ])
           ]),
           BANDE("III","Planning on two levels",[
             LIGNE([
@@ -795,7 +795,7 @@ const PROJECTS_EN = {
               T("I built the detail of the sprints with each team and cleared blockers as they came up. Each team had two leads, one in Game Design and one in Game Art, who were my day-to-day relays."),
               T("At Vampire Hunter E-Cycle, the **outline shader** fell behind in the first sprint. It was essential to the art direction: I reworked the schedule, and we dropped some of the planned VFX, such as the fireplace, the embers and the puddles, to leave time to finish it."),
               T("I also gave my input when asked: mostly on the narrative of both projects, to help with worldbuilding, and to settle decisions in the System Designers' meetings.")
-            ],[ IMG("images/rogue-vh-ld-la.gif","A Vampire Hunter E-Cycle room, from blocking to level art") ])
+            ],[ IMG("images/rogue-vh-ld-la.webp","A Vampire Hunter E-Cycle room, from blocking to level art") ])
           ]),
           BANDE("VI","Testing and delivering",[
             LIGNE([
@@ -912,7 +912,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
-              T("To check that each report answers its question, I ran a first sprint for each squad, compressed to one week, with a **scenario of eleven bugs** written to test the workflows: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint. I closed the sprints early, hence the burndown that drops all at once, since Jira builds its reports from real dates.")
+              T("To check that each report answers its question, I ran a first sprint for each squad, compressed to one week, with a **scenario of eleven bugs** written to test the workflows: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash on respawn. All of them were opened during the sprint, as in a real test, so the sprint report marks them as added after it started. I closed the sprints early, hence the burndown that drops all at once, since Jira builds its reports from real dates.")
             ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report: goal, burndown and completed work items, including four bugs added mid-sprint") ]),
             LIGNE([
               T("The **producer dashboard** tracks three things: sprint progress, build quality and upcoming risks. Its **control filter** lists incomplete work items, missing a squad or done without a resolution, which keeps the other figures reliable. The dashboard evolved with the project: after the first sprint, bug tracking and the risk register were added alongside the burndowns.")
@@ -944,7 +944,7 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ survol:{ items:["Producer","AA game · 42 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", nocover:true, desc:"Production plan for a 48-month AA game: team, budget, schedule, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
+    P({ date:"March 2026", survol:{ items:["Producer","AA game · 42 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", nocover:true, desc:"Production plan for a 48-month AA game: team, budget, schedule, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
         img:PROJECTS_FR.perso[1].img,
         infos:{ "Role":"Producer", "Context":"Production management · Game Sup", "Date":"March 2026", "Project":"AA · 42 people at peak", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
         apercu:"This production exercise was about Wyrdfall, a fictional AA game. I only show the production management part here, where I acted as producer, from building the team to the break-even point. The result: **a €9M budget over 48 months**, a break-even point at around **451,000 sales** and two ROI scenarios, each in three levels, all in an Excel file that updates in one click.",
@@ -994,7 +994,7 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ survol:{ items:["Author of the GDD","Turn-based RPG","90 hours","67 pages"] }, cat:"Game Design and Narrative Design", title:"Castalie's Tears", large:true, nocover:true,
+    P({ date:"April 2025", survol:{ items:["Author of the GDD","Turn-based RPG","90 hours","67 pages"] }, cat:"Game Design and Narrative Design", title:"Castalie's Tears", large:true, nocover:true,
         desc:"Game Design Document for a mythology-inspired turn-based RPG: the core loop and its systems, then their embodiment in the universe, the character and a Narrative Design level.", carte:"The Game Design Document for a turn-based mythological RPG: core loop, systems and their embodiment in the story.",
         img:CT.thumb,
         infos:{ "Role":"Author of the GDD", "Context":"Game Design · Game Sup", "Date":"April 2025", "Workload":"90 hours", "Deliverable":"Game Design Document · 67 pages" },
@@ -1041,7 +1041,7 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ survol:{ items:["Author of the study","Market analysis","Source cross-checking","30 slides"] }, cat:"Market analysis", title:"The African Video Game Market: The Case of Nigeria", large:true, nocover:true,
+    P({ date:"January 2025", survol:{ items:["Author of the study","Market analysis","Source cross-checking","30 slides"] }, cat:"Market analysis", title:"The African Video Game Market: The Case of Nigeria", large:true, nocover:true,
         desc:"A study of the African video game market through the case of Nigeria: a mobile, local model that breaks away from Western AAA, its drivers and its limits.", carte:"A market driven by mobile and a young population, studios that speak to local audiences, and infrastructure that still holds it back.",
         img:NG.thumb,
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025 · sources checked in October 2026", "Deliverable":"PowerPoint presentation · 30 slides" },
@@ -1182,8 +1182,8 @@ const INFOS_EN = {
 };
 
 const CV_VISUAL = {
-  image: "cv/cv-apercu-v5.jpg",
-  pdf: "cv/MERLE_Thibault_CV_PROD_v5.pdf",
+  image: "cv/cv-apercu-v6.jpg",
+  pdf: "cv/MERLE_Thibault_CV_PROD_v6.pdf",
   filename: "MERLE_Thibault_CV_PROD.pdf"   // nom du fichier téléchargé
 };
 

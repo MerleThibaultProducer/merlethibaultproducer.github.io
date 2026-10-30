@@ -470,7 +470,7 @@ const PROJECTS_FR = {
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
               T("Pour vérifier que chaque rapport répond à sa question, j'ai fait vivre un premier sprint par squad, compressé à une semaine, avec un **scénario de onze bugs** écrit pour tester les workflows : un bloquant corrigé dans la journée, un doublon, un bug non reproductible, une réouverture et un crash ajouté en cours de sprint. J'ai clôturé les sprints en avance, d'où le burndown qui chute d'un coup, puisque Jira construit ses rapports à partir des dates réelles.")
-            ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01 : objectif, burndown et tickets terminés, dont deux bugs ajoutés en cours de route") ]),
+            ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01 : objectif, burndown et tickets terminés, dont quatre bugs ajoutés en cours de route") ]),
             LIGNE([
               T("Le **dashboard du producer** suit trois choses : l'avancée du sprint, la qualité du build et les risques à venir. Son **filtre de contrôle** liste les tickets incomplets, sans squad ou terminés sans résolution, ce qui garantit la fiabilité des autres chiffres. Le dashboard a évolué avec le projet : après le premier sprint, le suivi des bugs et le registre des risques sont venus s'ajouter aux burndowns.")
             ],[ CAROUSEL([["images/jira-dashboard.png","Pendant le sprint : burndowns, périmètre de la Vertical Slice et contrôles"],["images/jira-dashboard-fin.png","Après le premier sprint : contrôle à zéro, onze bugs créés et résolus, risques classés par score et matrice probabilité × impact"]]) ])
@@ -913,7 +913,7 @@ const PROJECTS_EN = {
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
               T("To check that each report answers its question, I ran a first sprint for each squad, compressed to one week, with a **scenario of eleven bugs** written to test the workflows: a blocker fixed the same day, a duplicate, a bug that cannot be reproduced, a reopened bug and a crash added mid-sprint. I closed the sprints early, hence the burndown that drops all at once, since Jira builds its reports from real dates.")
-            ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report: goal, burndown and completed work items, including two bugs added mid-sprint") ]),
+            ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report: goal, burndown and completed work items, including four bugs added mid-sprint") ]),
             LIGNE([
               T("The **producer dashboard** tracks three things: sprint progress, build quality and upcoming risks. Its **control filter** lists incomplete work items, missing a squad or done without a resolution, which keeps the other figures reliable. The dashboard evolved with the project: after the first sprint, bug tracking and the risk register were added alongside the burndowns.")
             ],[ CAROUSEL([["images/jira-dashboard.png","During the sprint: burndowns, Vertical Slice scope and checks"],["images/jira-dashboard-fin.png","After the first sprint: control filter at zero, eleven bugs created and resolved, risks ranked by score and the probability × impact matrix"]]) ])

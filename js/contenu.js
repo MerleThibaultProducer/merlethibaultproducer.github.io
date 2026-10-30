@@ -252,7 +252,7 @@ const PROJECTS_FR = {
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
               T("Chaque groupe vivait la crise à sa manière : il n'y avait donc pas de réponse unique. Pour Project GLOW, j'ai décidé, en accord avec les référents des disciplines, **d'abandonner plusieurs assets** qui sortaient du cadre ou n'étaient plus prioritaires. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
-            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de l'un des groupes") ]),
+            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de Project GLOW") ]),
             LIGNE([
               T("Si c'était à refaire, je ferais créer dès le départ **une petite scène de référence dans le moteur**, avec un prop à la qualité visée, les textures souhaitées et les intentions de lumière et de caméra.")
             ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil : du blockout au Level Art et au shader atmosphérique revus après la crise") ])
@@ -695,7 +695,7 @@ const PROJECTS_EN = {
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
               T("Each group experienced the crisis in its own way, so there was no single answer. For Project GLOW, I decided, in agreement with the discipline leads, **to cut several assets** that were off-brief or no longer a priority. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
-            ],[ IMG(PRO1.kill,"Cut tasks in one group's tracking") ]),
+            ],[ IMG(PRO1.kill,"Cut tasks in Project GLOW's tracking") ]),
             LIGNE([
               T("If I had to do it again, I would have **a small reference scene built in the engine** from the start, with a prop at the target quality, the desired textures and the lighting and camera intentions.")
             ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil: from blockout to the Level Art and atmospheric shader reworked after the crisis") ])

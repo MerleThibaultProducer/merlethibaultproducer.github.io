@@ -242,7 +242,7 @@ const PROJECTS_FR = {
               T("J'ai construit ce suivi sur Excel, à deux niveaux. Pour chaque groupe, un **macro-planning** pose les sprints et les jalons de l'école. Un **micro-planning** rattache ensuite chaque tâche à un sprint, une priorité, une difficulté et un statut : au total, **1 387 tâches** ont été suivies. Les documents de travail étaient partagés dans un PowerPoint commun sur OneDrive, et chaque groupe avait son propre espace Discord.")
             ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)") ]),
             LIGNE([
-              T("Tenir près de 1 400 statuts à jour demandait une attention de tous les instants, mais c'est ce qui rendait visibles les retards et les tâches abandonnées (kills), sprint par sprint. À la livraison, **93 % des tâches étaient terminées** : les 7 % restants correspondent à ces retards et à ces kills. Ce qui m'a manqué, et c'est la première chose que je changerais, ce sont des **livrables de fin de sprint plus précis** pour chaque spécialité : l'avancée était parfois difficile à vérifier concrètement.")
+              T("Tenir près de 1 400 statuts à jour demandait une attention de tous les instants, mais c'est ce qui rendait visibles les retards et les tâches abandonnées (kills), sprint par sprint. À la livraison, **93 % des tâches étaient terminées** : les 7 % restants correspondent à ces retards et à ces kills. Ce qui m'a manqué, ce sont des **livrables de fin de sprint plus précis** pour chaque spécialité : l'avancée était parfois difficile à vérifier concrètement.")
             ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ])
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
@@ -332,7 +332,7 @@ const PROJECTS_FR = {
               T("Il a fallu couper encore en production : **sept tâches dans chaque équipe**, sans toucher au cœur du jeu. Chez Vampire Hunter E-Cycle, toutes ont été coupées pendant le sprint 2, le plus chargé : le gestionnaire de musique, les maquettes du marchand, l'arc émotionnel du document narratif. Pour Mad Max Fury Rogue, les coupes ont touché un second ennemi, le shader de sable et des éléments de décor modulaires.")
             ],[ FICHE("Mis de côté chez Vampire Hunter E-Cycle",["Un double saut et un système de dialogue","Une salle maudite et un inventaire","Des VFX de décor : feu de cheminée, braises, flaques d'eau","42 tâches mises de côté pour les deux jeux"]) ]),
             LIGNE([
-              T("Chez Mad Max Fury Rogue, cinq des quatorze tâches concernaient le marché : il a été écarté d'un bloc, du concept à l'interface.")
+              T("Le marché représentait cinq des quatorze tâches de Mad Max Fury Rogue : il a été écarté d'un bloc, du concept à l'interface.")
             ],[ TABLEAU("La liste sacrifiable de Mad Max Fury Rogue",["Département","Tâche"],[
                 ["Tech Artist","FX lance-flammes"],
                 ["Enviro Artist","Modé lance-flammes"],
@@ -353,7 +353,7 @@ const PROJECTS_FR = {
           BANDE("V","Suivre deux équipes en même temps",[
             LIGNE([
               T("J'ai construit le détail des sprints avec chaque équipe et levé les blocages au fil de l'eau. Chaque équipe avait deux leads, un en Game Design et un en Game Art, qui étaient mes relais au quotidien."),
-              T("Chez Vampire Hunter E-Cycle, le **shader d'outlines** a pris du retard dès le premier sprint. Il était essentiel à la direction artistique : j'ai revu le planning, et nous avons supprimé une partie des VFX prévus, comme le feu de cheminée, les braises ou les flaques d'eau, pour laisser le temps de le terminer."),
+              T("Le **shader d'outlines** de Vampire Hunter E-Cycle a pris du retard dès le premier sprint. Il était essentiel à la direction artistique : j'ai revu le planning, et nous avons supprimé une partie des VFX prévus, comme le feu de cheminée, les braises ou les flaques d'eau, pour laisser le temps de le terminer."),
               T("Je donnais aussi mon avis quand on me le demandait, surtout sur la narration des deux projets pour aider au worldbuilding, et j'aidais à trancher pendant les réunions des System Designers.")
             ],[ IMG("images/rogue-vh-ld-la.webp","Une salle de Vampire Hunter E-Cycle, du blocking au level art") ])
           ]),
@@ -480,7 +480,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("VII","Automatiser les gestes répétitifs",[
             LIGNE([
-              T("Chaque automatisation suit la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. La condition protège la règle : sans elle, celle qui démarre une Story tenterait de la relancer à chaque sous-tâche.")
+              T("Toutes les automatisations suivent la même logique : **quand** un événement se produit, **seulement si** une condition est vraie, **alors** une action s'exécute. La condition protège la règle : sans elle, celle qui démarre une Story tenterait de la relancer à chaque sous-tâche.")
             ],[ SCHEMA("autoflow","Cinq règles du space, lues selon la même logique") ]),
             LIGNE([
               T("Le **journal d'audit** de chaque règle m'a servi à comprendre ce qui bloquait. Un calcul échouait parce que deux champs du site portaient le même nom : je l'ai corrigé en appelant le mien par son identifiant.")
@@ -506,7 +506,7 @@ const PROJECTS_FR = {
         P({ date:"Mars 2026", survol:{ items:["Producer","Jeu AA · 42 personnes","48 mois de production","Excel · Coda · ClickUp"] }, cat:"Gestion de production", title:"Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"Le dossier de gestion de production d'un jeu AA sur 48 mois : équipe, plannings, budget, ventes et seuil de rentabilité.", large:true,   // large:true = page en bandes
         img:"images/wyrdfall-vignette.jpg",
         infos:{ "Rôle":"Producer", "Cadre":"Gestion de production · Game Sup", "Date":"Mars 2026", "Projet":"AA · 42 personnes au pic", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
-        apercu:"Cet exercice de production portait sur Wyrdfall, un jeu AA fictif. Je ne présente ici que la partie gestion de production, où j'ai tenu le rôle de producer, de la composition de l'équipe jusqu'au seuil de rentabilité. Le résultat : **un budget de 9 M€ sur 48 mois**, un seuil atteint vers **451 000 ventes** et deux scénarios de ROI déclinés en trois niveaux, le tout dans un fichier Excel qui se met à jour en un clic.",
+        apercu:"Cet exercice de production portait sur Wyrdfall, un jeu AA fictif. Je ne présente ici que la partie gestion de production, où j'ai tenu le rôle de producer, de la composition de l'équipe jusqu'au seuil de rentabilité. J'arrive à **un budget de 9 M€ sur 48 mois**, un seuil atteint vers **451 000 ventes** et deux scénarios de ROI déclinés en trois niveaux, le tout dans un fichier Excel qui se met à jour en un clic.",
         contenu:[
           BANDE("I","Le sujet et mon rôle",[
             LIGNE([
@@ -685,7 +685,7 @@ const PROJECTS_EN = {
               T("I built this tracking in Excel, on two levels. For each group, a **macro plan** sets out the sprints and the school's milestones. A **micro plan** then links each task to a sprint, a priority, a difficulty and a status: in total, **1,387 tasks** were tracked. Working documents were shared in a common PowerPoint on OneDrive, and each group had its own Discord space.")
             ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)") ]),
             LIGNE([
-              T("Keeping nearly 1,400 statuses up to date took constant attention, but it is what made delays and cuts visible, sprint by sprint. At delivery, **93% of the tasks were done**: the remaining 7% were these delays and cuts. What I lacked, and the first thing I would change, were **more precise end-of-sprint deliverables** for each discipline: progress was sometimes hard to check concretely.")
+              T("Keeping nearly 1,400 statuses up to date took constant attention, but it is what made delays and cuts visible, sprint by sprint. At delivery, **93% of the tasks were done**: the remaining 7% were these delays and cuts. What I lacked were **more precise end-of-sprint deliverables** for each discipline: progress was sometimes hard to check concretely.")
             ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses") ])
           ]),
           BANDE("IV","Handling the art direction crisis",[
@@ -749,7 +749,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Faking procedural generation",[
             LIGNE([
-              T("At Mad Max Fury Rogue, **procedural generation** turned out to be far more complex than planned: the task, rated very hard, was already late by the end of the first sprint. Yet it was the core of a rogue-lite, and a required feature."),
+              T("In the Mad Max Fury Rogue team, **procedural generation** turned out to be far more complex than planned: the task, rated very hard, was already late by the end of the first sprint. Yet it was the core of a rogue-lite, and a required feature."),
               T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. The gameplay sequence shown to the jury still presented our procedural ideas. The jury, made up of those same instructors, had approved this change beforehand, and the project was **well received**."),
               T("Getting this agreement was a relief. My fear of needing a crunch to finish the project largely faded, and the team was freed from a very stressful issue to refocus on the parts of the game that mattered most.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.webp","The Mad Max Fury Rogue level in blocking"],["images/rogue-mm-ld-2.webp","The Mad Max Fury Rogue level in blocking, with its enemies"]]) ])
@@ -772,10 +772,10 @@ const PROJECTS_EN = {
           BANDE("IV","Preparing the cuts",[
             LIGNE([
               T("With each team, I drew up a **list of expendable tasks**, the first to go if time ran short: 28 for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue. Most of them never entered the sprints. Five found a place: the double dash, the sword, the shield and the loading screen were done, and some modular pipes were cut along the way."),
-              T("More had to be cut during production: **seven tasks in each team**, without touching the core of the game. At Vampire Hunter E-Cycle, all of them went during sprint 2, the busiest: the music manager, the merchant mockups, the emotional arc of the narrative document. For Mad Max Fury Rogue, the cuts hit a second enemy, the sand shader and some modular set pieces.")
+              T("More had to be cut during production: **seven tasks in each team**, without touching the core of the game. In the Vampire Hunter E-Cycle team, all of them went during sprint 2, the busiest: the music manager, the merchant mockups, the emotional arc of the narrative document. For Mad Max Fury Rogue, the cuts hit a second enemy, the sand shader and some modular set pieces.")
             ],[ FICHE("Set aside at Vampire Hunter E-Cycle",["A double jump and a dialogue system","A cursed room and an inventory","Set-dressing VFX: fireplace, embers, puddles","42 tasks set aside across both games"]) ]),
             LIGNE([
-              T("At Mad Max Fury Rogue, five of the fourteen tasks concerned the market: it was set aside as a whole, from concept to interface.")
+              T("The market made up five of Mad Max Fury Rogue's fourteen tasks: it was set aside as a whole, from concept to interface.")
             ],[ TABLEAU("The Mad Max Fury Rogue expendable list",["Department","Task"],[
                 ["Tech Artist","Flamethrower FX"],
                 ["Enviro Artist","Flamethrower model"],
@@ -796,13 +796,13 @@ const PROJECTS_EN = {
           BANDE("V","Tracking two teams at once",[
             LIGNE([
               T("I built the detail of the sprints with each team and cleared blockers as they came up. Each team had two leads, one in Game Design and one in Game Art, who were my day-to-day relays."),
-              T("At Vampire Hunter E-Cycle, the **outline shader** fell behind in the first sprint. It was essential to the art direction: I reworked the schedule, and we dropped some of the planned VFX, such as the fireplace, the embers and the puddles, to leave time to finish it."),
+              T("Vampire Hunter E-Cycle's **outline shader** fell behind in the first sprint. It was essential to the art direction: I reworked the schedule, and we dropped some of the planned VFX, such as the fireplace, the embers and the puddles, to leave time to finish it."),
               T("I also gave my input when asked, mostly on the narrative of both projects to help with worldbuilding, and I helped settle decisions in the System Designers' meetings.")
             ],[ IMG("images/rogue-vh-ld-la.webp","A Vampire Hunter E-Cycle room, from blocking to level art") ])
           ]),
           BANDE("VI","Testing and delivering",[
             LIGNE([
-              T("At Vampire Hunter E-Cycle, QA stayed internal: a questionnaire prepared in sprint 2, a God Mode to test the rooms and UX playtests in sprint 3. There was no time to set up playtests with outside players. At Mad Max Fury Rogue, the playtest documents were ready later, but technical problems prevented any testing."),
+              T("In the Vampire Hunter E-Cycle team, QA stayed internal: a questionnaire prepared in sprint 2, a God Mode to test the rooms and UX playtests in sprint 3. There was no time to set up playtests with outside players. In the Mad Max Fury Rogue team, the playtest documents were ready later, but technical problems prevented any testing."),
               T("Both games were playable from start to finish on jury day. The cuts we made in the rooms, such as the three Vampire Hunter E-Cycle combat rooms left without final level art, did not compromise the experience, and they let us meet the delivery deadline.")
             ],[ CAROUSEL([["images/rogue-vh-autel.jpg","Vampire Hunter E-Cycle in game"],["images/rogue-vh-ruines.jpg","Vampire Hunter E-Cycle: a ruined room"],["images/rogue-vh-galerie.jpg","Vampire Hunter E-Cycle: a castle gallery"],["images/rogue-vh-salle-rouge.jpg","Vampire Hunter E-Cycle: a castle room"],["images/rogue-mm-jeu.jpg","Mad Max Fury Rogue in game, with its interface"]]) ]),
             LIGNE([
@@ -820,7 +820,7 @@ const PROJECTS_EN = {
           BANDE("VII","What I take away",[
             LIGNE([
               T("This workshop taught me to **decide on cuts before I need them**. With a list prepared in advance, you know what to leave aside when time runs short, instead of improvising during the crunch."),
-              T("The sprint goals were shared by both teams, and only the detail of the tasks was built with each one. Looking back, that frame should have been **more flexible and revised along the way**, given each team's own delays and difficulties, such as procedural generation at Mad Max Fury Rogue."),
+              T("The sprint goals were shared by both teams, and only the detail of the tasks was built with each one. Looking back, that frame should have been **more flexible and revised along the way**, given each team's own delays and difficulties, such as procedural generation on Mad Max Fury Rogue."),
               T("I would also plan **external playtests as early as possible**, while there is still time to act on what they reveal.")
             ])
           ]),
@@ -923,7 +923,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","Automating the repetitive actions",[
             LIGNE([
-              T("Every automation follows the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. The condition protects the rule: without it, the one that starts a Story would try to restart it with every sub-task.")
+              T("All the automations follow the same logic: **when** an event happens, **only if** a condition is true, **then** an action runs. The condition protects the rule: without it, the one that starts a Story would try to restart it with every sub-task.")
             ],[ SCHEMA("autoflow","Five rules of the space, read with the same logic") ]),
             LIGNE([
               T("Each rule's **audit log** showed me what was going wrong. One calculation failed because two fields on the site had the same name: I fixed it by calling mine by its ID.")
@@ -949,7 +949,7 @@ const PROJECTS_EN = {
     P({ date:"March 2026", survol:{ items:["Producer","AA game · 42 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", nocover:true, desc:"Production plan for a 48-month AA game: team, budget, schedule, sales estimate and break-even point.", carte:"The production management file for a 48-month AA game: team, schedules, budget, sales and break-even point.", large:true,
         img:PROJECTS_FR.perso[1].img,
         infos:{ "Role":"Producer", "Context":"Production management · Game Sup", "Date":"March 2026", "Project":"AA · 42 people at peak", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
-        apercu:"This production exercise was about Wyrdfall, a fictional AA game. I only show the production management part here, where I acted as producer, from building the team to the break-even point. The result: **a €9M budget over 48 months**, a break-even point at around **451,000 sales** and two ROI scenarios, each in three levels, all in an Excel file that updates in one click.",
+        apercu:"This production exercise was about Wyrdfall, a fictional AA game. I only show the production management part here, where I acted as producer, from building the team to the break-even point. It comes to **a €9M budget over 48 months**, a break-even point at around **451,000 sales** and two ROI scenarios, each in three levels, all in an Excel file that updates in one click.",
         contenu:[
           BANDE("I","The brief and my role",[
             LIGNE([
@@ -963,8 +963,8 @@ const PROJECTS_EN = {
               T("My Excel file had to stay readable, with tabs grouped by colour and a navigation bar, but above all adaptable: **the budget recalculates in one click** when someone joins the studio, changes seniority or is assigned new software.")
             ],[ CAROUSEL([[EX1.nav,"Home page of the production file: buttons and navigation through colour-coded tabs"],[EX1.budget,"Budget overview: team, duration and budget by department"]]) ]),
             LIGNE([
-              T("Wyrdfall is a 48-month AA project, comprising 36 months of production and 12 months of live service, for a team of **42 people**, 25 of whom remain on the live phase. The total project budget comes to **€9,033,682**, of which €7,070,677 is salaries (78%), the rest being split between Software, Localisation, Utilities and Outsourcing."),
-              T("I built the team by **reasoning in production elements**, drawing on Sandfall Interactive's team for Clair Obscur: Expedition 33. An AA project calls for a lean team, hence 42 people at peak. After release, headcount drops to 25: this simulates the studio starting other projects, and a smaller production dedicated to the expansion.")
+              T("Wyrdfall is a 48-month AA project, comprising 36 months of production and 12 months of live service, for a team of **42 people**, 25 of whom remain on the live phase. The total project budget comes to **€9,033,682**, of which €7,070,677 is salaries (78%), the rest being split between software, localisation, running costs and outsourcing."),
+              T("I built the team **one production element at a time**, drawing on Sandfall Interactive's team for Clair Obscur: Expedition 33. An AA project calls for a lean team, hence 42 people at peak. After release, headcount drops to 25: this simulates the studio starting other projects, and a smaller production dedicated to the expansion.")
             ],[ CHIFFRES([["€9,033,682","Total Budget"],["42","People on the team"],["48 months","36 production · 12 live"],["78%","Share of salaries"]]) ])
           ]),
           BANDE("III","The Market Analysis and the break-even point",[

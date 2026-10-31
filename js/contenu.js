@@ -338,7 +338,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("IV","Suivre deux équipes en même temps",[
             LIGNE([
-              T("J'ai construit le détail des sprints avec chaque équipe et levé les blocages au fil de l'eau. Chaque équipe avait deux référents, un en Game Design et un en Game Art, qui étaient mes relais au quotidien."),
+              T("J'ai construit le détail des sprints avec chaque équipe. Leurs deux référents, un en Game Design et un en Game Art, animaient les **dailies** de leur groupe. Je changeais de groupe un jour sur deux pour partager équitablement mon temps et mon attention, et les référents me faisaient ensuite un compte rendu."),
+              T("Entre ces points, je passais régulièrement dans les salles des deux équipes pour répondre directement à leurs questions et lever les blocages au fil de l'eau. Des **revues de sprint** faisaient le point avec chaque équipe."),
               T("Le **shader d'outlines** de Vampire Hunter E-Cycle a pris du retard dès le premier sprint. Il était essentiel à la direction artistique : j'ai revu le planning, et nous avons sacrifié des VFX de la liste, comme le feu de cheminée, les braises ou les flaques d'eau, pour laisser le temps de le terminer."),
               T("Je donnais aussi mon avis quand on me le demandait, surtout sur la narration des deux projets pour aider au worldbuilding, et j'aidais à trancher pendant les réunions des System Designers.")
             ],[ IMG("images/rogue-vh-ld-la.webp","Une salle de Vampire Hunter E-Cycle, du blocking au level art") ])
@@ -774,7 +775,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("IV","Tracking two teams at once",[
             LIGNE([
-              T("I built the detail of the sprints with each team and cleared blockers as they came up. Each team had two leads, one in Game Design and one in Game Art, who were my day-to-day relays."),
+              T("I built the sprint details with each team. Their two leads, one in Game Design and one in Game Art, ran their group's **dailies**. I switched groups every other day to share my time and attention evenly, and the leads then reported back to me."),
+              T("In between, I regularly went to both teams' rooms to answer their questions directly and clear blockers as they came up. **Sprint reviews** took stock with each team."),
               T("Vampire Hunter E-Cycle's **outline shader** fell behind in the first sprint. It was essential to the art direction: I reworked the schedule, and we sacrificed VFX from the list, such as the fireplace, the embers and the puddles, to leave time to finish it."),
               T("I also gave my input when asked, mostly on the narrative of both projects to help with worldbuilding, and I helped settle decisions in the System Designers' meetings.")
             ],[ IMG("images/rogue-vh-ld-la.webp","A Vampire Hunter E-Cycle room, from blocking to level art") ])

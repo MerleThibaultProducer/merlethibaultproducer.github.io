@@ -55,12 +55,12 @@ function home(){
     </div>
   </section>${homeFeat()}`;
 }
-/* Encadré « Les deux projets dont je suis le plus fier » : les projets marqués une:true dans contenu.js */
+/* Encadré « Derniers projets » : les projets marqués une:true dans contenu.js */
 function homeFeat(){
   const items = Object.entries(PROJECTS).flatMap(([k,l]) => l.filter(p => p.une && !p.wip).map(p => [k,p]));
   if(!items.length) return "";
   return `<section class="home-feat" aria-labelledby="feat-h">
-    <h2 id="feat-h">${q("Les deux projets dont je suis le plus fier","The two projects I'm proudest of")}</h2>
+    <h2 id="feat-h">${q("Derniers projets","Latest projects")}</h2>
     <div class="feat-row">${items.map(([k,p]) => {
       const m = p.title.match(/^(.+?)\s+–\s+(\S.*\d{4})$/);
       const kick = k==="pro" ? q("Projet professionnel","Professional project")+(m?` · ${m[2]}`:"") : q("Projet personnel","Personal project")+(p.date||p.cat?` · ${p.date||p.cat}`:"");

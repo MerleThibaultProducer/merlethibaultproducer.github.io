@@ -326,21 +326,14 @@ const PROJECTS_FR = {
             ],[ FICHE("Mis de côté chez Vampire Hunter E-Cycle",["Un double saut et un système de dialogue","Une salle maudite et un inventaire","Des VFX de décor : feu de cheminée, braises, flaques d'eau","42 tâches mises de côté pour les deux jeux"]) ]),
             LIGNE([
               T("Le marché représentait cinq des quatorze tâches de Mad Max Fury Rogue : il a été écarté d'un bloc, du concept à l'interface.")
-            ],[ TABLEAU("La liste sacrifiable de Mad Max Fury Rogue",["Département","Tâche"],[
-                ["Tech Artist","FX lance-flammes"],
-                ["Enviro Artist","Modé lance-flammes"],
-                ["Concept Artist","Concept ennemi lance-flammes"],
-                ["Enviro Artist","Trim tuyaux"],
-                ["Enviro Artist","Tuyaux modulaires"],
-                ["Concept Artist","Concept marché"],
-                ["Enviro Artist","Marché modulaire"],
-                ["System Design","Système du marché"],
-                ["Tech","Intégration du marché"],
-                ["Concept Artist","UI du marché"],
-                ["Concept Artist","Écran de chargement"],
-                ["Tech","Grenade"],
-                ["Enviro Artist","Variation d'arme au corps à corps"],
-                ["Tech","Ramasser un bâton au sol"]
+            ],[ TABLEAU("La liste sacrifiable de Mad Max Fury Rogue : 14 tâches",["Élément","Tâches (département)"],[
+                ["Lance-flammes","FX (Tech Artist), modélisation (Enviro Artist), concept de l'ennemi (Concept Artist)"],
+                ["Tuyaux","Trim et tuyaux modulaires (Enviro Artist)"],
+                ["Marché","Concept et UI (Concept Artist), décor modulaire (Enviro Artist), système (System Design), intégration (Tech)"],
+                ["Écran de chargement","Concept Artist"],
+                ["Grenade","Tech"],
+                ["Variation d'arme au corps à corps","Enviro Artist"],
+                ["Ramasser un bâton au sol","Tech"]
               ], true) ])
           ]),
           BANDE("IV","Suivre deux équipes en même temps",[
@@ -769,21 +762,14 @@ const PROJECTS_EN = {
             ],[ FICHE("Set aside at Vampire Hunter E-Cycle",["A double jump and a dialogue system","A cursed room and an inventory","Set-dressing VFX: fireplace, embers, puddles","42 tasks set aside across both games"]) ]),
             LIGNE([
               T("The market made up five of Mad Max Fury Rogue's fourteen tasks: it was set aside as a whole, from concept to interface.")
-            ],[ TABLEAU("The Mad Max Fury Rogue expendable list",["Department","Task"],[
-                ["Tech Artist","Flamethrower FX"],
-                ["Enviro Artist","Flamethrower model"],
-                ["Concept Artist","Flamethrower enemy concept"],
-                ["Enviro Artist","Pipe trim"],
-                ["Enviro Artist","Modular pipes"],
-                ["Concept Artist","Market concept"],
-                ["Enviro Artist","Modular market"],
-                ["System Design","Market system"],
-                ["Tech","Market implementation"],
-                ["Concept Artist","Market UI"],
-                ["Concept Artist","Loading screen"],
-                ["Tech","Grenade"],
-                ["Enviro Artist","Melee weapon variation"],
-                ["Tech","Pick up a stick from the ground"]
+            ],[ TABLEAU("The Mad Max Fury Rogue expendable list: 14 tasks",["Element","Tasks (department)"],[
+                ["Flamethrower","FX (Tech Artist), model (Enviro Artist), enemy concept (Concept Artist)"],
+                ["Pipes","Trim and modular pipes (Enviro Artist)"],
+                ["Market","Concept and UI (Concept Artist), modular set (Enviro Artist), system (System Design), implementation (Tech)"],
+                ["Loading screen","Concept Artist"],
+                ["Grenade","Tech"],
+                ["Melee weapon variation","Enviro Artist"],
+                ["Picking up a stick from the ground","Tech"]
               ], true) ])
           ]),
           BANDE("IV","Tracking two teams at once",[

@@ -289,7 +289,7 @@ const PROJECTS_FR = {
           ])
         ] }),
     P({ title:"Workshop Rogue-lite – Février 2026", large:true, nocover:true,
-        desc:"Quinze jours pour livrer deux rogue-lites jouables sous Unity, chacun d'après une licence de film d'animation.",
+        desc:"Quinze jours pour livrer deux rogue-lites jouables sous Unity, chacun d'après une licence de film.",
         carte:"Deux rogue-lites livrés sous Unity en quinze jours, un planning tenu à deux niveaux et des coupes préparées avant les premiers retards.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026", "Outils":"Excel · PowerPoint · Miro · Discord" },
@@ -298,7 +298,7 @@ const PROJECTS_FR = {
           BANDE("I","Le cadre du projet",[
             LIGNE([
               T("Le cahier des charges était dense pour quinze jours : une boucle complète « run, mort, amélioration », un HUB où améliorer son personnage, au moins cinq salles de combat et trois salles iconiques assemblées procéduralement, une économie de monnaies, un boss et un combat avec esquive, combo et capacité. S'y ajoutaient les menus, l'écran de score, les splashscreens et toute la documentation : High Concept, Level Design, narration, direction artistique et gestion de production.")
-            ],[ FICHE("Les contraintes",["Deux jeux à produire en même temps","Cinq jalons en quinze jours : Intentions, Proof of Concept, Alpha, Bêta, Gold","Une licence de film d'animation imposée à chaque équipe","Le conseil de l'école : ne pas voir trop grand"]) ]),
+            ],[ FICHE("Les contraintes",["Deux jeux à produire en même temps","Cinq jalons en quinze jours : Intentions, Proof of Concept, Alpha, Bêta, Gold","Une licence de film imposée à chaque équipe : Vampire Hunter D: Bloodlust et Mad Max: Fury Road","Le conseil de l'école : ne pas voir trop grand"]) ]),
             LIGNE([ KEYART([
                       ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","Le Groupe 3 a reçu Vampire Hunter D: Bloodlust et en a fait un rogue-lite gothique, dans les salles d'un château."],
                       ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","Le Groupe 4 a reçu Mad Max: Fury Road et en a fait un rogue-lite post-apocalyptique, entre désert et cavernes."]
@@ -732,7 +732,7 @@ const PROJECTS_EN = {
           ])
         ] }),
     P({ title:"Rogue-lite Workshop – February 2026", large:true, nocover:true,
-        desc:"Fifteen days to deliver two playable rogue-lites in Unity, each based on an animated film licence.",
+        desc:"Fifteen days to deliver two playable rogue-lites in Unity, each based on a film licence.",
         carte:"Two rogue-lites shipped in Unity in fifteen days, a schedule run on two levels and cuts prepared before the first delays.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026", "Tools":"Excel · PowerPoint · Miro · Discord" },
@@ -741,7 +741,7 @@ const PROJECTS_EN = {
           BANDE("I","The project framework",[
             LIGNE([
               T("The brief was dense for fifteen days: a full \"run, death, upgrade\" loop, a HUB to upgrade your character, at least five combat rooms and three iconic rooms assembled procedurally, a currency economy, a boss and combat with a dash, a combo and an ability. On top of that came the menus, the score screen, the splash screens and all the documentation: High Concept, Level Design, narrative, art direction and production management.")
-            ],[ FICHE("Constraints",["Two games to produce at the same time","Five milestones in fifteen days: Intentions, Proof of Concept, Alpha, Beta, Gold","An animated film licence assigned to each team","The school's advice: don't think too big"]) ]),
+            ],[ FICHE("Constraints",["Two games to produce at the same time","Five milestones in fifteen days: Intentions, Proof of Concept, Alpha, Beta, Gold","A film licence assigned to each team: Vampire Hunter D: Bloodlust and Mad Max: Fury Road","The school's advice: don't think too big"]) ]),
             LIGNE([ KEYART([
                       ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","Group 3 was given Vampire Hunter D: Bloodlust and turned it into a gothic rogue-lite set in the rooms of a castle."],
                       ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","Group 4 was given Mad Max: Fury Road and turned it into a post-apocalyptic rogue-lite, between desert and caves."]

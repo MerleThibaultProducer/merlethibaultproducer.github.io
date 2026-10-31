@@ -292,7 +292,7 @@ const PROJECTS_FR = {
         desc:"Quinze jours pour livrer deux rogue-lites jouables sous Unity, chacun d'après une licence de film.",
         carte:"Deux rogue-lites livrés sous Unity en quinze jours, un planning tenu à deux niveaux et des coupes préparées avant les premiers retards.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
-        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026", "Outils":"Excel · PowerPoint · Miro · Discord" },
+        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026 (15 jours ouvrés)", "Outils":"Excel · PowerPoint · Miro · Discord" },
         apercu:"Pour ce workshop de Game Sup, deux équipes avaient quinze jours pour livrer chacune un **rogue-lite en 2,5D sous Unity**, d'après une licence imposée : *Vampire Hunter D: Bloodlust* pour l'une, *Mad Max: Fury Road* pour l'autre. J'étais le producer des deux. J'ai tenu un **planning commun** calé sur les jalons de l'école et un suivi quotidien des tâches propre à chaque équipe. Quand la génération procédurale a résisté, nous l'avons simulée pour tenir la date. Vampire Hunter E-Cycle et Mad Max Fury Rogue ont été livrés au jury **jouables de bout en bout**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
@@ -729,7 +729,7 @@ const PROJECTS_EN = {
         desc:"Fifteen days to deliver two playable rogue-lites in Unity, each based on a film licence.",
         carte:"Two rogue-lites shipped in Unity in fifteen days, a schedule run on two levels and cuts prepared before the first delays.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, img:"images/rogue-thumb.jpg",
-        infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026", "Tools":"Excel · PowerPoint · Miro · Discord" },
+        infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026 (15 working days)", "Tools":"Excel · PowerPoint · Miro · Discord" },
         apercu:"For this Game Sup workshop, two teams had fifteen days to each deliver a **2.5D rogue-lite in Unity**, based on an assigned licence: *Vampire Hunter D: Bloodlust* for one, *Mad Max: Fury Road* for the other. I was the producer for both. I kept a **shared schedule** aligned with the school's milestones and a daily task tracker for each team. When procedural generation resisted, we faked it to hold the deadline. Vampire Hunter E-Cycle and Mad Max Fury Rogue were delivered to the jury **playable from start to finish**.",
         contenu:[
           BANDE("I","The project framework",[
@@ -750,7 +750,7 @@ const PROJECTS_EN = {
             ]),
             LIGNE([
               T("Under this shared calendar, each team had its own **backlog** in Excel: 336 tasks for Vampire Hunter E-Cycle, 237 for Mad Max Fury Rogue. Each task had an owner, a sprint, dates, a difficulty, a priority and a status, and each sprint had its own tab."),
-              T("The workload was front-loaded: at Vampire Hunter E-Cycle, nearly a quarter of the tasks started on 3 and 4 February. Environment art was the heaviest area in both productions.")
+              T("The workload was front-loaded: in the Vampire Hunter E-Cycle team, nearly a quarter of the tasks started on 3 and 4 February. Environment art was the heaviest area in both productions.")
             ]),
             LIGNE([
               IMG("images/rogue-mm-backlog.png","The Mad Max Fury Rogue backlog: tasks, sprints, difficulties, priorities and statuses")
@@ -807,7 +807,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","What I take away",[
             LIGNE([
-              T("This workshop taught me to **decide on cuts before I need them**. With a list prepared in advance, you know what to leave aside when time runs short, instead of improvising during the crunch."),
+              T("This workshop taught me to **decide on cuts before I need them**. With a list prepared in advance, you know what to leave aside when time runs short, instead of improvising in the final rush."),
               T("The sprint goals were shared by both teams, and only the detail of the tasks was built with each one. Looking back, that frame should have been **more flexible and revised along the way**, given each team's own delays and difficulties, such as procedural generation on Mad Max Fury Rogue."),
               T("I would also plan **external playtests as early as possible**, while there is still time to act on what they reveal.")
             ])

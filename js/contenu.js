@@ -307,7 +307,7 @@ const PROJECTS_FR = {
           BANDE("II","Planifier à deux niveaux",[
             LIGNE([
               T("Pour tenir deux productions de front, les deux équipes partageaient le même calendrier : **trois sprints d'une semaine**, calés sur les jalons de l'école. Le premier posait le blocking et les assets essentiels. Le deuxième poussait la modélisation et l'environnement vers le rendu final et terminait le système d'attaque, sans créer de nouveaux assets. Le dernier était réservé à l'équilibrage et au polish.")
-            ],[ CHIFFRES([["573","tâches suivies"],["94 % et 92 %","tâches terminées"],["3","sprints d'une semaine"],["5","jalons en quinze jours"]]) ]),
+            ],[ CHIFFRES([["573","tâches suivies"],["94 % et 92 %","tâches terminées (Vampire Hunter, Mad Max)"],["3","sprints d'une semaine"],["5","jalons en quinze jours"]]) ]),
             LIGNE([
               IMG("images/rogue-planning.png","Le planning de production : phases, jalons de l'école et sprints d'une semaine")
             ]),
@@ -323,7 +323,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Avec chaque équipe, j'ai dressé une **liste de tâches sacrifiables**, les premières à couper si le temps manquait : 28 pour Vampire Hunter E-Cycle, 14 pour Mad Max Fury Rogue. La plupart ne sont jamais entrées dans les sprints. Cinq y ont trouvé une place : le double dash, l'épée, le bouclier et l'écran de chargement ont été réalisés, et des tuyaux modulaires ont été coupés en route."),
               T("Il a fallu couper encore en production : **sept tâches dans chaque équipe**, sans toucher au cœur du jeu. Chez Vampire Hunter E-Cycle, toutes ont été coupées pendant le sprint 2, le plus chargé : le gestionnaire de musique, les maquettes du marchand, l'arc émotionnel du document narratif. Pour Mad Max Fury Rogue, les coupes ont touché un second ennemi, le shader de sable et des éléments de décor modulaires.")
-            ],[ FICHE("Mis de côté chez Vampire Hunter E-Cycle",["Un double saut et un système de dialogue","Une salle maudite et un inventaire","Des VFX de décor : feu de cheminée, braises, flaques d'eau","42 tâches mises de côté pour les deux jeux"]) ]),
+            ],[ FICHE("Mis de côté chez Vampire Hunter E-Cycle",["Un double saut et un système de dialogue","Une salle maudite et un inventaire","Des VFX de décor : feu de cheminée, braises, flaques d'eau","42 tâches sacrifiables pour les deux jeux"]) ]),
             LIGNE([
               T("Le marché représentait cinq des quatorze tâches de Mad Max Fury Rogue : il a été écarté d'un bloc, du concept à l'interface.")
             ],[ TABLEAU("La liste sacrifiable de Mad Max Fury Rogue : 14 tâches",["Élément","Tâches (département)"],[
@@ -338,8 +338,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("IV","Suivre deux équipes en même temps",[
             LIGNE([
-              T("J'ai construit le détail des sprints avec chaque équipe et levé les blocages au fil de l'eau. Chaque équipe avait deux leads, un en Game Design et un en Game Art, qui étaient mes relais au quotidien."),
-              T("Le **shader d'outlines** de Vampire Hunter E-Cycle a pris du retard dès le premier sprint. Il était essentiel à la direction artistique : j'ai revu le planning, et nous avons supprimé une partie des VFX prévus, comme le feu de cheminée, les braises ou les flaques d'eau, pour laisser le temps de le terminer."),
+              T("J'ai construit le détail des sprints avec chaque équipe et levé les blocages au fil de l'eau. Chaque équipe avait deux référents, un en Game Design et un en Game Art, qui étaient mes relais au quotidien."),
+              T("Le **shader d'outlines** de Vampire Hunter E-Cycle a pris du retard dès le premier sprint. Il était essentiel à la direction artistique : j'ai revu le planning, et nous avons sacrifié des VFX de la liste, comme le feu de cheminée, les braises ou les flaques d'eau, pour laisser le temps de le terminer."),
               T("Je donnais aussi mon avis quand on me le demandait, surtout sur la narration des deux projets pour aider au worldbuilding, et j'aidais à trancher pendant les réunions des System Designers.")
             ],[ IMG("images/rogue-vh-ld-la.webp","Une salle de Vampire Hunter E-Cycle, du blocking au level art") ])
           ]),
@@ -743,7 +743,7 @@ const PROJECTS_EN = {
           BANDE("II","Planning on two levels",[
             LIGNE([
               T("To run two productions side by side, both teams shared the same calendar: **three one-week sprints**, aligned with the school's milestones. The first set up the blocking and the essential assets. The second pushed modelling and environments towards the final look and finished the attack system, without creating new assets. The last was kept for balancing and polish.")
-            ],[ CHIFFRES([["573","tasks tracked"],["94% and 92%","tasks completed"],["3","one-week sprints"],["5","milestones in fifteen days"]]) ]),
+            ],[ CHIFFRES([["573","tasks tracked"],["94% and 92%","tasks completed (Vampire Hunter, Mad Max)"],["3","one-week sprints"],["5","milestones in fifteen days"]]) ]),
             LIGNE([
               IMG("images/rogue-planning.png","The production schedule: phases, school milestones and one-week sprints")
             ]),
@@ -759,7 +759,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("With each team, I drew up a **list of expendable tasks**, the first to go if time ran short: 28 for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue. Most of them never entered the sprints. Five found a place: the double dash, the sword, the shield and the loading screen were done, and some modular pipes were cut along the way."),
               T("More had to be cut during production: **seven tasks in each team**, without touching the core of the game. In the Vampire Hunter E-Cycle team, all of them went during sprint 2, the busiest: the music manager, the merchant mockups, the emotional arc of the narrative document. For Mad Max Fury Rogue, the cuts hit a second enemy, the sand shader and some modular set pieces.")
-            ],[ FICHE("Set aside at Vampire Hunter E-Cycle",["A double jump and a dialogue system","A cursed room and an inventory","Set-dressing VFX: fireplace, embers, puddles","42 tasks set aside across both games"]) ]),
+            ],[ FICHE("Set aside at Vampire Hunter E-Cycle",["A double jump and a dialogue system","A cursed room and an inventory","Set-dressing VFX: fireplace, embers, puddles","42 expendable tasks across both games"]) ]),
             LIGNE([
               T("The market made up five of Mad Max Fury Rogue's fourteen tasks: it was set aside as a whole, from concept to interface.")
             ],[ TABLEAU("The Mad Max Fury Rogue expendable list: 14 tasks",["Element","Tasks (department)"],[
@@ -775,7 +775,7 @@ const PROJECTS_EN = {
           BANDE("IV","Tracking two teams at once",[
             LIGNE([
               T("I built the detail of the sprints with each team and cleared blockers as they came up. Each team had two leads, one in Game Design and one in Game Art, who were my day-to-day relays."),
-              T("Vampire Hunter E-Cycle's **outline shader** fell behind in the first sprint. It was essential to the art direction: I reworked the schedule, and we dropped some of the planned VFX, such as the fireplace, the embers and the puddles, to leave time to finish it."),
+              T("Vampire Hunter E-Cycle's **outline shader** fell behind in the first sprint. It was essential to the art direction: I reworked the schedule, and we sacrificed VFX from the list, such as the fireplace, the embers and the puddles, to leave time to finish it."),
               T("I also gave my input when asked, mostly on the narrative of both projects to help with worldbuilding, and I helped settle decisions in the System Designers' meetings.")
             ],[ IMG("images/rogue-vh-ld-la.webp","A Vampire Hunter E-Cycle room, from blocking to level art") ])
           ]),

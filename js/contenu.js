@@ -216,7 +216,7 @@ const PROJECTS_FR = {
         img:PRO1.thumb, une:true,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
-        apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines, et j'en étais le producer, en lien avec les intervenants qui jouaient le rôle d'éditeurs. J'ai adapté une **méthode Agile** aux jalons Waterfall de l'école, mis en place un suivi Excel pour chaque groupe et fait le lien entre l'encadrement et les équipes au quotidien. Après une crise de direction artistique en deuxième semaine, j'ai organisé deux sessions de playtest communes aux quatre équipes, puis redéfini les priorités avec chacune. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
+        apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines. J'en étais le producer, face aux intervenants qui jouaient le rôle d'éditeurs. J'ai adapté une **méthode Agile** aux jalons Waterfall de l'école, mis en place un suivi Excel pour chaque groupe et fait le lien entre l'encadrement et les équipes au quotidien. Après une crise de direction artistique en deuxième semaine, j'ai organisé deux sessions de playtest communes aux quatre équipes, puis redéfini les priorités avec chacune. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
@@ -261,9 +261,9 @@ const PROJECTS_FR = {
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
               T("Après la crise, il ne restait que deux semaines. Il fallait décider où mettre l'effort, et accepter d'abandonner certaines choses, sans faire peser la fin du projet sur les équipes. J'ai donc organisé **deux sessions de playtest communes aux quatre groupes**, calées sur le planning des autres promotions pour que des joueurs extérieurs puissent venir."),
-              T("Pour que les retours soient exploitables, chaque équipe a préparé **un questionnaire structuré**. Celui de « Le Castor et l'Écureuil », par exemple, couvrait les personnages, la cohérence du design et la prise en main, avec des réponses notées de 1 à 7, et a recueilli **22 réponses**."),
+              T("Pour que les retours soient exploitables, chaque équipe a préparé **un questionnaire structuré**. Celui du Castor et l'Écureuil, par exemple, couvrait les personnages, la cohérence du design et la prise en main, avec des réponses notées de 1 à 7, et a recueilli **22 réponses**."),
               T("Les retours ont été nombreux, et souvent critiques, à un moment où le moral était déjà entamé. Avec chaque équipe, nous les avons triés pour garder les points les plus importants, puis **j'ai redéfini les priorités et réorganisé les plannings**. Voir des inconnus jouer aux projets a aussi redonné de l'énergie aux équipes : malgré les critiques, les jeux plaisaient.")
-            ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest de « Le Castor et l'Écureuil » : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
+            ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest du Castor et l'Écureuil : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
           ]),
           BANDE("VI","Les quatre jeux livrés",[
             LIGNE([
@@ -271,14 +271,14 @@ const PROJECTS_FR = {
               T("Les retours du jury ont été un vrai soulagement : il a souligné la qualité des quatre projets, et avec elle le travail des équipes.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil : le menu principal et la forêt en jeu"],["images/fda-insight-1.jpg","Insight : la bibliothèque du manoir"],["images/fda-insight-2.jpg","Insight : la grande salle et ses lustres"],["images/fda-insight-3.jpg","Insight : la lunette astronomique de la mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead : la ville envahie par les plantes"],["images/fda-flowering-2.jpg","The Flowering Dead : un passage sous les arcades"],["images/fda-flowering-3.jpg","The Flowering Dead : le beffroi et la tour"],["images/fda-glow-jeu.jpg","Project GLOW en jeu : une rue barrée par une grille"]]) ]),
             LIGNE([
-              T("Derrière ces images, il y a les tâches suivies dans les micro-plannings. Pour Project GLOW, on voit la ville passer du plan du niveau au blockout, puis au Level Art et à la lumière.")
+              T("Pour Project GLOW, on voit la ville passer du plan du niveau au blockout, puis au Level Art et à la lumière, au rythme des tâches suivies dans le micro-planning.")
             ],[ CAROUSEL([["images/fda-glow-plan.webp","Project GLOW : du plan du niveau à la ville finale, vue du dessus"],["images/fda-glow-editeur.jpg","Project GLOW : la ville dans l'éditeur"]]) ])
           ]),
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
               T("C'était la première fois que l'on me confiait la production d'une promotion entière. La crise de mi-parcours m'a appris à mettre de côté ce que je croyais savoir pour **écouter les besoins propres à chaque équipe**. J'ai aussi appris à **déléguer**, et à poser dès le départ des canaux de communication clairs, pour qu'aucune équipe ne se sente livrée à elle-même."),
               T("Sur un prochain projet de cette taille, je ferais d'abord créer **une scène de référence dans le moteur**, pour que chaque groupe parte d'une direction artistique concrète, visible à l'écran dès la première semaine."),
-              T("Je rendrais aussi l'avancée plus facile à suivre. Des **dailies sur le modèle du Daily Scrum**, courts et centrés sur l'objectif du sprint, et des **livrables de fin de sprint précis pour chaque spécialité** rendraient le travail vérifiable, pour les équipes comme pour moi.")
+              T("Je rendrais aussi l'avancée plus facile à vérifier, pour les équipes comme pour moi, avec des **dailies sur le modèle du Daily Scrum**, courts et centrés sur l'objectif du sprint, et des **livrables de fin de sprint précis pour chaque spécialité**.")
             ])
           ]),
           BANDE("VIII","Les équipes",[
@@ -307,7 +307,7 @@ const PROJECTS_FR = {
           BANDE("II","Simuler la génération procédurale",[
             LIGNE([
               T("Chez Mad Max Fury Rogue, la **génération procédurale** s'est révélée bien plus complexe que prévu : la tâche, jugée très difficile, était déjà en retard à la fin du premier sprint. C'était pourtant le cœur d'un rogue-lite, et une contrainte imposée."),
-              T("Pour ne pas retarder le reste de la production, j'ai décidé, avec le référent Game Design du groupe, de chercher un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Ensemble, nous avons choisi de **simuler le procédural** : plusieurs checkpoints préparés dans le level design donnaient l'illusion d'une génération aléatoire. Nos idées de procédural ont ainsi pu être présentées dans une séquence de jeu qui les mettait en avant. Le jury, composé de ces mêmes intervenants, avait validé ce changement en amont, et le projet a été **reçu favorablement**."),
+              T("Pour ne pas retarder le reste de la production, j'ai décidé, avec le référent Game Design du groupe, de chercher un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Ensemble, nous avons choisi de **simuler le procédural** : plusieurs checkpoints préparés dans le level design donnaient l'illusion d'une génération aléatoire. La séquence de jeu présentée au jury montrait ainsi nos idées de procédural. Le jury, composé de ces mêmes intervenants, avait validé ce changement en amont, et le projet a été **reçu favorablement**."),
               T("Obtenir cet accord a été un soulagement. Ma crainte de devoir passer par du crunch pour finir le projet s'est largement éloignée, et l'équipe s'est libérée d'un point très stressant pour se reconcentrer sur les aspects essentiels du jeu.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.webp","Le blocking du niveau de Mad Max Fury Rogue"],["images/rogue-mm-ld-2.webp","Le niveau de Mad Max Fury Rogue en blocking, avec ses ennemis"]]) ])
           ]),
@@ -329,7 +329,7 @@ const PROJECTS_FR = {
           BANDE("IV","Préparer les coupes",[
             LIGNE([
               T("Avec chaque équipe, j'ai dressé une **liste de tâches sacrifiables**, les premières à couper si le temps manquait : 28 pour Vampire Hunter E-Cycle, 14 pour Mad Max Fury Rogue. La plupart ne sont jamais entrées dans les sprints. Cinq y ont trouvé une place : le double dash, l'épée, le bouclier et l'écran de chargement ont été réalisés, et des tuyaux modulaires ont été coupés en route."),
-              T("Il a fallu couper encore en production : **sept tâches dans chaque équipe**, sans toucher au cœur du jeu. Pour Vampire Hunter E-Cycle, toutes l'ont été pendant le sprint 2, le plus chargé : le gestionnaire de musique, les maquettes du marchand, l'arc émotionnel du document narratif. Pour Mad Max Fury Rogue, les coupes ont touché un second ennemi, le shader de sable et des éléments de décor modulaires.")
+              T("Il a fallu couper encore en production : **sept tâches dans chaque équipe**, sans toucher au cœur du jeu. Chez Vampire Hunter E-Cycle, toutes ont été coupées pendant le sprint 2, le plus chargé : le gestionnaire de musique, les maquettes du marchand, l'arc émotionnel du document narratif. Pour Mad Max Fury Rogue, les coupes ont touché un second ennemi, le shader de sable et des éléments de décor modulaires.")
             ],[ FICHE("Mis de côté chez Vampire Hunter E-Cycle",["Un double saut et un système de dialogue","Une salle maudite et un inventaire","Des VFX de décor : feu de cheminée, braises, flaques d'eau","42 tâches mises de côté pour les deux jeux"]) ]),
             LIGNE([
               T("Chez Mad Max Fury Rogue, cinq des quatorze tâches concernaient le marché : il a été écarté d'un bloc, du concept à l'interface.")
@@ -354,13 +354,13 @@ const PROJECTS_FR = {
             LIGNE([
               T("J'ai construit le détail des sprints avec chaque équipe et levé les blocages au fil de l'eau. Chaque équipe avait deux leads, un en Game Design et un en Game Art, qui étaient mes relais au quotidien."),
               T("Chez Vampire Hunter E-Cycle, le **shader d'outlines** a pris du retard dès le premier sprint. Il était essentiel à la direction artistique : j'ai revu le planning, et nous avons supprimé une partie des VFX prévus, comme le feu de cheminée, les braises ou les flaques d'eau, pour laisser le temps de le terminer."),
-              T("Je donnais aussi mon avis quand on me le demandait : surtout sur la narration des deux projets, pour aider au worldbuilding, et pour trancher pendant les réunions des System Designers.")
+              T("Je donnais aussi mon avis quand on me le demandait, surtout sur la narration des deux projets pour aider au worldbuilding, et j'aidais à trancher pendant les réunions des System Designers.")
             ],[ IMG("images/rogue-vh-ld-la.webp","Une salle de Vampire Hunter E-Cycle, du blocking au level art") ])
           ]),
           BANDE("VI","Tester et livrer",[
             LIGNE([
               T("Chez Vampire Hunter E-Cycle, la QA est restée interne : un questionnaire préparé au sprint 2, un God Mode pour tester les salles et des playtests UX au sprint 3. Le temps a manqué pour organiser des playtests avec des joueurs extérieurs. Chez Mad Max Fury Rogue, les documents de playtest étaient prêts plus tard, mais les problèmes techniques n'ont pas permis de tester."),
-              T("Les deux jeux étaient jouables de bout en bout le jour du jury. Les coupes faites dans les salles, comme les trois salles de combat de Vampire Hunter E-Cycle restées sans level art final, n'ont pas compromis l'expérience : elles nous ont assuré de tenir la date de rendu.")
+              T("Les deux jeux étaient jouables de bout en bout le jour du jury. Les coupes faites dans les salles, comme les trois salles de combat de Vampire Hunter E-Cycle restées sans level art final, n'ont pas compromis l'expérience, et elles nous ont permis de tenir la date de rendu.")
             ],[ CAROUSEL([["images/rogue-vh-autel.jpg","Vampire Hunter E-Cycle en jeu"],["images/rogue-vh-ruines.jpg","Vampire Hunter E-Cycle : une salle en ruines"],["images/rogue-vh-galerie.jpg","Vampire Hunter E-Cycle : une galerie du château"],["images/rogue-vh-salle-rouge.jpg","Vampire Hunter E-Cycle : une salle du château"],["images/rogue-mm-jeu.jpg","Mad Max Fury Rogue en jeu, avec son interface"]]) ]),
             LIGNE([
               TABLEAU("Le cahier des charges, d'après les backlogs",["Exigence","Vampire Hunter E-Cycle","Mad Max Fury Rogue"],[
@@ -378,7 +378,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Ce workshop m'a appris à **décider des coupes avant d'en avoir besoin**. Avec une liste préparée à l'avance, on sait quoi laisser de côté quand le temps manque, au lieu d'improviser pendant le rush."),
               T("Les objectifs de sprint étaient communs aux deux équipes, et seul le détail des tâches était construit avec chacune. Avec le recul, ce cadre aurait dû être **plus souple et revu en cours de route**, au vu des retards et des difficultés propres à chaque équipe, comme la génération procédurale chez Mad Max Fury Rogue."),
-              T("Je prévoirais aussi **des playtests externes le plus tôt possible**, pour en tirer à temps les corrections, les améliorations et les changements nécessaires.")
+              T("Je prévoirais aussi **des playtests externes le plus tôt possible**, pour avoir encore le temps d'appliquer ce qu'ils révèlent.")
             ])
           ]),
           BANDE("VIII","Les équipes",[
@@ -497,7 +497,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("IX","Ce que j'en retiens",[
             LIGNE([
-              T("J'ai appris à **penser Jira comme une base de données** : une fois les tickets bien rangés, chaque équipe, chaque jalon et chaque contrôle qualité n'est qu'une requête. L'outil rend visibles les décisions du producer : qui est saturé, ce qui dépend de l'extérieur, ce qu'on accepte de reporter."),
+              T("J'ai appris à **penser Jira comme une base de données** : une fois les tickets bien rangés, une équipe ou un jalon n'est plus qu'une requête. L'outil rend visibles les décisions du producer : qui est saturé, ce qui dépend de l'extérieur, ce qu'on accepte de reporter."),
               T("Ce space est devenu une **base réutilisable** : sur un autre projet, il suffit d'adapter les valeurs à l'équipe et au jeu."),
               T("Sur un vrai projet, j'ouvrirais **le registre des risques dès le lancement**, et je simulerais deux semaines complètes en temps réel.")
             ])
@@ -510,7 +510,7 @@ const PROJECTS_FR = {
         contenu:[
           BANDE("I","Le sujet et mon rôle",[
             LIGNE([
-              T("Dans le cadre de cet exercice, nous devions fournir un document de gestion de production couvrant plusieurs volets : une définition crédible de l'équipe à constituer, un macro-planning et un micro-planning de la production sur Coda et ClickUp, un budget de développement sur Excel et une estimation des ventes (Market Analysis)."),
+              T("L'exercice demandait un document de gestion de production en quatre volets : une définition crédible de l'équipe à constituer, un macro-planning et un micro-planning de la production sur Coda et ClickUp, un budget de développement sur Excel et une estimation des ventes (Market Analysis)."),
               T("J'ai choisi un projet d'envergure AA comparable à GreedFall : Wyrdfall, porté par une équipe de 42 personnes au pic de la production, dans la fourchette habituelle d'un jeu AA (30 à 50 personnes)."),
               T("Le High Concept Document et le prototype, également demandés, ont été produits pendant le reste de l'épreuve et ne sont pas présentés ici.")
             ],[ FICHE("Gestion de production · présentée ici · 20 h",["Équipe à constituer","Macro-planning et micro-planning (Coda, ClickUp)","Budget de développement (Excel)","Estimation des ventes (Market Analysis)"]), FICHE("Autres livrables · 70 h",["High Concept document","Prototype"]) ])
@@ -529,7 +529,7 @@ const PROJECTS_FR = {
               T("Pour estimer les ventes potentielles sur Steam, j'ai commencé par **l'analyse des concurrents du jeu**, dont j'ai extrait des moyennes exploitables pour mes scénarios de projection. Pour disposer d'un large panel, j'ai retenu des jeux sortis sur 11 ans, de 2014 à 2025 : une période un peu longue, qui gagnerait à être ramenée à cinq ans.")
             ],[ IMG(EX1.market,"Analyse des concurrents : ventes, revenus estimés et moyennes") ]),
             LIGNE([
-              T("Les données extraites m'ont permis de proposer **deux scénarios**, un optimiste et un plus conservateur, chacun décliné en **trois niveaux de risque** (haut, moyen, bas), pour couvrir l'éventail des issues possibles.")
+              T("Les données extraites m'ont permis de proposer **deux scénarios**, un optimiste et un plus conservateur, chacun décliné en **trois niveaux de risque** (haut, moyen, bas).")
             ],[ CAROUSEL([[EX1.roiCons,"Estimation du ROI, scénario conservateur : 250 000 followers, selon les cas haut, moyen et bas"],[EX1.roiOpti,"Estimation du ROI, scénario optimiste : moyenne des ventes du Market Analysis, selon les cas haut, moyen et bas"]]) ]),
             LIGNE([
               T("Pour savoir à partir de quand le projet devient rentable, j'ai calculé son **seuil de rentabilité**. Sur un prix de 49,99 €, j'ai retiré en une seule fois la part de Steam, les taxes et la redevance d'Unreal Engine (55 %), puis les remboursements. C'est un choix de prudence : une vente ne rapporte ainsi qu'environ 20 €, un peu moins que dans la réalité. Le budget est couvert à partir d'environ **451 000 ventes**. Si le projet tient avec cette hypothèse, il tiendra avec un calcul plus favorable."),
@@ -639,7 +639,7 @@ const PROJECTS_FR = {
             ],[ TABLEAU("Jeux vidéo et e-sport au Nigéria : les chiffres de PwC, édition par édition",["Source","Période","Revenus"],[["Agence Ecofin, nov. 2023","2022 → 2027","111 → 472 M$ (publicité)"],["Nairametrics, fév. 2025","2023 → 2024","192 → 217 M$"],["Nairametrics, fév. 2025","2023 → 2028","192 → 322 M$ (+ 10,9 % par an)"]],true) ]),
             LIGNE([
               T("Le modèle reste pourtant fortement limité. J'ai relevé **cinq freins**, du plus matériel au plus structurel."),
-              TABLEAU("Les freins au développement du secteur",["Frein","Constat"],[["Internet","Réseau fragile, dépendant d'un nombre limité de câbles sous-marins (BBC News)."],["Électricité","12 effondrements du réseau national en 2024. 82 % des développeurs africains jugent critique une alimentation électrique sans coupure (rapport de Maliyo Games, le studio d'Hugo Obi)."],["Pouvoir d'achat","Peu d'ordinateurs et de smartphones puissants : des jeux gratuits, pensés pour des joueurs occasionnels."],["Formation","Peu de formations longues au jeu vidéo, voire aucune."],["Financement","Des revenus souvent liés à des bailleurs de fonds étrangers. Des observateurs cités par Courrier International jugent ces jeux « bien-pensants » : un ressenti, pas un constat chiffré."]],true)
+              TABLEAU("Les freins au développement du secteur",["Frein","Constat"],[["Internet","Réseau fragile, dépendant d'un nombre limité de câbles sous-marins (BBC News)."],["Électricité","12 effondrements du réseau national en 2024. 82 % des développeurs africains jugent critique une alimentation électrique sans coupure (rapport de Maliyo Games, le studio d'Hugo Obi)."],["Pouvoir d'achat","Peu d'ordinateurs et de smartphones puissants : des jeux gratuits, pensés pour des joueurs occasionnels."],["Formation","Peu de formations longues au jeu vidéo, voire aucune."],["Financement","Des revenus souvent liés à des bailleurs de fonds étrangers. Des observateurs cités par Courrier International jugent ces jeux « bien-pensants », une impression qu'aucun chiffre ne vient étayer."]],true)
             ])
           ]),
           BANDE("V","Ce que j'en retiens",[
@@ -659,7 +659,7 @@ const PROJECTS_EN = {
         img:PRO1.thumb, une:true,
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
-        apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks, and I was their producer, working with the instructors who acted as publishers. I adapted an **Agile method** to the school's Waterfall milestones, set up Excel tracking for each group and kept the supervisors and teams connected day to day. After an art direction crisis in the second week, I organised two playtest sessions for all four teams, then reset priorities with each of them. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
+        apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks. I was their producer, reporting to the instructors who acted as publishers. I adapted an **Agile method** to the school's Waterfall milestones, set up Excel tracking for each group and kept the supervisors and teams connected day to day. After an art direction crisis in the second week, I organised two playtest sessions for all four teams, then reset priorities with each of them. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
@@ -714,14 +714,14 @@ const PROJECTS_EN = {
               T("The jury's feedback was a real relief: it praised the quality of all four projects, and with it the work of the teams.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil: the main menu and the forest in game"],["images/fda-insight-1.jpg","Insight: the mansion's library"],["images/fda-insight-2.jpg","Insight: the great hall and its chandeliers"],["images/fda-insight-3.jpg","Insight: the telescope on the mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead: the city overrun by plants"],["images/fda-flowering-2.jpg","The Flowering Dead: a passage under the arcades"],["images/fda-flowering-3.jpg","The Flowering Dead: the belfry and the tower"],["images/fda-glow-jeu.jpg","Project GLOW in game: a street blocked by a gate"]]) ]),
             LIGNE([
-              T("Behind these images are the tasks tracked in the micro-schedules. For Project GLOW, you can see the city move from the level layout to the blockout, then to Level Art and lighting.")
+              T("For Project GLOW, you can see the city move from the level layout to the blockout, then to Level Art and lighting, as the tasks in the micro plan were completed.")
             ],[ CAROUSEL([["images/fda-glow-plan.webp","Project GLOW: from the level layout to the final city, top view"],["images/fda-glow-editeur.jpg","Project GLOW: the city in the editor"]]) ])
           ]),
           BANDE("VII","What I take away",[
             LIGNE([
               T("It was the first time I had been the producer for an entire class. The mid-course crisis taught me to set aside what I thought I knew and **listen to each team's own needs**. I also learned to **delegate**, and to set up clear communication channels from the start, so that no team feels left to fend for itself."),
               T("On a next project of this size, I would first have **a reference scene built in the engine**, so that each group starts from a concrete art direction, visible on screen from the first week."),
-              T("I would also make progress easier to follow. **Dailies modelled on the Daily Scrum**, short and focused on the sprint goal, and **precise end-of-sprint deliverables for each discipline** would make the work verifiable, for the teams as well as for me.")
+              T("I would also make progress easier to check, for the teams as well as for me, with **dailies modelled on the Daily Scrum**, short and focused on the sprint goal, and **precise end-of-sprint deliverables for each discipline**.")
             ])
           ]),
           BANDE("VIII","The teams",[
@@ -750,7 +750,7 @@ const PROJECTS_EN = {
           BANDE("II","Faking procedural generation",[
             LIGNE([
               T("At Mad Max Fury Rogue, **procedural generation** turned out to be far more complex than planned: the task, rated very hard, was already late by the end of the first sprint. Yet it was the core of a rogue-lite, and a required feature."),
-              T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. Our procedural ideas could then be presented in a gameplay sequence that put them forward. The jury, made up of those same instructors, had approved this change beforehand, and the project was **well received**."),
+              T("So as not to delay the rest of production, I decided, with the group's Game Design lead, to seek a compromise with the instructors, who acted as publishers. Together, we chose to **fake the procedural generation**: several checkpoints set up in the level design gave the illusion of random generation. The gameplay sequence shown to the jury still presented our procedural ideas. The jury, made up of those same instructors, had approved this change beforehand, and the project was **well received**."),
               T("Getting this agreement was a relief. My fear of needing a crunch to finish the project largely faded, and the team was freed from a very stressful issue to refocus on the parts of the game that mattered most.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.webp","The Mad Max Fury Rogue level in blocking"],["images/rogue-mm-ld-2.webp","The Mad Max Fury Rogue level in blocking, with its enemies"]]) ])
           ]),
@@ -772,7 +772,7 @@ const PROJECTS_EN = {
           BANDE("IV","Preparing the cuts",[
             LIGNE([
               T("With each team, I drew up a **list of expendable tasks**, the first to go if time ran short: 28 for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue. Most of them never entered the sprints. Five found a place: the double dash, the sword, the shield and the loading screen were done, and some modular pipes were cut along the way."),
-              T("More had to be cut during production: **seven tasks in each team**, without touching the core of the game. For Vampire Hunter E-Cycle, all of them went during sprint 2, the busiest: the music manager, the merchant mockups, the emotional arc of the narrative document. For Mad Max Fury Rogue, the cuts hit a second enemy, the sand shader and some modular set pieces.")
+              T("More had to be cut during production: **seven tasks in each team**, without touching the core of the game. At Vampire Hunter E-Cycle, all of them went during sprint 2, the busiest: the music manager, the merchant mockups, the emotional arc of the narrative document. For Mad Max Fury Rogue, the cuts hit a second enemy, the sand shader and some modular set pieces.")
             ],[ FICHE("Set aside at Vampire Hunter E-Cycle",["A double jump and a dialogue system","A cursed room and an inventory","Set-dressing VFX: fireplace, embers, puddles","42 tasks set aside across both games"]) ]),
             LIGNE([
               T("At Mad Max Fury Rogue, five of the fourteen tasks concerned the market: it was set aside as a whole, from concept to interface.")
@@ -797,13 +797,13 @@ const PROJECTS_EN = {
             LIGNE([
               T("I built the detail of the sprints with each team and cleared blockers as they came up. Each team had two leads, one in Game Design and one in Game Art, who were my day-to-day relays."),
               T("At Vampire Hunter E-Cycle, the **outline shader** fell behind in the first sprint. It was essential to the art direction: I reworked the schedule, and we dropped some of the planned VFX, such as the fireplace, the embers and the puddles, to leave time to finish it."),
-              T("I also gave my input when asked: mostly on the narrative of both projects, to help with worldbuilding, and to settle decisions in the System Designers' meetings.")
+              T("I also gave my input when asked, mostly on the narrative of both projects to help with worldbuilding, and I helped settle decisions in the System Designers' meetings.")
             ],[ IMG("images/rogue-vh-ld-la.webp","A Vampire Hunter E-Cycle room, from blocking to level art") ])
           ]),
           BANDE("VI","Testing and delivering",[
             LIGNE([
               T("At Vampire Hunter E-Cycle, QA stayed internal: a questionnaire prepared in sprint 2, a God Mode to test the rooms and UX playtests in sprint 3. There was no time to set up playtests with outside players. At Mad Max Fury Rogue, the playtest documents were ready later, but technical problems prevented any testing."),
-              T("Both games were playable from start to finish on jury day. The cuts we made in the rooms, such as the three Vampire Hunter E-Cycle combat rooms left without final level art, did not compromise the experience: they made sure we met the delivery deadline.")
+              T("Both games were playable from start to finish on jury day. The cuts we made in the rooms, such as the three Vampire Hunter E-Cycle combat rooms left without final level art, did not compromise the experience, and they let us meet the delivery deadline.")
             ],[ CAROUSEL([["images/rogue-vh-autel.jpg","Vampire Hunter E-Cycle in game"],["images/rogue-vh-ruines.jpg","Vampire Hunter E-Cycle: a ruined room"],["images/rogue-vh-galerie.jpg","Vampire Hunter E-Cycle: a castle gallery"],["images/rogue-vh-salle-rouge.jpg","Vampire Hunter E-Cycle: a castle room"],["images/rogue-mm-jeu.jpg","Mad Max Fury Rogue in game, with its interface"]]) ]),
             LIGNE([
               TABLEAU("The brief, game by game, from the backlogs",["Requirement","Vampire Hunter E-Cycle","Mad Max Fury Rogue"],[
@@ -821,7 +821,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("This workshop taught me to **decide on cuts before I need them**. With a list prepared in advance, you know what to leave aside when time runs short, instead of improvising during the crunch."),
               T("The sprint goals were shared by both teams, and only the detail of the tasks was built with each one. Looking back, that frame should have been **more flexible and revised along the way**, given each team's own delays and difficulties, such as procedural generation at Mad Max Fury Rogue."),
-              T("I would also plan **external playtests as early as possible**, to draw the fixes, improvements and changes they call for in time.")
+              T("I would also plan **external playtests as early as possible**, while there is still time to act on what they reveal.")
             ])
           ]),
           BANDE("VIII","The teams",[
@@ -940,7 +940,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("IX","What I take away",[
             LIGNE([
-              T("I learned to **think of Jira as a database**: once the work items are well sorted, every team, milestone and quality check is just a query. The tool makes the producer's decisions visible: who is overloaded, what depends on outside partners, what we agree to postpone."),
+              T("I learned to **think of Jira as a database**: once the work items are well sorted, a team or a milestone is just a query. The tool makes the producer's decisions visible: who is overloaded, what depends on outside partners, what we agree to postpone."),
               T("This space has become a **reusable foundation**: on another project, you only need to adapt the values to the team and the game."),
               T("On a real project, I would open **the risk register at kickoff** and simulate two full weeks in real time.")
             ])
@@ -953,7 +953,7 @@ const PROJECTS_EN = {
         contenu:[
           BANDE("I","The brief and my role",[
             LIGNE([
-              T("For this exercise, we had to provide a production management document covering several areas: a credible team plan, a macro plan and a micro plan of the production in Coda and ClickUp, a development budget in Excel and a sales estimate (Market Analysis)."),
+              T("The exercise called for a production management document in four parts: a credible team plan, a macro plan and a micro plan of the production in Coda and ClickUp, a development budget in Excel and a sales estimate (Market Analysis)."),
               T("I chose an AA-scale project comparable to GreedFall: Wyrdfall, with a team of 42 people at peak production, within the usual range for an AA game (30 to 50 people)."),
               T("The High Concept document and the prototype, also required, were produced during the rest of the assignment and are not shown here.")
             ],[ FICHE("Production management · shown here · 20 h",["Team plan","Macro plan and micro plan (Coda, ClickUp)","Development budget (Excel)","Sales estimate (Market Analysis)"]), FICHE("Other deliverables · 70 h",["High Concept document","Prototype"]) ])
@@ -972,7 +972,7 @@ const PROJECTS_EN = {
               T("To estimate potential sales on Steam, I started by **analysing the game's competitors**, extracting usable averages for my projection scenarios. To build a large sample, I selected games released over 11 years, from 2014 to 2025: a fairly long period, which would be better narrowed to five years.")
             ],[ IMG(EX1.market,"Competitor analysis: sales, estimated revenue and averages") ]),
             LIGNE([
-              T("The extracted data allowed me to propose **two scenarios**, an optimistic one and a more conservative one, each broken down into **three risk levels** (high, average, low), to cover the range of possible outcomes.")
+              T("The extracted data allowed me to propose **two scenarios**, an optimistic one and a more conservative one, each broken down into **three risk levels** (high, average, low).")
             ],[ CAROUSEL([[EX1.roiCons,"ROI estimate, conservative scenario: 250,000 followers, in high, average and low cases"],[EX1.roiOpti,"ROI estimate, optimistic scenario: average sales from the Market Analysis, in high, average and low cases"]]) ]),
             LIGNE([
               T("To know when the project becomes profitable, I calculated its **break-even point**. From a price of €49.99, I deducted Steam's share, taxes and the Unreal Engine royalty in one go (55%), then refunds. It is a cautious choice: each sale only brings in about €20, a little less than in reality. The budget is covered from about **451,000 sales**. If the project holds up under this assumption, it will hold up under a more favourable one."),
@@ -1052,7 +1052,7 @@ const PROJECTS_EN = {
           BANDE("I","Research question and approach",[
             LIGNE([
               T("The video game market is still dominated by the West, Japan and China, while Africa is experiencing a recent boom. My research question: **can we speak of an African model**, and how does it break away from the Western one? I answer it through the case of Nigeria."),
-              T("As a producer, I read this market through **its constraints**: network, electricity, purchasing power, access to payment. They are what explain the studios' choices.")
+              T("As a producer, I read this market through **its constraints**: network, electricity, purchasing power, access to payment. They explain the studios' choices.")
             ],[ CITATION("“The rise of the video game industry in Africa is attracting investors' attention, with significant annual growth.”","Nathan Bonnet, Afrikactus, 15 May 2024") ])
           ]),
           BANDE("II","A young, mobile market driven by demographics",[
@@ -1078,11 +1078,11 @@ const PROJECTS_EN = {
           BANDE("IV","Esports and obstacles to growth",[
             LIGNE([
               T("Young people also drive esports. According to PwC (via Agence Ecofin, November 2023), advertising revenue from video games and esports in Nigeria would rise from $111 m in 2022 to $472 m in 2027."),
-              T("This figure does not hold with the rate given in the same article: 7.1% a year would lead to about $156 m in 2027. More recent PwC editions are also lower. I therefore retain **a trend**, double-digit growth driven by the smartphone, rather than an amount.")
+              T("This figure does not match the rate given in the same article: 7.1% a year would lead to about $156 m in 2027. More recent PwC editions are also lower. I therefore retain **a trend**, double-digit growth driven by the smartphone, rather than an amount.")
             ],[ TABLEAU("Video games and esports in Nigeria according to PwC, by edition",["Source","Period","Revenue"],[["Agence Ecofin, Nov. 2023","2022 → 2027","$111 → 472 m (advertising)"],["Nairametrics, Feb. 2025","2023 → 2024","$192 → 217 m"],["Nairametrics, Feb. 2025","2023 → 2028","$192 → 322 m (+10.9% a year)"]],true) ]),
             LIGNE([
               T("Yet the model remains heavily constrained. I identified **five obstacles**, from the most material to the most structural."),
-              TABLEAU("Obstacles to the sector's development",["Obstacle","Finding"],[["Internet","Fragile network, dependent on a limited number of submarine cables (BBC News)."],["Electricity","12 national grid collapses in 2024. 82% of African developers rate an uninterrupted power supply as critical (report by Maliyo Games, Hugo Obi's studio)."],["Purchasing power","Few computers and powerful smartphones: free games, designed for casual players."],["Training","Few long-form video game training programmes, if any."],["Funding","Revenue often tied to foreign donors. Observers quoted by Courrier International find these games “well-meaning”: a perception, not a measured finding."]],true)
+              TABLEAU("Obstacles to the sector's development",["Obstacle","Finding"],[["Internet","Fragile network, dependent on a limited number of submarine cables (BBC News)."],["Electricity","12 national grid collapses in 2024. 82% of African developers rate an uninterrupted power supply as critical (report by Maliyo Games, Hugo Obi's studio)."],["Purchasing power","Few computers and powerful smartphones: free games, designed for casual players."],["Training","Few long-form video game training programmes, if any."],["Funding","Revenue often tied to foreign donors. Observers quoted by Courrier International find these games “well-meaning”, an impression no figure backs up."]],true)
             ])
           ]),
           BANDE("V","What I take away",[

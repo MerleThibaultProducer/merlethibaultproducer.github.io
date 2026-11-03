@@ -2673,6 +2673,20 @@ html body .brand .b1 {
 html body .brand .brole {
   letter-spacing: .02em;
 }
+/* Fond de la page d'accueil : tableau de production en bichromie bleu marine, ancré derrière le portrait */
+body.page-home main { position: relative; isolation: isolate; overflow: hidden; }
+body.page-home main::before {
+  content: ""; position: absolute; top: 0; right: 0; width: 58%; z-index: -1; pointer-events: none;
+  background: url("../images/accueil-fond-jira.jpg") right center / cover no-repeat;
+  opacity: .14;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 45%), linear-gradient(to bottom, transparent, #000 15%, #000 85%, transparent);
+  -webkit-mask-composite: source-in; mask-composite: intersect;
+}
+html[data-theme="dark"] body.page-home main::before { opacity: .07; }
+@media (max-width: 860px) {
+  body.page-home main::before { width: 100%; bottom: auto; height: 460px; opacity: .1;
+    -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent); }
+}
 /* Bandeau identique sur toutes les pages : nom + rôle, même hauteur */
 html body .brand .brole { display: block; margin-top: .3rem; font: 500 .82rem/1.2 var(--sans); color: #E8ECF2; }
 /* Catégorie des exercices au-dessus du titre de la page */
@@ -2919,28 +2933,3 @@ html body .stage .card .btn { margin-top: auto; align-self: flex-start; }
 .rv.in { opacity: 1; transform: none; transition: opacity .6s ease-out var(--d, 0s), transform .75s cubic-bezier(.2, .7, .2, 1) var(--d, 0s); }
 .btn:active, .feat:active, .pn a:active { transform: scale(.97); transition-duration: .08s; }
 @media print { .rv { opacity: 1; transform: none; } }
-
-/* ---------- Épuration : le travail d'abord, le doré réservé ---------- */
-/* Doré retiré des filets du bandeau, du pied de page et du portrait */
-html body header.top { border-bottom: 0; }
-html body footer { border-top: 0; }
-html body .home-intro .portrait, html body .portrait { border: 0; }
-/* Accueil : les mises en avant de la présentation restent en gras, à l'encre */
-html body .home-intro strong { color: var(--head); }
-/* Derniers projets : grandes images au-dessus du texte, sans cadre autour */
-html body .home-feat { padding: 0; background: none; border: 0; border-radius: 0; margin-top: clamp(4rem, 8vw, 6rem); }
-html body .home-feat h2 { font-size: clamp(1.5rem, 2.2vw, 2rem); margin-bottom: 1.6rem; }
-.feat-row { gap: clamp(2rem, 4vw, 4rem); }
-.feat, .feat:first-child, .feat:last-child { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(1.1rem, 2vw, 1.75rem); align-items: center; padding: 0; }
-.feat + .feat { border: 0; }
-.feat-img { border-radius: 4px; }   /* carrées : les couvertures sont des mosaïques 2×2 */
-@media (max-width: 860px) {
-  .feat, .feat:first-child, .feat:last-child { grid-template-columns: minmax(0, 1fr); }
-  .feat + .feat { border: 0; margin-top: 1rem; padding-top: 0; }
-}
-/* Cartes de projets : vignette nue, sans ombre, cadre ni pastille d'état */
-html body .stage .card .thumb { box-shadow: none; background: none; }
-html body .stage .card .thumb::after { display: none; }
-html body .stage .card .status { display: none; }
-html body .stage .card .go { margin-top: auto; align-self: flex-start; font-weight: 600; font-size: .95rem; color: var(--head); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; text-decoration-thickness: 2px; transition: text-decoration-color .2s; cursor: pointer; }
-html body .stage .card .go:hover, html body .stage .card .go:focus-visible, html body .stage .card:has(.thumb:hover) .go { text-decoration-color: var(--gold); }

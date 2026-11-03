@@ -250,9 +250,27 @@ const EQUIPES_FUSION = [
         M("Sarah Ounali","https://www.linkedin.com/in/sarah-ounali-6a1a47271/","Concept Art") ] }
 ];
 
+
+/* ---------- ACCUEIL : vitrine des jeux et frise des productions ----------
+   VITRINE : [image, nom du jeu, page du projet]. FRISE : une barre par production, découpée en sprints (0 = non découpée) ;
+   go vide = projet pas encore publié (barre sans lien). */
+const VITRINE = [
+  ["images/fda-castor.jpg","Le Castor et l'Écureuil","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026"],
+  ["images/fda-glow.jpg","Project GLOW","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026"],
+  ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","#/pro/workshop-rogue-lite-fevrier-2026"],
+  ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","#/pro/workshop-rogue-lite-fevrier-2026"],
+  ["images/fusion-hs-keyart.jpg","HellStorm","#/pro/workshop-fusion-novembre-2025"],
+  ["images/fusion-wk-keyart.jpg","Wakfu Riders","#/pro/workshop-fusion-novembre-2025"]
+];
+const FRISE = [
+  { d0:"2025-06-02", d1:"2025-06-27", fr:"Fin d'année 2025", en:"End of year 2025", sprints:0, go:"" },
+  { d0:"2025-11-03", d1:"2025-11-28", fr:"Workshop Fusion", en:"Fusion Workshop", sprints:4, go:"#/pro/workshop-fusion-novembre-2025" },
+  { d0:"2026-02-02", d1:"2026-02-20", fr:"Workshop Rogue-lite", en:"Rogue-lite Workshop", sprints:3, go:"#/pro/workshop-rogue-lite-fevrier-2026" },
+  { d0:"2026-05-27", d1:"2026-06-24", fr:"Fin d'année 2026", en:"End of year 2026", sprints:4, go:"#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026" }
+];
 const PROJECTS_FR = {
   pro: [
-    P({ title:"Projets de fin d'année : quatre jeux en parallèle – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
+    P({ title:"Projets de fin d'année : quatre jeux en parallèle – Mai-juin 2026", bandeau:"images/fda-castor.jpg", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"La production d'une promotion entière par un seul producer, du lancement à la livraison au jury, avec une crise de direction artistique à mi-parcours.", carte:"Quatre jeux pour une promotion entière, et une crise de direction artistique surmontée par une pause et deux playtests communs.",
         img:PRO1.thumb, une:true,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
@@ -329,7 +347,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ title:"Workshop Rogue-lite – Février 2026", large:true, nocover:true,
+    P({ title:"Workshop Rogue-lite – Février 2026", bandeau:"images/rogue-mm-keyart.jpg", large:true, nocover:true,
         desc:"Quinze jours pour livrer deux rogue-lites jouables sous Unity, chacun d'après une licence de film.",
         carte:"Deux rogue-lites livrés en quinze jours, avec des coupes préparées à l'avance et une génération procédurale simulée pour tenir la date.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
@@ -412,7 +430,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ title:"Workshop Fusion – Novembre 2025", large:true, nocover:true,
+    P({ title:"Workshop Fusion – Novembre 2025", bandeau:"images/fusion-wk-keyart.jpg", large:true, nocover:true,
         desc:"Trois semaines de travail pour livrer deux vertical slices de course sous Unreal Engine 5, chacune née de la fusion d'un jeu rétro et d'une licence.",
         carte:"Deux jeux de course nés de la fusion d'un gameplay et d'une licence, avec mes premiers dailies et des assets classés par priorité.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 équipes de 14 et 15","Racing · Fusion","3 semaines"] }, img:"images/fusion-thumb.jpg",
@@ -725,7 +743,7 @@ const PROJECTS_FR = {
 };
 const PROJECTS_EN = {
   pro: [
-    P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", large:true, nocover:true,
+    P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", bandeau:"images/fda-castor.jpg", large:true, nocover:true,
         desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
         img:PRO1.thumb, une:true,
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
@@ -802,7 +820,7 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ title:"Rogue-lite Workshop – February 2026", large:true, nocover:true,
+    P({ title:"Rogue-lite Workshop – February 2026", bandeau:"images/rogue-mm-keyart.jpg", large:true, nocover:true,
         desc:"Fifteen days to deliver two playable rogue-lites in Unity, each based on a film licence.",
         carte:"Two rogue-lites shipped in fifteen days, with cuts prepared in advance and procedural generation faked to hold the deadline.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, img:"images/rogue-thumb.jpg",
@@ -885,7 +903,7 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ title:"Fusion Workshop – November 2025", large:true, nocover:true,
+    P({ title:"Fusion Workshop – November 2025", bandeau:"images/fusion-wk-keyart.jpg", large:true, nocover:true,
         desc:"Three working weeks to deliver two racing vertical slices in Unreal Engine 5, each born from the fusion of a retro game and a licence.",
         carte:"Two racing games born from fusing a gameplay with a licence, with my first dailies and assets ranked by priority.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 teams of 14 and 15","Racing · Fusion","3 weeks"] }, img:"images/fusion-thumb.jpg",

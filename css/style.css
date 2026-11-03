@@ -2954,3 +2954,58 @@ html body .feat { grid-template-columns: clamp(150px, 15vw, 210px) minmax(0, 1fr
   html body nav ul#nav li { flex: none; }
   html body.page-home .home-intro .portrait { width: 132px; height: 132px; }
 }
+
+/* ---------- Esthétique plus marquante ---------- */
+main { overflow-x: clip; }
+/* 1. Premier écran en bleu marine plein, sur toute la largeur */
+html body.page-home main { padding-top: 0; }
+html body.page-home main::before { display: none; }
+.hero { position: relative; isolation: isolate; background: var(--band); box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax); padding: clamp(2rem, 4vw, 3.25rem) 0 clamp(1.5rem, 3vw, 2.25rem); color: #E7ECF4; }
+.hero::before { content: ""; position: absolute; top: 0; bottom: 0; right: calc(50% - 50vw); width: 58vw; z-index: -1; pointer-events: none;
+  background: url("../images/accueil-fond-jira.jpg") right center / cover no-repeat; opacity: .1; mix-blend-mode: screen;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 45%); mask-image: linear-gradient(to right, transparent, #000 45%); }
+html body .hero .home-h1 { color: #fff; font-size: clamp(2.2rem, 4.6vw, 4.1rem); line-height: 1; letter-spacing: -.03em; max-width: 14em; }
+html body .hero .intro p { color: #E7ECF4; }
+html body .hero .intro strong { color: var(--gold); }
+html body .hero .cta .btn:not(.ghost) { background: var(--gold); border-color: var(--gold); color: #0B1A33; }
+html body .hero .cta .btn.ghost { background: transparent; border-color: rgba(255,255,255,.7); color: #fff; }
+html body .hero .cta .btn.ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+@media (max-width: 860px) { .hero::before { width: 100vw; opacity: .07; } }
+
+/* 3. Frise des productions : une barre par production, découpée en sprints */
+.frise { margin-top: clamp(2rem, 4vw, 3rem); }
+.fr-track { position: relative; height: 5.6rem; border-top: 2px solid rgba(255,255,255,.18); }
+.fr-m { position: absolute; top: .45rem; transform: translateX(-50%); font: 500 .78rem/1 var(--sans); color: rgba(231,236,244,.62); white-space: nowrap; text-transform: capitalize; }
+.fr-m::before { content: ""; position: absolute; left: 50%; top: calc(-.45rem - 6px); width: 2px; height: 8px; background: rgba(255,255,255,.35); }
+.fr-b { position: absolute; top: 1.9rem; display: block; color: #fff; text-decoration: none; cursor: pointer; min-width: 18px; }
+.fr-b.off { cursor: default; }
+.fr-bar { display: flex; gap: 3px; height: 14px; }
+.fr-bar i { flex: 1; background: var(--gold); border-radius: 2px; transition: transform .2s ease; }
+.fr-b.off .fr-bar i { background: rgba(255,255,255,.32); }
+.fr-n { display: block; margin-top: .55rem; font: 600 .88rem/1.2 var(--sans); white-space: nowrap; }
+.fr-b.off .fr-n { color: rgba(231,236,244,.6); }
+.fr-b:last-of-type .fr-n { position: absolute; right: 0; }
+.fr-b:not(.off):hover .fr-bar i, .fr-b:focus-visible .fr-bar i { transform: scaleY(1.45); }
+.fr-b:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
+@media (max-width: 700px) { .frise { overflow-x: auto; scrollbar-width: none; } .frise::-webkit-scrollbar { display: none; } .fr-track { min-width: 640px; } }
+@media (prefers-reduced-motion: reduce) { .fr-bar i { transition: none; } }
+
+/* 2a. Vitrine : les jeux produits, bord à bord */
+.vitrine { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); width: 100vw; margin-left: calc(50% - 50vw); }
+.vt { position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; cursor: pointer; background: var(--band-d); }
+.vt img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.vt span { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.5rem 1rem .9rem; font: 700 1rem/1.2 var(--display); color: #fff; background: linear-gradient(to top, rgba(8,16,32,.78), rgba(8,16,32,0)); }
+.vt:hover img, .vt:focus-visible img { transform: scale(1.06); }
+.vt:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+@media (max-width: 860px) { .vitrine { grid-template-columns: repeat(6, 44vw); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; } .vitrine::-webkit-scrollbar { display: none; } .vt { scroll-snap-align: start; } }
+@media (prefers-reduced-motion: reduce) { .vt img { transition: none; } }
+html body .home-feat { margin-top: clamp(2.5rem, 5vw, 4rem); }
+
+/* 2b. Grande image d'ouverture des pages projet */
+.bandeau { width: 100vw; margin: clamp(1.5rem, 3vw, 2.5rem) 0 0 calc(50% - 50vw); height: clamp(220px, 36vw, 520px); overflow: hidden; background: var(--band-d); }
+.bandeau img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* 3b. Barre de progression de lecture des pages projet */
+#prog { position: fixed; top: 0; left: 0; right: 0; height: 4px; background: var(--gold); transform: scaleX(0); transform-origin: left; z-index: 60; pointer-events: none; display: none; }
+body.page-detail #prog { display: block; }
+@media print { #prog { display: none !important; } }

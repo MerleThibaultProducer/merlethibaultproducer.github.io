@@ -47,13 +47,29 @@ function chrome(active){
 
 function home(){
   /* Accueil : grand titre, présentation et photo */
-  return `<section class="home-intro">
+  return `<div class="hero"><section class="home-intro">
     <div class="portrait" role="img" aria-label="${t("portrait")} ${esc(SITE.prenom)} ${esc(SITE.nom)}">${img(SITE.photo,"",SITE.prenom[0]+SITE.nom[0])}</div>
     <div class="home-txt">
       <div class="intro"><h1 class="home-h1">${esc(SITE.accueilTitre||SITE.titre)}</h1>${SITE.intro.map(p=>`<p>${rich(p)}</p>`).join("")}</div>
       <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a>${SITE.email?`<a class="btn ghost" href="mailto:${esc(SITE.email)}">${t("contactMe")}</a>`:""}</p>
     </div>
-  </section>${homeFeat()}`;
+  </section>${frise()}</div>${vitrine()}${homeFeat()}`;
+}
+/* Frise des productions : position et largeur de chaque barre d'après ses dates */
+function frise(){
+  if(typeof FRISE==="undefined") return "";
+  const t0=Date.parse("2025-05-01"), t1=Date.parse("2026-08-01"), pc=d=>(Date.parse(d)-t0)/(t1-t0)*100;
+  const mois=["2025-06-01","2025-09-01","2025-12-01","2026-03-01","2026-06-01"].map(d=>`<span class="fr-m" data-l="${pc(d).toFixed(2)}">${new Date(d).toLocaleDateString(lang==="en"?"en-GB":"fr-FR",{month:"short",year:"numeric"})}</span>`).join("");
+  const barres=FRISE.map(b=>{
+    const seg=Array.from({length:b.sprints||1},()=>"<i></i>").join(""), nom=esc(lang==="en"?b.en:b.fr);
+    const attrs=b.go?` data-go="${esc(b.go)}" role="link" tabindex="0"`:` aria-disabled="true"`;
+    return `<a class="fr-b${b.go?"":" off"}" data-l="${pc(b.d0).toFixed(2)}" data-w="${(pc(b.d1)-pc(b.d0)).toFixed(2)}"${attrs}><span class="fr-bar">${seg}</span><span class="fr-n">${nom}</span></a>`;}).join("");
+  return `<div class="frise" role="group" aria-label="${q("Mes productions","My productions")}"><div class="fr-track">${mois}${barres}</div></div>`;
+}
+/* Vitrine : les jeux produits, en grand */
+function vitrine(){
+  if(typeof VITRINE==="undefined") return "";
+  return `<section class="vitrine" aria-label="${q("Les jeux produits","The games produced")}">${VITRINE.map(([src,nom,go])=>`<a class="vt" data-go="${esc(go)}" role="link" tabindex="0"><img src="${esc(src)}"${srcset(src)} alt="${esc(nom)}" loading="lazy"><span>${esc(nom)}</span></a>`).join("")}</section>`;
 }
 /* Encadré « Derniers projets » : les projets marqués une:true dans contenu.js */
 function homeFeat(){
@@ -318,7 +334,7 @@ function detail(sec, p, prev, next){
   const link = (q,cls,lab,arrow) => q ? `<a class="${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${esc(q.title)}</b></a>` : "";
   const side = (q,cls,ch,lab) => q ? `<a class="side ${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0" aria-label="${lab} : ${esc(q.title)}" title="${esc(q.title)}">${ch}</a>` : "";
   return `<a class="back" data-go="${sec.route}" role="link" tabindex="0">‹ ${sec.label}</a>
-  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title).replace(" – ","\u00a0– ")}</h1><p class="lead">${esc(p.desc)}</p>
+  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title).replace(" – ","\u00a0– ")}</h1><p class="lead">${esc(p.desc)}</p>${p.bandeau?`<div class="bandeau"><img src="${esc(p.bandeau)}"${srcset(p.bandeau)} alt=""></div>`:""}
     ${p.large&&(!p.img||p.nocover)?"":`<div class="cover">${img(p.img,p.title,p.title[0])}</div>`}
     ${p.apercu ? recap(p) : `${infos?`<ul class="meta">${infos}</ul>`:""}${brief(p)}`}
     <div class="prose">${blocks(p.contenu)}</div></article>
@@ -421,7 +437,9 @@ function render(still){
     document.title = page ? `${page} – ${SITE.prenom} ${SITE.nom}` : `${SITE.prenom} ${SITE.nom} – ${SITE.titre}`;
   }
   chrome(active);
+  document.body.classList.toggle("page-detail", !!curNav);
   const v = $("#view"); v.innerHTML = html;
+  v.querySelectorAll("[data-l]").forEach(e=>{ e.style.left=e.dataset.l+"%"; if(e.dataset.w) e.style.width=e.dataset.w+"%"; });   /* la CSP refuse les attributs style */
   if(navDir && !matchMedia("(prefers-reduced-motion:reduce)").matches)
     v.animate([{opacity:0,transform:`translateX(${navDir*48}px)`},{opacity:1,transform:"none"}],{duration:280,easing:"ease-out"});
   navDir = 0;
@@ -486,3 +504,7 @@ addEventListener("popstate", () => { cur = location.hash || "#/"; render(); scro
 addEventListener("hashchange", () => { const h = location.hash || "#/"; if(h !== cur){ cur = h; render(); scrollTo(0,0); pageFocus(); } });
 render();
 document.addEventListener("click",e=>{if(e.target.closest("[data-top]")){const r=matchMedia("(prefers-reduced-motion:reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"});}});
+
+/* Barre de progression de lecture (pages projet), comme un sprint qui se remplit */
+const PROG=document.body.appendChild(Object.assign(document.createElement("div"),{id:"prog"}));
+addEventListener("scroll",()=>{const h=document.documentElement.scrollHeight-innerHeight;PROG.style.transform=`scaleX(${h>0?Math.min(1,scrollY/h):0})`;},{passive:true});

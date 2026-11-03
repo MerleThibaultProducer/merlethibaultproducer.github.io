@@ -3054,3 +3054,55 @@ html body .project .bandeau figcaption { font: 700 1.1rem/1.2 "Bricolage Grotesq
 
 .vt:hover .vt-mos img, .vt:focus-visible .vt-mos img { transform: scale(1.04); }
 @media (max-width: 860px) { .vt-big { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 16 / 10; } }
+
+/* ---------- Mode nuit, décor des key arts, boutons et doré ---------- */
+/* 1. Mode nuit : encadrés et tableaux dans la palette (un ton au-dessus du fond), plus de violet */
+:root[data-theme="dark"] .fiche, :root[data-theme="dark"] .etapes, :root[data-theme="dark"] .tbl,
+:root[data-theme="dark"] .band:nth-of-type(even) .fiche, :root[data-theme="dark"] .band:nth-of-type(even) .etapes, :root[data-theme="dark"] .band:nth-of-type(even) .tbl { background: #1A3157; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .fiche, :root:not([data-theme="light"]) .etapes, :root:not([data-theme="light"]) .tbl,
+  :root:not([data-theme="light"]) .band:nth-of-type(even) .fiche, :root:not([data-theme="light"]) .band:nth-of-type(even) .etapes, :root:not([data-theme="light"]) .band:nth-of-type(even) .tbl { background: #1A3157; }
+}
+/* 2. Mode nuit : le premier écran garde son aplat, plus clair que la page */
+:root[data-theme="dark"] .hero { background: #183A72; box-shadow: 0 0 0 100vmax #183A72; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero { background: #183A72; box-shadow: 0 0 0 100vmax #183A72; } }
+/* 3. Le fond Jira s'efface avant la frise, et reste discret de nuit */
+.hero::before { -webkit-mask-image: linear-gradient(to right, transparent, #000 45%), linear-gradient(to bottom, #000 45%, transparent 72%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 45%), linear-gradient(to bottom, #000 45%, transparent 72%); mask-composite: intersect; }
+:root[data-theme="dark"] .hero::before { opacity: .06; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero::before { opacity: .06; } }
+
+/* 4. Les jeux de la production : pitch lisible, key art en décor à faible opacité */
+.ka { display: grid; gap: 3px; margin: .5rem 0 0; }
+.ka.n2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ka.n4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ka-i { position: relative; isolation: isolate; overflow: hidden; padding: clamp(1.5rem, 3vw, 2.25rem); min-height: 11rem; background: var(--band-d); color: #E7ECF4; }
+.ka-bg { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; object-fit: cover; opacity: .2; }
+html body .project .ka-i b { display: block; margin-bottom: .5rem; font: 700 1.3rem/1.2 var(--display); color: #fff; }
+html body .project .ka-i p { margin: 0; max-width: 34rem; font-size: 1rem; line-height: 1.55; color: #E7ECF4; }
+@media (max-width: 760px) { .ka.n2, .ka.n4 { grid-template-columns: minmax(0, 1fr); } }
+
+/* 5. Vignettes des listes : composites de key arts, sans pastille */
+html body .stage .card .status { display: none; }
+
+/* 6. Un seul style d'action : bouton doré pour l'action principale, lien fléché pour ouvrir un projet */
+:root { --btn: var(--gold); --on-btn: #0B1A33; }
+:root[data-theme="dark"] { --btn: var(--gold); --on-btn: #0B1A33; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --btn: var(--gold); --on-btn: #0B1A33; } }
+html body .btn:not(.ghost) { background: var(--gold); border-color: var(--gold); color: #0B1A33; }
+html body .btn:not(.ghost):hover { background: #F0B83A; border-color: #F0B83A; color: #0B1A33; }
+html body .stage .card .go { margin-top: auto; align-self: flex-start; font-weight: 600; font-size: .95rem; color: var(--head); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; text-decoration-thickness: 2px; transition: text-decoration-color .2s; cursor: pointer; }
+html body .stage .card .go:hover, html body .stage .card .go:focus-visible, html body .stage .card:has(.thumb:hover) .go { text-decoration-color: var(--gold); }
+
+/* 7. « À voir aussi » : un seul projet, sur toute la largeur */
+.feat-row:has(> .feat:only-child) { grid-template-columns: minmax(0, 1fr); }
+.feat:only-child { max-width: 52rem; }
+
+/* 8. Moins de doré : plus de filet sur l'encadré d'accueil ni au-dessus du pied de page */
+html body .home-feat { border-top: 1px solid var(--line); }
+html body footer { border-top: 0; }
+/* Mode nuit : comme en mode jour, les encadrés n'ont pas de fond ; seuls les tableaux gardent un ton */
+:root[data-theme="dark"] .fiche, :root[data-theme="dark"] .etapes, :root[data-theme="dark"] .band:nth-of-type(even) .fiche, :root[data-theme="dark"] .band:nth-of-type(even) .etapes { background: transparent; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fiche, :root:not([data-theme="light"]) .etapes, :root:not([data-theme="light"]) .band:nth-of-type(even) .fiche, :root:not([data-theme="light"]) .band:nth-of-type(even) .etapes { background: transparent; } }
+/* Le pitch reste clair sur son décor sombre, en mode jour comme en mode nuit */
+html body .project .ka-i p { color: #E7ECF4 !important; }
+html body .project .ka-i b { color: #fff !important; }

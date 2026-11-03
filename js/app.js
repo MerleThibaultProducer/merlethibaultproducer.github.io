@@ -75,7 +75,7 @@ function homeFeat(){
   const items = Object.entries(PROJECTS).flatMap(([k,l]) => l.filter(p => p.une && !p.wip).map(p => [k,p]));
   if(!items.length) return "";
   return `<section class="home-feat" aria-labelledby="feat-h">
-    <h2 id="feat-h">${q("Derniers projets","Latest projects")}</h2>
+    <h2 id="feat-h">${q("À voir aussi","Also worth a look")}</h2>
     <div class="feat-row">${items.map(([k,p]) => {
       const m = p.title.match(/^(.+?)\s+–\s+(\S.*\d{4})$/);
       const kick = k==="pro" ? q("Projet professionnel","Professional project")+(m?` · ${m[2]}`:"") : q("Projet personnel","Personal project")+(p.date||p.cat?` · ${p.date||p.cat}`:"");
@@ -110,7 +110,7 @@ function listing(sec){
   const cards = items.map(p => `<article class="card${p.wip?" is-wip":""}">
     <div class="thumb${p.img?" has-img":""}"${p.wip?"":` data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}"`}>${img(p.img,p.title,p.title[0])}${p.wip?'<span class="wip-blur" aria-hidden="true"></span>':""}${p.survol?survol(p.survol):""}<span class="status${p.wip?" wip":""}"><i aria-hidden="true"></i>${p.wip?t("stWip"):t("stDone")}</span></div>
     <h3>${cardTitle(p.title,p.cat&&p.date?`${p.cat} · ${p.date}`:p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
-    ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="btn" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${t("details")}</a>`}</article>`).join("");
+    ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="go" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${q("Voir le projet","See the project")}<span aria-hidden="true"> →</span></a>`}</article>`).join("");
   return `<div class="list-head"><h1>${sec.label}</h1><p class="lead">${sec.intro}</p></div>
   <div class="stage"><h2 class="sr">${q("Liste des projets","Project list")}</h2>${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="perso"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;
 }
@@ -325,8 +325,8 @@ function recap(p){
   return `<section class="recap">${facts?`<dl class="facts">${facts}</dl>`:""}<div class="recap-txt">${txt}</div></section>`;
 }
 /* Key arts des jeux en carrousel, avec le one-liner de chaque jeu sous l'image */
-function keyart(list){
-  return `<figure class="car keyart"><div class="car-track">${list.map(k=>`<div class="car-s"><div class="zf${k[3]?" portrait":""}" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img loading="lazy" decoding="async" src="${esc(k[0])}"${srcset(k[0])} alt="${esc(k[1])} – key art">${LENS}</div><figcaption><b>${esc(k[1])}</b><span>${esc(k[2])}</span></figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Jeu précédent","Previous game")}">‹</button><span class="car-cnt">1 / ${list.length}</span><button type="button" data-car="1" aria-label="${q("Jeu suivant","Next game")}">›</button></div></figure>`;
+function keyart(list){   /* les jeux de la production : pitch en clair, key art en léger décor d'arrière-plan */
+  return `<div class="ka n${list.length}">${list.map(k=>`<div class="ka-i"><img class="ka-bg" loading="lazy" decoding="async" src="${esc(k[0])}"${srcset(k[0])} alt=""><b>${esc(k[1])}</b><p>${esc(k[2])}</p></div>`).join("")}</div>`;
 }
 function detail(sec, p, prev, next){
   const infos = Object.entries(p.infos||{}).map(([k,v])=>`<li><span>${esc(k)}</span>${esc(v)}</li>`).join("");

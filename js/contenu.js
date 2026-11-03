@@ -271,7 +271,7 @@ const PROJECTS_FR = {
   pro: [
     P({ title:"Projets de fin d'année : quatre jeux en parallèle – Mai-juin 2026", bandeau:[["images/fda-castor.jpg","Le Castor et l'Écureuil"],["images/fda-glow.jpg","Project GLOW"],["images/fda-insight.jpg","Insight"],["images/fda-flowering.jpg","The Flowering Dead"]], large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"La production d'une promotion entière par un seul producer, du lancement à la livraison au jury, avec une crise de direction artistique à mi-parcours.", carte:"Quatre jeux pour une promotion entière, et une crise de direction artistique surmontée par une pause et deux playtests communs.",
-        img:PRO1.thumb, une:true,
+        img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
         apercu:"En deuxième semaine du projet de fin d'année, les quatre jeux de la promotion ont buté sur la même crise de direction artistique. J'étais le seul producer des quatre équipes : nous avons suspendu la production une journée et demie, puis j'ai organisé deux sessions de playtest communes et revu les priorités avec chaque groupe. Pour suivre l'ensemble, j'avais adapté une méthode Agile aux jalons Waterfall de l'école, avec un suivi Excel par groupe. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
@@ -744,7 +744,7 @@ const PROJECTS_EN = {
   pro: [
     P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", bandeau:[["images/fda-castor.jpg","Le Castor et l'Écureuil"],["images/fda-glow.jpg","Project GLOW"],["images/fda-insight.jpg","Insight"],["images/fda-flowering.jpg","The Flowering Dead"]], large:true, nocover:true,
         desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
-        img:PRO1.thumb, une:true,
+        img:PRO1.thumb,
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
         apercu:"In the second week of the end-of-year project, all four of the class's games hit the same art direction crisis. I was the only producer for the four teams: we paused production for a day and a half, then I organised two shared playtest sessions and reset priorities with each group. To keep track of it all, I had adapted an Agile method to the school's Waterfall milestones, with Excel tracking for each group. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",

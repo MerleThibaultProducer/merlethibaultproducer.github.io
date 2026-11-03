@@ -283,7 +283,7 @@ const PROJECTS_FR = {
             ],[ FICHE("Les contraintes",["Quatre jeux en quatre semaines, du 27 mai au 24 juin, pour un seul producer et plus de cinquante personnes","Cinq jalons : Intentions, Proof of Concept, Alpha, Bêta et Gold","5 à 15 minutes de jeu, avec un niveau habillé, les menus et les effets, sans bug bloquant","Le conseil de l'école : mieux vaut moins, mais de qualité et fini"]) ]),
             LIGNE([ KEYART([
                       ["images/fda-castor.jpg","Le Castor et l'Écureuil","Un puzzle platformer où des animaux tentent de sauver leur environnement menacé en neutralisant les infrastructures humaines qui détruisent la nature de l'Anjou."],
-                      ["images/fda-glow.jpg","Project GLOW","Un jeu d'action-aventure à la troisième personne, dans l'esprit d'inFAMOUS Second Son, où un adolescent rebelle doté de pouvoirs de portail doit renverser la corporation qui corrompt les gangs et pollue la ville.",1],
+                      ["images/fda-glow.jpg","Project GLOW","Un jeu d'action-aventure à la troisième personne, dans l'esprit d'Infamous Second Son, où un adolescent rebelle doté de pouvoirs de portail doit renverser la corporation qui corrompt les gangs et pollue la ville.",1],
                       ["images/fda-insight.jpg","Insight","Un couple marié résout des énigmes et relève des épreuves grâce aux pouvoirs que leur confèrent les yeux qu'ils découvrent, pour atteindre chacun son objectif dans un manoir des années 1930 au nord du Massachusetts."],
                       ["images/fda-flowering.jpg","The Flowering Dead","Un boss rush où des survivants luttent pour leur vie dans un monde post-apocalyptique envahi de plantes et d'animaux mutants."]
                     ]) ])
@@ -756,7 +756,7 @@ const PROJECTS_EN = {
             ],[ FICHE("The constraints",["Four games in four weeks, from 27 May to 24 June, for a single producer and more than fifty people","Five milestones: Intentions, Proof of Concept, Alpha, Beta and Gold","5 to 15 minutes of play, with a finished level, menus and effects, and no blocking bugs","The school's advice: better less, but polished and finished"]) ]),
             LIGNE([ KEYART([
                       ["images/fda-castor.jpg","Le Castor et l'Écureuil","A puzzle platformer where animals try to save their endangered environment by neutralising the human infrastructure destroying Anjou's nature."],
-                      ["images/fda-glow.jpg","Project GLOW","A third-person action-adventure game in the vein of inFAMOUS Second Son, where a rebel teenager with portal powers must overthrow the corporation that corrupts the gangs and pollutes the city.",1],
+                      ["images/fda-glow.jpg","Project GLOW","A third-person action-adventure game in the vein of Infamous Second Son, where a rebel teenager with portal powers must overthrow the corporation that corrupts the gangs and pollutes the city.",1],
                       ["images/fda-insight.jpg","Insight","A married couple solves puzzles and completes trials using new powers granted by the eyes they find, to reach their respective goals in a 1930s manor in northern Massachusetts."],
                       ["images/fda-flowering.jpg","The Flowering Dead","A boss rush where survivors fight for their lives in a post-apocalyptic world overrun by mutant plants and animals."]
                     ]) ])

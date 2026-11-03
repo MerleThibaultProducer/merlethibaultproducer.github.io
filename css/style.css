@@ -2910,17 +2910,17 @@ html body .feat-txt h3 { margin: 0 0 .55rem; font: 700 1.18rem/1.22 var(--displa
 /* ---------- Listes de projets : vignettes plus grandes, deux par ligne, plus d'air ---------- */
 @media (min-width: 601px) {
   html body .stage .grid {
-    grid-template-columns: repeat(2, minmax(0, 25rem));
+    grid-template-columns: repeat(2, minmax(0, 26rem));
     justify-content: center;
-    gap: clamp(3.5rem, 5vw, 5rem) clamp(2.5rem, 6vw, 6.5rem);
+    gap: clamp(4.5rem, 7vw, 6.5rem) clamp(3rem, 14vw, 14rem);
   }
   html body .stage .grid .card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     justify-self: center;
-    width: min(100%, 25rem);
+    width: min(100%, 26rem);
   }
 }
 @media (max-width: 600px) {
   html body .stage .card { width: min(100%, 26rem); }
-  html body .stage .grid { gap: 3.5rem; }
+  html body .stage .grid { gap: 4.5rem; }
 }

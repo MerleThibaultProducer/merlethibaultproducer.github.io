@@ -7,10 +7,10 @@
 const SITE_FR = {
   prenom: "Thibault", nom: "Merle",
   titre: "Junior Associate Producer",
-  accueilTitre: "Junior Associate Producer, formé à Game Sup",   // grand titre de la page d'accueil
+  accueilTitre: "Je prépare les coupes avant que les retards ne les imposent",   // grand titre de la page d'accueil
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
-    "Je m'appelle Thibault et je suis en dernière année à Game Sup. Sur quatre productions d'école, j'ai planifié et suivi des projets avec jusqu'à quatre équipes en même temps, des premiers jalons jusqu'aux playtests. J'adapte la méthode de production à chaque équipe après l'avoir écoutée, et **je prépare les coupes avant que les retards ne les imposent**, pour que chacun sache où en est le projet.",
+    "Je m'appelle Thibault, Junior Associate Producer en dernière année à Game Sup. Sur quatre productions d'école, j'ai planifié et suivi des projets avec jusqu'à quatre équipes en même temps, des premiers jalons jusqu'aux playtests. J'adapte la méthode de production à chaque équipe après l'avoir écoutée, pour que chacun sache où en est le projet.",
     "Je recherche aujourd'hui **un stage de fin d'études ou un premier poste en production** à partir de janvier 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
@@ -21,9 +21,9 @@ const SITE_FR = {
   ]
 };
 const SITE_EN = {...SITE_FR,
-  accueilTitre: "Junior Associate Producer, trained at Game Sup",
+  accueilTitre: "I prepare cuts before delays force them",
   intro: [
-    "My name is Thibault and I'm in my final year at Game Sup. Across four school productions, I have planned and tracked projects with up to four teams at once, from the first milestones to the playtests. I adapt the production method to each team after listening to its needs, and **I prepare cuts before delays force them**, so that everyone knows where the project stands.",
+    "My name is Thibault, a Junior Associate Producer in my final year at Game Sup. Across four school productions, I have planned and tracked projects with up to four teams at once, from the first milestones to the playtests. I adapt the production method to each team after listening to its needs, so that everyone knows where the project stands.",
     "I am now looking for **a final-year internship or a first job in production** starting in January 2027, anywhere in France or remotely."
   ],
   legal: [
@@ -257,7 +257,7 @@ const PROJECTS_FR = {
         img:PRO1.thumb, une:true,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
-        apercu:"Pour le projet de fin d'année de Game Sup, toute la promotion a développé quatre jeux en quatre semaines, et j'en étais le producer. J'ai adapté une méthode Agile aux jalons Waterfall de l'école et suivi chaque groupe sur Excel. Après une crise de direction artistique en deuxième semaine, j'ai organisé deux sessions de playtest communes, puis revu les priorités avec chaque équipe. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
+        apercu:"En deuxième semaine du projet de fin d'année, les quatre jeux de la promotion ont buté sur la même crise de direction artistique. J'étais le seul producer des quatre équipes : nous avons suspendu la production une journée et demie, puis j'ai organisé deux sessions de playtest communes et revu les priorités avec chaque groupe. Pour suivre l'ensemble, j'avais adapté une méthode Agile aux jalons Waterfall de l'école, avec un suivi Excel par groupe. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
@@ -334,7 +334,7 @@ const PROJECTS_FR = {
         carte:"Deux rogue-lites livrés en quinze jours, avec des coupes préparées à l'avance et une génération procédurale simulée pour tenir la date.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026 (15 jours ouvrés)", "Outils":"Excel · PowerPoint · Miro · Discord" },
-        apercu:"Pour ce workshop de Game Sup, deux équipes avaient quinze jours pour livrer chacune un rogue-lite en 2,5D sous Unity, d'après une licence imposée : *Vampire Hunter D: Bloodlust* pour l'une, *Mad Max: Fury Road* pour l'autre. J'étais le producer des deux, avec un planning commun et un suivi des tâches propre à chaque équipe. Quand la génération procédurale a résisté, nous l'avons simulée pour tenir la date. Les deux jeux ont été livrés **jouables de bout en bout**.",
+        apercu:"Dès la fin du premier sprint de ce workshop de quinze jours, la génération procédurale de Mad Max Fury Rogue, cœur imposé du rogue-lite, avait pris du retard. Avec le référent Game Design et l'accord des intervenants, nous l'avons simulée pour tenir la date. J'étais le producer des deux équipes, qui devaient livrer chacune un rogue-lite en 2,5D sous Unity d'après une licence de film, avec un planning commun et des coupes préparées à l'avance. Les deux jeux ont été livrés **jouables de bout en bout**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
@@ -357,7 +357,7 @@ const PROJECTS_FR = {
               T("La charge s'est concentrée au démarrage, et l'environnement était le poste le plus lourd des deux productions.")
             ]),
             LIGNE([
-              IMG("images/rogue-mm-backlog.png","Le backlog de Mad Max Fury Rogue : tâches, sprints, difficultés, priorités et statuts")
+              IMG("images/rogue-mm-backlog.png","Extrait du backlog de Mad Max Fury Rogue : tâches, sprints, difficultés, priorités et statuts")
             ])
           ]),
           BANDE("III","Préparer les coupes",[
@@ -396,18 +396,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("Chez Vampire Hunter E-Cycle, la QA est restée interne : un questionnaire, un God Mode pour tester les salles et des playtests UX. Le temps a manqué pour inviter des joueurs extérieurs. Chez Mad Max Fury Rogue, des problèmes techniques ont empêché les tests."),
               T("Les deux jeux étaient jouables de bout en bout le jour du jury. Les coupes, comme les trois salles de combat restées sans level art final, n'ont pas compromis l'expérience et nous ont permis de tenir la date.")
-            ],[ CAROUSEL([["images/rogue-vh-autel.jpg","Vampire Hunter E-Cycle en jeu"],["images/rogue-vh-ruines.jpg","Vampire Hunter E-Cycle : une salle en ruines"],["images/rogue-vh-galerie.jpg","Vampire Hunter E-Cycle : une galerie du château"],["images/rogue-vh-salle-rouge.jpg","Vampire Hunter E-Cycle : une salle du château"],["images/rogue-mm-jeu.jpg","Mad Max Fury Rogue en jeu, avec son interface"]]) ]),
-            LIGNE([
-              TABLEAU("Le cahier des charges, d'après les backlogs",["Exigence","Vampire Hunter E-Cycle","Mad Max Fury Rogue"],[
-                ["Génération procédurale","Deux versions du générateur","Simulée par des checkpoints dans le level design"],
-                ["Amélioration du personnage","HUB, salle d'amélioration et boutique","Le camion de Furiosa, première pièce de la run, avec son menu d'amélioration"],
-                ["Monnaie","Des âmes, dépensées à la boutique","Des écrous ; le marché a été mis de côté"],
-                ["Salles","Salles de combat (trois sur six habillées), salle de soin, boutique et salle d'amélioration","Salles de combat et salles iconiques, avec leur éclairage"],
-                ["Ennemis et boss","Un crâne et un rat ; le boss est une version élite du crâne","Des Warboys et un boss Warboy"],
-                ["Combat","Dash et double dash, attaque, sort projectile et flèches d'argent","Dash, attaque de mêlée, arbalète à flèches explosives"],
-                ["Menus et écrans","Menu principal, options, écrans de victoire et de défaite","Menus, réglage de la caméra, écran de fin, splash art"]
-              ], true)
-            ])
+            ],[ CAROUSEL([["images/rogue-vh-autel.jpg","Vampire Hunter E-Cycle en jeu"],["images/rogue-vh-ruines.jpg","Vampire Hunter E-Cycle : une salle en ruines"],["images/rogue-vh-galerie.jpg","Vampire Hunter E-Cycle : une galerie du château"],["images/rogue-vh-salle-rouge.jpg","Vampire Hunter E-Cycle : une salle du château"],["images/rogue-mm-jeu.jpg","Mad Max Fury Rogue en jeu, avec son interface"]]) ])
           ]),
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
@@ -449,7 +438,7 @@ const PROJECTS_FR = {
               T("Chaque équipe avait son backlog dans Excel, avec 220 tâches pour HellStorm et 348 pour Wakfu Riders, rangées par epic et par story. Un onglet par sprint détaillait la semaine, et chaque membre avait son propre onglet."),
               T("L'environnement était le poste le plus lourd : 72 tâches chez HellStorm, 131 chez Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","La carte de Wakfu Riders en construction dans Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders : le village et ses vignes dans l'éditeur"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Le backlog de HellStorm : epics, stories, personnes, difficultés, statuts, sprints et priorités"],["images/fusion-wk-backlog.png","Le backlog de Wakfu Riders, avec ses filtres par personne"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux onglets de chacun"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]]) ])
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Extrait du backlog de HellStorm : epics, stories, personnes, difficultés, statuts, sprints et priorités"],["images/fusion-wk-backlog.png","Extrait du backlog de Wakfu Riders"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux onglets de chacun"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]]) ])
           ]),
           BANDE("III","Suivre deux équipes",[
             LIGNE([
@@ -582,7 +571,6 @@ const PROJECTS_FR = {
           BANDE("IX","Ce que j'en retiens",[
             LIGNE([
               T("J'ai appris à **penser Jira comme une base de données**. Une fois les tickets bien rangés, une équipe ou un jalon n'est plus qu'une requête, et les décisions du producer deviennent visibles."),
-              T("Ce space est devenu une base réutilisable, qu'il suffit d'adapter à un autre projet."),
               T("Sur un vrai projet, j'ouvrirais le registre des risques dès le lancement, et je simulerais deux semaines complètes en temps réel.")
             ])
           ])
@@ -742,7 +730,7 @@ const PROJECTS_EN = {
         img:PRO1.thumb, une:true,
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
-        apercu:"For Game Sup's end-of-year project, the whole class developed four games in four weeks, and I was their producer. I adapted an Agile method to the school's Waterfall milestones and tracked each group in Excel. After an art direction crisis in the second week, I organised two shared playtest sessions, then reset priorities with each team. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
+        apercu:"In the second week of the end-of-year project, all four of the class's games hit the same art direction crisis. I was the only producer for the four teams: we paused production for a day and a half, then I organised two shared playtest sessions and reset priorities with each group. To keep track of it all, I had adapted an Agile method to the school's Waterfall milestones, with Excel tracking for each group. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
@@ -819,7 +807,7 @@ const PROJECTS_EN = {
         carte:"Two rogue-lites shipped in fifteen days, with cuts prepared in advance and procedural generation faked to hold the deadline.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026 (15 working days)", "Tools":"Excel · PowerPoint · Miro · Discord" },
-        apercu:"For this Game Sup workshop, two teams had fifteen days to each deliver a 2.5D rogue-lite in Unity, based on an assigned licence: *Vampire Hunter D: Bloodlust* for one, *Mad Max: Fury Road* for the other. I was the producer for both, with a shared schedule and a task tracker for each team. When procedural generation resisted, we faked it to hold the deadline. Both games were delivered **playable from start to finish**.",
+        apercu:"By the end of the first sprint of this fifteen-day workshop, procedural generation in Mad Max Fury Rogue, the required core of the rogue-lite, was already late. With the Game Design lead and the instructors' agreement, we faked it to hold the deadline. I was the producer for both teams, who each had to deliver a 2.5D rogue-lite in Unity based on a film licence, with a shared schedule and cuts prepared in advance. Both games were delivered **playable from start to finish**.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
@@ -842,7 +830,7 @@ const PROJECTS_EN = {
               T("The workload was front-loaded, and environment art was the heaviest area in both productions.")
             ]),
             LIGNE([
-              IMG("images/rogue-mm-backlog.png","The Mad Max Fury Rogue backlog: tasks, sprints, difficulties, priorities and statuses")
+              IMG("images/rogue-mm-backlog.png","Excerpt from the Mad Max Fury Rogue backlog: tasks, sprints, difficulties, priorities and statuses")
             ])
           ]),
           BANDE("III","Preparing the cuts",[
@@ -881,18 +869,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("In the Vampire Hunter E-Cycle team, QA stayed internal: a questionnaire, a God Mode to test the rooms and UX playtests. There was no time to invite outside players. In the Mad Max Fury Rogue team, technical problems prevented any testing."),
               T("Both games were playable from start to finish on jury day. The cuts, such as the three combat rooms left without final level art, did not compromise the experience and let us hold the deadline.")
-            ],[ CAROUSEL([["images/rogue-vh-autel.jpg","Vampire Hunter E-Cycle in game"],["images/rogue-vh-ruines.jpg","Vampire Hunter E-Cycle: a ruined room"],["images/rogue-vh-galerie.jpg","Vampire Hunter E-Cycle: a castle gallery"],["images/rogue-vh-salle-rouge.jpg","Vampire Hunter E-Cycle: a castle room"],["images/rogue-mm-jeu.jpg","Mad Max Fury Rogue in game, with its interface"]]) ]),
-            LIGNE([
-              TABLEAU("The brief, game by game, from the backlogs",["Requirement","Vampire Hunter E-Cycle","Mad Max Fury Rogue"],[
-                ["Procedural generation","Two versions of the generator","Faked with checkpoints in the level design"],
-                ["Character upgrades","HUB, upgrade room and shop","Furiosa's truck, the first room of each run, with its upgrade menu"],
-                ["Currency","Souls, spent at the shop","Hex nuts; the market was set aside"],
-                ["Rooms","Combat rooms (three of six dressed), healing room, shop and upgrade room","Combat rooms and iconic rooms, with their lighting"],
-                ["Enemies and boss","A skull and a rat; the boss is an elite skull","Warboys and a Warboy boss"],
-                ["Combat","Dash and double dash, attack, projectile spell and silver arrows","Dash, melee attack, crossbow with explosive bolts"],
-                ["Menus and screens","Main menu, options, victory and defeat screens","Menus, camera setting, end screen, splash art"]
-              ], true)
-            ])
+            ],[ CAROUSEL([["images/rogue-vh-autel.jpg","Vampire Hunter E-Cycle in game"],["images/rogue-vh-ruines.jpg","Vampire Hunter E-Cycle: a ruined room"],["images/rogue-vh-galerie.jpg","Vampire Hunter E-Cycle: a castle gallery"],["images/rogue-vh-salle-rouge.jpg","Vampire Hunter E-Cycle: a castle room"],["images/rogue-mm-jeu.jpg","Mad Max Fury Rogue in game, with its interface"]]) ])
           ]),
           BANDE("VII","What I take away",[
             LIGNE([
@@ -934,7 +911,7 @@ const PROJECTS_EN = {
               T("Each team had its own backlog in Excel, with 220 tasks for HellStorm and 348 for Wakfu Riders, filed by epic and story. One tab per sprint detailed the week, and each member had their own tab."),
               T("Environment art was the heaviest area: 72 tasks for HellStorm, 131 for Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","The Wakfu Riders map under construction in Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders: the village and its vineyards in the editor"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","The HellStorm backlog: epics, stories, owners, difficulties, statuses, sprints and priorities"],["images/fusion-wk-backlog.png","The Wakfu Riders backlog, with its filters by person"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to each person's tab"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]]) ])
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Excerpt from the HellStorm backlog: epics, stories, owners, difficulties, statuses, sprints and priorities"],["images/fusion-wk-backlog.png","Excerpt from the Wakfu Riders backlog"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to each person's tab"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]]) ])
           ]),
           BANDE("III","Following two teams",[
             LIGNE([
@@ -1067,7 +1044,6 @@ const PROJECTS_EN = {
           BANDE("IX","What I take away",[
             LIGNE([
               T("I learned to **think of Jira as a database**. Once tickets are well filed, a team or a milestone is just a query, and the producer's decisions become visible."),
-              T("This space has become a reusable base that only needs adapting to another project."),
               T("On a real project, I would open the risk register at kick-off, and simulate two full weeks in real time.")
             ])
           ])

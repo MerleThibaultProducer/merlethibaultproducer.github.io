@@ -11,7 +11,7 @@ const SITE_FR = {
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
     "Je m'appelle Thibault et je suis en dernière année à Game Sup. Sur quatre productions d'école, j'ai planifié et suivi des projets avec **jusqu'à quatre équipes en même temps**, des premiers jalons jusqu'aux playtests. **J'adapte la méthode de production à chaque équipe** après l'avoir écoutée, et **je prépare les coupes avant que les retards ne les imposent**, pour que chacun sache où en est le projet.",
-    "Je recherche aujourd'hui **un stage de fin d'études en production à partir de janvier 2027**, partout en France ou en télétravail."
+    "Je recherche aujourd'hui **un stage de fin d'études ou un premier poste en production à partir de janvier 2027**, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
   linkedin: "https://www.linkedin.com/in/thibault-merle-946187311",
@@ -24,7 +24,7 @@ const SITE_EN = {...SITE_FR,
   accueilTitre: "Junior Associate Producer, trained at Game Sup",
   intro: [
     "My name is Thibault and I'm in my final year at Game Sup. Across four school productions, I have planned and tracked projects with **up to four teams at once**, from the first milestones to the playtests. **I adapt the production method to each team** after listening to its needs, and **I prepare cuts before delays force them**, so that everyone knows where the project stands.",
-    "I am now looking for **a final-year production internship starting in January 2027**, anywhere in France or remotely."
+    "I am now looking for **a final-year internship or a first job in production starting in January 2027**, anywhere in France or remotely."
   ],
   legal: [
     "© 2026 Thibault Merle – All rights reserved.",

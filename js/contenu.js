@@ -261,8 +261,9 @@ const PROJECTS_FR = {
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("Chaque fin d'année, les promotions de Game Sup travaillent en équipe sur un projet de trois à quatre semaines. Après plusieurs phases de conception et de sélection, quatre sujets aux genres variés ont été retenus.")
-            ],[ FICHE("Les contraintes",["Quatre jeux à produire en même temps","Des jalons imposés par l'école : Proof of Concept, Alpha, Bêta","Un seul producer pour plus de cinquante personnes","Quatre semaines, sans marge pour rattraper un retard"]) ]),
+              T("Le projet de fin d'année réunit les Game Designers et les Game Artists de deuxième année autour d'un jeu situé entre le III et le AAA, au genre et au modèle économique libres. Les idées passent deux jurys de sélection en mai : chaque Game Designer défend d'abord son concept seul, puis les projets retenus sont repris en petits groupes. Quatre jeux ont été retenus pour la production."),
+              T("La production durait quatre semaines, du 27 mai au 24 juin, rythmées par les jalons de l'école. Chaque équipe devait livrer une **vertical slice jouable sur PC**, sous Unreal ou Unity : 5 à 15 minutes de jeu avec un niveau habillé, les menus, l'interface et les effets, accompagnées de toute la documentation, d'une vidéo de gameplay et d'une présentation au jury.")
+            ],[ FICHE("Les contraintes",["Quatre jeux en même temps, pour un seul producer et plus de cinquante personnes","Cinq jalons en quatre semaines : Intentions, Proof of Concept, Alpha, Bêta et Gold","Une vertical slice de 5 à 15 minutes, sans bug bloquant","Le conseil de l'école : mieux vaut moins, mais de qualité et fini"]) ]),
             LIGNE([ KEYART([
                       ["images/fda-castor.jpg","Le Castor et l'Écureuil","Un puzzle platformer où des animaux tentent de sauver leur environnement menacé en neutralisant les infrastructures humaines qui détruisent la nature de l'Anjou."],
                       ["images/fda-glow.jpg","Project GLOW","Un jeu d'action-aventure à la troisième personne, dans l'esprit d'inFAMOUS Second Son, où un adolescent rebelle doté de pouvoirs de portail doit renverser la corporation qui corrompt les gangs et pollue la ville.",1],
@@ -745,8 +746,9 @@ const PROJECTS_EN = {
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("Every year, Game Sup classes work in teams on a three- to four-week project. After several design and selection phases, four projects in different genres were chosen.")
-            ],[ FICHE("The constraints",["Four games to produce at the same time","Milestones set by the school: Proof of Concept, Alpha, Beta","A single producer for more than fifty people","Four weeks, with no slack to absorb delays"]) ]),
+              T("The end-of-year project brings second-year Game Designers and Game Artists together on a game somewhere between III and AAA, with a free choice of genre and business model. Ideas go through two selection juries in May: each Game Designer first pitches their concept alone, then the selected projects are taken up by small groups. Four games were chosen for production."),
+              T("Production lasted four weeks, from 27 May to 24 June, paced by the school's milestones. Each team had to deliver a **vertical slice playable on PC**, in Unreal or Unity: 5 to 15 minutes of play with a finished level, menus, interface and effects, along with all the documentation, a gameplay video and a jury presentation.")
+            ],[ FICHE("The constraints",["Four games at once, for a single producer and more than fifty people","Five milestones in four weeks: Intentions, Proof of Concept, Alpha, Beta and Gold","A 5- to 15-minute vertical slice, with no blocking bugs","The school's advice: better less, but polished and finished"]) ]),
             LIGNE([ KEYART([
                       ["images/fda-castor.jpg","Le Castor et l'Écureuil","A puzzle platformer where animals try to save their endangered environment by neutralising the human infrastructure destroying Anjou's nature."],
                       ["images/fda-glow.jpg","Project GLOW","A third-person action-adventure game in the vein of inFAMOUS Second Son, where a rebel teenager with portal powers must overthrow the corporation that corrupts the gangs and pollutes the city.",1],

@@ -214,12 +214,13 @@ const EQUIPES_FUSION = [
   { num:3, nom:"HellStorm", genre:"course tout-terrain · Doom", genreEn:"off-road racing · Doom",
     design:[
         M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
+        M("Tao Rimet","https://www.linkedin.com/in/tao-rimet-256a21330/","Référent Game Design · Level Design","Game Design Lead · Level Design"),
         M("Victor Cardineau","https://www.linkedin.com/in/victor-cardineau-234735437/","System Design"),
         M("Dylan Dessalines","","Technical Design"),
-        M("Tao Rimet","https://www.linkedin.com/in/tao-rimet-256a21330/","Level Design"),
         M("Romain Nicoghossian","https://www.linkedin.com/in/romain-nicoghossian-a39151290/","Level Design"),
         M("Baptiste Feron","https://www.linkedin.com/in/baptiste-feron-51232b264/","Narrative Design") ],
     art:[
+        M("Anaïs Lacoste","https://www.linkedin.com/in/ana%C3%AFs-lacoste-891315225/","Référent Game Art","Game Art Lead"),
         M("Thomas Vauché","https://www.linkedin.com/in/thomas-vauch%C3%A9-8181a3333/","Level Art"),
         M("Alexis Tassan-Toffola","https://www.linkedin.com/in/alexis-tassan-toffola-861035366/","Environment Art"),
         M("Erwan Rezkallah","https://www.linkedin.com/in/erwan-rezkallah-8a17073a1/","Environment Art"),
@@ -232,13 +233,14 @@ const EQUIPES_FUSION = [
   { num:4, nom:"Wakfu Riders", genre:"course arcade · Wakfu", genreEn:"arcade racing · Wakfu",
     design:[
         M("Thibault Merle","https://www.linkedin.com/in/thibault-merle-946187311/","Producer"),
+        M("Guillaume Soyez-Martin","https://www.linkedin.com/in/guillaume-soyez-martin-71a863253/","Référent Game Design · Narrative Design","Game Design Lead · Narrative Design"),
         M("Pierre Royer","https://www.linkedin.com/in/pierre-royer-0b0727357/","System Design"),
         M("Malo Fougères","https://www.linkedin.com/in/malo-foug%C3%A8res-65476938b/","Technical Design"),
         M("Matthias Gimenez","https://www.linkedin.com/in/matthias-gimenez-583615375/","Level Design"),
         M("Yaël Deschemaker","https://www.linkedin.com/in/ya%C3%ABl-deschemaker/","Level Design"),
-        M("Guillaume Soyez-Martin","https://www.linkedin.com/in/guillaume-soyez-martin-71a863253/","Narrative Design"),
         M("Tom Rossignol","https://www.linkedin.com/in/tom-rossignol-63148a3b8/","Généraliste","Generalist") ],
     art:[
+        M("Maëlys Monfort","https://www.linkedin.com/in/ma%C3%ABlysmonfort/","Référent Game Art · Concept Art","Game Art Lead · Concept Art"),
         M("Léa Millier","https://www.linkedin.com/in/l%C3%A9a-millier-713388283/","Level Art"),
         M("Enzo Rouminieras","https://www.linkedin.com/in/enzo-rouminieras-b2a167333/","Environment Art"),
         M("Allan Goniak","https://www.linkedin.com/in/allan-goniak-267044307/","Environment Art"),
@@ -246,8 +248,7 @@ const EQUIPES_FUSION = [
         M("Nicolas Abram","https://www.linkedin.com/in/nicolas-abram-38b1433a9/","Technical Art · VFX"),
         M("Lisa Canovas","https://www.linkedin.com/in/lisa-canovas-21915522b/","Character Art"),
         M("Fanny Bernhard","https://www.linkedin.com/in/fanny-bernhard-4a81a6333/","Character Art"),
-        M("Sarah Ounali","https://www.linkedin.com/in/sarah-ounali-6a1a47271/","Concept Art"),
-        M("Maëlys Monfort","https://www.linkedin.com/in/ma%C3%ABlysmonfort/","Concept Art") ] }
+        M("Sarah Ounali","https://www.linkedin.com/in/sarah-ounali-6a1a47271/","Concept Art") ] }
 ];
 
 const PROJECTS_FR = {

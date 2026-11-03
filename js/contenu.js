@@ -447,27 +447,28 @@ const PROJECTS_FR = {
             LIGNE([
               T("Chaque équipe avait son **backlog** dans Excel : 220 tâches pour HellStorm, 348 pour Wakfu Riders. Chaque tâche était rangée par epic et par story, avec une personne, une difficulté, une priorité, un sprint et un statut. Un onglet par sprint détaillait la semaine, et chaque membre de l'équipe avait son onglet avec ses propres tâches."),
               T("L'environnement était le poste le plus lourd des deux productions : 72 tâches chez HellStorm, 131 chez Wakfu Riders.")
-            ])
+            ],[ CAROUSEL([["images/fusion-wk-carte.jpg","La carte de Wakfu Riders en construction dans Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders : le village et ses vignes dans l'éditeur"]]) ])
           ]),
           BANDE("III","Suivre deux équipes",[
             LIGNE([
               T("C'était mon premier workshop avec des **dailies**. Je les ai confiés aux référents Art et Design de chaque équipe, et je faisais le point avec les deux groupes pendant les **revues hebdomadaires**."),
               T("Avec les référents, j'ai réparti les tâches entre Game Artists et Game Designers en cherchant à **équilibrer la charge** de chacun."),
               T("Chez HellStorm, quatre documents ont pris du retard au sprint 3 : les personas, l'analyse Marczewski et Octalysis, la concept map et la mise en page du document de level design. Je les ai reportés au sprint 4, où ils ont tous été terminés.")
-            ])
+            ],[ CAROUSEL([["images/fusion-hs-monocycle-concept.jpg","HellStorm : le concept du monocycle"],["images/fusion-hs-monocycle-3d-1.jpg","Le monocycle modélisé en 3D"],["images/fusion-hs-monocycle-3d-2.jpg","Le monocycle, vu de l'autre côté"],["images/fusion-hs-voiture-concept.jpg","HellStorm : le concept de la voiture"],["images/fusion-hs-voiture-3d.jpg","La voiture modélisée en 3D"],["images/fusion-hs-ui.jpg","L'écran de sélection de la carte, en cours d'intégration"]]) ])
           ]),
           BANDE("IV","Classer les assets par priorité",[
             LIGNE([
               T("Les listes d'assets étaient **classées par priorité** dès le départ. Chez HellStorm, la liste des props et de l'environnement comptait 39 éléments. Les 15 de priorité haute ont tous été réalisés, et les 13 restés de côté étaient de priorité moyenne ou basse, surtout des variantes de bâtiments et de rochers."),
               T("Wakfu Riders tenait trois listes. Sur 47 assets de décor, 40 ont été réalisés, et les sept restants étaient tous de priorité basse. Les 33 éléments d'interface ont tous été faits. Chaque son de la liste audio avait une note de 1 à 10 et, parfois, un **son de remplacement** : 23 sons sur 33 ont été produits, et la moitié des autres pouvait reprendre un son existant."),
               T("En production, peu de tâches ont été coupées : deux chez HellStorm, le système de matchmaking et une jointure de rampe sur la route, et cinq chez Wakfu Riders.")
-            ],[ FICHE("Laissés de côté chez Wakfu Riders",["L'église et la mairie modulaires","Les bonus de poids, de puissance et de maniabilité","La zone de respawn","Les signes et feedbacks du drift"]) ])
+            ],[ FICHE("Laissés de côté chez Wakfu Riders",["L'église et la mairie modulaires","Les bonus de poids, de puissance et de maniabilité","La zone de respawn","Les signes et feedbacks du drift"]) ]),
+            LIGNE([ CAROUSEL([["images/fusion-wk-recherches.webp","Wakfu Riders : les recherches de véhicules, dont le tonneau"],["images/fusion-wk-dinde.webp","Wakfu Riders : la dinde, modélisée dans Maya d'après ses références"]]) ])
           ]),
           BANDE("V","Tester",[
             LIGNE([
               T("Wakfu Riders a commencé la **QA** dès le premier sprint, en testant des jeux de course de référence comme F-Zero 99, avec un compte rendu à chaque fois. Le blocking a été testé deux fois au sprint 2, puis la vertical slice au sprint 3 et de nouveau au sprint 4."),
               T("Chez HellStorm, un questionnaire de QA sur les 3C, le level design et les systèmes a été préparé au sprint 3, et la carte a été nettoyée pour un playtest au sprint 4.")
-            ])
+            ],[ CAROUSEL([["images/fusion-wk-ld-sketch.webp","Wakfu Riders : le sketch de level design du parcours"],["images/fusion-wk-blocking.webp","Le parcours en blocking dans Unreal Engine"],["images/fusion-wk-jeu.jpg","Wakfu Riders en jeu, au pied de l'arbre géant"]]) ])
           ]),
           BANDE("VI","Ce que j'en retiens",[
             LIGNE([
@@ -930,27 +931,28 @@ const PROJECTS_EN = {
             LIGNE([
               T("Each team had its own **backlog** in Excel: 220 tasks for HellStorm, 348 for Wakfu Riders. Each task was filed by epic and story, with an owner, a difficulty, a priority, a sprint and a status. One tab per sprint detailed the week, and each team member had a tab with their own tasks."),
               T("Environment art was the heaviest area in both productions: 72 tasks for HellStorm, 131 for Wakfu Riders.")
-            ])
+            ],[ CAROUSEL([["images/fusion-wk-carte.jpg","The Wakfu Riders map under construction in Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders: the village and its vineyards in the editor"]]) ])
           ]),
           BANDE("III","Following two teams",[
             LIGNE([
               T("This was my first workshop with **dailies**. I handed them to each team's Art and Design leads, and caught up with both groups during the **weekly reviews**."),
               T("With the leads, I split the tasks between Game Artists and Game Designers, trying to **balance everyone's workload**."),
               T("In the HellStorm team, four documents fell behind in sprint 3: the personas, the Marczewski and Octalysis analysis, the concept map and the layout of the level design document. I moved them to sprint 4, where they were all finished.")
-            ])
+            ],[ CAROUSEL([["images/fusion-hs-monocycle-concept.jpg","HellStorm: the monocycle concept"],["images/fusion-hs-monocycle-3d-1.jpg","The monocycle modelled in 3D"],["images/fusion-hs-monocycle-3d-2.jpg","The monocycle, seen from the other side"],["images/fusion-hs-voiture-concept.jpg","HellStorm: the car concept"],["images/fusion-hs-voiture-3d.jpg","The car modelled in 3D"],["images/fusion-hs-ui.jpg","The map selection screen, being integrated"]]) ])
           ]),
           BANDE("IV","Ranking assets by priority",[
             LIGNE([
               T("The asset lists were **ranked by priority** from the start. HellStorm's props and environment list had 39 items. All 15 high-priority items were made, and the 13 left aside were medium or low priority, mostly building and rock variants."),
               T("Wakfu Riders kept three lists. Of 47 set assets, 40 were made, and the seven left were all low priority. All 33 interface elements were done. Each sound in the audio list had a score from 1 to 10 and, sometimes, a **fallback sound**: 23 of 33 sounds were produced, and half of the others could reuse an existing sound."),
               T("During production, few tasks were cut: two at HellStorm, the matchmaking system and a ramp joint on the road, and five at Wakfu Riders.")
-            ],[ FICHE("Left aside at Wakfu Riders",["The modular church and town hall","The weight, power and handling pickups","The respawn zone","The drift signs and feedback"]) ])
+            ],[ FICHE("Left aside at Wakfu Riders",["The modular church and town hall","The weight, power and handling pickups","The respawn zone","The drift signs and feedback"]) ]),
+            LIGNE([ CAROUSEL([["images/fusion-wk-recherches.webp","Wakfu Riders: vehicle research, including the barrel"],["images/fusion-wk-dinde.webp","Wakfu Riders: the turkey, modelled in Maya from its references"]]) ])
           ]),
           BANDE("V","Testing",[
             LIGNE([
               T("Wakfu Riders started **QA** in the first sprint by testing reference racing games such as F-Zero 99, with a report each time. The blocking was tested twice in sprint 2, then the vertical slice in sprint 3 and again in sprint 4."),
               T("At HellStorm, a QA questionnaire on the 3Cs, level design and systems was prepared in sprint 3, and the map was cleaned up for a playtest in sprint 4.")
-            ])
+            ],[ CAROUSEL([["images/fusion-wk-ld-sketch.webp","Wakfu Riders: the level design sketch of the track"],["images/fusion-wk-blocking.webp","The track in blocking in Unreal Engine"],["images/fusion-wk-jeu.jpg","Wakfu Riders in game, at the foot of the giant tree"]]) ])
           ]),
           BANDE("VI","What I took away",[
             LIGNE([

@@ -7,7 +7,7 @@
 const SITE_FR = {
   prenom: "Thibault", nom: "Merle",
   titre: "Junior Associate Producer",
-  accueilTitre: "J'organise les équipes pour faire avancer les jeux",   // grand titre de la page d'accueil
+  accueilTitre: "J'organise les équipes pour faire avancer les projets",   // grand titre de la page d'accueil
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
     "Je m'appelle Thibault, Junior Associate Producer en dernière année à Game Sup. Sur quatre productions d'école, j'ai planifié et suivi des projets avec jusqu'à quatre équipes en même temps, des premiers jalons jusqu'aux playtests. J'adapte la méthode de production à chaque équipe après l'avoir écoutée, pour que chacun sache où en est le projet.",
@@ -21,7 +21,7 @@ const SITE_FR = {
   ]
 };
 const SITE_EN = {...SITE_FR,
-  accueilTitre: "I organise teams to keep games moving",
+  accueilTitre: "I organise teams to keep projects moving",
   intro: [
     "My name is Thibault, a Junior Associate Producer in my final year at Game Sup. Across four school productions, I have planned and tracked projects with up to four teams at once, from the first milestones to the playtests. I adapt the production method to each team after listening to its needs, so that everyone knows where the project stands.",
     "I am now looking for **a final-year internship or a first job in production** starting in January 2027, anywhere in France or remotely."

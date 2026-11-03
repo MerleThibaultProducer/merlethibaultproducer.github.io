@@ -274,11 +274,11 @@ const PROJECTS_FR = {
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
-        apercu:"En deuxième semaine du projet de fin d'année, les quatre jeux de la promotion ont buté sur la même crise de direction artistique. J'étais le seul producer des quatre équipes : nous avons suspendu la production une journée et demie, puis j'ai organisé deux sessions de playtest communes et revu les priorités avec chaque groupe. Pour suivre l'ensemble, j'avais adapté une méthode Agile aux jalons Waterfall de l'école, avec un suivi Excel par groupe. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
+        apercu:"En deuxième semaine, les quatre jeux de la promotion ont buté sur la même crise de direction artistique. J'étais le seul producer des quatre équipes : nous avons suspendu la production une journée et demie, puis j'ai organisé deux playtests communs et revu les priorités avec chaque groupe. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("Le projet de fin d'année réunit les Game Designers et les Game Artists de deuxième année autour d'un jeu situé entre le III et le AAA, au genre et au modèle économique libres. Les idées passent deux jurys de sélection en mai. Chaque Game Designer défend d'abord son concept seul, puis les projets retenus sont repris en petits groupes. Quatre jeux ont été retenus pour la production."),
+              T("Le projet de fin d'année réunit les Game Designers et les Game Artists de deuxième année autour d'un jeu entre le III et le AAA, au genre libre. Après deux jurys de sélection en mai, quatre jeux ont été retenus pour la production."),
               T("Chaque équipe devait livrer une **vertical slice jouable sur PC**, sous Unreal ou Unity, avec sa documentation, une vidéo de gameplay et une présentation au jury.")
             ],[ FICHE("Les contraintes",["Quatre jeux en quatre semaines, du 27 mai au 24 juin, pour un seul producer et plus de cinquante personnes","Cinq jalons : Intentions, Proof of Concept, Alpha, Bêta et Gold","5 à 15 minutes de jeu, avec un niveau habillé, les menus et les effets, sans bug bloquant","Le conseil de l'école : mieux vaut moins, mais de qualité et fini"]) ]),
             LIGNE([ KEYART([
@@ -290,27 +290,27 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Organiser quatre équipes en parallèle",[
             LIGNE([
-              T("Avec quatre jeux et plus de cinquante personnes, je ne pouvais pas être dans chaque salle. Nous avons donc **lancé les productions en promotion entière**, le lendemain de la sélection. Tout le monde a entendu les mêmes consignes au même moment, et nous avons posé ensemble l'organisation, les outils et la méthode."),
-              T("Avec les intervenants, j'ai désigné deux référents par groupe, un pour les Game Designers et un pour les Game Artists. Les dailies, avec les référents et toute l'équipe, assuraient le suivi quand j'étais avec un autre groupe, et je restais l'interlocuteur entre les intervenants et les équipes.")
+              T("Avec quatre jeux et plus de cinquante personnes, je ne pouvais pas être dans chaque salle. Nous avons donc **lancé les productions en promotion entière**, pour que tout le monde parte des mêmes consignes, des mêmes outils et de la même méthode."),
+              T("Avec les intervenants, j'ai désigné deux référents par groupe, un en Game Design et un en Game Art. Les dailies assuraient le suivi quand j'étais avec un autre groupe.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planifier et suivre la production",[
             LIGNE([
-              T("L'école fixait les jalons en Waterfall, du Proof of Concept à la Vertical Slice, et chaque équipe travaillait en **Agile**, par sprints, à l'intérieur de ce cadre. Il me fallait relier les deux avec un suivi assez homogène pour comparer les quatre groupes et repérer les retards tôt."),
-              T("J'ai construit ce suivi sur Excel. Un macro-planning par groupe posait les sprints et les jalons, et un micro-planning donnait à chaque tâche un sprint, une priorité, une difficulté et un statut, soit 1 387 tâches au total. Les documents étaient partagés sur OneDrive, et chaque groupe avait son espace Discord.")
+              T("L'école fixait les jalons en Waterfall, et chaque équipe travaillait en **Agile**, par sprints, à l'intérieur de ce cadre. Il me fallait un suivi assez homogène pour comparer les quatre groupes et repérer les retards tôt."),
+              T("J'ai construit ce suivi sur Excel : un macro-planning par groupe pour les sprints et les jalons, et un micro-planning où chaque tâche avait un sprint, une priorité, une difficulté et un statut, soit 1 387 tâches au total.")
             ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)") ]),
             LIGNE([
-              T("Tenir ces statuts à jour demandait une attention constante, mais c'est ce qui rendait visibles les retards et les tâches abandonnées, sprint par sprint.")
+              T("Tenir ces statuts à jour demandait une attention constante, mais c'est ce qui rendait les retards visibles, sprint par sprint.")
             ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ])
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
-              T("En deuxième semaine, le même problème est apparu dans les quatre groupes : **la direction artistique était confuse**. Les retards ont vite atteint deux à trois jours, et je sentais venir le risque de crunch."),
-              T("Nous avons organisé des réunions d'urgence avec chaque groupe et suspendu la production pendant une journée et demie. Les références étaient trop vastes, et la passe de recherche du démarrage trop courte."),
-              T("Suspendre la production n'a pas été une décision facile. Je craignais surtout que les équipes perdent leur motivation, ou leur foi dans leur projet. J'ai abordé ces réunions avec confiance et empathie, pour que chaque groupe reparte avec une direction claire.")
+              T("En deuxième semaine, le même problème est apparu dans les quatre groupes : **la direction artistique était confuse**. Les retards ont vite atteint deux à trois jours."),
+              T("Nous avons suspendu la production une journée et demie pour tenir des réunions d'urgence avec chaque groupe. Les références étaient trop vastes, et la recherche du démarrage trop courte."),
+              T("Je craignais surtout que les équipes perdent leur motivation. J'ai mené ces réunions pour que chaque groupe reparte avec une direction claire.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
-              T("Chaque groupe vivait la crise à sa manière. Pour Project GLOW, j'ai décidé avec les référents d'abandonner plusieurs assets hors cadre ou devenus secondaires. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
+              T("Pour Project GLOW, nous avons abandonné plusieurs assets hors cadre. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
             ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de Project GLOW") ]),
             LIGNE([
               
@@ -318,15 +318,13 @@ const PROJECTS_FR = {
           ]),
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
-              T("Après la crise, il restait deux semaines. J'ai organisé **deux sessions de playtest communes aux quatre groupes**, calées sur le planning des autres promotions pour accueillir des joueurs extérieurs."),
-              T("Chaque équipe a préparé un questionnaire. Celui du Castor et l'Écureuil, noté de 1 à 7, a recueilli 22 réponses."),
-              T("Les retours, nombreux et souvent critiques, sont arrivés alors que le moral était déjà entamé. Avec chaque équipe, nous avons gardé l'essentiel, puis j'ai redéfini les priorités et les plannings. Voir des inconnus jouer a aussi redonné de l'énergie, car malgré les critiques, les jeux plaisaient.")
+              T("Il restait deux semaines. J'ai organisé **deux sessions de playtest communes aux quatre groupes**, ouvertes aux joueurs des autres promotions."),
+              T("Les retours, nombreux et souvent critiques, sont arrivés alors que le moral était déjà entamé. Avec chaque équipe, nous avons gardé l'essentiel, puis j'ai redéfini les priorités. Voir des inconnus apprécier les jeux a aussi redonné de l'énergie.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest du Castor et l'Écureuil : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
           ]),
           BANDE("VI","Les quatre jeux livrés",[
             LIGNE([
-              T("Les quatre jeux ont été livrés au jury, chacun dans son univers : la forêt de l'Anjou du Castor et l'Écureuil, le manoir des années 1930 d'Insight, la ville envahie par les plantes de The Flowering Dead et les rues de Project GLOW."),
-              T("Les retours du jury ont été un vrai soulagement : il a souligné la qualité des quatre projets, et avec elle le travail des équipes.")
+              T("Les quatre jeux ont été livrés au jury, qui a souligné la qualité des projets et le travail des équipes.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil : le menu principal et la forêt en jeu"],["images/fda-insight-1.jpg","Insight : la bibliothèque du manoir"],["images/fda-insight-2.jpg","Insight : la grande salle et ses lustres"],["images/fda-insight-3.jpg","Insight : la lunette astronomique de la mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead : la ville envahie par les plantes"],["images/fda-flowering-2.jpg","The Flowering Dead : un passage sous les arcades"],["images/fda-flowering-3.jpg","The Flowering Dead : le beffroi et la tour"],["images/fda-glow-jeu.jpg","Project GLOW en jeu : une rue barrée par une grille"]]) ]),
             LIGNE([
               T("Pour Project GLOW, on voit la ville passer du plan au blockout, puis au Level Art et à la lumière.")
@@ -334,9 +332,9 @@ const PROJECTS_FR = {
           ]),
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
-              T("C'était la première fois que l'on me confiait la production d'une promotion entière. La crise m'a appris à mettre de côté ce que je croyais savoir pour **écouter les besoins de chaque équipe**. J'ai aussi appris à déléguer, et à poser dès le départ des canaux de communication clairs."),
-              T("Sur un prochain projet de cette taille, je ferais d'abord créer une scène de référence dans le moteur, avec un prop à la qualité visée, ses textures et ses intentions de lumière. Chaque groupe partirait ainsi d'une direction artistique visible à l'écran dès la première semaine."),
-              T("Je raccourcirais aussi les dailies sur le modèle du Daily Scrum, centrés sur l'objectif du sprint et les blocages, et je fixerais des livrables de fin de sprint précis pour chaque spécialité.")
+              T("C'était la première fois que je produisais pour une promotion entière. La crise m'a appris à **écouter les besoins de chaque équipe** avant d'appliquer ce que je croyais savoir. J'ai aussi appris à déléguer."),
+              T("Sur un projet de cette taille, je ferais d'abord créer une scène de référence dans le moteur, avec un prop à la qualité visée, pour que chaque groupe voie la direction artistique dès la première semaine."),
+              T("Je raccourcirais aussi les dailies, en les centrant sur l'objectif du sprint et les blocages.")
             ])
           ]),
           BANDE("VIII","Les équipes",[
@@ -511,18 +509,18 @@ const PROJECTS_FR = {
         carte:"Un studio fictif organisé dans Jira en Scrum : sprints, bugs, risques et automatisations.",
         img:"images/jira-vignette.jpg",
         infos:{ "Rôle":"Producer (mise en situation, mené seul)", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL", "Période":"Octobre 2026", "Temps de travail":"20 h environ", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
-        apercu:"Pour apprendre Jira sur un cas réaliste, j'ai organisé seul la production d'un **action-RPG AA fictif** de 15 personnes et quatre prestataires, sur le modèle d'Ember Lab pour Kena: Bridge of Spirits. Le projet compte cinq boards, une bibliothèque de filtres, cinq automatisations et un registre de sept risques, éprouvés par un sprint simulé. Je joue tous les rôles et les données sont simulées, pour montrer comment je structure l'outil.",
+        apercu:"Pour apprendre Jira sur un cas réaliste, j'ai organisé seul la production fictive d'un **action-RPG AA** de 15 personnes et quatre prestataires, sur le modèle de Kena: Bridge of Spirits, puis je l'ai éprouvée par un sprint simulé.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("Je voulais voir comment un studio s'organise dans Jira, avec des équipes, des prestataires et des jalons sur plusieurs années. Mon jeu fictif reprend ce qu'Ember Lab a rendu public sur Kena, un action-RPG produit en trois ans par 15 personnes, avec des prestataires pour la QA, une partie de l'art et la musique."),
+              T("Mon jeu fictif reprend ce qu'Ember Lab a rendu public sur Kena : un action-RPG produit en trois ans par 15 personnes, avec des prestataires pour la QA, une partie de l'art et la musique."),
               T("J'ai mené ce projet en parallèle de la formation Agile with Atlassian Jira (Coursera), dont j'ai obtenu le certificat le 14 octobre 2026."),
               LIEN("Vérifier le certificat","https://coursera.org/verify/EQE4DN5JX2XG")
             ],[ FICHE("Les contraintes",["Une équipe de 15 personnes, pour une offre gratuite limitée à 10 utilisateurs","Jira ne permet pas d'antidater un ticket : la simulation se fait en temps réel","Un travail mené seul, en jouant tous les rôles"]) ])
           ]),
           BANDE("II","Organiser le studio et ses prestataires",[
             LIGNE([
-              T("J'ai réparti l'équipe en deux squads de six personnes, Gameplay et World, plus un groupe Transverse. Les prestataires ont leur propre squad, External, et un référent interne qui valide leurs livraisons.")
+              T("Deux squads de six personnes, Gameplay et World, un groupe Transverse et une squad External pour les prestataires, avec un référent interne qui valide leurs livraisons.")
             ],[ SCHEMA("squads","L'équipe : deux squads de six personnes, un groupe transverse et quatre prestataires") ]),
             LIGNE([
               T("Chaque ticket est **rangé selon quatre axes** : le composant, la squad, la version et le label. Chaque vue du projet devient alors une simple requête.")
@@ -531,7 +529,7 @@ const PROJECTS_FR = {
           BANDE("III","Préparer la Vertical Slice",[
             LIGNE([
               T("Le découpage de la Vertical Slice a fait apparaître deux goulots, l'animateur gameplay et le sound designer, et un chemin critique qui passe par les prestataires. J'ai donc engagé les squads prudemment, 21 points pour Gameplay et 13 pour World, et ces constats sont devenus les premiers risques du registre."),
-              T("Chaque sprint part d'un objectif écrit du point de vue du joueur, vérifiable en démo. La Definition of Ready fixe ce qu'une Story doit avoir pour entrer en sprint, et la Definition of Done ce qu'elle doit avoir passé pour en sortir.")
+              T("Chaque sprint part d'un objectif vérifiable en démo, avec une Definition of Ready pour y entrer et une Definition of Done pour en sortir.")
             ],[ CHIFFRES([["23","Stories dans la Vertical Slice"],["126","Points estimés"],["13 et 15","Stories pour l'animateur et le sound designer"],["3","Livraisons externes qui bloquent des Stories"]]) ])
           ]),
           BANDE("IV","Donner à chacun la bonne visibilité",[
@@ -540,54 +538,54 @@ const PROJECTS_FR = {
             ],[ CAROUSEL([["images/jira-board-production.png","Production : la vue d'ensemble, sans sprint"],["images/jira-board-gameplay.png","Gameplay : le sprint de la squad, groupé par Epic"],["images/jira-board-world.png","World : le sprint de la squad, groupé par Epic"],["images/jira-board-vendors.png","Vendors : les livraisons attendues de chaque prestataire"]]) ]),
             LIGNE([
               T("Une bibliothèque de filtres répond aux questions du lundi matin : où en est le sprint, qu'est-ce qui bloque, le périmètre a-t-il bougé.")
-            ],[ IMG("images/jira-filtres.png","Le filtre du périmètre de la Vertical Slice et la liste des filtres enregistrés") ]),
+            ],[ IMG("images/jira-filtres.png","Le filtre du périmètre de la Vertical Slice et les filtres enregistrés") ]),
             LIGNE([
-              T("Les Stories passent par une revue puis une vérification QA avant Done, et chaque retour en arrière est une transition nommée qu'on peut compter.")
+              T("Chaque retour en arrière d'une Story est une transition nommée, qu'on peut compter.")
             ],[ IMG("images/jira-workflow-dev.png","Le workflow des Stories et des Tasks") ])
           ]),
           BANDE("V","Le circuit des bugs",[
             LIGNE([
-              T("J'ai retravaillé le ticket de bug pour ses deux lecteurs, la QA et le producer, en m'appuyant sur *The Pocket Mentor for Video Game Testing* de Harún H. Ali. Des champs dédiés situent le bug, le décrivent et mesurent son taux de reproduction."),
-              T("La sévérité dit à quel point le jeu est cassé, la priorité dans quel ordre on corrige. Un bug peut être grave mais rare, et c'est au producer d'arbitrer.")
-            ],[ IMG("images/jira-ticket-bug.png","Un bug bloquant reproduit 8 fois sur 10, corrigé et fermé : sévérité Blocker, priorité Highest, likelihood Very frequent, et la Story qu'il bloquait") ]),
+              T("J'ai retravaillé le ticket de bug pour ses deux lecteurs, la QA et le producer, en m'appuyant sur *The Pocket Mentor for Video Game Testing* de Harún H. Ali."),
+              T("La sévérité dit à quel point le jeu est cassé, la priorité dans quel ordre on corrige. Un bug grave mais rare reste un arbitrage du producer.")
+            ],[ IMG("images/jira-ticket-bug.png","Un bug bloquant reproduit 8 fois sur 10, corrigé et fermé") ]),
             LIGNE([
-              T("Une automatisation déduit la fréquence du taux de reproduction, pour qu'elle ne varie plus d'un testeur à l'autre. Un bug reproduit 8 fois sur 10 passe ainsi en Very frequent.")
-            ],[ IMG("images/jira-auto-repro.png","La règle du taux de reproduction : calcul, contrôle des valeurs, puis une branche par option de likelihood") ]),
+              T("Une automatisation déduit la fréquence du taux de reproduction, pour qu'elle ne dépende plus du testeur.")
+            ],[ IMG("images/jira-auto-repro.png","La règle qui calcule la fréquence") ]),
             LIGNE([
-              T("Sur le board QA, les bugs sont rangés par sévérité, et chaque colonne a une limite de travail en cours. Quand elle déborde, l'équipe finit des bugs avant d'en ouvrir d'autres.")
-            ],[ CAROUSEL([["images/jira-board-qa.png","Le board QA-Bugs : les bugs bloquants regroupés en haut, du triage à la fermeture"],["images/jira-colonnes-qa.png","Les colonnes et leurs limites de travail en cours"]]) ]),
+              T("Sur le board QA, chaque colonne a une limite de travail en cours. Quand elle déborde, l'équipe finit des bugs avant d'en ouvrir d'autres.")
+            ],[ CAROUSEL([["images/jira-board-qa.png","Le board QA-Bugs, bloquants en haut"],["images/jira-colonnes-qa.png","Les colonnes et leurs limites de travail en cours"]]) ]),
             LIGNE([
               T("**Un bug ne se ferme jamais sans résolution**, ce qui permet aussi de compter les réouvertures.")
             ],[ SCHEMA("bugflow","Le parcours d'un bug, ses retours en arrière et ses résolutions") ])
           ]),
           BANDE("VI","Éprouver l'outil avec un sprint simulé",[
             LIGNE([
-              T("Pour éprouver les rapports, j'ai fait vivre un premier sprint par squad, compressé à une semaine, avec un scénario de onze bugs, dont un bloquant, un doublon et une réouverture. Le burndown chute d'un coup parce que j'ai clôturé les sprints en avance.")
-            ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01 : objectif, burndown et tickets terminés, dont quatre bugs ajoutés en cours de route") ]),
+              T("Pour éprouver les rapports, j'ai simulé un premier sprint par squad, compressé à une semaine, avec onze bugs dont un bloquant, un doublon et une réouverture.")
+            ],[ IMG("images/jira-sprint-report.png","Le sprint report de Gameplay S01, avec quatre bugs ajoutés en cours de route") ]),
             LIGNE([
-              T("Le **dashboard du producer** suit l'avancée du sprint, la qualité du build et les risques. Un filtre de contrôle liste les tickets incomplets, pour que les autres chiffres restent fiables.")
-            ],[ CAROUSEL([["images/jira-dashboard.png","Pendant le sprint : burndowns, périmètre de la Vertical Slice et contrôles"],["images/jira-dashboard-fin.png","Après le premier sprint : contrôle à zéro, onze bugs créés et résolus, risques classés par score et matrice probabilité × impact"]]) ])
+              T("Le **dashboard du producer** suit le sprint, la qualité du build et les risques. Un filtre de contrôle liste les tickets incomplets, pour que les chiffres restent fiables.")
+            ],[ CAROUSEL([["images/jira-dashboard.png","Le dashboard pendant le sprint"],["images/jira-dashboard-fin.png","Le dashboard après le premier sprint : contrôle à zéro, onze bugs résolus"]]) ])
           ]),
           BANDE("VII","Automatiser les gestes répétitifs",[
             LIGNE([
-              T("Chaque automatisation suit la même logique : quand un événement se produit, seulement si une condition est vraie, alors une action s'exécute. Sans condition, la règle qui démarre une Story tenterait de la relancer à chaque sous-tâche.")
+              T("Chaque automatisation suit la même logique : un événement, une condition, une action. Sans condition, la règle qui démarre une Story la relancerait à chaque sous-tâche.")
             ],[ SCHEMA("autoflow","Cinq règles du space, lues selon la même logique") ]),
             LIGNE([
-              T("Le journal d'audit m'a servi à comprendre ce qui bloquait, comme un calcul qui échouait parce que deux champs portaient le même nom.")
-            ],[ CAROUSEL([["images/jira-automations.png","Les règles actives sur le space"],["images/jira-audit-erreur.png","Le journal d'audit : le calcul du score échoue, l'impact revient vide"],["images/jira-audit-correctif.png","Le déclencheur corrigé : l'impact appelé par son identifiant, cf[10091]"],["images/jira-flow-story.png","Quand une sous-tâche démarre, sa Story passe en cours si elle ne l'est pas déjà"]]) ])
+              T("Le journal d'audit m'a aidé à trouver ce qui bloquait, comme deux champs qui portaient le même nom.")
+            ],[ CAROUSEL([["images/jira-automations.png","Les règles actives sur le space"],["images/jira-audit-erreur.png","Le journal d'audit montre l'échec du calcul"],["images/jira-audit-correctif.png","Le déclencheur corrigé, avec le champ appelé par son identifiant"],["images/jira-flow-story.png","Une sous-tâche qui démarre fait passer sa Story en cours"]]) ])
           ]),
           BANDE("VIII","Anticiper avec un registre des risques",[
             LIGNE([
-              T("J'ai ajouté un **type de ticket Risk**, avec une probabilité, un impact, un signal d'alerte, une atténuation et un plan de repli, relié aux tickets qu'il menace."),
-              T("Le risque R4, la dérive du périmètre, obtient un score de 12. Son signal d'alerte est mesurable, l'atténuation impose que tout ajout soit compensé par un retrait, et le plan de repli gèle le périmètre deux sprints avant le jalon."),
-            ],[ CAROUSEL([["images/jira-risque-r4.png","Le risque R4, dérive du périmètre : score, signal d'alerte, atténuation, plan de repli et Epics menacés"],["images/jira-risques-liste.png","Les sept risques et leur statut : cinq en atténuation, deux en suivi"],["images/jira-risques-matrice.png","La matrice probabilité × impact"]]) ]),
+              T("J'ai ajouté un **type de ticket Risk**, avec une probabilité, un impact, un signal d'alerte, une atténuation et un plan de repli."),
+              T("Le risque R4, la dérive du périmètre, obtient un score de 12. Tout ajout doit être compensé par un retrait, et le périmètre gèle deux sprints avant le jalon."),
+            ],[ CAROUSEL([["images/jira-risque-r4.png","Le risque R4, dérive du périmètre"],["images/jira-risques-liste.png","Les sept risques et leur statut : cinq en atténuation, deux en suivi"],["images/jira-risques-matrice.png","La matrice probabilité × impact"]]) ]),
             LIGNE([
-              T("Le score d'un risque est calculé par une automatisation, et sa résolution dit ce qui s'est passé : atténué, survenu ou devenu obsolète.")
+              T("Le score est calculé automatiquement, et la résolution dit ce qui s'est passé : atténué, survenu ou obsolète.")
             ],[ SCHEMA("riskflow","Le parcours d'un risque, ses résolutions et le calcul de son score") ])
           ]),
           BANDE("IX","Ce que j'en retiens",[
             LIGNE([
-              T("J'ai appris à **penser Jira comme une base de données**. Une fois les tickets bien rangés, une équipe ou un jalon n'est plus qu'une requête, et les décisions du producer deviennent visibles."),
+              T("J'ai appris à **penser Jira comme une base de données** : une fois les tickets bien rangés, une équipe ou un jalon n'est plus qu'une requête."),
               T("Sur un vrai projet, j'ouvrirais le registre des risques dès le lancement, et je simulerais deux semaines complètes en temps réel.")
             ])
           ])
@@ -746,11 +744,11 @@ const PROJECTS_EN = {
         desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
-        apercu:"In the second week of the end-of-year project, all four of the class's games hit the same art direction crisis. I was the only producer for the four teams: we paused production for a day and a half, then I organised two shared playtest sessions and reset priorities with each group. To keep track of it all, I had adapted an Agile method to the school's Waterfall milestones, with Excel tracking for each group. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
+        apercu:"In the second week, all four of the class's games hit the same art direction crisis. I was the only producer for the four teams: we paused production for a day and a half, then I organised two shared playtests and reset priorities with each group. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("The end-of-year project brings second-year Game Designers and Game Artists together on a game somewhere between III and AAA, with a free choice of genre and business model. Ideas go through two selection juries in May. Each Game Designer first pitches their concept alone, then the selected projects are taken up by small groups. Four games were chosen for production."),
+              T("The end-of-year project brings second-year Game Designers and Game Artists together on a game somewhere between III and AAA, with a free choice of genre. After two selection juries in May, four games were chosen for production."),
               T("Each team had to deliver a **vertical slice playable on PC**, in Unreal or Unity, with its documentation, a gameplay video and a jury presentation.")
             ],[ FICHE("The constraints",["Four games in four weeks, from 27 May to 24 June, for a single producer and more than fifty people","Five milestones: Intentions, Proof of Concept, Alpha, Beta and Gold","5 to 15 minutes of play, with a finished level, menus and effects, and no blocking bugs","The school's advice: better less, but polished and finished"]) ]),
             LIGNE([ KEYART([
@@ -762,42 +760,40 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Organising four teams in parallel",[
             LIGNE([
-              T("With four games and more than fifty people, I could not be in every room. So we **launched production with the whole class**, the day after the selection. Everyone heard the same guidelines at the same time, and we set the organisation, tools and method together."),
-              T("With the instructors, I appointed two leads per group, one for the Game Designers and one for the Game Artists. Dailies with the leads and the whole team kept tracking going while I was with another group, and I remained the link between the instructors and the teams.")
+              T("With four games and more than fifty people, I could not be in every room. So we **launched production with the whole class**, so that everyone started from the same guidelines, tools and method."),
+              T("With the instructors, I appointed two leads per group, one in Game Design and one in Game Art. Dailies kept tracking going while I was with another group.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planning and tracking production",[
             LIGNE([
-              T("The school set Waterfall milestones, from Proof of Concept to Vertical Slice, and each team worked in **Agile** sprints within that frame. I had to connect the two with tracking consistent enough to compare the four groups and spot delays early."),
-              T("I built this tracking in Excel. A macro plan per group set out the sprints and milestones, and a micro plan gave each task a sprint, a priority, a difficulty and a status, for 1,387 tasks in total. Documents were shared on OneDrive, and each group had its own Discord space.")
+              T("The school set Waterfall milestones, and each team worked in **Agile** sprints within that frame. I needed tracking consistent enough to compare the four groups and spot delays early."),
+              T("I built this tracking in Excel: a macro plan per group for sprints and milestones, and a micro plan where each task had a sprint, a priority, a difficulty and a status, for 1,387 tasks in total.")
             ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)") ]),
             LIGNE([
-              T("Keeping these statuses up to date took constant attention, but it is what made delays and dropped tasks visible, sprint by sprint.")
+              T("Keeping these statuses up to date took constant attention, but it is what made delays visible, sprint by sprint.")
             ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses") ])
           ]),
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
-              T("In the second week, the same problem appeared in all four groups: **the art direction was unclear**. Delays quickly reached two to three days, and I could feel the risk of crunch coming."),
-              T("We held emergency meetings with each group and paused production for a day and a half. The references were too broad, and the research pass at the start too short."),
-              T("Pausing production was not an easy decision. My main fear was that the teams would lose their motivation, or their faith in their projects. I approached these meetings with confidence and empathy, so that each group would leave with a clear direction.")
+              T("In the second week, the same problem appeared in all four groups: **the art direction was unclear**. Delays quickly reached two to three days."),
+              T("We paused production for a day and a half to hold emergency meetings with each group. The references were too broad, and the research at the start too short."),
+              T("My main fear was that the teams would lose their motivation. I ran these meetings so that each group would leave with a clear direction.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
-              T("Each group experienced the crisis in its own way. For Project GLOW, I decided with the leads to cut several assets that were off-brief or no longer a priority. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
+              T("For Project GLOW, we cut several off-brief assets. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
             ],[ IMG(PRO1.kill,"Cut tasks in Project GLOW's tracking") ]),
             LIGNE([
             ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil: from blockout to the Level Art and atmospheric shader reworked after the crisis") ])
           ]),
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
-              T("After the crisis, two weeks remained. I organised **two playtest sessions for all four groups**, aligned with the other classes' schedules so that outside players could come."),
-              T("Each team prepared a questionnaire. The one for Le Castor et l'Écureuil, rated from 1 to 7, collected 22 responses."),
-              T("The feedback was plentiful and often critical, and it came when morale was already low. With each team, we kept what mattered most, then I reset the priorities and schedules. Watching strangers play also gave the teams new energy, because despite the criticism, players enjoyed the games.")
+              T("Two weeks remained. I organised **two playtest sessions for all four groups**, open to players from the other classes."),
+              T("The feedback was plentiful and often critical, and it came when morale was already low. With each team, we kept what mattered most, then I reset the priorities. Watching strangers enjoy the games also gave the teams new energy.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","The playtest feedback form for Le Castor et l'Écureuil: 22 responses"],["images/fda-playtest-perso.jpg","A section of the questionnaire: how players rated the characters"],["images/fda-playtest-coherence.jpg","A section of the questionnaire: design consistency, rated from 1 to 7"]]) ])
           ]),
           BANDE("VI","The four games delivered",[
             LIGNE([
-              T("All four games were delivered to the jury, each in its own world: the Anjou forest of Le Castor et l'Écureuil, the 1930s mansion of Insight, the plant-overrun city of The Flowering Dead and the streets of Project GLOW."),
-              T("The jury's feedback was a real relief: it praised the quality of all four projects, and with it the work of the teams.")
+              T("All four games were delivered to the jury, which praised the quality of the projects and the work of the teams.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil: the main menu and the forest in game"],["images/fda-insight-1.jpg","Insight: the mansion's library"],["images/fda-insight-2.jpg","Insight: the great hall and its chandeliers"],["images/fda-insight-3.jpg","Insight: the telescope on the mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead: the city overrun by plants"],["images/fda-flowering-2.jpg","The Flowering Dead: a passage under the arcades"],["images/fda-flowering-3.jpg","The Flowering Dead: the belfry and the tower"],["images/fda-glow-jeu.jpg","Project GLOW in game: a street blocked by a gate"]]) ]),
             LIGNE([
               T("For Project GLOW, you can see the city move from the layout to the blockout, then to Level Art and lighting.")
@@ -805,9 +801,9 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","What I take away",[
             LIGNE([
-              T("It was the first time I had been trusted with producing for an entire class. The crisis taught me to set aside what I thought I knew and **listen to each team's needs**. I also learned to delegate, and to set up clear communication channels from the start."),
-              T("On a next project of this size, I would first have a reference scene built in the engine, with a prop at the target quality, its textures and its lighting intentions. Each group would then start from an art direction visible on screen in the first week."),
-              T("I would also shorten the dailies on the Daily Scrum model, focused on the sprint goal and blockers, and set precise end-of-sprint deliverables for each discipline.")
+              T("It was the first time I had produced for an entire class. The crisis taught me to **listen to each team's needs** before applying what I thought I knew. I also learned to delegate."),
+              T("On a project of this size, I would first have a reference scene built in the engine, with a prop at the target quality, so that each group could see the art direction from the first week."),
+              T("I would also shorten the dailies, focusing them on the sprint goal and blockers.")
             ])
           ]),
           BANDE("VIII","The teams",[
@@ -981,18 +977,18 @@ const PROJECTS_EN = {
         desc:"The production of a fictional AA action-RPG, structured on my own in Jira, from the boards to the risk register.",
         carte:"A fictional studio run in Jira with Scrum: sprints, bugs, risks and automations.",
         infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL", "Period":"October 2026", "Workload":"About 20 hours", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
-        apercu:"To learn Jira on a realistic case, I set up on my own the production of a **fictional AA action-RPG** with 15 people and four vendors, modelled on Ember Lab's Kena: Bridge of Spirits. The project has five boards, a filter library, five automations and a register of seven risks, tested through a simulated sprint. I play every role and the data is simulated, to show how I structure the tool.",
+        apercu:"To learn Jira on a realistic case, I set up on my own the fictional production of an **AA action-RPG** with 15 people and four vendors, modelled on Kena: Bridge of Spirits, then tested it through a simulated sprint.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("I wanted to see how a studio organises itself in Jira, with teams, vendors and milestones over several years. My fictional game follows what Ember Lab has made public about Kena, an action-RPG made in three years by 15 people, with vendors for QA, part of the art and the music."),
+              T("My fictional game follows what Ember Lab has made public about Kena: an action-RPG made in three years by 15 people, with vendors for QA, part of the art and the music."),
               T("I ran this project alongside the Agile with Atlassian Jira course (Coursera), whose certificate I earned on 14 October 2026."),
               LIEN("Verify the certificate","https://coursera.org/verify/EQE4DN5JX2XG")
             ],[ FICHE("The constraints",["A 15-person team, on a free plan limited to 10 users","Jira cannot backdate a work item: the simulation runs in real time","Work done alone, playing every role"]) ])
           ]),
           BANDE("II","Organising the studio and its vendors",[
             LIGNE([
-              T("I split the team into two squads of six, Gameplay and World, plus a Cross-team group. Vendors have their own squad, External, and an internal lead who approves their deliveries.")
+              T("Two squads of six, Gameplay and World, a Cross-team group and an External squad for vendors, with an internal lead who approves their deliveries.")
             ],[ SCHEMA("squads","The team: two squads of six, a transverse group and four vendors") ]),
             LIGNE([
               T("Every ticket is **filed along four axes**: component, squad, version and label. Every view of the project then becomes a simple query.")
@@ -1001,7 +997,7 @@ const PROJECTS_EN = {
           BANDE("III","Preparing the Vertical Slice",[
             LIGNE([
               T("Breaking down the Vertical Slice revealed two bottlenecks, the gameplay animator and the sound designer, and a critical path that runs through the vendors. So I committed the squads cautiously, 21 points for Gameplay and 13 for World, and these findings became the first risks in the register."),
-              T("Each sprint starts from a goal written from the player's point of view, checkable in a demo. The Definition of Ready sets what a Story needs to enter a sprint, and the Definition of Done what it must pass to leave it.")
+              T("Each sprint starts from a goal checkable in a demo, with a Definition of Ready to enter and a Definition of Done to leave.")
             ],[ CHIFFRES([["23","Stories in the Vertical Slice"],["126","Estimated points"],["13 and 15","Stories for the animator and the sound designer"],["3","Vendor deliveries blocking Stories"]]) ])
           ]),
           BANDE("IV","Giving everyone the right visibility",[
@@ -1010,54 +1006,54 @@ const PROJECTS_EN = {
             ],[ CAROUSEL([["images/jira-board-production.png","Production: the overview, with no sprint"],["images/jira-board-gameplay.png","Gameplay: the squad's sprint, grouped by Epic"],["images/jira-board-world.png","World: the squad's sprint, grouped by Epic"],["images/jira-board-vendors.png","Vendors: the deliveries expected from each vendor"]]) ]),
             LIGNE([
               T("A filter library answers the Monday-morning questions: where the sprint stands, what is blocked, whether the scope has moved.")
-            ],[ IMG("images/jira-filtres.png","The Vertical Slice scope filter and the list of saved filters") ]),
+            ],[ IMG("images/jira-filtres.png","The Vertical Slice scope filter and the saved filters") ]),
             LIGNE([
-              T("Stories go through a review then a QA check before Done, and every step back is a named transition that can be counted.")
+              T("Every step back for a Story is a named transition that can be counted.")
             ],[ IMG("images/jira-workflow-dev.png","The Story and Task workflow") ])
           ]),
           BANDE("V","The bug pipeline",[
             LIGNE([
-              T("I reworked the bug ticket for its two readers, QA and the producer, drawing on Harún H. Ali's *The Pocket Mentor for Video Game Testing*. Dedicated fields locate the bug, describe it and measure its reproduction rate."),
-              T("Severity says how broken the game is, priority in which order to fix. A bug can be serious but rare, and it is the producer's call.")
-            ],[ IMG("images/jira-ticket-bug.png","A blocker bug reproduced 8 times out of 10, fixed and closed: Blocker severity, Highest priority, Very frequent likelihood, and the Story it was blocking") ]),
+              T("I reworked the bug ticket for its two readers, QA and the producer, drawing on Harún H. Ali's *The Pocket Mentor for Video Game Testing*."),
+              T("Severity says how broken the game is, priority in which order to fix. A serious but rare bug remains the producer's call.")
+            ],[ IMG("images/jira-ticket-bug.png","A blocker bug reproduced 8 times out of 10, fixed and closed") ]),
             LIGNE([
-              T("An automation derives the likelihood from the reproduction rate, so it no longer varies from one tester to another. A bug reproduced 8 times out of 10 becomes Very frequent.")
-            ],[ IMG("images/jira-auto-repro.png","The repro rate rule: calculation, value check, then one branch per likelihood option") ]),
+              T("An automation derives the likelihood from the reproduction rate, so it no longer depends on the tester.")
+            ],[ IMG("images/jira-auto-repro.png","The rule that calculates the likelihood") ]),
             LIGNE([
-              T("On the QA board, bugs are sorted by severity, and each column has a work-in-progress limit. When it overflows, the team finishes bugs before opening new ones.")
-            ],[ CAROUSEL([["images/jira-board-qa.png","The QA-Bugs board: blocking bugs grouped at the top, from triage to closure"],["images/jira-colonnes-qa.png","The columns and their work-in-progress limits"]]) ]),
+              T("On the QA board, each column has a work-in-progress limit. When it overflows, the team finishes bugs before opening new ones.")
+            ],[ CAROUSEL([["images/jira-board-qa.png","The QA-Bugs board, blockers at the top"],["images/jira-colonnes-qa.png","The columns and their work-in-progress limits"]]) ]),
             LIGNE([
               T("**A bug is never closed without a resolution**, which also makes reopenings countable.")
             ],[ SCHEMA("bugflow","The path of a bug, its ways back and its resolutions") ])
           ]),
           BANDE("VI","Testing the tool with a simulated sprint",[
             LIGNE([
-              T("To test the reports, I ran a first sprint per squad, compressed to one week, with a scenario of eleven bugs, including a blocker, a duplicate and a reopening. The burndown drops all at once because I closed the sprints early.")
-            ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report: goal, burndown and completed work items, including four bugs added mid-sprint") ]),
+              T("To test the reports, I simulated a first sprint per squad, compressed to one week, with eleven bugs including a blocker, a duplicate and a reopening.")
+            ],[ IMG("images/jira-sprint-report.png","The Gameplay S01 sprint report, with four bugs added mid-sprint") ]),
             LIGNE([
-              T("The **producer dashboard** tracks sprint progress, build quality and risks. A control filter lists incomplete tickets, so the other figures stay reliable.")
-            ],[ CAROUSEL([["images/jira-dashboard.png","During the sprint: burndowns, Vertical Slice scope and checks"],["images/jira-dashboard-fin.png","After the first sprint: control filter at zero, eleven bugs created and resolved, risks ranked by score and the probability × impact matrix"]]) ])
+              T("The **producer dashboard** tracks the sprint, build quality and risks. A control filter lists incomplete tickets, so the figures stay reliable.")
+            ],[ CAROUSEL([["images/jira-dashboard.png","The dashboard during the sprint"],["images/jira-dashboard-fin.png","The dashboard after the first sprint: control filter at zero, eleven bugs resolved"]]) ])
           ]),
           BANDE("VII","Automating the repetitive actions",[
             LIGNE([
-              T("Every automation follows the same logic: when an event happens, only if a condition is true, then an action runs. Without the condition, the rule that starts a Story would try to restart it with every subtask.")
+              T("Every automation follows the same logic: an event, a condition, an action. Without the condition, the rule that starts a Story would restart it with every subtask.")
             ],[ SCHEMA("autoflow","Five rules of the space, read with the same logic") ]),
             LIGNE([
-              T("The audit log helped me understand what was failing, such as a calculation that broke because two fields had the same name.")
-            ],[ CAROUSEL([["images/jira-automations.png","The rules active on the space"],["images/jira-audit-erreur.png","The audit log: the score calculation fails, impact comes back empty"],["images/jira-audit-correctif.png","The fixed trigger: impact called by its ID, cf[10091]"],["images/jira-flow-story.png","When a subtask starts, its Story moves to In Progress if it is not already"]]) ])
+              T("The audit log helped me find what was failing, such as two fields with the same name.")
+            ],[ CAROUSEL([["images/jira-automations.png","The rules active on the space"],["images/jira-audit-erreur.png","The audit log shows the failed calculation"],["images/jira-audit-correctif.png","The fixed trigger, with the field called by its ID"],["images/jira-flow-story.png","A subtask that starts moves its Story to In Progress"]]) ])
           ]),
           BANDE("VIII","Anticipating with a risk register",[
             LIGNE([
-              T("I added a **Risk ticket type**, with a likelihood, an impact, a warning sign, a mitigation and a fallback plan, linked to the tickets it threatens."),
-              T("Risk R4, scope creep, scores 12. Its warning sign is measurable, the mitigation requires every addition to be offset by a removal, and the fallback plan freezes the scope two sprints before the milestone."),
-            ],[ CAROUSEL([["images/jira-risque-r4.png","Risk R4, scope creep: score, warning signal, mitigation, fallback plan and threatened Epics"],["images/jira-risques-liste.png","The seven risks and their status: five being mitigated, two monitored"],["images/jira-risques-matrice.png","The probability × impact matrix"]]) ]),
+              T("I added a **Risk ticket type**, with a likelihood, an impact, a warning sign, a mitigation and a fallback plan."),
+              T("Risk R4, scope creep, scores 12. Every addition must be offset by a removal, and the scope freezes two sprints before the milestone."),
+            ],[ CAROUSEL([["images/jira-risque-r4.png","Risk R4, scope creep"],["images/jira-risques-liste.png","The seven risks and their status: five being mitigated, two monitored"],["images/jira-risques-matrice.png","The probability × impact matrix"]]) ]),
             LIGNE([
-              T("A risk's score is calculated by an automation, and its resolution says what happened: mitigated, occurred or obsolete.")
+              T("The score is calculated automatically, and the resolution says what happened: mitigated, occurred or obsolete.")
             ],[ SCHEMA("riskflow","The path of a risk, its resolutions and how its score is calculated") ])
           ]),
           BANDE("IX","What I take away",[
             LIGNE([
-              T("I learned to **think of Jira as a database**. Once tickets are well filed, a team or a milestone is just a query, and the producer's decisions become visible."),
+              T("I learned to **think of Jira as a database**: once tickets are well filed, a team or a milestone is just a query."),
               T("On a real project, I would open the risk register at kick-off, and simulate two full weeks in real time.")
             ])
           ])

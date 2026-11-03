@@ -3045,3 +3045,12 @@ html body .vt span { font-family: Inter, system-ui, sans-serif; font-size: .85re
 /* la règle globale des légendes est en !important : seule une autre déclaration !important la remplace ici */
 html body .project .bandeau figcaption { font: 700 1.1rem/1.2 "Bricolage Grotesque", Inter, system-ui, sans-serif !important; color: #fff; }
 @media (max-width: 860px) { html body .project .bandeau figcaption { font-size: .95rem !important; } }
+/* Vitrine : la production de fin d'année en mosaïque de ses quatre jeux, sur toute la hauteur de sa colonne */
+.vt-big { grid-row: span 2; aspect-ratio: auto; }
+.vt-mos { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3px; background: var(--band-d); padding: 0; }
+.vt-mos img { width: 100%; height: 100%; object-fit: cover; min-height: 0; }
+.vt-mos img:nth-child(1) { object-position: 25% 60%; }
+.vt-mos img:nth-child(2) { object-position: 50% 25%; }
+
+.vt:hover .vt-mos img, .vt:focus-visible .vt-mos img { transform: scale(1.04); }
+@media (max-width: 860px) { .vt-big { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 16 / 10; } }

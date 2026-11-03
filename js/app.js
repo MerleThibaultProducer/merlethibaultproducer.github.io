@@ -69,7 +69,9 @@ function frise(){
 /* Vitrine : les jeux produits, en grand */
 function vitrine(){
   if(typeof VITRINE==="undefined") return "";
-  return `<section class="vitrine" aria-label="${q("Les jeux produits","The games produced")}">${VITRINE.map(([src,nom,go,pf,pe,pos])=>`<a class="vt" data-go="${esc(go)}" data-pos="${esc(pos||"")}" role="link" tabindex="0"><img src="${esc(src)}"${srcset(src)} alt="${esc(nom)}" loading="lazy"><span><b>${esc(nom)}</b>${esc(lang==="en"?pe:pf)}</span></a>`).join("")}</section>`;
+  return `<section class="vitrine" aria-label="${q("Les jeux produits","The games produced")}">${VITRINE.map(([src,nom,go,pf,pe,pos,nomEn])=>{ const n=lang==="en"&&nomEn?nomEn:nom, many=Array.isArray(src);
+    const pics=many?`<div class="vt-mos">${src.map(x=>`<img src="${esc(x)}"${srcset(x)} alt="" loading="lazy">`).join("")}</div>`:`<img src="${esc(src)}"${srcset(src)} alt="${esc(n)}" loading="lazy">`;
+    return `<a class="vt${many?" vt-big":""}" data-go="${esc(go)}" data-pos="${esc(pos||"")}" role="link" tabindex="0"${many?` aria-label="${esc(n)}"`:""}>${pics}<span class="vt-cap"><b>${esc(n)}</b>${esc(lang==="en"?pe:pf)}</span></a>`;}).join("")}</section>`;
 }
 /* Encadré « Derniers projets » : les projets marqués une:true dans contenu.js */
 function homeFeat(){
@@ -439,7 +441,7 @@ function render(still){
   chrome(active);
   document.body.classList.toggle("page-detail", !!curNav);
   const v = $("#view"); v.innerHTML = html;
-  v.querySelectorAll(".vt[data-pos]").forEach(e=>{ if(e.dataset.pos) e.firstElementChild.style.objectPosition=e.dataset.pos; });
+  v.querySelectorAll(".vt[data-pos]").forEach(e=>{ if(e.dataset.pos) e.querySelector("img").style.objectPosition=e.dataset.pos; });
   v.querySelectorAll("[data-l]").forEach(e=>{ e.style.left=e.dataset.l+"%"; if(e.dataset.w) e.style.width=e.dataset.w+"%"; });   /* la CSP refuse les attributs style */
   if(navDir && !matchMedia("(prefers-reduced-motion:reduce)").matches)
     v.animate([{opacity:0,transform:`translateX(${navDir*48}px)`},{opacity:1,transform:"none"}],{duration:280,easing:"ease-out"});

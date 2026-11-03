@@ -254,9 +254,8 @@ const EQUIPES_FUSION = [
 /* ---------- ACCUEIL : vitrine des jeux et frise des productions ----------
    VITRINE : [image, nom du jeu, page du projet]. FRISE : une barre par production, découpée en sprints (0 = non découpée) ;
    go vide = projet pas encore publié (barre sans lien). */
-const VITRINE = [   // [image, jeu, page, production FR, production EN, cadrage]
-  ["images/fda-castor.jpg","Le Castor et l'Écureuil","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026","50% 55%"],
-  ["images/fda-glow.jpg","Project GLOW","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026","50% 30%"],
+const VITRINE = [   // [image (ou liste d'images pour une mosaïque), jeu, page, production FR, production EN, cadrage, nom EN]
+  [["images/fda-castor.jpg","images/fda-glow.jpg","images/fda-insight.jpg","images/fda-flowering.jpg"],"Quatre jeux en parallèle","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026","","Four games in parallel"],
   ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop","50% 25%"],
   ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop","50% 45%"],
   ["images/fusion-hs-keyart.jpg","HellStorm","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","50% 50%"],

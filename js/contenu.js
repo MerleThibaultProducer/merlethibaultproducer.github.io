@@ -237,7 +237,7 @@ const EQUIPES_FUSION = [
         M("Matthias Gimenez","https://www.linkedin.com/in/matthias-gimenez-583615375/","Level Design"),
         M("Yaël Deschemaker","https://www.linkedin.com/in/ya%C3%ABl-deschemaker/","Level Design"),
         M("Guillaume Soyez-Martin","https://www.linkedin.com/in/guillaume-soyez-martin-71a863253/","Narrative Design"),
-        M("Tom Rossignol","https://www.linkedin.com/in/tom-rossignol-63148a3b8/","Game Design généraliste","Generalist Game Design") ],
+        M("Tom Rossignol","https://www.linkedin.com/in/tom-rossignol-63148a3b8/","Généraliste","Generalist") ],
     art:[
         M("Léa Millier","https://www.linkedin.com/in/l%C3%A9a-millier-713388283/","Level Art"),
         M("Enzo Rouminieras","https://www.linkedin.com/in/enzo-rouminieras-b2a167333/","Environment Art"),
@@ -424,17 +424,17 @@ const PROJECTS_FR = {
           ])
         ] }),
     P({ title:"Workshop Fusion – Novembre 2025", large:true, nocover:true,
-        desc:"Quatre semaines pour livrer deux vertical slices de course sous Unreal Engine 5, chacune née de la fusion d'un jeu rétro et d'une licence.",
-        carte:"Deux vertical slices de course livrées sous Unreal Engine 5 en quatre semaines, avec mes premiers dailies et des listes d'assets classées par priorité.",
-        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 équipes de 14 et 15","Racing · Fusion","4 semaines"] }, img:"images/fusion-thumb.jpg",
-        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 et 15 personnes", "Durée":"3 – 28 novembre 2025 (4 semaines)", "Outils":"Excel" },
-        apercu:"Pour ce workshop de Game Sup, deux équipes avaient quatre semaines pour livrer chacune une **vertical slice de jeu de course sous Unreal Engine 5**. La contrainte était une fusion : reprendre le gameplay d'un jeu de référence et l'habiller d'une licence imposée. HellStorm mêlait la course tout-terrain de *Motorstorm* à l'univers de *Doom*, Wakfu Riders la course arcade de *Street Racer* au monde de *Wakfu*. J'étais le producer des deux. J'ai construit un **plan de production Agile sur Excel**, mené une revue chaque semaine et mis en place mes premiers **dailies**, animés par les référents. Au jury, 97 % et 98 % des tâches étaient terminées.",
+        desc:"Trois semaines de travail pour livrer deux vertical slices de course sous Unreal Engine 5, chacune née de la fusion d'un jeu rétro et d'une licence.",
+        carte:"Deux vertical slices de course livrées sous Unreal Engine 5 en trois semaines de travail, avec mes premiers dailies et des listes d'assets classées par priorité.",
+        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 équipes de 14 et 15","Racing · Fusion","3 semaines"] }, img:"images/fusion-thumb.jpg",
+        infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 et 15 personnes", "Durée":"3 – 28 novembre 2025 (3 semaines ouvrées)", "Outils":"Excel" },
+        apercu:"Pour ce workshop de Game Sup, deux équipes avaient trois semaines de travail pour livrer chacune une **vertical slice de jeu de course sous Unreal Engine 5**. La contrainte était une fusion : reprendre le gameplay d'un jeu de référence et l'habiller d'une licence imposée. HellStorm mêlait la course tout-terrain de *Motorstorm* à l'univers de *Doom*, Wakfu Riders la course arcade de *Street Racer* au monde de *Wakfu*. J'étais le producer des deux. J'ai construit un **plan de production Agile sur Excel**, mené une revue chaque semaine et mis en place mes premiers **dailies**, animés par les référents. Au jury, 97 % et 98 % des tâches étaient terminées.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
               T("La consigne demandait une **vertical slice** : une ou plusieurs séquences de quelques minutes, compréhensibles et intéressantes à jouer pour quelqu'un qui découvre le jeu sans explication. Chaque équipe recevait un style de course, un jeu de référence pour le gameplay et les 3C, et une licence pour la direction artistique. L'école insistait sur une vraie fusion : un simple reskin ne suffisait pas, il fallait adapter le gameplay à la licence en gardant l'essence du jeu d'origine."),
               T("Au rendu, chaque équipe livrait le projet et son build, une vidéo de gameplay, des captures de travail chaque semaine, la présentation du jury et toute la documentation de game design, de level design, de narration et de direction artistique. Le document de gestion de production était le mien : planning macro et micro, burndown chart chaque semaine, tableau de bord général et par personne.")
-            ],[ FICHE("Les contraintes",["Deux vertical slices à produire en même temps sous Unreal Engine 5","Quatre semaines, du 3 au 28 novembre 2025","Un style de course, un jeu de référence et une licence imposés à chaque équipe","Trois revues de l'équipe pédagogique avant le jury"]) ]),
+            ],[ FICHE("Les contraintes",["Deux vertical slices à produire en même temps sous Unreal Engine 5","Trois semaines de travail, du 3 au 28 novembre 2025","Un style de course, un jeu de référence et une licence imposés à chaque équipe","Trois revues de l'équipe pédagogique avant le jury"]) ]),
             LIGNE([ KEYART([
                       ["images/fusion-hs-keyart.jpg","HellStorm","Le Groupe 3 a reçu le gameplay de Motorstorm et la licence Doom, et en a fait une course tout-terrain en enfer."],
                       ["images/fusion-wk-keyart.jpg","Wakfu Riders","Le Groupe 4 a reçu le gameplay de Street Racer et la licence Wakfu, et en a fait une course arcade à coups de sorts, dans un village de vignerons."]
@@ -444,14 +444,16 @@ const PROJECTS_FR = {
             LIGNE([
               T("Les deux équipes partageaient le même macroplanning : **quatre sprints**, calés sur les revues de l'école. Le premier, du 3 au 6 novembre, posait la conception : narration, intentions de gameplay et de level design, recherches d'ambiance et de lumière. Le deuxième devait amener le prototype assez loin pour des playtests sur les 3C et le blocking. Le troisième visait un build jouable du début à la fin, avec toutes les mécaniques, les principales interfaces et la plupart des éléments graphiques. Le dernier, du 24 au 27 novembre, était réservé au polish et aux retours de la QA.")
             ],[ CHIFFRES([["568","tâches suivies"],["97 % et 98 %","tâches terminées (HellStorm, Wakfu Riders)"],["4","sprints"],["3","revues avant le jury"]]) ]),
+            LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","Le macroplanning de HellStorm : phases, sprints et jours non travaillés"],["images/fusion-wk-macro.png","Le macroplanning de Wakfu Riders, calé sur le même calendrier"]]) ]),
             LIGNE([
               T("Chaque équipe avait son **backlog** dans Excel : 220 tâches pour HellStorm, 348 pour Wakfu Riders. Chaque tâche était rangée par epic et par story, avec une personne, une difficulté, une priorité, un sprint et un statut. Un onglet par sprint détaillait la semaine, et chaque membre de l'équipe avait son onglet avec ses propres tâches."),
               T("L'environnement était le poste le plus lourd des deux productions : 72 tâches chez HellStorm, 131 chez Wakfu Riders.")
-            ],[ CAROUSEL([["images/fusion-wk-carte.jpg","La carte de Wakfu Riders en construction dans Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders : le village et ses vignes dans l'éditeur"]]) ])
+            ],[ CAROUSEL([["images/fusion-wk-carte.jpg","La carte de Wakfu Riders en construction dans Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders : le village et ses vignes dans l'éditeur"]]) ]),
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Le backlog de HellStorm : epics, stories, personnes, difficultés, statuts, sprints et priorités"],["images/fusion-wk-backlog.png","Le backlog de Wakfu Riders, avec ses filtres par personne"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux onglets de chacun"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]]) ])
           ]),
           BANDE("III","Suivre deux équipes",[
             LIGNE([
-              T("C'était mon premier workshop avec des **dailies**. Je les ai confiés aux référents Art et Design de chaque équipe, et je faisais le point avec les deux groupes pendant les **revues hebdomadaires**."),
+              T("C'était mon premier workshop avec des **dailies**. Chaque équipe avait deux référents, un en Game Design et un en Game Art : je leur ai confié les dailies, et je faisais le point avec les deux groupes pendant les **revues hebdomadaires**."),
               T("Avec les référents, j'ai réparti les tâches entre Game Artists et Game Designers en cherchant à **équilibrer la charge** de chacun."),
               T("Chez HellStorm, quatre documents ont pris du retard au sprint 3 : les personas, l'analyse Marczewski et Octalysis, la concept map et la mise en page du document de level design. Je les ai reportés au sprint 4, où ils ont tous été terminés.")
             ],[ CAROUSEL([["images/fusion-hs-monocycle-concept.jpg","HellStorm : le concept du monocycle"],["images/fusion-hs-monocycle-3d-1.jpg","Le monocycle modélisé en 3D"],["images/fusion-hs-monocycle-3d-2.jpg","Le monocycle, vu de l'autre côté"],["images/fusion-hs-voiture-concept.jpg","HellStorm : le concept de la voiture"],["images/fusion-hs-voiture-3d.jpg","La voiture modélisée en 3D"],["images/fusion-hs-ui.jpg","L'écran de sélection de la carte, en cours d'intégration"]]) ])
@@ -908,17 +910,17 @@ const PROJECTS_EN = {
           ])
         ] }),
     P({ title:"Fusion Workshop – November 2025", large:true, nocover:true,
-        desc:"Four weeks to deliver two racing vertical slices in Unreal Engine 5, each born from the fusion of a retro game and a licence.",
-        carte:"Two racing vertical slices delivered in Unreal Engine 5 in four weeks, with my first dailies and asset lists ranked by priority.",
-        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 teams of 14 and 15","Racing · Fusion","4 weeks"] }, img:"images/fusion-thumb.jpg",
-        infos:{ "Role":"Producer", "Team":"2 teams of 14 and 15 people", "Duration":"3 – 28 November 2025 (4 weeks)", "Tools":"Excel" },
-        apercu:"For this Game Sup workshop, two teams had four weeks to each deliver a **racing game vertical slice in Unreal Engine 5**. The constraint was a fusion: take the gameplay of a reference game and dress it in an assigned licence. HellStorm combined the off-road racing of *Motorstorm* with the world of *Doom*, and Wakfu Riders the arcade racing of *Street Racer* with the world of *Wakfu*. I was the producer for both. I built an **Agile production plan in Excel**, ran a review every week and set up my first **dailies**, led by the team leads. At the jury, 97% and 98% of the tasks were done.",
+        desc:"Three working weeks to deliver two racing vertical slices in Unreal Engine 5, each born from the fusion of a retro game and a licence.",
+        carte:"Two racing vertical slices delivered in Unreal Engine 5 in three working weeks, with my first dailies and asset lists ranked by priority.",
+        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 teams of 14 and 15","Racing · Fusion","3 weeks"] }, img:"images/fusion-thumb.jpg",
+        infos:{ "Role":"Producer", "Team":"2 teams of 14 and 15 people", "Duration":"3 – 28 November 2025 (3 working weeks)", "Tools":"Excel" },
+        apercu:"For this Game Sup workshop, two teams had three working weeks to each deliver a **racing game vertical slice in Unreal Engine 5**. The constraint was a fusion: take the gameplay of a reference game and dress it in an assigned licence. HellStorm combined the off-road racing of *Motorstorm* with the world of *Doom*, and Wakfu Riders the arcade racing of *Street Racer* with the world of *Wakfu*. I was the producer for both. I built an **Agile production plan in Excel**, ran a review every week and set up my first **dailies**, led by the team leads. At the jury, 97% and 98% of the tasks were done.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
               T("The brief asked for a **vertical slice**: one or more sequences of a few minutes, clear and interesting to play for someone discovering the game with no explanation. Each team was given a racing style, a reference game for the gameplay and 3Cs, and a licence for the art direction. The school insisted on a real fusion: a simple reskin was not enough, the gameplay had to be adapted to the licence while keeping the essence of the original game."),
               T("At delivery, each team handed in the project and its build, a gameplay video, weekly work screenshots, the jury presentation and all the game design, level design, narrative and art direction documents. The production management document was mine: macro and micro planning, a weekly burndown chart, and a dashboard for the team and for each person.")
-            ],[ FICHE("Constraints",["Two vertical slices to produce at the same time in Unreal Engine 5","Four weeks, from 3 to 28 November 2025","A racing style, a reference game and a licence assigned to each team","Three reviews by the teaching staff before the jury"]) ]),
+            ],[ FICHE("Constraints",["Two vertical slices to produce at the same time in Unreal Engine 5","Three working weeks, from 3 to 28 November 2025","A racing style, a reference game and a licence assigned to each team","Three reviews by the teaching staff before the jury"]) ]),
             LIGNE([ KEYART([
                       ["images/fusion-hs-keyart.jpg","HellStorm","Group 3 was given the gameplay of Motorstorm and the Doom licence, and turned them into an off-road race through hell."],
                       ["images/fusion-wk-keyart.jpg","Wakfu Riders","Group 4 was given the gameplay of Street Racer and the Wakfu licence, and turned them into a spell-slinging arcade race through a winegrowers' village."]
@@ -928,14 +930,16 @@ const PROJECTS_EN = {
             LIGNE([
               T("Both teams shared the same macro plan: **four sprints**, aligned with the school's reviews. The first, from 3 to 6 November, set up the concept: narrative, gameplay and level design intentions, mood and lighting research. The second had to take the prototype far enough for playtests on the 3Cs and the blocking. The third aimed for a build playable from start to finish, with every mechanic, the main interfaces and most of the art. The last, from 24 to 27 November, was kept for polish and QA feedback.")
             ],[ CHIFFRES([["568","tasks tracked"],["97% and 98%","tasks completed (HellStorm, Wakfu Riders)"],["4","sprints"],["3","reviews before the jury"]]) ]),
+            LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","The HellStorm macro plan: phases, sprints and days off"],["images/fusion-wk-macro.png","The Wakfu Riders macro plan, on the same calendar"]]) ]),
             LIGNE([
               T("Each team had its own **backlog** in Excel: 220 tasks for HellStorm, 348 for Wakfu Riders. Each task was filed by epic and story, with an owner, a difficulty, a priority, a sprint and a status. One tab per sprint detailed the week, and each team member had a tab with their own tasks."),
               T("Environment art was the heaviest area in both productions: 72 tasks for HellStorm, 131 for Wakfu Riders.")
-            ],[ CAROUSEL([["images/fusion-wk-carte.jpg","The Wakfu Riders map under construction in Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders: the village and its vineyards in the editor"]]) ])
+            ],[ CAROUSEL([["images/fusion-wk-carte.jpg","The Wakfu Riders map under construction in Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders: the village and its vineyards in the editor"]]) ]),
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","The HellStorm backlog: epics, stories, owners, difficulties, statuses, sprints and priorities"],["images/fusion-wk-backlog.png","The Wakfu Riders backlog, with its filters by person"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to each person's tab"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]]) ])
           ]),
           BANDE("III","Following two teams",[
             LIGNE([
-              T("This was my first workshop with **dailies**. I handed them to each team's Art and Design leads, and caught up with both groups during the **weekly reviews**."),
+              T("This was my first workshop with **dailies**. Each team had two leads, one in Game Design and one in Game Art: I handed the dailies to them, and caught up with both groups during the **weekly reviews**."),
               T("With the leads, I split the tasks between Game Artists and Game Designers, trying to **balance everyone's workload**."),
               T("In the HellStorm team, four documents fell behind in sprint 3: the personas, the Marczewski and Octalysis analysis, the concept map and the layout of the level design document. I moved them to sprint 4, where they were all finished.")
             ],[ CAROUSEL([["images/fusion-hs-monocycle-concept.jpg","HellStorm: the monocycle concept"],["images/fusion-hs-monocycle-3d-1.jpg","The monocycle modelled in 3D"],["images/fusion-hs-monocycle-3d-2.jpg","The monocycle, seen from the other side"],["images/fusion-hs-voiture-concept.jpg","HellStorm: the car concept"],["images/fusion-hs-voiture-3d.jpg","The car modelled in 3D"],["images/fusion-hs-ui.jpg","The map selection screen, being integrated"]]) ])
@@ -1305,8 +1309,8 @@ const INFOS_EN = {
 };
 
 const CV_VISUAL = {
-  image: "cv/cv-apercu-v8.jpg",
-  pdf: "cv/MERLE_Thibault_CV_PROD_v8.pdf",
+  image: "cv/cv-apercu-v9.jpg",
+  pdf: "cv/MERLE_Thibault_CV_PROD_v9.pdf",
   filename: "MERLE_Thibault_CV_PROD.pdf"   // nom du fichier téléchargé
 };
 

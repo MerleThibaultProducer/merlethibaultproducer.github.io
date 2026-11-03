@@ -261,11 +261,11 @@ const VITRINE = [   // [image (ou liste d'images pour une mosaïque), jeu, page,
   ["images/fusion-hs-keyart.jpg","HellStorm","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","50% 50%"],
   ["images/fusion-wk-keyart.jpg","Wakfu Riders","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","35% 40%"]
 ];
-const FRISE = [
-  { d0:"2025-06-02", d1:"2025-06-27", fr:"Fin d'année 2025", en:"End of year 2025", sprints:0, go:"" },
-  { d0:"2025-11-03", d1:"2025-11-28", fr:"Workshop Fusion", en:"Fusion Workshop", sprints:4, go:"#/pro/workshop-fusion-novembre-2025" },
-  { d0:"2026-02-02", d1:"2026-02-20", fr:"Workshop Rogue-lite", en:"Rogue-lite Workshop", sprints:3, go:"#/pro/workshop-rogue-lite-fevrier-2026" },
-  { d0:"2026-05-27", d1:"2026-06-24", fr:"Fin d'année 2026", en:"End of year 2026", sprints:4, go:"#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026" }
+const FRISE = [   // jalons de l'accueil : quand, quoi, chiffres ; go vide = page pas encore publiée (jalon grisé)
+  { quand:"Juin 2025", when:"June 2025", fr:"Fin d'année", en:"End of year", metaFr:"2 jeux · 2 équipes", metaEn:"2 games · 2 teams", go:"" },
+  { quand:"Novembre 2025", when:"November 2025", fr:"Workshop Fusion", en:"Fusion Workshop", metaFr:"2 jeux · 29 personnes", metaEn:"2 games · 29 people", go:"#/pro/workshop-fusion-novembre-2025" },
+  { quand:"Février 2026", when:"February 2026", fr:"Workshop Rogue-lite", en:"Rogue-lite Workshop", metaFr:"2 jeux · 28 personnes", metaEn:"2 games · 28 people", go:"#/pro/workshop-rogue-lite-fevrier-2026" },
+  { quand:"Mai – juin 2026", when:"May – June 2026", fr:"Fin d'année", en:"End of year", metaFr:"4 jeux · 54 personnes", metaEn:"4 games · 54 people", go:"#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026" }
 ];
 const PROJECTS_FR = {
   pro: [

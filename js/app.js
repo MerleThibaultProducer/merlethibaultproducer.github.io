@@ -55,16 +55,13 @@ function home(){
     </div>
   </section>${frise()}</div>${vitrine()}${homeFeat()}`;
 }
-/* Frise des productions : position et largeur de chaque barre d'après ses dates */
+/* Frise des productions : une ligne dorée et un jalon par production */
 function frise(){
   if(typeof FRISE==="undefined") return "";
-  const t0=Date.parse("2025-05-01"), t1=Date.parse("2026-08-01"), pc=d=>(Date.parse(d)-t0)/(t1-t0)*100;
-  const mois=["2025-06-01","2025-09-01","2025-12-01","2026-03-01","2026-06-01"].map(d=>`<span class="fr-m" data-l="${pc(d).toFixed(2)}">${new Date(d).toLocaleDateString(lang==="en"?"en-GB":"fr-FR",{month:"short",year:"numeric"})}</span>`).join("");
-  const barres=FRISE.map(b=>{
-    const seg=Array.from({length:b.sprints||1},()=>"<i></i>").join(""), nom=esc(lang==="en"?b.en:b.fr);
-    const attrs=b.go?` data-go="${esc(b.go)}" role="link" tabindex="0"`:` aria-disabled="true"`;
-    return `<a class="fr-b${b.go?"":" off"}" data-l="${pc(b.d0).toFixed(2)}" data-w="${(pc(b.d1)-pc(b.d0)).toFixed(2)}"${attrs}><span class="fr-bar">${seg}</span><span class="fr-n">${nom}</span></a>`;}).join("");
-  return `<div class="frise" role="group" aria-label="${q("Mes productions","My productions")}"><div class="fr-track">${mois}${barres}</div></div>`;
+  const en=lang==="en";
+  return `<div class="frise" role="list" aria-label="${q("Mes productions","My productions")}">${FRISE.map(j=>{
+    const inner=`<span class="fr-dot" aria-hidden="true"></span><small>${esc(en?j.when:j.quand)}</small><b>${esc(en?j.en:j.fr)}</b><span class="fr-k">${esc(en?j.metaEn:j.metaFr)}</span>`;
+    return j.go?`<a class="fr-j" role="listitem" data-go="${esc(j.go)}" tabindex="0">${inner}</a>`:`<div class="fr-j off" role="listitem">${inner}</div>`;}).join("")}</div>`;
 }
 /* Vitrine : les jeux produits, en grand */
 function vitrine(){

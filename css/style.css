@@ -2523,7 +2523,7 @@ body.page-home .home-intro .cta { margin-top: 1.6rem; }
 .hero::before { content: ""; position: absolute; top: 0; bottom: 0; right: calc(50% - 50vw); width: 58vw; z-index: -1; pointer-events: none;
   background: url("../images/accueil-fond-jira.jpg") right center / cover no-repeat; opacity: .1; mix-blend-mode: screen;
   -webkit-mask-image: linear-gradient(to right, transparent, #000 45%); mask-image: linear-gradient(to right, transparent, #000 45%); }
-.hero .home-h1 { color: #fff; font-size: clamp(2.2rem, 4.6vw, 4.1rem); line-height: 1; letter-spacing: -.03em; max-width: 14em; }
+.hero .home-h1 { color: #fff; font-size: clamp(1.85rem, 3.4vw, 3rem); line-height: 1.05; letter-spacing: -.025em; max-width: 18em; }
 .hero .intro p { color: #E7ECF4; }
 .hero .intro strong { color: var(--gold); }
 html body .hero .cta .btn:not(.ghost) { background: var(--gold); border-color: var(--gold); color: #0B1A33; }

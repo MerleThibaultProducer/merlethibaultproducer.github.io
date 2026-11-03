@@ -414,11 +414,6 @@ footer a.social:hover span {
 }
 .band {
   position: relative;
-  transition: opacity .7s ease,transform .7s ease;
-}
-.band.in {
-  opacity: 1;
-  transform: none;
 }
 .band-head {
   align-items: baseline;
@@ -2932,3 +2927,9 @@ html body .stage .card h3 { margin: 1.1rem 0 .4rem; }
 html body .stage .card .cmeta { flex: none; margin: 0 0 .9rem; }
 html body .stage .card .cdesc { flex: none; margin: 0 0 1.4rem; padding-top: .9rem; }
 html body .stage .card .btn { margin-top: auto; align-self: flex-start; }
+
+/* ---------- Mouvement : apparition au défilement, retour au clic ---------- */
+.rv { opacity: 0; transform: translateY(22px); }
+.rv.in { opacity: 1; transform: none; transition: opacity .6s ease-out var(--d, 0s), transform .75s cubic-bezier(.2, .7, .2, 1) var(--d, 0s); }
+.btn:active, .feat:active, .pn a:active { transform: scale(.97); transition-duration: .08s; }
+@media print { .rv { opacity: 1; transform: none; } }

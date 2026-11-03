@@ -370,12 +370,18 @@ function infos(){
 }
 
 
-/* Bandes : apparition au défilement ; images : visionneuse au clic */
+/* Apparition au défilement : chaque bloc monte en fondu, décalé de ses voisins entrés en même temps */
+const RV="#view .intro>*,#view .cta,#view .feat,#view .list-head>*,#view .card,#view .project>h1,#view .project>.lead,#view .cover,#view .band-head,#view .bt,#view .bm,#view .pn";
+let rvIO=null;
 function reveal(){
-  const bands=[...document.querySelectorAll(".band")];
-  if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion:reduce)").matches){bands.forEach(b=>b.classList.add("in"));return;}
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.08});
-  bands.forEach(b=>io.observe(b));
+  if(rvIO) rvIO.disconnect();
+  if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion:reduce)").matches) return;   /* sans observateur, rien n'est masqué */
+  rvIO=new IntersectionObserver(es=>es.filter(e=>e.isIntersecting).forEach((e,i)=>{
+    const el=e.target; rvIO.unobserve(el);
+    el.style.setProperty("--d",Math.min(i,6)*80+"ms"); el.classList.add("in");
+    el.addEventListener("transitionend",function f(ev){if(ev.target!==el||ev.propertyName!=="transform")return;el.removeEventListener("transitionend",f);el.classList.remove("rv","in");el.style.removeProperty("--d");});   /* rend la main aux effets de survol */
+  }),{rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll(RV).forEach(el=>{el.classList.add("rv");rvIO.observe(el);});
 }
 const LB=$("#lb");
 let lbFrom=null;
@@ -392,7 +398,7 @@ document.addEventListener("keydown",e=>{
 let curNav = null, navDir = 0;
 let cur = location.hash || "#/";   /* page courante, gardée en mémoire : marche même dans un aperçu isolé */
 
-function render(){
+function render(still){
   const h = cur, [ , k0, id] = h.split("/"), key = k0 === "exo" ? "perso" : k0;  /* anciens liens #/exo/… */
   let html, active = h; curNav = null;
   const sec = SECTIONS.find(s => s.key === key);
@@ -418,7 +424,7 @@ function render(){
   if(navDir && !matchMedia("(prefers-reduced-motion:reduce)").matches)
     v.animate([{opacity:0,transform:`translateX(${navDir*48}px)`},{opacity:1,transform:"none"}],{duration:280,easing:"ease-out"});
   navDir = 0;
-  reveal();
+  if(still){ if(rvIO) rvIO.disconnect(); } else reveal();   /* thème ou langue : pas de nouvelle entrée en scène */
 }
 
 /* Passer d'un projet à l'autre : flèches du clavier, défilement horizontal
@@ -464,7 +470,7 @@ document.addEventListener("click", e => { if(e.target.closest && e.target.closes
 document.addEventListener("click", e => {
   const b = e.target.closest && e.target.closest("[data-lang]");
   if(!b) return;
-  e.stopPropagation(); setLang(b.getAttribute("data-lang")); render();
+  e.stopPropagation(); setLang(b.getAttribute("data-lang")); render(1);
 });
 document.addEventListener("click", e => {
   const b = e.target.closest && e.target.closest("[data-theme-toggle]");
@@ -473,7 +479,7 @@ document.addEventListener("click", e => {
   const th = isDark() ? "light" : "dark";
   document.documentElement.dataset.theme = th;
   try{ localStorage.setItem("theme", th); }catch(err){}
-  const y = scrollY; render(); scrollTo(0, y);
+  const y = scrollY; render(1); scrollTo(0, y);
 });
 addEventListener("popstate", () => { cur = location.hash || "#/"; render(); scrollTo(0,0); pageFocus(); });
 addEventListener("hashchange", () => { const h = location.hash || "#/"; if(h !== cur){ cur = h; render(); scrollTo(0,0); pageFocus(); } });

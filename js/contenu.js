@@ -1311,7 +1311,9 @@ const INFOS_EN = {
 const CV_VISUAL = {
   image: "cv/cv-apercu-v9.jpg",
   pdf: "cv/MERLE_Thibault_CV_PROD_v9.pdf",
-  filename: "MERLE_Thibault_CV_PROD.pdf"   // nom du fichier téléchargé
+  filename: "MERLE_Thibault_CV_PROD.pdf",   // nom du fichier téléchargé
+  pdfNB: "cv/MERLE_Thibault_CV_PROD_v9_NB.pdf",   // version noir et blanc, pour l'impression
+  filenameNB: "MERLE_Thibault_CV_PROD_imprimable.pdf"
 };
 
 /* Page « Mentions légales et confidentialité » (lien en pied de page).

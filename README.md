@@ -29,6 +29,18 @@ cv/cv-apercu-v5.jpg               aperçu du CV affiché sur la page Infos
 Un projet sans présentation (`apercu`) peut avoir un résumé (`resume`) et un encadré « Mon rôle et mes décisions » (`decisions`) : ils ne s'affichent pas quand `apercu` est rempli.
 L'aide-mémoire des blocs de contenu (texte, image, bandes, tableaux…) se trouve en tête de `js/contenu.js`.
 
+## Vérifier avant de publier
+
+`outils/verifier.py` ouvre toutes les pages (français et anglais, jour et nuit, ordinateur et téléphone) et signale les erreurs, les fichiers introuvables, les images cassées et les pages qui débordent. Pour un nettoyage qui ne doit rien changer à l'affichage, capturez avant et après, puis comparez :
+
+```
+python3 outils/verifier.py --captures avant
+# … modifications …
+python3 outils/verifier.py --captures apres --comparer avant
+```
+
+Les dossiers `avant/` et `apres/` sont ignorés par git.
+
 ## Mentions légales
 
 Elles se trouvent dans `js/contenu.js` (`LEGAL_FR`, `LEGAL_EN`, `LEGAL_UPDATED`).

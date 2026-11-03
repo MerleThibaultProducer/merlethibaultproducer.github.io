@@ -121,11 +121,6 @@ h1::after {
   overflow: hidden;
   font: 400 5rem var(--serif);
 }
-.card .thumb::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
 .card .thumb img {
   width: 100%;
   object-fit: cover;
@@ -728,7 +723,6 @@ h3 {
 .project .cover {
   background: var(--grad);
 }
-.card .thumb::after,
 .project .cover::after {
   inset: 8px;
   border: 1px solid rgba(255,255,255,.55);
@@ -987,7 +981,6 @@ h1::after {
 .project .cover {
   color: var(--gold);
 }
-.card .thumb::after,
 .project .cover::after,
 .zf::after {
   border-color: rgba(225,166,36,.8);
@@ -1830,7 +1823,6 @@ html body .tbl th {
   font-weight: 600;
 }
 html body .zf::after,
-html body .card .thumb::after,
 html body .project .cover::after {
   display: none;
 }
@@ -2164,31 +2156,6 @@ html body .band-head h2::after {
     color: #fff;
   }
 }
-.status {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  gap: .45rem;
-  padding: .32rem .7rem;
-  border-radius: 3px;
-  background: #fff;
-  color: var(--head);
-  font: 600 .78rem/1 var(--sans);
-  box-shadow: 0 1px 0 rgba(19,41,75,.12);
-}
-.status i {
-  width: .5rem;
-  height: .5rem;
-  border-radius: 50%;
-  background: #3E8E6A;
-  flex: none;
-}
-.status.wip i {
-  background: var(--gold);
-}
 html body .band-head h2 {
   position: relative;
 }
@@ -2219,14 +2186,6 @@ html body .band-head h2::before {
     left: -2.43rem;
     top: .55em;
     margin: 0;
-  }
-}
-:root[data-theme="dark"] .status {
-  background: #0B1A33;
-}
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .status {
-    background: #0B1A33;
   }
 }
 header.top::before {
@@ -2314,22 +2273,14 @@ body:not(.is-home) .brand {
 .thumb .survol li::before {
   display: none;
 }
-.thumb .survol~.status {
-  transition: opacity .25s ease;
-}
 @media(hover:hover) {
   .card .thumb:hover .survol,
   .card .thumb:focus-visible .survol {
     opacity: 1;
   }
-  .card .thumb:hover .status,
-  .card .thumb:focus-visible .status {
-    opacity: 0;
-  }
 }
 @media (prefers-reduced-motion:reduce) {
-  .thumb .survol,
-  .thumb .survol~.status {
+  .thumb .survol {
     transition: none;
   }
 }
@@ -2438,51 +2389,6 @@ html body .card h3 {
     box-shadow: 0 0 0 100vmax #12223A;
   }
 }
-.car.keyart .zf {
-  aspect-ratio: 16/9;
-  border-radius: 4px;
-}
-.car.keyart .zf img {
-  height: 100%;
-  object-fit: cover;
-}
-.car.keyart figcaption {
-  display: flex;
-  flex-direction: column;
-  gap: .35rem;
-  max-width: 52rem;
-  margin: 1rem auto 0;
-}
-.car.keyart figcaption b {
-  font: 700 1.15rem/1.3 var(--sans);
-  color: var(--head);
-}
-.car.keyart figcaption span {
-  font: 400 1rem/1.6 var(--sans)!important;
-  color: var(--ink)!important;
-}
-.car.keyart {
-  margin: .5rem 0 0;
-}
-.car.keyart .zf.portrait {
-  background: #0B1A33;
-}
-.car.keyart .zf.portrait img {
-  object-fit: contain;
-}
-html body .car.keyart .car-track {
-  align-items: flex-start;
-}
-html body .car.keyart .zf {
-  width: 100%;
-}
-html body .car.keyart .zf img {
-  position: absolute;
-  inset: 0;
-}
-html body .prose .car.keyart .zf img {
-  background: transparent!important;
-}
 html body .project>h1::after,
 html body .infos-page>h1::after,
 html body .legal-page>h1::after {
@@ -2528,18 +2434,18 @@ html body .legal-page h2 {
 /* Captures et visuels de projet : jamais agrandis au-delà de leur taille d'origine,
    hauteur plafonnée pour rester à l'échelle du texte voisin */
 html body .prose { --img-h: 30rem; }
-html body .prose figure:not(.keyart) .zf {
+html body .prose figure .zf {
   width: fit-content;
   max-width: 100%;
   margin-inline: auto;
 }
-html body .prose figure:not(.keyart) .zf img {
+html body .prose figure .zf img {
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: var(--img-h);
 }
-html body .car:not(.keyart):not(.teams) .car-track {
+html body .car:not(.teams) .car-track {
   align-items: center;
 }
 .grid.exo .card .cmeta {
@@ -2626,7 +2532,6 @@ html body .band-head h2,
 html body .sk-group h2,
 html body .legal-page h2,
 html body .card h3,
-html body .car.keyart figcaption b,
 html body .team h3 {
   font-family: var(--display);
 }
@@ -2653,7 +2558,6 @@ html body .band-head h2,
 html body .sk-group h2,
 html body .legal-page h2,
 html body .card h3,
-html body .car.keyart figcaption b,
 html body .team h3 {
   font-stretch: 100%;
   letter-spacing: .01em;
@@ -2675,18 +2579,6 @@ html body .brand .brole {
 }
 /* Fond de la page d'accueil : tableau de production en bichromie bleu marine, ancré derrière le portrait */
 body.page-home main { position: relative; isolation: isolate; overflow: hidden; }
-body.page-home main::before {
-  content: ""; position: absolute; top: 0; right: 0; width: 58%; z-index: -1; pointer-events: none;
-  background: url("../images/accueil-fond-jira.jpg") right center / cover no-repeat;
-  opacity: .14;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 45%), linear-gradient(to bottom, transparent, #000 15%, #000 85%, transparent);
-  -webkit-mask-composite: source-in; mask-composite: intersect;
-}
-html[data-theme="dark"] body.page-home main::before { opacity: .07; }
-@media (max-width: 860px) {
-  body.page-home main::before { width: 100%; bottom: auto; height: 460px; opacity: .1;
-    -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent); }
-}
 /* Bandeau identique sur toutes les pages : nom + rôle, même hauteur */
 html body .brand .brole { display: block; margin-top: .3rem; font: 500 .82rem/1.2 var(--sans); color: #E8ECF2; }
 /* Catégorie des exercices au-dessus du titre de la page */
@@ -2718,9 +2610,6 @@ html body.page-home .home-intro .intro p {
   -webkit-hyphens: manual;
 }
 html body.page-home .home-intro .cta { margin-top: 2.2rem; }
-@media (min-width: 861px) {
-  html body.page-home main::before { bottom: auto; height: clamp(600px, 58vw, 860px); }
-}
 
 /* ---------- Pages projet : échelle typographique ---------- */
 html body .project > h1 {
@@ -2754,7 +2643,6 @@ html body .project .prose > p {
 html body .project .fiche h3,
 html body .project .team header h3,
 html body .project .etapes h3,
-html body .project .keyart figcaption b,
 html body .project .stat b { font-size: 1.25rem; }
 html body .project figcaption,
 html body .project figcaption span,
@@ -2959,7 +2847,6 @@ html body .feat { grid-template-columns: clamp(150px, 15vw, 210px) minmax(0, 1fr
 main { overflow-x: clip; }
 /* 1. Premier écran en bleu marine plein, sur toute la largeur */
 html body.page-home main { padding-top: 0; }
-html body.page-home main::before { display: none; }
 .hero { position: relative; isolation: isolate; background: var(--band); box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax); padding: clamp(2rem, 4vw, 3.25rem) 0 clamp(1.5rem, 3vw, 2.25rem); color: #E7ECF4; }
 .hero::before { content: ""; position: absolute; top: 0; bottom: 0; right: calc(50% - 50vw); width: 58vw; z-index: -1; pointer-events: none;
   background: url("../images/accueil-fond-jira.jpg") right center / cover no-repeat; opacity: .1; mix-blend-mode: screen;
@@ -3082,7 +2969,6 @@ html body .project .ka-i p { margin: 0; max-width: 34rem; font-size: 1rem; line-
 @media (max-width: 760px) { .ka.n2, .ka.n4 { grid-template-columns: minmax(0, 1fr); } }
 
 /* 5. Vignettes des listes : composites de key arts, sans pastille */
-html body .stage .card .status { display: none; }
 
 /* 6. Un seul style d'action : bouton doré pour l'action principale, lien fléché pour ouvrir un projet */
 :root { --btn: var(--gold); --on-btn: #0B1A33; }

@@ -439,7 +439,6 @@ function render(still){
   document.body.classList.toggle("page-detail", !!curNav);
   const v = $("#view"); v.innerHTML = html;
   v.querySelectorAll(".vt[data-pos]").forEach(e=>{ if(e.dataset.pos) e.querySelector("img").style.objectPosition=e.dataset.pos; });
-  v.querySelectorAll("[data-l]").forEach(e=>{ e.style.left=e.dataset.l+"%"; if(e.dataset.w) e.style.width=e.dataset.w+"%"; });   /* la CSP refuse les attributs style */
   if(navDir && !matchMedia("(prefers-reduced-motion:reduce)").matches)
     v.animate([{opacity:0,transform:`translateX(${navDir*48}px)`},{opacity:1,transform:"none"}],{duration:280,easing:"ease-out"});
   navDir = 0;

@@ -14,3 +14,7 @@ desktop.ini
 *.tmp
 *~
 brouillons/
+
+# Captures de outils/verifier.py
+avant/
+apres/

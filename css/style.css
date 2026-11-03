@@ -2924,3 +2924,11 @@ html body .feat-txt h3 { margin: 0 0 .55rem; font: 700 1.18rem/1.22 var(--displa
   html body .stage .card { width: min(100%, 26rem); }
   html body .stage .grid { gap: 4.5rem; }
 }
+/* Cartes : informations resserrées sous la vignette, bouton aligné en bas */
+@media (min-width: 601px) {
+  html body .stage .grid .card { display: flex; flex-direction: column; grid-row: auto; }
+}
+html body .stage .card h3 { margin: 1.1rem 0 .4rem; }
+html body .stage .card .cmeta { flex: none; margin: 0 0 .9rem; }
+html body .stage .card .cdesc { flex: none; margin: 0 0 1.4rem; padding-top: .9rem; }
+html body .stage .card .btn { margin-top: auto; align-self: flex-start; }

@@ -95,7 +95,7 @@ function listing(sec){
   const cards = items.map(p => `<article class="card${p.wip?" is-wip":""}">
     <div class="thumb${p.img?" has-img":""}"${p.wip?"":` data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}"`}>${img(p.img,p.title,p.title[0])}${p.wip?'<span class="wip-blur" aria-hidden="true"></span>':""}${p.survol?survol(p.survol):""}<span class="status${p.wip?" wip":""}"><i aria-hidden="true"></i>${p.wip?t("stWip"):t("stDone")}</span></div>
     <h3>${cardTitle(p.title,p.cat&&p.date?`${p.cat} · ${p.date}`:p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
-    ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="btn" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${t("details")}</a>`}</article>`).join("");
+    ${p.wip?'<span class="btn is-disabled" aria-disabled="true">'+t("details")+'</span>':`<a class="go" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${q("Voir le projet","See the project")}<span aria-hidden="true"> →</span></a>`}</article>`).join("");
   return `<div class="list-head"><h1>${sec.label}</h1><p class="lead">${sec.intro}</p></div>
   <div class="stage"><h2 class="sr">${q("Liste des projets","Project list")}</h2>${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="perso"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;
 }

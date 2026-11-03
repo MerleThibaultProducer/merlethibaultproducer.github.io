@@ -2933,3 +2933,9 @@ html body .stage .card .btn { margin-top: auto; align-self: flex-start; }
 .rv.in { opacity: 1; transform: none; transition: opacity .6s ease-out var(--d, 0s), transform .75s cubic-bezier(.2, .7, .2, 1) var(--d, 0s); }
 .btn:active, .feat:active, .pn a:active { transform: scale(.97); transition-duration: .08s; }
 @media print { .rv { opacity: 1; transform: none; } }
+
+/* Téléphone : les flèches flottantes couvraient le texte ; le glissement du doigt et les liens en bas de page suffisent */
+@media (max-width: 760px) { html body .side { display: none; } }
+/* Derniers projets : vignettes plus grandes, même mise en page */
+html body .feat { grid-template-columns: clamp(150px, 17vw, 240px) minmax(0, 1fr); }
+@media (max-width: 860px) { html body .feat, html body .feat:first-child, html body .feat:last-child { grid-template-columns: 108px minmax(0, 1fr); } }

@@ -253,7 +253,7 @@ const EQUIPES_FUSION = [
 const PROJECTS_FR = {
   pro: [
     P({ title:"Projets de fin d'année : quatre jeux en parallèle – Mai-juin 2026", large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
-        desc:"La production d'une promotion entière par un seul producer, du lancement à la livraison au jury, avec une crise de direction artistique à mi-parcours.", carte:"Toute une promotion et un seul producer, avec une méthode Agile intégrée aux jalons Waterfall de l'école.",
+        desc:"La production d'une promotion entière par un seul producer, du lancement à la livraison au jury, avec une crise de direction artistique à mi-parcours.", carte:"Quatre jeux pour une promotion entière, et une crise de direction artistique surmontée par une pause et deux playtests communs.",
         img:PRO1.thumb, une:true,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
@@ -331,7 +331,7 @@ const PROJECTS_FR = {
         ] }),
     P({ title:"Workshop Rogue-lite – Février 2026", large:true, nocover:true,
         desc:"Quinze jours pour livrer deux rogue-lites jouables sous Unity, chacun d'après une licence de film.",
-        carte:"Deux rogue-lites livrés sous Unity en quinze jours, un planning tenu à deux niveaux et des coupes préparées avant les premiers retards.",
+        carte:"Deux rogue-lites livrés en quinze jours, avec des coupes préparées à l'avance et une génération procédurale simulée pour tenir la date.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026 (15 jours ouvrés)", "Outils":"Excel · PowerPoint · Miro · Discord" },
         apercu:"Pour ce workshop de Game Sup, deux équipes avaient quinze jours pour livrer chacune un rogue-lite en 2,5D sous Unity, d'après une licence imposée : *Vampire Hunter D: Bloodlust* pour l'une, *Mad Max: Fury Road* pour l'autre. J'étais le producer des deux, avec un planning commun et un suivi des tâches propre à chaque équipe. Quand la génération procédurale a résisté, nous l'avons simulée pour tenir la date. Les deux jeux ont été livrés **jouables de bout en bout**.",
@@ -425,7 +425,7 @@ const PROJECTS_FR = {
         ] }),
     P({ title:"Workshop Fusion – Novembre 2025", large:true, nocover:true,
         desc:"Trois semaines de travail pour livrer deux vertical slices de course sous Unreal Engine 5, chacune née de la fusion d'un jeu rétro et d'une licence.",
-        carte:"Deux vertical slices de course livrées sous Unreal Engine 5 en trois semaines de travail, avec mes premiers dailies et des listes d'assets classées par priorité.",
+        carte:"Deux jeux de course nés de la fusion d'un gameplay et d'une licence, avec mes premiers dailies et des assets classés par priorité.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 équipes de 14 et 15","Racing · Fusion","3 semaines"] }, img:"images/fusion-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 et 15 personnes", "Durée":"3 – 28 novembre 2025 (3 semaines ouvrées)", "Outils":"Excel" },
         apercu:"Pour ce workshop de Game Sup, deux équipes avaient trois semaines de travail pour livrer chacune une vertical slice de jeu de course sous Unreal Engine 5. La contrainte était une fusion : reprendre le gameplay d'un jeu de référence et l'habiller d'une licence imposée. HellStorm mêlait *Motorstorm* à *Doom*, Wakfu Riders *Street Racer* à *Wakfu*. J'étais le producer des deux, avec un plan de production Agile sur Excel, une revue chaque semaine et mes premiers dailies. Au jury, **97 % et 98 % des tâches** étaient terminées.",
@@ -434,7 +434,7 @@ const PROJECTS_FR = {
             LIGNE([
               T("La consigne demandait une vertical slice : quelques minutes de jeu, compréhensibles sans explication. Chaque équipe recevait un style de course, un jeu de référence pour le gameplay et une licence pour la direction artistique. L'école voulait une vraie fusion, qui adapte le gameplay à la licence en gardant l'essence du jeu d'origine."),
               T("Le document de gestion de production était le mien, avec le planning macro et micro, un burndown chart chaque semaine et un tableau de bord général et par personne.")
-            ],[ FICHE("Les contraintes",["Deux vertical slices à produire en même temps sous Unreal Engine 5","Trois semaines de travail, du 3 au 28 novembre 2025","Un style de course, un jeu de référence et une licence imposés à chaque équipe","Trois revues de l'équipe pédagogique avant le jury"]) ]),
+            ],[ FICHE("Les contraintes",["Deux jeux en même temps, pour un seul producer et 29 personnes","Trois semaines de travail, du 3 au 28 novembre 2025","Un jeu de type III visant le AAA, en modèle premium","Trois revues de l'équipe pédagogique avant le jury"]) ]),
             LIGNE([ KEYART([
                       ["images/fusion-hs-keyart.jpg","HellStorm","Le Groupe 3 a reçu le gameplay de Motorstorm et la licence Doom, et en a fait une course tout-terrain en enfer."],
                       ["images/fusion-wk-keyart.jpg","Wakfu Riders","Le Groupe 4 a reçu le gameplay de Street Racer et la licence Wakfu, et en a fait une course arcade à coups de sorts, dans un village de vignerons."]
@@ -738,7 +738,7 @@ const PROJECTS_FR = {
 const PROJECTS_EN = {
   pro: [
     P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", large:true, nocover:true,
-        desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"A whole class and a single producer, with an Agile method embedded in the school's Waterfall milestones.",
+        desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
         img:PRO1.thumb, une:true,
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
@@ -816,7 +816,7 @@ const PROJECTS_EN = {
         ] }),
     P({ title:"Rogue-lite Workshop – February 2026", large:true, nocover:true,
         desc:"Fifteen days to deliver two playable rogue-lites in Unity, each based on a film licence.",
-        carte:"Two rogue-lites shipped in Unity in fifteen days, a schedule run on two levels and cuts prepared before the first delays.",
+        carte:"Two rogue-lites shipped in fifteen days, with cuts prepared in advance and procedural generation faked to hold the deadline.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026 (15 working days)", "Tools":"Excel · PowerPoint · Miro · Discord" },
         apercu:"For this Game Sup workshop, two teams had fifteen days to each deliver a 2.5D rogue-lite in Unity, based on an assigned licence: *Vampire Hunter D: Bloodlust* for one, *Mad Max: Fury Road* for the other. I was the producer for both, with a shared schedule and a task tracker for each team. When procedural generation resisted, we faked it to hold the deadline. Both games were delivered **playable from start to finish**.",
@@ -910,7 +910,7 @@ const PROJECTS_EN = {
         ] }),
     P({ title:"Fusion Workshop – November 2025", large:true, nocover:true,
         desc:"Three working weeks to deliver two racing vertical slices in Unreal Engine 5, each born from the fusion of a retro game and a licence.",
-        carte:"Two racing vertical slices delivered in Unreal Engine 5 in three working weeks, with my first dailies and asset lists ranked by priority.",
+        carte:"Two racing games born from fusing a gameplay with a licence, with my first dailies and assets ranked by priority.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 teams of 14 and 15","Racing · Fusion","3 weeks"] }, img:"images/fusion-thumb.jpg",
         infos:{ "Role":"Producer", "Team":"2 teams of 14 and 15 people", "Duration":"3 – 28 November 2025 (3 working weeks)", "Tools":"Excel" },
         apercu:"For this Game Sup workshop, two teams had three working weeks to each deliver a racing game vertical slice in Unreal Engine 5. The constraint was a fusion: take the gameplay of a reference game and dress it in an assigned licence. HellStorm combined *Motorstorm* with *Doom*, Wakfu Riders *Street Racer* with *Wakfu*. I was the producer for both, with an Agile production plan in Excel, a review every week and my first dailies. At the jury, **97% and 98% of the tasks** were done.",
@@ -919,7 +919,7 @@ const PROJECTS_EN = {
             LIGNE([
               T("The brief asked for a vertical slice: a few minutes of play, clear without any explanation. Each team was given a racing style, a reference game for the gameplay and a licence for the art direction. The school wanted a real fusion, adapting the gameplay to the licence while keeping the essence of the original game."),
               T("The production management document was mine, with the macro and micro planning, a weekly burndown chart and a dashboard for the team and for each person.")
-            ],[ FICHE("Constraints",["Two vertical slices to produce at the same time in Unreal Engine 5","Three working weeks, from 3 to 28 November 2025","A racing style, a reference game and a licence assigned to each team","Three reviews by the teaching staff before the jury"]) ]),
+            ],[ FICHE("Constraints",["Two games at once, for a single producer and 29 people","Three working weeks, from 3 to 28 November 2025","A III game aiming for AAA quality, sold as a premium title","Three reviews by the teaching staff before the jury"]) ]),
             LIGNE([ KEYART([
                       ["images/fusion-hs-keyart.jpg","HellStorm","Group 3 was given the gameplay of Motorstorm and the Doom licence, and turned them into an off-road race through hell."],
                       ["images/fusion-wk-keyart.jpg","Wakfu Riders","Group 4 was given the gameplay of Street Racer and the Wakfu licence, and turned them into a spell-slinging arcade race through a winegrowers' village."]

@@ -318,7 +318,7 @@ function detail(sec, p, prev, next){
   const link = (q,cls,lab,arrow) => q ? `<a class="${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${esc(q.title)}</b></a>` : "";
   const side = (q,cls,ch,lab) => q ? `<a class="side ${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0" aria-label="${lab} : ${esc(q.title)}" title="${esc(q.title)}">${ch}</a>` : "";
   return `<a class="back" data-go="${sec.route}" role="link" tabindex="0">‹ ${sec.label}</a>
-  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title)}</h1><p class="lead">${esc(p.desc)}</p>
+  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title).replace(" – ","\u00a0– ")}</h1><p class="lead">${esc(p.desc)}</p>
     ${p.large&&(!p.img||p.nocover)?"":`<div class="cover">${img(p.img,p.title,p.title[0])}</div>`}
     ${p.apercu ? recap(p) : `${infos?`<ul class="meta">${infos}</ul>`:""}${brief(p)}`}
     <div class="prose">${blocks(p.contenu)}</div></article>

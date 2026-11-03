@@ -220,8 +220,7 @@ const EQUIPES_FUSION = [
         M("Romain Nicoghossian","https://www.linkedin.com/in/romain-nicoghossian-a39151290/","Level Design"),
         M("Baptiste Feron","https://www.linkedin.com/in/baptiste-feron-51232b264/","Narrative Design") ],
     art:[
-        M("Anaïs Lacoste","https://www.linkedin.com/in/ana%C3%AFs-lacoste-891315225/","Référent Game Art","Game Art Lead"),
-        M("Thomas Vauché","https://www.linkedin.com/in/thomas-vauch%C3%A9-8181a3333/","Level Art"),
+        M("Thomas Vauché","https://www.linkedin.com/in/thomas-vauch%C3%A9-8181a3333/","Référent Game Art · Level Art","Game Art Lead · Level Art"),
         M("Alexis Tassan-Toffola","https://www.linkedin.com/in/alexis-tassan-toffola-861035366/","Environment Art"),
         M("Erwan Rezkallah","https://www.linkedin.com/in/erwan-rezkallah-8a17073a1/","Environment Art"),
         M("Lou Azzi","https://www.linkedin.com/in/lou-azzi-6a3076333/","Environment Art"),

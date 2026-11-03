@@ -252,8 +252,8 @@ const EQUIPES_FUSION = [
 
 
 /* ---------- ACCUEIL : vitrine des jeux et frise des productions ----------
-   VITRINE : [image, nom du jeu, page du projet]. FRISE : une barre par production, découpée en sprints (0 = non découpée) ;
-   go vide = projet pas encore publié (barre sans lien). */
+   VITRINE : une colonne par production, dans l'ordre de la frise. FRISE : un jalon par production ;
+   go vide = projet pas encore publié (jalon grisé, sans lien). */
 const VITRINE = [   // [image (ou liste d'images pour une mosaïque), jeu, page, production FR, production EN, cadrage, nom EN]
   ["images/fusion-hs-keyart.jpg","HellStorm","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","50% 50%"],
   ["images/fusion-wk-keyart.jpg","Wakfu Riders","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","35% 40%"],
@@ -742,9 +742,8 @@ const PROJECTS_FR = {
 };
 const PROJECTS_EN = {
   pro: [
-    P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", bandeau:[["images/fda-castor.jpg","Le Castor et l'Écureuil"],["images/fda-glow.jpg","Project GLOW"],["images/fda-insight.jpg","Insight"],["images/fda-flowering.jpg","The Flowering Dead"]], large:true, nocover:true,
+    P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", 
         desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
-        img:PRO1.thumb,
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
         apercu:"In the second week of the end-of-year project, all four of the class's games hit the same art direction crisis. I was the only producer for the four teams: we paused production for a day and a half, then I organised two shared playtest sessions and reset priorities with each group. To keep track of it all, I had adapted an Agile method to the school's Waterfall milestones, with Excel tracking for each group. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
@@ -786,7 +785,6 @@ const PROJECTS_EN = {
               T("Each group experienced the crisis in its own way. For Project GLOW, I decided with the leads to cut several assets that were off-brief or no longer a priority. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
             ],[ IMG(PRO1.kill,"Cut tasks in Project GLOW's tracking") ]),
             LIGNE([
-              
             ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil: from blockout to the Level Art and atmospheric shader reworked after the crisis") ])
           ]),
           BANDE("V","Running playtests and reprioritising",[
@@ -819,10 +817,10 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ title:"Rogue-lite Workshop – February 2026", bandeau:[["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle"],["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue"]], large:true, nocover:true,
+    P({ title:"Rogue-lite Workshop – February 2026", 
         desc:"Fifteen days to deliver two playable rogue-lites in Unity, each based on a film licence.",
         carte:"Two rogue-lites shipped in fifteen days, with cuts prepared in advance and procedural generation faked to hold the deadline.",
-        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, img:"images/rogue-thumb.jpg",
+        survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, 
         infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026 (15 working days)", "Tools":"Excel · PowerPoint · Miro · Discord" },
         apercu:"By the end of the first sprint of this fifteen-day workshop, procedural generation in Mad Max Fury Rogue, the required core of the rogue-lite, was already late. With the Game Design lead and the instructors' agreement, we faked it to hold the deadline. I was the producer for both teams, who each had to deliver a 2.5D rogue-lite in Unity based on a film licence, with a shared schedule and cuts prepared in advance. Both games were delivered **playable from start to finish**.",
         contenu:[
@@ -902,10 +900,10 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ title:"Fusion Workshop – November 2025", bandeau:[["images/fusion-hs-keyart.jpg","HellStorm"],["images/fusion-wk-keyart.jpg","Wakfu Riders"]], large:true, nocover:true,
+    P({ title:"Fusion Workshop – November 2025", 
         desc:"Three working weeks to deliver two racing vertical slices in Unreal Engine 5, each born from the fusion of a retro game and a licence.",
         carte:"Two racing games born from fusing a gameplay with a licence, with my first dailies and assets ranked by priority.",
-        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 teams of 14 and 15","Racing · Fusion","3 weeks"] }, img:"images/fusion-thumb.jpg",
+        survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 teams of 14 and 15","Racing · Fusion","3 weeks"] }, 
         infos:{ "Role":"Producer", "Team":"2 teams of 14 and 15 people", "Duration":"3 – 28 November 2025 (3 working weeks)", "Tools":"Excel" },
         apercu:"For this Game Sup workshop, two teams had three working weeks to each deliver a racing game vertical slice in Unreal Engine 5. The constraint was a fusion: take the gameplay of a reference game and dress it in an assigned licence. HellStorm combined *Motorstorm* with *Doom*, Wakfu Riders *Street Racer* with *Wakfu*. I was the producer for both, with an Agile production plan in Excel, a review every week and my first dailies. At the jury, **97% and 98% of the tasks** were done.",
         contenu:[
@@ -964,9 +962,9 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ title:"End-of-Year Projects: My First Two Productions – June 2025", wip:true,
+    P({ title:"End-of-Year Projects: My First Two Productions – June 2025", 
         desc:"My first time managing two projects in parallel, tracked in Excel and Miro.", carte:"Two teams tracked in parallel in Excel and Miro, with sprint reviews for each.",
-        survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","2 teams of 12 to 13","Varied genres","4 weeks"] }, img:"images/fin-annee-2025-thumb.jpg",
+        survol:{ moteur:"Unreal / Unity", logos:["images/unreal-engine.png","images/unity.svg"], items:["Producer","2 teams of 12 to 13","Varied genres","4 weeks"] }, 
         infos:{ "Role":"Producer", "Team":"2 teams of 12 to 13 people", "Duration":"4 weeks", "Tools":"Excel · Miro" },
         resume:{ contexte:"Game Sup end-of-year project: two teams of 12 to 13 people, four weeks of development.",
                  role:"Producer for both projects, run in parallel.",
@@ -979,10 +977,9 @@ const PROJECTS_EN = {
         ] })
   ],
   perso: [
-    P({ une:true, date:"October 2026", survol:{ items:["Producer","AA action-RPG · 15 people","Simulation","Jira · JQL"] }, cat:"Production management", title:"Jira and Agile Project: A Studio Simulation", large:true, nocover:true,
+    P({ date:"October 2026", survol:{ items:["Producer","AA action-RPG · 15 people","Simulation","Jira · JQL"] }, cat:"Production management", title:"Jira and Agile Project: A Studio Simulation", 
         desc:"The production of a fictional AA action-RPG, structured on my own in Jira, from the boards to the risk register.",
         carte:"A fictional studio run in Jira with Scrum: sprints, bugs, risks and automations.",
-        img:"images/jira-vignette.jpg",
         infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL", "Period":"October 2026", "Workload":"About 20 hours", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
         apercu:"To learn Jira on a realistic case, I set up on my own the production of a **fictional AA action-RPG** with 15 people and four vendors, modelled on Ember Lab's Kena: Bridge of Spirits. The project has five boards, a filter library, five automations and a register of seven risks, tested through a simulated sprint. I play every role and the data is simulated, to show how I structure the tool.",
         contenu:[
@@ -1065,8 +1062,7 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ date:"March 2026", survol:{ items:["Producer","AA game · 42 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", nocover:true, desc:"Production plan for a 48-month AA game: team, budget, schedule, sales estimate and break-even point.", carte:"The team, budget and break-even point of a fictional 48-month AA game.", large:true,
-        img:PROJECTS_FR.perso[1].img,
+    P({ date:"March 2026", survol:{ items:["Producer","AA game · 42 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", desc:"Production plan for a 48-month AA game: team, budget, schedule, sales estimate and break-even point.", carte:"The team, budget and break-even point of a fictional 48-month AA game.", 
         infos:{ "Role":"Producer", "Context":"Production management · Game Sup", "Date":"March 2026", "Project":"AA · 42 people at peak", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
         apercu:"This production exercise was about Wyrdfall, a fictional AA game, where I played the producer, from building the team to the break-even point. I arrive at **a €9M budget over 48 months**, break-even at around 451,000 sales and two ROI scenarios, in an Excel file that updates in one click.",
         contenu:[
@@ -1114,9 +1110,8 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ date:"April 2025", survol:{ items:["Author of the GDD","Turn-based RPG","90 hours","67 pages"] }, cat:"Game Design and Narrative Design", title:"Castalie's Tears", large:true, nocover:true,
+    P({ date:"April 2025", survol:{ items:["Author of the GDD","Turn-based RPG","90 hours","67 pages"] }, cat:"Game Design and Narrative Design", title:"Castalie's Tears", 
         desc:"The Game Design Document for a mythology-inspired turn-based RPG, from the core loop to a Narrative Design level.", carte:"The Game Design Document for a turn-based mythological RPG: core loop, systems and their embodiment in the story.",
-        img:CT.thumb,
         infos:{ "Role":"Author of the GDD", "Context":"Game Design · Game Sup", "Date":"April 2025", "Workload":"90 hours", "Deliverable":"Game Design Document · 67 pages" },
         apercu:"For this Game Design exercise, we had to design a game around a mythical creature from an assigned country, in my case Greece. I wrote the Game Design Document for Castalie's Tears, a turn-based RPG, from the concept to a complete level, making sure that **every mechanic makes sense in the story**.",
         contenu:[
@@ -1161,9 +1156,8 @@ const PROJECTS_EN = {
             ])
           ])
         ] }),
-    P({ date:"January 2025", survol:{ items:["Author of the study","Market analysis","Source cross-checking","30 slides"] }, cat:"Market analysis", title:"The African Video Game Market: The Case of Nigeria", large:true, nocover:true,
+    P({ date:"January 2025", survol:{ items:["Author of the study","Market analysis","Source cross-checking","30 slides"] }, cat:"Market analysis", title:"The African Video Game Market: The Case of Nigeria", 
         desc:"A study of the African video game market through Nigeria, where mobile and local audiences shape a model of its own, still held back by infrastructure.", carte:"A market driven by mobile and local audiences, still held back by infrastructure.",
-        img:NG.thumb,
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025 · sources checked in October 2026", "Deliverable":"PowerPoint presentation · 30 slides" },
         apercu:"For this video game culture exercise, I studied the African video game market through the case of Nigeria, cross-checking my sources. I found a mobile, local model, driven by a young population but held back by infrastructure. What I take from it is that budget, schedule, platform and payment method **are decided together**.",
         contenu:[
@@ -1217,7 +1211,9 @@ const PROJECTS_EN = {
 Object.entries(PROJECTS_FR).forEach(([key,list])=>{const seen={};list.forEach(p=>{
   let b=p.id||p.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"projet";
   seen[b]=(seen[b]||0)+1;p.id=seen[b]>1?b+"-"+seen[b]:b;p.key=key;});});
-Object.entries(PROJECTS_EN).forEach(([key,list])=>list.forEach((p,i)=>{p.id=PROJECTS_FR[key][i].id;p.key=key;}));
+/* Version anglaise : mêmes projets dans le même ordre ; images, bandeau et réglages d'affichage viennent de la version française */
+const COMMUNS = ["img","bandeau","large","nocover","une","wip"];
+Object.entries(PROJECTS_EN).forEach(([key,list])=>list.forEach((p,i)=>{const fr=PROJECTS_FR[key][i];p.id=fr.id;p.key=key;COMMUNS.forEach(c=>{if(c in fr)p[c]=fr[c];});}));
 let PROJECTS = PROJECTS_FR;
 
 const SECTIONS_FR = [

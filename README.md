@@ -14,8 +14,11 @@ js/contenu.js                  ✏️ TOUT LE CONTENU : textes FR/EN, projets, C
 js/app.js                      fonctionnement (navigation, langues, affichage) – rien à modifier
 images/                        photos, vignettes et illustrations des projets
 images/apercu-partage.jpg      image affichée quand le lien est partagé (LinkedIn, Discord…)
-cv/MERLE_Thibault_CV_PROD_v5.pdf  CV proposé au téléchargement
-cv/cv-apercu-v5.jpg               aperçu du CV affiché sur la page Infos
+cv/MERLE_Thibault_CV_PROD_v9.pdf     CV couleur proposé au téléchargement
+cv/MERLE_Thibault_CV_PROD_v9_NB.pdf  CV noir et blanc, pour l'impression
+cv/cv-apercu-v9.jpg                  aperçu du CV affiché sur la page Infos
+outils/images-mobiles.py             crée les versions légères des images (-m) et js/images-m.js
+outils/verifier.py                   vérifie toutes les pages (voir plus bas)
 ```
 
 ## Modifier le site
@@ -23,7 +26,10 @@ cv/cv-apercu-v5.jpg               aperçu du CV affiché sur la page Infos
 - **Un texte** : ouvrez `js/contenu.js`, cherchez la phrase et modifiez-la (en français puis en anglais).
 - **Une image** : déposez le nouveau fichier dans `images/` et indiquez son chemin dans `js/contenu.js`,
   ou remplacez un fichier existant en gardant le même nom.
-- **Le CV** : ajoutez le nouveau PDF et son aperçu sous un **nouveau nom** (ex. `_v6`), puis mettez à jour `image` et `pdf` dans `CV_VISUAL` (js/contenu.js). Un nouveau nom évite que les navigateurs gardent l'ancienne version en cache. Le fichier téléchargé garde le nom défini dans `filename`.
+- **Le CV** : ajoutez les nouveaux PDF (couleur et noir et blanc) et l'aperçu sous un **nouveau nom** (ex. `_v10`), puis mettez à jour `image`, `pdf` et `pdfNB` dans `CV_VISUAL` (js/contenu.js). Un nouveau nom évite que les navigateurs gardent l'ancienne version en cache. Les fichiers téléchargés gardent les noms définis dans `filename` et `filenameNB`.
+- **L'accueil** : dans `js/contenu.js`, `VITRINE` liste les images des jeux (dans l'ordre de la frise ; une liste d'images donne une mosaïque) et `FRISE` les jalons de la frise (un `go` vide grise le jalon tant que la page n'est pas publiée). `une:true` sur un projet l'ajoute dans « À voir aussi ».
+- **La vignette, le bandeau et les réglages d'un projet** (`img`, `bandeau`, `large`, `nocover`, `une`, `wip`) s'écrivent seulement dans la version française : la version anglaise les reprend. Les deux listes doivent garder les projets dans le même ordre.
+- **Une nouvelle image** : lancez `python3 outils/images-mobiles.py` pour créer sa version légère pour téléphone.
 - **Un projet en cours** : retirez `wip:true` pour le rendre visible.
 
 Un projet sans présentation (`apercu`) peut avoir un résumé (`resume`) et un encadré « Mon rôle et mes décisions » (`decisions`) : ils ne s'affichent pas quand `apercu` est rempli.
@@ -40,6 +46,12 @@ python3 outils/verifier.py --captures apres --comparer avant
 ```
 
 Les dossiers `avant/` et `apres/` sont ignorés par git.
+
+Après une modification de `css/` ou `js/`, changez le numéro de version dans `index.html` pour que les visiteurs reçoivent les nouveaux fichiers. Une seule commande le fait aux quatre endroits :
+
+```
+sed -i "s/?v=[0-9-]*/?v=$(date +%Y%m%d-%H%M)/g" index.html
+```
 
 ## Mentions légales
 

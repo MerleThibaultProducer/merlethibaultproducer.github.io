@@ -2,7 +2,7 @@
    Portfolio – Thibault Merle
    Feuille de style unique. Couleurs et polices sont définies
    en variables dans :root ; le mode nuit les redéfinit sous
-   [data-theme="dark"] et prefers-color-scheme: dark.
+   [data-theme="dark"], toujours posé par js/app.js.
    Titres : Bricolage Grotesque (fonts/, licence OFL) ;
    texte courant : Inter.
    ============================================================ */
@@ -542,13 +542,11 @@ footer a.social:hover span {
   color: #9A3B3B;
   font-weight: 500;
 }
-@media(prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .tbl td.pos {
-    color: #8FD3B0;
-  }
-  :root:not([data-theme="light"]) .tbl td.neg {
-    color: #F0A0A0;
-  }
+:root[data-theme="dark"] .tbl td.pos {
+  color: #8FD3B0;
+}
+:root[data-theme="dark"] .tbl td.neg {
+  color: #F0A0A0;
 }
 #lb {
   position: fixed;
@@ -759,15 +757,13 @@ h3 {
 #lb img {
   border-radius: 8px;
 }
-@media(prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .fiche,
-  :root:not([data-theme="light"]) .etapes,
-  :root:not([data-theme="light"]) .tbl,
-  :root:not([data-theme="light"]) .band:nth-of-type(even) .fiche,
-  :root:not([data-theme="light"]) .band:nth-of-type(even) .etapes,
-  :root:not([data-theme="light"]) .band:nth-of-type(even) .tbl {
-    background: #15133F;
-  }
+:root[data-theme="dark"] .fiche,
+:root[data-theme="dark"] .etapes,
+:root[data-theme="dark"] .tbl,
+:root[data-theme="dark"] .band:nth-of-type(even) .fiche,
+:root[data-theme="dark"] .band:nth-of-type(even) .etapes,
+:root[data-theme="dark"] .band:nth-of-type(even) .tbl {
+  background: #15133F;
 }
 .band blockquote {
   margin: 0;
@@ -836,23 +832,21 @@ h3 {
   --chart: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='330' height='100' viewBox='0 0 330 100'><rect x='2' y='4' width='96' height='92' rx='7' fill='%23FFFFFF' fill-opacity='.035' stroke='%23FFFFFF' stroke-opacity='.10'/><rect x='12' y='13' width='34' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><rect x='10' y='24' width='80' height='18' rx='4' fill='%23FFFFFF' fill-opacity='.07'/><rect x='17' y='31' width='22' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><rect x='10' y='48' width='80' height='18' rx='4' fill='%23FFFFFF' fill-opacity='.07'/><rect x='17' y='55' width='22' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><rect x='10' y='72' width='80' height='18' rx='4' fill='%23FFFFFF' fill-opacity='.07'/><rect x='17' y='79' width='22' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><rect x='117' y='4' width='96' height='92' rx='7' fill='%23FFFFFF' fill-opacity='.035' stroke='%23FFFFFF' stroke-opacity='.10'/><rect x='127' y='13' width='34' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><rect x='125' y='24' width='80' height='18' rx='4' fill='%23FFFFFF' fill-opacity='.07'/><rect x='132' y='31' width='22' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><rect x='125' y='48' width='80' height='18' rx='4' fill='%23FFFFFF' fill-opacity='.07'/><rect x='132' y='55' width='22' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><rect x='232' y='4' width='96' height='92' rx='7' fill='%23FFFFFF' fill-opacity='.035' stroke='%23FFFFFF' stroke-opacity='.10'/><rect x='242' y='13' width='34' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><rect x='240' y='24' width='80' height='18' rx='4' fill='%23E1A624' fill-opacity='.38'/><rect x='247' y='31' width='22' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.22'/><rect x='240' y='48' width='80' height='18' rx='4' fill='%23FFFFFF' fill-opacity='.07'/><rect x='247' y='55' width='22' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><path d='M305 57l3.5 3.5 7-7' fill='none' stroke='%23FFFFFF' stroke-opacity='.45' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/><rect x='240' y='72' width='80' height='18' rx='4' fill='%23FFFFFF' fill-opacity='.07'/><rect x='247' y='79' width='22' height='4' rx='2' fill='%23FFFFFF' fill-opacity='.16'/><path d='M305 81l3.5 3.5 7-7' fill='none' stroke='%23FFFFFF' stroke-opacity='.45' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
   --sans: 'Inter',system-ui,'Segoe UI',Arial,sans-serif;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) {
-    --band: #122A52;
-    --band-d: #13294B;
-    --bg: #0D1A30;
-    --surface: #14253F;
-    --muted: #A9B1BF;
-    --tint: #1B2D4A;
-    --line: #28406A;
-    --soft: #172A47;
-    --rule: #3A4455;
-    --gold-d: #E1A624;
-    --gold-n: #E1A624;
-    --on-btn: #13294B;
-    --deep: #122A52;
-    --shadow: 0 6px 22px -10px rgba(0,0,0,.6);
-  }
+:root[data-theme="dark"] {
+  --band: #122A52;
+  --band-d: #13294B;
+  --bg: #0D1A30;
+  --surface: #14253F;
+  --muted: #A9B1BF;
+  --tint: #1B2D4A;
+  --line: #28406A;
+  --soft: #172A47;
+  --rule: #3A4455;
+  --gold-d: #E1A624;
+  --gold-n: #E1A624;
+  --on-btn: #13294B;
+  --deep: #122A52;
+  --shadow: 0 6px 22px -10px rgba(0,0,0,.6);
 }
 :root[data-theme="dark"] {
   --band: #122A52;
@@ -1642,15 +1636,13 @@ body.page-home main {
   --grad: linear-gradient(160deg,#1A3A6E 0%,#122A52 100%);
   --shadow: 0 6px 22px -10px rgba(19,41,75,.35);
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) {
-    --ink: #EEF2F8;
-    --head: #EEF2F8;
-    --hl: #8DB8F0;
-    --gold-text: #8DB8F0;
-    --title-blue: #8DB8F0;
-    --btn: #2C63B0;
-  }
+:root[data-theme="dark"] {
+  --ink: #EEF2F8;
+  --head: #EEF2F8;
+  --hl: #8DB8F0;
+  --gold-text: #8DB8F0;
+  --title-blue: #8DB8F0;
+  --btn: #2C63B0;
 }
 :root[data-theme="dark"] {
   --ink: #EEF2F8;
@@ -1885,10 +1877,8 @@ html body .team {
 html body .tm-col h4 small {
   background: #fff;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) body .team {
-    background: #172A47;
-  }
+:root[data-theme="dark"] body .team {
+  background: #172A47;
 }
 :root[data-theme="dark"] body .team {
   background: #172A47;
@@ -1898,10 +1888,8 @@ html body .brief section {
   border-radius: 4px;
   padding: 1.4rem 1.6rem;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) body .brief section {
-    background: #172A47;
-  }
+:root[data-theme="dark"] body .brief section {
+  background: #172A47;
 }
 :root[data-theme="dark"] body .brief section {
   background: #172A47;
@@ -1932,13 +1920,11 @@ html body .brief section {
 .recap-txt p:last-child {
   margin-bottom: 0;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .recap {
-    background: #172A47;
-  }
-  :root:not([data-theme="light"]) .recap .facts {
-    border-color: #28406A;
-  }
+:root[data-theme="dark"] .recap {
+  background: #172A47;
+}
+:root[data-theme="dark"] .recap .facts {
+  border-color: #28406A;
 }
 :root[data-theme="dark"] .recap {
   background: #172A47;
@@ -2072,10 +2058,8 @@ html body .tbl tr.grp td {
   stroke-width: 1.2;
   fill: none;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .schema svg .ln2 {
-    stroke: #3A5378;
-  }
+:root[data-theme="dark"] .schema svg .ln2 {
+  stroke: #3A5378;
 }
 :root[data-theme="dark"] .schema svg .ln2 {
   stroke: #3A5378;
@@ -2095,11 +2079,9 @@ html body .prose>.band:nth-of-type(even) .schema svg .sb {
   background: #fff;
   fill: #fff;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) body .prose>.band:nth-of-type(even) {
-    background: #12223A;
-    box-shadow: 0 0 0 100vmax #12223A;
-  }
+:root[data-theme="dark"] body .prose>.band:nth-of-type(even) {
+  background: #12223A;
+  box-shadow: 0 0 0 100vmax #12223A;
 }
 :root[data-theme="dark"] body .prose>.band:nth-of-type(even) {
   background: #12223A;
@@ -2134,27 +2116,21 @@ html body .band-head h2::after {
 :root[data-theme="dark"] body .prose>.band:nth-of-type(even) .schema svg .sb {
   fill: #1B3150;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) body .prose>.band:nth-of-type(even) .schema svg .sb {
-    fill: #1B3150;
-  }
+:root[data-theme="dark"] body .prose>.band:nth-of-type(even) .schema svg .sb {
+  fill: #1B3150;
 }
 /* Mode nuit : la carte d'équipe garde son fond sombre, même dans une bande paire */
 :root[data-theme="dark"] body .prose>.band:nth-of-type(even) .team {
   background: #172A47;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) body .prose>.band:nth-of-type(even) .team {
-    background: #172A47;
-  }
+:root[data-theme="dark"] body .prose>.band:nth-of-type(even) .team {
+  background: #172A47;
 }
 :root[data-theme="dark"] body .btn:not(.ghost) {
   color: #fff;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) body .btn:not(.ghost) {
-    color: #fff;
-  }
+:root[data-theme="dark"] body .btn:not(.ghost) {
+  color: #fff;
 }
 html body .band-head h2 {
   position: relative;
@@ -2383,11 +2359,9 @@ html body .card h3 {
   background: #12223A;
   box-shadow: 0 0 0 100vmax #12223A;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .stage {
-    background: #12223A;
-    box-shadow: 0 0 0 100vmax #12223A;
-  }
+:root[data-theme="dark"] .stage {
+  background: #12223A;
+  box-shadow: 0 0 0 100vmax #12223A;
 }
 html body .project>h1::after,
 html body .infos-page>h1::after,
@@ -2422,11 +2396,9 @@ html body .infos-page>h1::after {
   background: #12223A;
   box-shadow: 0 0 0 100vmax #12223A;
 }
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) .infos-page .sk-group:nth-of-type(2) {
-    background: #12223A;
-    box-shadow: 0 0 0 100vmax #12223A;
-  }
+:root[data-theme="dark"] .infos-page .sk-group:nth-of-type(2) {
+  background: #12223A;
+  box-shadow: 0 0 0 100vmax #12223A;
 }
 html body .legal-page h2 {
   font: 700 1.2rem/1.3 var(--sans);
@@ -2692,9 +2664,9 @@ html body .infos-page .chips img { object-fit: contain; }
 /* Bandes alternées : Compétences (blanc), Outils (teinté), Langues (blanc), Loisirs (teinté) */
 html body .infos-page .sk-group:nth-of-type(4) { background: #F1F5FA; box-shadow: 0 0 0 100vmax #F1F5FA; clip-path: inset(0 -100vmax); border-top-color: transparent; padding-bottom: 3rem; }
 :root[data-theme="dark"] .infos-page .sk-group:nth-of-type(4) { background: #12223A; box-shadow: 0 0 0 100vmax #12223A; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .infos-page .sk-group:nth-of-type(4) { background: #12223A; box-shadow: 0 0 0 100vmax #12223A; } }
+:root[data-theme="dark"] .infos-page .sk-group:nth-of-type(4) { background: #12223A; box-shadow: 0 0 0 100vmax #12223A; }
 :root[data-theme="dark"] .infos-page .tool-grp { background: rgba(255,255,255,.03); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .infos-page .tool-grp { background: rgba(255,255,255,.03); } }
+:root[data-theme="dark"] .infos-page .tool-grp { background: rgba(255,255,255,.03); }
 /* Carrousels dans une bande : la colonne d'images ne déborde pas sur mobile */
 html body .brow > .bm { grid-template-columns: minmax(0, 1fr); }
 
@@ -2946,17 +2918,15 @@ html body .project .bandeau figcaption { font: 700 1.1rem/1.2 "Bricolage Grotesq
 /* 1. Mode nuit : encadrés et tableaux dans la palette (un ton au-dessus du fond), plus de violet */
 :root[data-theme="dark"] .fiche, :root[data-theme="dark"] .etapes, :root[data-theme="dark"] .tbl,
 :root[data-theme="dark"] .band:nth-of-type(even) .fiche, :root[data-theme="dark"] .band:nth-of-type(even) .etapes, :root[data-theme="dark"] .band:nth-of-type(even) .tbl { background: #1A3157; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .fiche, :root:not([data-theme="light"]) .etapes, :root:not([data-theme="light"]) .tbl,
-  :root:not([data-theme="light"]) .band:nth-of-type(even) .fiche, :root:not([data-theme="light"]) .band:nth-of-type(even) .etapes, :root:not([data-theme="light"]) .band:nth-of-type(even) .tbl { background: #1A3157; }
-}
+:root[data-theme="dark"] .fiche, :root[data-theme="dark"] .etapes, :root[data-theme="dark"] .tbl,
+:root[data-theme="dark"] .band:nth-of-type(even) .fiche, :root[data-theme="dark"] .band:nth-of-type(even) .etapes, :root[data-theme="dark"] .band:nth-of-type(even) .tbl { background: #1A3157; }
 /* 2. Mode nuit : le premier écran garde son aplat, plus clair que la page */
 :root[data-theme="dark"] .hero { background: #183A72; box-shadow: 0 0 0 100vmax #183A72; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero { background: #183A72; box-shadow: 0 0 0 100vmax #183A72; } }
+:root[data-theme="dark"] .hero { background: #183A72; box-shadow: 0 0 0 100vmax #183A72; }
 /* 3. Le fond Jira s'efface avant la frise, et reste discret de nuit */
 .hero::before { -webkit-mask-image: linear-gradient(to right, transparent, #000 45%), linear-gradient(to bottom, #000 45%, transparent 72%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 45%), linear-gradient(to bottom, #000 45%, transparent 72%); mask-composite: intersect; }
 :root[data-theme="dark"] .hero::before { opacity: .06; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero::before { opacity: .06; } }
+:root[data-theme="dark"] .hero::before { opacity: .06; }
 
 /* 4. Les jeux de la production : pitch lisible, key art en décor à faible opacité */
 .ka { display: grid; gap: 3px; margin: .5rem 0 0; }
@@ -2973,7 +2943,7 @@ html body .project .ka-i p { margin: 0; max-width: 34rem; font-size: 1rem; line-
 /* 6. Un seul style d'action : bouton doré pour l'action principale, lien fléché pour ouvrir un projet */
 :root { --btn: var(--gold); --on-btn: #0B1A33; }
 :root[data-theme="dark"] { --btn: var(--gold); --on-btn: #0B1A33; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --btn: var(--gold); --on-btn: #0B1A33; } }
+:root[data-theme="dark"] { --btn: var(--gold); --on-btn: #0B1A33; }
 html body .btn:not(.ghost) { background: var(--gold); border-color: var(--gold); color: #0B1A33; }
 html body .btn:not(.ghost):hover { background: #F0B83A; border-color: #F0B83A; color: #0B1A33; }
 html body .stage .card .go { margin-top: auto; align-self: flex-start; font-weight: 600; font-size: .95rem; color: var(--head); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; text-decoration-thickness: 2px; transition: text-decoration-color .2s; cursor: pointer; }
@@ -2988,7 +2958,7 @@ html body .home-feat { border-top: 1px solid var(--line); }
 html body footer { border-top: 0; }
 /* Mode nuit : comme en mode jour, les encadrés n'ont pas de fond ; seuls les tableaux gardent un ton */
 :root[data-theme="dark"] .fiche, :root[data-theme="dark"] .etapes, :root[data-theme="dark"] .band:nth-of-type(even) .fiche, :root[data-theme="dark"] .band:nth-of-type(even) .etapes { background: transparent; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fiche, :root:not([data-theme="light"]) .etapes, :root:not([data-theme="light"]) .band:nth-of-type(even) .fiche, :root:not([data-theme="light"]) .band:nth-of-type(even) .etapes { background: transparent; } }
+:root[data-theme="dark"] .fiche, :root[data-theme="dark"] .etapes, :root[data-theme="dark"] .band:nth-of-type(even) .fiche, :root[data-theme="dark"] .band:nth-of-type(even) .etapes { background: transparent; }
 /* Le pitch reste clair sur son décor sombre, en mode jour comme en mode nuit */
 html body .project .ka-i p { color: #E7ECF4 !important; }
 html body .project .ka-i b { color: #fff !important; }

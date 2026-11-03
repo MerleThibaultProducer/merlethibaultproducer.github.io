@@ -69,7 +69,7 @@ function frise(){
 /* Vitrine : les jeux produits, en grand */
 function vitrine(){
   if(typeof VITRINE==="undefined") return "";
-  return `<section class="vitrine" aria-label="${q("Les jeux produits","The games produced")}">${VITRINE.map(([src,nom,go])=>`<a class="vt" data-go="${esc(go)}" role="link" tabindex="0"><img src="${esc(src)}"${srcset(src)} alt="${esc(nom)}" loading="lazy"><span>${esc(nom)}</span></a>`).join("")}</section>`;
+  return `<section class="vitrine" aria-label="${q("Les jeux produits","The games produced")}">${VITRINE.map(([src,nom,go,pf,pe,pos])=>`<a class="vt" data-go="${esc(go)}" data-pos="${esc(pos||"")}" role="link" tabindex="0"><img src="${esc(src)}"${srcset(src)} alt="${esc(nom)}" loading="lazy"><span><b>${esc(nom)}</b>${esc(lang==="en"?pe:pf)}</span></a>`).join("")}</section>`;
 }
 /* Encadré « Derniers projets » : les projets marqués une:true dans contenu.js */
 function homeFeat(){
@@ -334,7 +334,7 @@ function detail(sec, p, prev, next){
   const link = (q,cls,lab,arrow) => q ? `<a class="${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${esc(q.title)}</b></a>` : "";
   const side = (q,cls,ch,lab) => q ? `<a class="side ${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0" aria-label="${lab} : ${esc(q.title)}" title="${esc(q.title)}">${ch}</a>` : "";
   return `<a class="back" data-go="${sec.route}" role="link" tabindex="0">‹ ${sec.label}</a>
-  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title).replace(" – ","\u00a0– ")}</h1><p class="lead">${esc(p.desc)}</p>${p.bandeau?`<div class="bandeau"><img src="${esc(p.bandeau)}"${srcset(p.bandeau)} alt=""></div>`:""}
+  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title).replace(" – ","\u00a0– ")}</h1><p class="lead">${esc(p.desc)}</p>${p.bandeau?`<div class="bandeau n${p.bandeau.length}">${p.bandeau.map(([src,nom])=>`<figure><img src="${esc(src)}"${srcset(src)} alt="${esc(nom)}"><figcaption>${esc(nom)}</figcaption></figure>`).join("")}</div>`:""}
     ${p.large&&(!p.img||p.nocover)?"":`<div class="cover">${img(p.img,p.title,p.title[0])}</div>`}
     ${p.apercu ? recap(p) : `${infos?`<ul class="meta">${infos}</ul>`:""}${brief(p)}`}
     <div class="prose">${blocks(p.contenu)}</div></article>
@@ -439,6 +439,7 @@ function render(still){
   chrome(active);
   document.body.classList.toggle("page-detail", !!curNav);
   const v = $("#view"); v.innerHTML = html;
+  v.querySelectorAll(".vt[data-pos]").forEach(e=>{ if(e.dataset.pos) e.firstElementChild.style.objectPosition=e.dataset.pos; });
   v.querySelectorAll("[data-l]").forEach(e=>{ e.style.left=e.dataset.l+"%"; if(e.dataset.w) e.style.width=e.dataset.w+"%"; });   /* la CSP refuse les attributs style */
   if(navDir && !matchMedia("(prefers-reduced-motion:reduce)").matches)
     v.animate([{opacity:0,transform:`translateX(${navDir*48}px)`},{opacity:1,transform:"none"}],{duration:280,easing:"ease-out"});

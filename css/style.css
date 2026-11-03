@@ -3009,3 +3009,39 @@ html body .home-feat { margin-top: clamp(2.5rem, 5vw, 4rem); }
 #prog { position: fixed; top: 0; left: 0; right: 0; height: 4px; background: var(--gold); transform: scaleX(0); transform-origin: left; z-index: 60; pointer-events: none; display: none; }
 body.page-detail #prog { display: block; }
 @media print { #prog { display: none !important; } }
+
+/* ---------- Raffinage des images : vitrine par production, bandeau multi-jeux ---------- */
+/* Vitrine : une colonne par production, deux jeux par colonne, même cadrage pour tous */
+.vitrine { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, auto); grid-auto-flow: column; gap: 3px; background: var(--band-d); }
+.vt { aspect-ratio: 16 / 10; }
+.vt img { filter: saturate(1.05) contrast(1.02); }
+.vt span { display: block; padding: 3rem 1.25rem 1rem; font: 500 .85rem/1.35 var(--sans); color: rgba(255,255,255,.82); background: linear-gradient(to top, rgba(8,16,32,.85), rgba(8,16,32,.35) 60%, rgba(8,16,32,0)); }
+.vt span b { display: block; font: 700 1.15rem/1.2 var(--display); color: #fff; letter-spacing: -.01em; }
+@media (max-width: 860px) {
+  .vitrine { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; overflow: visible; scroll-snap-type: none; }
+  .vt { aspect-ratio: 4 / 3; }
+  .vt span { padding: 2rem .75rem .65rem; font-size: .75rem; }
+  .vt span b { font-size: .95rem; }
+}
+/* Bandeau d'ouverture des pages projet : tous les jeux de la production côte à côte */
+.bandeau { display: grid; gap: 3px; height: auto; background: var(--band-d); }
+.bandeau.n2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.bandeau.n3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.bandeau.n4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.bandeau figure { position: relative; margin: 0; height: clamp(220px, 30vw, 440px); overflow: hidden; }
+.bandeau img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bandeau figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.5rem 1.25rem .9rem; font: 700 1.05rem/1.2 var(--display); color: #fff; background: linear-gradient(to top, rgba(8,16,32,.8), rgba(8,16,32,0)); }
+@media (max-width: 860px) {
+  .bandeau.n4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bandeau figure { height: clamp(150px, 42vw, 260px); }
+  .bandeau figcaption { padding: 1.75rem .75rem .6rem; font-size: .9rem; }
+}
+html body .project .bandeau figcaption, html body .bandeau figcaption { margin: 0; text-align: left; font: 700 1.05rem/1.2 var(--display); color: #fff; }
+@media (max-width: 860px) { html body .project .bandeau figcaption { font-size: .9rem; } }
+.bandeau.n4 figure:first-child img { object-position: 20% 60%; }
+html body .project .bandeau figcaption, html body .vt span b { font-family: "Bricolage Grotesque", Inter, system-ui, sans-serif; font-weight: 700; font-size: 1.1rem; line-height: 1.2; color: #fff; }
+html body .vt span { font-family: Inter, system-ui, sans-serif; font-size: .85rem; }
+@media (max-width: 860px) { html body .project .bandeau figcaption, html body .vt span b { font-size: .95rem; } html body .vt span { font-size: .75rem; } }
+/* la règle globale des légendes est en !important : seule une autre déclaration !important la remplace ici */
+html body .project .bandeau figcaption { font: 700 1.1rem/1.2 "Bricolage Grotesque", Inter, system-ui, sans-serif !important; color: #fff; }
+@media (max-width: 860px) { html body .project .bandeau figcaption { font-size: .95rem !important; } }

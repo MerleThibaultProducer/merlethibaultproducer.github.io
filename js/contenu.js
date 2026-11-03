@@ -255,11 +255,11 @@ const EQUIPES_FUSION = [
    VITRINE : [image, nom du jeu, page du projet]. FRISE : une barre par production, découpée en sprints (0 = non découpée) ;
    go vide = projet pas encore publié (barre sans lien). */
 const VITRINE = [   // [image (ou liste d'images pour une mosaïque), jeu, page, production FR, production EN, cadrage, nom EN]
-  [["images/fda-castor.jpg","images/fda-glow.jpg","images/fda-insight.jpg","images/fda-flowering.jpg"],"Quatre jeux en parallèle","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026","","Four games in parallel"],
+  ["images/fusion-hs-keyart.jpg","HellStorm","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","50% 50%"],
+  ["images/fusion-wk-keyart.jpg","Wakfu Riders","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","35% 40%"],
   ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop","50% 25%"],
   ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop","50% 45%"],
-  ["images/fusion-hs-keyart.jpg","HellStorm","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","50% 50%"],
-  ["images/fusion-wk-keyart.jpg","Wakfu Riders","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","35% 40%"]
+  [["images/fda-castor.jpg","images/fda-glow.jpg","images/fda-insight.jpg","images/fda-flowering.jpg"],"Quatre jeux en parallèle","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026","","Four games in parallel"]
 ];
 const FRISE = [   // jalons de l'accueil : quand, quoi, chiffres ; go vide = page pas encore publiée (jalon grisé)
   { quand:"Juin 2025", when:"June 2025", fr:"Fin d'année", en:"End of year", metaFr:"2 jeux · 2 équipes", metaEn:"2 games · 2 teams", go:"" },

@@ -274,11 +274,11 @@ const PROJECTS_FR = {
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
-        apercu:"En deuxième semaine, les quatre jeux de la promotion ont buté sur la même crise de direction artistique. J'étais le seul producer des quatre équipes : nous avons suspendu la production une journée et demie, puis j'ai organisé deux playtests communs et revu les priorités avec chaque groupe. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
+        apercu:"J'étais le seul producer des quatre jeux de la promotion, soit 54 personnes. En deuxième semaine, les quatre équipes ont buté sur la même crise de direction artistique. J'ai organisé des réunions d'urgence, nous avons suspendu la production une journée et demie, puis j'ai mis en place deux playtests communs et revu les priorités avec chaque groupe. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("Le projet de fin d'année réunit les Game Designers et les Game Artists de deuxième année autour d'un jeu entre le III et le AAA, au genre libre. Après deux jurys de sélection en mai, quatre jeux ont été retenus pour la production."),
+              T("Le projet de fin d'année réunit les Game Designers et les Game Artists de deuxième année autour d'un jeu entre le III et le AAA. Après deux jurys de sélection en mai, quatre jeux ont été retenus."),
               T("Chaque équipe devait livrer une **vertical slice jouable sur PC**, sous Unreal ou Unity, avec sa documentation, une vidéo de gameplay et une présentation au jury.")
             ],[ FICHE("Les contraintes",["Quatre jeux en quatre semaines, du 27 mai au 24 juin, pour un seul producer et plus de cinquante personnes","Cinq jalons : Intentions, Proof of Concept, Alpha, Bêta et Gold","5 à 15 minutes de jeu, avec un niveau habillé, les menus et les effets, sans bug bloquant","Le conseil de l'école : mieux vaut moins, mais de qualité et fini"]) ]),
             LIGNE([ KEYART([
@@ -290,27 +290,27 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Organiser quatre équipes en parallèle",[
             LIGNE([
-              T("Avec quatre jeux et plus de cinquante personnes, je ne pouvais pas être dans chaque salle. Nous avons donc **lancé les productions en promotion entière**, pour que tout le monde parte des mêmes consignes, des mêmes outils et de la même méthode."),
-              T("Avec les intervenants, j'ai désigné deux référents par groupe, un en Game Design et un en Game Art. Les dailies assuraient le suivi quand j'étais avec un autre groupe.")
+              T("Avec quatre jeux et plus de cinquante personnes, je ne pouvais pas être dans chaque salle. Nous avons donc **lancé les productions en promotion entière**, le lendemain de la sélection. Chacun a reçu les mêmes consignes, les mêmes outils et la même méthode."),
+              T("J'ai désigné avec les intervenants deux référents par groupe, un en Game Design et un en Game Art. Les dailies assuraient le suivi quand j'étais avec un autre groupe. Je restais l'interlocuteur entre les intervenants et les équipes.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planifier et suivre la production",[
             LIGNE([
-              T("L'école fixait les jalons en Waterfall, et chaque équipe travaillait en **Agile**, par sprints, à l'intérieur de ce cadre. Il me fallait un suivi assez homogène pour comparer les quatre groupes et repérer les retards tôt."),
-              T("J'ai construit ce suivi sur Excel : un macro-planning par groupe pour les sprints et les jalons, et un micro-planning où chaque tâche avait un sprint, une priorité, une difficulté et un statut, soit 1 387 tâches au total.")
+              T("L'école fixait les jalons en Waterfall, et les équipes travaillaient en **Agile**, par sprints. Je devais relier les deux, avec un suivi assez homogène pour comparer les quatre groupes."),
+              T("J'ai construit ce suivi sur Excel. Chaque groupe avait un macro-planning pour ses sprints et ses jalons, et un micro-planning pour ses tâches : sprint, priorité, difficulté, statut. Au total, 1 387 tâches.")
             ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)") ]),
             LIGNE([
-              T("Tenir ces statuts à jour demandait une attention constante, mais c'est ce qui rendait les retards visibles, sprint par sprint.")
+              T("Je devais tenir ces statuts à jour en continu. Ils rendaient les retards visibles, sprint par sprint.")
             ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ])
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
               T("En deuxième semaine, le même problème est apparu dans les quatre groupes : **la direction artistique était confuse**. Les retards ont vite atteint deux à trois jours."),
-              T("Nous avons suspendu la production une journée et demie pour tenir des réunions d'urgence avec chaque groupe. Les références étaient trop vastes, et la recherche du démarrage trop courte."),
-              T("Je craignais surtout que les équipes perdent leur motivation. J'ai mené ces réunions pour que chaque groupe reparte avec une direction claire.")
+              T("J'ai organisé des réunions d'urgence avec chaque groupe, et nous avons suspendu la production une journée et demie. Les références étaient trop vastes, et la recherche du démarrage trop courte."),
+              T("Je devais éviter que les équipes perdent leur motivation. Chaque groupe devait repartir avec une direction claire.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
-              T("Pour Project GLOW, nous avons abandonné plusieurs assets hors cadre. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
+              T("Pour Project GLOW, j'ai décidé avec les référents d'abandonner plusieurs assets hors cadre. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
             ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de Project GLOW") ]),
             LIGNE([
               
@@ -319,12 +319,12 @@ const PROJECTS_FR = {
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
               T("Il restait deux semaines. J'ai organisé **deux sessions de playtest communes aux quatre groupes**, ouvertes aux joueurs des autres promotions."),
-              T("Les retours, nombreux et souvent critiques, sont arrivés alors que le moral était déjà entamé. Avec chaque équipe, nous avons gardé l'essentiel, puis j'ai redéfini les priorités. Voir des inconnus apprécier les jeux a aussi redonné de l'énergie.")
+              T("Les retours étaient nombreux et souvent critiques, alors que le moral était déjà bas. J'ai gardé l'essentiel avec chaque équipe, puis j'ai redéfini les priorités. Voir des inconnus apprécier les jeux a aussi redonné de l'énergie.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest du Castor et l'Écureuil : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
           ]),
           BANDE("VI","Les quatre jeux livrés",[
             LIGNE([
-              T("Les quatre jeux ont été livrés au jury, qui a souligné la qualité des projets et le travail des équipes.")
+              T("Les quatre jeux ont été livrés au jury, qui a souligné leur qualité et le travail des équipes.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil : le menu principal et la forêt en jeu"],["images/fda-insight-1.jpg","Insight : la bibliothèque du manoir"],["images/fda-insight-2.jpg","Insight : la grande salle et ses lustres"],["images/fda-insight-3.jpg","Insight : la lunette astronomique de la mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead : la ville envahie par les plantes"],["images/fda-flowering-2.jpg","The Flowering Dead : un passage sous les arcades"],["images/fda-flowering-3.jpg","The Flowering Dead : le beffroi et la tour"],["images/fda-glow-jeu.jpg","Project GLOW en jeu : une rue barrée par une grille"]]) ]),
             LIGNE([
               T("Pour Project GLOW, on voit la ville passer du plan au blockout, puis au Level Art et à la lumière.")
@@ -333,8 +333,8 @@ const PROJECTS_FR = {
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
               T("C'était la première fois que je produisais pour une promotion entière. La crise m'a appris à **écouter les besoins de chaque équipe** avant d'appliquer ce que je croyais savoir. J'ai aussi appris à déléguer."),
-              T("Sur un projet de cette taille, je ferais d'abord créer une scène de référence dans le moteur, avec un prop à la qualité visée, pour que chaque groupe voie la direction artistique dès la première semaine."),
-              T("Je raccourcirais aussi les dailies, en les centrant sur l'objectif du sprint et les blocages.")
+              T("Sur un projet de cette taille, je ferais créer dès le départ une scène de référence dans le moteur, avec un prop à la qualité visée. Chaque groupe verrait la direction artistique dès la première semaine."),
+              T("Je raccourcirais aussi les dailies, centrés sur l'objectif du sprint et les blocages.")
             ])
           ]),
           BANDE("VIII","Les équipes",[
@@ -744,11 +744,11 @@ const PROJECTS_EN = {
         desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
-        apercu:"In the second week, all four of the class's games hit the same art direction crisis. I was the only producer for the four teams: we paused production for a day and a half, then I organised two shared playtests and reset priorities with each group. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
+        apercu:"I was the only producer for the class's four games, 54 people in all. In the second week, all four teams hit the same art direction crisis. I organised emergency meetings, we paused production for a day and a half, then I set up two shared playtests and reset priorities with each group. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("The end-of-year project brings second-year Game Designers and Game Artists together on a game somewhere between III and AAA, with a free choice of genre. After two selection juries in May, four games were chosen for production."),
+              T("The end-of-year project brings second-year Game Designers and Game Artists together on a game somewhere between III and AAA. After two selection juries in May, four games were chosen."),
               T("Each team had to deliver a **vertical slice playable on PC**, in Unreal or Unity, with its documentation, a gameplay video and a jury presentation.")
             ],[ FICHE("The constraints",["Four games in four weeks, from 27 May to 24 June, for a single producer and more than fifty people","Five milestones: Intentions, Proof of Concept, Alpha, Beta and Gold","5 to 15 minutes of play, with a finished level, menus and effects, and no blocking bugs","The school's advice: better less, but polished and finished"]) ]),
             LIGNE([ KEYART([
@@ -760,27 +760,27 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Organising four teams in parallel",[
             LIGNE([
-              T("With four games and more than fifty people, I could not be in every room. So we **launched production with the whole class**, so that everyone started from the same guidelines, tools and method."),
-              T("With the instructors, I appointed two leads per group, one in Game Design and one in Game Art. Dailies kept tracking going while I was with another group.")
+              T("With four games and more than fifty people, I could not be in every room. So we **launched production with the whole class**, the day after the selection. Everyone got the same guidelines, tools and method."),
+              T("With the instructors, I appointed two leads per group, one in Game Design and one in Game Art. Dailies kept tracking going while I was with another group. I remained the link between the instructors and the teams.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planning and tracking production",[
             LIGNE([
-              T("The school set Waterfall milestones, and each team worked in **Agile** sprints within that frame. I needed tracking consistent enough to compare the four groups and spot delays early."),
-              T("I built this tracking in Excel: a macro plan per group for sprints and milestones, and a micro plan where each task had a sprint, a priority, a difficulty and a status, for 1,387 tasks in total.")
+              T("The school set Waterfall milestones, and the teams worked in **Agile** sprints. I had to connect the two, with tracking consistent enough to compare the four groups."),
+              T("I built this tracking in Excel. Each group had a macro plan for its sprints and milestones, and a micro plan for its tasks: sprint, priority, difficulty, status. 1,387 tasks in total.")
             ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)") ]),
             LIGNE([
-              T("Keeping these statuses up to date took constant attention, but it is what made delays visible, sprint by sprint.")
+              T("I had to keep these statuses up to date continuously. They made delays visible, sprint by sprint.")
             ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses") ])
           ]),
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
               T("In the second week, the same problem appeared in all four groups: **the art direction was unclear**. Delays quickly reached two to three days."),
-              T("We paused production for a day and a half to hold emergency meetings with each group. The references were too broad, and the research at the start too short."),
-              T("My main fear was that the teams would lose their motivation. I ran these meetings so that each group would leave with a clear direction.")
+              T("I organised emergency meetings with each group, and we paused production for a day and a half. The references were too broad, and the research at the start too short."),
+              T("I had to keep the teams from losing their motivation. Each group had to leave with a clear direction.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
-              T("For Project GLOW, we cut several off-brief assets. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
+              T("For Project GLOW, I decided with the leads to cut several off-brief assets. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
             ],[ IMG(PRO1.kill,"Cut tasks in Project GLOW's tracking") ]),
             LIGNE([
             ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil: from blockout to the Level Art and atmospheric shader reworked after the crisis") ])
@@ -788,12 +788,12 @@ const PROJECTS_EN = {
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
               T("Two weeks remained. I organised **two playtest sessions for all four groups**, open to players from the other classes."),
-              T("The feedback was plentiful and often critical, and it came when morale was already low. With each team, we kept what mattered most, then I reset the priorities. Watching strangers enjoy the games also gave the teams new energy.")
+              T("The feedback was plentiful and often critical, and morale was already low. I kept what mattered with each team, then reset the priorities. Watching strangers enjoy the games also gave the teams new energy.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","The playtest feedback form for Le Castor et l'Écureuil: 22 responses"],["images/fda-playtest-perso.jpg","A section of the questionnaire: how players rated the characters"],["images/fda-playtest-coherence.jpg","A section of the questionnaire: design consistency, rated from 1 to 7"]]) ])
           ]),
           BANDE("VI","The four games delivered",[
             LIGNE([
-              T("All four games were delivered to the jury, which praised the quality of the projects and the work of the teams.")
+              T("All four games were delivered to the jury, which praised their quality and the work of the teams.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil: the main menu and the forest in game"],["images/fda-insight-1.jpg","Insight: the mansion's library"],["images/fda-insight-2.jpg","Insight: the great hall and its chandeliers"],["images/fda-insight-3.jpg","Insight: the telescope on the mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead: the city overrun by plants"],["images/fda-flowering-2.jpg","The Flowering Dead: a passage under the arcades"],["images/fda-flowering-3.jpg","The Flowering Dead: the belfry and the tower"],["images/fda-glow-jeu.jpg","Project GLOW in game: a street blocked by a gate"]]) ]),
             LIGNE([
               T("For Project GLOW, you can see the city move from the layout to the blockout, then to Level Art and lighting.")
@@ -802,8 +802,8 @@ const PROJECTS_EN = {
           BANDE("VII","What I take away",[
             LIGNE([
               T("It was the first time I had produced for an entire class. The crisis taught me to **listen to each team's needs** before applying what I thought I knew. I also learned to delegate."),
-              T("On a project of this size, I would first have a reference scene built in the engine, with a prop at the target quality, so that each group could see the art direction from the first week."),
-              T("I would also shorten the dailies, focusing them on the sprint goal and blockers.")
+              T("On a project of this size, I would have a reference scene built in the engine from the start, with a prop at the target quality. Each group would see the art direction from the first week."),
+              T("I would also shorten the dailies, focused on the sprint goal and blockers.")
             ])
           ]),
           BANDE("VIII","The teams",[

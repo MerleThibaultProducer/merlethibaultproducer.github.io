@@ -16,6 +16,8 @@ const IMG_M = {
 "images/fin-annee-2026-kill.jpg": 1703,
 "images/fin-annee-2026-macro.jpg": 2300,
 "images/fin-annee-2026-micro.jpg": 1221,
+"images/fusion-hs-keyart.jpg": 2000,
+"images/fusion-wk-keyart.jpg": 2000,
 "images/jira-board-gameplay.png": 1691,
 "images/jira-board-production.png": 1690,
 "images/jira-board-vendors.png": 1694,

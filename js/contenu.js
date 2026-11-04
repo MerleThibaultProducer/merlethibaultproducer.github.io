@@ -278,7 +278,7 @@ const PROJECTS_FR = {
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
-        apercu:"J'étais le seul producer des quatre jeux de la promotion, soit 54 personnes. En deuxième semaine, les quatre équipes ont buté sur la même crise de direction artistique. J'ai organisé des réunions d'urgence, nous avons suspendu la production une journée et demie, puis j'ai mis en place deux playtests communs et revu les priorités avec chaque groupe. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
+        apercu:"J'étais le seul producer des quatre jeux de la promotion, soit 54 personnes. En deuxième semaine, les quatre équipes ont buté sur la même crise de direction artistique. J'ai organisé des réunions d'urgence, nous avons suspendu la production une journée et demie, puis j'ai mis en place deux playtests communs et revu les priorités avec chaque groupe. Les quatre jeux ont été livrés avec **93 % des 1 387 tâches terminées**, et le jury a souligné leur qualité.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
@@ -353,7 +353,7 @@ const PROJECTS_FR = {
         carte:"Deux rogue-lites livrés en quinze jours, avec des coupes préparées à l'avance et une génération procédurale simulée pour tenir la date.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026 (15 jours ouvrés)", "Outils":"Excel · PowerPoint · Miro · Discord" },
-        apercu:"J'étais le producer des deux équipes de ce workshop de quinze jours. Chacune devait livrer un rogue-lite en 2,5D sous Unity, d'après une licence de film. Dès la fin du premier sprint, la génération procédurale de Mad Max Fury Rogue avait pris du retard. Avec le référent Game Design et l'accord des intervenants, nous l'avons simulée pour tenir la date. Grâce à des coupes préparées à l'avance, les deux jeux ont été livrés **jouables de bout en bout**.",
+        apercu:"J'étais le producer des deux équipes de ce workshop de quinze jours. Chacune devait livrer un rogue-lite en 2,5D sous Unity, d'après une licence de film. Dès la fin du premier sprint, la génération procédurale de Mad Max Fury Rogue avait pris du retard. Avec le référent Game Design et l'accord des intervenants, nous l'avons simulée pour tenir la date. Grâce à des coupes préparées à l'avance, les deux jeux ont été livrés **jouables de bout en bout**, et le projet a été bien reçu par le jury.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
@@ -748,7 +748,7 @@ const PROJECTS_EN = {
         desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
-        apercu:"I was the only producer for the class's four games, 54 people in all. In the second week, all four teams hit the same art direction crisis. I organised emergency meetings, we paused production for a day and a half, then I set up two shared playtests and reset priorities with each group. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
+        apercu:"I was the only producer for the class's four games, 54 people in all. In the second week, all four teams hit the same art direction crisis. I organised emergency meetings, we paused production for a day and a half, then I set up two shared playtests and reset priorities with each group. All four games were delivered with **93% of the 1,387 tasks completed**, and the jury praised their quality.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
@@ -822,7 +822,7 @@ const PROJECTS_EN = {
         carte:"Two rogue-lites shipped in fifteen days, with cuts prepared in advance and procedural generation faked to hold the deadline.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, 
         infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026 (15 working days)", "Tools":"Excel · PowerPoint · Miro · Discord" },
-        apercu:"I was the producer for both teams in this fifteen-day workshop. Each had to deliver a 2.5D rogue-lite in Unity, based on a film licence. By the end of the first sprint, Mad Max Fury Rogue's procedural generation had fallen behind. With the Game Design lead and the instructors' agreement, we simulated it to hold the date. Thanks to cuts prepared in advance, both games were delivered **playable from start to finish**.",
+        apercu:"I was the producer for both teams in this fifteen-day workshop. Each had to deliver a 2.5D rogue-lite in Unity, based on a film licence. By the end of the first sprint, Mad Max Fury Rogue's procedural generation had fallen behind. With the Game Design lead and the instructors' agreement, we simulated it to hold the date. Thanks to cuts prepared in advance, both games were delivered **playable from start to finish**, and the project was well received by the jury.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([

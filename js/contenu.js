@@ -440,7 +440,7 @@ const PROJECTS_FR = {
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("La consigne demandait une vertical slice : quelques minutes de jeu, compréhensibles sans explication. L'école voulait une vraie fusion, qui adapte le gameplay à la licence en gardant l'essence du jeu d'origine.\n\nLa vraie difficulté était là : obtenir deux jeux à l'identité marquée, qui ne se perdent pas entre le gameplay de référence et la direction artistique de la licence. Nous l'avons réglée par des réunions dédiées, pour étudier et choisir la direction artistique, et pour fixer les éléments de gameplay iconiques indispensables."),
+              T("La consigne demandait une vertical slice : quelques minutes de jeu, compréhensibles sans explication. L'école voulait une vraie fusion, qui adapte le gameplay à la licence en gardant l'essence du jeu d'origine.\n\nLa vraie difficulté était là : obtenir deux jeux à l'identité marquée, qui ne se perdent pas entre le gameplay de référence et la direction artistique de la licence. J'ai mis en place des réunions dédiées pour étudier et choisir la direction artistique, et pour fixer les éléments de gameplay iconiques indispensables. Ensuite, quand c'était nécessaire, j'ai organisé des réunions en petits comités."),
               T("J'avais pour tâche de tenir le document de gestion de production : le planning macro et micro, un burndown chart chaque semaine et un tableau de bord, général et par personne.")
             ],[ FICHE("Les contraintes",["Deux jeux en même temps, pour un seul producer et 29 personnes","Trois semaines de travail, du 3 au 28 novembre 2025","Un jeu de type III visant le AAA, en modèle premium","Trois revues de l'équipe pédagogique avant le jury"]) ]),
             LIGNE([ KEYART([
@@ -909,7 +909,7 @@ const PROJECTS_EN = {
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("The brief asked for a vertical slice: a few minutes of play, understandable without explanation. The school wanted a real fusion, adapting the gameplay to the licence while keeping the essence of the original game.\n\nThat was the real difficulty: getting two games with a strong identity, which would not get lost between the reference gameplay and the licence's art direction. We solved it with dedicated meetings to study and choose the art direction, and to set the iconic gameplay elements that had to be there."),
+              T("The brief asked for a vertical slice: a few minutes of play, understandable without explanation. The school wanted a real fusion, adapting the gameplay to the licence while keeping the essence of the original game.\n\nThat was the real difficulty: getting two games with a strong identity, which would not get lost between the reference gameplay and the licence's art direction. I set up dedicated meetings to study and choose the art direction, and to set the iconic gameplay elements that had to be there. After that, when needed, I organised meetings in small groups."),
               T("My task was to keep the production management document: the macro and micro plan, a burndown chart every week and a dashboard, overall and per person.")
             ],[ FICHE("Constraints",["Two games at once, for a single producer and 29 people","Three working weeks, from 3 to 28 November 2025","A III game aiming for AAA quality, sold as a premium title","Three reviews by the teaching staff before the jury"]) ]),
             LIGNE([ KEYART([

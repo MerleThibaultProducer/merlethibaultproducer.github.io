@@ -2673,8 +2673,9 @@ figure.pano .zf img { width: 100%; height: auto; }
 
 /* Page Infos alignée à gauche, comme les autres pages : les listes se lisent d'un coup d'œil */
 .infos-page { text-align: left; }
-.infos-page h1, .infos-page .lead { margin-left: 0; }
-.infos-page .cv-actions { justify-content: flex-start; }
+/* l'en-tête (titre, présentation, boutons du CV) reste un bloc centré */
+.infos-page > h1, .infos-page > .lead { text-align: center; margin-left: auto; margin-right: auto; }
+.infos-page .cv-actions { justify-content: center; }
 .infos-page .skills, .infos-page .sk-wide .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); max-width: none; margin-left: 0; margin-right: 0; }
 .infos-page .tools { max-width: none; margin: 0; }
 .infos-page .sk-tools .sk-intro { margin-left: 0; }

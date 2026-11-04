@@ -2509,10 +2509,9 @@ body.page-home .home-intro .cta { margin-top: 1.6rem; }
 .home-feat { margin-top: clamp(1.75rem, 3vw, 2.5rem); padding-top: 1.25rem; }
 .home-feat h2 { margin-bottom: 1rem; }
 .feat { grid-template-columns: clamp(150px, 15vw, 210px) minmax(0, 1fr); }
-/* Téléphone : menu sur une ligne qui défile, portrait réduit */
+/* Téléphone : menu sur deux lignes, toutes les entrées visibles sans défilement ; portrait réduit */
 @media (max-width: 700px) {
-  html body nav ul#nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-  html body nav ul#nav::-webkit-scrollbar { display: none; }
+  html body nav ul#nav { flex-wrap: wrap; justify-content: flex-start; column-gap: 1.4rem; overflow: visible; }
   nav ul#nav li { flex: none; }
   body.page-home .home-intro .portrait { width: 132px; height: 132px; }
 }

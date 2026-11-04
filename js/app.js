@@ -67,7 +67,7 @@ function frise(){
     const inner=`<span class="fr-dot" aria-hidden="true"></span><small>${esc(en?j.when:j.quand)}</small><b>${esc(en?j.en:j.fr)}</b><span class="fr-k">${esc(en?j.metaEn:j.metaFr)}</span>`;
     const cls="fr-j"+(j.perso?" perso":"");
     return j.go?`<a class="${cls}" role="listitem" data-go="${esc(j.go)}" tabindex="0">${inner}</a>`:`<div class="${cls} off" role="listitem">${inner}</div>`;}).join("")}</div>
-  <p class="fr-leg"><span class="pro">${q("Productions d'école","School productions")}</span><span class="perso">${q("Projets personnels","Personal projects")}</span></p>`;
+  <p class="fr-leg"><span class="pro">${q("Projets professionnels","Professional projects")}</span><span class="perso">${q("Projets personnels","Personal projects")}</span></p>`;
 }
 /* Vitrine : les jeux produits, en grand */
 function vitrine(){

@@ -2685,3 +2685,6 @@ figure.pano .zf img { width: 100%; height: auto; }
 :root[data-theme="dark"] .project .zf { box-shadow: 0 0 0 1px rgba(255,255,255,.14); }
 /* Accueil : la mosaïque des jeux rejoint directement le pied de page */
 html body.page-home main { padding-bottom: 0; }
+/* Infos : langues et diplômes n'ont que deux blocs, ils occupent toute la largeur (diplômes sur une ligne chacun) */
+.infos-page .sk-group:nth-of-type(3) .skills { grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); column-gap: clamp(2rem, 5vw, 5rem); }
+@media (max-width: 760px) { .infos-page .sk-group:nth-of-type(3) .skills { grid-template-columns: minmax(0, 1fr); } }

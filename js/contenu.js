@@ -278,11 +278,11 @@ const PROJECTS_FR = {
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
-        apercu:"J'étais le seul producer des quatre jeux de la promotion, soit 54 personnes. En deuxième semaine, les quatre équipes ont buté sur la même crise de direction artistique. J'ai organisé des réunions d'urgence, nous avons suspendu la production une journée et demie, puis j'ai mis en place deux playtests communs et revu les priorités avec chaque groupe. Les quatre jeux ont été livrés au jury, avec **93 % des 1 387 tâches terminées**.",
+        apercu:"J'étais le seul producer des quatre jeux de la promotion, soit 54 personnes. En deuxième semaine, une même crise de direction artistique a touché les quatre équipes : après une pause d'une journée et demie, j'ai mis en place deux playtests communs et revu les priorités de chaque groupe. Les quatre jeux ont été livrés avec **93 % des 1 387 tâches terminées**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("Le projet de fin d'année réunit les Game Designers et les Game Artists de deuxième année autour d'un jeu entre le III et le AAA. Après deux jurys de sélection en mai, quatre jeux ont été retenus."),
+              T("Le projet de fin d'année réunit les Game Designers et Game Artists de deuxième année autour de jeux entre le III et le AAA. Deux jurys de sélection ont retenu quatre projets."),
               T("Chaque équipe devait livrer une **vertical slice jouable sur PC**, sous Unreal ou Unity, avec sa documentation, une vidéo de gameplay et une présentation au jury.")
             ],[ FICHE("Les contraintes",["Quatre jeux en quatre semaines, du 27 mai au 24 juin, pour un seul producer et plus de cinquante personnes","Cinq jalons : Intentions, Proof of Concept, Alpha, Bêta et Gold","5 à 15 minutes de jeu, avec un niveau habillé, les menus et les effets, sans bug bloquant","Le conseil de l'école : mieux vaut moins, mais de qualité et fini"]) ]),
             LIGNE([ KEYART([
@@ -294,24 +294,24 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Organiser quatre équipes en parallèle",[
             LIGNE([
-              T("Avec quatre jeux et plus de cinquante personnes, je ne pouvais pas être dans chaque salle. Nous avons donc **lancé les productions en promotion entière**, le lendemain de la sélection. Chacun a reçu les mêmes consignes, les mêmes outils et la même méthode."),
-              T("J'ai désigné avec les intervenants deux référents par groupe, un en Game Design et un en Game Art. Les dailies assuraient le suivi quand j'étais avec un autre groupe. Je restais l'interlocuteur entre les intervenants et les équipes.")
+              T("Avec plus de cinquante personnes, je ne pouvais pas être dans chaque salle. Nous avons donc **lancé les productions en promotion entière**, pour que tous partent des mêmes consignes, outils et méthode."),
+              T("Avec les intervenants, j'ai désigné deux référents par groupe, un en Game Design et un en Game Art. Leurs dailies assuraient le suivi quand j'étais ailleurs, et je restais le lien avec les intervenants.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planifier et suivre la production",[
             LIGNE([
               T("L'école fixait les jalons en Waterfall, et les équipes travaillaient en **Agile**, par sprints. Je devais relier les deux, avec un suivi assez homogène pour comparer les quatre groupes."),
-              T("J'ai construit ce suivi sur Excel, un outil simple que toute l'équipe connaissait déjà. Chaque groupe avait un macro-planning pour ses sprints et ses jalons, et un micro-planning pour ses tâches : sprint, priorité, difficulté, statut. Au total, 1 387 tâches.")
+              T("J'ai construit ce suivi sur Excel, un outil que toute l'équipe connaissait : un macro-planning par groupe pour les sprints et les jalons, un micro-planning pour les 1 387 tâches (sprint, priorité, difficulté, statut).")
             ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)","pano") ]),
             LIGNE([
-              T("Je devais tenir ces statuts à jour en continu. Ils rendaient les retards visibles, sprint par sprint.")
+              T("Tenus à jour en continu, ces statuts rendaient les retards visibles sprint par sprint.")
             ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts","pano") ])
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
               T("En deuxième semaine, le même problème est apparu dans les quatre groupes : **la direction artistique était confuse**. Les retards ont vite atteint deux à trois jours."),
               T("J'ai organisé des réunions d'urgence avec chaque groupe, et nous avons suspendu la production une journée et demie. Les références étaient trop vastes, et la recherche du démarrage trop courte."),
-              T("Je devais éviter que les équipes perdent leur motivation. Chaque groupe devait repartir avec une direction claire.")
+              T("Je devais faire repartir chaque groupe motivé, avec une direction claire.")
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
               T("Pour Project GLOW, j'ai décidé avec les référents d'abandonner plusieurs assets hors cadre. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
@@ -323,7 +323,7 @@ const PROJECTS_FR = {
           BANDE("V","Organiser les playtests et redéfinir les priorités",[
             LIGNE([
               T("Il restait deux semaines. J'ai organisé **deux sessions de playtest communes aux quatre groupes**, ouvertes aux joueurs des autres promotions."),
-              T("Les retours étaient nombreux et souvent critiques, alors que le moral était déjà bas. J'ai gardé l'essentiel avec chaque équipe, puis j'ai redéfini les priorités. Voir des inconnus apprécier les jeux a aussi redonné de l'énergie.")
+              T("Les retours, nombreux et souvent critiques, sont arrivés sur un moral déjà bas. J'ai gardé l'essentiel avec chaque équipe et redéfini les priorités. Voir des inconnus apprécier les jeux a aussi relancé l'énergie.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","Le formulaire de retour du playtest du Castor et l'Écureuil : 22 réponses"],["images/fda-playtest-perso.jpg","Une section du questionnaire : l'appréciation des personnages"],["images/fda-playtest-coherence.jpg","Une section du questionnaire : la cohérence du design, notée de 1 à 7"]]) ])
           ]),
           BANDE("VI","Les quatre jeux livrés",[
@@ -336,8 +336,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
-              T("C'était la première fois que je produisais pour une promotion entière. La crise m'a appris à **écouter les besoins de chaque équipe** avant d'appliquer ce que je croyais savoir. J'ai aussi appris à déléguer."),
-              T("Sur un projet de cette taille, je ferais créer dès le départ une scène de référence dans le moteur, avec un prop à la qualité visée. Chaque groupe verrait la direction artistique dès la première semaine."),
+              T("C'était ma première production pour une promotion entière. La crise m'a appris à **écouter les besoins de chaque équipe** avant d'appliquer ce que je croyais savoir, et à déléguer."),
+              T("Sur un projet de cette taille, je ferais créer dès le départ une scène de référence dans le moteur, avec un prop à la qualité visée, pour montrer la direction artistique dès la première semaine."),
               T("Je raccourcirais aussi les dailies, centrés sur l'objectif du sprint et les blocages.")
             ])
           ]),
@@ -353,11 +353,11 @@ const PROJECTS_FR = {
         carte:"Deux rogue-lites livrés en quinze jours, avec des coupes préparées à l'avance et une génération procédurale simulée pour tenir la date.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 personnes", "Durée":"2 – 20 février 2026 (15 jours ouvrés)", "Outils":"Excel · PowerPoint · Miro · Discord" },
-        apercu:"J'étais le producer des deux équipes de ce workshop de quinze jours. Chacune devait livrer un rogue-lite en 2,5D sous Unity, d'après une licence de film. Dès la fin du premier sprint, la génération procédurale de Mad Max Fury Rogue avait pris du retard. Avec le référent Game Design et l'accord des intervenants, nous l'avons simulée pour tenir la date. Grâce à des coupes préparées à l'avance, les deux jeux ont été livrés **jouables de bout en bout**.",
+        apercu:"J'étais le producer des deux équipes de ce workshop de quinze jours, chacune chargée d'un rogue-lite en 2,5D sous Unity d'après une licence de film. Dès le premier sprint, la génération procédurale de Mad Max Fury Rogue a pris du retard : avec l'accord des intervenants, nous l'avons simulée. Grâce à des coupes préparées à l'avance, les deux jeux ont été livrés **jouables de bout en bout**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("Le cahier des charges était dense pour quinze jours : une boucle « run, mort, amélioration », un HUB, au moins cinq salles de combat et trois salles iconiques assemblées procéduralement. Il fallait aussi une économie de monnaies, un boss, un combat avec esquive, combo et capacité, les menus et toute la documentation.")
+              T("Le cahier des charges était dense pour quinze jours : une boucle « run, mort, amélioration », un HUB, cinq salles de combat et trois salles iconiques assemblées procéduralement, une économie de monnaies, un boss, un combat complet, les menus et toute la documentation.")
             ],[ FICHE("Les contraintes",["Deux jeux à produire en même temps","Cinq jalons en quinze jours : Intentions, Proof of Concept, Alpha, Bêta, Gold","Une licence de film imposée à chaque équipe : Vampire Hunter D: Bloodlust et Mad Max: Fury Road","Le conseil de l'école : ne pas voir trop grand"]) ]),
             LIGNE([ KEYART([
                       ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","Le Groupe 3 a reçu Vampire Hunter D: Bloodlust et en a fait un rogue-lite gothique, dans les salles d'un château."],
@@ -366,13 +366,13 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Planifier à deux niveaux",[
             LIGNE([
-              T("Les deux équipes suivaient le même calendrier de **trois sprints d'une semaine**, calés sur les jalons de l'école. Le premier posait le blocking et les assets essentiels. Le deuxième amenait le rendu final et le système d'attaque. Le dernier était réservé à l'équilibrage et au polish.")
+              T("Les deux équipes suivaient **trois sprints d'une semaine**, calés sur les jalons de l'école : blocking et assets essentiels, puis rendu final et système d'attaque, puis équilibrage et polish.")
             ],[ CHIFFRES([["573","tâches suivies"],["94 % et 92 %","tâches terminées (Vampire Hunter, Mad Max)"],["3","sprints d'une semaine"],["5","jalons en quinze jours"]]) ]),
             LIGNE([
               IMG("images/rogue-planning.png","Le planning de production : phases, jalons de l'école et sprints d'une semaine","pano")
             ]),
             LIGNE([
-              T("Chaque équipe avait son backlog dans Excel : 336 tâches pour Vampire Hunter E-Cycle, 237 pour Mad Max Fury Rogue. Chaque tâche avait une personne, un sprint, une difficulté, une priorité et un statut."),
+              T("Chaque équipe avait son backlog Excel (336 tâches pour Vampire Hunter E-Cycle, 237 pour Mad Max Fury Rogue), avec pour chaque tâche une personne, un sprint, une difficulté, une priorité et un statut."),
               T("La charge s'est concentrée au démarrage, et l'environnement était le poste le plus lourd des deux productions.")
             ]),
             LIGNE([
@@ -381,8 +381,8 @@ const PROJECTS_FR = {
           ]),
           BANDE("III","Préparer les coupes",[
             LIGNE([
-              T("Avec les référents de chaque équipe, j'ai dressé une **liste de tâches sacrifiables**, les premières à couper si le temps manquait. Y entrait tout ce qui ne faisait pas partie du chemin critique de la production : 28 tâches pour Vampire Hunter E-Cycle, 14 pour Mad Max Fury Rogue. La plupart ne sont jamais entrées dans les sprints."),
-              T("En production, nous avons coupé sept tâches dans chaque équipe sans toucher au cœur du jeu, comme le gestionnaire de musique de Vampire Hunter E-Cycle ou le second ennemi de Mad Max Fury Rogue.")
+              T("Avec les référents, j'ai dressé une **liste de tâches sacrifiables** : tout ce qui sortait du chemin critique, à couper en premier si le temps manquait. 28 tâches pour Vampire Hunter E-Cycle, 14 pour Mad Max Fury Rogue ; la plupart ne sont jamais entrées en sprint."),
+              T("En production, nous avons coupé sept tâches par équipe sans toucher au cœur du jeu, comme le gestionnaire de musique de Vampire Hunter E-Cycle ou le second ennemi de Mad Max Fury Rogue.")
             ],[ FICHE("Mis de côté chez Vampire Hunter E-Cycle",["Un double saut et un système de dialogue","Une salle maudite et un inventaire","Des VFX de décor : feu de cheminée, braises, flaques d'eau","42 tâches sacrifiables pour les deux jeux"]) ]),
             LIGNE([
               T("Le marché représentait cinq des quatorze tâches de Mad Max Fury Rogue, et il a été écarté d'un bloc.")
@@ -398,30 +398,30 @@ const PROJECTS_FR = {
           ]),
           BANDE("IV","Suivre deux équipes en même temps",[
             LIGNE([
-              T("Dans chaque équipe, deux référents, un en Game Design et un en Game Art, animaient les **dailies**. Je changeais de groupe un jour sur deux, et ils me faisaient un compte rendu."),
-              T("Entre ces points, je passais dans les salles pour lever les blocages. Je faisais aussi le point avec chaque équipe en revue de sprint."),
-              T("Le shader d'outlines de Vampire Hunter E-Cycle, essentiel à la direction artistique, a pris du retard dès le premier sprint. J'ai revu le planning, et nous avons sacrifié des VFX de la liste pour le terminer."),
+              T("Dans chaque équipe, deux référents animaient les **dailies**. Je changeais de groupe un jour sur deux, et ils me faisaient un compte rendu."),
+              T("Entre-temps, je passais dans les salles lever les blocages, et je faisais le point avec chaque équipe en revue de sprint."),
+              T("Le shader d'outlines de Vampire Hunter E-Cycle, essentiel à la direction artistique, a pris du retard dès le premier sprint : j'ai revu le planning, et nous avons sacrifié des VFX de la liste pour le terminer."),
               T("On me demandait parfois mon avis sur la narration, et j'aidais à trancher pendant les réunions des System Designers.")
             ],[ IMG("images/rogue-vh-ld-la.webp","Une salle de Vampire Hunter E-Cycle, du blocking au level art") ])
           ]),
           BANDE("V","Simuler la génération procédurale",[
             LIGNE([
-              T("Chez Mad Max Fury Rogue, la génération procédurale s'est révélée bien plus complexe que prévu. Elle était déjà en retard à la fin du premier sprint, alors que c'était le cœur imposé du rogue-lite."),
-              T("Avec le référent Game Design, j'ai cherché un compromis avec les intervenants, qui jouaient le rôle d'éditeurs. Nous avons choisi de **simuler le procédural** avec des checkpoints préparés dans le level design, qui donnaient l'illusion d'une génération aléatoire. Le jury l'a validé en amont, et le projet a été bien reçu."),
-              T("Cet accord éloignait le risque de crunch. L'équipe a pu se reconcentrer sur l'essentiel du jeu.")
+              T("Chez Mad Max Fury Rogue, la génération procédurale, cœur imposé du rogue-lite, s'est révélée bien plus complexe que prévu et accusait déjà du retard à la fin du premier sprint."),
+              T("Avec le référent Game Design, j'ai cherché un compromis avec les intervenants, dans le rôle d'éditeurs. Nous avons choisi de **simuler le procédural** par des checkpoints préparés dans le level design, qui donnaient l'illusion d'une génération aléatoire. Le jury l'a validé en amont, et le projet a été bien reçu."),
+              T("Cet accord a écarté le risque de crunch et recentré l'équipe sur l'essentiel du jeu.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.webp","Le blocking du niveau de Mad Max Fury Rogue"],["images/rogue-mm-ld-2.webp","Le niveau de Mad Max Fury Rogue en blocking, avec ses ennemis"]]) ])
           ]),
           BANDE("VI","Tester et livrer",[
             LIGNE([
-              T("Chez Vampire Hunter E-Cycle, la QA est restée interne : un questionnaire, un God Mode pour tester les salles et des playtests UX. Je n'ai pas eu le temps d'inviter des joueurs extérieurs. Chez Mad Max Fury Rogue, des problèmes techniques ont empêché les tests."),
-              T("Le jour du jury, les deux jeux étaient jouables de bout en bout. Les coupes, comme les trois salles de combat restées sans level art final, n'ont pas compromis l'expérience.")
+              T("Chez Vampire Hunter E-Cycle, la QA est restée interne (questionnaire, God Mode, playtests UX), faute de temps pour inviter des joueurs extérieurs. Chez Mad Max Fury Rogue, des problèmes techniques ont empêché les tests."),
+              T("Le jour du jury, les deux jeux étaient jouables de bout en bout. Les coupes, comme trois salles de combat sans level art final, n'ont pas compromis l'expérience.")
             ],[ CAROUSEL([["images/rogue-vh-autel.jpg","Vampire Hunter E-Cycle en jeu"],["images/rogue-vh-ruines.jpg","Vampire Hunter E-Cycle : une salle en ruines"],["images/rogue-vh-galerie.jpg","Vampire Hunter E-Cycle : une galerie du château"],["images/rogue-vh-salle-rouge.jpg","Vampire Hunter E-Cycle : une salle du château"],["images/rogue-mm-jeu.jpg","Mad Max Fury Rogue en jeu, avec son interface"]]) ])
           ]),
           BANDE("VII","Ce que j'en retiens",[
             LIGNE([
-              T("Ce workshop m'a appris à **décider des coupes avant d'en avoir besoin**. Avec une liste préparée à l'avance, on sait quoi laisser de côté quand le temps manque."),
-              T("Avec le recul, j'aurais dû revoir en cours de route les objectifs de sprint communs aux deux équipes, au vu des difficultés de chacune, comme la génération procédurale chez Mad Max Fury Rogue."),
-              T("Je prévoirais aussi des playtests externes le plus tôt possible, pour avoir encore le temps d'en tenir compte.")
+              T("Ce workshop m'a appris à **décider des coupes avant d'en avoir besoin** : avec une liste prête, on sait quoi laisser de côté quand le temps manque."),
+              T("Avec le recul, j'aurais dû adapter en cours de route les objectifs de sprint communs aux deux équipes, au vu des difficultés de chacune."),
+              T("Je prévoirais aussi des playtests externes au plus tôt, pour avoir le temps d'en tenir compte.")
             ])
           ]),
           BANDE("VIII","Les équipes",[
@@ -436,12 +436,12 @@ const PROJECTS_FR = {
         carte:"Deux jeux de course nés de la fusion d'un gameplay et d'une licence, avec mes premiers dailies et des assets classés par priorité.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 équipes de 14 et 15","Racing · Fusion","3 semaines"] }, img:"images/fusion-thumb.jpg",
         infos:{ "Rôle":"Producer", "Équipe":"2 équipes de 14 et 15 personnes", "Durée":"3 – 28 novembre 2025 (3 semaines ouvrées)", "Outils":"Excel" },
-        apercu:"J'étais le producer des deux équipes de ce workshop. Chacune avait trois semaines pour livrer une vertical slice de jeu de course sous Unreal Engine 5. La contrainte était une fusion : le gameplay d'un jeu de référence, habillé d'une licence imposée. HellStorm mêlait *Motorstorm* à *Doom*, Wakfu Riders *Street Racer* à *Wakfu*. J'ai suivi la production avec un plan Agile sur Excel, une revue chaque semaine et mes premiers dailies. Au jury, **97 % et 98 % des tâches** étaient terminées.",
+        apercu:"J'étais le producer des deux équipes de ce workshop : trois semaines pour livrer une vertical slice de jeu de course sous Unreal Engine 5, en fusionnant le gameplay d'un jeu de référence avec une licence imposée. HellStorm mêlait *Motorstorm* à *Doom*, Wakfu Riders *Street Racer* à *Wakfu*. Au jury, **97 % et 98 % des tâches** étaient terminées.",
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("La consigne demandait une vertical slice : quelques minutes de jeu, compréhensibles sans explication. L'école voulait une vraie fusion, qui adapte le gameplay à la licence en gardant l'essence du jeu d'origine.\n\nLa vraie difficulté était là : obtenir deux jeux à l'identité marquée, qui ne se perdent pas entre le gameplay de référence et la direction artistique de la licence. J'ai mis en place des réunions dédiées pour étudier et choisir la direction artistique, et pour fixer les éléments de gameplay iconiques indispensables. Ensuite, quand c'était nécessaire, j'ai organisé des réunions en petits comités."),
-              T("J'avais pour tâche de tenir le document de gestion de production : le planning macro et micro, un burndown chart chaque semaine et un tableau de bord, général et par personne.")
+              T("La consigne demandait quelques minutes de jeu compréhensibles sans explication, et une vraie fusion qui garde l'essence du jeu d'origine.\n\nToute la difficulté était là : obtenir deux jeux à l'identité marquée, qui ne se perdent pas entre gameplay de référence et licence. J'ai mis en place des réunions pour choisir la direction artistique et fixer les éléments de gameplay iconiques, puis, si nécessaire, des réunions en petits comités."),
+              T("J'avais pour tâche de tenir le document de gestion de production : planning macro et micro, burndown chart hebdomadaire, tableau de bord général et par personne.")
             ],[ FICHE("Les contraintes",["Deux jeux en même temps, pour un seul producer et 29 personnes","Trois semaines de travail, du 3 au 28 novembre 2025","Un jeu de type III visant le AAA, en modèle premium","Trois revues de l'équipe pédagogique avant le jury"]) ]),
             LIGNE([ KEYART([
                       ["images/fusion-hs-keyart.jpg","HellStorm","Le Groupe 3 a reçu le gameplay de Motorstorm et la licence Doom, et en a fait une course tout-terrain en enfer."],
@@ -450,39 +450,39 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Planifier en quatre sprints",[
             LIGNE([
-              T("Les deux équipes suivaient le même macroplanning de **quatre sprints**, calés sur les revues de l'école. Le premier posait la conception. Le deuxième menait le prototype jusqu'aux playtests des 3C et du blocking. Le troisième visait un build jouable du début à la fin, et le dernier était réservé au polish et aux retours de la QA.")
+              T("Les deux équipes suivaient **quatre sprints** calés sur les revues de l'école : conception, prototype jusqu'aux playtests des 3C et du blocking, build jouable de bout en bout, puis polish et retours de QA.")
             ],[ CHIFFRES([["568","tâches suivies"],["97 % et 98 %","tâches terminées (HellStorm, Wakfu Riders)"],["4","sprints"],["3","revues avant le jury"]]) ]),
             LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","Le macroplanning de HellStorm : phases, sprints et jours non travaillés"],["images/fusion-wk-macro.png","Le macroplanning de Wakfu Riders, calé sur le même calendrier"]],"pano") ]),
             LIGNE([
-              T("Chaque équipe avait son backlog dans Excel, rangé par epic et par story : 220 tâches pour HellStorm, 348 pour Wakfu Riders. Un onglet par sprint détaillait la semaine, et chaque membre avait son onglet."),
+              T("Chaque équipe avait son backlog Excel, rangé par epic et par story (220 tâches pour HellStorm, 348 pour Wakfu Riders), avec un onglet par sprint et un par membre."),
               T("L'environnement était le poste le plus lourd : 72 tâches chez HellStorm, 131 chez Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","La carte de Wakfu Riders en construction dans Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders : le village et ses vignes dans l'éditeur"]]) ]),
             LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Extrait du backlog de HellStorm : epics, stories, personnes, difficultés, statuts, sprints et priorités"],["images/fusion-wk-backlog.png","Extrait du backlog de Wakfu Riders"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux onglets de chacun"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]],"pano") ])
           ]),
           BANDE("III","Suivre deux équipes",[
             LIGNE([
-              T("C'était mon premier workshop avec des **dailies**. Je les ai confiés aux deux référents de chaque équipe, un en Game Design et un en Game Art. Avec deux groupes à suivre, je ne pouvais pas être présent à chacun, et les équipes avançaient ainsi sans dépendre de ma présence. Je faisais le point avec les deux groupes pendant les revues hebdomadaires."),
+              T("C'était mon premier workshop avec des **dailies**. Je les ai confiés aux référents de chaque équipe : avec deux groupes, je ne pouvais pas être à chacun, et les équipes avançaient sans dépendre de ma présence. Je faisais le point avec elles aux revues hebdomadaires."),
               T("Avec les référents, j'ai réparti les tâches entre Game Artists et Game Designers, en équilibrant la charge de chacun."),
-              T("Chez HellStorm, quatre documents ont pris du retard au sprint 3, dont les personas et la concept map. Je les ai reportés au sprint 4, où ils ont été terminés.")
+              T("Chez HellStorm, quatre documents, dont les personas et la concept map, ont pris du retard au sprint 3 ; je les ai reportés au sprint 4, où ils ont été terminés.")
             ],[ CAROUSEL([["images/fusion-hs-monocycle-concept.jpg","HellStorm : le concept du monocycle"],["images/fusion-hs-monocycle-3d-1.jpg","Le monocycle modélisé en 3D"],["images/fusion-hs-monocycle-3d-2.jpg","Le monocycle, vu de l'autre côté"],["images/fusion-hs-voiture-concept.jpg","HellStorm : le concept de la voiture"],["images/fusion-hs-voiture-3d.jpg","La voiture modélisée en 3D"],["images/fusion-hs-ui.jpg","L'écran de sélection de la carte, en cours d'intégration"]]) ])
           ]),
           BANDE("IV","Classer les assets par priorité",[
             LIGNE([
-              T("Les listes d'assets étaient **classées par priorité** dès le départ. Chez HellStorm, les 15 props de priorité haute ont tous été réalisés. Les 13 restés de côté étaient surtout des variantes de bâtiments et de rochers."),
-              T("Chez Wakfu Riders, 40 assets de décor sur 47 ont été réalisés, et les sept restants étaient de priorité basse. Chaque son avait une note de 1 à 10, parfois un son de remplacement : 23 sur 33 ont été produits."),
+              T("Les listes d'assets étaient **classées par priorité** dès le départ. Chez HellStorm, les 15 props prioritaires ont tous été réalisés ; les 13 laissés de côté étaient surtout des variantes de bâtiments et de rochers."),
+              T("Chez Wakfu Riders, 40 assets de décor sur 47 ont été réalisés, les sept restants étant de priorité basse. Les sons, notés de 1 à 10 avec parfois un son de remplacement, ont été produits à 23 sur 33."),
               T("En production, seules deux tâches ont été coupées chez HellStorm, dont le système de matchmaking, et cinq chez Wakfu Riders.")
             ],[ FICHE("Laissés de côté chez Wakfu Riders",["L'église et la mairie modulaires","Les bonus de poids, de puissance et de maniabilité","La zone de respawn","Les signes et feedbacks du drift"]) ]),
             LIGNE([ CAROUSEL([["images/fusion-wk-recherches.webp","Wakfu Riders : les recherches de véhicules, dont le tonneau"],["images/fusion-wk-dinde.webp","Wakfu Riders : la dinde, modélisée dans Maya d'après ses références"]]) ])
           ]),
           BANDE("V","Tester",[
             LIGNE([
-              T("Wakfu Riders a commencé la **QA** dès le premier sprint, en testant des jeux de course de référence comme F-Zero 99. Le blocking a été testé deux fois au sprint 2, puis la vertical slice aux sprints 3 et 4."),
-              T("Chez HellStorm, des retards de production, surtout en technique et en programmation, ont repoussé les tests : le questionnaire de QA a été préparé au sprint 3, pour un playtest au sprint 4.")
+              T("Wakfu Riders a lancé la **QA** dès le premier sprint en testant des jeux de référence comme F-Zero 99, puis le blocking (deux fois au sprint 2) et la vertical slice (sprints 3 et 4)."),
+              T("Chez HellStorm, des retards en technique et en programmation ont repoussé les tests : le questionnaire de QA, prêt au sprint 3, n'a servi qu'au sprint 4.")
             ],[ CAROUSEL([["images/fusion-wk-ld-sketch.webp","Wakfu Riders : le sketch de level design du parcours"],["images/fusion-wk-blocking.webp","Le parcours en blocking dans Unreal Engine"],["images/fusion-wk-jeu.jpg","Wakfu Riders en jeu, au pied de l'arbre géant"]]) ])
           ]),
           BANDE("VI","Ce que j'en retiens",[
             LIGNE([
-              T("Avec des listes classées par priorité dès le départ, les coupes étaient faciles : ce qui manquait à la fin était déjà ce qui comptait le moins."),
+              T("Des listes classées par priorité dès le départ rendent les coupes faciles : ce qui manque à la fin est déjà ce qui compte le moins."),
               T("Avec le recul, j'aurais lancé les playtests de HellStorm plus tôt, comme Wakfu Riders l'a fait dès le premier sprint.")
             ])
           ]),
@@ -517,7 +517,7 @@ const PROJECTS_FR = {
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("Mon jeu fictif reprend ce qu'Ember Lab a rendu public sur Kena : un action-RPG produit en trois ans par 15 personnes, avec des prestataires pour la QA, une partie de l'art et la musique."),
+              T("Mon jeu fictif reprend ce qu'Ember Lab a rendu public sur Kena : trois ans de production, 15 personnes, et des prestataires pour la QA, une partie de l'art et la musique."),
               T("J'ai mené ce projet en parallèle de la formation Agile with Atlassian Jira (Coursera), dont j'ai obtenu le certificat le 14 octobre 2026."),
               LIEN("Vérifier le certificat","https://coursera.org/verify/EQE4DN5JX2XG")
             ],[ FICHE("Les contraintes",["Une équipe de 15 personnes, pour une offre gratuite limitée à 10 utilisateurs","Jira ne permet pas d'antidater un ticket : la simulation se fait en temps réel","Un travail mené seul, en jouant tous les rôles"]) ])
@@ -532,13 +532,13 @@ const PROJECTS_FR = {
           ]),
           BANDE("III","Préparer la Vertical Slice",[
             LIGNE([
-              T("Le découpage de la Vertical Slice a fait apparaître deux goulots, l'animateur gameplay et le sound designer, et un chemin critique qui passe par les prestataires. J'ai donc engagé les squads prudemment, 21 points pour Gameplay et 13 pour World, et ces constats sont devenus les premiers risques du registre."),
+              T("Le découpage de la Vertical Slice a révélé deux goulots, l'animateur gameplay et le sound designer, et un chemin critique passant par les prestataires. J'ai donc engagé les squads prudemment (21 points pour Gameplay, 13 pour World), et ces constats ont ouvert le registre des risques."),
               T("Chaque sprint part d'un objectif vérifiable en démo. J'ai écrit une Definition of Ready pour y entrer et une Definition of Done pour en sortir.")
             ],[ CHIFFRES([["23","Stories dans la Vertical Slice"],["126","Points estimés"],["13 et 15","Stories pour l'animateur et le sound designer"],["3","Livraisons externes qui bloquent des Stories"]]) ])
           ]),
           BANDE("IV","Donner à chacun la bonne visibilité",[
             LIGNE([
-              T("Dans Jira, un board n'est qu'une vue posée sur un filtre. J'en ai fait **un par public** : un board Scrum par squad, un Kanban pour la QA, un pour les prestataires et un board Production qui voit tout le projet.")
+              T("Dans Jira, un board n'est qu'une vue sur un filtre. J'en ai fait **un par public** : un Scrum par squad, un Kanban pour la QA, un pour les prestataires et un board Production pour tout le projet.")
             ],[ CAROUSEL([["images/jira-board-production.png","Production : la vue d'ensemble, sans sprint"],["images/jira-board-gameplay.png","Gameplay : le sprint de la squad, groupé par Epic"],["images/jira-board-world.png","World : le sprint de la squad, groupé par Epic"],["images/jira-board-vendors.png","Vendors : les livraisons attendues de chaque prestataire"]]) ]),
             LIGNE([
               T("J'ai créé une bibliothèque de filtres pour les questions du lundi matin : où en est le sprint, qu'est-ce qui bloque, le périmètre a-t-il bougé.")
@@ -597,7 +597,7 @@ const PROJECTS_FR = {
         P({ date:"Mars 2026", survol:{ items:["Producer","Jeu AA · 42 personnes","48 mois de production","Excel · Coda · ClickUp"] }, cat:"Gestion de production", title:"Wyrdfall", nocover:true, desc:"Dossier de production d'un jeu AA de 48 mois : équipe, budget, planning, estimation des ventes et seuil de rentabilité.", carte:"L'équipe, le budget et le seuil de rentabilité d'un jeu AA fictif sur 48 mois.", large:true,   // large:true = page en bandes
         img:"images/wyrdfall-vignette.jpg",
         infos:{ "Rôle":"Producer", "Cadre":"Gestion de production · Game Sup", "Date":"Mars 2026", "Projet":"AA · 42 personnes au pic", "Outils":"Excel · Coda · ClickUp", "Temps de travail":"20 h sur 90 h (épreuve entière)", "Livrables":"Équipe · Planning · Budget · Market Analysis" },
-        apercu:"Pour cet exercice de production, j'étais le producer de Wyrdfall, un jeu AA fictif. Je devais aller de la composition de l'équipe jusqu'au seuil de rentabilité. J'arrive à **un budget de 9 M€ sur 48 mois**, un seuil atteint vers 451 000 ventes et deux scénarios de ROI, dans un fichier Excel qui se met à jour en un clic.",
+        apercu:"Pour cet exercice, j'étais le producer de Wyrdfall, un jeu AA fictif, de la composition de l'équipe jusqu'au seuil de rentabilité. Résultat : **un budget de 9 M€ sur 48 mois**, un seuil vers 451 000 ventes et deux scénarios de ROI, dans un fichier Excel qui se met à jour en un clic.",
         contenu:[
           BANDE("I","Le sujet et mon rôle",[
             LIGNE([
@@ -610,8 +610,8 @@ const PROJECTS_FR = {
               T("Je voulais un fichier Excel lisible et adaptable. **Le budget se recalcule en un clic** quand un membre rejoint le studio, change d'ancienneté ou reçoit de nouveaux logiciels.")
             ],[ CAROUSEL([[EX1.nav,"Page d'accueil du fichier de production : boutons et navigation par onglets colorés"],[EX1.budget,"Vue d'ensemble du budget : équipe, durée et budget par département"]]) ]),
             LIGNE([
-              T("Wyrdfall compte 36 mois de production et 12 mois de live service, avec 42 personnes dont 25 restent sur la phase de live. Le budget s'élève à 9 033 682 €, dont 78 % de salaires."),
-              T("J'ai composé l'équipe par éléments de production, en m'inspirant de celle de Sandfall Interactive sur Clair Obscur: Expedition 33. Après la sortie, l'effectif passe à 25 : je simule ainsi le démarrage d'autres projets au studio et une plus petite production consacrée à l'extension.")
+              T("Wyrdfall compte 36 mois de production et 12 de live service, avec 42 personnes, dont 25 sur le live. Le budget atteint 9 033 682 €, dont 78 % de salaires."),
+              T("J'ai composé l'équipe par pôle de production, en m'inspirant de Sandfall Interactive sur Clair Obscur: Expedition 33. Après la sortie, l'effectif passe à 25 pour simuler d'autres projets au studio et une petite équipe dédiée à l'extension.")
             ],[ CHIFFRES([["9 033 682 €","Budget total"],["42","Personnes dans l'équipe"],["48 mois","36 production · 12 live"],["78 %","Part des salaires"]]) ])
           ]),
           BANDE("III","Le Market Analysis et le seuil de rentabilité",[
@@ -622,8 +622,8 @@ const PROJECTS_FR = {
               T("J'en ai tiré deux scénarios, un optimiste et un conservateur, chacun décliné en trois niveaux de risque.")
             ],[ CAROUSEL([[EX1.roiCons,"Estimation du ROI, scénario conservateur : 250 000 followers, selon les cas haut, moyen et bas"],[EX1.roiOpti,"Estimation du ROI, scénario optimiste : moyenne des ventes du Market Analysis, selon les cas haut, moyen et bas"]]) ]),
             LIGNE([
-              T("Sur un prix de 49,99 €, j'ai retiré d'un bloc la part de Steam, les taxes et la redevance d'Unreal Engine, puis les remboursements. Par prudence, une vente ne rapporte ainsi qu'environ 20 €, et le budget est couvert à partir d'environ **451 000 ventes**."),
-              T("Dans le scénario conservateur moyen, j'estime les ventes à 482 000, juste au-dessus du seuil, soit un ROI d'environ + 6,8 %. Tout dépend du taux de conversion des wishlists, que j'estime à partir des followers Steam : 20 % dans le cas moyen, 26 % dans le cas haut, 4,8 % dans le cas bas. Je n'ai compté ni les autres plateformes ni le DLC."),
+              T("Sur un prix de 49,99 €, j'ai retiré d'un bloc la part de Steam, les taxes et la redevance d'Unreal Engine, puis les remboursements. Par prudence, une vente rapporte environ 20 € : le budget est couvert vers **451 000 ventes**."),
+              T("Dans le scénario conservateur moyen, j'estime 482 000 ventes, juste au-dessus du seuil, soit un ROI d'environ + 6,8 %. Tout dépend du taux de conversion des wishlists, estimé à partir des followers Steam (20 % en moyenne, 26 % au mieux, 4,8 % au pire), hors autres plateformes et DLC."),
             ],[ TABLEAU("Bénéfice net et ROI selon les scénarios · Budget total : 9 033 682 €",["Scénario","Ventes estimées","Bénéfice net (ROI)"],["Conservateur : 250 000 followers", ["Haut", "626 600", "+ 4 639 128 € (+ 51,4 %)"], ["Moyen", "482 000", "+ 616 438 € (+ 6,8 %)"], ["Bas", "115 680", "− 6 873 790 € (− 76,1 %)"], "Optimiste : moyenne des ventes du Market Analysis", ["Haut", "959 400", "+ 11 901 031 € (+ 131,7 %)"], ["Moyen", "738 000", "+ 5 741 809 € (+ 63,6 %)"], ["Bas", "177 120", "− 5 726 628 € (− 63,4 %)"]]) ])
           ]),
           BANDE("IV","Planifier quatre ans de projet",[
@@ -647,12 +647,12 @@ const PROJECTS_FR = {
         desc:"Le Game Design Document d'un RPG au tour par tour d'inspiration mythologique, de la boucle de jeu jusqu'à un niveau de Narrative Design.", carte:"Le Game Design Document d'un RPG mythologique au tour par tour : boucle de jeu, systèmes et leur incarnation dans le récit.",
         img:CT.thumb,
         infos:{ "Rôle":"Auteur du GDD", "Cadre":"Game Design · Game Sup", "Date":"Avril 2025", "Temps de travail":"90 h", "Livrable":"Game Design Document · 67 pages" },
-        apercu:"Pour cet exercice de Game Design, je devais concevoir un jeu autour d'une créature mythique d'un pays imposé, la Grèce. J'ai écrit le Game Design Document de Castalie's Tears, un RPG au tour par tour, du concept jusqu'à un niveau complet. Je voulais que **chaque mécanique ait un sens dans le récit**.",
+        apercu:"Pour cet exercice de Game Design, je devais concevoir un jeu autour d'une créature mythique d'un pays imposé, la Grèce. J'ai écrit le GDD de Castalie's Tears, un RPG au tour par tour, du concept à un niveau complet, avec une exigence : que **chaque mécanique ait un sens dans le récit**.",
         contenu:[
           BANDE("I","L'idée et le concept",[
             LIGNE([
-              T("J'ai choisi les naïades, divinités des eaux. Le joueur incarne Castalie, gardienne de la fontaine de Delphes, qui parcourt la Grèce pour sauver des divinités et combattre les armées de Typhon, accompagnée des héros et des dieux qu'elle rencontre."),
-              T("Castalie's Tears est un RPG solo pour PC et Nintendo Switch, en modèle premium, où **Dragon Quest XI rencontre Dragon Age : Inquisition** dans un univers proche d'Immortals Fenyx Rising. C'est un jeu posé, qui récompense la réflexion plus que les réflexes.")
+              T("J'ai choisi les naïades, divinités des eaux. Le joueur incarne Castalie, gardienne de la fontaine de Delphes, qui parcourt la Grèce pour sauver des divinités et combattre les armées de Typhon, rejointe par ceux qu'elle rencontre."),
+              T("C'est un RPG solo pour PC et Switch, en modèle premium : **Dragon Quest XI rencontre Dragon Age : Inquisition**, dans un univers proche d'Immortals Fenyx Rising. Un jeu posé, qui récompense la réflexion plus que les réflexes.")
             ],[ CAROUSEL([[CT.pitch,"L'énoncé central : Castalie face à Typhon"],[CT.one,"Le one-liner et ses trois références"],[CT.info,"La fiche d'information du projet"]]) ])
           ]),
           BANDE("II","Intentions, piliers et boucle de gameplay",[
@@ -661,7 +661,7 @@ const PROJECTS_FR = {
               T("J'ai aussi listé ce que le jeu ne contiendra pas, pour garder le périmètre sous contrôle : multijoueur, combat sur grille, arbre de compétences, mini-jeux.")
             ],[ CAROUSEL([[CT.pillars,"Les trois piliers de gameplay"],[CT.notdo,"Ce que le jeu n'est pas"]]) ]),
             LIGNE([
-              T("Le joueur gère sa base, explore, combat, récolte des ressources puis fabrique ou échange avant de revenir à sa base. J'ai qualifié chaque étape selon son rôle dans l'économie du jeu, pour vérifier que la boucle se nourrit autant qu'elle consomme."),
+              T("Le joueur gère sa base, explore, combat, récolte, puis fabrique ou échange. J'ai qualifié chaque étape selon son rôle dans l'économie du jeu, pour vérifier que la boucle se nourrit autant qu'elle consomme."),
               T("Le jeu vise un public adulte qui joue par sessions courtes, d'abord Achiever puis Explorer selon la typologie de Bartle, et qui cherche de la profondeur et des choix.")
             ],[ IMG(CT.loop,"La boucle de gameplay de Castalie's Tears") ])
           ]),
@@ -694,7 +694,7 @@ const PROJECTS_FR = {
         desc:"Une étude du marché africain du jeu vidéo à travers le Nigéria, où le mobile et le public local dessinent un modèle à part, encore freiné par les infrastructures.", carte:"Un marché porté par le mobile et le public local, encore freiné par les infrastructures.",
         img:NG.thumb,
         infos:{ "Rôle":"Auteur de l'étude", "Cadre":"Culture vidéoludique · Game Sup", "Date":"Janvier 2025 · sources vérifiées en octobre 2026", "Livrable":"Présentation PowerPoint · 30 diapositives" },
-        apercu:"Pour cet exercice de culture vidéoludique, j'ai voulu explorer un marché porteur que je ne connaissais pas. J'ai étudié le marché africain du jeu vidéo à travers le cas du Nigéria, en recoupant mes sources. J'y ai trouvé un modèle mobile et local, porté par une population jeune mais freiné par les infrastructures. J'en retiens que le budget, le calendrier, la plateforme et le mode de paiement **se décident ensemble**.",
+        apercu:"Pour cet exercice de culture vidéoludique, j'ai voulu explorer un marché porteur que je ne connaissais pas : le jeu vidéo africain, à travers le cas du Nigéria, en recoupant mes sources. J'y ai trouvé un modèle mobile et local, porté par une population jeune mais freiné par les infrastructures. Ma conclusion : budget, calendrier, plateforme et mode de paiement **se décident ensemble**.",
         contenu:[
           BANDE("I","Problématique et angle d'étude",[
             LIGNE([
@@ -704,7 +704,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("II","Un marché jeune, mobile et porté par la démographie",[
             LIGNE([
-              T("Selon Mordor Intelligence, le marché africain passerait de 2,14 Md$ en 2024 à 3,72 Md$ en 2029, soit environ 11,6 % par an, contre 9,3 % pour le marché mondial. Newzoo l'estime à 1,8 Md$ en 2024, sur un autre périmètre, et je ne mélange pas les deux séries. L'Afrique pèse moins de 1 % du marché mondial.")
+              T("Selon Mordor Intelligence, le marché africain passerait de 2,14 Md$ en 2024 à 3,72 Md$ en 2029, environ 11,6 % par an contre 9,3 % au niveau mondial. Newzoo l'estime à 1,8 Md$ sur un autre périmètre : je ne mélange pas les deux séries. L'Afrique pèse moins de 1 % du marché mondial.")
             ],[ SCHEMA("marche","Le marché africain du jeu vidéo, 2024-2029 (Mordor Intelligence), comparé au marché mondial"), FICHE("Quelques studios pionniers",["Afrique du Sud : Celestial Games (1994)","Cameroun : Kiro'o Games (projet lancé en 2003, studio fondé en 2012)","Ghana : Leti Arts (2009)","Nigéria : Kuluya, Gamsole et Maliyo (vers 2012)"]) ]),
             LIGNE([
               T("Ce marché repose sur **le mobile**, qui représentait environ 90 % des revenus en 2022. Le nombre de joueurs varie de 349 à plus de 600 millions selon les sources, qui ne mesurent pas la même chose.")
@@ -715,7 +715,7 @@ const PROJECTS_FR = {
               T("Au Nigéria, l'industrie tourne autour de quatre studios créés vers 2012, dont Maliyo Games et ChopUp, tous tournés vers le mobile."),
             ],[ ETAPES("ChopUp en quelques dates",[["2011 · Danfo","Bayo Puddicombe crée le jeu Danfo : plus d'un million de téléchargements"],["2012 · Pledge 51, puis ChopUp","Bayo Puddicombe et Zubair Abubakar fondent Pledge 51, la société qui lancera ChopUp, dans la foulée du succès de Danfo"],["2016 · Rythme de production","4 employés et un nouveau jeu toutes les 6 semaines"]]) ]),
             LIGNE([
-              T("Plus de la moitié des adultes nigérians n'ont pas de compte bancaire. ChopUp contourne l'obstacle avec les opérateurs mobiles, grâce à un petit abonnement hebdomadaire prélevé sur la facture de téléphone. Ses jeux ont été téléchargés 100 000 fois en quelques mois.")
+              T("Plus de la moitié des adultes nigérians n'ont pas de compte bancaire. ChopUp contourne l'obstacle avec les opérateurs mobiles : un petit abonnement hebdomadaire prélevé sur la facture de téléphone. Résultat : 100 000 téléchargements en quelques mois.")
             ],[ IMG(NG.jagun,"Jagun : Clash of Kingdoms, ChopUp, 2015"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
             LIGNE([
               T("Ces studios s'adressent au public local. Le quotidien devient matière de jeu, comme les embouteillages de Lagos dans Okada Ride (Maliyo, 2012), tout comme l'histoire et les mythes avec Iwaju : Rising Chef (Maliyo, 2024)."),
@@ -725,7 +725,7 @@ const PROJECTS_FR = {
           BANDE("IV","L'e-sport et les freins au développement",[
             LIGNE([
               T("La jeunesse porte aussi l'e-sport. Selon PwC, les revenus publicitaires des jeux vidéo et de l'e-sport au Nigéria passeraient de 111 M$ en 2022 à 472 M$ en 2027."),
-              T("Ce chiffre ne concorde pas avec le taux annoncé dans le même article, qui mènerait à environ 156 M$. Je retiens donc une tendance, une croissance à deux chiffres portée par le smartphone, plutôt qu'un montant.")
+              T("Ce chiffre contredit le taux annoncé dans le même article, qui mènerait à environ 156 M$. Je retiens donc une tendance plutôt qu'un montant : une croissance à deux chiffres portée par le smartphone.")
             ],[ TABLEAU("Jeux vidéo et e-sport au Nigéria : les chiffres de PwC, édition par édition",["Source","Période","Revenus"],[["Agence Ecofin, nov. 2023","2022 → 2027","111 → 472 M$ (publicité)"],["Nairametrics, fév. 2025","2023 → 2024","192 → 217 M$"],["Nairametrics, fév. 2025","2023 → 2028","192 → 322 M$ (+ 10,9 % par an)"]],true) ]),
             LIGNE([
               T("Ce modèle reste fortement limité. J'ai relevé cinq freins, du plus matériel au plus structurel."),
@@ -735,7 +735,7 @@ const PROJECTS_FR = {
           BANDE("V","Ce que j'en retiens",[
             LIGNE([
               T("Le marché africain progresse, porté par une population jeune, le mobile et l'e-sport, avec des jeux ancrés dans le quotidien et l'histoire locale. Il reste freiné par les infrastructures, le pouvoir d'achat et le financement."),
-              T("Côté production, j'en retiens qu'**un marché se lit d'abord par ses contraintes**. ChopUp a choisi sa plateforme, son mode de paiement et son rythme en fonction d'elles, dès la conception. J'ai aussi appris à distinguer un chiffre établi d'une projection avant de bâtir un plan dessus.")
+              T("Côté production, j'en retiens qu'**un marché se lit d'abord par ses contraintes** : ChopUp a choisi plateforme, paiement et rythme en fonction d'elles. J'ai aussi appris à distinguer un chiffre établi d'une projection avant de bâtir un plan dessus.")
             ])
           ]),
           BANDE("VI","Sources",[ LIGNE([ SOURCES([["Agence Ecofin · Nigéria en 2027, les jeux vidéo généreront plus de revenus publicitaires que le streaming (PwC)", "https://www.agenceecofin.com/communication/1311-113619-nigeria-en-2027-les-jeux-video-genereront-plus-de-revenus-publicitaires-que-le-streaming-l-affichage-exterieur-et-la-presse-ecrite-pwc"], ["Afrik.com · Le gaming en Afrique, une révolution silencieuse", "https://www.afrik.com/le-gaming-en-afrique-une-revolution-silencieuse"], ["Jeune Afrique · L'Afrique, nouvel eldorado des jeux vidéo", "https://www.jeuneafrique.com/1526043/culture/lafrique-nouvel-eldorado-des-jeux-video/"], ["Sigma · Gaming in Nigeria is on the rise", "https://sigma.world/fr/news/gaming-in-nigeria-is-on-the-rise/"], ["Agence Ecofin · Le marché africain des jeux vidéo devrait croître de 11,62 % par an d'ici 2029", "https://www.agenceecofin.com/innovation/0810-122265-le-marche-africain-des-jeux-video-devrait-croitre-de-11-62-par-an-d-ici-2029-rapport"], ["Jeune Afrique · Le Nigeria part à la conquête du marché africain des jeux vidéo", "https://www.jeuneafrique.com/depeches/20777/politique/le-nigeria-part-a-la-conquete-du-marche-africain-des-jeux-video/"], ["Jeune Afrique · Les recettes du succès de ChopUp", "https://www.jeuneafrique.com/315910/economie-entreprises/reussite-les-recettes-du-succes-de-chopup-le-studio-de-jeux-videos-100-nigerian/"], ["Toonmed (blog) · Reportage : les recettes du succès de ChopUp", "https://toonmed.blogspot.com/2016/04/reportage-les-recettes-du-succes-de.html"], ["Agence Ecofin · Le Nigeria et l'Égypte, pays où la moitié des adultes sont non bancarisés", "https://www.agenceecofin.com/finance/0407-99376-le-nigeria-et-l-egypte-font-partie-des-7-pays-au-monde-dans-lesquels-la-moitie-des-adultes-sont-non-bancarises-rapport"], ["Banque de France · Afrique subsaharienne, la fracture financière entre hommes et femmes", "https://www.banque-france.fr/fr/publications-et-statistiques/publications/afrique-subsaharienne-la-fracture-financiere-entre-hommes-et-femmes"], ["Sport News Africa · Vers la naissance de la Confédération africaine du sport en ligne", "https://sportnewsafrica.com/articles/e-sport-vers-la-naissance-de-la-confederation-africaine-du-sport-en-ligne"], ["Mordor Intelligence · Marché mondial du jeu vidéo", "https://www.mordorintelligence.com/fr/industry-reports/global-gaming-market"], ["Courrier International · Comment le jeu vidéo se développe en Afrique", "https://www.courrierinternational.com/article/tendance-comment-le-jeu-video-se-developpe-en-afrique"], ["Africavox · L'Afrique, nouveau berceau de l'e-sport", "https://africavox.easybroadcast.fr/articles/l-afrique-nouveau-berceau-du-e-sports"], ["Afrikactus · L'essor du gaming africain sur la scène mondiale", "https://afrikactus.com/essor-du-gaming-africain-sur-la-scene-mondiale/"], ["ADF Magazine · Des start-ups nigérianes pénètrent le marché des jeux vidéo", "https://adf-magazine.com/fr/2014/10/des-start-ups-nigerianes-penetrent-le-marche-des-jeux-video/"], ["Smart Africa · Page d'accueil de l'alliance", "https://smartafrica.org/fr/page-daccueil/"], ["AfriGamers · À propos", "https://afrigamers.com/a-propos-afrigamers/"], ["Tribune Online · 12 times national grid collapsed in 2024", "https://tribuneonlineng.com/updated-12-times-national-grid-collapsed-in-2024/"], ["Nairametrics · PwC lists 10 fastest-growing entertainment and media sectors in Nigeria 2024-2028", "https://nairametrics.com/2025/02/09/pwc-lists-10-fastest-growing-entertainment-and-media-sectors-in-nigeria-2024-2028/"],["World Economic Forum · How will Africa's youth population drive global growth?", "https://www.weforum.org/stories/youth/africa-youth-global-growth-digital-economy/"],["ONU · Youth population trends (fact sheet)", "https://www.un.org/esa/socdev/documents/youth/fact-sheets/YouthPOP.pdf"],["Afrik.com · L'Afrique, avenir du gaming mondial ?", "https://www.afrik.com/l-afrique-avenir-du-gaming-mondial"],["Le360 · À Kigali, l'Afrique se cherche un modèle économique pour l'e-sport", "https://afrique.le360.ma/sports/des-millions-de-gamers-a-la-manette-a-kigali-lafrique-se-cherche-un-modele-economique-pour-le-sport_OLMQPD7RONHW3MNIOV3TPTZBWI/"],["AFJV · Abena Tournaments", "https://afjv.com/news/11374_abena-tournaments-tournoi-feminin-afrocaribeen-tekken8.htm"],["Linda Ikeji · Mobo Game Jam (Edu360 et Kucheza Gaming)", "https://www.lindaikejisblog.com/2020/12/mobo-game-jam-edu360-kucheza-drive-social-impact-through-gaming.html"],["Maliyo Games · Programmes de formation", "https://www.maliyo.com/programme/"],["Stuff South Africa · GameOn with HP, hackathon", "https://stuff.co.za/2024/10/11/get-your-gameon-with-hps-new-hackathon/"],["HP Gaming Garage", "https://www.hpgaminggarage.com/"],["Game Camp Cities · La CASE signe avec HP", "https://www.gamecampcities.pro/post/la-conf%C3%A9d%C3%A9ration-esport-africaine-signe-son-premier-partenaire-strat%C3%A9gique-continental-le-groupe-h?lang=fr"],["Pulse Nigeria · TCN restores power in Kaduna, Kano, Bauchi and Gombe", "https://www.pulse.ng/articles/news/local/tcn-restores-power-in-kaduna-kano-bauchi-and-gombe-after-prolonged-blackout-2024111910462282759"],["Carry1st · Africa's gaming market reaches $1.8bn in 2024 (avec Newzoo)", "https://carry1st.com/press/africas-gaming-market-reaches-1-8bn-sixfold-growth-vs-row-driven-by-32mn-new-gamers-in-2024"],["Peoples Gazette · 210 millions d'abonnés mobiles actifs (NCC, 2022)", "https://gazettengr.com/nigerias-mobile-subscribers-hit-210-million-in-august-ncc/"],["Techpoint · Jagun: Clash of Kingdoms (2015)", "https://techpoint.africa/general/jagun-clash-of-kingdoms-chopup/"],["TechCabal · Pledge 51, la société derrière ChopUp", "https://techcabal.com/2014/08/29/tayo-oviosu-and-others-invest-in-chopup/"],["Games Industry Africa · Olivier Madiba et Kiro'o Games", "https://gamesindustryafrica.com/2019/09/16/profile-olivier-madiba"],["GameDev Reports · rapport de Maliyo Games sur l'industrie africaine", "https://gamedevreports.substack.com/p/maliyo-games-the-state-of-the-african"]]) ]) ])
@@ -748,11 +748,11 @@ const PROJECTS_EN = {
         desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
-        apercu:"I was the only producer for the class's four games, 54 people in all. In the second week, all four teams hit the same art direction crisis. I organised emergency meetings, we paused production for a day and a half, then I set up two shared playtests and reset priorities with each group. All four games were delivered to the jury, with **93% of the 1,387 tasks completed**.",
+        apercu:"I was the only producer for the class's four games, 54 people in all. In the second week, the same art direction crisis hit all four teams: after a day-and-a-half pause, I set up two shared playtests and reset each group's priorities. All four games were delivered with **93% of the 1,387 tasks completed**.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("The end-of-year project brings second-year Game Designers and Game Artists together on a game somewhere between III and AAA. After two selection juries in May, four games were chosen."),
+              T("The end-of-year project brings second-year Game Designers and Game Artists together on games between III and AAA. Two selection juries chose four projects."),
               T("Each team had to deliver a **vertical slice playable on PC**, in Unreal or Unity, with its documentation, a gameplay video and a jury presentation.")
             ],[ FICHE("The constraints",["Four games in four weeks, from 27 May to 24 June, for a single producer and more than fifty people","Five milestones: Intentions, Proof of Concept, Alpha, Beta and Gold","5 to 15 minutes of play, with a finished level, menus and effects, and no blocking bugs","The school's advice: do less, but make it polished and finished"]) ]),
             LIGNE([ KEYART([
@@ -764,24 +764,24 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Organising four teams in parallel",[
             LIGNE([
-              T("With four games and more than fifty people, I could not be in every room. So we **launched production with the whole class**, the day after the selection. Everyone got the same guidelines, tools and method."),
-              T("With the instructors, I appointed two leads per group, one in Game Design and one in Game Art. Dailies kept the tracking going while I was with another group. I remained the link between the instructors and the teams.")
+              T("With more than fifty people, I could not be in every room. So we **launched production with the whole class**, so that everyone started from the same guidelines, tools and method."),
+              T("With the instructors, I appointed two leads per group, one in Game Design and one in Game Art. Their dailies kept tracking going when I was elsewhere, and I remained the link with the instructors.")
             ],[ SCHEMA("orga") ])
           ]),
           BANDE("III","Planning and tracking production",[
             LIGNE([
               T("The school set Waterfall milestones, and the teams worked in **Agile** sprints. I had to connect the two, with tracking consistent enough to compare the four groups."),
-              T("I built this tracking in Excel, a simple tool the whole team already knew. Each group had a macro plan for its sprints and milestones, and a micro plan for its tasks: sprint, priority, difficulty, status. 1,387 tasks in total.")
+              T("I built this tracking in Excel, a tool the whole team knew: a macro plan per group for sprints and milestones, and a micro plan for the 1,387 tasks (sprint, priority, difficulty, status).")
             ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)","pano") ]),
             LIGNE([
-              T("I had to keep these statuses up to date continuously. They made delays visible, sprint by sprint.")
+              T("Kept up to date continuously, these statuses made delays visible sprint by sprint.")
             ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses","pano") ])
           ]),
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
               T("In the second week, the same problem appeared in all four groups: **the art direction was unclear**. Delays quickly reached two to three days."),
               T("I organised emergency meetings with each group, and we paused production for a day and a half. The references were too broad, and the research at the start too short."),
-              T("I had to keep the teams from losing their motivation. Each group had to leave with a clear direction.")
+              T("I had to send each group back motivated, with a clear direction.")
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
               T("For Project GLOW, I decided with the leads to cut several off-brief assets. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
@@ -792,7 +792,7 @@ const PROJECTS_EN = {
           BANDE("V","Running playtests and reprioritising",[
             LIGNE([
               T("Two weeks remained. I organised **two playtest sessions for all four groups**, open to players from the other classes."),
-              T("The feedback was plentiful and often critical, and morale was already low. I kept what mattered with each team, then reset the priorities. Watching strangers enjoy the games also gave the teams new energy.")
+              T("The feedback, plentiful and often critical, came when morale was already low. I kept what mattered with each team and reset the priorities. Watching strangers enjoy the games also restored the teams' energy.")
             ],[ CAROUSEL([["images/fda-playtest-form.jpg","The playtest feedback form for Le Castor et l'Écureuil: 22 responses"],["images/fda-playtest-perso.jpg","A section of the questionnaire: how players rated the characters"],["images/fda-playtest-coherence.jpg","A section of the questionnaire: design consistency, rated from 1 to 7"]]) ])
           ]),
           BANDE("VI","The four games delivered",[
@@ -805,8 +805,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("VII","What I take away",[
             LIGNE([
-              T("It was the first time I had produced for an entire class. The crisis taught me to **listen to each team's needs** before applying what I thought I knew. I also learned to delegate."),
-              T("On a project of this size, I would have a reference scene built in the engine from the start, with a prop at the target quality. Each group would see the art direction from the first week."),
+              T("It was my first production for an entire class. The crisis taught me to **listen to each team's needs** before applying what I thought I knew, and to delegate."),
+              T("On a project of this size, I would have a reference scene built in the engine from the start, with a prop at the target quality, to show the art direction from the first week."),
               T("I would also keep the dailies shorter, focused on the sprint goal and blockers.")
             ])
           ]),
@@ -822,11 +822,11 @@ const PROJECTS_EN = {
         carte:"Two rogue-lites shipped in fifteen days, with cuts prepared in advance and procedural generation faked to hold the deadline.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 teams of 14","Rogue-lite","15 days"] }, 
         infos:{ "Role":"Producer", "Team":"2 teams of 14 people", "Duration":"2 – 20 February 2026 (15 working days)", "Tools":"Excel · PowerPoint · Miro · Discord" },
-        apercu:"I was the producer for both teams in this fifteen-day workshop. Each had to deliver a 2.5D rogue-lite in Unity, based on a film licence. By the end of the first sprint, Mad Max Fury Rogue's procedural generation had fallen behind. With the Game Design lead and the instructors' agreement, we simulated it to hold the date. Thanks to cuts prepared in advance, both games were delivered **playable from start to finish**.",
+        apercu:"I was the producer for both teams in this fifteen-day workshop, each making a 2.5D rogue-lite in Unity based on a film licence. From the first sprint, Mad Max Fury Rogue's procedural generation fell behind: with the instructors' agreement, we simulated it. Thanks to cuts prepared in advance, both games were delivered **playable from start to finish**.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("The brief was dense for fifteen days: a \"run, death, upgrade\" loop, a HUB, at least five combat rooms and three iconic rooms assembled procedurally. It also required a currency economy, a boss, combat with dodge, combo and ability, the menus and all the documentation.")
+              T("The brief was dense for fifteen days: a \"run, death, upgrade\" loop, a HUB, five combat rooms and three iconic rooms assembled procedurally, a currency economy, a boss, full combat, the menus and all the documentation.")
             ],[ FICHE("Constraints",["Two games to produce at the same time","Five milestones in fifteen days: Intentions, Proof of Concept, Alpha, Beta, Gold","A film licence assigned to each team: Vampire Hunter D: Bloodlust and Mad Max: Fury Road","The school's advice: don't think too big"]) ]),
             LIGNE([ KEYART([
                       ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","Group 3 was given Vampire Hunter D: Bloodlust and turned it into a gothic rogue-lite set in the rooms of a castle."],
@@ -835,13 +835,13 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Planning on two levels",[
             LIGNE([
-              T("Both teams followed the same calendar of **three one-week sprints**, aligned with the school's milestones. The first set up the blocking and the essential assets. The second brought the final look and the attack system. The last was kept for balancing and polish.")
+              T("Both teams followed **three one-week sprints**, aligned with the school's milestones: blocking and essential assets, then final look and attack system, then balancing and polish.")
             ],[ CHIFFRES([["573","tasks tracked"],["94% and 92%","tasks completed (Vampire Hunter, Mad Max)"],["3","one-week sprints"],["5","milestones in fifteen days"]]) ]),
             LIGNE([
               IMG("images/rogue-planning.png","The production schedule: phases, school milestones and one-week sprints","pano")
             ]),
             LIGNE([
-              T("Each team had its backlog in Excel: 336 tasks for Vampire Hunter E-Cycle, 237 for Mad Max Fury Rogue. Each task had a person, a sprint, a difficulty, a priority and a status."),
+              T("Each team had its Excel backlog (336 tasks for Vampire Hunter E-Cycle, 237 for Mad Max Fury Rogue), each task with an owner, a sprint, a difficulty, a priority and a status."),
               T("The workload was front-loaded, and environment art was the heaviest area in both productions.")
             ]),
             LIGNE([
@@ -850,8 +850,8 @@ const PROJECTS_EN = {
           ]),
           BANDE("III","Preparing the cuts",[
             LIGNE([
-              T("With the leads of each team, I drew up a **list of expendable tasks**, the first to go if time ran short. It held everything outside the production's critical path: 28 tasks for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue. Most of them never entered the sprints."),
-              T("During production, we cut seven tasks in each team without touching the core of the game, such as Vampire Hunter E-Cycle's music manager or Mad Max Fury Rogue's second enemy.")
+              T("With the leads, I drew up a **list of expendable tasks**: everything outside the critical path, to be cut first if time ran short. 28 tasks for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue; most never entered a sprint."),
+              T("During production, we cut seven tasks per team without touching the core of the game, such as Vampire Hunter E-Cycle's music manager or Mad Max Fury Rogue's second enemy.")
             ],[ FICHE("Set aside on Vampire Hunter E-Cycle",["A double jump and a dialogue system","A cursed room and an inventory","Set-dressing VFX: fireplace, embers, puddles","42 expendable tasks across both games"]) ]),
             LIGNE([
               T("The market made up five of Mad Max Fury Rogue's fourteen tasks, and it was set aside as a whole.")
@@ -867,29 +867,29 @@ const PROJECTS_EN = {
           ]),
           BANDE("IV","Tracking two teams at once",[
             LIGNE([
-              T("In each team, two leads, one in Game Design and one in Game Art, ran the **dailies**. I switched groups every other day, and they reported back to me."),
-              T("Between these check-ins, I went round the rooms to clear blockers. I also took stock with each team at sprint reviews."),
-              T("Vampire Hunter E-Cycle's outline shader, essential to the art direction, fell behind from the first sprint. I reworked the schedule, and we sacrificed VFX from the list to finish it."),
+              T("In each team, two leads ran the **dailies**. I switched groups every other day, and they reported back to me."),
+              T("In between, I went round the rooms to clear blockers, and took stock with each team at sprint reviews."),
+              T("Vampire Hunter E-Cycle's outline shader, essential to the art direction, fell behind from the first sprint: I reworked the schedule, and we sacrificed VFX from the list to finish it."),
               T("I was sometimes asked for my view on the narrative, and I helped settle decisions in the System Designers' meetings.")
             ],[ IMG("images/rogue-vh-ld-la.webp","A Vampire Hunter E-Cycle room, from blocking to level art") ])
           ]),
           BANDE("V","Faking procedural generation",[
             LIGNE([
-              T("On Mad Max Fury Rogue, procedural generation turned out to be far more complex than planned. It was already late at the end of the first sprint, although it was the required core of the rogue-lite."),
-              T("With the Game Design lead, I looked for a compromise with the instructors, who played the role of publishers. We chose to **simulate the procedural generation** with checkpoints prepared in the level design, which gave the illusion of random generation. The jury approved it in advance, and the project was well received."),
-              T("This agreement kept the risk of crunch away. The team could refocus on the core of the game.")
+              T("On Mad Max Fury Rogue, procedural generation, the required core of the rogue-lite, turned out far more complex than planned and was already late at the end of the first sprint."),
+              T("With the Game Design lead, I looked for a compromise with the instructors, acting as publishers. We chose to **simulate the procedural generation** with checkpoints prepared in the level design, giving the illusion of random generation. The jury approved it in advance, and the project was well received."),
+              T("This agreement removed the risk of crunch and refocused the team on the core of the game.")
             ],[ CAROUSEL([["images/rogue-mm-ld-1.webp","The Mad Max Fury Rogue level in blocking"],["images/rogue-mm-ld-2.webp","The Mad Max Fury Rogue level in blocking, with its enemies"]]) ])
           ]),
           BANDE("VI","Testing and delivering",[
             LIGNE([
-              T("On Vampire Hunter E-Cycle, QA stayed internal: a questionnaire, a God Mode to test the rooms and UX playtests. I did not have time to invite outside players. On Mad Max Fury Rogue, technical issues prevented testing."),
-              T("On the day of the jury, both games were playable from start to finish. The cuts, such as the three combat rooms left without final level art, did not compromise the experience.")
+              T("On Vampire Hunter E-Cycle, QA stayed internal (questionnaire, God Mode, UX playtests), as there was no time to invite outside players. On Mad Max Fury Rogue, technical issues prevented testing."),
+              T("On the day of the jury, both games were playable from start to finish. The cuts, such as three combat rooms without final level art, did not compromise the experience.")
             ],[ CAROUSEL([["images/rogue-vh-autel.jpg","Vampire Hunter E-Cycle in game"],["images/rogue-vh-ruines.jpg","Vampire Hunter E-Cycle: a ruined room"],["images/rogue-vh-galerie.jpg","Vampire Hunter E-Cycle: a castle gallery"],["images/rogue-vh-salle-rouge.jpg","Vampire Hunter E-Cycle: a castle room"],["images/rogue-mm-jeu.jpg","Mad Max Fury Rogue in game, with its interface"]]) ])
           ]),
           BANDE("VII","What I take away",[
             LIGNE([
-              T("This workshop taught me to **decide on cuts before I need them**. With a list prepared in advance, you know what to leave aside when time runs short."),
-              T("Looking back, I should have revised the sprint goals shared by both teams along the way, given each team's difficulties, such as procedural generation on Mad Max Fury Rogue."),
+              T("This workshop taught me to **decide on cuts before I need them**: with a list ready, you know what to leave aside when time runs short."),
+              T("Looking back, I should have adapted the sprint goals shared by both teams along the way, given each team's difficulties."),
               T("I would also plan external playtests as early as possible, while there is still time to act on them.")
             ])
           ]),
@@ -905,12 +905,12 @@ const PROJECTS_EN = {
         carte:"Two racing games born from fusing a reference game's gameplay with a licence, with my first dailies and assets ranked by priority.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 teams of 14 and 15","Racing · Fusion","3 weeks"] }, 
         infos:{ "Role":"Producer", "Team":"2 teams of 14 and 15 people", "Duration":"3 – 28 November 2025 (3 working weeks)", "Tools":"Excel" },
-        apercu:"I was the producer for both teams in this workshop. Each had three weeks to deliver a vertical slice of a racing game in Unreal Engine 5. The constraint was a fusion: the gameplay of a reference game, dressed in an assigned licence. HellStorm mixed *Motorstorm* with *Doom*, Wakfu Riders *Street Racer* with *Wakfu*. I tracked production with an Agile plan in Excel, a review every week and my first dailies. At the jury, **97% and 98% of tasks** were complete.",
+        apercu:"I was the producer for both teams in this workshop: three weeks to deliver a vertical slice of a racing game in Unreal Engine 5, fusing a reference game's gameplay with an assigned licence. HellStorm mixed *Motorstorm* with *Doom*, Wakfu Riders *Street Racer* with *Wakfu*. At the jury, **97% and 98% of tasks** were complete.",
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("The brief asked for a vertical slice: a few minutes of play, understandable without explanation. The school wanted a real fusion, adapting the gameplay to the licence while keeping the essence of the original game.\n\nThat was the real difficulty: getting two games with a strong identity, which would not get lost between the reference gameplay and the licence's art direction. I set up dedicated meetings to study and choose the art direction, and to set the iconic gameplay elements that had to be there. After that, when needed, I organised meetings in small groups."),
-              T("My task was to keep the production management document: the macro and micro plan, a burndown chart every week and a dashboard, overall and per person.")
+              T("The brief asked for a few minutes of play, understandable without explanation, and a real fusion that kept the essence of the original game.\n\nThat was the whole difficulty: getting two games with a strong identity, not lost between the reference gameplay and the licence. I set up meetings to choose the art direction and set the iconic gameplay elements, then small-group meetings when needed."),
+              T("My task was to keep the production management document: macro and micro plan, a weekly burndown chart, and a dashboard, overall and per person.")
             ],[ FICHE("Constraints",["Two games at once, for a single producer and 29 people","Three working weeks, from 3 to 28 November 2025","A III game aiming for AAA quality, sold as a premium title","Three reviews by the teaching staff before the jury"]) ]),
             LIGNE([ KEYART([
                       ["images/fusion-hs-keyart.jpg","HellStorm","Group 3 was given the gameplay of Motorstorm and the Doom licence, and turned them into an off-road race through hell."],
@@ -919,39 +919,39 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","Planning in four sprints",[
             LIGNE([
-              T("Both teams followed the same macro plan of **four sprints**, aligned with the school's reviews. The first set up the design. The second took the prototype to the 3Cs and blocking playtests. The third aimed for a build playable from start to finish, and the last was kept for polish and QA feedback.")
+              T("Both teams followed **four sprints** aligned with the school's reviews: design, a prototype up to the 3Cs and blocking playtests, a build playable from start to finish, then polish and QA feedback.")
             ],[ CHIFFRES([["568","tasks tracked"],["97% and 98%","tasks completed (HellStorm, Wakfu Riders)"],["4","sprints"],["3","reviews before the jury"]]) ]),
             LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","The HellStorm macro plan: phases, sprints and days off"],["images/fusion-wk-macro.png","The Wakfu Riders macro plan, on the same calendar"]],"pano") ]),
             LIGNE([
-              T("Each team had its backlog in Excel, sorted by epic and story: 220 tasks for HellStorm, 348 for Wakfu Riders. A tab per sprint detailed the week, and each member had their own tab."),
+              T("Each team had its Excel backlog, sorted by epic and story (220 tasks for HellStorm, 348 for Wakfu Riders), with one tab per sprint and one per member."),
               T("Environment art was the heaviest area: 72 tasks for HellStorm, 131 for Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","The Wakfu Riders map under construction in Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders: the village and its vineyards in the editor"]]) ]),
             LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Excerpt from the HellStorm backlog: epics, stories, owners, difficulties, statuses, sprints and priorities"],["images/fusion-wk-backlog.png","Excerpt from the Wakfu Riders backlog"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to each person's tab"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]],"pano") ])
           ]),
           BANDE("III","Following two teams",[
             LIGNE([
-              T("It was my first workshop with **dailies**. I handed them to the two leads of each team, one in Game Design and one in Game Art. With two groups to follow, I could not attend every one, and this way the teams moved forward without depending on my presence. I took stock with both groups during the weekly reviews."),
+              T("It was my first workshop with **dailies**. I handed them to each team's leads: with two groups, I could not attend every one, and the teams moved forward without depending on my presence. I took stock with them at the weekly reviews."),
               T("With the leads, I split the tasks between Game Artists and Game Designers, balancing everyone's workload."),
-              T("On HellStorm, four documents fell behind in sprint 3, including the personas and the concept map. I moved them to sprint 4, where they were finished.")
+              T("On HellStorm, four documents, including the personas and the concept map, fell behind in sprint 3; I moved them to sprint 4, where they were finished.")
             ],[ CAROUSEL([["images/fusion-hs-monocycle-concept.jpg","HellStorm: the monocycle concept"],["images/fusion-hs-monocycle-3d-1.jpg","The monocycle modelled in 3D"],["images/fusion-hs-monocycle-3d-2.jpg","The monocycle, seen from the other side"],["images/fusion-hs-voiture-concept.jpg","HellStorm: the car concept"],["images/fusion-hs-voiture-3d.jpg","The car modelled in 3D"],["images/fusion-hs-ui.jpg","The map selection screen, being integrated"]]) ])
           ]),
           BANDE("IV","Ranking assets by priority",[
             LIGNE([
-              T("The asset lists were **ranked by priority** from the start. On HellStorm, all 15 high-priority props were made. The 13 left aside were mostly variants of buildings and rocks."),
-              T("On Wakfu Riders, 40 of 47 set assets were made, and the seven remaining were low priority. Each sound had a score from 1 to 10, sometimes a fallback sound: 23 of 33 were produced."),
+              T("The asset lists were **ranked by priority** from the start. On HellStorm, all 15 high-priority props were made; the 13 left aside were mostly variants of buildings and rocks."),
+              T("On Wakfu Riders, 40 of 47 set assets were made, the remaining seven being low priority. Sounds, scored from 1 to 10 and sometimes with a fallback, reached 23 of 33."),
               T("During production, only two tasks were cut on HellStorm, including the matchmaking system, and five on Wakfu Riders.")
             ],[ FICHE("Left aside on Wakfu Riders",["The modular church and town hall","The weight, power and handling pickups","The respawn zone","The drift signs and feedback"]) ]),
             LIGNE([ CAROUSEL([["images/fusion-wk-recherches.webp","Wakfu Riders: vehicle research, including the barrel"],["images/fusion-wk-dinde.webp","Wakfu Riders: the turkey, modelled in Maya from its references"]]) ])
           ]),
           BANDE("V","Testing",[
             LIGNE([
-              T("Wakfu Riders started **QA** in the first sprint by testing reference racing games such as F-Zero 99. The blocking was tested twice in sprint 2, then the vertical slice in sprints 3 and 4."),
-              T("On HellStorm, production delays, mostly in tech and programming, pushed testing back: the QA questionnaire was prepared in sprint 3, for a playtest in sprint 4.")
+              T("Wakfu Riders started **QA** in the first sprint by testing reference games such as F-Zero 99, then the blocking (twice in sprint 2) and the vertical slice (sprints 3 and 4)."),
+              T("On HellStorm, delays in tech and programming pushed testing back: the QA questionnaire, ready in sprint 3, was only used in sprint 4.")
             ],[ CAROUSEL([["images/fusion-wk-ld-sketch.webp","Wakfu Riders: the level design sketch of the track"],["images/fusion-wk-blocking.webp","The track in blocking in Unreal Engine"],["images/fusion-wk-jeu.jpg","Wakfu Riders in game, at the foot of the giant tree"]]) ])
           ]),
           BANDE("VI","What I take away",[
             LIGNE([
-              T("With lists ranked by priority from the start, cuts were easy: what was missing at the end was already what mattered least."),
+              T("Asset lists ranked by priority from the start make cuts easy: what is missing at the end is already what matters least."),
               T("Looking back, I would have started HellStorm's playtests earlier, as Wakfu Riders did from the first sprint.")
             ])
           ]),
@@ -985,7 +985,7 @@ const PROJECTS_EN = {
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("My fictional game follows what Ember Lab has made public about Kena: an action-RPG made in three years by 15 people, with vendors for QA, part of the art and the music."),
+              T("My fictional game follows what Ember Lab has made public about Kena: three years of production, 15 people, and vendors for QA, part of the art and the music."),
               T("I ran this project alongside the Agile with Atlassian Jira course (Coursera), whose certificate I earned on 14 October 2026."),
               LIEN("Verify the certificate","https://coursera.org/verify/EQE4DN5JX2XG")
             ],[ FICHE("The constraints",["A 15-person team, on a free plan limited to 10 users","Jira cannot backdate a work item: the simulation runs in real time","Work done alone, playing every role"]) ])
@@ -1000,13 +1000,13 @@ const PROJECTS_EN = {
           ]),
           BANDE("III","Preparing the Vertical Slice",[
             LIGNE([
-              T("Breaking down the Vertical Slice revealed two bottlenecks, the gameplay animator and the sound designer, and a critical path that runs through the vendors. So I committed the squads cautiously, 21 points for Gameplay and 13 for World, and these findings became the first risks in the register."),
+              T("Breaking down the Vertical Slice revealed two bottlenecks, the gameplay animator and the sound designer, and a critical path running through the vendors. So I committed the squads cautiously (21 points for Gameplay, 13 for World), and these findings opened the risk register."),
               T("Each sprint starts from a goal that can be checked in a demo. I wrote a Definition of Ready to enter a sprint and a Definition of Done to leave it.")
             ],[ CHIFFRES([["23","Stories in the Vertical Slice"],["126","Estimated points"],["13 and 15","Stories for the animator and the sound designer"],["3","Vendor deliveries blocking Stories"]]) ])
           ]),
           BANDE("IV","Giving everyone the right visibility",[
             LIGNE([
-              T("In Jira, a board is just a view on a filter. I made **one per audience**: a Scrum board per squad, a Kanban for QA, one for vendors and a Production board that sees the whole project.")
+              T("In Jira, a board is just a view on a filter. I made **one per audience**: a Scrum board per squad, a Kanban for QA, one for vendors and a Production board for the whole project.")
             ],[ CAROUSEL([["images/jira-board-production.png","Production: the overview, with no sprint"],["images/jira-board-gameplay.png","Gameplay: the squad's sprint, grouped by Epic"],["images/jira-board-world.png","World: the squad's sprint, grouped by Epic"],["images/jira-board-vendors.png","Vendors: the deliveries expected from each vendor"]]) ]),
             LIGNE([
               T("I built a filter library for the Monday-morning questions: where the sprint stands, what is blocked, whether the scope has moved.")
@@ -1064,7 +1064,7 @@ const PROJECTS_EN = {
         ] }),
     P({ date:"March 2026", survol:{ items:["Producer","AA game · 42 people","48-month production","Excel · Coda · ClickUp"] }, cat:"Production management", title:"Wyrdfall", desc:"Production plan for a 48-month AA game: team, budget, schedule, sales estimate and break-even point.", carte:"The team, budget and break-even point of a fictional 48-month AA game.", 
         infos:{ "Role":"Producer", "Context":"Production management · Game Sup", "Date":"March 2026", "Project":"AA · 42 people at peak", "Tools":"Excel · Coda · ClickUp", "Workload":"20 hours out of 90 (whole assignment)", "Deliverables":"Team · Planning · Budget · Market Analysis" },
-        apercu:"For this production exercise, I was the producer of Wyrdfall, a fictional AA game. I had to go from building the team to the break-even point. The result: **a €9M budget over 48 months**, break-even at around 451,000 sales and two ROI scenarios, in an Excel file that updates in one click.",
+        apercu:"For this exercise, I was the producer of Wyrdfall, a fictional AA game, from building the team to the break-even point. The result: **a €9M budget over 48 months**, break-even at around 451,000 sales and two ROI scenarios, in an Excel file that updates in one click.",
         contenu:[
           BANDE("I","The brief and my role",[
             LIGNE([
@@ -1077,8 +1077,8 @@ const PROJECTS_EN = {
               T("I wanted an Excel file that stayed readable and adaptable. **The budget recalculates in one click** when a member joins the studio, gains seniority or receives new software.")
             ],[ CAROUSEL([[EX1.nav,"Home page of the production file: buttons and navigation through colour-coded tabs"],[EX1.budget,"Budget overview: team, duration and budget by department"]]) ]),
             LIGNE([
-              T("Wyrdfall has 36 months of production and 12 months of live service, with 42 people, 25 of whom stay for the live phase. The budget comes to €9,033,682, 78% of it salaries."),
-              T("I built the team by production area, drawing on Sandfall Interactive's team for Clair Obscur: Expedition 33. After release, headcount drops to 25: this simulates other projects starting at the studio and a smaller production dedicated to the expansion.")
+              T("Wyrdfall has 36 months of production and 12 of live service, with 42 people, 25 of them on the live phase. The budget comes to €9,033,682, 78% of it salaries."),
+              T("I built the team by production area, drawing on Sandfall Interactive's team for Clair Obscur: Expedition 33. After release, headcount drops to 25 to simulate other projects at the studio and a small team dedicated to the expansion.")
             ],[ CHIFFRES([["€9,033,682","Total Budget"],["42","People on the team"],["48 months","36 production · 12 live"],["78%","Share of salaries"]]) ])
           ]),
           BANDE("III","The Market Analysis and the break-even point",[
@@ -1089,8 +1089,8 @@ const PROJECTS_EN = {
               T("From them I built two scenarios, one optimistic and one conservative, each in three risk levels.")
             ],[ CAROUSEL([[EX1.roiCons,"ROI estimate, conservative scenario: 250,000 followers, in high, average and low cases"],[EX1.roiOpti,"ROI estimate, optimistic scenario: average sales from the Market Analysis, in high, average and low cases"]]) ]),
             LIGNE([
-              T("From a €49.99 price, I deducted Steam's share, taxes and the Unreal Engine royalty in one go, then refunds. To stay cautious, a sale brings in only about €20, and the budget is covered from about **451,000 sales**."),
-              T("In the average conservative scenario, I estimate sales at 482,000, just above break-even, for an ROI of about +6.8%. Everything depends on the wishlist conversion rate, which I estimate from Steam followers: 20% in the average case, 26% in the high case, 4.8% in the low case. These estimates exclude other platforms and the DLC."),
+              T("From a €49.99 price, I deducted Steam's share, taxes and the Unreal Engine royalty in one go, then refunds. To stay cautious, a sale brings in about €20: the budget is covered at around **451,000 sales**."),
+              T("In the average conservative scenario, I estimate 482,000 sales, just above break-even, for an ROI of about +6.8%. Everything depends on the wishlist conversion rate, estimated from Steam followers (20% on average, 26% at best, 4.8% at worst), excluding other platforms and the DLC."),
             ],[ TABLEAU("Net profit and ROI by scenario · Total budget: €9,033,682",["Scenario","Estimated sales","Net profit (ROI)"],["Conservative: 250,000 followers", ["High", "626,600", "+ €4,639,128 (+ 51.4%)"], ["Average", "482,000", "+ €616,438 (+ 6.8%)"], ["Low", "115,680", "− €6,873,790 (− 76.1%)"], "Optimistic: average sales from the Market Analysis", ["High", "959,400", "+ €11,901,031 (+ 131.7%)"], ["Average", "738,000", "+ €5,741,809 (+ 63.6%)"], ["Low", "177,120", "− €5,726,628 (− 63.4%)"]]) ])
           ]),
           BANDE("IV","Planning a four-year project",[
@@ -1113,12 +1113,12 @@ const PROJECTS_EN = {
     P({ date:"April 2025", survol:{ items:["Author of the GDD","Turn-based RPG","90 hours","67 pages"] }, cat:"Game Design and Narrative Design", title:"Castalie's Tears", 
         desc:"The Game Design Document for a mythology-inspired turn-based RPG, from the core loop to a Narrative Design level.", carte:"The Game Design Document for a turn-based mythological RPG: core loop, systems and their embodiment in the story.",
         infos:{ "Role":"Author of the GDD", "Context":"Game Design · Game Sup", "Date":"April 2025", "Workload":"90 hours", "Deliverable":"Game Design Document · 67 pages" },
-        apercu:"For this Game Design exercise, I had to design a game around a mythical creature from an assigned country, Greece. I wrote the Game Design Document for Castalie's Tears, a turn-based RPG, from the concept to a complete level. I wanted **every mechanic to make sense in the story**.",
+        apercu:"For this Game Design exercise, I had to design a game around a mythical creature from an assigned country, Greece. I wrote the GDD for Castalie's Tears, a turn-based RPG, from the concept to a complete level, with one requirement: **every mechanic must make sense in the story**.",
         contenu:[
           BANDE("I","The idea and the concept",[
             LIGNE([
-              T("I chose the naiads, water deities. The player is Castalie, guardian of the fountain of Delphi, who travels across Greece to save deities and fight Typhon's armies, joined by the heroes and gods she meets."),
-              T("Castalie's Tears is a single-player RPG for PC and Nintendo Switch, sold as a premium game, where **Dragon Quest XI meets Dragon Age: Inquisition** in a world close to Immortals Fenyx Rising. It is a calm game that rewards thinking more than reflexes.")
+              T("I chose the naiads, water deities. The player is Castalie, guardian of the fountain of Delphi, who travels across Greece to save deities and fight Typhon's armies, joined by those she meets."),
+              T("It is a single-player premium RPG for PC and Switch: **Dragon Quest XI meets Dragon Age: Inquisition**, in a world close to Immortals Fenyx Rising. A calm game that rewards thinking more than reflexes.")
             ],[ CAROUSEL([[CT.pitch,"The core statement: Castalie against Typhon"],[CT.one,"The one-liner and its three references"],[CT.info,"The project information sheet"]]) ])
           ]),
           BANDE("II","Intentions, pillars and core loop",[
@@ -1127,7 +1127,7 @@ const PROJECTS_EN = {
               T("I also listed what the game will not contain, to keep the scope under control: multiplayer, grid combat, a skill tree, mini-games.")
             ],[ CAROUSEL([[CT.pillars,"The three gameplay pillars"],[CT.notdo,"What the game is not"]]) ]),
             LIGNE([
-              T("The player manages their base, explores, fights, gathers resources, then crafts or trades before returning to base. I labelled each step by its role in the game's economy, to check that the loop feeds itself as much as it consumes."),
+              T("The player manages their base, explores, fights, gathers, then crafts or trades. I labelled each step by its role in the game's economy, to check that the loop feeds itself as much as it consumes."),
               T("The game targets adults who play in short sessions, Achievers first and Explorers second in Bartle's taxonomy, looking for depth and choices.")
             ],[ IMG(CT.loop,"The core loop of Castalie's Tears") ])
           ]),
@@ -1159,7 +1159,7 @@ const PROJECTS_EN = {
     P({ date:"January 2025", survol:{ items:["Author of the study","Market analysis","Source cross-checking","30 slides"] }, cat:"Market analysis", title:"The African Video Game Market: The Case of Nigeria", 
         desc:"A study of the African video game market through Nigeria, where mobile and local audiences shape a model of its own, still held back by infrastructure.", carte:"A market driven by mobile and local audiences, still held back by infrastructure.",
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025 · sources checked in October 2026", "Deliverable":"PowerPoint presentation · 30 slides" },
-        apercu:"For this video game culture exercise, I wanted to explore a promising market I did not know. I studied the African video game market through the case of Nigeria, cross-checking my sources. I found a mobile, local model, driven by a young population but held back by infrastructure. What I take from it is that budget, schedule, platform and payment method **are decided together**.",
+        apercu:"For this video game culture exercise, I wanted to explore a promising market I did not know: African video games, through the case of Nigeria, cross-checking my sources. I found a mobile, local model, driven by a young population but held back by infrastructure. My conclusion: budget, schedule, platform and payment method **are decided together**.",
         contenu:[
           BANDE("I","Research question and approach",[
             LIGNE([
@@ -1169,7 +1169,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("II","A young, mobile market driven by demographics",[
             LIGNE([
-              T("According to Mordor Intelligence, the African market is expected to grow from $2.14bn in 2024 to $3.72bn in 2029, about 11.6% a year, against 9.3% for the global market. Newzoo puts it at $1.8bn in 2024, on a different scope, and I do not mix the two series. Africa accounts for less than 1% of the global market.")
+              T("According to Mordor Intelligence, the African market is expected to grow from $2.14bn in 2024 to $3.72bn in 2029, about 11.6% a year against 9.3% worldwide. Newzoo puts it at $1.8bn on a different scope: I do not mix the two series. Africa accounts for less than 1% of the global market.")
             ],[ SCHEMA("marche","The African video game market, 2024-2029 (Mordor Intelligence), compared with the world market"), FICHE("A few pioneering studios",["South Africa: Celestial Games (1994)","Cameroon: Kiro'o Games (project started in 2003, studio founded in 2012)","Ghana: Leti Arts (2009)","Nigeria: Kuluya, Gamsole and Maliyo (around 2012)"]) ]),
             LIGNE([
               T("This market runs on **mobile**, which accounted for about 90% of revenue in 2022. The number of players ranges from 349 to over 600 million depending on the source, as they do not measure the same thing.")
@@ -1180,7 +1180,7 @@ const PROJECTS_EN = {
               T("In Nigeria, the industry revolves around four studios founded around 2012, including Maliyo Games and ChopUp, all focused on mobile."),
             ],[ ETAPES("ChopUp in a few dates",[["2011 · Danfo","Bayo Puddicombe creates the game Danfo: over one million downloads"],["2012 · Pledge 51, then ChopUp","Bayo Puddicombe and Zubair Abubakar found Pledge 51, the company that will launch ChopUp, on the back of Danfo's success"],["2016 · Production pace","4 employees and a new game every 6 weeks"]]) ]),
             LIGNE([
-              T("More than half of Nigerian adults have no bank account. ChopUp works around this with mobile operators, through a small weekly subscription charged to the phone bill. Its games were downloaded 100,000 times in a few months.")
+              T("More than half of Nigerian adults have no bank account. ChopUp works around this with mobile operators: a small weekly subscription charged to the phone bill. The result: 100,000 downloads in a few months.")
             ],[ IMG(NG.jagun,"Jagun: Clash of Kingdoms, ChopUp, 2015"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
             LIGNE([
               T("These studios target the local audience. Daily life becomes game material, like Lagos traffic jams in Okada Ride (Maliyo, 2012), as do history and myths in Iwaju: Rising Chef (Maliyo, 2024)."),
@@ -1190,7 +1190,7 @@ const PROJECTS_EN = {
           BANDE("IV","Esports and obstacles to growth",[
             LIGNE([
               T("Young people also drive esports. According to PwC, advertising revenue from games and esports in Nigeria are expected to grow from $111M in 2022 to $472M in 2027."),
-              T("That figure does not match the growth rate given in the same article, which would lead to about $156M. So I keep a trend, double-digit growth driven by smartphones, rather than an amount.")
+              T("That figure contradicts the growth rate given in the same article, which would lead to about $156M. So I keep a trend rather than an amount: double-digit growth driven by smartphones.")
             ],[ TABLEAU("Video games and esports in Nigeria according to PwC, by edition",["Source","Period","Revenue"],[["Agence Ecofin, Nov. 2023","2022 → 2027","$111 → 472 m (advertising)"],["Nairametrics, Feb. 2025","2023 → 2024","$192 → 217 m"],["Nairametrics, Feb. 2025","2023 → 2028","$192 → 322 m (+10.9% a year)"]],true) ]),
             LIGNE([
               T("This model is still heavily constrained. I identified five obstacles, from the most material to the most structural."),
@@ -1200,7 +1200,7 @@ const PROJECTS_EN = {
           BANDE("V","What I take away",[
             LIGNE([
               T("The African market is growing, driven by a young population, mobile and esports, with games rooted in daily life and local history. It is still held back by infrastructure, purchasing power and funding."),
-              T("On the production side, I take away that **a market is read first through its constraints**. ChopUp chose its platform, payment method and pace around them, from the design stage. I also learned to tell an established figure from a projection before building a plan on it.")
+              T("On the production side, I take away that **a market is read first through its constraints**: ChopUp chose its platform, payment method and pace around them. I also learned to tell an established figure from a projection before building a plan on it.")
             ])
           ]),
           BANDE("VI","Sources",[ LIGNE([ SOURCES([["Agence Ecofin · Nigéria en 2027, les jeux vidéo généreront plus de revenus publicitaires que le streaming (PwC)", "https://www.agenceecofin.com/communication/1311-113619-nigeria-en-2027-les-jeux-video-genereront-plus-de-revenus-publicitaires-que-le-streaming-l-affichage-exterieur-et-la-presse-ecrite-pwc"], ["Afrik.com · Le gaming en Afrique, une révolution silencieuse", "https://www.afrik.com/le-gaming-en-afrique-une-revolution-silencieuse"], ["Jeune Afrique · L'Afrique, nouvel eldorado des jeux vidéo", "https://www.jeuneafrique.com/1526043/culture/lafrique-nouvel-eldorado-des-jeux-video/"], ["Sigma · Gaming in Nigeria is on the rise", "https://sigma.world/fr/news/gaming-in-nigeria-is-on-the-rise/"], ["Agence Ecofin · Le marché africain des jeux vidéo devrait croître de 11,62 % par an d'ici 2029", "https://www.agenceecofin.com/innovation/0810-122265-le-marche-africain-des-jeux-video-devrait-croitre-de-11-62-par-an-d-ici-2029-rapport"], ["Jeune Afrique · Le Nigeria part à la conquête du marché africain des jeux vidéo", "https://www.jeuneafrique.com/depeches/20777/politique/le-nigeria-part-a-la-conquete-du-marche-africain-des-jeux-video/"], ["Jeune Afrique · Les recettes du succès de ChopUp", "https://www.jeuneafrique.com/315910/economie-entreprises/reussite-les-recettes-du-succes-de-chopup-le-studio-de-jeux-videos-100-nigerian/"], ["Toonmed (blog) · Reportage : les recettes du succès de ChopUp", "https://toonmed.blogspot.com/2016/04/reportage-les-recettes-du-succes-de.html"], ["Agence Ecofin · Le Nigeria et l'Égypte, pays où la moitié des adultes sont non bancarisés", "https://www.agenceecofin.com/finance/0407-99376-le-nigeria-et-l-egypte-font-partie-des-7-pays-au-monde-dans-lesquels-la-moitie-des-adultes-sont-non-bancarises-rapport"], ["Banque de France · Afrique subsaharienne, la fracture financière entre hommes et femmes", "https://www.banque-france.fr/fr/publications-et-statistiques/publications/afrique-subsaharienne-la-fracture-financiere-entre-hommes-et-femmes"], ["Sport News Africa · Vers la naissance de la Confédération africaine du sport en ligne", "https://sportnewsafrica.com/articles/e-sport-vers-la-naissance-de-la-confederation-africaine-du-sport-en-ligne"], ["Mordor Intelligence · Marché mondial du jeu vidéo", "https://www.mordorintelligence.com/fr/industry-reports/global-gaming-market"], ["Courrier International · Comment le jeu vidéo se développe en Afrique", "https://www.courrierinternational.com/article/tendance-comment-le-jeu-video-se-developpe-en-afrique"], ["Africavox · L'Afrique, nouveau berceau de l'e-sport", "https://africavox.easybroadcast.fr/articles/l-afrique-nouveau-berceau-du-e-sports"], ["Afrikactus · L'essor du gaming africain sur la scène mondiale", "https://afrikactus.com/essor-du-gaming-africain-sur-la-scene-mondiale/"], ["ADF Magazine · Des start-ups nigérianes pénètrent le marché des jeux vidéo", "https://adf-magazine.com/fr/2014/10/des-start-ups-nigerianes-penetrent-le-marche-des-jeux-video/"], ["Smart Africa · Alliance home page", "https://smartafrica.org/fr/page-daccueil/"], ["AfriGamers · About", "https://afrigamers.com/a-propos-afrigamers/"], ["Tribune Online · 12 times national grid collapsed in 2024", "https://tribuneonlineng.com/updated-12-times-national-grid-collapsed-in-2024/"], ["Nairametrics · PwC lists 10 fastest-growing entertainment and media sectors in Nigeria 2024-2028", "https://nairametrics.com/2025/02/09/pwc-lists-10-fastest-growing-entertainment-and-media-sectors-in-nigeria-2024-2028/"],["World Economic Forum · How will Africa's youth population drive global growth?", "https://www.weforum.org/stories/youth/africa-youth-global-growth-digital-economy/"],["UN · Youth population trends (fact sheet)", "https://www.un.org/esa/socdev/documents/youth/fact-sheets/YouthPOP.pdf"],["Afrik.com · L'Afrique, avenir du gaming mondial ?", "https://www.afrik.com/l-afrique-avenir-du-gaming-mondial"],["Le360 · À Kigali, l'Afrique se cherche un modèle économique pour l'e-sport", "https://afrique.le360.ma/sports/des-millions-de-gamers-a-la-manette-a-kigali-lafrique-se-cherche-un-modele-economique-pour-le-sport_OLMQPD7RONHW3MNIOV3TPTZBWI/"],["AFJV · Abena Tournaments", "https://afjv.com/news/11374_abena-tournaments-tournoi-feminin-afrocaribeen-tekken8.htm"],["Linda Ikeji · Mobo Game Jam (Edu360 et Kucheza Gaming)", "https://www.lindaikejisblog.com/2020/12/mobo-game-jam-edu360-kucheza-drive-social-impact-through-gaming.html"],["Maliyo Games · Programmes de formation", "https://www.maliyo.com/programme/"],["Stuff South Africa · GameOn with HP, hackathon", "https://stuff.co.za/2024/10/11/get-your-gameon-with-hps-new-hackathon/"],["HP Gaming Garage", "https://www.hpgaminggarage.com/"],["Game Camp Cities · La CASE signe avec HP", "https://www.gamecampcities.pro/post/la-conf%C3%A9d%C3%A9ration-esport-africaine-signe-son-premier-partenaire-strat%C3%A9gique-continental-le-groupe-h?lang=fr"],["Pulse Nigeria · TCN restores power in Kaduna, Kano, Bauchi and Gombe", "https://www.pulse.ng/articles/news/local/tcn-restores-power-in-kaduna-kano-bauchi-and-gombe-after-prolonged-blackout-2024111910462282759"],["Carry1st · Africa's gaming market reaches $1.8bn in 2024 (with Newzoo)", "https://carry1st.com/press/africas-gaming-market-reaches-1-8bn-sixfold-growth-vs-row-driven-by-32mn-new-gamers-in-2024"],["Peoples Gazette · 210 millions d'abonnés mobiles actifs (NCC, 2022)", "https://gazettengr.com/nigerias-mobile-subscribers-hit-210-million-in-august-ncc/"],["Techpoint · Jagun: Clash of Kingdoms (2015)", "https://techpoint.africa/general/jagun-clash-of-kingdoms-chopup/"],["TechCabal · Pledge 51, the company behind ChopUp", "https://techcabal.com/2014/08/29/tayo-oviosu-and-others-invest-in-chopup/"],["Games Industry Africa · Olivier Madiba et Kiro'o Games", "https://gamesindustryafrica.com/2019/09/16/profile-olivier-madiba"],["GameDev Reports · rapport de Maliyo Games sur l'industrie africaine", "https://gamedevreports.substack.com/p/maliyo-games-the-state-of-the-african"]]) ]) ])

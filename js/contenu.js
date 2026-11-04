@@ -301,7 +301,7 @@ const PROJECTS_FR = {
           BANDE("III","Planifier et suivre la production",[
             LIGNE([
               T("L'école fixait les jalons en Waterfall, et les équipes travaillaient en **Agile**, par sprints. Je devais relier les deux, avec un suivi assez homogène pour comparer les quatre groupes."),
-              T("J'ai construit ce suivi sur Excel. Chaque groupe avait un macro-planning pour ses sprints et ses jalons, et un micro-planning pour ses tâches : sprint, priorité, difficulté, statut. Au total, 1 387 tâches.")
+              T("J'ai construit ce suivi sur Excel, un outil simple que toute l'équipe connaissait déjà. Chaque groupe avait un macro-planning pour ses sprints et ses jalons, et un micro-planning pour ses tâches : sprint, priorité, difficulté, statut. Au total, 1 387 tâches.")
             ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)","pano") ]),
             LIGNE([
               T("Je devais tenir ces statuts à jour en continu. Ils rendaient les retards visibles, sprint par sprint.")
@@ -381,7 +381,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("III","Préparer les coupes",[
             LIGNE([
-              T("Avec chaque équipe, j'ai dressé une **liste de tâches sacrifiables**, les premières à couper si le temps manquait : 28 pour Vampire Hunter E-Cycle, 14 pour Mad Max Fury Rogue. La plupart ne sont jamais entrées dans les sprints."),
+              T("Avec les référents de chaque équipe, j'ai dressé une **liste de tâches sacrifiables**, les premières à couper si le temps manquait. Y entrait tout ce qui ne faisait pas partie du chemin critique de la production : 28 tâches pour Vampire Hunter E-Cycle, 14 pour Mad Max Fury Rogue. La plupart ne sont jamais entrées dans les sprints."),
               T("En production, nous avons coupé sept tâches dans chaque équipe sans toucher au cœur du jeu, comme le gestionnaire de musique de Vampire Hunter E-Cycle ou le second ennemi de Mad Max Fury Rogue.")
             ],[ FICHE("Mis de côté chez Vampire Hunter E-Cycle",["Un double saut et un système de dialogue","Une salle maudite et un inventaire","Des VFX de décor : feu de cheminée, braises, flaques d'eau","42 tâches sacrifiables pour les deux jeux"]) ]),
             LIGNE([
@@ -440,7 +440,7 @@ const PROJECTS_FR = {
         contenu:[
           BANDE("I","Le cadre du projet",[
             LIGNE([
-              T("La consigne demandait une vertical slice : quelques minutes de jeu, compréhensibles sans explication. L'école voulait une vraie fusion, qui adapte le gameplay à la licence en gardant l'essence du jeu d'origine."),
+              T("La consigne demandait une vertical slice : quelques minutes de jeu, compréhensibles sans explication. L'école voulait une vraie fusion, qui adapte le gameplay à la licence en gardant l'essence du jeu d'origine.\n\nLa vraie difficulté était là : obtenir deux jeux à l'identité marquée, qui ne se perdent pas entre le gameplay de référence et la direction artistique de la licence. Nous l'avons réglée par des réunions dédiées, pour étudier et choisir la direction artistique, et pour fixer les éléments de gameplay iconiques indispensables."),
               T("J'avais pour tâche de tenir le document de gestion de production : le planning macro et micro, un burndown chart chaque semaine et un tableau de bord, général et par personne.")
             ],[ FICHE("Les contraintes",["Deux jeux en même temps, pour un seul producer et 29 personnes","Trois semaines de travail, du 3 au 28 novembre 2025","Un jeu de type III visant le AAA, en modèle premium","Trois revues de l'équipe pédagogique avant le jury"]) ]),
             LIGNE([ KEYART([
@@ -461,7 +461,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("III","Suivre deux équipes",[
             LIGNE([
-              T("C'était mon premier workshop avec des **dailies**. Je les ai confiés aux deux référents de chaque équipe, un en Game Design et un en Game Art. Je faisais le point avec les deux groupes pendant les revues hebdomadaires."),
+              T("C'était mon premier workshop avec des **dailies**. Je les ai confiés aux deux référents de chaque équipe, un en Game Design et un en Game Art. Avec deux groupes à suivre, je ne pouvais pas être présent à chacun, et les équipes avançaient ainsi sans dépendre de ma présence. Je faisais le point avec les deux groupes pendant les revues hebdomadaires."),
               T("Avec les référents, j'ai réparti les tâches entre Game Artists et Game Designers, en équilibrant la charge de chacun."),
               T("Chez HellStorm, quatre documents ont pris du retard au sprint 3, dont les personas et la concept map. Je les ai reportés au sprint 4, où ils ont été terminés.")
             ],[ CAROUSEL([["images/fusion-hs-monocycle-concept.jpg","HellStorm : le concept du monocycle"],["images/fusion-hs-monocycle-3d-1.jpg","Le monocycle modélisé en 3D"],["images/fusion-hs-monocycle-3d-2.jpg","Le monocycle, vu de l'autre côté"],["images/fusion-hs-voiture-concept.jpg","HellStorm : le concept de la voiture"],["images/fusion-hs-voiture-3d.jpg","La voiture modélisée en 3D"],["images/fusion-hs-ui.jpg","L'écran de sélection de la carte, en cours d'intégration"]]) ])
@@ -477,7 +477,7 @@ const PROJECTS_FR = {
           BANDE("V","Tester",[
             LIGNE([
               T("Wakfu Riders a commencé la **QA** dès le premier sprint, en testant des jeux de course de référence comme F-Zero 99. Le blocking a été testé deux fois au sprint 2, puis la vertical slice aux sprints 3 et 4."),
-              T("Chez HellStorm, un questionnaire de QA a été préparé au sprint 3, pour un playtest au sprint 4.")
+              T("Chez HellStorm, des retards de production, surtout en technique et en programmation, ont repoussé les tests : le questionnaire de QA a été préparé au sprint 3, pour un playtest au sprint 4.")
             ],[ CAROUSEL([["images/fusion-wk-ld-sketch.webp","Wakfu Riders : le sketch de level design du parcours"],["images/fusion-wk-blocking.webp","Le parcours en blocking dans Unreal Engine"],["images/fusion-wk-jeu.jpg","Wakfu Riders en jeu, au pied de l'arbre géant"]]) ])
           ]),
           BANDE("VI","Ce que j'en retiens",[
@@ -694,7 +694,7 @@ const PROJECTS_FR = {
         desc:"Une étude du marché africain du jeu vidéo à travers le Nigéria, où le mobile et le public local dessinent un modèle à part, encore freiné par les infrastructures.", carte:"Un marché porté par le mobile et le public local, encore freiné par les infrastructures.",
         img:NG.thumb,
         infos:{ "Rôle":"Auteur de l'étude", "Cadre":"Culture vidéoludique · Game Sup", "Date":"Janvier 2025 · sources vérifiées en octobre 2026", "Livrable":"Présentation PowerPoint · 30 diapositives" },
-        apercu:"Pour cet exercice de culture vidéoludique, j'ai étudié le marché africain du jeu vidéo à travers le cas du Nigéria, en recoupant mes sources. J'y ai trouvé un modèle mobile et local, porté par une population jeune mais freiné par les infrastructures. J'en retiens que le budget, le calendrier, la plateforme et le mode de paiement **se décident ensemble**.",
+        apercu:"Pour cet exercice de culture vidéoludique, j'ai voulu explorer un marché porteur que je ne connaissais pas. J'ai étudié le marché africain du jeu vidéo à travers le cas du Nigéria, en recoupant mes sources. J'y ai trouvé un modèle mobile et local, porté par une population jeune mais freiné par les infrastructures. J'en retiens que le budget, le calendrier, la plateforme et le mode de paiement **se décident ensemble**.",
         contenu:[
           BANDE("I","Problématique et angle d'étude",[
             LIGNE([
@@ -771,7 +771,7 @@ const PROJECTS_EN = {
           BANDE("III","Planning and tracking production",[
             LIGNE([
               T("The school set Waterfall milestones, and the teams worked in **Agile** sprints. I had to connect the two, with tracking consistent enough to compare the four groups."),
-              T("I built this tracking in Excel. Each group had a macro plan for its sprints and milestones, and a micro plan for its tasks: sprint, priority, difficulty, status. 1,387 tasks in total.")
+              T("I built this tracking in Excel, a simple tool the whole team already knew. Each group had a macro plan for its sprints and milestones, and a micro plan for its tasks: sprint, priority, difficulty, status. 1,387 tasks in total.")
             ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)","pano") ]),
             LIGNE([
               T("I had to keep these statuses up to date continuously. They made delays visible, sprint by sprint.")
@@ -850,7 +850,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("III","Preparing the cuts",[
             LIGNE([
-              T("With each team, I drew up a **list of expendable tasks**, the first to go if time ran short: 28 for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue. Most of them never entered the sprints."),
+              T("With the leads of each team, I drew up a **list of expendable tasks**, the first to go if time ran short. It held everything outside the production's critical path: 28 tasks for Vampire Hunter E-Cycle, 14 for Mad Max Fury Rogue. Most of them never entered the sprints."),
               T("During production, we cut seven tasks in each team without touching the core of the game, such as Vampire Hunter E-Cycle's music manager or Mad Max Fury Rogue's second enemy.")
             ],[ FICHE("Set aside at Vampire Hunter E-Cycle",["A double jump and a dialogue system","A cursed room and an inventory","Set-dressing VFX: fireplace, embers, puddles","42 expendable tasks across both games"]) ]),
             LIGNE([
@@ -909,7 +909,7 @@ const PROJECTS_EN = {
         contenu:[
           BANDE("I","The project framework",[
             LIGNE([
-              T("The brief asked for a vertical slice: a few minutes of play, understandable without explanation. The school wanted a real fusion, adapting the gameplay to the licence while keeping the essence of the original game."),
+              T("The brief asked for a vertical slice: a few minutes of play, understandable without explanation. The school wanted a real fusion, adapting the gameplay to the licence while keeping the essence of the original game.\n\nThat was the real difficulty: getting two games with a strong identity, which would not get lost between the reference gameplay and the licence's art direction. We solved it with dedicated meetings to study and choose the art direction, and to set the iconic gameplay elements that had to be there."),
               T("My task was to keep the production management document: the macro and micro plan, a burndown chart every week and a dashboard, overall and per person.")
             ],[ FICHE("Constraints",["Two games at once, for a single producer and 29 people","Three working weeks, from 3 to 28 November 2025","A III game aiming for AAA quality, sold as a premium title","Three reviews by the teaching staff before the jury"]) ]),
             LIGNE([ KEYART([
@@ -930,7 +930,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("III","Following two teams",[
             LIGNE([
-              T("It was my first workshop with **dailies**. I handed them to the two leads of each team, one in Game Design and one in Game Art. I took stock with both groups during the weekly reviews."),
+              T("It was my first workshop with **dailies**. I handed them to the two leads of each team, one in Game Design and one in Game Art. With two groups to follow, I could not attend every one, and this way the teams moved forward without depending on my presence. I took stock with both groups during the weekly reviews."),
               T("With the leads, I split the tasks between Game Artists and Game Designers, balancing everyone's workload."),
               T("At HellStorm, four documents fell behind in sprint 3, including the personas and the concept map. I moved them to sprint 4, where they were finished.")
             ],[ CAROUSEL([["images/fusion-hs-monocycle-concept.jpg","HellStorm: the monocycle concept"],["images/fusion-hs-monocycle-3d-1.jpg","The monocycle modelled in 3D"],["images/fusion-hs-monocycle-3d-2.jpg","The monocycle, seen from the other side"],["images/fusion-hs-voiture-concept.jpg","HellStorm: the car concept"],["images/fusion-hs-voiture-3d.jpg","The car modelled in 3D"],["images/fusion-hs-ui.jpg","The map selection screen, being integrated"]]) ])
@@ -946,7 +946,7 @@ const PROJECTS_EN = {
           BANDE("V","Testing",[
             LIGNE([
               T("Wakfu Riders started **QA** in the first sprint by testing reference racing games such as F-Zero 99. The blocking was tested twice in sprint 2, then the vertical slice in sprints 3 and 4."),
-              T("At HellStorm, a QA questionnaire was prepared in sprint 3, for a playtest in sprint 4.")
+              T("At HellStorm, production delays, mostly in tech and programming, pushed testing back: the QA questionnaire was prepared in sprint 3, for a playtest in sprint 4.")
             ],[ CAROUSEL([["images/fusion-wk-ld-sketch.webp","Wakfu Riders: the level design sketch of the track"],["images/fusion-wk-blocking.webp","The track in blocking in Unreal Engine"],["images/fusion-wk-jeu.jpg","Wakfu Riders in game, at the foot of the giant tree"]]) ])
           ]),
           BANDE("VI","What I took away",[
@@ -1159,7 +1159,7 @@ const PROJECTS_EN = {
     P({ date:"January 2025", survol:{ items:["Author of the study","Market analysis","Source cross-checking","30 slides"] }, cat:"Market analysis", title:"The African Video Game Market: The Case of Nigeria", 
         desc:"A study of the African video game market through Nigeria, where mobile and local audiences shape a model of its own, still held back by infrastructure.", carte:"A market driven by mobile and local audiences, still held back by infrastructure.",
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025 · sources checked in October 2026", "Deliverable":"PowerPoint presentation · 30 slides" },
-        apercu:"For this video game culture exercise, I studied the African video game market through the case of Nigeria, cross-checking my sources. I found a mobile, local model, driven by a young population but held back by infrastructure. What I take from it is that budget, schedule, platform and payment method **are decided together**.",
+        apercu:"For this video game culture exercise, I wanted to explore a promising market I did not know. I studied the African video game market through the case of Nigeria, cross-checking my sources. I found a mobile, local model, driven by a young population but held back by infrastructure. What I take from it is that budget, schedule, platform and payment method **are decided together**.",
         contenu:[
           BANDE("I","Research question and approach",[
             LIGNE([

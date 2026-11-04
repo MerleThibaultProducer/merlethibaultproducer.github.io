@@ -2664,3 +2664,24 @@ footer { border-top: 0; }
 :root[data-theme="dark"] .fiche, :root[data-theme="dark"] .etapes, :root[data-theme="dark"] .band:nth-of-type(even) .fiche, :root[data-theme="dark"] .band:nth-of-type(even) .etapes { background: transparent; }
 /* Le pitch reste clair sur son décor sombre, en mode jour comme en mode nuit */
 .project .ka-i b { color: #fff; }
+
+/* Captures panoramiques (plannings, suivis) : toute la largeur de la section, pour rester lisibles */
+.brow:has(> .bm > figure.pano) { grid-template-columns: minmax(0, 1fr); }
+.brow .bm:has(> figure.pano) { justify-items: stretch; }
+.brow .bm > figure.pano, .brow.solo .bt > figure.pano, .prose figure.car.pano, .brow.solo .bt > figure.car.pano { width: 100%; max-width: none; }
+figure.pano .zf img { width: 100%; height: auto; }
+
+/* Page Infos alignée à gauche, comme les autres pages : les listes se lisent d'un coup d'œil */
+.infos-page { text-align: left; }
+.infos-page h1, .infos-page .lead { margin-left: 0; }
+.infos-page .cv-actions { justify-content: flex-start; }
+.infos-page .skills, .infos-page .sk-wide .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); max-width: none; margin-left: 0; margin-right: 0; }
+.infos-page .tools { max-width: none; margin: 0; }
+.infos-page .sk-tools .sk-intro { margin-left: 0; }
+.infos-page .skill h3 { display: flex; align-items: center; gap: .6rem; }
+.infos-page .skill .sk-ic { margin: 0; }
+
+/* Mode nuit : un fin liseré détache les captures sombres du fond */
+:root[data-theme="dark"] .project .zf { box-shadow: 0 0 0 1px rgba(255,255,255,.14); }
+/* Accueil : la mosaïque des jeux rejoint directement le pied de page */
+html body.page-home main { padding-bottom: 0; }

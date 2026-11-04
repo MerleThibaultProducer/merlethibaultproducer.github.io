@@ -65,7 +65,7 @@ const BANDE=(num,titre,lignes)=>({k:"band",num,titre,lignes}), LIGNE=(t,m=[])=>(
       CHIFFRES=items=>({k:"stats",items}), FICHE=(titre,items)=>({k:"fiche",titre,items}),
       TABLEAU=(titre,cols,rows,plain=false)=>({k:"tbl",titre,cols,rows,plain}), SOURCES=items=>({k:"src",items});
 const ETAPES=(titre,items)=>({k:"etapes",titre,items}), SCHEMA=(nom,cap="")=>({k:"schema",nom,cap});
-const CAROUSEL=items=>({k:"car",items});
+const CAROUSEL=(items,cls="")=>({k:"car",items,cls});
 const EQUIPES=groupes=>({k:"teams",groupes});
 const KEYART=items=>({k:"keyart",items});
 const P = o => o;
@@ -302,10 +302,10 @@ const PROJECTS_FR = {
             LIGNE([
               T("L'école fixait les jalons en Waterfall, et les équipes travaillaient en **Agile**, par sprints. Je devais relier les deux, avec un suivi assez homogène pour comparer les quatre groupes."),
               T("J'ai construit ce suivi sur Excel. Chaque groupe avait un macro-planning pour ses sprints et ses jalons, et un micro-planning pour ses tâches : sprint, priorité, difficulté, statut. Au total, 1 387 tâches.")
-            ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)") ]),
+            ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)","pano") ]),
             LIGNE([
               T("Je devais tenir ces statuts à jour en continu. Ils rendaient les retards visibles, sprint par sprint.")
-            ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts") ])
+            ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts","pano") ])
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
@@ -315,7 +315,7 @@ const PROJECTS_FR = {
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
               T("Pour Project GLOW, j'ai décidé avec les référents d'abandonner plusieurs assets hors cadre. Pour Le Castor et l'Écureuil, nous avons revu le Level Art et le shader atmosphérique.")
-            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de Project GLOW") ]),
+            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de Project GLOW","pano") ]),
             LIGNE([
               
             ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil : du blockout au Level Art et au shader atmosphérique revus après la crise") ])
@@ -369,7 +369,7 @@ const PROJECTS_FR = {
               T("Les deux équipes suivaient le même calendrier de **trois sprints d'une semaine**, calés sur les jalons de l'école. Le premier posait le blocking et les assets essentiels. Le deuxième amenait le rendu final et le système d'attaque. Le dernier était réservé à l'équilibrage et au polish.")
             ],[ CHIFFRES([["573","tâches suivies"],["94 % et 92 %","tâches terminées (Vampire Hunter, Mad Max)"],["3","sprints d'une semaine"],["5","jalons en quinze jours"]]) ]),
             LIGNE([
-              IMG("images/rogue-planning.png","Le planning de production : phases, jalons de l'école et sprints d'une semaine")
+              IMG("images/rogue-planning.png","Le planning de production : phases, jalons de l'école et sprints d'une semaine","pano")
             ]),
             LIGNE([
               T("Chaque équipe avait son backlog dans Excel : 336 tâches pour Vampire Hunter E-Cycle, 237 pour Mad Max Fury Rogue. Chaque tâche avait une personne, un sprint, une difficulté, une priorité et un statut."),
@@ -452,12 +452,12 @@ const PROJECTS_FR = {
             LIGNE([
               T("Les deux équipes suivaient le même macroplanning de **quatre sprints**, calés sur les revues de l'école. Le premier posait la conception. Le deuxième menait le prototype jusqu'aux playtests des 3C et du blocking. Le troisième visait un build jouable du début à la fin, et le dernier était réservé au polish et aux retours de la QA.")
             ],[ CHIFFRES([["568","tâches suivies"],["97 % et 98 %","tâches terminées (HellStorm, Wakfu Riders)"],["4","sprints"],["3","revues avant le jury"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","Le macroplanning de HellStorm : phases, sprints et jours non travaillés"],["images/fusion-wk-macro.png","Le macroplanning de Wakfu Riders, calé sur le même calendrier"]]) ]),
+            LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","Le macroplanning de HellStorm : phases, sprints et jours non travaillés"],["images/fusion-wk-macro.png","Le macroplanning de Wakfu Riders, calé sur le même calendrier"]],"pano") ]),
             LIGNE([
               T("Chaque équipe avait son backlog dans Excel, rangé par epic et par story : 220 tâches pour HellStorm, 348 pour Wakfu Riders. Un onglet par sprint détaillait la semaine, et chaque membre avait son onglet."),
               T("L'environnement était le poste le plus lourd : 72 tâches chez HellStorm, 131 chez Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","La carte de Wakfu Riders en construction dans Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders : le village et ses vignes dans l'éditeur"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Extrait du backlog de HellStorm : epics, stories, personnes, difficultés, statuts, sprints et priorités"],["images/fusion-wk-backlog.png","Extrait du backlog de Wakfu Riders"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux onglets de chacun"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]]) ])
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Extrait du backlog de HellStorm : epics, stories, personnes, difficultés, statuts, sprints et priorités"],["images/fusion-wk-backlog.png","Extrait du backlog de Wakfu Riders"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux onglets de chacun"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]],"pano") ])
           ]),
           BANDE("III","Suivre deux équipes",[
             LIGNE([
@@ -508,7 +508,7 @@ const PROJECTS_FR = {
         ] })
   ],
   perso: [
-    P({ une:true, date:"Octobre 2026", survol:{ items:["Producer","Action-RPG AA · 15 personnes","Mise en situation","Jira · JQL"] }, cat:"Gestion de production", id:"projet-jira-et-agile-un-studio-en-mise-en-situation-octobre-2026", title:"Projet Jira et Agile : un studio en mise en situation", large:true, nocover:true,
+    P({ date:"Octobre 2026", survol:{ items:["Producer","Action-RPG AA · 15 personnes","Mise en situation","Jira · JQL"] }, cat:"Gestion de production", id:"projet-jira-et-agile-un-studio-en-mise-en-situation-octobre-2026", title:"Projet Jira et Agile : un studio en mise en situation", large:true, nocover:true,
         desc:"La production d'un action-RPG AA fictif, structurée seul dans Jira, des boards au registre des risques.",
         carte:"Un studio fictif organisé dans Jira en Scrum : sprints, bugs, risques et automatisations.",
         img:"images/jira-vignette.jpg",
@@ -772,10 +772,10 @@ const PROJECTS_EN = {
             LIGNE([
               T("The school set Waterfall milestones, and the teams worked in **Agile** sprints. I had to connect the two, with tracking consistent enough to compare the four groups."),
               T("I built this tracking in Excel. Each group had a macro plan for its sprints and milestones, and a micro plan for its tasks: sprint, priority, difficulty, status. 1,387 tasks in total.")
-            ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)") ]),
+            ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)","pano") ]),
             LIGNE([
               T("I had to keep these statuses up to date continuously. They made delays visible, sprint by sprint.")
-            ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses") ])
+            ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses","pano") ])
           ]),
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
@@ -785,7 +785,7 @@ const PROJECTS_EN = {
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
               T("For Project GLOW, I decided with the leads to cut several off-brief assets. For Le Castor et l'Écureuil, we reworked the Level Art and the atmospheric shader.")
-            ],[ IMG(PRO1.kill,"Cut tasks in Project GLOW's tracking") ]),
+            ],[ IMG(PRO1.kill,"Cut tasks in Project GLOW's tracking","pano") ]),
             LIGNE([
             ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil: from blockout to the Level Art and atmospheric shader reworked after the crisis") ])
           ]),
@@ -838,7 +838,7 @@ const PROJECTS_EN = {
               T("Both teams followed the same calendar of **three one-week sprints**, aligned with the school's milestones. The first set up the blocking and the essential assets. The second brought the final look and the attack system. The last was kept for balancing and polish.")
             ],[ CHIFFRES([["573","tasks tracked"],["94% and 92%","tasks completed (Vampire Hunter, Mad Max)"],["3","one-week sprints"],["5","milestones in fifteen days"]]) ]),
             LIGNE([
-              IMG("images/rogue-planning.png","The production schedule: phases, school milestones and one-week sprints")
+              IMG("images/rogue-planning.png","The production schedule: phases, school milestones and one-week sprints","pano")
             ]),
             LIGNE([
               T("Each team had its backlog in Excel: 336 tasks for Vampire Hunter E-Cycle, 237 for Mad Max Fury Rogue. Each task had a person, a sprint, a difficulty, a priority and a status."),
@@ -921,12 +921,12 @@ const PROJECTS_EN = {
             LIGNE([
               T("Both teams followed the same macro plan of **four sprints**, aligned with the school's reviews. The first set up the design. The second took the prototype to the 3C and blocking playtests. The third aimed for a build playable from start to finish, and the last was kept for polish and QA feedback.")
             ],[ CHIFFRES([["568","tasks tracked"],["97% and 98%","tasks completed (HellStorm, Wakfu Riders)"],["4","sprints"],["3","reviews before the jury"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","The HellStorm macro plan: phases, sprints and days off"],["images/fusion-wk-macro.png","The Wakfu Riders macro plan, on the same calendar"]]) ]),
+            LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","The HellStorm macro plan: phases, sprints and days off"],["images/fusion-wk-macro.png","The Wakfu Riders macro plan, on the same calendar"]],"pano") ]),
             LIGNE([
               T("Each team had its backlog in Excel, sorted by epic and story: 220 tasks for HellStorm, 348 for Wakfu Riders. A tab per sprint detailed the week, and each member had their own tab."),
               T("Environment art was the heaviest area: 72 tasks for HellStorm, 131 for Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","The Wakfu Riders map under construction in Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders: the village and its vineyards in the editor"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Excerpt from the HellStorm backlog: epics, stories, owners, difficulties, statuses, sprints and priorities"],["images/fusion-wk-backlog.png","Excerpt from the Wakfu Riders backlog"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to each person's tab"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]]) ])
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Excerpt from the HellStorm backlog: epics, stories, owners, difficulties, statuses, sprints and priorities"],["images/fusion-wk-backlog.png","Excerpt from the Wakfu Riders backlog"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to each person's tab"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]],"pano") ])
           ]),
           BANDE("III","Following two teams",[
             LIGNE([

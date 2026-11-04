@@ -261,11 +261,15 @@ const VITRINE = [   // [image (ou liste d'images pour une mosaïque), jeu, page,
   ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop","50% 45%"],
   [["images/fda-castor.jpg","images/fda-glow.jpg","images/fda-insight.jpg","images/fda-flowering.jpg"],"Quatre jeux en parallèle","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026","","Four games in parallel"]
 ];
-const FRISE = [   // jalons de l'accueil : quand, quoi, chiffres ; go vide = page pas encore publiée (jalon grisé)
+const FRISE = [   // jalons de l'accueil, dans l'ordre chronologique ; perso:1 = projet personnel (en bleu) ; go vide = page pas encore publiée (jalon grisé)
+  { quand:"Janvier 2025", when:"January 2025", fr:"Marché africain", en:"African market", metaFr:"Analyse de marché", metaEn:"Market analysis", go:"#/perso/le-marche-africain-du-jeu-video-le-cas-du-nigeria", perso:1 },
+  { quand:"Avril 2025", when:"April 2025", fr:"Castalie's Tears", en:"Castalie's Tears", metaFr:"Game Design · GDD", metaEn:"Game Design · GDD", go:"#/perso/castalie-s-tears", perso:1 },
   { quand:"Juin 2025", when:"June 2025", fr:"Fin d'année", en:"End of year", metaFr:"2 jeux · 2 équipes", metaEn:"2 games · 2 teams", go:"" },
   { quand:"Novembre 2025", when:"November 2025", fr:"Workshop Fusion", en:"Fusion Workshop", metaFr:"2 jeux · 29 personnes", metaEn:"2 games · 29 people", go:"#/pro/workshop-fusion-novembre-2025" },
-  { quand:"Février 2026", when:"February 2026", fr:"Workshop Rogue-lite", en:"Rogue-lite Workshop", metaFr:"2 jeux · 28 personnes", metaEn:"2 games · 28 people", go:"#/pro/workshop-rogue-lite-fevrier-2026" },
-  { quand:"Mai – juin 2026", when:"May – June 2026", fr:"Fin d'année", en:"End of year", metaFr:"4 jeux · 54 personnes", metaEn:"4 games · 54 people", go:"#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026" }
+  { quand:"Février 2026", when:"February 2026", fr:"Workshop Rogue‑lite", en:"Rogue‑lite Workshop", metaFr:"2 jeux · 28 personnes", metaEn:"2 games · 28 people", go:"#/pro/workshop-rogue-lite-fevrier-2026" },
+  { quand:"Mars 2026", when:"March 2026", fr:"Wyrdfall", en:"Wyrdfall", metaFr:"Budget · 48 mois", metaEn:"Budget · 48 months", go:"#/perso/wyrdfall", perso:1 },
+  { quand:"Mai – juin 2026", when:"May – June 2026", fr:"Fin d'année", en:"End of year", metaFr:"4 jeux · 54 personnes", metaEn:"4 games · 54 people", go:"#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026" },
+  { quand:"Octobre 2026", when:"October 2026", fr:"Studio Jira", en:"Jira studio", metaFr:"Jira · Scrum", metaEn:"Jira · Scrum", go:"#/perso/projet-jira-et-agile-un-studio-en-mise-en-situation-octobre-2026", perso:1 }
 ];
 const PROJECTS_FR = {
   pro: [

@@ -2532,21 +2532,31 @@ html body .hero .cta .btn.ghost:hover { border-color: #fff; background: rgba(255
 @media (max-width: 860px) { .hero::before { width: 100vw; opacity: .07; } }
 
 /* 3. Frise des productions : jalons sur une ligne dorée */
-.frise { position: relative; display: grid; grid-template-columns: repeat(4, minmax(150px, 1fr)); margin-top: clamp(2.25rem, 4vw, 3rem); }
-.frise::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 2px; background: rgba(255,255,255,.16); }
-.frise::after { content: ""; position: absolute; left: 25%; right: 0; top: 7px; height: 2px; background: var(--gold); }
+/* Frise : un jalon par projet ; la ligne est tracée par chaque jalon, pour suivre leur nombre et le défilement sur téléphone */
+:root { --perso: #8EC1F0; }
+.frise { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); margin-top: clamp(2.25rem, 4vw, 3rem); }
 .fr-j { position: relative; display: block; padding: 30px 12px 0 0; color: inherit; text-decoration: none; }
+.fr-j::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 2px; background: var(--gold); }
+.fr-j:last-child::before { right: 12px; }
+.fr-j.perso::before { background: var(--perso); }
+.fr-j.off::before { background: rgba(255,255,255,.16); }
 a.fr-j { cursor: pointer; }
 .fr-dot { position: absolute; top: 0; left: 0; z-index: 1; width: 16px; height: 16px; border-radius: 50%; background: var(--gold); transition: transform .2s ease; }
+.fr-j.perso .fr-dot { background: var(--perso); }
 .fr-j.off .fr-dot { background: var(--band); border: 2px solid rgba(255,255,255,.45); }
 .fr-j small { display: block; font: 600 .85rem/1.3 var(--sans); color: var(--gold); }
-.fr-j b { display: block; margin: .2rem 0 .25rem; font: 700 1.25rem/1.2 var(--display); color: #fff; }
-.fr-k { font: 400 .9rem/1.4 var(--sans); color: rgba(231,236,244,.65); }
+.fr-j.perso small { color: var(--perso); }
+.fr-j b { display: block; margin: .2rem 0 .25rem; font: 700 1.1rem/1.2 var(--display); color: #fff; }
+.fr-k { font: 400 .88rem/1.4 var(--sans); color: rgba(231,236,244,.65); }
 .fr-j.off small, html body .fr-j.off b { color: rgba(231,236,244,.6); }
 a.fr-j:hover .fr-dot, a.fr-j:focus-visible .fr-dot { transform: scale(1.3); }
 a.fr-j:hover b { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; text-decoration-thickness: 2px; }
+a.fr-j.perso:hover b { text-decoration-color: var(--perso); }
 a.fr-j:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
-@media (max-width: 760px) { .frise { overflow-x: auto; grid-template-columns: repeat(4, 170px); scrollbar-width: none; padding-top: 6px; } .frise::-webkit-scrollbar { display: none; } .frise::before, .frise::after { top: 13px; width: 680px; } .frise::after { left: 170px; width: 510px; } .fr-dot { top: 6px; } .fr-j { padding-top: 36px; } }
+.fr-leg { display: flex; gap: 1.5rem; margin: 1.1rem 0 0; font: 500 .82rem/1.3 var(--sans); color: rgba(231,236,244,.7); }
+.fr-leg span::before { content: ""; display: inline-block; width: 9px; height: 9px; margin-right: .45rem; border-radius: 50%; background: var(--gold); vertical-align: 1px; }
+.fr-leg .perso::before { background: var(--perso); }
+@media (max-width: 1100px) { .frise { overflow-x: auto; grid-auto-columns: 168px; scrollbar-width: none; padding-top: 6px; } .frise::-webkit-scrollbar { display: none; } .fr-j::before { top: 13px; } .fr-dot { top: 6px; } .fr-j { padding-top: 36px; } }
 @media (prefers-reduced-motion: reduce) { .fr-dot { transition: none; } }
 
 /* 2a. Vitrine : les jeux produits, bord à bord */

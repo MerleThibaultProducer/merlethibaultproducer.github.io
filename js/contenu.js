@@ -69,6 +69,7 @@ const CAROUSEL=(items,cls="")=>({k:"car",items,cls});
 const EQUIPES=groupes=>({k:"teams",groupes});
 const KEYART=items=>({k:"keyart",items});
 const VIDEOS=items=>({k:"videos",items});   // vidéos complètes dans un menu déroulant : [["fichier", "titre", "image d'attente"], ...]
+const VIDEOS_ROGUE = [["videos/rogue-vampire.mp4","Vampire Hunter E-Cycle","videos/rogue-vampire-poster.jpg"],["videos/rogue-furyrogue.mp4","Mad Max Fury Rogue","videos/rogue-furyrogue-poster.jpg"]];
 const VIDEOS_FUSION = [["videos/fusion-hellstorm.mp4","HellStorm","videos/fusion-hellstorm-poster.jpg"],["videos/fusion-wakfu.mp4","Wakfu Riders","videos/fusion-wakfu-poster.jpg"]];
 const P = o => o;
 
@@ -350,7 +351,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ title:"Workshop Rogue-lite – Février 2026", bandeau:[["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle"],["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue"]], large:true, nocover:true,
+    P({ title:"Workshop Rogue-lite – Février 2026", bandeau:[["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle"],["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue"]], video:{src:"videos/rogue-montage.mp4",poster:"videos/rogue-montage-poster.jpg"}, large:true, nocover:true,
         desc:"Quinze jours pour livrer deux rogue-lites jouables sous Unity, chacun d'après une licence de film.",
         carte:"Deux rogue-lites livrés en quinze jours, avec des coupes préparées à l'avance et une génération procédurale simulée pour tenir la date.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
@@ -426,7 +427,13 @@ const PROJECTS_FR = {
               T("Je prévoirais aussi des playtests externes au plus tôt, pour avoir le temps d'en tenir compte.")
             ])
           ]),
-          BANDE("VIII","Les équipes",[
+          BANDE("VIII","Les jeux en vidéo",[
+            LIGNE([
+              T("Une partie complète de chaque jeu, de l'écran de départ jusqu'à la fin du run."),
+              VIDEOS(VIDEOS_ROGUE)
+            ])
+          ]),
+          BANDE("IX","Les équipes",[
             LIGNE([
               T("Ces deux jeux sont avant tout le travail de leurs équipes."),
               EQUIPES(EQUIPES_ROGUE)
@@ -901,7 +908,13 @@ const PROJECTS_EN = {
               T("I would also plan external playtests as early as possible, while there is still time to act on them.")
             ])
           ]),
-          BANDE("VIII","The teams",[
+          BANDE("VIII","The games on video",[
+            LIGNE([
+              T("A full run of each game, from the start screen to the end."),
+              VIDEOS(VIDEOS_ROGUE)
+            ])
+          ]),
+          BANDE("IX","The teams",[
             LIGNE([
               T("These two games are first and foremost the work of their teams."),
               EQUIPES(EQUIPES_ROGUE)

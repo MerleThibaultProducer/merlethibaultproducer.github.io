@@ -488,12 +488,12 @@ const PROJECTS_FR = {
             LIGNE([
               T("Les deux équipes suivaient **quatre sprints** calés sur les revues de l'école : conception, prototype jusqu'aux playtests des 3C et du blocking, build jouable de bout en bout, puis polish et retours de QA.")
             ],[ CHIFFRES([["568","tâches suivies"],["97 % et 98 %","tâches terminées (HellStorm, Wakfu Riders)"],["4","sprints"],["3","revues avant le jury"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","Le macroplanning de HellStorm : phases, sprints et jours non travaillés"],["images/fusion-wk-macro.png","Le macroplanning de Wakfu Riders, calé sur le même calendrier"]],"pano") ]),
+            LIGNE([ CAROUSEL([["images/fusion-hs-macro-annote.png","Le macroplanning de HellStorm : ① les phases, ② les sprints et leur objectif, ③ les jours non travaillés"],["images/fusion-wk-macro-annote.png","Le macroplanning de Wakfu Riders, calé sur le même calendrier : ① les phases, ② les sprints et leur objectif, ③ les jours non travaillés"]],"pano") ]),
             LIGNE([
               T("Chaque équipe avait son backlog Excel, rangé par epic et par story (220 tâches pour HellStorm, 348 pour Wakfu Riders), avec un onglet par sprint et un par membre."),
               T("L'environnement était le poste le plus lourd : 72 tâches chez HellStorm, 131 chez Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","La carte de Wakfu Riders en construction dans Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders : le village et ses vignes dans l'éditeur"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Extrait du backlog de HellStorm : epics, stories, difficultés, statuts, sprints et priorités"],["images/fusion-wk-backlog.png","Extrait du backlog de Wakfu Riders"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux sprints"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]],"pano") ])
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog-annote.png","Extrait du backlog de HellStorm : ① les tâches rangées par epic et par story, ② leur statut, ③ leur priorité"],["images/fusion-wk-backlog-annote.png","Extrait du backlog de Wakfu Riders : ① les tâches rangées par epic et par story, ② leur statut, ③ leur priorité"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux sprints"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]],"pano") ])
           ]),
           BANDE("III","Suivre deux équipes",[
             LIGNE([
@@ -727,47 +727,43 @@ const PROJECTS_FR = {
         desc:"Une étude du marché africain du jeu vidéo à travers le Nigéria, où le mobile et le public local dessinent un modèle à part, encore freiné par les infrastructures.", carte:"Un marché porté par le mobile et le public local, encore freiné par les infrastructures.",
         img:NG.thumb, etiq:"exo",
         infos:{ "Rôle":"Auteur de l'étude", "Cadre":"Culture vidéoludique · Game Sup", "Date":"Janvier 2025 · sources vérifiées en octobre 2026", "Livrable":"Présentation PowerPoint · 30 diapositives" },
-        apercu:"Pour cet exercice de culture vidéoludique, j'ai voulu explorer un marché porteur que je ne connaissais pas : le jeu vidéo africain, à travers le cas du Nigéria, en recoupant mes sources. J'y ai trouvé un modèle mobile et local, porté par une population jeune mais freiné par les infrastructures. Ma conclusion : budget, calendrier, plateforme et mode de paiement **se décident ensemble**.",
+        apercu:"Pour cet exercice de culture vidéoludique, j'ai étudié un marché que je ne connaissais pas, le jeu vidéo africain, à travers le Nigéria et en recoupant mes sources. J'y ai trouvé un modèle mobile et local, freiné par les infrastructures. Ma conclusion : budget, calendrier, plateforme et mode de paiement **se décident ensemble**.",
         contenu:[
           BANDE("I","Problématique et angle d'étude",[
             LIGNE([
-              T("Le marché reste dominé par l'Occident, le Japon et la Chine, alors que l'Afrique connaît un essor récent. Ma problématique : **peut-on parler d'un modèle africain**, et en quoi s'affranchit-il du modèle occidental ?"),
-              T("En tant que producer, j'ai lu ce marché à travers ses contraintes : réseau, électricité, pouvoir d'achat, accès au paiement. Elles expliquent les choix des studios.")
+              T("Le marché reste dominé par l'Occident, le Japon et la Chine. Ma problématique : **peut-on parler d'un modèle africain**, et en quoi s'affranchit-il du modèle occidental ? En tant que producer, je l'ai lu à travers ses contraintes : réseau, électricité, pouvoir d'achat, accès au paiement.")
             ],[ CITATION("« L'essor de l'industrie du jeu vidéo en Afrique attire l'attention des investisseurs avec une croissance annuelle significative. »","Nathan Bonnet, Afrikactus, 15 mai 2024") ])
           ]),
           BANDE("II","Un marché jeune, mobile et porté par la démographie",[
             LIGNE([
-              T("Selon Mordor Intelligence, le marché africain passerait de 2,14 Md$ en 2024 à 3,72 Md$ en 2029, environ 11,6 % par an contre 9,3 % au niveau mondial. Newzoo l'estime à 1,8 Md$ sur un autre périmètre : je ne mélange pas les deux séries. L'Afrique pèse moins de 1 % du marché mondial.")
-            ],[ SCHEMA("marche","Le marché africain du jeu vidéo, 2024-2029 (Mordor Intelligence), comparé au marché mondial"), FICHE("Quelques studios pionniers",["Afrique du Sud : Celestial Games (1994)","Cameroun : Kiro'o Games (projet lancé en 2003, studio fondé en 2012)","Ghana : Leti Arts (2009)","Nigéria : Kuluya, Gamsole et Maliyo (vers 2012)"]) ]),
+              T("Selon Mordor Intelligence, le marché africain passerait de 2,14 Md$ en 2024 à 3,72 Md$ en 2029, soit 11,6 % par an contre 9,3 % dans le monde. Newzoo l'estime à 1,8 Md$ sur un autre périmètre : je ne mélange pas les deux séries.")
+            ],[ SCHEMA("marche","Le marché africain du jeu vidéo, 2024-2029 (Mordor Intelligence), comparé au marché mondial") ]),
             LIGNE([
               T("Ce marché repose sur **le mobile**, qui représentait environ 90 % des revenus en 2022. Le nombre de joueurs varie de 349 à plus de 600 millions selon les sources, qui ne mesurent pas la même chose.")
             ],[ CHIFFRES([["200 M","joueurs sur mobile (2022)"],["90 %","des revenus via smartphone"],["> 60 %","de moins de 25 ans"],["2,5 Md","d'habitants prévus en 2050"]]) ])
           ]),
           BANDE("III","Le Nigéria : des studios mobiles et locaux",[
             LIGNE([
-              T("Au Nigéria, l'industrie tourne autour de quatre studios créés vers 2012, dont Maliyo Games et ChopUp, tous tournés vers le mobile."),
-            ],[ ETAPES("ChopUp en quelques dates",[["2011 · Danfo","Bayo Puddicombe crée le jeu Danfo : plus d'un million de téléchargements"],["2012 · Pledge 51, puis ChopUp","Bayo Puddicombe et Zubair Abubakar fondent Pledge 51, la société qui lancera ChopUp, dans la foulée du succès de Danfo"],["2016 · Rythme de production","4 employés et un nouveau jeu toutes les 6 semaines"]]) ]),
+              T("Au Nigéria, l'industrie tourne autour de quelques studios mobiles créés vers 2012, dont Maliyo Games et ChopUp, qui sortait en 2016 un nouveau jeu toutes les six semaines avec quatre employés.")
+            ]),
             LIGNE([
               T("Plus de la moitié des adultes nigérians n'ont pas de compte bancaire. ChopUp contourne l'obstacle avec les opérateurs mobiles : un petit abonnement hebdomadaire prélevé sur la facture de téléphone. Résultat : 100 000 téléchargements en quelques mois.")
             ],[ IMG(NG.jagun,"Jagun : Clash of Kingdoms, ChopUp, 2015"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
             LIGNE([
-              T("Ces studios s'adressent au public local. Le quotidien devient matière de jeu, comme les embouteillages de Lagos dans Okada Ride (Maliyo, 2012), tout comme l'histoire et les mythes avec Iwaju : Rising Chef (Maliyo, 2024)."),
-              T("Faute de cursus adaptés, les studios assurent aussi la formation, comme Maliyo Games avec un cursus gratuit en ligne de trois mois.")
+              T("Ces studios visent le public local : les embouteillages de Lagos dans Okada Ride (Maliyo, 2012), l'histoire et les mythes dans Iwaju : Rising Chef (Maliyo, 2024). Faute de cursus adaptés, ils assurent aussi la formation, comme Maliyo avec un cursus gratuit en ligne.")
             ],[ IMG(NG.okada,"Okada Ride, Maliyo Games, 2012"), IMG(NG.iwaju,"Iwaju : Rising Chef, Maliyo Games, 2024"), IMG(NG.aurion,"Aurion : L'héritage des Kori-Odan, Kiro'o Games, 2016") ])
           ]),
           BANDE("IV","L'e-sport et les freins au développement",[
             LIGNE([
-              T("La jeunesse porte aussi l'e-sport. Selon PwC, les revenus publicitaires des jeux vidéo et de l'e-sport au Nigéria passeraient de 111 M$ en 2022 à 472 M$ en 2027."),
-              T("Ce chiffre contredit le taux annoncé dans le même article, qui mènerait à environ 156 M$. Je retiens donc une tendance plutôt qu'un montant : une croissance à deux chiffres portée par le smartphone.")
+              T("La jeunesse porte aussi l'e-sport. Les chiffres de PwC pour le Nigéria varient d'une édition à l'autre, et le premier (111 M$ en 2022, 472 M$ en 2027) contredit le taux annoncé dans le même article. J'en retiens une tendance : une croissance à deux chiffres portée par le smartphone.")
             ],[ TABLEAU("Jeux vidéo et e-sport au Nigéria : les chiffres de PwC, édition par édition",["Source","Période","Revenus"],[["Agence Ecofin, nov. 2023","2022 → 2027","111 → 472 M$ (publicité)"],["Nairametrics, fév. 2025","2023 → 2024","192 → 217 M$"],["Nairametrics, fév. 2025","2023 → 2028","192 → 322 M$ (+ 10,9 % par an)"]],true) ]),
             LIGNE([
-              T("Ce modèle reste fortement limité. J'ai relevé cinq freins, du plus matériel au plus structurel."),
-              TABLEAU("Les freins au développement du secteur",["Frein","Constat"],[["Internet","Réseau fragile, dépendant d'un nombre limité de câbles sous-marins (BBC News)."],["Électricité","12 effondrements du réseau national en 2024. 82 % des développeurs africains jugent critique une alimentation électrique sans coupure (rapport de Maliyo Games, le studio d'Hugo Obi)."],["Pouvoir d'achat","Peu d'ordinateurs et de smartphones puissants : des jeux gratuits, pensés pour des joueurs occasionnels."],["Formation","Peu de formations longues au jeu vidéo, voire aucune."],["Financement","Des revenus souvent liés à des bailleurs de fonds étrangers. Selon des observateurs cités par Courrier International, ce financement orienterait certains jeux vers des messages jugés « bien-pensants ». C'est un avis, que je n'ai pas pu vérifier par d'autres sources."]],true)
+              T("J'ai relevé cinq freins, du plus matériel au plus structurel."),
+              TABLEAU("Les freins au développement du secteur",["Frein","Constat"],[["Internet","Réseau fragile, dépendant de quelques câbles sous-marins (BBC News)."],["Électricité","12 effondrements du réseau national en 2024 ; 82 % des développeurs africains jugent critique une alimentation sans coupure (Maliyo Games)."],["Pouvoir d'achat","Peu d'appareils puissants : des jeux gratuits, pour des joueurs occasionnels."],["Formation","Peu ou pas de formations longues au jeu vidéo."],["Financement","Des revenus souvent liés à des bailleurs de fonds étrangers, qui orienteraient certains jeux vers des messages jugés « bien-pensants » selon des observateurs cités par Courrier International. Un avis que je n'ai pas pu recouper."]],true)
             ])
           ]),
           BANDE("V","Ce que j'en retiens",[
             LIGNE([
-              T("Le marché africain progresse, porté par une population jeune, le mobile et l'e-sport, avec des jeux ancrés dans le quotidien et l'histoire locale. Il reste freiné par les infrastructures, le pouvoir d'achat et le financement."),
               T("Côté production, j'en retiens qu'**un marché se lit d'abord par ses contraintes** : ChopUp a choisi plateforme, paiement et rythme en fonction d'elles. J'ai aussi appris à distinguer un chiffre établi d'une projection avant de bâtir un plan dessus.")
             ])
           ]),
@@ -969,12 +965,12 @@ const PROJECTS_EN = {
             LIGNE([
               T("Both teams followed **four sprints** aligned with the school's reviews: design, a prototype up to the 3Cs and blocking playtests, a build playable from start to finish, then polish and QA feedback.")
             ],[ CHIFFRES([["568","tasks tracked"],["97% and 98%","tasks completed (HellStorm, Wakfu Riders)"],["4","sprints"],["3","reviews before the jury"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-macro.png","The HellStorm macro plan: phases, sprints and days off"],["images/fusion-wk-macro.png","The Wakfu Riders macro plan, on the same calendar"]],"pano") ]),
+            LIGNE([ CAROUSEL([["images/fusion-hs-macro-annote.png","The HellStorm macro plan: ① the phases, ② the sprints and their goals, ③ the days off"],["images/fusion-wk-macro-annote.png","The Wakfu Riders macro plan, on the same calendar: ① the phases, ② the sprints and their goals, ③ the days off"]],"pano") ]),
             LIGNE([
               T("Each team had its Excel backlog, sorted by epic and story (220 tasks for HellStorm, 348 for Wakfu Riders), with one tab per sprint and one per member."),
               T("Environment art was the heaviest area: 72 tasks for HellStorm, 131 for Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","The Wakfu Riders map under construction in Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders: the village and its vineyards in the editor"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Excerpt from the HellStorm backlog: epics, stories, difficulties, statuses, sprints and priorities"],["images/fusion-wk-backlog.png","Excerpt from the Wakfu Riders backlog"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to the sprints"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]],"pano") ])
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog-annote.png","Excerpt from the HellStorm backlog: ① tasks sorted by epic and story, ② their status, ③ their priority"],["images/fusion-wk-backlog-annote.png","Excerpt from the Wakfu Riders backlog: ① tasks sorted by epic and story, ② their status, ③ their priority"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to the sprints"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]],"pano") ])
           ]),
           BANDE("III","Following two teams",[
             LIGNE([
@@ -1204,47 +1200,43 @@ const PROJECTS_EN = {
     P({ date:"January 2025", survol:{ items:["Author of the study","Market analysis","Source cross-checking","30 slides"] }, cat:"Market analysis", title:"The African Video Game Market: The Case of Nigeria", 
         desc:"A study of the African video game market through Nigeria, where mobile and local audiences shape a model of its own, still held back by infrastructure.", carte:"A market driven by mobile and local audiences, still held back by infrastructure.",
         infos:{ "Role":"Author of the study", "Context":"Video game culture · Game Sup", "Date":"January 2025 · sources checked in October 2026", "Deliverable":"PowerPoint presentation · 30 slides" },
-        apercu:"For this video game culture exercise, I wanted to explore a promising market I did not know: African video games, through the case of Nigeria, cross-checking my sources. I found a mobile, local model, driven by a young population but held back by infrastructure. My conclusion: budget, schedule, platform and payment method **are decided together**.",
+        apercu:"For this video game culture exercise, I studied a market I did not know, African video games, through Nigeria and by cross-checking my sources. I found a mobile, local model, held back by infrastructure. My conclusion: budget, schedule, platform and payment method **are decided together**.",
         contenu:[
           BANDE("I","Research question and approach",[
             LIGNE([
-              T("The market is still dominated by the West, Japan and China, while Africa is seeing recent growth. My question: **can we speak of an African model**, and how does it break away from the Western one?"),
-              T("As a producer, I read this market through its constraints: network, electricity, purchasing power, access to payment. They explain the studios' choices.")
+              T("The market is still dominated by the West, Japan and China. My question: **can we speak of an African model**, and how does it break away from the Western one? As a producer, I read it through its constraints: network, electricity, purchasing power, access to payment.")
             ],[ CITATION("“The rise of the video game industry in Africa is attracting investors' attention, with significant annual growth.”","Nathan Bonnet, Afrikactus, 15 May 2024") ])
           ]),
           BANDE("II","A young, mobile market driven by demographics",[
             LIGNE([
-              T("According to Mordor Intelligence, the African market is expected to grow from $2.14bn in 2024 to $3.72bn in 2029, about 11.6% a year against 9.3% worldwide. Newzoo puts it at $1.8bn on a different scope: I do not mix the two series. Africa accounts for less than 1% of the global market.")
-            ],[ SCHEMA("marche","The African video game market, 2024-2029 (Mordor Intelligence), compared with the world market"), FICHE("A few pioneering studios",["South Africa: Celestial Games (1994)","Cameroon: Kiro'o Games (project started in 2003, studio founded in 2012)","Ghana: Leti Arts (2009)","Nigeria: Kuluya, Gamsole and Maliyo (around 2012)"]) ]),
+              T("According to Mordor Intelligence, the African market is expected to grow from $2.14bn in 2024 to $3.72bn in 2029, or 11.6% a year against 9.3% worldwide. Newzoo puts it at $1.8bn on a different scope: I do not mix the two series.")
+            ],[ SCHEMA("marche","The African video game market, 2024-2029 (Mordor Intelligence), compared with the world market") ]),
             LIGNE([
               T("This market runs on **mobile**, which accounted for about 90% of revenue in 2022. The number of players ranges from 349 to over 600 million depending on the source, as they do not measure the same thing.")
             ],[ CHIFFRES([["200 M","mobile players (2022)"],["90%","of revenue from smartphones"],["> 60%","under 25"],["2.5 bn","inhabitants expected in 2050"]]) ])
           ]),
           BANDE("III","Nigeria: mobile, local studios",[
             LIGNE([
-              T("In Nigeria, the industry revolves around four studios founded around 2012, including Maliyo Games and ChopUp, all focused on mobile."),
-            ],[ ETAPES("ChopUp in a few dates",[["2011 · Danfo","Bayo Puddicombe creates the game Danfo: over one million downloads"],["2012 · Pledge 51, then ChopUp","Bayo Puddicombe and Zubair Abubakar found Pledge 51, the company that will launch ChopUp, on the back of Danfo's success"],["2016 · Production pace","4 employees and a new game every 6 weeks"]]) ]),
+              T("In Nigeria, the industry revolves around a few mobile studios founded around 2012, including Maliyo Games and ChopUp, which in 2016 released a new game every six weeks with four employees.")
+            ]),
             LIGNE([
               T("More than half of Nigerian adults have no bank account. ChopUp works around this with mobile operators: a small weekly subscription charged to the phone bill. The result: 100,000 downloads in a few months.")
             ],[ IMG(NG.jagun,"Jagun: Clash of Kingdoms, ChopUp, 2015"), IMG(NG.chicken,"Chicken Escape, ChopUp, 2015") ]),
             LIGNE([
-              T("These studios target the local audience. Daily life becomes game material, like Lagos traffic jams in Okada Ride (Maliyo, 2012), as do history and myths in Iwaju: Rising Chef (Maliyo, 2024)."),
-              T("With few suitable degrees, studios also handle training, as Maliyo Games does with a free three-month online course.")
+              T("These studios target the local audience: Lagos traffic jams in Okada Ride (Maliyo, 2012), history and myths in Iwaju: Rising Chef (Maliyo, 2024). With few suitable degrees, they also handle training, as Maliyo does with a free online course.")
             ],[ IMG(NG.okada,"Okada Ride, Maliyo Games, 2012"), IMG(NG.iwaju,"Iwaju: Rising Chef, Maliyo Games, 2024"), IMG(NG.aurion,"Aurion: Legacy of the Kori-Odan, Kiro'o Games, 2016") ])
           ]),
           BANDE("IV","Esports and obstacles to growth",[
             LIGNE([
-              T("Young people also drive esports. According to PwC, advertising revenue from games and esports in Nigeria are expected to grow from $111M in 2022 to $472M in 2027."),
-              T("That figure contradicts the growth rate given in the same article, which would lead to about $156M. So I keep a trend rather than an amount: double-digit growth driven by smartphones.")
+              T("Young people also drive esports. PwC's figures for Nigeria vary from one edition to the next, and the first one ($111M in 2022, $472M in 2027) contradicts the growth rate given in the same article. I keep a trend: double-digit growth driven by smartphones.")
             ],[ TABLEAU("Video games and esports in Nigeria according to PwC, by edition",["Source","Period","Revenue"],[["Agence Ecofin, Nov. 2023","2022 → 2027","$111 → 472 m (advertising)"],["Nairametrics, Feb. 2025","2023 → 2024","$192 → 217 m"],["Nairametrics, Feb. 2025","2023 → 2028","$192 → 322 m (+10.9% a year)"]],true) ]),
             LIGNE([
-              T("This model is still heavily constrained. I identified five obstacles, from the most material to the most structural."),
-              TABLEAU("Obstacles to the sector's development",["Obstacle","Finding"],[["Internet","Fragile network, dependent on a limited number of submarine cables (BBC News)."],["Electricity","12 national grid collapses in 2024. 82% of African developers rate an uninterrupted power supply as critical (report by Maliyo Games, Hugo Obi's studio)."],["Purchasing power","Few computers and powerful smartphones: free games, designed for casual players."],["Training","Few long-form video game training programmes, if any."],["Funding","Revenue often tied to foreign donors. According to observers quoted by Courrier International, this funding steers some games towards messages seen as “well-meaning”. This is an opinion I could not check against other sources."]],true)
+              T("I identified five obstacles, from the most material to the most structural."),
+              TABLEAU("Obstacles to the sector's development",["Obstacle","Finding"],[["Internet","Fragile network, dependent on a few submarine cables (BBC News)."],["Electricity","12 national grid collapses in 2024; 82% of African developers rate an uninterrupted power supply as critical (Maliyo Games)."],["Purchasing power","Few powerful devices: free games, for casual players."],["Training","Few or no long-form video game courses."],["Funding","Revenue often tied to foreign donors, who would steer some games towards messages seen as “well-meaning”, according to observers quoted by Courrier International. An opinion I could not cross-check."]],true)
             ])
           ]),
           BANDE("V","What I take away",[
             LIGNE([
-              T("The African market is growing, driven by a young population, mobile and esports, with games rooted in daily life and local history. It is still held back by infrastructure, purchasing power and funding."),
               T("On the production side, I take away that **a market is read first through its constraints**: ChopUp chose its platform, payment method and pace around them. I also learned to tell an established figure from a projection before building a plan on it.")
             ])
           ]),

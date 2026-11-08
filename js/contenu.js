@@ -10,7 +10,7 @@ const SITE_FR = {
   accueilTitre: "Faire avancer les projets en prenant soin des équipes",   // grand titre de la page d'accueil
   photo: "images/portrait.jpg",   // fichier dans le dossier images/. Vide = initiales.
   intro: [
-    "Je m'appelle Thibault, Junior Associate Producer en dernière année à Game Sup. Sur quatre productions d'école, j'ai planifié et suivi des projets avec jusqu'à quatre équipes en même temps, du lancement à la livraison. J'adapte la méthode de production à chaque équipe après l'avoir écoutée, pour que chacun sache où en est le projet.",
+    "Je m'appelle Thibault, Junior Associate Producer en dernière année à Game Sup. Sur plusieurs productions d'école, j'ai planifié et suivi des projets avec jusqu'à quatre équipes en même temps, du lancement à la livraison. J'adapte la méthode de production à chaque équipe après l'avoir écoutée, pour que chacun sache où en est le projet.",
     "Je recherche aujourd'hui **un stage de fin d'études ou un premier poste en production** à partir de janvier 2027, partout en France ou en télétravail."
   ],
   email: "merle.thibault@orange.fr", ville: "",
@@ -23,7 +23,7 @@ const SITE_FR = {
 const SITE_EN = {...SITE_FR,
   accueilTitre: "Moving projects forward while taking care of teams",
   intro: [
-    "My name is Thibault, a Junior Associate Producer in my final year at Game Sup. Across four school productions, I have planned and tracked projects with up to four teams at once, from kick-off to delivery. I adapt the production method to each team after listening to its needs, so that everyone knows where the project stands.",
+    "My name is Thibault, a Junior Associate Producer in my final year at Game Sup. Across several school productions, I have planned and tracked projects with up to four teams at once, from kick-off to delivery. I adapt the production method to each team after listening to its needs, so that everyone knows where the project stands.",
     "I am now looking for **a final-year internship or a first job in production** starting in January 2027, anywhere in France or remotely."
   ],
   legal: [
@@ -267,14 +267,14 @@ const VITRINE = [   // [image (ou liste d'images pour une mosaïque), jeu, page,
 /* « Ma façon de produire » (accueil, entre la frise et les jeux) : [principe, texte, page qui le prouve, libellé du lien] */
 const PRINCIPES = {
   fr:{ titre:"Ma façon de produire", items:[
-    ["Écouter l'équipe avant d'appliquer une méthode","Pendant la crise de fin d'année, j'ai suspendu la production avec les référents pour recentrer la vision, plutôt que de pousser les équipes.","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026"],
+    ["Déléguer le suivi aux référents","Dès mon premier workshop, j'ai confié les dailies aux référents de chaque équipe : elles avançaient sans dépendre de ma présence. Je l'ai reconduit sur tous les projets suivants.","#/pro/workshop-fusion-novembre-2025","Workshop Fusion"],
     ["Décider des coupes avant d'en avoir besoin","42 tâches sacrifiables listées dès le départ : quand le temps a manqué, on savait quoi laisser de côté.","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite"],
-    ["Négocier le périmètre plutôt que de faire cruncher","La génération procédurale simulée, validée par le jury, a écarté le risque de crunch.","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite"],
+    ["Négocier le périmètre pour éviter le crunch","La génération procédurale simulée, validée par le jury, a écarté le risque de crunch.","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite"],
     ["Tester tôt et changer le jeu selon les retours","Le playtest a montré que le castor manquait de gameplay : nous avons repensé le level design pour lui donner plus de place.","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026"] ] },
   en:{ titre:"How I produce", items:[
-    ["Listen to the team before applying a method","During the end-of-year crisis, I paused production with the leads to refocus the vision, rather than pushing the teams.","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","End of year 2026"],
+    ["Delegate tracking to the leads","From my first workshop, I handed the dailies to each team's leads: the teams moved forward without depending on my presence. I have done so on every project since.","#/pro/workshop-fusion-novembre-2025","Fusion Workshop"],
     ["Decide on cuts before they are needed","42 expendable tasks listed from the start: when time ran short, we knew what to set aside.","#/pro/workshop-rogue-lite-fevrier-2026","Rogue-lite Workshop"],
-    ["Negotiate scope rather than make the team crunch","The simulated procedural generation, approved by the jury, removed the risk of crunch.","#/pro/workshop-rogue-lite-fevrier-2026","Rogue-lite Workshop"],
+    ["Negotiate scope to avoid crunch","The simulated procedural generation, approved by the jury, removed the risk of crunch.","#/pro/workshop-rogue-lite-fevrier-2026","Rogue-lite Workshop"],
     ["Test early and change the game based on feedback","The playtest showed the beaver lacked gameplay: we reworked the level design to give it more room.","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","End of year 2026"] ] }
 };
 const FRISE = [   // jalons de l'accueil, dans l'ordre chronologique ; perso:1 = projet personnel (en bleu) ; go vide = page pas encore publiée (jalon grisé)
@@ -294,7 +294,7 @@ const PROJECTS_FR = {
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 équipes de 13 à 14","Genres variés","4 semaines"] },
-        cle:["Quatre vertical slices en quatre semaines, pour toute une promotion de 54 personnes","Seul producer des quatre jeux, avec deux référents par groupe pour le suivi au quotidien","Face à une crise de direction artistique commune aux quatre groupes, suspendre la production avec les référents pour recentrer la vision, puis organiser deux playtests communs","Quatre jeux livrés au jury, 93 % des 1 387 tâches terminées"],
+        cle:["Quatre vertical slices en quatre semaines, pour toute une promotion de 54 personnes","Seul producer des quatre jeux, avec deux référents par groupe pour le suivi au quotidien","Face à une crise de direction artistique commune aux quatre groupes, suspendre la production avec les référents pour recentrer la vision, puis organiser deux playtests communs","Quatre jeux livrés au jury à la date prévue, 93 % des 1 387 tâches terminées"],
         apercu:"J'étais le seul producer des quatre jeux de la promotion, soit 54 personnes. En deuxième semaine, une même crise de direction artistique a touché les quatre équipes : après une pause d'une journée et demie, j'ai mis en place deux playtests communs et revu les priorités de chaque groupe. Les quatre jeux ont été livrés avec **93 % des 1 387 tâches terminées**.",
         contenu:[
           BANDE("I","Le cadre du projet",[
@@ -345,7 +345,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("VI","Les quatre jeux livrés",[
             LIGNE([
-              T("Les quatre jeux ont été livrés au jury, qui a souligné leur qualité et le travail des équipes.")
+              T("Les jalons de l'école n'ont pas bougé : avec la pause, les coupes et les nouvelles priorités, les quatre jeux ont été livrés à la date prévue, le 24 juin. Le jury a souligné leur qualité et le travail des équipes.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil : le menu principal et la forêt en jeu"],["images/fda-insight-1.jpg","Insight : la bibliothèque du manoir"],["images/fda-insight-2.jpg","Insight : la grande salle et ses lustres"],["images/fda-insight-3.jpg","Insight : la lunette astronomique de la mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead : la ville envahie par les plantes"],["images/fda-flowering-2.jpg","The Flowering Dead : un passage sous les arcades"],["images/fda-flowering-3.jpg","The Flowering Dead : le beffroi et la tour"],["images/fda-glow-jeu.jpg","Project GLOW en jeu : une rue barrée par une grille"]]) ]),
             LIGNE([
               T("Pour Project GLOW, on voit la ville passer du plan au blockout, puis au Level Art et à la lumière.")
@@ -658,6 +658,7 @@ const PROJECTS_FR = {
           ]),
           BANDE("V","Ce que j'en retiens",[
             LIGNE([
+              T("Le projet est rentable dans quatre cas sur six, mais sa marge est mince : dans le scénario conservateur moyen, elle tient à environ 31 000 ventes, et les deux cas bas font perdre entre 63 % et 76 % du budget. Avant de lancer la production complète, je vérifierais donc la conversion des wishlists sur une démo jouable, puis j'ajusterais la taille de l'équipe au résultat."),
               T("Avec le recul, **j'ai sous-estimé la charge de l'équipe QA**, et l'équipe Sound Design est elle aussi sous-dimensionnée."),
               T("J'étudierais aussi les financements accessibles à un studio de cette taille : aides publiques, prêts bancaires ou financement participatif.")
             ])
@@ -768,7 +769,7 @@ const PROJECTS_EN = {
         desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
-        cle:["Four vertical slices in four weeks, for a whole class of 54 people","Sole producer of the four games, with two leads per group for day-to-day tracking","Facing an art direction crisis shared by all four groups, pausing production with the leads to refocus the vision, then organising two joint playtests","Four games delivered to the jury, 93% of the 1,387 tasks completed"],
+        cle:["Four vertical slices in four weeks, for a whole class of 54 people","Sole producer of the four games, with two leads per group for day-to-day tracking","Facing an art direction crisis shared by all four groups, pausing production with the leads to refocus the vision, then organising two joint playtests","Four games delivered to the jury on schedule, 93% of the 1,387 tasks completed"],
         apercu:"I was the only producer for the class's four games, 54 people in all. In the second week, the same art direction crisis hit all four teams: after a day-and-a-half pause, I set up two shared playtests and reset each group's priorities. All four games were delivered with **93% of the 1,387 tasks completed**.",
         contenu:[
           BANDE("I","The project framework",[
@@ -818,7 +819,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("VI","The four games delivered",[
             LIGNE([
-              T("All four games were delivered to the jury, which praised their quality and the work of the teams.")
+              T("The school's milestones did not move: with the pause, the cuts and the new priorities, all four games were delivered on schedule, on 24 June. The jury praised their quality and the work of the teams.")
             ],[ CAROUSEL([["images/fda-castor-jeu.webp","Le Castor et l'Écureuil: the main menu and the forest in game"],["images/fda-insight-1.jpg","Insight: the mansion's library"],["images/fda-insight-2.jpg","Insight: the great hall and its chandeliers"],["images/fda-insight-3.jpg","Insight: the telescope on the mezzanine"],["images/fda-flowering-1.jpg","The Flowering Dead: the city overrun by plants"],["images/fda-flowering-2.jpg","The Flowering Dead: a passage under the arcades"],["images/fda-flowering-3.jpg","The Flowering Dead: the belfry and the tower"],["images/fda-glow-jeu.jpg","Project GLOW in game: a street blocked by a gate"]]) ]),
             LIGNE([
               T("For Project GLOW, you can see the city move from the layout to the blockout, then to Level Art and lighting.")
@@ -1129,6 +1130,7 @@ const PROJECTS_EN = {
           ]),
           BANDE("V","What I take away",[
             LIGNE([
+              T("The project is profitable in four cases out of six, but its margin is thin: in the average conservative scenario, it rests on about 31,000 sales, and the two low cases lose between 63% and 76% of the budget. Before launching full production, I would therefore check wishlist conversion on a playable demo, then adjust the team size to the result."),
               T("Looking back, **I underestimated the QA team's workload**, and the Sound Design team is undersized too."),
               T("I would also study the funding available to a studio of this size: public grants, bank loans or crowdfunding.")
             ])

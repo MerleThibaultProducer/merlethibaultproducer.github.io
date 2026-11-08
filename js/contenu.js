@@ -70,6 +70,7 @@ const EQUIPES=groupes=>({k:"teams",groupes});
 const KEYART=items=>({k:"keyart",items});
 const VIDEOS=items=>({k:"videos",items});   // vidéos complètes dans un menu déroulant : [["fichier", "titre", "image d'attente"], ...]
 const VIDEOS_ROGUE = [["videos/rogue-vampire.mp4","Vampire Hunter E-Cycle","videos/rogue-vampire-poster.jpg"],["videos/rogue-furyrogue.mp4","Mad Max Fury Rogue","videos/rogue-furyrogue-poster.jpg"]];
+const VIDEOS_FDA = [["videos/fda-castor.mp4","Le Castor et l'Écureuil","videos/fda-castor-poster.jpg"],["videos/fda-glow.mp4","Project GLOW","videos/fda-glow-poster.jpg"],["videos/fda-insight.mp4","Insight","videos/fda-insight-poster.jpg"],["videos/fda-flowering.mp4","The Flowering Dead","videos/fda-flowering-poster.jpg"]];
 const VIDEOS_FUSION = [["videos/fusion-hellstorm.mp4","HellStorm","videos/fusion-hellstorm-poster.jpg"],["videos/fusion-wakfu.mp4","Wakfu Riders","videos/fusion-wakfu-poster.jpg"]];
 const P = o => o;
 
@@ -289,7 +290,7 @@ const FRISE = [   // jalons de l'accueil, dans l'ordre chronologique ; perso:1 =
 ];
 const PROJECTS_FR = {
   pro: [
-    P({ id:"projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026", cat:"Projets de fin d'année · Mai-juin 2026", title:"Quatre jeux en parallèle", bandeau:[["images/fda-castor.jpg","Le Castor et l'Écureuil"],["images/fda-glow.jpg","Project GLOW"],["images/fda-insight.jpg","Insight"],["images/fda-flowering.jpg","The Flowering Dead"]], large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
+    P({ id:"projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026", cat:"Projets de fin d'année · Mai-juin 2026", title:"Quatre jeux en parallèle", bandeau:[["images/fda-castor.jpg","Le Castor et l'Écureuil"],["images/fda-glow.jpg","Project GLOW"],["images/fda-insight.jpg","Insight"],["images/fda-flowering.jpg","The Flowering Dead"]], video:{src:"videos/fda-montage.mp4",poster:"videos/fda-montage-poster.jpg"}, large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"La production d'une promotion entière par un seul producer, du lancement à la livraison au jury, avec une crise de direction artistique à mi-parcours.", carte:"Quatre jeux pour une promotion entière, et une crise de direction artistique surmontée par une pause et deux playtests communs.",
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
@@ -358,7 +359,13 @@ const PROJECTS_FR = {
               T("Je donnerais aussi aux référents un format de daily plus court, centré sur l'objectif du sprint et les blocages.")
             ])
           ]),
-          BANDE("VIII","Les équipes",[
+          BANDE("VIII","Les jeux en vidéo",[
+            LIGNE([
+              T("Les vidéos de gameplay livrées par chaque équipe avec sa vertical slice."),
+              VIDEOS(VIDEOS_FDA)
+            ])
+          ]),
+          BANDE("IX","Les équipes",[
             LIGNE([
               T("Ces quatre jeux sont avant tout le travail de leurs équipes."),
               EQUIPES(EQUIPES_FDA)
@@ -833,7 +840,13 @@ const PROJECTS_EN = {
               T("I would also give the leads a shorter daily format, focused on the sprint goal and blockers.")
             ])
           ]),
-          BANDE("VIII","The teams",[
+          BANDE("VIII","The games on video",[
+            LIGNE([
+              T("The gameplay videos each team delivered with its vertical slice."),
+              VIDEOS(VIDEOS_FDA)
+            ])
+          ]),
+          BANDE("IX","The teams",[
             LIGNE([
               T("These four games are first and foremost the work of their teams."),
               EQUIPES(EQUIPES_FDA)

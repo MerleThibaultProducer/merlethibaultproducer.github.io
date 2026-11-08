@@ -255,17 +255,21 @@ const EQUIPES_FUSION = [
 ];
 
 
-/* ---------- ACCUEIL : vitrine des jeux et frise des productions ----------
-   VITRINE : une colonne par production, dans l'ordre de la frise. FRISE : un jalon par production ;
+/* ---------- ACCUEIL : montage des jeux et frise des productions ----------
+   VITRINE : le montage muet de l'accueil ; chaque jeu y occupe « seg » secondes, dans l'ordre de « jeux ».
+   La légende suit le jeu à l'écran et mène à sa page. FRISE : un jalon par production ;
    go vide = projet pas encore publié (jalon grisé, sans lien). */
-const VITRINE = [   // [image (ou liste d'images pour une mosaïque), jeu, page, production FR, production EN, cadrage, nom EN]
-  ["images/fusion-hs-keyart.jpg","HellStorm","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","50% 50%"],
-  ["images/fusion-wk-keyart.jpg","Wakfu Riders","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop","35% 40%"],
-  ["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop","50% 25%"],
-  ["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop","50% 45%"],
-  [["images/fda-castor.jpg","images/fda-glow.jpg","images/fda-insight.jpg","images/fda-flowering.jpg"],"Quatre jeux en parallèle","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026","","Four games in parallel"]
-];
-/* « Ma façon de produire » (accueil, entre la frise et les jeux) : [principe, texte, page qui le prouve, libellé du lien] */
+const VITRINE = { video:"videos/accueil-montage.mp4", poster:"videos/accueil-montage-poster.jpg", seg:4, jeux:[   // [jeu, page, production FR, production EN]
+  ["HellStorm","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop"],
+  ["Wakfu Riders","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop"],
+  ["Vampire Hunter E-Cycle","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop"],
+  ["Mad Max Fury Rogue","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop"],
+  ["Le Castor et l'Écureuil","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026"],
+  ["Project GLOW","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026"],
+  ["Insight","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026"],
+  ["The Flowering Dead","#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année 2026","End of year 2026"]
+] };
+/* « Ma façon de produire » (accueil, sous le montage des jeux) : [principe, texte, page qui le prouve, libellé du lien] */
 const PRINCIPES = {
   fr:{ titre:"Ma façon de produire", items:[
     ["Déléguer le suivi aux référents","Dès mon premier workshop, j'ai confié les dailies aux référents de chaque équipe : elles avançaient sans dépendre de ma présence. Je l'ai reconduit sur tous les projets suivants.","#/pro/workshop-fusion-novembre-2025","Workshop Fusion"],

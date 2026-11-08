@@ -2557,15 +2557,6 @@ a.fr-j:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 @media (max-width: 1100px) { .frise { overflow-x: auto; grid-auto-columns: 168px; scrollbar-width: none; padding-top: 6px; } .frise::-webkit-scrollbar { display: none; } .frise::before, .frise::after { display: none; } .fr-j::before { top: 13px; } .fr-dot { top: 6px; } .fr-j { padding-top: 36px; } }
 @media (prefers-reduced-motion: reduce) { .fr-dot { transition: none; } }
 
-/* 2a. Vitrine : les jeux produits, bord à bord */
-.vitrine { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); width: 100vw; margin-left: calc(50% - 50vw); }
-.vt { position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; cursor: pointer; background: var(--band-d); }
-.vt img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.2,.7,.2,1); filter: saturate(1.05) contrast(1.02); }
-.vt span { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.5rem 1rem .9rem; font: 700 1rem/1.2 var(--display); color: #fff; background: linear-gradient(to top, rgba(8,16,32,.78), rgba(8,16,32,0)); }
-.vt:hover img, .vt:focus-visible img { transform: scale(1.06); }
-.vt:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
-@media (max-width: 860px) { .vitrine { grid-template-columns: repeat(6, 44vw); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; } .vitrine::-webkit-scrollbar { display: none; } }
-@media (prefers-reduced-motion: reduce) { .vt img { transition: none; } }
 .home-feat { margin-top: clamp(2.5rem, 5vw, 4rem); }
 
 /* 2b. Grande image d'ouverture des pages projet */
@@ -2576,17 +2567,7 @@ a.fr-j:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 body.page-detail #prog { display: block; }
 @media print { #prog { display: none !important; } }
 
-/* ---------- Raffinage des images : vitrine par production, bandeau multi-jeux ---------- */
-/* Vitrine : une colonne par production, deux jeux par colonne, même cadrage pour tous */
-.vitrine { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, auto); grid-auto-flow: column; gap: 3px; background: var(--band-d); }
-.vt { aspect-ratio: 16 / 10; }
-.vt span { display: block; padding: 3rem 1.25rem 1rem; font: 500 .85rem/1.35 var(--sans); color: rgba(255,255,255,.82); background: linear-gradient(to top, rgba(8,16,32,.85), rgba(8,16,32,.35) 60%, rgba(8,16,32,0)); }
-.vt span b { display: block; font: 700 1.15rem/1.2 var(--display); color: #fff; letter-spacing: -.01em; }
-@media (max-width: 860px) {
-  .vitrine { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; overflow: visible; scroll-snap-type: none; }
-  .vt { scroll-snap-align: start; aspect-ratio: 4 / 3; }
-  .vt span { padding: 2rem .75rem .65rem; font-size: .75rem; }
-}
+/* ---------- Raffinage des images : bandeau multi-jeux ---------- */
 /* Bandeau d'ouverture des pages projet : tous les jeux de la production côte à côte */
 .bandeau { display: grid; gap: 3px; height: auto; background: var(--band-d); }
 .bandeau.n2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2602,21 +2583,12 @@ body.page-detail #prog { display: block; }
 }
 .project .bandeau figcaption, .bandeau figcaption { margin: 0; text-align: left; font: 700 1.05rem/1.2 var(--display); color: #fff; }
 .bandeau.n4 figure:first-child img { object-position: 20% 60%; }
-.project .bandeau figcaption, .vt span b { font-family: "Bricolage Grotesque", Inter, system-ui, sans-serif; font-weight: 700; font-size: 1.1rem; line-height: 1.2; color: #fff; }
-.vt span { font-family: Inter, system-ui, sans-serif; font-size: .85rem; }
-@media (max-width: 860px) { .project .bandeau figcaption, .vt span b { font-size: .95rem; } .vt span { font-size: .75rem; } }
+.project .bandeau figcaption { font-family: "Bricolage Grotesque", Inter, system-ui, sans-serif; font-weight: 700; font-size: 1.1rem; line-height: 1.2; color: #fff; }
+@media (max-width: 860px) { .project .bandeau figcaption { font-size: .95rem; } }
 /* la règle globale des légendes est en !important : seule une autre déclaration !important la remplace ici */
 .project .bandeau figcaption { font: 700 1.1rem/1.2 "Bricolage Grotesque", Inter, system-ui, sans-serif; color: #fff; }
 @media (max-width: 860px) { .project .bandeau figcaption { font-size: .95rem; } }
-/* Vitrine : la production de fin d'année en mosaïque de ses quatre jeux, sur toute la hauteur de sa colonne */
-.vt-big { grid-row: span 2; aspect-ratio: auto; }
-.vt-mos { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3px; background: var(--band-d); padding: 0; }
-.vt-mos img { width: 100%; height: 100%; object-fit: cover; min-height: 0; }
-.vt-mos img:nth-child(1) { object-position: 25% 60%; }
-.vt-mos img:nth-child(2) { object-position: 50% 25%; }
 
-.vt:hover .vt-mos img, .vt:focus-visible .vt-mos img { transform: scale(1.04); }
-@media (max-width: 860px) { .vt-big { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 16 / 10; } }
 
 /* ---------- Mode nuit, décor des key arts, boutons et doré ---------- */
 /* 1. Mode nuit : encadrés et tableaux dans la palette (un ton au-dessus du fond), plus de violet */
@@ -2725,3 +2697,11 @@ html body.page-home main { padding-bottom: 0; }
 .recap .cle .cle-d { padding: .6rem 0 .6rem .9rem; margin-left: calc(-.9rem - 3px); border-left: 3px solid var(--gold); }
 .recap .cle .cle-d dd { font-weight: 600; }
 @media (max-width: 640px) { .recap .cle div { grid-template-columns: 1fr; gap: .15rem; } }
+
+/* ===== Accueil : montage de gameplay sous le premier écran ; la légende mène à la page du jeu ===== */
+.bandeau.vitrine { margin-top: 0; }
+.vitrine .vt-go { color: #fff; text-decoration: none; cursor: pointer; font: 500 .95rem/1.3 var(--sans); }
+.vitrine .vt-go b { font: 700 1.15rem/1.2 var(--display); }
+.vitrine .vt-go:hover { text-decoration: underline; text-underline-offset: 3px; }
+.vitrine .vt-go:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+@media (max-width: 760px) { .vitrine .vt-go { font-size: .82rem; } .vitrine .vt-go b { font-size: .95rem; } }

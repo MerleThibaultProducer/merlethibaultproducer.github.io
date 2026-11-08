@@ -27,7 +27,7 @@ outils/verifier.py                   vérifie toutes les pages (voir plus bas)
 - **Une image** : déposez le nouveau fichier dans `images/` et indiquez son chemin dans `js/contenu.js`,
   ou remplacez un fichier existant en gardant le même nom.
 - **Le CV** : ajoutez les nouveaux PDF (couleur et noir et blanc) et l'aperçu sous un **nouveau nom** (ex. `_v10`), puis mettez à jour `image`, `pdf` et `pdfNB` dans `CV_VISUAL` (js/contenu.js). Un nouveau nom évite que les navigateurs gardent l'ancienne version en cache. Les fichiers téléchargés gardent les noms définis dans `filename` et `filenameNB`.
-- **L'accueil** : dans `js/contenu.js`, `VITRINE` liste les images des jeux (dans l'ordre de la frise ; une liste d'images donne une mosaïque) et `FRISE` les jalons de la frise (un `go` vide grise le jalon tant que la page n'est pas publiée). `une:true` sur un projet l'ajoute dans « À voir aussi ».
+- **L'accueil** : dans `js/contenu.js`, `VITRINE` décrit le montage vidéo des jeux (`videos/accueil-montage.mp4`) : chaque jeu y dure `seg` secondes, dans l'ordre de `jeux`, et la légende mène à sa page. `FRISE` liste les jalons de la frise (un `go` vide grise le jalon tant que la page n'est pas publiée). `une:true` sur un projet l'ajoute dans « À voir aussi ».
 - **La vignette, le bandeau et les réglages d'un projet** (`img`, `bandeau`, `large`, `nocover`, `une`, `wip`) s'écrivent seulement dans la version française : la version anglaise les reprend. Les deux listes doivent garder les projets dans le même ordre.
 - **Une nouvelle image** : lancez `python3 outils/images-mobiles.py` pour créer sa version légère pour téléphone.
 - **Un projet en cours** : retirez `wip:true` pour le rendre visible.

@@ -57,7 +57,7 @@ function home(){
       <div class="intro"><h1 class="home-h1">${esc(SITE.accueilTitre||SITE.titre)}</h1>${SITE.intro.map(p=>`<p>${rich(p)}</p>`).join("")}</div>
       <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a>${SITE.email?`<a class="btn ghost" href="mailto:${esc(SITE.email)}">${t("contactMe")}</a>`:""}</p>
     </div>
-  </section>${frise()}</div>${principes()}${vitrine()}${homeFeat()}`;
+  </section>${frise()}</div>${vitrine()}${principes()}${homeFeat()}`;
 }
 /* Frise des productions : une ligne dorée et un jalon par production */
 function frise(){
@@ -76,12 +76,15 @@ function principes(){
   return `<section class="principes" aria-labelledby="pr-h"><h2 id="pr-h">${esc(P.titre)}</h2><div class="pr-row">${P.items.map(([h,txt,go,lien])=>
     `<div class="pr"><h3>${esc(h)}</h3><p>${rich(txt)}</p><a class="pr-go" data-go="${esc(go)}" role="link" tabindex="0">${esc(lien)}<span aria-hidden="true"> →</span></a></div>`).join("")}</div></section>`;
 }
-/* Vitrine : les jeux produits, en grand */
+/* Vitrine : le montage de gameplay de tous les jeux ; la légende suit le jeu à l'écran (voir « timeupdate » plus bas) */
+function vitrineCap(i){
+  const [nom,go,pf,pe]=VITRINE.jeux[i];
+  return `<a class="vt-go" data-go="${esc(go)}" role="link" tabindex="0"><b>${esc(nom)}</b> · ${esc(lang==="en"?pe:pf)}<span aria-hidden="true"> →</span></a>`;
+}
 function vitrine(){
   if(typeof VITRINE==="undefined") return "";
-  return `<section class="vitrine" aria-label="${q("Les jeux produits","The games produced")}">${VITRINE.map(([src,nom,go,pf,pe,pos,nomEn])=>{ const n=lang==="en"&&nomEn?nomEn:nom, many=Array.isArray(src);
-    const pics=many?`<div class="vt-mos">${src.map(x=>`<img src="${esc(x)}"${srcset(x)} alt="" loading="lazy">`).join("")}</div>`:`<img src="${esc(src)}"${srcset(src)} alt="${esc(n)}" loading="lazy">`;
-    return `<a class="vt${many?" vt-big":""}" data-go="${esc(go)}" data-pos="${esc(pos||"")}" role="link" tabindex="0"${many?` aria-label="${esc(n)}"`:""}>${pics}<span class="vt-cap"><b>${esc(n)}</b>${esc(lang==="en"?pe:pf)}</span></a>`;}).join("")}</section>`;
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  return `<section class="bandeau bandeau-video vitrine" aria-label="${q("Les jeux produits","The games produced")}"><video src="${esc(VITRINE.video)}" poster="${esc(VITRINE.poster)}" muted loop playsinline preload="metadata"${still?"":" autoplay"} data-seg="${VITRINE.seg}" aria-label="${q("Montage de gameplay des jeux que j'ai produits","Gameplay montage of the games I produced")}"></video><span class="bv-cap" aria-live="off">${vitrineCap(0)}</span><button type="button" class="bv-btn" data-vtoggle aria-label="${still?q("Lire la vidéo","Play the video"):q("Mettre la vidéo en pause","Pause the video")}">${still?PLAY_ICON:PAUSE_ICON}</button></section>`;
 }
 /* Encadré « Derniers projets » : les projets marqués une:true dans contenu.js */
 function homeFeat(){
@@ -469,7 +472,6 @@ function render(still){
   document.body.classList.toggle("page-detail", !!curNav);
   const v = $("#view"); v.innerHTML = html;
   v.querySelectorAll("video[autoplay]").forEach(x=>{ x.muted = true; x.play().catch(()=>{}); });   /* lecture automatique fiable une fois insérée */
-  v.querySelectorAll(".vt[data-pos]").forEach(e=>{ if(e.dataset.pos) e.querySelector("img").style.objectPosition=e.dataset.pos; });
   if(navDir && !matchMedia("(prefers-reduced-motion:reduce)").matches)
     v.animate([{opacity:0,transform:`translateX(${navDir*48}px)`},{opacity:1,transform:"none"}],{duration:280,easing:"ease-out"});
   navDir = 0;
@@ -535,6 +537,9 @@ render();
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-vtoggle]");if(!b)return;const vid=b.parentNode.querySelector("video");
   if(vid.paused){vid.play().catch(()=>{});b.innerHTML=PAUSE_ICON;b.setAttribute("aria-label",q("Mettre la vidéo en pause","Pause the video"));}
   else{vid.pause();b.innerHTML=PLAY_ICON;b.setAttribute("aria-label",q("Lire la vidéo","Play the video"));}});
+document.addEventListener("timeupdate",e=>{const v=e.target;if(!v.dataset||!v.dataset.seg)return;   /* légende de la vitrine : le jeu à l'écran */
+  const i=Math.min(VITRINE.jeux.length-1,Math.floor(v.currentTime/v.dataset.seg)), cap=v.parentNode.querySelector(".bv-cap");
+  if(cap.dataset.i!=i){cap.dataset.i=i;cap.innerHTML=vitrineCap(i);}},true);
 document.addEventListener("toggle",e=>{if(e.target.tagName==="DETAILS"&&!e.target.open)e.target.querySelectorAll("video").forEach(v=>v.pause());},true);
 document.addEventListener("click",e=>{if(e.target.closest("[data-top]")){const r=matchMedia("(prefers-reduced-motion:reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"});}});
 

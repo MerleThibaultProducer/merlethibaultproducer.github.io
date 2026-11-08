@@ -63,7 +63,7 @@ function home(){
       <div class="intro"><h1 class="home-h1">${esc(SITE.accueilTitre||SITE.titre)}</h1>${SITE.intro.map(p=>`<p>${rich(p)}</p>`).join("")}</div>
       <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a>${SITE.email?`<a class="btn ghost" href="mailto:${esc(SITE.email)}">${t("contactMe")}</a>`:""}</p>
     </div>
-  </section>${frise()}</div>${vitrine()}${principes()}${homeFeat()}`;
+  </section>${frise()}</div>${vitrine()}${principes()}`;
 }
 /* Frise des productions : une ligne dorée et un jalon par production */
 function frise(){
@@ -85,29 +85,13 @@ function principes(){
 /* Vitrine : le montage de gameplay de tous les jeux ; la légende suit le jeu à l'écran (voir « timeupdate » plus bas) */
 function vitrineCap(i){
   const [nom,go,pf,pe]=VITRINE.jeux[i];
-  return `<a class="vt-go" data-go="${esc(go)}" role="link" tabindex="0"><b>${esc(nom)}</b> · ${esc(lang==="en"?pe:pf)}<span aria-hidden="true"> →</span></a>`;
+  return `<a class="vt-go" href="${esc(go)}" data-go="${esc(go)}" role="link" tabindex="0"><b>${esc(nom)}</b> · ${esc(lang==="en"?pe:pf)}<span aria-hidden="true"> →</span></a>`;
 }
 function vitrine(){
   if(typeof VITRINE==="undefined") return "";
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   return `<section class="bandeau bandeau-video vitrine" aria-label="${q("Les jeux produits","The games produced")}"><video src="${esc(matchMedia("(max-width: 760px)").matches?VITRINE.videoM:VITRINE.video)}" poster="${esc(VITRINE.poster)}" muted loop playsinline preload="none"${still?"":" data-lazy"} data-seg="${VITRINE.seg}" aria-label="${q("Montage de gameplay des jeux que j'ai produits","Gameplay montage of the games I produced")}"></video><span class="bv-cap" aria-live="off">${vitrineCap(0)}</span><button type="button" class="bv-btn" data-vtoggle aria-label="${still?q("Lire la vidéo","Play the video"):q("Mettre la vidéo en pause","Pause the video")}">${still?PLAY_ICON:PAUSE_ICON}</button></section>`;
 }
-/* Encadré « Derniers projets » : les projets marqués une:true dans contenu.js */
-function homeFeat(){
-  const items = Object.entries(PROJECTS).flatMap(([k,l]) => l.filter(p => p.une && !p.wip).map(p => [k,p]));
-  if(!items.length) return "";
-  return `<section class="home-feat" aria-labelledby="feat-h">
-    <h2 id="feat-h">${q("À voir aussi","Also worth a look")}</h2>
-    <div class="feat-row">${items.map(([k,p]) => {
-      const m = p.title.match(/^(.+?)\s+–\s+(\S.*\d{4})$/);
-      const kick = k==="pro" ? q("Projet professionnel","Professional project")+(m?` · ${m[2]}`:"") : q("Projet personnel","Personal project")+(p.date||p.cat?` · ${p.date||p.cat}`:"");
-      return `<a class="feat" data-go="#/${k}/${esc(p.id)}" role="link" tabindex="0">
-        <span class="feat-img">${img(p.img,"",p.title[0])}</span>
-        <span class="feat-txt"><small>${esc(kick)}</small><h3>${esc(m?m[1]:p.title)}</h3><span class="feat-d">${esc(p.carte||p.desc)}</span><span class="feat-go">${q("Voir le projet","See the project")}<span aria-hidden="true"> →</span></span></span>
-      </a>`;}).join("")}</div>
-  </section>`;
-}
-
 /* Titre de vignette façon CV : « Exercice 2 » ou la date en doré, puis le titre */
 function cardTitle(title,cat){
   if(cat) return `<small>${esc(cat)}</small>${esc(title)}`;
@@ -353,13 +337,13 @@ function recap(p){
 function keyart(list){   /* les jeux de la production : pitch en clair, key art en léger décor d'arrière-plan */
   return `<div class="ka n${list.length}">${list.map(k=>`<div class="ka-i"><img class="ka-bg" loading="lazy" decoding="async" src="${esc(k[0])}"${srcset(k[0])} alt=""><b>${esc(k[1])}</b><p>${esc(k[2])}</p></div>`).join("")}</div>`;
 }
-/* Bandeau vidéo : montage muet en boucle, avec un bouton pause ; pas de lecture automatique si le visiteur limite les animations */
+/* Bandeau vidéo : montage muet en boucle, avec un bouton pause ; version légère (srcM) sur téléphone ; pas de lecture automatique si le visiteur limite les animations */
 const PLAY_ICON = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>`;
 const PAUSE_ICON = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>`;
 function videoBanner(p){
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const noms = (p.bandeau||[]).map(b=>b[1]).join(" · ");
-  return `<div class="bandeau bandeau-video"><video src="${esc(p.video.src)}" poster="${esc(p.video.poster)}" muted loop playsinline preload="metadata"${still?"":" autoplay"} aria-label="${q("Montage de gameplay","Gameplay montage")}${noms?" : "+esc(noms):""}"></video>${noms?`<span class="bv-cap">${esc(noms)}</span>`:""}<button type="button" class="bv-btn" data-vtoggle aria-label="${still?q("Lire la vidéo","Play the video"):q("Mettre la vidéo en pause","Pause the video")}">${still?PLAY_ICON:PAUSE_ICON}</button></div>`;
+  return `<div class="bandeau bandeau-video"><video src="${esc(p.video.srcM&&matchMedia("(max-width: 760px)").matches?p.video.srcM:p.video.src)}" poster="${esc(p.video.poster)}" muted loop playsinline preload="metadata"${still?"":" autoplay"} aria-label="${q("Montage de gameplay","Gameplay montage")}${noms?" : "+esc(noms):""}"></video>${noms?`<span class="bv-cap">${esc(noms)}</span>`:""}<button type="button" class="bv-btn" data-vtoggle aria-label="${still?q("Lire la vidéo","Play the video"):q("Mettre la vidéo en pause","Pause the video")}">${still?PLAY_ICON:PAUSE_ICON}</button></div>`;
 }
 /* Titre de page : la catégorie, ou la date d'un titre « Nom – Mois année », passe en surtitre */
 function headTitle(p){
@@ -426,7 +410,7 @@ function infos(){
 
 
 /* Apparition au défilement : chaque bloc monte en fondu, décalé de ses voisins entrés en même temps */
-const RV="#view .intro>*,#view .cta,#view .feat,#view .list-head>*,#view .card,#view .project>h1,#view .project>.lead,#view .cover,#view .band-head,#view .bt,#view .bm,#view .pn";
+const RV="#view .intro>*,#view .cta,#view .list-head>*,#view .card,#view .project>h1,#view .project>.lead,#view .cover,#view .band-head,#view .bt,#view .bm,#view .pn";
 let rvIO=null;
 function reveal(){
   if(rvIO) rvIO.disconnect();
@@ -477,6 +461,7 @@ function render(still){
   chrome(active);
   document.body.classList.toggle("page-detail", !!curNav);
   const v = $("#view"); v.innerHTML = html;
+  document.querySelectorAll("a[data-go]").forEach(a=>a.setAttribute("href",a.dataset.go));   /* vraie adresse : Ctrl+clic, clic molette et « copier le lien » marchent */
   v.querySelectorAll("video[autoplay]").forEach(x=>{ x.muted = true; x.play().catch(()=>{}); });   /* lecture automatique fiable une fois insérée */
   v.querySelectorAll("video[data-lazy]").forEach(x=>new IntersectionObserver(([en])=>{   /* montage de l'accueil : chargé et lu seulement à l'écran */
     if(en.isIntersecting){ if(!x.dataset.manual){ x.muted = true; x.play().catch(()=>{}); } } else if(!x.paused) x.pause(); }).observe(x));
@@ -517,7 +502,7 @@ function goTo(h){
 }
 document.addEventListener("click", e => {
   const a = e.target.closest && e.target.closest("[data-go]");
-  if(!a || e.button) return;
+  if(!a || e.button || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;   /* nouvel onglet : le navigateur suit le href */
   e.preventDefault(); goTo(a.getAttribute("data-go"));
 });
 document.addEventListener("keydown", e => {

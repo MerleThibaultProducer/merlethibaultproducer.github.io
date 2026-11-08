@@ -294,7 +294,7 @@ const FRISE = [   // jalons de l'accueil, dans l'ordre chronologique ; perso:1 =
 ];
 const PROJECTS_FR = {
   pro: [
-    P({ id:"projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026", cat:"Projets de fin d'année · Mai-juin 2026", title:"Quatre jeux en parallèle", bandeau:[["images/fda-castor.jpg","Le Castor et l'Écureuil"],["images/fda-glow.jpg","Project GLOW"],["images/fda-insight.jpg","Insight"],["images/fda-flowering.jpg","The Flowering Dead"]], video:{src:"videos/fda-montage.mp4",poster:"videos/fda-montage-poster.jpg"}, large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
+    P({ id:"projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026", cat:"Projets de fin d'année · Mai-juin 2026", title:"Quatre jeux en parallèle", bandeau:[["images/fda-castor.jpg","Le Castor et l'Écureuil"],["images/fda-glow.jpg","Project GLOW"],["images/fda-insight.jpg","Insight"],["images/fda-flowering.jpg","The Flowering Dead"]], video:{src:"videos/fda-montage.mp4", srcM:"videos/fda-montage-m.mp4",poster:"videos/fda-montage-poster.jpg"}, large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"La production d'une promotion entière par un seul producer, du lancement à la livraison au jury, avec une crise de direction artistique à mi-parcours.", carte:"Quatre jeux pour une promotion entière, et une crise de direction artistique surmontée par une pause et deux playtests communs.",
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
@@ -376,7 +376,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ title:"Workshop Rogue-lite – Février 2026", bandeau:[["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle"],["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue"]], video:{src:"videos/rogue-montage.mp4",poster:"videos/rogue-montage-poster.jpg"}, large:true, nocover:true,
+    P({ title:"Workshop Rogue-lite – Février 2026", bandeau:[["images/rogue-vh-keyart.jpg","Vampire Hunter E-Cycle"],["images/rogue-mm-keyart.jpg","Mad Max Fury Rogue"]], video:{src:"videos/rogue-montage.mp4", srcM:"videos/rogue-montage-m.mp4",poster:"videos/rogue-montage-poster.jpg"}, large:true, nocover:true,
         desc:"Quinze jours pour livrer deux rogue-lites jouables sous Unity, chacun d'après une licence de film.",
         carte:"Deux rogue-lites livrés en quinze jours, avec des coupes préparées à l'avance et une génération procédurale simulée pour tenir la date.",
         survol:{ moteur:"Unity", logo:"images/unity.svg", items:["Producer","2 équipes de 14","Rogue-lite","15 jours"] }, img:"images/rogue-thumb.jpg",
@@ -466,7 +466,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ title:"Workshop Fusion – Novembre 2025", bandeau:[["images/fusion-hs-keyart.jpg","HellStorm"],["images/fusion-wk-keyart.jpg","Wakfu Riders"]], video:{src:"videos/fusion-montage.mp4",poster:"videos/fusion-montage-poster.jpg"}, large:true, nocover:true,
+    P({ title:"Workshop Fusion – Novembre 2025", bandeau:[["images/fusion-hs-keyart.jpg","HellStorm"],["images/fusion-wk-keyart.jpg","Wakfu Riders"]], video:{src:"videos/fusion-montage.mp4", srcM:"videos/fusion-montage-m.mp4",poster:"videos/fusion-montage-poster.jpg"}, large:true, nocover:true,
         desc:"Quinze jours de travail pour livrer deux vertical slices de course sous Unreal Engine 5, chacune née de la fusion d'un jeu rétro et d'une licence.",
         carte:"Deux jeux de course nés de la fusion d'un gameplay et d'une licence, avec mes premiers dailies et des assets classés par priorité.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 équipes de 14 et 15","Racing · Fusion","15 jours"] }, img:"images/fusion-thumb.jpg",
@@ -1249,7 +1249,7 @@ Object.entries(PROJECTS_FR).forEach(([key,list])=>{const seen={};list.forEach(p=
   let b=p.id||p.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"projet";
   seen[b]=(seen[b]||0)+1;p.id=seen[b]>1?b+"-"+seen[b]:b;p.key=key;});});
 /* Version anglaise : mêmes projets dans le même ordre ; images, bandeau et réglages d'affichage viennent de la version française */
-const COMMUNS = ["img","bandeau","video","large","nocover","une","wip","etiq"];
+const COMMUNS = ["img","bandeau","video","large","nocover","wip","etiq"];
 Object.entries(PROJECTS_EN).forEach(([key,list])=>list.forEach((p,i)=>{const fr=PROJECTS_FR[key][i];p.id=fr.id;p.key=key;COMMUNS.forEach(c=>{if(c in fr)p[c]=fr[c];});}));
 let PROJECTS = PROJECTS_FR;
 

@@ -2428,45 +2428,6 @@ html body .fold::details-content { box-sizing: inherit; }
 .tm-col li .tm-a { display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; }
 .tm-col li .tm-a i { width: 17px; height: 17px; flex: none; }
 
-/* ---------- Accueil : encadré des projets mis en avant ---------- */
-.home-feat {
-  margin-top: clamp(3rem, 6vw, 4.5rem);
-  padding: clamp(1.25rem, 2.4vw, 2rem);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-top: 3px solid var(--gold);
-  border-radius: var(--r);
-}
-.home-feat h2 {
-  margin: 0 0 1.4rem;
-  font: 700 clamp(1.25rem, 1.6vw, 1.5rem)/1.2 var(--display);
-  letter-spacing: -.01em;
-  color: var(--head);
-}
-.feat-row { display: grid; grid-template-columns: 1fr 1fr; }
-.feat {
-  display: grid; grid-template-columns: clamp(112px, 10vw, 148px) minmax(0, 1fr); gap: 1.25rem; align-items: start;
-  padding: 0 clamp(1.25rem, 2.4vw, 2rem); color: inherit; text-decoration: none; cursor: pointer; border-radius: 8px;
-}
-.feat:first-child { padding-left: 0; }
-.feat:last-child { padding-right: 0; }
-.feat + .feat { border-left: 1px solid var(--line); }
-.feat:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
-.feat-img { display: block; aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: var(--band-d); }
-.feat-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s cubic-bezier(.2, .7, .2, 1); }
-.feat:hover .feat-img img { transform: scale(1.05); }
-.feat-txt { display: block; }
-.feat-txt small { display: block; margin-bottom: .4rem; font: 600 .8rem/1.35 var(--sans); color: var(--gold-d); }
-.feat-txt h3 { margin: 0 0 .55rem; font: 700 1.18rem/1.22 var(--display); color: var(--head); text-wrap: balance; }
-.feat-d { display: block; font-size: .96rem; line-height: 1.55; color: var(--ink); }
-.feat-go { display: inline-block; margin-top: .8rem; font-weight: 600; font-size: .92rem; color: var(--head); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; text-decoration-thickness: 2px; transition: text-decoration-color .2s; }
-.feat:hover .feat-go, .feat:focus-visible .feat-go { text-decoration-color: var(--gold); }
-@media (prefers-reduced-motion: reduce) { .feat-img img { transition: none; } }
-@media (max-width: 860px) {
-  .feat-row { grid-template-columns: minmax(0, 1fr); }
-  .feat, .feat:first-child, .feat:last-child { padding: 0; grid-template-columns: 92px minmax(0, 1fr); gap: 1rem; }
-  .feat + .feat { border-left: 0; border-top: 1px solid var(--line); margin-top: 1.25rem; padding-top: 1.25rem; }
-}
 
 /* ---------- Listes de projets : vignettes plus grandes, deux par ligne, plus d'air ---------- */
 @media (min-width: 601px) {
@@ -2496,19 +2457,14 @@ html body .fold::details-content { box-sizing: inherit; }
 /* ---------- Mouvement : apparition au défilement, retour au clic ---------- */
 .rv { opacity: 0; transform: translateY(22px); }
 .rv.in { opacity: 1; transform: none; transition: opacity .6s ease-out var(--d, 0s), transform .75s cubic-bezier(.2, .7, .2, 1) var(--d, 0s); }
-.btn:active, .feat:active, .pn a:active { transform: scale(.97); transition-duration: .08s; }
+.btn:active, .pn a:active { transform: scale(.97); transition-duration: .08s; }
 @media print { .rv { opacity: 1; transform: none; } }
 
 /* Téléphone : les flèches flottantes couvraient le texte ; le glissement du doigt et les liens en bas de page suffisent */
-/* Derniers projets : vignettes plus grandes, même mise en page */
-@media (max-width: 860px) { .feat, .feat:first-child, .feat:last-child { grid-template-columns: 108px minmax(0, 1fr); } }
 
 /* ---------- Accueil : les jeux visibles dès le premier écran ---------- */
 body.page-home .home-intro .portrait { width: clamp(150px, 19vw, 280px); height: clamp(150px, 19vw, 280px); }
 body.page-home .home-intro .cta { margin-top: 1.6rem; }
-.home-feat { margin-top: clamp(1.75rem, 3vw, 2.5rem); padding-top: 1.25rem; }
-.home-feat h2 { margin-bottom: 1rem; }
-.feat { grid-template-columns: clamp(150px, 15vw, 210px) minmax(0, 1fr); }
 /* Téléphone : menu sur deux lignes, toutes les entrées visibles sans défilement ; portrait réduit */
 @media (max-width: 700px) {
   html body nav ul#nav { flex-wrap: wrap; justify-content: flex-start; column-gap: 1.4rem; overflow: visible; }
@@ -2557,7 +2513,6 @@ a.fr-j:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 @media (max-width: 1100px) { .frise { overflow-x: auto; grid-auto-columns: 168px; scrollbar-width: none; padding-top: 6px; } .frise::-webkit-scrollbar { display: none; } .frise::before, .frise::after { display: none; } .fr-j::before { top: 13px; } .fr-dot { top: 6px; } .fr-j { padding-top: 36px; } }
 @media (prefers-reduced-motion: reduce) { .fr-dot { transition: none; } }
 
-.home-feat { margin-top: clamp(2.5rem, 5vw, 4rem); }
 
 /* 2b. Grande image d'ouverture des pages projet */
 .bandeau { width: 100vw; margin: clamp(1.5rem, 3vw, 2.5rem) 0 0 calc(50% - 50vw); height: clamp(220px, 36vw, 520px); overflow: hidden; background: var(--band-d); }
@@ -2617,12 +2572,8 @@ html body .btn:not(.ghost):hover { background: #F0B83A; border-color: #F0B83A; c
 .stage .card .go { margin-top: auto; align-self: flex-start; font-weight: 600; font-size: .95rem; color: var(--head); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; text-decoration-thickness: 2px; transition: text-decoration-color .2s; cursor: pointer; }
 html body .stage .card .go:hover, html body .stage .card .go:focus-visible, html body .stage .card:has(.thumb:hover) .go { text-decoration-color: var(--gold); }
 
-/* 7. « À voir aussi » : un seul projet, sur toute la largeur */
-.feat-row:has(> .feat:only-child) { grid-template-columns: minmax(0, 1fr); }
-.feat:only-child { max-width: 52rem; }
 
-/* 8. Moins de doré : plus de filet sur l'encadré d'accueil ni au-dessus du pied de page */
-.home-feat { border-top: 1px solid var(--line); }
+/* 8. Moins de doré : plus de filet au-dessus du pied de page */
 footer { border-top: 0; }
 /* Mode nuit : comme en mode jour, les encadrés n'ont pas de fond ; seuls les tableaux gardent un ton */
 :root[data-theme="dark"] .fiche, :root[data-theme="dark"] .etapes, :root[data-theme="dark"] .band:nth-of-type(even) .fiche, :root[data-theme="dark"] .band:nth-of-type(even) .etapes { background: transparent; }
@@ -2719,3 +2670,6 @@ html body.page-home main { padding-bottom: 0; }
   .home-intro .cta { grid-row: 4; margin: 1.5rem 0 .4rem; }
   .home-intro .intro p:last-of-type { grid-row: 5; grid-column: 1; }
 }
+
+/* Liens internes : ils ont maintenant une vraie adresse ; on garde l'apparence qu'ils avaient sans elle (spécificité nulle) */
+:where(a[data-go]) { text-decoration: none; }

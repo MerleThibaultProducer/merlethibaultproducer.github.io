@@ -2707,3 +2707,28 @@ html body.page-home main { padding-bottom: 0; }
 .vids video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 6px; }
 .vids figcaption { margin-top: .55rem; font: 600 1rem/1.3 var(--sans); color: var(--head); text-align: left; }
 @media (max-width: 760px) { .vids { grid-template-columns: minmax(0, 1fr); } }
+
+/* ===== Accueil : « Ma façon de produire » ===== */
+.principes { margin: clamp(2.5rem, 5vw, 4rem) 0 clamp(2.5rem, 5vw, 4rem); }
+.principes h2 { margin: 0 0 1.4rem; font: 700 clamp(1.4rem, 2vw, 1.9rem)/1.15 var(--display); letter-spacing: -.015em; color: var(--head); }
+.pr-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.75rem); }
+.pr { display: flex; flex-direction: column; padding: 1.1rem 0 0; border-top: 3px solid var(--gold); }
+.pr h3 { margin: 0 0 .55rem; font: 700 1.08rem/1.3 var(--display); color: var(--head); }
+.pr p { flex: 1; margin: 0 0 .9rem; font-size: .95rem; line-height: 1.6; color: var(--ink); }
+.pr-go { align-self: flex-start; font: 600 .88rem/1.3 var(--sans); color: var(--gold-text); text-decoration: none; cursor: pointer; }
+.pr-go:hover { text-decoration: underline; text-underline-offset: 3px; }
+.pr-go:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+@media (max-width: 1000px) { .pr-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .pr-row { grid-template-columns: 1fr; } }
+
+/* ===== Cartes : étiquette « Exercice Game Sup » / « Autoformation » ===== */
+.card .etiq { align-self: flex-start; display: inline-block; margin: .9rem 0 -.3rem; padding: .18rem .6rem; border: 1px solid var(--gold); border-radius: 999px; font: 600 .74rem/1.3 var(--sans); letter-spacing: .02em; color: var(--gold-text); }
+
+/* ===== Encart d'ouverture en quatre lignes ===== */
+.recap .cle { display: grid; gap: .7rem; margin: 0; }
+.recap .cle div { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 1.25rem; align-items: baseline; }
+.recap .cle dt { font: 600 .8rem/1.4 var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.recap .cle dd { margin: 0; line-height: 1.6; }
+.recap .cle .cle-d { padding: .6rem 0 .6rem .9rem; margin-left: -.9rem; border-left: 3px solid var(--gold); }
+.recap .cle .cle-d dd { font-weight: 600; }
+@media (max-width: 640px) { .recap .cle div { grid-template-columns: 1fr; gap: .15rem; } }

@@ -57,7 +57,7 @@ function home(){
       <div class="intro"><h1 class="home-h1">${esc(SITE.accueilTitre||SITE.titre)}</h1>${SITE.intro.map(p=>`<p>${rich(p)}</p>`).join("")}</div>
       <p class="cta"><a class="btn" data-go="#/pro" role="link" tabindex="0">${t("seeProjects")}</a>${SITE.email?`<a class="btn ghost" href="mailto:${esc(SITE.email)}">${t("contactMe")}</a>`:""}</p>
     </div>
-  </section>${frise()}</div>${vitrine()}${homeFeat()}`;
+  </section>${frise()}</div>${principes()}${vitrine()}${homeFeat()}`;
 }
 /* Frise des productions : une ligne dorée et un jalon par production */
 function frise(){
@@ -68,6 +68,13 @@ function frise(){
     const cls="fr-j"+(j.perso?" perso":"");
     return j.go?`<a class="${cls}" role="listitem" data-go="${esc(j.go)}" tabindex="0">${inner}</a>`:`<div class="${cls} off" role="listitem">${inner}</div>`;}).join("")}</div>
   <p class="fr-leg"><span class="pro">${q("Projets professionnels","Professional projects")}</span><span class="perso">${q("Projets personnels","Personal projects")}</span></p>`;
+}
+/* « Ma façon de produire » : quelques principes, chacun relié à la page qui le prouve (PRINCIPES dans contenu.js) */
+function principes(){
+  if(typeof PRINCIPES==="undefined") return "";
+  const P = lang==="en" ? PRINCIPES.en : PRINCIPES.fr;
+  return `<section class="principes" aria-labelledby="pr-h"><h2 id="pr-h">${esc(P.titre)}</h2><div class="pr-row">${P.items.map(([h,txt,go,lien])=>
+    `<div class="pr"><h3>${esc(h)}</h3><p>${rich(txt)}</p><a class="pr-go" data-go="${esc(go)}" role="link" tabindex="0">${esc(lien)}<span aria-hidden="true"> →</span></a></div>`).join("")}</div></section>`;
 }
 /* Vitrine : les jeux produits, en grand */
 function vitrine(){
@@ -115,7 +122,7 @@ function listing(sec){
   const items = PROJECTS[sec.key].filter(p => !p.wip);   // projets wip:true masqués jusqu'à leur mise à jour
   const cards = items.map(p => `<article class="card">
     <div class="thumb${p.img?" has-img":""}" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0" aria-label="${esc(p.title)}">${img(p.img,p.title,p.title[0])}${p.survol?survol(p.survol):""}</div>
-    <h3>${cardTitle(p.title,p.cat&&p.date?`${p.cat} · ${p.date}`:p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
+    ${p.etiq?`<span class="etiq">${p.etiq==="auto"?q("Autoformation","Self-training"):q("Exercice Game Sup","Game Sup exercise")}</span>`:""}<h3>${cardTitle(p.title,p.cat&&p.date?`${p.cat} · ${p.date}`:p.cat)}</h3>${cardMeta(p)}<p class="cdesc">${esc(p.carte||p.desc)}</p>
     <a class="go" data-go="#/${sec.key}/${esc(p.id)}" role="link" tabindex="0">${q("Voir le projet","See the project")}<span aria-hidden="true"> →</span></a></article>`).join("");
   return `<div class="list-head"><h1>${sec.label}</h1><p class="lead">${sec.intro}</p></div>
   <div class="stage"><h2 class="sr">${q("Liste des projets","Project list")}</h2>${items.length ? `<div class="grid${items.length<=4?" few":""}${sec.key==="perso"?" exo":""}" data-n="${items.length}">${cards}</div>` : `<div class="empty">Aucun projet pour le moment.</div>`}</div>`;
@@ -328,7 +335,9 @@ function brief(p){
 /* Encart d'ouverture : les infos du projet et un court texte de présentation, sur un même fond */
 function recap(p){
   const facts = Object.entries(p.infos||{}).map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
-  const txt = [].concat(p.apercu).map(x=>`<p>${rich(x)}</p>`).join("");
+  const lab = [q("Le défi","The challenge"),q("Mon rôle","My role"),q("Ma décision clé","My key decision"),q("Résultat","Result")];
+  const txt = p.cle ? `<dl class="cle">${p.cle.map((x,i)=>`<div${i===2?' class="cle-d"':""}><dt>${lab[i]}</dt><dd>${rich(x)}</dd></div>`).join("")}</dl>`
+                    : [].concat(p.apercu).map(x=>`<p>${rich(x)}</p>`).join("");
   return `<section class="recap">${facts?`<dl class="facts">${facts}</dl>`:""}<div class="recap-txt">${txt}</div></section>`;
 }
 /* Key arts des jeux en carrousel, avec le one-liner de chaque jeu sous l'image */

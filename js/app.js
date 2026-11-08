@@ -308,6 +308,7 @@ function blocks(list){
       case "tbl": return `<table class="tbl${b.plain?" plain":""}"><caption>${esc(b.titre)}</caption><thead><tr>${b.cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${b.rows.map(r=>typeof r==="string"?`<tr class="grp"><td colspan="${b.cols.length}">${esc(r)}</td></tr>`:`<tr>${r.map((c,i)=>`<td${(!b.plain&&i===2)?` class="${/^\+/.test(c)?"pos":"neg"}"`:""}>${b.plain&&i===0?`<b>${esc(c)}</b>`:esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
       case "img": return `<figure${b.cls?` class="${b.cls}"`:""}>${b.src?`<div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img loading="lazy" decoding="async" src="${esc(b.src)}"${srcset(b.src, /pano/.test(b.cls))} alt="${esc(b.cap)}">${LENS}</div>`:`<div class="ph">${t("imgToAdd")}</div>`}${b.cap?`<figcaption>${esc(b.cap)}</figcaption>`:""}</figure>`;
       case "teams": return teamsCarousel(b.groupes);
+      case "videos": return `<details class="fold"><summary class="btn ghost"><span class="f-show">${q("Voir les vidéos de gameplay","See the gameplay videos")} (${b.items.length})</span><span class="f-hide">${q("Masquer les vidéos","Hide the videos")}</span></summary><div class="vids">${b.items.map(([src,nom,poster])=>`<figure><video src="${esc(src)}" poster="${esc(poster)}" controls preload="none" playsinline></video><figcaption>${esc(nom)}</figcaption></figure>`).join("")}</div></details>`;
       case "keyart": return keyart(b.items);
       case "car": return `<figure class="car${b.cls?" "+b.cls:""}"><div class="car-track">${b.items.map(x=>`<div class="car-s"><div class="zf" data-zoom tabindex="0" role="button" aria-label="${t("zoom")}"><img loading="lazy" decoding="async" src="${esc(x[0])}"${srcset(x[0], b.cls==="pano")} alt="${esc(x[1])}">${LENS}</div><figcaption>${esc(x[1])}</figcaption></div>`).join("")}</div><div class="car-nav"><button type="button" data-car="-1" aria-label="${q("Précédent","Previous")}">‹</button><span class="car-cnt">1 / ${b.items.length}</span><button type="button" data-car="1" aria-label="${q("Suivant","Next")}">›</button></div></figure>`;
       case "q": return `<blockquote>${esc(b.text)}${b.by?`<cite>${esc(b.by)}</cite>`:""}</blockquote>`;
@@ -334,12 +335,20 @@ function recap(p){
 function keyart(list){   /* les jeux de la production : pitch en clair, key art en léger décor d'arrière-plan */
   return `<div class="ka n${list.length}">${list.map(k=>`<div class="ka-i"><img class="ka-bg" loading="lazy" decoding="async" src="${esc(k[0])}"${srcset(k[0])} alt=""><b>${esc(k[1])}</b><p>${esc(k[2])}</p></div>`).join("")}</div>`;
 }
+/* Bandeau vidéo : montage muet en boucle, avec un bouton pause ; pas de lecture automatique si le visiteur limite les animations */
+const PLAY_ICON = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>`;
+const PAUSE_ICON = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>`;
+function videoBanner(p){
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const noms = (p.bandeau||[]).map(b=>b[1]).join(" · ");
+  return `<div class="bandeau bandeau-video"><video src="${esc(p.video.src)}" poster="${esc(p.video.poster)}" muted loop playsinline preload="metadata"${still?"":" autoplay"} aria-label="${q("Montage de gameplay","Gameplay montage")}${noms?" : "+esc(noms):""}"></video>${noms?`<span class="bv-cap">${esc(noms)}</span>`:""}<button type="button" class="bv-btn" data-vtoggle aria-label="${still?q("Lire la vidéo","Play the video"):q("Mettre la vidéo en pause","Pause the video")}">${still?PLAY_ICON:PAUSE_ICON}</button></div>`;
+}
 function detail(sec, p, prev, next){
   const infos = Object.entries(p.infos||{}).map(([k,v])=>`<li><span>${esc(k)}</span>${esc(v)}</li>`).join("");
   const link = (q,cls,lab,arrow) => q ? `<a class="${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${esc(q.title)}</b></a>` : "";
   const side = (q,cls,ch,lab) => q ? `<a class="side ${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0" aria-label="${lab} : ${esc(q.title)}" title="${esc(q.title)}">${ch}</a>` : "";
   return `<a class="back" data-go="${sec.route}" role="link" tabindex="0">‹ ${sec.label}</a>
-  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title).replace(" – ","\u00a0– ")}</h1><p class="lead">${esc(p.desc)}</p>${p.bandeau?`<div class="bandeau n${p.bandeau.length}">${p.bandeau.map(([src,nom])=>`<figure><img src="${esc(src)}"${srcset(src)} alt="${esc(nom)}"><figcaption>${esc(nom)}</figcaption></figure>`).join("")}</div>`:""}
+  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title).replace(" – ","\u00a0– ")}</h1><p class="lead">${esc(p.desc)}</p>${p.video?videoBanner(p):p.bandeau?`<div class="bandeau n${p.bandeau.length}">${p.bandeau.map(([src,nom])=>`<figure><img src="${esc(src)}"${srcset(src)} alt="${esc(nom)}"><figcaption>${esc(nom)}</figcaption></figure>`).join("")}</div>`:""}
     ${p.large&&(!p.img||p.nocover)?"":`<div class="cover">${img(p.img,p.title,p.title[0])}</div>`}
     ${p.apercu ? recap(p) : `${infos?`<ul class="meta">${infos}</ul>`:""}${brief(p)}`}
     <div class="prose">${blocks(p.contenu)}</div></article>
@@ -444,6 +453,7 @@ function render(still){
   chrome(active);
   document.body.classList.toggle("page-detail", !!curNav);
   const v = $("#view"); v.innerHTML = html;
+  v.querySelectorAll("video[autoplay]").forEach(x=>{ x.muted = true; x.play().catch(()=>{}); });   /* lecture automatique fiable une fois insérée */
   v.querySelectorAll(".vt[data-pos]").forEach(e=>{ if(e.dataset.pos) e.querySelector("img").style.objectPosition=e.dataset.pos; });
   if(navDir && !matchMedia("(prefers-reduced-motion:reduce)").matches)
     v.animate([{opacity:0,transform:`translateX(${navDir*48}px)`},{opacity:1,transform:"none"}],{duration:280,easing:"ease-out"});
@@ -507,6 +517,10 @@ document.addEventListener("click", e => {
 addEventListener("popstate", () => { cur = location.hash || "#/"; render(); scrollTo(0,0); pageFocus(); });
 addEventListener("hashchange", () => { const h = location.hash || "#/"; if(h !== cur){ cur = h; render(); scrollTo(0,0); pageFocus(); } });
 render();
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-vtoggle]");if(!b)return;const vid=b.parentNode.querySelector("video");
+  if(vid.paused){vid.play().catch(()=>{});b.innerHTML=PAUSE_ICON;b.setAttribute("aria-label",q("Mettre la vidéo en pause","Pause the video"));}
+  else{vid.pause();b.innerHTML=PLAY_ICON;b.setAttribute("aria-label",q("Lire la vidéo","Play the video"));}});
+document.addEventListener("toggle",e=>{if(e.target.tagName==="DETAILS"&&!e.target.open)e.target.querySelectorAll("video").forEach(v=>v.pause());},true);
 document.addEventListener("click",e=>{if(e.target.closest("[data-top]")){const r=matchMedia("(prefers-reduced-motion:reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"});}});
 
 /* Barre de progression de lecture (pages projet), comme un sprint qui se remplit */

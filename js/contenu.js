@@ -68,6 +68,8 @@ const ETAPES=(titre,items)=>({k:"etapes",titre,items}), SCHEMA=(nom,cap="")=>({k
 const CAROUSEL=(items,cls="")=>({k:"car",items,cls});
 const EQUIPES=groupes=>({k:"teams",groupes});
 const KEYART=items=>({k:"keyart",items});
+const VIDEOS=items=>({k:"videos",items});   // vidéos complètes dans un menu déroulant : [["fichier", "titre", "image d'attente"], ...]
+const VIDEOS_FUSION = [["videos/fusion-hellstorm.mp4","HellStorm","videos/fusion-hellstorm-poster.jpg"],["videos/fusion-wakfu.mp4","Wakfu Riders","videos/fusion-wakfu-poster.jpg"]];
 const P = o => o;
 
 /* ---------- BULLES D'EXPLICATION ----------
@@ -431,7 +433,7 @@ const PROJECTS_FR = {
             ])
           ])
         ] }),
-    P({ title:"Workshop Fusion – Novembre 2025", bandeau:[["images/fusion-hs-keyart.jpg","HellStorm"],["images/fusion-wk-keyart.jpg","Wakfu Riders"]], large:true, nocover:true,
+    P({ title:"Workshop Fusion – Novembre 2025", bandeau:[["images/fusion-hs-keyart.jpg","HellStorm"],["images/fusion-wk-keyart.jpg","Wakfu Riders"]], video:{src:"videos/fusion-montage.mp4",poster:"videos/fusion-montage-poster.jpg"}, large:true, nocover:true,
         desc:"Trois semaines de travail pour livrer deux vertical slices de course sous Unreal Engine 5, chacune née de la fusion d'un jeu rétro et d'une licence.",
         carte:"Deux jeux de course nés de la fusion d'un gameplay et d'une licence, avec mes premiers dailies et des assets classés par priorité.",
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","2 équipes de 14 et 15","Racing · Fusion","3 semaines"] }, img:"images/fusion-thumb.jpg",
@@ -486,7 +488,13 @@ const PROJECTS_FR = {
               T("Avec le recul, j'aurais lancé les playtests de HellStorm plus tôt, comme Wakfu Riders l'a fait dès le premier sprint.")
             ])
           ]),
-          BANDE("VII","Les équipes",[
+          BANDE("VII","Les jeux en vidéo",[
+            LIGNE([
+              T("Les deux parties complètes, du menu à la ligne d'arrivée."),
+              VIDEOS(VIDEOS_FUSION)
+            ])
+          ]),
+          BANDE("VIII","Les équipes",[
             LIGNE([
               T("Ces deux jeux sont avant tout le travail de leurs équipes."),
               EQUIPES(EQUIPES_FUSION)
@@ -955,7 +963,13 @@ const PROJECTS_EN = {
               T("Looking back, I would have started HellStorm's playtests earlier, as Wakfu Riders did from the first sprint.")
             ])
           ]),
-          BANDE("VII","The teams",[
+          BANDE("VII","The games on video",[
+            LIGNE([
+              T("Both full runs, from the menu to the finish line."),
+              VIDEOS(VIDEOS_FUSION)
+            ])
+          ]),
+          BANDE("VIII","The teams",[
             LIGNE([
               T("These two games are first and foremost the work of their teams."),
               EQUIPES(EQUIPES_FUSION)
@@ -1212,7 +1226,7 @@ Object.entries(PROJECTS_FR).forEach(([key,list])=>{const seen={};list.forEach(p=
   let b=p.id||p.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"projet";
   seen[b]=(seen[b]||0)+1;p.id=seen[b]>1?b+"-"+seen[b]:b;p.key=key;});});
 /* Version anglaise : mêmes projets dans le même ordre ; images, bandeau et réglages d'affichage viennent de la version française */
-const COMMUNS = ["img","bandeau","large","nocover","une","wip"];
+const COMMUNS = ["img","bandeau","video","large","nocover","une","wip"];
 Object.entries(PROJECTS_EN).forEach(([key,list])=>list.forEach((p,i)=>{const fr=PROJECTS_FR[key][i];p.id=fr.id;p.key=key;COMMUNS.forEach(c=>{if(c in fr)p[c]=fr[c];});}));
 let PROJECTS = PROJECTS_FR;
 

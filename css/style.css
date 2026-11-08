@@ -2519,16 +2519,12 @@ body.page-home .home-intro .cta { margin-top: 1.6rem; }
 /* ---------- Esthétique plus marquante ---------- */
 /* 1. Premier écran en bleu marine plein, sur toute la largeur */
 .hero { position: relative; isolation: isolate; background: var(--band); box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax); padding: clamp(2rem, 4vw, 3.25rem) 0 clamp(1.5rem, 3vw, 2.25rem); color: #E7ECF4; }
-.hero::before { content: ""; position: absolute; top: 0; bottom: 0; right: calc(50% - 50vw); width: 58vw; z-index: -1; pointer-events: none;
-  background: url("../images/accueil-fond-jira.jpg") right center / cover no-repeat; opacity: .1; mix-blend-mode: screen;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 45%); mask-image: linear-gradient(to right, transparent, #000 45%); }
 .hero .home-h1 { color: #fff; font-size: clamp(1.85rem, 3.4vw, 3rem); line-height: 1.05; letter-spacing: -.025em; max-width: 18em; }
 .hero .intro p { color: #E7ECF4; }
 .hero .intro strong { color: var(--gold); }
 html body .hero .cta .btn:not(.ghost) { background: var(--gold); border-color: var(--gold); color: #0B1A33; }
 .hero .cta .btn.ghost { background: transparent; border-color: rgba(255,255,255,.7); color: #fff; }
 html body .hero .cta .btn.ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
-@media (max-width: 860px) { .hero::before { width: 100vw; opacity: .07; } }
 
 /* 3. Frise des productions : jalons sur une ligne dorée */
 /* Frise : un jalon par projet ; la ligne est tracée par chaque jalon, pour suivre leur nombre et le défilement sur téléphone */
@@ -2628,9 +2624,6 @@ body.page-detail #prog { display: block; }
 :root[data-theme="dark"] .band:nth-of-type(even) .fiche, :root[data-theme="dark"] .band:nth-of-type(even) .etapes, :root[data-theme="dark"] .band:nth-of-type(even) .tbl { background: #1A3157; }
 /* 2. Mode nuit : le premier écran garde son aplat, plus clair que la page */
 :root[data-theme="dark"] .hero { background: #183A72; box-shadow: 0 0 0 100vmax #183A72; }
-/* 3. Le fond Jira s'efface avant la frise, et reste discret de nuit */
-.hero::before { -webkit-mask-image: linear-gradient(to right, transparent, #000 45%), linear-gradient(to bottom, #000 45%, transparent 72%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 45%), linear-gradient(to bottom, #000 45%, transparent 72%); mask-composite: intersect; }
-:root[data-theme="dark"] .hero::before { opacity: .06; }
 
 /* 4. Les jeux de la production : pitch lisible, key art en décor à faible opacité */
 .ka { display: grid; gap: 3px; margin: .5rem 0 0; }
@@ -2729,6 +2722,6 @@ html body.page-home main { padding-bottom: 0; }
 .recap .cle div { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 1.25rem; align-items: baseline; }
 .recap .cle dt { font: 600 .8rem/1.4 var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
 .recap .cle dd { margin: 0; line-height: 1.6; }
-.recap .cle .cle-d { padding: .6rem 0 .6rem .9rem; margin-left: -.9rem; border-left: 3px solid var(--gold); }
+.recap .cle .cle-d { padding: .6rem 0 .6rem .9rem; margin-left: calc(-.9rem - 3px); border-left: 3px solid var(--gold); }
 .recap .cle .cle-d dd { font-weight: 600; }
 @media (max-width: 640px) { .recap .cle div { grid-template-columns: 1fr; gap: .15rem; } }

@@ -334,7 +334,7 @@ function brief(p){
 }
 /* Encart d'ouverture : les infos du projet et un court texte de présentation, sur un même fond */
 function recap(p){
-  const facts = Object.entries(p.infos||{}).map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+  const facts = Object.entries(p.infos||{}).filter(([k])=>!(p.cle&&/^R[ôo]le$/.test(k))).map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
   const lab = [q("Le défi","The challenge"),q("Mon rôle","My role"),q("Ma décision clé","My key decision"),q("Résultat","Result")];
   const txt = p.cle ? `<dl class="cle">${p.cle.map((x,i)=>`<div${i===2?' class="cle-d"':""}><dt>${lab[i]}</dt><dd>${rich(x)}</dd></div>`).join("")}</dl>`
                     : [].concat(p.apercu).map(x=>`<p>${rich(x)}</p>`).join("");
@@ -352,12 +352,18 @@ function videoBanner(p){
   const noms = (p.bandeau||[]).map(b=>b[1]).join(" · ");
   return `<div class="bandeau bandeau-video"><video src="${esc(p.video.src)}" poster="${esc(p.video.poster)}" muted loop playsinline preload="metadata"${still?"":" autoplay"} aria-label="${q("Montage de gameplay","Gameplay montage")}${noms?" : "+esc(noms):""}"></video>${noms?`<span class="bv-cap">${esc(noms)}</span>`:""}<button type="button" class="bv-btn" data-vtoggle aria-label="${still?q("Lire la vidéo","Play the video"):q("Mettre la vidéo en pause","Pause the video")}">${still?PLAY_ICON:PAUSE_ICON}</button></div>`;
 }
+/* Titre de page : la catégorie, ou la date d'un titre « Nom – Mois année », passe en surtitre */
+function headTitle(p){
+  const m = !p.cat && p.title.match(/^(.+?)\s+–\s+(\S.*\d{4})$/);
+  const [sur, ti] = p.cat ? [p.cat, p.title] : m ? [m[2], m[1]] : ["", p.title];
+  return `${sur?`<small class="h-cat">${esc(sur)}</small>`:""}${esc(ti)}`;
+}
 function detail(sec, p, prev, next){
   const infos = Object.entries(p.infos||{}).map(([k,v])=>`<li><span>${esc(k)}</span>${esc(v)}</li>`).join("");
   const link = (q,cls,lab,arrow) => q ? `<a class="${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0"><small>${lab}</small><b>${esc(q.title)}</b></a>` : "";
   const side = (q,cls,ch,lab) => q ? `<a class="side ${cls}" data-go="#/${sec.key}/${q.id}" role="link" tabindex="0" aria-label="${lab} : ${esc(q.title)}" title="${esc(q.title)}">${ch}</a>` : "";
   return `<a class="back" data-go="${sec.route}" role="link" tabindex="0">‹ ${sec.label}</a>
-  <article class="project${p.large?" large":""}"><h1>${p.cat?`<small class="h-cat">${esc(p.cat)}</small>`:""}${esc(p.title).replace(" – ","\u00a0– ")}</h1><p class="lead">${esc(p.desc)}</p>${p.video?videoBanner(p):p.bandeau?`<div class="bandeau n${p.bandeau.length}">${p.bandeau.map(([src,nom])=>`<figure><img src="${esc(src)}"${srcset(src)} alt="${esc(nom)}"><figcaption>${esc(nom)}</figcaption></figure>`).join("")}</div>`:""}
+  <article class="project${p.large?" large":""}"><h1>${headTitle(p)}</h1><p class="lead">${esc(p.desc)}</p>${p.video?videoBanner(p):p.bandeau?`<div class="bandeau n${p.bandeau.length}">${p.bandeau.map(([src,nom])=>`<figure><img src="${esc(src)}"${srcset(src)} alt="${esc(nom)}"><figcaption>${esc(nom)}</figcaption></figure>`).join("")}</div>`:""}
     ${p.large&&(!p.img||p.nocover)?"":`<div class="cover">${img(p.img,p.title,p.title[0])}</div>`}
     ${p.apercu ? recap(p) : `${infos?`<ul class="meta">${infos}</ul>`:""}${brief(p)}`}
     <div class="prose">${blocks(p.contenu)}</div></article>

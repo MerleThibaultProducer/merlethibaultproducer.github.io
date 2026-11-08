@@ -89,7 +89,7 @@ const NOTES_EN = {
     sources:[["Scrum.org · maximum event durations","https://www.scrum.org/resources/blog/which-scrum-events-are-time-boxed"],["Scrum.org · refinement at 10% (2017 Scrum Guide)","https://www.scrum.org/resources/blog/optimizing-product-backlog-refinement"],["wibas · starting capacity in SAFe","https://www.wibas.com/en/blog/articles-1/a-tricky-slide-about-story-points-and-capacity-in-safe-r-and-how-to-get-it-right-344"]] }
 };
 
-const PRO1 = { thumb:"images/fin-annee-2026-thumb.jpg", macro:"images/fin-annee-2026-macro.jpg", micro:"images/fin-annee-2026-micro.jpg", kill:"images/fin-annee-2026-kill.jpg" };
+const PRO1 = { thumb:"images/fin-annee-2026-thumb.jpg", macro:"images/fin-annee-2026-macro-annote.jpg", micro:"images/fin-annee-2026-micro-annote.jpg", kill:"images/fin-annee-2026-kill-annote.jpg" };
 const NG = {thumb:"images/nigeria-thumb.jpg", okada:"images/nigeria-okada.jpg", jagun:"images/nigeria-jagun.jpg", chicken:"images/nigeria-chicken.jpg", iwaju:"images/nigeria-iwaju.jpg", aurion:"images/nigeria-aurion.jpg"};
 const CT = {thumb:"images/castalie-thumb.jpg",pitch:"images/castalie-pitch.jpg",info:"images/castalie-info.jpg",one:"images/castalie-one.jpg",pillars:"images/castalie-pillars.jpg",notdo:"images/castalie-notdo.jpg",loop:"images/castalie-loop.jpg",realm:"images/castalie-realm.jpg",typhon:"images/castalie-typhon.jpg",sealed:"images/castalie-sealed.jpg",castalie:"images/castalie-castalie.jpg",moodboard:"images/castalie-moodboard.jpg",ld:"images/castalie-ld.jpg",mol:"images/castalie-mol.jpg",pacing:"images/castalie-pacing.jpg"};
 const EX1 = { nav:"images/wyrdfall-nav.jpg", market:"images/wyrdfall-market.jpg", roiCons:"images/wyrdfall-roi-conservateur.jpg", roiOpti:"images/wyrdfall-roi-optimiste.jpg", budget:"images/wyrdfall-budget.jpg", epic:"images/wyrdfall-epic.jpg", sprint:"images/wyrdfall-sprint.jpg" };
@@ -289,7 +289,7 @@ const FRISE = [   // jalons de l'accueil, dans l'ordre chronologique ; perso:1 =
 ];
 const PROJECTS_FR = {
   pro: [
-    P({ title:"Projets de fin d'année : quatre jeux en parallèle – Mai-juin 2026", bandeau:[["images/fda-castor.jpg","Le Castor et l'Écureuil"],["images/fda-glow.jpg","Project GLOW"],["images/fda-insight.jpg","Insight"],["images/fda-flowering.jpg","The Flowering Dead"]], large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
+    P({ id:"projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026", cat:"Projets de fin d'année · Mai-juin 2026", title:"Quatre jeux en parallèle", bandeau:[["images/fda-castor.jpg","Le Castor et l'Écureuil"],["images/fda-glow.jpg","Project GLOW"],["images/fda-insight.jpg","Insight"],["images/fda-flowering.jpg","The Flowering Dead"]], large:true, nocover:true,   // nocover:true = pas de grande image en tête de la page de détails
         desc:"La production d'une promotion entière par un seul producer, du lancement à la livraison au jury, avec une crise de direction artistique à mi-parcours.", carte:"Quatre jeux pour une promotion entière, et une crise de direction artistique surmontée par une pause et deux playtests communs.",
         img:PRO1.thumb,
         infos:{ "Rôle":"Producer", "Équipe":"4 équipes de 13 à 14 personnes (54 au total)", "Durée":"27 mai – 24 juin 2026", "Outils":"Excel · PowerPoint (OneDrive) · Discord" },
@@ -319,10 +319,10 @@ const PROJECTS_FR = {
             LIGNE([
               T("L'école fixait les jalons en Waterfall, et les équipes travaillaient en **Agile**, par sprints. Je devais relier les deux, avec un suivi assez homogène pour comparer les quatre groupes."),
               T("J'ai construit ce suivi sur Excel, un outil que toute l'équipe connaissait : un macro-planning par groupe pour les sprints et les jalons, un micro-planning pour les 1 387 tâches (sprint, priorité, difficulté, statut).")
-            ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : sprints et jalons (Proof of Concept, Alpha, Bêta)","pano") ]),
+            ],[ IMG(PRO1.macro,"Le macro-planning Excel de chaque groupe : ① les phases, ② les jalons de l'école, ③ les sprints, ④ les week-ends","pano") ]),
             LIGNE([
               T("Tenus à jour en continu, ces statuts rendaient les retards visibles sprint par sprint.")
-            ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : tâches, sprints, priorités, difficultés et statuts","pano") ])
+            ],[ IMG(PRO1.micro,"Extrait du micro-planning d'un des groupes : ① les compteurs, dont 21 tâches coupées et 7 en retard, ② le sprint de chaque tâche, ③ sa priorité et son statut","pano") ])
           ]),
           BANDE("IV","Gérer la crise de direction artistique",[
             LIGNE([
@@ -332,7 +332,7 @@ const PROJECTS_FR = {
             ],[ SCHEMA("planning","Calendrier de la production : sprints, jalons, crise de mi-parcours et playtests") ]),
             LIGNE([
               T("Pour Project GLOW, j'ai décidé avec les référents d'abandonner plusieurs assets hors cadre. Pour Le Castor et l'Écureuil, j'ai arbitré le rendu attendu et revu la planification du Level Art et du shader atmosphérique. J'ai demandé une scène de référence pour fixer la qualité visée.")
-            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de Project GLOW","pano") ]),
+            ],[ IMG(PRO1.kill,"Tâches supprimées (kills) dans le suivi de Project GLOW : ① 10 tâches coupées, ② leur statut Killed, ③ presque toutes au sprint 2","pano") ]),
             LIGNE([
               
             ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil : du blockout au Level Art et au shader atmosphérique revus après la crise") ])
@@ -387,14 +387,14 @@ const PROJECTS_FR = {
               T("Les deux équipes suivaient **trois sprints d'une semaine**, calés sur les jalons de l'école : blocking et assets essentiels, puis rendu final et système d'attaque, puis équilibrage et polish.")
             ],[ CHIFFRES([["573","tâches suivies"],["94 % et 92 %","tâches terminées (Vampire Hunter, Mad Max)"],["3","sprints d'une semaine"],["5","jalons en quinze jours"]]) ]),
             LIGNE([
-              IMG("images/rogue-planning.png","Le planning de production : phases, jalons de l'école et sprints d'une semaine","pano")
+              IMG("images/rogue-planning-annote.png","Le planning de production : ① les jalons de l'école, ② les sprints d'une semaine, ③ les week-ends","pano")
             ]),
             LIGNE([
               T("Chaque équipe avait son backlog Excel (336 tâches pour Vampire Hunter E-Cycle, 237 pour Mad Max Fury Rogue), avec pour chaque tâche une personne, un sprint, une difficulté, une priorité et un statut."),
               T("La charge s'est concentrée au démarrage, et l'environnement était le poste le plus lourd des deux productions.")
             ]),
             LIGNE([
-              IMG("images/rogue-mm-backlog.png","Extrait du backlog de Mad Max Fury Rogue : tâches, sprints, difficultés, priorités et statuts")
+              IMG("images/rogue-mm-backlog-annote.png","Extrait du backlog de Mad Max Fury Rogue : ① les 237 tâches, ② le statut de chacune, ③ la répartition des statuts")
             ])
           ]),
           BANDE("III","Préparer les coupes",[
@@ -544,6 +544,7 @@ const PROJECTS_FR = {
         carte:"Un studio fictif organisé dans Jira en Scrum : sprints, bugs, risques et automatisations.",
         img:"images/jira-vignette.jpg", etiq:"auto",
         infos:{ "Rôle":"Producer (mise en situation, mené seul)", "Projet":"Action-RPG AA fictif · 15 personnes + 4 prestataires", "Outils":"Jira · JQL", "Période":"Octobre 2026", "Temps de travail":"20 h environ", "Formation":"Agile with Atlassian Jira · Atlassian, via Coursera" },
+        cle:["Organiser dans Jira la production d'un action-RPG AA de 15 personnes et quatre prestataires, avec une offre gratuite limitée à 10 utilisateurs","Producer d'un studio fictif, seul à jouer tous les rôles, en parallèle de la certification Agile with Atlassian Jira","Engager les squads prudemment (21 et 13 points) après avoir repéré deux goulots, et ouvrir sur ces constats un registre des risques","Un sprint simulé par squad : onze bugs résolus, sept risques suivis et un contrôle des données à zéro"],
         apercu:"Pour apprendre Jira sur un cas réaliste, j'ai organisé seul la production fictive d'un **action-RPG AA** de 15 personnes et quatre prestataires, sur le modèle de Kena: Bridge of Spirits, puis je l'ai éprouvée par un sprint simulé.",
         contenu:[
           BANDE("I","Le cadre du projet",[
@@ -765,7 +766,7 @@ const PROJECTS_FR = {
 };
 const PROJECTS_EN = {
   pro: [
-    P({ title:"End-of-Year Projects: Four Games in Parallel – May–June 2026", 
+    P({ cat:"End-of-year projects · May–June 2026", title:"Four Games in Parallel", 
         desc:"Producing for a whole class as the only producer, from kick-off to jury delivery, with an art direction crisis halfway through.", carte:"Four games for a whole class, and an art direction crisis overcome with a pause and two shared playtests.",
         infos:{ "Role":"Producer", "Team":"4 teams of 13 to 14 people (54 in total)", "Duration":"27 May – 24 June 2026", "Tools":"Excel · PowerPoint (OneDrive) · Discord" },
         survol:{ moteur:"Unreal Engine", logo:"images/unreal-engine.png", items:["Producer","4 teams of 13 to 14","Varied genres","4 weeks"] },
@@ -794,10 +795,10 @@ const PROJECTS_EN = {
             LIGNE([
               T("The school set Waterfall milestones, and the teams worked in **Agile** sprints. I had to connect the two, with tracking consistent enough to compare the four groups."),
               T("I built this tracking in Excel, a tool the whole team knew: a macro plan per group for sprints and milestones, and a micro plan for the 1,387 tasks (sprint, priority, difficulty, status).")
-            ],[ IMG(PRO1.macro,"Each group's Excel macro plan: sprints and milestones (Proof of Concept, Alpha, Beta)","pano") ]),
+            ],[ IMG(PRO1.macro,"Each group's Excel macro plan: ① the phases, ② the school milestones, ③ the sprints, ④ the weekends","pano") ]),
             LIGNE([
               T("Kept up to date continuously, these statuses made delays visible sprint by sprint.")
-            ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: tasks, sprints, priorities, difficulties and statuses","pano") ])
+            ],[ IMG(PRO1.micro,"Excerpt from one group's micro plan: ① the counters, including 21 cut tasks and 7 delayed, ② each task's sprint, ③ its priority and status","pano") ])
           ]),
           BANDE("IV","Handling the art direction crisis",[
             LIGNE([
@@ -807,7 +808,7 @@ const PROJECTS_EN = {
             ],[ SCHEMA("planning","Production calendar: sprints, milestones, mid-course crisis and playtests") ]),
             LIGNE([
               T("For Project GLOW, I decided with the leads to cut several off-brief assets. For Le Castor et l'Écureuil, I settled the expected look and replanned the Level Art and the atmospheric shader. I asked for a reference scene to set the target quality.")
-            ],[ IMG(PRO1.kill,"Cut tasks in Project GLOW's tracking","pano") ]),
+            ],[ IMG(PRO1.kill,"Cut tasks in Project GLOW's tracking: ① 10 cut tasks, ② their Killed status, ③ almost all in sprint 2","pano") ]),
             LIGNE([
             ],[ IMG("images/fda-castor-ld.webp","Le Castor et l'Écureuil: from blockout to the Level Art and atmospheric shader reworked after the crisis") ])
           ]),
@@ -861,14 +862,14 @@ const PROJECTS_EN = {
               T("Both teams followed **three one-week sprints**, aligned with the school's milestones: blocking and essential assets, then final look and attack system, then balancing and polish.")
             ],[ CHIFFRES([["573","tasks tracked"],["94% and 92%","tasks completed (Vampire Hunter, Mad Max)"],["3","one-week sprints"],["5","milestones in fifteen days"]]) ]),
             LIGNE([
-              IMG("images/rogue-planning.png","The production schedule: phases, school milestones and one-week sprints","pano")
+              IMG("images/rogue-planning-annote.png","The production schedule: ① the school milestones, ② the one-week sprints, ③ the weekends","pano")
             ]),
             LIGNE([
               T("Each team had its Excel backlog (336 tasks for Vampire Hunter E-Cycle, 237 for Mad Max Fury Rogue), each task with an owner, a sprint, a difficulty, a priority and a status."),
               T("The workload was front-loaded, and environment art was the heaviest area in both productions.")
             ]),
             LIGNE([
-              IMG("images/rogue-mm-backlog.png","Excerpt from the Mad Max Fury Rogue backlog: tasks, sprints, difficulties, priorities and statuses")
+              IMG("images/rogue-mm-backlog-annote.png","Excerpt from the Mad Max Fury Rogue backlog: ① the 237 tasks, ② each one's status, ③ the status breakdown")
             ])
           ]),
           BANDE("III","Preparing the cuts",[
@@ -1017,6 +1018,7 @@ const PROJECTS_EN = {
         desc:"The production of a fictional AA action-RPG, structured on my own in Jira, from the boards to the risk register.",
         carte:"A fictional studio run in Jira with Scrum: sprints, bugs, risks and automations.",
         infos:{ "Role":"Producer (simulation, run solo)", "Project":"Fictional AA action-RPG · 15 people + 4 vendors", "Tools":"Jira · JQL", "Period":"October 2026", "Workload":"About 20 hours", "Training":"Agile with Atlassian Jira · Atlassian, via Coursera" },
+        cle:["Organising the production of an AA action-RPG with 15 people and four vendors in Jira, on a free plan limited to 10 users","Producer of a fictional studio, playing every role alone, alongside the Agile with Atlassian Jira certification","Committing the squads cautiously (21 and 13 points) after spotting two bottlenecks, and opening the risk register on those findings","One simulated sprint per squad: eleven bugs resolved, seven risks tracked and a data check at zero"],
         apercu:"To learn Jira on a realistic case, I single-handedly set up the fictional production of an **AA action-RPG** with 15 people and four vendors, modelled on Kena: Bridge of Spirits, then tested it through a simulated sprint.",
         contenu:[
           BANDE("I","The project framework",[

@@ -4,7 +4,7 @@ import os, json
 from PIL import Image
 D, W = "images", 900
 taille = {}
-IGNORE = {"accueil-fond-jira.jpg", "apercu-partage.jpg"}   # fond CSS et image de partage : jamais dans une balise <img>
+IGNORE = {"apercu-partage.jpg"}   # image de partage : jamais dans une balise <img>
 for f in sorted(os.listdir(D)):
     base, ext = os.path.splitext(f)
     if f in IGNORE or base.endswith("-m") or ext.lower() not in (".jpg", ".jpeg", ".png", ".webp"): continue

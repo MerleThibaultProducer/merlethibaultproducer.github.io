@@ -459,7 +459,7 @@ const PROJECTS_FR = {
               T("Chaque équipe avait son backlog Excel, rangé par epic et par story (220 tâches pour HellStorm, 348 pour Wakfu Riders), avec un onglet par sprint et un par membre."),
               T("L'environnement était le poste le plus lourd : 72 tâches chez HellStorm, 131 chez Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","La carte de Wakfu Riders en construction dans Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders : le village et ses vignes dans l'éditeur"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Extrait du backlog de HellStorm : epics, stories, personnes, difficultés, statuts, sprints et priorités"],["images/fusion-wk-backlog.png","Extrait du backlog de Wakfu Riders"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux onglets de chacun"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]],"pano") ])
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Extrait du backlog de HellStorm : epics, stories, difficultés, statuts, sprints et priorités"],["images/fusion-wk-backlog.png","Extrait du backlog de Wakfu Riders"],["images/fusion-hs-dashboard.png","Le tableau de bord de HellStorm : avancement global et accès aux sprints"],["images/fusion-wk-dashboard.png","Le tableau de bord de Wakfu Riders : 341 tâches terminées sur 348"]],"pano") ])
           ]),
           BANDE("III","Suivre deux équipes",[
             LIGNE([
@@ -934,7 +934,7 @@ const PROJECTS_EN = {
               T("Each team had its Excel backlog, sorted by epic and story (220 tasks for HellStorm, 348 for Wakfu Riders), with one tab per sprint and one per member."),
               T("Environment art was the heaviest area: 72 tasks for HellStorm, 131 for Wakfu Riders.")
             ],[ CAROUSEL([["images/fusion-wk-carte.jpg","The Wakfu Riders map under construction in Unreal Engine"],["images/fusion-wk-village.jpg","Wakfu Riders: the village and its vineyards in the editor"]]) ]),
-            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Excerpt from the HellStorm backlog: epics, stories, owners, difficulties, statuses, sprints and priorities"],["images/fusion-wk-backlog.png","Excerpt from the Wakfu Riders backlog"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to each person's tab"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]],"pano") ])
+            LIGNE([ CAROUSEL([["images/fusion-hs-backlog.png","Excerpt from the HellStorm backlog: epics, stories, difficulties, statuses, sprints and priorities"],["images/fusion-wk-backlog.png","Excerpt from the Wakfu Riders backlog"],["images/fusion-hs-dashboard.png","The HellStorm dashboard: overall progress and links to the sprints"],["images/fusion-wk-dashboard.png","The Wakfu Riders dashboard: 341 of 348 tasks done"]],"pano") ])
           ]),
           BANDE("III","Following two teams",[
             LIGNE([

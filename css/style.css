@@ -2707,8 +2707,8 @@ html body.page-home main { padding-bottom: 0; }
 @media (max-width: 760px) { .vitrine .vt-go { font-size: .82rem; } .vitrine .vt-go b { font-size: .95rem; } }
 
 /* ===== Infos : une compétence prouvée sur le site est un lien vers la page qui la montre ===== */
-.skill .sk-go { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 1.5px; text-underline-offset: 3px; cursor: pointer; }
-.skill .sk-go:hover { color: var(--gold-text); }
+.skill .sk-go { color: inherit; text-decoration: underline dotted; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-decoration-thickness: 1px; text-underline-offset: 4px; cursor: pointer; }
+.skill .sk-go:hover { color: var(--gold-text); text-decoration-color: currentColor; }
 .skill .sk-go:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
 /* ===== Accueil sur téléphone : les boutons juste après le premier paragraphe ===== */

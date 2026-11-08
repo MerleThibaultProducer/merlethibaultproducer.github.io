@@ -259,7 +259,7 @@ const EQUIPES_FUSION = [
    VITRINE : le montage muet de l'accueil ; chaque jeu y occupe « seg » secondes, dans l'ordre de « jeux ».
    La légende suit le jeu à l'écran et mène à sa page. FRISE : un jalon par production ;
    go vide = projet pas encore publié (jalon grisé, sans lien). */
-const VITRINE = { video:"videos/accueil-montage.mp4", poster:"videos/accueil-montage-poster.jpg", seg:4, jeux:[   // [jeu, page, production FR, production EN]
+const VITRINE = { video:"videos/accueil-montage.mp4", videoM:"videos/accueil-montage-m.mp4", poster:"videos/accueil-montage-poster.jpg", seg:4, jeux:[   // [jeu, page, production FR, production EN]
   ["HellStorm","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop"],
   ["Wakfu Riders","#/pro/workshop-fusion-novembre-2025","Workshop Fusion","Fusion Workshop"],
   ["Vampire Hunter E-Cycle","#/pro/workshop-rogue-lite-fevrier-2026","Workshop Rogue-lite","Rogue-lite Workshop"],
@@ -1279,15 +1279,25 @@ let SECTIONS = SECTIONS_FR;
    Outils : écrivez "Nom" ou "Nom|images/logo.png" pour afficher un logo.
    Chaque bloc : icône (voir ICONES dans app.js), catégorie, liste.
    =================================================================== */
+/* Compétences de la page Infos : ["compétence","clé"] ajoute un lien vers la page qui la prouve */
+const PREUVES = {
+  jira:["#/perso/projet-jira-et-agile-un-studio-en-mise-en-situation-octobre-2026","Jira"],
+  rogue:["#/pro/workshop-rogue-lite-fevrier-2026","Rogue-lite"],
+  fusion:["#/pro/workshop-fusion-novembre-2025","Fusion"],
+  fda:["#/pro/projets-de-fin-d-annee-quatre-jeux-en-parallele-mai-juin-2026","Fin d'année","End of year"],
+  wyrdfall:["#/perso/wyrdfall","Wyrdfall"],
+  castalie:["#/perso/castalie-s-tears","Castalie's Tears"],
+  nigeria:["#/perso/le-marche-africain-du-jeu-video-le-cas-du-nigeria","Nigéria","Nigeria"]
+};
 const INFOS_FR = {
   intro: "Après un master d'anthropologie religieuse à l'École Pratique des Hautes Études, j'ai cherché un métier au contact des gens, où l'on avance en équipe. Je l'ai trouvé dans la production de jeux vidéo, que j'étudie à Game Sup depuis 2023. De la recherche, je garde le goût des sources et de l'écrit.",
   competencesTitre: "Compétences",
   competences: [
-    { icone:"planning", titre:"Production", items:["Production Agile et Scrum","Planification des jalons et des sprints","Coordination de plusieurs équipes","Suivi de production et listes de tâches","Budget et prévisions"] },
-    { icone:"design", titre:"Game Design", items:["Game Design Document","Boucle de gameplay et systèmes","Typologies de joueurs et personas"] },
-    { icone:"narration", titre:"Narrative Design", items:["Worldbuilding","Écriture de personnages","Quest Design","Lien entre mécaniques et récit"] },
-    { icone:"analyse", titre:"Analyse", items:["Analyse de marché et estimation des ventes","Seuil de rentabilité et ROI","Recherche documentaire et critique des sources"] },
-    { icone:"equipe", titre:"Communication et encadrement", items:["Communication intra- et inter-équipes","Gestion d\'événements","Transmission des savoirs et accompagnement","Adaptation du discours aux interlocuteurs"] }
+    { icone:"planning", titre:"Production", items:[["Production Agile et Scrum","jira"],["Planification des jalons et des sprints","rogue"],["Coordination de plusieurs équipes","fda"],["Suivi de production et listes de tâches","fusion"],["Budget et prévisions","wyrdfall"]] },
+    { icone:"design", titre:"Game Design", items:[["Game Design Document","castalie"],["Boucle de gameplay et systèmes","castalie"],"Typologies de joueurs et personas"] },
+    { icone:"narration", titre:"Narrative Design", items:[["Worldbuilding","castalie"],"Écriture de personnages","Quest Design",["Lien entre mécaniques et récit","castalie"]] },
+    { icone:"analyse", titre:"Analyse", items:[["Analyse de marché et estimation des ventes","nigeria"],["Seuil de rentabilité et ROI","wyrdfall"],["Recherche documentaire et critique des sources","nigeria"]] },
+    { icone:"equipe", titre:"Communication et encadrement", items:[["Communication intra- et inter-équipes","fda"],"Gestion d\'événements","Transmission des savoirs et accompagnement",["Adaptation du discours aux interlocuteurs","rogue"]] }
   ],
   outilsTitre: "Outils",
   outilsIntro: "Les outils que j'utilise pour planifier, suivre et faire circuler l'information.",
@@ -1313,11 +1323,11 @@ const INFOS_EN = {
   intro: "After a master's degree in religious anthropology at the École Pratique des Hautes Études, I looked for a job where I would work with people and move forward as a team. I found it in video game production, which I have been studying at Game Sup since 2023. From research, I have kept a taste for sources and writing.",
   competencesTitre: "Skills",
   competences: [
-    { icone:"planning", titre:"Production", items:["Agile and Scrum production","Milestone and sprint planning","Multi-team coordination","Production tracking and task lists","Budget planning and forecasting"] },
-    { icone:"design", titre:"Game Design", items:["Game Design Documentation","Gameplay loop and systems","Player typologies and personas"] },
-    { icone:"narration", titre:"Narrative Design", items:["Worldbuilding","Character writing","Quest Design","Linking mechanics and story"] },
-    { icone:"analyse", titre:"Analysis", items:["Market analysis and sales forecasting","Break-even point and ROI","Desk research and source criticism"] },
-    { icone:"equipe", titre:"Communication and leadership", items:["Intra- and cross-team communication","Event management","Knowledge transfer and coaching","Tailoring communication to stakeholders"] }
+    { icone:"planning", titre:"Production", items:[["Agile and Scrum production","jira"],["Milestone and sprint planning","rogue"],["Multi-team coordination","fda"],["Production tracking and task lists","fusion"],["Budget planning and forecasting","wyrdfall"]] },
+    { icone:"design", titre:"Game Design", items:[["Game Design Documentation","castalie"],["Gameplay loop and systems","castalie"],"Player typologies and personas"] },
+    { icone:"narration", titre:"Narrative Design", items:[["Worldbuilding","castalie"],"Character writing","Quest Design",["Linking mechanics and story","castalie"]] },
+    { icone:"analyse", titre:"Analysis", items:[["Market analysis and sales forecasting","nigeria"],["Break-even point and ROI","wyrdfall"],["Desk research and source criticism","nigeria"]] },
+    { icone:"equipe", titre:"Communication and leadership", items:[["Intra- and cross-team communication","fda"],"Event management","Knowledge transfer and coaching",["Tailoring communication to stakeholders","rogue"]] }
   ],
   outilsTitre: "Tools",
   outilsIntro: "The tools I use to plan, track and keep information flowing.",

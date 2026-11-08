@@ -49,6 +49,12 @@ function chrome(active){
     + `<a class="social" data-go="#/infos" role="link" tabindex="0">${CV_ICON}<span>${t("cvShort")}</span></a>`;
 }
 
+/* Compétence de la page Infos, suivie si besoin d'un lien vers la page qui la prouve (PREUVES dans contenu.js) */
+function preuve(x){
+  if(!Array.isArray(x)) return rich(x);
+  const [go,fr,en]=PREUVES[x[1]], nom=lang==="en"&&en?en:fr;
+  return `${rich(x[0])} <a class="sk-go" data-go="${esc(go)}" role="link" tabindex="0" aria-label="${q("Voir la preuve","See the evidence")} : ${esc(nom)}">${esc(nom)}<span aria-hidden="true"> →</span></a>`;
+}
 function home(){
   /* Accueil : grand titre, présentation et photo */
   return `<div class="hero"><section class="home-intro">
@@ -84,7 +90,7 @@ function vitrineCap(i){
 function vitrine(){
   if(typeof VITRINE==="undefined") return "";
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  return `<section class="bandeau bandeau-video vitrine" aria-label="${q("Les jeux produits","The games produced")}"><video src="${esc(VITRINE.video)}" poster="${esc(VITRINE.poster)}" muted loop playsinline preload="metadata"${still?"":" autoplay"} data-seg="${VITRINE.seg}" aria-label="${q("Montage de gameplay des jeux que j'ai produits","Gameplay montage of the games I produced")}"></video><span class="bv-cap" aria-live="off">${vitrineCap(0)}</span><button type="button" class="bv-btn" data-vtoggle aria-label="${still?q("Lire la vidéo","Play the video"):q("Mettre la vidéo en pause","Pause the video")}">${still?PLAY_ICON:PAUSE_ICON}</button></section>`;
+  return `<section class="bandeau bandeau-video vitrine" aria-label="${q("Les jeux produits","The games produced")}"><video src="${esc(matchMedia("(max-width: 760px)").matches?VITRINE.videoM:VITRINE.video)}" poster="${esc(VITRINE.poster)}" muted loop playsinline preload="none"${still?"":" data-lazy"} data-seg="${VITRINE.seg}" aria-label="${q("Montage de gameplay des jeux que j'ai produits","Gameplay montage of the games I produced")}"></video><span class="bv-cap" aria-live="off">${vitrineCap(0)}</span><button type="button" class="bv-btn" data-vtoggle aria-label="${still?q("Lire la vidéo","Play the video"):q("Mettre la vidéo en pause","Pause the video")}">${still?PLAY_ICON:PAUSE_ICON}</button></section>`;
 }
 /* Encadré « Derniers projets » : les projets marqués une:true dans contenu.js */
 function homeFeat(){
@@ -409,7 +415,7 @@ function infos(){
   const dl = CV_VISUAL.pdf ? `<a class="btn" href="${esc(CV_VISUAL.pdf)}" download="${esc(CV_VISUAL.filename||"MERLE_Thibault_CV_PROD.pdf")}">${t("cvDl")}</a>` : "";
   const dlNb = CV_VISUAL.pdfNB ? `<a class="btn ghost" href="${esc(CV_VISUAL.pdfNB)}" download="${esc(CV_VISUAL.filenameNB||"MERLE_Thibault_CV_PROD_imprimable.pdf")}">${t("cvDlNb")}</a>` : "";
   const view = CV_VISUAL.image ? `<button type="button" class="btn ghost" data-zoom data-doc><img src="${esc(CV_VISUAL.image)}" alt="${t("cvAlt")} ${esc(SITE.prenom)} ${esc(SITE.nom)}" hidden>${t("cvView")}</button>` : "";
-  const blocs = list => `<div class="skills">${list.map(b=>`<section class="skill"><div class="sk-ic">${icone(b.icone)}</div><h3>${esc(b.titre)}</h3><ul>${b.items.map(x=>`<li>${rich(x)}</li>`).join("")}</ul></section>`).join("")}</div>`;
+  const blocs = list => `<div class="skills">${list.map(b=>`<section class="skill"><div class="sk-ic">${icone(b.icone)}</div><h3>${esc(b.titre)}</h3><ul>${b.items.map(x=>`<li>${preuve(x)}</li>`).join("")}</ul></section>`).join("")}</div>`;
   return `<div class="infos-page"><h1>${t("infos")}</h1><p class="lead">${esc(I.intro)}</p>
   <p class="cv-actions noprint">${view}${dl}${dlNb}</p>
   <section class="sk-group"><h2>${esc(I.competencesTitre)}</h2>${blocs(I.competences)}</section>
@@ -472,6 +478,8 @@ function render(still){
   document.body.classList.toggle("page-detail", !!curNav);
   const v = $("#view"); v.innerHTML = html;
   v.querySelectorAll("video[autoplay]").forEach(x=>{ x.muted = true; x.play().catch(()=>{}); });   /* lecture automatique fiable une fois insérée */
+  v.querySelectorAll("video[data-lazy]").forEach(x=>new IntersectionObserver(([en])=>{   /* montage de l'accueil : chargé et lu seulement à l'écran */
+    if(en.isIntersecting){ if(!x.dataset.manual){ x.muted = true; x.play().catch(()=>{}); } } else if(!x.paused) x.pause(); }).observe(x));
   if(navDir && !matchMedia("(prefers-reduced-motion:reduce)").matches)
     v.animate([{opacity:0,transform:`translateX(${navDir*48}px)`},{opacity:1,transform:"none"}],{duration:280,easing:"ease-out"});
   navDir = 0;
@@ -534,7 +542,7 @@ document.addEventListener("click", e => {
 addEventListener("popstate", () => { cur = location.hash || "#/"; render(); scrollTo(0,0); pageFocus(); });
 addEventListener("hashchange", () => { const h = location.hash || "#/"; if(h !== cur){ cur = h; render(); scrollTo(0,0); pageFocus(); } });
 render();
-document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-vtoggle]");if(!b)return;const vid=b.parentNode.querySelector("video");
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-vtoggle]");if(!b)return;const vid=b.parentNode.querySelector("video");vid.dataset.manual=vid.paused?"":"1";
   if(vid.paused){vid.play().catch(()=>{});b.innerHTML=PAUSE_ICON;b.setAttribute("aria-label",q("Mettre la vidéo en pause","Pause the video"));}
   else{vid.pause();b.innerHTML=PLAY_ICON;b.setAttribute("aria-label",q("Lire la vidéo","Play the video"));}});
 document.addEventListener("timeupdate",e=>{const v=e.target;if(!v.dataset||!v.dataset.seg)return;   /* légende de la vitrine : le jeu à l'écran */

@@ -49,11 +49,11 @@ function chrome(active){
     + `<a class="social" data-go="#/infos" role="link" tabindex="0">${CV_ICON}<span>${t("cvShort")}</span></a>`;
 }
 
-/* Compétence de la page Infos, suivie si besoin d'un lien vers la page qui la prouve (PREUVES dans contenu.js) */
+/* Compétence de la page Infos : si une page la prouve (PREUVES dans contenu.js), le texte devient un lien vers elle */
 function preuve(x){
   if(!Array.isArray(x)) return rich(x);
   const [go,fr,en]=PREUVES[x[1]], nom=lang==="en"&&en?en:fr;
-  return `${rich(x[0])} <a class="sk-go" data-go="${esc(go)}" role="link" tabindex="0" aria-label="${q("Voir la preuve","See the evidence")} : ${esc(nom)}">${esc(nom)}<span aria-hidden="true"> →</span></a>`;
+  return `<a class="sk-go" data-go="${esc(go)}" role="link" tabindex="0" title="${q("Voir sur la page","See on the page")} ${esc(nom)}">${rich(x[0])}<span class="sr"> (${q("voir","see")} : ${esc(nom)})</span></a>`;
 }
 function home(){
   /* Accueil : grand titre, présentation et photo */
